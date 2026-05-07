@@ -20,6 +20,7 @@ namespace mikecore::rawnotes
     inline constexpr std::uint32_t raw_note_observed_flag_0x10 = 0x10;
     inline constexpr std::uint32_t raw_note_selected_by_class2 = 0x20;
     inline constexpr std::uint32_t raw_note_selected_or_materialized_by_class1 = 0x40;
+    inline constexpr float raw_note_synthetic_peer_base_strength = 1.0f;
 
     struct RawNoteSeparation final
     {
@@ -64,5 +65,14 @@ namespace mikecore::rawnotes
         const RawNoteSeparation& source) noexcept
     {
         return source;
+    }
+
+    [[nodiscard]] inline RawNoteSeparation make_synthetic_class1_peer(
+        const RawNoteSeparation& current) noexcept
+    {
+        return make_raw_note_separation(
+            current.interval_start,
+            raw_note_synthetic_peer_base_strength,
+            raw_note_selected_or_materialized_by_class1);
     }
 }

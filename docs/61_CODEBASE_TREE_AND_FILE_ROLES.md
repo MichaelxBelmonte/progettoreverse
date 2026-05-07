@@ -181,7 +181,7 @@ core_reconstruction/
 | `runtime/spectral_time_slice.*` | Struttura dati clean-room dei payload spettrali. |
 | `runtime/shared_descriptor_cache.*` | Cache descriptor condivisa e conversione sample/index. |
 | `runtime/analyzer_gate_cluster.hpp` | Struct dei sei scalar analyzer `+0xf4..+0x108`. |
-| `rawnotes/raw_note_separation.hpp` | Carrier clean-room `MURawNoteSeparation`, constructor `014ba9e0` e clone `014ba950`. |
+| `rawnotes/raw_note_separation.hpp` | Carrier clean-room `MURawNoteSeparation`, constructor `014ba9e0`, clone `014ba950` e helper constructor-only peer sintetico `01484bc0`. |
 | `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match. |
 | `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `item->+0x40->+0x20`, mediana e coverage. |
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
