@@ -1,6 +1,6 @@
 # 36 — Interval Gate Model `0x014a3900 / 0x014a42b0`
 
-**Ultimo aggiornamento:** 2026-04-09
+**Ultimo aggiornamento:** 2026-05-07
 
 ## Obiettivo
 
@@ -189,6 +189,13 @@ Quindi:
 
 - `+0x3c` e' davvero un bitfield di classe/stato
 - il flag `8` rappresenta una classe speciale trattata diversamente nel gate
+
+Implementazione clean-room aperta:
+
+- `core_reconstruction/include/mikecore/rawnotes/interval_gate.hpp`
+- `core_reconstruction/src/rawnotes/interval_gate.cpp`
+
+Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield e predicato peak-gate di `014a42b0`. Restano fuori ranking gap completo, mutazioni di lista e scoring finale di selezione.
 
 ---
 

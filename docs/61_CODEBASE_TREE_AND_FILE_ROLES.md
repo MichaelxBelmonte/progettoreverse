@@ -58,7 +58,7 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 25 | 124K | codice clean-room compilabile |
+| `core_reconstruction/` | 27 | 132K | codice clean-room compilabile |
 | `docs/` | 63 | 660K | ledger, decisioni, mappe e stato reverse |
 | `data/` | 52 | 376K | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
@@ -148,6 +148,7 @@ core_reconstruction/
 ├── include/mikecore/fft/stft_frontend.hpp
 ├── include/mikecore/rawnotes/analyzer_gate_cluster_support.hpp
 ├── include/mikecore/rawnotes/exponential_smoother.hpp
+├── include/mikecore/rawnotes/interval_gate.hpp
 ├── include/mikecore/rawnotes/paired_peak_gate.hpp
 ├── include/mikecore/rawnotes/raw_note_class8_builder.hpp
 ├── include/mikecore/rawnotes/raw_note_separation.hpp
@@ -160,6 +161,7 @@ core_reconstruction/
 ├── src/fft/stft_frontend.cpp
 ├── src/rawnotes/analyzer_gate_cluster_support.cpp
 ├── src/rawnotes/exponential_smoother.cpp
+├── src/rawnotes/interval_gate.cpp
 ├── src/rawnotes/paired_peak_gate.cpp
 ├── src/rawnotes/raw_note_class8_builder.cpp
 ├── src/rawnotes/threshold_seed_matcher.cpp
@@ -183,6 +185,7 @@ core_reconstruction/
 | `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match. |
 | `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `item->+0x40->+0x20`, mediana e coverage. |
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
+| `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: costo pair-arbitration, merge max/OR e predicato peak-gate; esclusi ranking gap e mutazioni lista. |
 | `rawnotes/paired_peak_gate.*` | Kernel `014a3550` per peak gates `+0x34/+0x38`, senza il writer completo `+0x2c/+0x30`. |
 | `rawnotes/raw_note_class8_builder.*` | Builder candidati class `8`: mask, run filter, linked-successor protected ranges, contrasto locale, smoothing breve/lunga e gate `max-min`. |
 

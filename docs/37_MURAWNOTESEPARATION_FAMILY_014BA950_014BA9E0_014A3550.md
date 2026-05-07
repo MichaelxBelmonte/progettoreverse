@@ -111,6 +111,8 @@ param_3 < item->field_34 || param_3 < item->field_38
 
 Il kernel clean-room e' aperto in `rawnotes/paired_peak_gate.*`. Non implementa ancora il writer completo `014a3550`, perche' i campi `+0x2c/+0x30` restano sotto confidence piu' bassa del gate operativo.
 
+Il subset clean-room dei consumer `014a3900 / 014a42b0` e' aperto in `rawnotes/interval_gate.*`: costo pair-arbitration, merge max/OR dei campi chiusi e predicato peak-gate. Il ranking gap completo e le mutazioni della lista restano fuori perimetro.
+
 ---
 
 ## 4. Flag Values Osservati

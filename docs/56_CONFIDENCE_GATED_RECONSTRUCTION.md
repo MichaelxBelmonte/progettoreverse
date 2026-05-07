@@ -107,6 +107,7 @@ Se manca uno di questi quattro elementi, il modulo non passa in implementazione.
    - `015c1480 / 015c0b60` chiuso come smoother esponenziale forward/reverse: `alpha = expf(-2.5f / width)`, radius `trunc(-2.5 / logf(alpha))`, mode `0` nel path classe `8`
    - pipeline classe `8` high-level: delta primo ordine, moving contrast assoluto scalato, clamp `4.0f`, smoothing esponenziale breve/lunga, segmenti valley, gate `max - min > 0.1`
    - implementazione clean-room operativa `raw_note_class8_builder.*`: mask positiva, filtro run corte, range protetti da linked successor item, delta, contrasto centrato, smoothing breve/lunga mode `0` e materializzazione `class_state_flags = 8`
+   - subset clean-room `014a3900 / 014a42b0`: costo pair-arbitration, merge max/OR dei campi chiusi e predicato peak-gate; esclusi ranking gap completo e mutazioni lista
    Guardrail:
    - lo smoother mode `0` del path classe `8` e' implementato; i mode `1/2/3/4/5` restano fuori perimetro
 
@@ -255,6 +256,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
   - builder classe `8` clean-room operativo, incluso il mapping item linked-successor a range protetti; resta prudente il nome canonico dell'owner
   - scalar pieces clean-room di `015c1480 / 015c0b60`: width->alpha, alpha->radius, recurrence one-pole, scratch sizing e loop mode `0`
   - paired peak-gate kernel di `014a3550`, limitato a `+0x34/+0x38`
+  - interval-gate subset di `014a3900 / 014a42b0`, limitato a cost/predicate/field merge verificati
 - `Analyzer Gate Cluster Support`
   solo per:
   - estrazione middle-value da buffer ordinato
