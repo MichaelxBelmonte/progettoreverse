@@ -37,10 +37,10 @@ DNA2 high-level, quality aggregate e resynthesis restano fuori fino a chiusura d
 - `runtime / object model` aperto e compilato
 - `FFT / STFT front-end` aperto e compilato
 - `spectral slice / local features` aperto solo per `spectralMedianFrequencyHz`
-- `raw note families / matcher` aperto per carrier `MURawNoteSeparation`, finestra locale, seed dinamico da cached spectral reference, score di selezione candidato, contratto `threshold-seeded matcher` e scalar pieces chiusi di `015c1480 / 015c0b60`
+- `raw note families / matcher` aperto per carrier `MURawNoteSeparation`, finestra locale, seed dinamico da cached spectral reference, score di selezione candidato, contratto `threshold-seeded matcher`, scalar pieces chiusi di `015c1480 / 015c0b60` e builder candidati classe `8` con mask, contrasto e smoothing reverse-derived
 - `analyzer gate cluster support` aperto per middle-value extraction, default `0.01f`, `linked-field20 coverage` e field map canonica `_allTonality / _allCentDiffPerMillisecond / _allPitchRangePerNote / _allEnergyRelevantRegionRatio / _allAttackPeakQuality / _allAttackPeakToEnergyRegionRatio`
 
-Configure/build locale verificato il `2026-04-30` con:
+Configure/build locale verificato il `2026-05-07` con:
 
 ```bash
 cmake -S core_reconstruction -B /tmp/mikecore_reconstruction_build

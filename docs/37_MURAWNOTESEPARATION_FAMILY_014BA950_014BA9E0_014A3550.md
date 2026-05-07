@@ -325,6 +325,15 @@ Il flusso high-level della classe `8` e' ora piu' stretto:
 
 Il kernel interno di `015c1480` non e' piu' una scatola nera: e' chiuso come smoother esponenziale forward/reverse su core `015c0b60`, con mode `0` e `bzero` del prefisso scratch nel callsite classe `8`. Il dettaglio completo e' in [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md).
 
+Implementazione clean-room aperta:
+
+- `core_reconstruction/include/mikecore/rawnotes/raw_note_class8_builder.hpp`
+- `core_reconstruction/src/rawnotes/raw_note_class8_builder.cpp`
+
+Perimetro implementato: mask positiva, filtro run corte, azzeramento di range protetti forniti dal caller, delta, moving contrast, clamp, smoothing breve/lunga e materializzazione dei candidate `field_3c == 8`.
+
+Guardrail: il mapping esatto da item/peer gia' esistenti a range protetti resta fuori dal builder finche' il caller owner-specific non e' chiuso. Inoltre l'edge-pass mode `0` di `015c0b60` non e' ancora una trascrizione bit-perfect.
+
 ---
 
 ## 8. Impatto Sui Doc Precedenti

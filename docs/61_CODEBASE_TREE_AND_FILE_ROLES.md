@@ -5,7 +5,7 @@
 ## Obiettivo
 
 Questo documento serve come mappa pratica della codebase dopo il checkpoint
-GitHub `e7cae055`.
+GitHub iniziale e gli aggiornamenti clean-room del `2026-05-07`.
 
 Risponde a tre domande operative:
 
@@ -58,8 +58,8 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 21 | 96K | codice clean-room compilabile |
-| `docs/` | 62 | 640K | ledger, decisioni, mappe e stato reverse |
+| `core_reconstruction/` | 23 | 108K | codice clean-room compilabile |
+| `docs/` | 63 | 660K | ledger, decisioni, mappe e stato reverse |
 | `data/` | 52 | 376K | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
 | `binaries/` | 8 | 163M | target binari analizzati |
@@ -148,6 +148,7 @@ core_reconstruction/
 ├── include/mikecore/fft/stft_frontend.hpp
 ├── include/mikecore/rawnotes/analyzer_gate_cluster_support.hpp
 ├── include/mikecore/rawnotes/exponential_smoother.hpp
+├── include/mikecore/rawnotes/raw_note_class8_builder.hpp
 ├── include/mikecore/rawnotes/raw_note_separation.hpp
 ├── include/mikecore/rawnotes/threshold_seed_matcher.hpp
 ├── include/mikecore/runtime/analyzer_gate_cluster.hpp
@@ -158,6 +159,7 @@ core_reconstruction/
 ├── src/fft/stft_frontend.cpp
 ├── src/rawnotes/analyzer_gate_cluster_support.cpp
 ├── src/rawnotes/exponential_smoother.cpp
+├── src/rawnotes/raw_note_class8_builder.cpp
 ├── src/rawnotes/threshold_seed_matcher.cpp
 ├── src/runtime/shared_descriptor_cache.cpp
 └── src/runtime/spectral_time_slice.cpp
@@ -179,6 +181,7 @@ core_reconstruction/
 | `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match. |
 | `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `item->+0x40->+0x20`, mediana e coverage. |
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, usato dal path class `8`. |
+| `rawnotes/raw_note_class8_builder.*` | Builder candidati class `8`: mask, run filter, contrasto locale, smoothing breve/lunga e gate `max-min`. |
 
 Stato:
 
@@ -423,11 +426,9 @@ cmake --build /private/tmp/mikecore_reconstruction_build -j4
 
 ## Stato Git
 
-Checkpoint remoto:
+Questa mappa e' aggiornata rispetto al workspace locale del `2026-05-07`.
+Per il commit remoto corrente usare:
 
-```text
-origin/main e7cae055 Add reverse engineering checkpoint
+```bash
+git log -1 --oneline origin/main
 ```
-
-Il working tree era pulito prima della creazione di questo documento.
-

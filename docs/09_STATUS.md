@@ -113,9 +113,10 @@
 - `core_reconstruction/` aperto solo per moduli `IMPLEMENTABLE`
 - scaffold `runtime / fft` compilato localmente con target `mikecore_runtime_fft`
 - feature locali aperte solo per `spectralMedianFrequencyHz`
-- raw-note layer aperto solo per carrier `MURawNoteSeparation` e contratto matcher seedato
+- raw-note layer aperto per carrier `MURawNoteSeparation`, contratto matcher seedato e builder candidati classe `8`
 - raw-note matcher esteso con finestra locale canonicale
 - raw-note smoother esteso solo per scalar pieces chiusi di `015c1480 / 015c0b60`: `alpha = expf(-2.5f / width)`, radius da `logf(alpha)`, recurrence one-pole e scratch sizing mode `0`
+- raw-note builder classe `8` operativo in clean-room per mask, filtro run corte, range protetti caller-supplied, delta, contrasto centrato, smoothing breve/lunga e gate `max-min`; restano fuori mapping owner-specific e bit-perfect edge-pass mode `0`
 - supporto analyzer gate esteso con default `0.01f`, coverage dei linked peers e nomi canonici `_allTonality / _allCentDiffPerMillisecond / _allPitchRangePerNote / _allEnergyRelevantRegionRatio / _allAttackPeakQuality / _allAttackPeakToEnergyRegionRatio`
 - `DNA2`, quality aggregate e resynthesis restano fuori dal codice attivo
 

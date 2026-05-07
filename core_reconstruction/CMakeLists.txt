@@ -11,6 +11,7 @@ add_library(mikecore_runtime_fft
     src/fft/packed_spectrum.cpp
     src/rawnotes/analyzer_gate_cluster_support.cpp
     src/rawnotes/exponential_smoother.cpp
+    src/rawnotes/raw_note_class8_builder.cpp
     src/rawnotes/threshold_seed_matcher.cpp
     src/fft/stft_frontend.cpp
     src/runtime/shared_descriptor_cache.cpp
