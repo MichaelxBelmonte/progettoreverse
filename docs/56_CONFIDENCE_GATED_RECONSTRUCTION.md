@@ -99,6 +99,7 @@ Se manca uno di questi quattro elementi, il modulo non passa in implementazione.
    Chiuso:
    - carrier `MURawNoteSeparation` size `0x48`
    - ABI `014ba9e0`: `xmm0=start`, `xmm1=base strength`, `esi=class/state flag`
+   - helper clean-room `014ba9e0 / 014ba950`: constructor start/strength/flag e clone completo del carrier
    - origine builder-side di `+0x20`: massimo locale per classi `1/2`, contrasto locale per classe `8`, `1.0f` per peer sintetici `0x40`
    - `+0x40` come selected match / linked peer pointer, non metadata
    - `+0x34/+0x38` corretti da threshold pair a paired local smoothed peak gates: writer `014a3550`, max merge `014a3900`, OR gate `014a42b0`
@@ -244,6 +245,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
 - `Raw Note Families / Matcher Locali`
   solo per:
   - carrier `MURawNoteSeparation`
+  - constructor/clone `014ba9e0 / 014ba950`
   - finestra locale del matcher
   - contratto `threshold-seeded matcher`
   - seed dinamico da cached spectral reference:

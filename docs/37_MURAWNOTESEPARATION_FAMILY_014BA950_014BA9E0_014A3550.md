@@ -109,6 +109,8 @@ param_3 < item->field_34 || param_3 < item->field_38
 
 `014a3900` propaga il massimo per entrambi i campi durante i merge normali. Quindi il naming operativo corretto e' "paired local smoothed peak gates"; il significato musicale esatto delle due lane resta legato ai due buffer input di `014a3550` e non va ancora nominato come energy/pitch/tonality senza evidenza aggiuntiva.
 
+Il carrier clean-room espone ora anche il subset very-high di `014ba9e0 / 014ba950`: `make_raw_note_separation(start, strength, flags)` inizializza `start/end`, `+0x20` e `+0x3c`; `clone_raw_note_separation(source)` mantiene il clone completo del payload.
+
 Il kernel clean-room e' aperto in `rawnotes/paired_peak_gate.*`. Non implementa ancora il writer completo `014a3550`, perche' i campi `+0x2c/+0x30` restano sotto confidence piu' bassa del gate operativo.
 
 Il subset clean-room dei consumer `014a3900 / 014a42b0` e' aperto in `rawnotes/interval_gate.*`: test class-gap `1/2`, controllo del terzo vicino, costo pair-arbitration, merge max/OR dei campi chiusi e predicato peak-gate. Il ranking gap completo e le mutazioni della lista restano fuori perimetro.

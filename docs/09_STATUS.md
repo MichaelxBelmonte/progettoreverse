@@ -114,6 +114,7 @@
 - scaffold `runtime / fft` compilato localmente con target `mikecore_runtime_fft`
 - feature locali aperte solo per `spectralMedianFrequencyHz`
 - raw-note layer aperto per carrier `MURawNoteSeparation`, contratto matcher seedato e builder candidati classe `8`
+- raw-note carrier esteso con constructor/clone clean-room `014ba9e0 / 014ba950`
 - raw-note matcher esteso con finestra locale canonicale
 - raw-note smoother esteso per scalar pieces e loop mode `0` di `015c1480 / 015c0b60`: `alpha = expf(-2.5f / width)`, radius da `logf(alpha)`, recurrence one-pole, bzero prefix, warm-up sinistro, forward buffer, tail destro, warm-up reverse e reverse buffer
 - raw-note builder classe `8` operativo in clean-room per mask, filtro run corte, mapping linked-successor item a range protetti, delta, contrasto centrato, smoothing breve/lunga e gate `max-min`; resta prudente il nome canonico dell'owner che fornisce quegli item

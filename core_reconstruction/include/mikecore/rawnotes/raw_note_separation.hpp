@@ -46,4 +46,23 @@ namespace mikecore::rawnotes
             return class_state_flags == class_code;
         }
     };
+
+    [[nodiscard]] inline RawNoteSeparation make_raw_note_separation(
+        double start,
+        float base_gate_strength,
+        std::uint32_t class_state_flags) noexcept
+    {
+        RawNoteSeparation note{};
+        note.interval_start = start;
+        note.interval_end = start;
+        note.base_gate_strength = base_gate_strength;
+        note.class_state_flags = class_state_flags;
+        return note;
+    }
+
+    [[nodiscard]] inline RawNoteSeparation clone_raw_note_separation(
+        const RawNoteSeparation& source) noexcept
+    {
+        return source;
+    }
 }

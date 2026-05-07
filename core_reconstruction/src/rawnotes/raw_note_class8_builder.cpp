@@ -281,12 +281,8 @@ namespace mikecore::rawnotes
                 const double start =
                     static_cast<double>(max_index) / config.sample_rate_like;
 
-                RawNoteSeparation note{};
-                note.interval_start = start;
-                note.interval_end = start;
-                note.base_gate_strength = strength;
-                note.class_state_flags = raw_note_observed_flag_0x8;
-                candidates.push_back(note);
+                candidates.push_back(
+                    make_raw_note_separation(start, strength, raw_note_observed_flag_0x8));
             }
         }
 

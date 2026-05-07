@@ -3,6 +3,7 @@ identity	MURawNoteSeparation	interval_gate_carrier_family	very_high	014baaf0 reg
 builder	014ba9e0	constructor_with_start_weight_flag	very_high	allocates 0x48 and writes start/end at +0x10/+0x18 scalar at +0x20 class at +0x3c
 abi	014ba9e0	xmm0_start_xmm1_strength_esi_flag	very_high	disassembly stores xmm0 to +0x10/+0x18 xmm1 to +0x20 and esi to +0x3c
 builder	014ba950	copy_constructor_clone	very_high	clones +0x10..+0x40 from source object
+implementation	014ba9e0_014ba950	carrier_constructor_and_clone_clean_room	very_high	core_reconstruction exposes make_raw_note_separation(start,strength,flags) and clone_raw_note_separation(source)
 builder	014a2170	class1_class2_positive_run_builder	medium_high	detects positive-to-nonpositive runs gates length by param_3 sampleRate-like extracts local max above g_0239424c passes max as xmm1 and flag 1 or 2 as esi to 014ba9e0
 builder	014afb20	class8_masked_contrast_peak_builder	high	removes prior class 8 items builds positive mask and local contrast gate g_02391090 then calls 014ba9e0 with esi 8 and xmm1 holding accepted contrast
 transform	014afb20	class8_delta_moving_contrast_smooth_pipeline	high	delta=input[i]-input[i-1]; moving contrast abs(sum(delta over 0.0227*rate))*0.01; clamp 4.0; smooth with 5*(rate/441) then 30*(rate/441); accept valley segment max-min >0.1 under mask
