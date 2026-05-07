@@ -1,11 +1,13 @@
 # MikeCore Reverse Engineering — Indice
 
-**Ultimo aggiornamento:** 2026-04-22
+**Ultimo aggiornamento:** 2026-05-07
 
 ## Struttura progetto
 
 ```
 Progetto_Reverse_Mike/
+├── .gitignore                  ← esclude cache locali e database Ghidra pesanti
+├── CLAUDE.md                   ← note operative storiche per agenti
 ├── binaries/                   ← binari da analizzare
 │   ├── MikeCore                   43 MB  x86_64 only       DSP engine double precision
 │   ├── MikeCoreF                  91 MB  Universal ARM+x86 DSP engine float precision
@@ -15,27 +17,35 @@ Progetto_Reverse_Mike/
 │   ├── MikeStandalone            149 KB  Universal ARM+x86 Standalone app wrapper
 │   ├── default.metallib          5.6 KB                    GPU shader Metal
 │   └── Resources.rrr             28 MB                     Dati proprietari
-├── docs/                       ← report per area (questo indice)
+├── core_reconstruction/        ← codice clean-room compilabile
+│   ├── include/mikecore/          API runtime, FFT, features, rawnotes
+│   └── src/                       implementazioni C++20 verificate
+├── docs/                       ← ledger, report e mappe per area
+├── data/                       ← evidenza strutturata TSV/JSON/LOG
 ├── ghidra/
-│   ├── projects/               ← progetti Ghidra locali al repo
+│   ├── projects/               ← database Ghidra locali, esclusi da Git
 │   ├── scripts/                ← script Java per headless extraction
-│   │   ├── MikeCoreExtract.java   base: exports, functions, namespaces, xrefs
-│   │   └── MikeCoreDeep.java      deep: cross-ref da stringhe chiave, call graph
+│   │   ├── MikeCoreExtract.java
+│   │   ├── MikeCoreDeep.java
+│   │   ├── MikeCoreDecompile.java
+│   │   ├── MikeCoreOffsetMap.java
+│   │   └── MikeCoreParamExtract.java
 │   └── output/                 ← dati estratti per binario
-│       ├── MikeCore/              27 file (functions, exports, deep_*.txt, ...)
-│       ├── MikeCoreF/             (da popolare)
-│       ├── mike/                  (da popolare)
-│       ├── MikeAU/                (da popolare)
-│       ├── MikeAAX/               (da popolare)
-│       └── MikeStandalone/        (da popolare)
-├── tools/                      ← automazione
-│   ├── orchestrator.py            verifica doc vs binari, confidence scoring
-│   └── pipeline.py               pipeline completa: inventory → ghidra → extract → analyze
-└── data/                       ← dati generati
-    ├── confidence.json            77 findings con confidence scores
-    ├── strings_dsp.txt            2599 stringhe DSP estratte
-    ├── ghidra_analysis.log        log analisi Ghidra headless
-    └── REPORT_ANALISI_archive.md  vecchio report monolitico (archivio)
+│       ├── MikeCore/              7897 file, target reverse principale
+│       ├── MikeCoreF/             27 file, confronto float/coreF
+│       ├── mike/                  wrapper VST3
+│       ├── MikeAU/                wrapper AudioUnit
+│       ├── MikeAAX/               wrapper AAX
+│       └── MikeStandalone/        wrapper standalone
+├── reconstructed/              ← pseudocodice ripulito e header estratti
+│   ├── annotated/
+│   ├── clean/
+│   └── structs/
+└── tools/                      ← automazione Python
+    ├── orchestrator.py
+    ├── pipeline.py
+    ├── reconstruct.py
+    └── extract_*.py / clean_code.py / classify_unknown.py
 ```
 
 ## Documenti
@@ -92,10 +102,15 @@ Progetto_Reverse_Mike/
 | [50_CLASSCODE_1_VS_2_MATCHER_PATH_01484BC0_014AF180.md](50_CLASSCODE_1_VS_2_MATCHER_PATH_01484BC0_014AF180.md) | Divergenza reale dei due callsite `01484bc0 -> 014af180`: `class 2` come propagazione di peer esistenti, `class 1` come peer synthesis/insert + cleanup dei vicini | Attivo |
 | [51_AUXILIARY_PEER_LIST_SLOT_SELF_0XD0_01484BC0_014AB140.md](51_AUXILIARY_PEER_LIST_SLOT_SELF_0XD0_01484BC0_014AB140.md) | Chiusura di `MUElementAnalyzer + 0xd0` come slot collection persistente usato dal matcher raw-note locale per peer registry, insert/find e riuso downstream | Attivo |
 | [52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md](52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md) | Boundary ledger di `MUElementAnalyzer + 0x158`: `GNList` di lavoro per-run distinta dal peer registry `+0xd0`, usata dalla catena di stage locale di `01484bc0` | Attivo |
+| [53_WORKING_GNLIST_PAYLOAD_FAMILY_0149C330_014B3CE0.md](53_WORKING_GNLIST_PAYLOAD_FAMILY_0149C330_014B3CE0.md) | Payload del corridoio working GNList: topologia annidata `GNList<GNList<MUPitchMatrixPeak>>` e bridge di selezione | Attivo |
+| [54_MUPOSVALUE_CLUSTER_014328B0_01432B10.md](54_MUPOSVALUE_CLUSTER_014328B0_01432B10.md) | Correzione del cluster `MUPosValue` e separazione da extended point object | Attivo |
+| [55_EXTENDED_POINT_OBJECT_01432B10_GNINT_SHAPER.md](55_EXTENDED_POINT_OBJECT_01432B10_GNINT_SHAPER.md) | Field map prudente dell'extended point object osservato in `GNInt` e `MUSpectrumShaper` | Attivo |
+| [56_CONFIDENCE_GATED_RECONSTRUCTION.md](56_CONFIDENCE_GATED_RECONSTRUCTION.md) | Gate operativo della ricostruzione clean-room: cosa entra nel codice e cosa resta bloccato | Attivo |
 | [57_LSS_NESTED_LIST_HELPERS_012E6160_012E5AE0.md](57_LSS_NESTED_LIST_HELPERS_012E6160_012E5AE0.md) | Ledger degli helper LSS/nested-list `012e6160 / 012e5ae0`: getter `+0xa8/+0xb0`, ruolo ricorsivo di `012e61a0 / 012e7210` e anti-falso positivo `_next/_previousItemInSequence` | Attivo |
 | [58_MULSSGENERATOR_FIELD_MAP_AND_MUTATORS.md](58_MULSSGENERATOR_FIELD_MAP_AND_MUTATORS.md) | Field map prudente di `MULSSGenerator`: slot `+0x90/+0x98/+0xa8/+0xb0/+0x118` e mutatori `01653e10 / 0164e420 / 0164f500` | Attivo |
 | [59_PERCUSSIVE_PITCH_SYSTEM_BRIDGE_012F0B60.md](59_PERCUSSIVE_PITCH_SYSTEM_BRIDGE_012F0B60.md) | Ponte LSS -> `MUPercussivePitchSystem`: `01519670` gate split/clone in cents, `01516650` wrapper e bridge range `+0x80/+0x88` | Attivo |
 | [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md) | Chiusura del kernel `015c1480 / 015c0b60`: smoother esponenziale forward/reverse usato dalla pipeline raw-note classe `8` | Attivo |
+| [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md) | Tree operativo della codebase: directory, file curati, output generati, ruoli e policy di modifica | Attivo |
 
 ## Tools
 
@@ -144,6 +159,8 @@ python3 tools/pipeline.py verify
 
 ## Ultime Aggiunte Doc
 
+- [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md)
+- [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md)
 - [52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md](52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md)
 - [53_WORKING_GNLIST_PAYLOAD_FAMILY_0149C330_014B3CE0.md](53_WORKING_GNLIST_PAYLOAD_FAMILY_0149C330_014B3CE0.md)
 - [54_MUPOSVALUE_CLUSTER_014328B0_01432B10.md](54_MUPOSVALUE_CLUSTER_014328B0_01432B10.md)
