@@ -58,7 +58,7 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 23 | 108K | codice clean-room compilabile |
+| `core_reconstruction/` | 23 | 116K | codice clean-room compilabile |
 | `docs/` | 63 | 660K | ledger, decisioni, mappe e stato reverse |
 | `data/` | 52 | 376K | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
@@ -180,7 +180,7 @@ core_reconstruction/
 | `rawnotes/raw_note_separation.hpp` | Carrier clean-room `MURawNoteSeparation`. |
 | `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match. |
 | `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `item->+0x40->+0x20`, mediana e coverage. |
-| `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, usato dal path class `8`. |
+| `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
 | `rawnotes/raw_note_class8_builder.*` | Builder candidati class `8`: mask, run filter, contrasto locale, smoothing breve/lunga e gate `max-min`. |
 
 Stato:

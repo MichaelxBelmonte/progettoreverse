@@ -3,6 +3,7 @@
 #include <cstddef>
 #include <optional>
 #include <span>
+#include <vector>
 
 namespace mikecore::rawnotes
 {
@@ -16,10 +17,9 @@ namespace mikecore::rawnotes
      * - width -> alpha through expf(-2.5f / width)
      * - alpha -> radius through trunc(-2.5 / logf(alpha)), min 1
      * - one-pole recurrence state = sample + alpha * (state - sample)
-     * - mode-0 scratch sizing and bzero-prefix length
+     * - mode-0 scratch sizing, bzero-prefix length and loop order
      *
-     * The full mode-0 edge pass is not generalized here. It must be transcribed
-     * from 015c0b60 before claiming bit-perfect class-8 smoothing.
+     * This is not a general implementation of smoother modes 1/2/3/4/5.
      */
 
     inline constexpr float exponential_smoother_numerator_f = -2.5f;
@@ -30,6 +30,11 @@ namespace mikecore::rawnotes
         float width = 0.0f;
         float alpha = 0.0f;
         int radius = 1;
+    };
+
+    struct ExponentialSmootherMode0State final
+    {
+        std::vector<float> scratch;
     };
 
     [[nodiscard]] bool passes_float_min_guard(float value) noexcept;
@@ -59,4 +64,9 @@ namespace mikecore::rawnotes
     [[nodiscard]] std::size_t mode0_scratch_capacity(int radius) noexcept;
 
     [[nodiscard]] std::size_t mode0_scratch_bzero_prefix_count(int radius) noexcept;
+
+    void smooth_exponential_mode0_bidirectional_in_place(
+        std::span<float> samples,
+        ExponentialSmootherMode0State& state,
+        const ExponentialSmootherParameters& parameters);
 }

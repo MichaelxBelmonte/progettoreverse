@@ -97,4 +97,54 @@ namespace mikecore::rawnotes
         const int safe_radius = std::max(radius, 1);
         return static_cast<std::size_t>(safe_radius * 2);
     }
+
+    void smooth_exponential_mode0_bidirectional_in_place(
+        std::span<float> samples,
+        ExponentialSmootherMode0State& state,
+        const ExponentialSmootherParameters& parameters)
+    {
+        if (samples.empty()) {
+            return;
+        }
+
+        const int safe_radius = std::max(parameters.radius, 1);
+        const std::size_t radius = static_cast<std::size_t>(safe_radius);
+        const std::size_t required_capacity = mode0_scratch_capacity(safe_radius);
+        const std::size_t zero_prefix_count = mode0_scratch_bzero_prefix_count(safe_radius);
+
+        if (state.scratch.size() < required_capacity) {
+            state.scratch.resize(required_capacity);
+        }
+
+        std::fill_n(state.scratch.begin(), zero_prefix_count, 0.0f);
+
+        float current = state.scratch[0];
+
+        for (std::size_t index = 1; index < radius; ++index) {
+            current = advance_exponential_state(current, state.scratch[index], parameters.alpha);
+        }
+
+        for (float& sample : samples) {
+            current = advance_exponential_state(current, sample, parameters.alpha);
+            sample = current;
+        }
+
+        float* const right_scratch = state.scratch.data() + radius;
+        for (std::size_t index = 0; index < radius; ++index) {
+            current = advance_exponential_state(current, right_scratch[index], parameters.alpha);
+            right_scratch[index] = current;
+        }
+
+        for (std::size_t index = radius; index > 0; --index) {
+            current = advance_exponential_state(
+                current,
+                right_scratch[index - 1],
+                parameters.alpha);
+        }
+
+        for (auto it = samples.rbegin(); it != samples.rend(); ++it) {
+            current = advance_exponential_state(current, *it, parameters.alpha);
+            *it = current;
+        }
+    }
 }

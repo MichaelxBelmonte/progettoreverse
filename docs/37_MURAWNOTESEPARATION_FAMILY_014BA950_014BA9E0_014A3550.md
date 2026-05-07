@@ -332,7 +332,7 @@ Implementazione clean-room aperta:
 
 Perimetro implementato: mask positiva, filtro run corte, azzeramento di range protetti forniti dal caller, delta, moving contrast, clamp, smoothing breve/lunga e materializzazione dei candidate `field_3c == 8`.
 
-Guardrail: il mapping esatto da item/peer gia' esistenti a range protetti resta fuori dal builder finche' il caller owner-specific non e' chiuso. Inoltre l'edge-pass mode `0` di `015c0b60` non e' ancora una trascrizione bit-perfect.
+Guardrail: il mapping esatto da item/peer gia' esistenti a range protetti resta fuori dal builder finche' il caller owner-specific non e' chiuso. Lo smoother mode `0` di `015c0b60` e' implementato per il path classe `8`, ma non sono implementati gli altri mode dello smoother.
 
 ---
 
@@ -359,4 +359,4 @@ Correzione strutturale:
 
 1. Nominare le due lane input di `014a3550` che alimentano i peak gates `+0x34/+0x38`.
 2. Stringere il ruolo esatto del valore `0x10` nel ramo mono di `01484bc0`.
-3. Trascrivere il mode `0` di `015c0b60` direttamente dal disassembly se serve output bit-perfect campione-per-campione nel clean-room code operativo.
+3. Collegare nel caller owner-specific il mapping da item/peer gia' reclamati a range protetti del builder classe `8`.

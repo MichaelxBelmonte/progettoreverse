@@ -16,7 +16,7 @@ namespace mikecore::rawnotes
             return std::clamp(value, 0.0f, raw_note_class8_contrast_clamp);
         }
 
-        void smooth_forward_reverse_zero_state(std::span<float> samples, float width) noexcept
+        void smooth_mode0_forward_reverse(std::span<float> samples, float width)
         {
             const std::optional<ExponentialSmootherParameters> params =
                 make_exponential_smoother_parameters(width);
@@ -24,11 +24,8 @@ namespace mikecore::rawnotes
                 return;
             }
 
-            float forward_state = 0.0f;
-            smooth_exponential_forward_in_place(samples, forward_state, params->alpha);
-
-            float reverse_state = 0.0f;
-            smooth_exponential_reverse_in_place(samples, reverse_state, params->alpha);
+            ExponentialSmootherMode0State state;
+            smooth_exponential_mode0_bidirectional_in_place(samples, state, *params);
         }
 
         [[nodiscard]] bool is_valley_boundary(
@@ -158,7 +155,7 @@ namespace mikecore::rawnotes
         const double rate_scale = sample_rate_like / raw_note_class8_sample_rate_normalizer;
         const float short_width =
             static_cast<float>(raw_note_class8_short_smoothing_factor * rate_scale);
-        smooth_forward_reverse_zero_state(short_smoothed, short_width);
+        smooth_mode0_forward_reverse(short_smoothed, short_width);
         return short_smoothed;
     }
 
@@ -190,7 +187,7 @@ namespace mikecore::rawnotes
         const double rate_scale = config.sample_rate_like / raw_note_class8_sample_rate_normalizer;
         const float long_width =
             static_cast<float>(raw_note_class8_long_smoothing_factor * rate_scale);
-        smooth_forward_reverse_zero_state(long_smoothed, long_width);
+        smooth_mode0_forward_reverse(long_smoothed, long_width);
 
         std::vector<std::size_t> boundaries;
         boundaries.push_back(0);

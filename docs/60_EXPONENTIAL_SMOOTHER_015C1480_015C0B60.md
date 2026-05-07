@@ -1,6 +1,6 @@
 # 60 - Exponential Smoother `015c1480 / 015c0b60`
 
-**Ultimo aggiornamento:** 2026-04-22
+**Ultimo aggiornamento:** 2026-05-07
 
 ## Obiettivo
 
@@ -102,9 +102,18 @@ if (radius <= 0) radius = 1;
 8. applica la recurrence esponenziale sul buffer reale, scrivendo in-place;
 9. con flag `r8d = 1`, esegue anche il pass reverse sul buffer reale.
 
-Per mode `0`, usato da `014afb20`, il ramo di preparazione usa `___bzero` sul prefisso dello scratch per `2 * radius` float. Questo vincola il path classe `8` almeno a un edge prefill a zero per quel prefisso, ma non va semplificato in "zero padding completo": lo scratch ha capacita' `2 * radius + 1` e lo slot di coda partecipa ai loop successivi.
+Per mode `0`, usato da `014afb20`, il ramo di preparazione usa `___bzero` sul prefisso dello scratch per `2 * radius` float. Il loop comune poi:
 
-Nota importante sull'allocator: `015c0b60` alloca lo scratch tramite `00e83010`, che e' un wrapper di allocazione non-zeroing. Il sibling `00e83020` mostra esplicitamente il pattern allocazione + `___bzero`, ma non e' quello usato qui. Quindi lo slot non coperto dal `bzero` mode `0` non va inizializzato arbitrariamente nel clean-room code.
+1. inizializza lo stato da `scratch[0]`;
+2. attraversa il prefisso sinistro `scratch[1 .. radius-1]`;
+3. attraversa e sovrascrive il buffer reale in forward;
+4. attraversa e sovrascrive il tail destro `scratch[radius .. 2*radius-1]`;
+5. se `r8d != 0`, attraversa quel tail destro al contrario come warm-up reverse;
+6. attraversa e sovrascrive il buffer reale in reverse.
+
+Questo vincola il path classe `8` a un forward/reverse con tail smussato nello scratch, non a due pass indipendenti con stato zero.
+
+Nota importante sull'allocator: `015c0b60` alloca lo scratch tramite `00e83010`, che e' un wrapper di allocazione non-zeroing. Il sibling `00e83020` mostra esplicitamente il pattern allocazione + `___bzero`, ma non e' quello usato qui. Nel mode `0` osservato il clean-room code usa solo gli slot coperti dai loop sopra; la capacita' resta `2 * radius + 1`.
 
 ---
 
@@ -163,12 +172,12 @@ Questo blocker e' chiuso:
 - edge family classe `8`: mode `0`, con `bzero` del prefisso scratch `2 * radius`
 - pass direction: forward + reverse quando `r8d = 1`
 
-Resta un guardrail solo per bit identity: l'ordine esatto degli edge-pass/scratch-loop di `015c0b60` va trascritto direttamente dal disassembly se vogliamo output numericamente identico campione-per-campione. In particolare, non bisogna sostituire il mode `0` con un generico zero-pad simmetrico. La formula del filtro e le costanti pero' non sono piu' aperte.
+Il mode `0` del path classe `8` e' ora implementato in `core_reconstruction` seguendo l'ordine dei loop del disassembly: bzero prefix, warm-up sinistro, forward buffer, tail destro, warm-up reverse e reverse buffer. In particolare, non viene piu' usato un generico forward-zero / reverse-zero.
 
-Altro guardrail: siccome `00e83010` non azzera lo scratch nuovo, l'implementazione clean-room deve conservare uno stato scratch persistente e rispettare la stessa copertura del `bzero` osservato, oppure dichiarare esplicitamente di non essere bit-perfect.
+Guardrail residuo: sono implementati solo i pezzi necessari al mode `0` usato dalla classe `8`; i mode `1/2/3/4/5` restano fuori dal perimetro clean-room.
 
 ---
 
 ## Stato
 
-`015c1480 / 015c0b60` e' ora `IMPLEMENTABLE` per la pipeline classe `8`, con una nota: per test bit-perfect bisogna implementare il mode `0` partendo dal loop assembly, non da una versione "semplificata" del forward-backward smoothing.
+`015c1480 / 015c0b60` e' ora `IMPLEMENTABLE` per la pipeline classe `8`: scalar pieces, scratch sizing e loop mode `0` sono nel codice clean-room. Non e' una implementazione generale di tutti i mode dello smoother.

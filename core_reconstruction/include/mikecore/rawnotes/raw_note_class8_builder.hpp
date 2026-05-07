@@ -9,9 +9,9 @@
 namespace mikecore::rawnotes
 {
     /*
-     * Confidence gate: IMPLEMENTABLE >= 0.90 for the class-8 pipeline shape
-     * and constants. This is not a bit-perfect transcription of 015c0b60
-     * mode-0 edge handling.
+     * Confidence gate: IMPLEMENTABLE >= 0.90 for the class-8 pipeline shape,
+     * constants and mode-0 smoother loop. The owner-specific mapping from
+     * linked items to protected ranges is still caller-supplied.
      *
      * Reverse refs:
      * - docs/37_MURAWNOTESEPARATION_FAMILY_014BA950_014BA9E0_014A3550.md

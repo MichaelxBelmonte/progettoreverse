@@ -105,9 +105,9 @@ Se manca uno di questi quattro elementi, il modulo non passa in implementazione.
    - costanti builder lette da binario: `g_0239424c = 0.0f`, `g_02391090 = 0.100000001f`, `g_02390108 = 0.05`, `g_0240e400 = 0.0227`, `g_0240f0f0 = 441.0`, `g_02394254 = 0.01f`, fattori smoothing `5.0f / 30.0f`
    - `015c1480 / 015c0b60` chiuso come smoother esponenziale forward/reverse: `alpha = expf(-2.5f / width)`, radius `trunc(-2.5 / logf(alpha))`, mode `0` nel path classe `8`
    - pipeline classe `8` high-level: delta primo ordine, moving contrast assoluto scalato, clamp `4.0f`, smoothing esponenziale breve/lunga, segmenti valley, gate `max - min > 0.1`
-   - implementazione clean-room operativa `raw_note_class8_builder.*`: mask positiva, filtro run corte, range protetti caller-supplied, delta, contrasto centrato, smoothing breve/lunga e materializzazione `class_state_flags = 8`
+   - implementazione clean-room operativa `raw_note_class8_builder.*`: mask positiva, filtro run corte, range protetti caller-supplied, delta, contrasto centrato, smoothing breve/lunga mode `0` e materializzazione `class_state_flags = 8`
    Guardrail:
-   - per bit identity serve trascrivere l'ordine esatto degli edge-pass mode `0` di `015c0b60`; non usare una semplificazione generica del filtro
+   - lo smoother mode `0` del path classe `8` e' implementato; i mode `1/2/3/4/5` restano fuori perimetro
 
 ### Implementabili Solo In Parte
 
@@ -250,9 +250,9 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
     `(1.0 - abs(deltaStart) / 0.07) * classWeight * field20`
   - origine builder-side di `+0x20` per classi `1/2/8/0x40`
   - soglie/finestra numeriche dei builder raw-note lette da binario
-  - pipeline classe `8` high-level chiusa, con `015c1480 / 015c0b60` ristretto a smoother esponenziale forward/reverse
+  - pipeline classe `8` high-level chiusa, con `015c1480 / 015c0b60` ristretto a smoother esponenziale forward/reverse mode `0`
   - builder classe `8` clean-room operativo, escluso il mapping owner-specific da item linked a range protetti
-  - scalar pieces clean-room di `015c1480 / 015c0b60`: width->alpha, alpha->radius, recurrence one-pole, scratch sizing mode `0`
+  - scalar pieces clean-room di `015c1480 / 015c0b60`: width->alpha, alpha->radius, recurrence one-pole, scratch sizing e loop mode `0`
 - `Analyzer Gate Cluster Support`
   solo per:
   - estrazione middle-value da buffer ordinato

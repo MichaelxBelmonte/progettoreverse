@@ -8,7 +8,7 @@ builder	014afb20	class8_masked_contrast_peak_builder	high	removes prior class 8 
 transform	014afb20	class8_delta_moving_contrast_smooth_pipeline	high	delta=input[i]-input[i-1]; moving contrast abs(sum(delta over 0.0227*rate))*0.01; clamp 4.0; smooth with 5*(rate/441) then 30*(rate/441); accept valley segment max-min >0.1 under mask
 transform	015c1480	width_to_exponential_alpha	very_high	uses expf stub 0x1f9b1c6 and constant -2.5f to compute alpha=expf(-2.5f/width) after FLT_MIN guard
 transform	015c0b60	bidirectional_exponential_smoother_core	high	uses logf stub 0x1f9b322 to recover radius=max(1,trunc(-2.5/logf(alpha))) then applies recurrence state=sample+alpha*(state-sample) in-place with mode-dependent scratch edge loops
-transform	015c0b60_mode0	scratch_prefix_bzero	high	mode 0 branch calls bzero on 2*radius float scratch prefix before common recurrence; do not replace with guessed full zero padding
+transform	015c0b60_mode0	scratch_prefix_bzero_and_loop_order	high	mode 0 branch calls bzero on 2*radius float scratch prefix then common loop performs left warmup forward buffer right tail warmup reverse and reverse buffer; do not replace with guessed independent zero-state passes
 allocator	00e83010	non_zeroing_scratch_allocator	high	015c0b60 allocates scratch through 00e83010; sibling 00e83020 is the alloc+bzero helper and is not used here
 transform	014afb20_class8	mode0_exponential_smoothing_short_long	high	calls 015c1480 twice with ecx=0 widths 5*(rate/441) and 30*(rate/441); wrapper passes r8d=1 for reverse pass
 writer	014a3550	field34_field38_peak_gate_writer	high	updates a two-lane state with coefficient 0.5 over local buffer region and writes peak lane0 to +0x34 and peak lane1 to +0x38
