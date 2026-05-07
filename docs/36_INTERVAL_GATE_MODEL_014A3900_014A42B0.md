@@ -168,6 +168,13 @@ Questo rende il modello piu' forte:
 
 Il naming finale esatto resta aperto, ma la semantica "paired local peak gates" e' ora piu' forte della vecchia lettura "threshold/bounds".
 
+Implementazione clean-room aperta:
+
+- `core_reconstruction/include/mikecore/rawnotes/paired_peak_gate.hpp`
+- `core_reconstruction/src/rawnotes/paired_peak_gate.cpp`
+
+Perimetro implementato: solo il kernel ad alta confidence `state = (state + samplePair) * 0.5` e `peak = max(peak, state)` con write su `RawNoteSeparation +0x34/+0x38`. Il writer completo `014a3550` resta fuori dal codice per i campi `+0x2c/+0x30`.
+
 ---
 
 ## 6. `+0x3c` E' Un Class/State Bitfield

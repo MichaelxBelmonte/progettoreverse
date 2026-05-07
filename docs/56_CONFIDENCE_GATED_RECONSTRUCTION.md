@@ -102,6 +102,7 @@ Se manca uno di questi quattro elementi, il modulo non passa in implementazione.
    - origine builder-side di `+0x20`: massimo locale per classi `1/2`, contrasto locale per classe `8`, `1.0f` per peer sintetici `0x40`
    - `+0x40` come selected match / linked peer pointer, non metadata
    - `+0x34/+0x38` corretti da threshold pair a paired local smoothed peak gates: writer `014a3550`, max merge `014a3900`, OR gate `014a42b0`
+   - kernel paired peak-gate di `014a3550` implementato: `state = (state + samplePair) * 0.5`, peak max e write su `+0x34/+0x38`
    - costanti builder lette da binario: `g_0239424c = 0.0f`, `g_02391090 = 0.100000001f`, `g_02390108 = 0.05`, `g_0240e400 = 0.0227`, `g_0240f0f0 = 441.0`, `g_02394254 = 0.01f`, fattori smoothing `5.0f / 30.0f`
    - `015c1480 / 015c0b60` chiuso come smoother esponenziale forward/reverse: `alpha = expf(-2.5f / width)`, radius `trunc(-2.5 / logf(alpha))`, mode `0` nel path classe `8`
    - pipeline classe `8` high-level: delta primo ordine, moving contrast assoluto scalato, clamp `4.0f`, smoothing esponenziale breve/lunga, segmenti valley, gate `max - min > 0.1`
@@ -253,6 +254,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
   - pipeline classe `8` high-level chiusa, con `015c1480 / 015c0b60` ristretto a smoother esponenziale forward/reverse mode `0`
   - builder classe `8` clean-room operativo, incluso il mapping item linked-successor a range protetti; resta prudente il nome canonico dell'owner
   - scalar pieces clean-room di `015c1480 / 015c0b60`: width->alpha, alpha->radius, recurrence one-pole, scratch sizing e loop mode `0`
+  - paired peak-gate kernel di `014a3550`, limitato a `+0x34/+0x38`
 - `Analyzer Gate Cluster Support`
   solo per:
   - estrazione middle-value da buffer ordinato

@@ -109,6 +109,8 @@ param_3 < item->field_34 || param_3 < item->field_38
 
 `014a3900` propaga il massimo per entrambi i campi durante i merge normali. Quindi il naming operativo corretto e' "paired local smoothed peak gates"; il significato musicale esatto delle due lane resta legato ai due buffer input di `014a3550` e non va ancora nominato come energy/pitch/tonality senza evidenza aggiuntiva.
 
+Il kernel clean-room e' aperto in `rawnotes/paired_peak_gate.*`. Non implementa ancora il writer completo `014a3550`, perche' i campi `+0x2c/+0x30` restano sotto confidence piu' bassa del gate operativo.
+
 ---
 
 ## 4. Flag Values Osservati
