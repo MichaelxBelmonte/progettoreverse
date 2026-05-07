@@ -1,0 +1,10 @@
+branch	slot_ptr	slot_flag	source_before_call	arg_register	postcall_cleanup	probable_role	confidence	notes
+poly	-0x8f0	-0x8e8	-0xf8(%rbp)	rsi=&slot	no immediate cleanup visible	input wrapper / borrowed	medium	copy-in pair ptr+flag before 0x01447a70
+poly	-0x8e0	-0x8d8	-0xf0(%rbp)	rdx=&slot	no immediate cleanup visible	input wrapper / borrowed	medium	copy-in pair ptr+flag before 0x01447a70
+poly	-0x8d0	-0x8c8	-0x1d0(%rbp)	rcx=&slot	no immediate cleanup visible	input wrapper / borrowed	medium	copy-in pair ptr+flag before 0x01447a70
+poly	-0x688	-0x680	-0x220(%rbp)	r8=&slot	release via 0xd50b20 if flag set and ptr non-null	in/out wrapper	high	only poly slot with immediate post-call cleanup
+poly	-0x8c0	-0x8b8	-0x260(%rbp)	r9=&slot	no immediate cleanup visible	input wrapper / borrowed	medium	copy-in pair ptr+flag before 0x01447a70
+poly	stack0	n/a	(-0x198(%rbp) != 0)	[rsp]	no direct cleanup	presence gate / mode bool	high	boolean built with cmpq+setne immediately before 0x01447a70
+mono	-0x628	-0x620	r12 materialized from e8fc40+d4ff40+vcall	rsi=&slot	release via 0xd50b20 if flag set and ptr non-null	out-wrapper / temp object	high	new object prepared by dispatcher before 0x0146c830
+mono	-0x880	-0x878	-0xf0(%rbp)	rdx=&slot	no immediate cleanup visible	input wrapper / borrowed	medium	copy-in pair ptr+flag before 0x0146c830
+mono	-0x870	-0x868	-0xc0(%rbp)	rcx=&slot	no immediate cleanup visible	input wrapper / borrowed	medium	copy-in pair ptr+flag before 0x0146c830

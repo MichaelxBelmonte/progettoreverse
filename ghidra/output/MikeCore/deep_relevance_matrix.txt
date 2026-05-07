@@ -1,0 +1,13 @@
+# Search: "relevanceMatrix"
+STRING @ 020233f3: "_relevanceMatrix"
+  FUNC: FUN_01146100 @ 01146100
+    Size: 175 bytes
+    Ref from: 01146152
+    Called by (1):
+      FUN_01141790@01141790
+    Calls (4):
+      FUN_00e87980@00e87980
+      FUN_01140ee0@01140ee0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+

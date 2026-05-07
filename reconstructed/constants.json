@@ -1,0 +1,4372 @@
+{
+  "GNFastFourierTransformer": [
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1d;   }   else {     if (unaff_ESI != 0x40000000) goto LAB_00e83485;     uVar1 = 0x1e;",
+      "file": "00e83120",
+      "category": "small_multiplier"
+    }
+  ],
+  "MUAudioSourceAttackItem": [
+    {
+      "value": 5e-324,
+      "raw": "4.94065645841247e-324",
+      "context": "param_1 = local_c8;           }           dVar27 = 4.94065645841247e-324;           FUN_013eb4a0();           local_108 = *(longlong",
+      "file": "0125a5f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-323,
+      "raw": "9.88131291682493e-324",
+      "context": ";             local_b8[5] = local_150;             dVar27 = 9.88131291682493e-324;             local_1f0 = local_140;             dVar25 = lo",
+      "file": "0125a5f0",
+      "category": "ratio/weight"
+    }
+  ],
+  "MUAudioSourcePrincipalItem": [
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "333333 + 0x19999998U >> 2 | local_154 * 0x40000000) <                          0xccccccd)",
+      "file": "0132f280",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "*(undefined4 *)(lVar15 + 0x10) = 0x3f000000;               FUN_00d50b20();",
+      "file": "0137e3a0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.24208e-44,
+      "raw": "2.24208e-44",
+      "context": "_4_,(local_60._0_4_ + local_4c) * DAT_0239011c);   fVar64 = 2.24208e-44;   do {     fVar66 = fVar64;     fVar64 = (float)((int)fVar",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 5.73972e-42,
+      "raw": "5.73972e-42",
+      "context": "66 * 2);   } while ((int)fVar66 < iVar51 * 4);   local_4c = 5.73972e-42;   if ((uint)fVar66 < 0x1000) {     local_4c = fVar66;   }",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "if (*pfVar1 < DAT_0240d16c) {             param_7[lVar41] = 1e-07;           }           if (fVar64 < _UNK_02416634) {",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "fVar64 < _UNK_02416634) {             param_7[lVar41 + 1] = 1e-07;           }           if (fVar66 < _UNK_02416638) {",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "fVar66 < _UNK_02416638) {             param_7[lVar41 + 2] = 1e-07;           }           if (fVar67 < _UNK_0241663c) {",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "fVar67 < _UNK_0241663c) {             param_7[lVar41 + 3] = 1e-07;           }           if (fVar69 < DAT_0240d16c) {",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "(fVar69 < DAT_0240d16c) {             param_7[lVar41 + 4] = 1e-07;           }           if (fVar8 < _UNK_02416634) {",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "(fVar8 < _UNK_02416634) {             param_7[lVar41 + 5] = 1e-07;           }           if (fVar9 < _UNK_02416638) {",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "(fVar9 < _UNK_02416638) {             param_7[lVar41 + 6] = 1e-07;           }           fVar64 = (float)-(uint)(fVar69 < _DA",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-07,
+      "raw": "1e-07",
+      "context": "fVar10 < _UNK_0241663c) {             param_7[lVar41 + 7] = 1e-07;           }           lVar41 = lVar41 + 8;         } while",
+      "file": "017ee2e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6000000238418579,
+      "raw": "0x3f19999a (as float: 0.600000)",
+      "context": "ined4 *)((longlong)unaff_RDI + 0x184) = 0x3f19999a;     if (unaff_RDI[0x29] != 0) {",
+      "file": "01b8b2b0",
+      "category": "ratio/weight"
+    }
+  ],
+  "MUElementAnalyzer": [
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ";           do {             *piVar24 = 0x40000000;             piVar24 = piVar24 + 7;",
+      "file": "00eac76a",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "*piVar24 = 0x40000000;                             piVar24 =",
+      "file": "00eac76a",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "(uVar47 + 0xc));             }             if (local_144 != 2.8026e-45) {               uVar47 = unaff_RDI[0x1b];               if",
+      "file": "01484bc0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "uVar47 = puVar50[2];             if (local_144 == 2.8026e-45) {               uVar60 = (uint)unaff_RDI[0x18];",
+      "file": "01484bc0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "glong)unaff_RDI + 0xe1) = 0;               if (local_144 != 2.8026e-45) {                 local_170 = (double)unaff_RDI[0x17] / (d",
+      "file": "01484bc0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "r47 + 0xc));               }               if (local_144 == 2.8026e-45) {                 *(undefined4 *)(unaff_RDI + 0x1d) = 0x43",
+      "file": "01484bc0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 6.0,
+      "raw": "0x40c00000 (as float: 6.000000)",
+      "context": "al_58,                  CONCAT44(uVar79,0x40c00000),local_c8,0x3f866666,0,",
+      "file": "01484bc0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.0499999523162842,
+      "raw": "0x3f866666 (as float: 1.050000)",
+      "context": "CONCAT44(uVar79,0x40c00000),local_c8,0x3f866666,0,                  *(undefined4 *)(&DA",
+      "file": "01484bc0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 16.0,
+      "raw": "0x41800000 (as float: 16.000000)",
+      "context": "240e368 + (ulonglong)(iVar44 == 2) * 4),0x41800000);     puVar49 = local_1b8;     if (uVar",
+      "file": "01484bc0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 0.001,
+      "raw": "0.001",
+      "context": "RSI;     if (*(int *)(lVar29 + 0xc) < 1) {       *param_4 = 0.001;       fVar37 = 0.0;       bVar12 = false;       local_a8 =",
+      "file": "014a74b0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "if (*pfVar23 < fVar31) {           pfVar19[uVar24] = 0.6;         }         if (fVar5 < fVar33) {           pfVar19[",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "if (fVar5 < fVar33) {           pfVar19[uVar24 + 1] = 0.6;         }         if (fVar32 <= fVar6) {           if (fVa",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "];         }         else {           pfVar19[uVar24 + 2] = 0.6;           if (fVar17 <= fVar7) goto LAB_014ae7cb; LAB_014a",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "LAB_014ae7cb; LAB_014ae840:           pfVar19[uVar24 + 3] = 0.6;           pfVar23 = pfVar19 + uVar24 + 4;           fVar5",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "if (fVar5 < fVar31) {           pfVar19[uVar24 + 4] = 0.6;         }         if (fVar6 < fVar33) {           pfVar19[",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "if (fVar6 < fVar33) {           pfVar19[uVar24 + 5] = 0.6;         }         if (fVar7 < fVar32) {           pfVar19[",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "if (fVar7 < fVar32) {           pfVar19[uVar24 + 6] = 0.6;         }         if (fVar8 < fVar17) {           pfVar19[",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "if (fVar8 < fVar17) {           pfVar19[uVar24 + 7] = 0.6;         }         uVar24 = uVar24 + 8;       } while (uVar",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6,
+      "raw": "0.6",
+      "context": "1 && fVar31 != pfVar19[uVar21]) {         pfVar19[uVar21] = 0.6;       }       uVar21 = uVar21 + 1;     } while (uVar28 !=",
+      "file": "014ae680",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "*(undefined4 *)(lVar19 + uVar21 * 4) = 0x40800000;         }         if (fVar40 <= fVar41",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "ndefined4 *)(lVar19 + 8 + uVar21 * 4) = 0x40800000;           if (fVar4 > fVar37) goto LAB",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "ndefined4 *)(lVar19 + 4 + uVar21 * 4) = 0x40800000;           if (fVar39 < fVar42) goto LA",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "efined4 *)(lVar19 + 0xc + uVar21 * 4) = 0x40800000;           pfVar2 = (float *)(lVar19 +",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "fined4 *)(lVar19 + 0x10 + uVar21 * 4) = 0x40800000;         }         if (fVar41 < fVar42)",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "fined4 *)(lVar19 + 0x14 + uVar21 * 4) = 0x40800000;         }         if (fVar39 < fVar4)",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "fined4 *)(lVar19 + 0x18 + uVar21 * 4) = 0x40800000;         }         if (fVar37 < fVar5)",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "fined4 *)(lVar19 + 0x1c + uVar21 * 4) = 0x40800000;         }         uVar21 = uVar21 + 8;",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "*(undefined4 *)(lVar19 + uVar27 * 4) = 0x40800000;       }       uVar27 = uVar27 + 1;",
+      "file": "014afb20",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 0.3333,
+      "raw": "0.3333",
+      "context": "uVar24 = (ulonglong)uVar21;           local_78 = 0.3333;           if ((DAT_023d59b4 < fVar48 / (float)(int)uVar27)",
+      "file": "014b5bc0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.0001,
+      "raw": "0.0001",
+      "context": "if (local_78 < DAT_023d59b4) {               local_78 = 0.0001;               fVar43 = DAT_023d59b4;             }",
+      "file": "014b5bc0",
+      "category": "ratio/weight"
+    }
+  ],
+  "MULSSComponentRenderer": [
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "50));     if (local_b50 < DAT_0240d188) {       local_b74 = 1.4013e-45;     }     dVar99 = DAT_0240d2e8 * local_b50;     local_ae4",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "AT71((int7)((ulonglong)local_c38 >> 8),1));     local_9ac = 1.4013e-45;     local_8c0 = (undefined *)0x0;     local_870 = (float *",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": ") = 0;                       *(float *)(unaff_RDI + 0x2c) = 1.4013e-45;                       if ((int)local_9ac < 2) { LAB_012ab3",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "else {                         if (local_a2c == 1.4013e-45) {                           *(undefined1 *)((longlong)unaf",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "ocal_a00 < DAT_0240d188) {                         fVar98 = 1.4013e-45;                       }                       *(float *)(u",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "'\\0') &&                           (*(float *)local_948 == 2.8026e-45)) &&                          (*(char *)((longlong)unaff_RD",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "1);                     }                     if (fVar98 != 1.4013e-45) {                       lVar42 = 0;",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "') {         if (0 < (int)fVar60) {           if (fVar60 == 1.4013e-45) {             uVar82 = 0;           }           else {",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "lVar42 = (longlong)(int)fVar60;         if (local_a2c == 1.4013e-45) {           pcVar55 = (code *)0x0;           iVar40 = 0;",
+      "file": "012a8c90",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ned4 *)((longlong)ppppppfVar81 + 0xc) = 0x3f800000;             }           }           el",
+      "file": "012a8c90",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ned4 *)((longlong)ppppppfVar81 + 0xc) = 0x3f800000;               fVar38 = DAT_02390124;",
+      "file": "012a8c90",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*ppppppfVar131 = (float *****)0x3f800000;                     if (7 < (int)local",
+      "file": "012a8c90",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ppppppfVar131[lVar42] = (float *****)0x3f800000;                         lVar42 = lVar4",
+      "file": "012a8c90",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "(float *******)CONCAT44(local_8d0._4_4_,0x3f800000);           fVar98 = *(float *)((longlo",
+      "file": "012a8c90",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "thread_key_t)uVar22;         local_7c = 0x3f800000;         local_31 = '\\0';         if (*",
+      "file": "012b5260",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "if (param_3 == 0) {           *puVar2 = 0x3f800000;         }         fVar7 = DAT_023b4df0",
+      "file": "012b9ad0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "B_012b9cb0:             puVar2[lVar9] = 0x3f800000;             lVar9 = lVar9 + 1;",
+      "file": "012b9ad0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*puVar3 = *puVar1;           *puVar2 = 0x3f800000;         }         fVar7 = DAT_023b4df0",
+      "file": "012b9ad0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "B_012b9bb0:             puVar2[lVar9] = 0x3f800000;             lVar9 = lVar9 + 1;",
+      "file": "012b9ad0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "if (*pfVar8 < fVar19) {           in_RCX[uVar10] = 1.1754944e-38;         }         if (fVar1 < fVar22) {           in_RCX[u",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "if (fVar1 < fVar22) {           in_RCX[uVar10 + 1] = 1.1754944e-38;         }         if (fVar2 < fVar20) {           in_RCX[u",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "if (fVar2 < fVar20) {           in_RCX[uVar10 + 2] = 1.1754944e-38;           if (fVar3 < fVar21) goto LAB_012b9f06; LAB_012b9",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "LAB_012b9e95; LAB_012b9f06:           in_RCX[uVar10 + 3] = 1.1754944e-38;           pfVar8 = in_RCX + uVar10 + 4;           fVar1 =",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "if (fVar1 < fVar19) {           in_RCX[uVar10 + 4] = 1.1754944e-38;         }         if (fVar2 < fVar22) {           in_RCX[u",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "if (fVar2 < fVar22) {           in_RCX[uVar10 + 5] = 1.1754944e-38;         }         if (fVar3 < fVar20) {           in_RCX[u",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "if (fVar3 < fVar20) {           in_RCX[uVar10 + 6] = 1.1754944e-38;         }         if (fVar4 < fVar21) {           in_RCX[u",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "if (fVar4 < fVar21) {           in_RCX[uVar10 + 7] = 1.1754944e-38;         }         uVar10 = uVar10 + 8;       } while (uVar",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "r19 && fVar19 != in_RCX[uVar11]) {         in_RCX[uVar11] = 1.1754944e-38;       }       uVar11 = uVar11 + 1;     } while (uVar15 !=",
+      "file": "012b9d70",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar10 + uVar19 * 4) = 0x3f800000;                   uVar9 = uVar5 + 1;",
+      "file": "012bd760",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(lVar10 + (ulonglong)uVar9 * 4) = 0x3f800000;                   uVar9 = uVar5 + 2;",
+      "file": "012bd760",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(lVar10 + (ulonglong)uVar9 * 4) = 0x3f800000;                   *(undefined4 *)(lVar",
+      "file": "012bd760",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar10 + uVar19 * 4) = 0x3f800000;                   uVar5 = uVar5 + 4;",
+      "file": "012bd760",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar10 + uVar19 * 4) = 0x3f800000;                 uVar5 = uVar5 + 1;",
+      "file": "012bd760",
+      "category": "uncategorized"
+    }
+  ],
+  "MUPitchMapper": [
+    {
+      "value": 10.0,
+      "raw": "0x41200000 (as float: 10.000000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x41200000;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 9.0,
+      "raw": "0x41100000 (as float: 9.000000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x41100000;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 8.0,
+      "raw": "0x41000000 (as float: 8.000000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x41000000;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.5,
+      "raw": "0x40200000 (as float: 2.500000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x40200000;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.799999952316284,
+      "raw": "0x40333333 (as float: 2.800000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x40333333;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 5.0,
+      "raw": "0x40a00000 (as float: 5.000000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x40a00000;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x3f000000;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 100.0,
+      "raw": "0x42c80000 (as float: 100.000000)",
+      "context": "ndefined4 *)((longlong)puVar2 + 0x14) = 0x42c80000;       FUN_00d21140();       FUN_00d50b",
+      "file": "01802d60",
+      "category": "possible_frequency"
+    }
+  ],
+  "MUPulseAssignmentTarget": [
+    {
+      "value": 1.2000000476837158,
+      "raw": "0x3f99999a (as float: 1.200000)",
+      "context": "Var32;   *(undefined4 *)(puVar37 + 2) = 0x3f99999a;   FUN_012a52b0();   DAT_028ac5d8 = 0x4",
+      "file": "012a55e0",
+      "category": "small_multiplier"
+    }
+  ],
+  "MUSampledFunction": [
+    {
+      "value": 5e-324,
+      "raw": "4.94065645841247e-324",
+      "context": "fVar59);               fVar59 = 0.0;               dVar28 = 4.94065645841247e-324;               do {                 fVar59 = fVar59 + *(flo",
+      "file": "014c03f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "t)(float)local_48;                   if ((float)local_48 == 1.4013e-45) {                     fVar60 = *(float *)(local_60[2] + (l",
+      "file": "014c03f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "defined4 *)((longlong)plVar13 + 0x1c) = 0x3f800000;             fVar15 = DAT_02394220;",
+      "file": "0196e070",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "defined4 *)((longlong)plVar13 + 0x1c) = 0x3f800000;           *(undefined1 *)((longlong)pl",
+      "file": "0196e070",
+      "category": "uncategorized"
+    }
+  ],
+  "MUScalePitchSystem": [
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "else {       local_88._0_8_ = local_70;       fVar15 = 1.4013e-45;       if (((local_68[0] == '\\0') && (FUN_00d50b00(), local",
+      "file": "0199c1c0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "if (local_68[0] != '\\0') goto LAB_0199c855;       fVar15 = 1.4013e-45;       FUN_00d50b00();     } LAB_0199c9a3:     cVar3 = SUB4",
+      "file": "0199c1c0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "ong *)0x0) {         FUN_00d50b00();       }       fVar15 = 1.4013e-45;       if ((cVar3 == '\\0') || (local_88._0_8_ == 0)) {",
+      "file": "0199c1c0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.8999999761581421,
+      "raw": "0x3f666666 (as float: 0.900000)",
+      "context": "1cfc6a0(DAT_02390124);       local_28 = 0x3f666666;       FUN_01cfc6a0(DAT_02390124);",
+      "file": "01a1dd20",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "1cfc6a0(DAT_02390124);       local_24 = 0x3f800000;       FUN_01ae52c0(&local_50,&local_30",
+      "file": "01a1dd20",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.8999999761581421,
+      "raw": "0x3f666666 (as float: 0.900000)",
+      "context": "1cfc6a0(DAT_0241c6e0);       local_28 = 0x3f666666;       FUN_01cfc6a0(DAT_023b8bc0);",
+      "file": "01a1e050",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "1cfc6a0(DAT_023b8bc0);       local_24 = 0x3f800000;       FUN_01ae52c0(&local_50,&local_30",
+      "file": "01a1e050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.8999999761581421,
+      "raw": "0x3f666666 (as float: 0.900000)",
+      "context": "1cfc6a0(DAT_02390120);       local_28 = 0x3f666666;       FUN_01cfc6a0(DAT_023b3888);",
+      "file": "01a1e380",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "1cfc6a0(DAT_023b3888);       local_24 = 0x3f800000;       FUN_01ae52c0(&local_50,&local_30",
+      "file": "01a1e380",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.699999988079071,
+      "raw": "0x3f333333 (as float: 0.700000)",
+      "context": "*(undefined4 *)(DAT_028b2a40 + 2) = 0x3f333333;             *(undefined1 *)((longlong)",
+      "file": "01a1e750",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.699999988079071,
+      "raw": "0x3f333333 (as float: 0.700000)",
+      "context": "defined4 *)((longlong)puVar12 + 0x14) = 0x3f333333;             *(undefined1 *)((longlong)",
+      "file": "01a1e750",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.699999988079071,
+      "raw": "0x3f333333 (as float: 0.700000)",
+      "context": "*(undefined4 *)(puVar12 + 3) = 0x3f333333;             *(undefined1 *)((longlong)",
+      "file": "01a1e750",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.3333300054073334,
+      "raw": "0x3eaaaa3b (as float: 0.333330)",
+      "context": "_01cfc6a0(DAT_0241be1c);     local_9c = 0x3eaaaa3b;     FUN_01cfc6a0(DAT_0241be20);     lo",
+      "file": "01a35080",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.6666600108146667,
+      "raw": "0x3f2aaa3b (as float: 0.666660)",
+      "context": "_01cfc6a0(DAT_0241be20);     local_98 = 0x3f2aaa3b;     FUN_01cfc6a0(DAT_0241be24);     lo",
+      "file": "01a35080",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "_01cfc6a0(DAT_0241be24);     local_94 = 0x3f800000;     pplVar5 = &local_90;     FUN_01ae5",
+      "file": "01a35080",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.4078724980354309,
+      "raw": "0x3ed0d4aa (as float: 0.407872)",
+      "context": "(int)((ulonglong)_UNK_0241bee8 >> 0x20),0x3ed0d4aa);     plVar2 = (longlong *)FUN_00e8fc40",
+      "file": "01a35080",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "_0241be30,DAT_0241be34);     local_98 = 0x3f000000;     FUN_01cfbee0(DAT_0241f36c,DAT_0241",
+      "file": "01a35080",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "_0241be38,DAT_0241be3c);     local_94 = 0x3f000000;     FUN_01cfbee0(DAT_0241be40,DAT_0241",
+      "file": "01a35080",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "_0241be44,DAT_0241be48);     local_f0 = 0x3f800000;     pplVar5 = &local_d0;     FUN_01ae5",
+      "file": "01a35080",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.8999999761581421,
+      "raw": "0x3f666666 (as float: 0.900000)",
+      "context": "FUN_01cfc6a0();         local_48 = 0x3f666666;         FUN_01cfc6a0();         local_",
+      "file": "01a36f10",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "FUN_01cfc6a0();         local_44 = 0x3f800000;         FUN_01ae52c0(&local_70,&local_",
+      "file": "01a36f10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "FUN_01cfc6a0();           local_48 = 0x3f000000;           FUN_01cfc6a0();           lo",
+      "file": "01a36f10",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "FUN_01cfc6a0();           local_44 = 0x3f000000;           FUN_01cfc6a0();           lo",
+      "file": "01a36f10",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "FUN_01cfc6a0();           local_c4 = 0x3f800000;           FUN_01ae52c0(&local_60,&loca",
+      "file": "01a36f10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 12.0,
+      "raw": "0x41400000 (as float: 12.000000)",
+      "context": "();         }       }       uStack_34 = 0x41400000;       if (1 < *(int *)(*(longlong *)(u",
+      "file": "01a36f10",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.4013e-44,
+      "raw": "1.4013e-44",
+      "context": "(int)fVar47 % iVar7), (int)fVar15 < 0xb)) {       fVar15 = 1.4013e-44;     }     in_RCX = (longlong *)((longlong)(int)fVar15 * 0x",
+      "file": "01aecf20",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-44,
+      "raw": "1.4013e-44",
+      "context": "int)fVar47 % iVar7), (int)fVar57 < 0xb)) {         fVar57 = 1.4013e-44;       }       auVar34._0_8_ = _logf((float)(int)fVar57 * D",
+      "file": "01aecf20",
+      "category": "ratio/weight"
+    }
+  ],
+  "MUSpectralTimeSlice": [
+    {
+      "value": 4.0,
+      "raw": "0x40800000 (as float: 4.000000)",
+      "context": "00000;   *(undefined4 *)(puVar15 + 1) = 0x40800000;   FUN_00c8e690();   if (local_40 != 0)",
+      "file": "015c4e40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "+ uVar8 * 8) + 0x20) =                  0x3f800000;           }           lVar9 = *(longlo",
+      "file": "015cabc0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "+ uVar8 * 8) + 0x20) =                  0x3f800000;           }           uVar8 = uVar8 +",
+      "file": "015cabc0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "10) + uVar8 * 8) + 0x20) =              0x3f800000;       }     }   }   lVar11 = *unaff_RS",
+      "file": "015cabc0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.20000000298023224,
+      "raw": "0x3e4ccccd (as float: 0.200000)",
+      "context": "+ uVar8 * 8) + 0x20) =                  0x3e4ccccd;           }           lVar13 = *(longl",
+      "file": "015cabc0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.20000000298023224,
+      "raw": "0x3e4ccccd (as float: 0.200000)",
+      "context": "+ uVar8 * 8) + 0x20) =                  0x3e4ccccd;           }           uVar8 = uVar8 +",
+      "file": "015cabc0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.20000000298023224,
+      "raw": "0x3e4ccccd (as float: 0.200000)",
+      "context": ")(lVar11 + 0x10) + uVar8 * 8) + 0x20) = 0x3e4ccccd         ;       }     }   }   if ((*(in",
+      "file": "015cabc0",
+      "category": "ratio/weight"
+    }
+  ],
+  "MUSpectrumShaper": [
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "r69;         lVar17 = lVar53 + 0x7e4;         if (fVar67 != 1.4013e-45) {           if (fVar67 != 2.8026e-45) {             iVar52",
+      "file": "014902f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "if (fVar67 != 1.4013e-45) {           if (fVar67 != 2.8026e-45) {             iVar52 = -((int)fVar67 - 1U & 0xfffffffe);",
+      "file": "014902f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "= *(undefined **)(unaff_RDI + 0x96);         if (fVar59 == 1.4013e-45) {           local_100 = (void *)CONCAT44(local_100._4_4_,0",
+      "file": "014902f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.0001,
+      "raw": "0.0001",
+      "context": "3d59b4) { LAB_01495248:                       local_68[4] = 0.0001;                     }                   }",
+      "file": "014902f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.1754944e-38,
+      "raw": "1.1754944e-38",
+      "context": "ar67 < DAT_02394274) {                     local_68[0x16] = 1.1754944e-38;                   }                 }                 else",
+      "file": "014902f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "fVar59 = (float)(iVar52 + 1);           fVar67 = 1.4013e-45;           if (0 < (int)fVar59) {             fVar67 = fVar",
+      "file": "014902f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.3333333432674408,
+      "raw": "0x3eaaaaab (as float: 0.333333)",
+      "context": "*(undefined4 *)(puVar22 + 4) = 0x3eaaaaab;         local_80 = pfVar47;         if",
+      "file": "014902f0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.9999998807907104,
+      "raw": "0x3fffffff (as float: 2.000000)",
+      "context": "uVar29 = (ulonglong)((uint)uVar30 & 0x3fffffff);           uVar45 = lVar53 * 0x1f90 &",
+      "file": "014902f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ";   *(undefined4 *)(unaff_RDI + 0xb0) = 0x3f800000;   *(undefined8 *)(unaff_RDI + 0xa8) =",
+      "file": "017ebde0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 100.0,
+      "raw": "100.0",
+      "context": "local_40;   char local_38;      local_8c = 1;   local_88 = 100.0;   local_84 = 0x43c80000;   local_80 = 10.766602;   local_7",
+      "file": "017ed3c0",
+      "category": "possible_frequency"
+    },
+    {
+      "value": 10.766602,
+      "raw": "10.766602",
+      "context": ";   local_88 = 100.0;   local_84 = 0x43c80000;   local_80 = 10.766602;   local_7c = 1.0;   local_78 = 1.0;   FUN_00c8e690();   lo",
+      "file": "017ed3c0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "defined4 *)((longlong)puVar13 + 0x14) = 0x3f800000;       if (*(char *)(unaff_RDI + 0x80)",
+      "file": "018753f0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.41531e-43,
+      "raw": "1.41531e-43",
+      "context": "ram_4;   insertps(auVar45,fVar41,0x10);   unaff_RDI[0x67] = 1.41531e-43;   cVar19 = FUN_00d054a0();   lVar3 = _UNK_0240e298;   lVar",
+      "file": "01ab7b20",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar13 + lVar9 * 4) = 0x3f800000;           iVar19 = *(int *)(lVar12 + l",
+      "file": "01abc630",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar27 + lVar44 * 4) = 0x3f800000;                     *(undefined4 *)(*(",
+      "file": "01ac0bd0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ong *)(local_48 + 0x10) + uVar29 * 4) = 0x3f800000;                 *(undefined4 *)(*(long",
+      "file": "01ac0bd0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ong *)(local_48 + 0x10) + uVar29 * 4) = 0x3f800000;               }               uVar29 =",
+      "file": "01ac0bd0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.6000000238418579,
+      "raw": "0x3f19999a (as float: 0.600000)",
+      "context": "ined4 *)((longlong)unaff_RDI + 0x184) = 0x3f19999a;     pvVar13 = _pthread_getspecific(par",
+      "file": "01b88cd0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "g *)(lVar2 + 0x10) + (longlong)iVar4) = 0x3f800000;     uVar7 = FUN_00d50b20();   }   lVar",
+      "file": "01bd5d50",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.7070000171661377,
+      "raw": "0x3f34fdf4 (as float: 0.707000)",
+      "context": "g *)(lVar2 + 0x10) + (longlong)iVar4) = 0x3f34fdf4;     uVar7 = FUN_00d50b20();   }   lVar",
+      "file": "01bd5d50",
+      "category": "ratio/weight"
+    }
+  ],
+  "MUTempoAnalyzerEvent": [
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "**(undefined4 **)(local_48 + 0x10) = 0x3f800000;     goto LAB_016027d7;   }   lVar19 =",
+      "file": "01602560",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar2 + lVar24 * 4) = 0x3f800000;   }   else {     pfVar21 = (float *)(l",
+      "file": "01602560",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar2 + lVar24 * 4) = 0x3f800000;   }   if (unaff_SIL == '\\0') goto LAB_",
+      "file": "01602560",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "0000;     *(undefined4 *)(puVar3 + 1) = 0x3f000000;   }   if (in_CL != '\\0') {     iVar6 =",
+      "file": "01606000",
+      "category": "ratio/weight"
+    }
+  ],
+  "MUTool": [
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "t *)(*local_b0 + 0x18) & 0xf000000f) != 0x40000000)) {       local_1a8 = uVar7;       FUN_",
+      "file": "01721000",
+      "category": "small_multiplier"
+    }
+  ],
+  "QualityScoring": [
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ab:       *(undefined4 *)(plVar4 + 9) = 0x40000000;       fVar22 = DAT_0239011c;       *(f",
+      "file": "01d4f920",
+      "category": "small_multiplier"
+    }
+  ],
+  "Unknown": [
+    {
+      "value": 72.0,
+      "raw": "72.0",
+      "context": "x81;     puVar4[3] =      \"/Users/admin/.conan/data/boost/1.72.0/pace/stable/package/09bac4a8da0d4940a1727615ac8fffa2eb7a26e",
+      "file": "00951ac0",
+      "category": "possible_frequency"
+    },
+    {
+      "value": 72.0,
+      "raw": "72.0",
+      "context": "x81;     puVar4[3] =      \"/Users/admin/.conan/data/boost/1.72.0/pace/stable/package/09bac4a8da0d4940a1727615ac8fffa2eb7a26e",
+      "file": "00997160",
+      "category": "possible_frequency"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ";       bVar2 = 1;       switch(uVar5 * 0x40000000 | uVar5 >> 2) {       case 0:       cas",
+      "file": "009e0216",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8 | uVar6 << 0x18;   uVar12 = uVar11 * 0x40000000 | uVar11 >> 2;   uVar33 = unaff_RSI[3];",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x5a827999;   uVar9 = uVar8 * 0x40000000 | uVar8 >> 2;   uVar33 = unaff_RSI[4];",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+ 0x5a827999;   uVar26 = uVar25 * 0x40000000 | uVar25 >> 2;   uVar33 = unaff_RSI[5];",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x5a827999;   uVar21 = uVar11 * 0x40000000 | uVar11 >> 2;   uVar33 = unaff_RSI[6];",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8 | uVar33 << 0x18;   uVar25 = uVar20 * 0x40000000 | uVar20 >> 2;   uVar33 = unaff_RSI[7];",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+ 0x5a827999;   uVar13 = uVar17 * 0x40000000 | uVar17 >> 2;   uVar33 = unaff_RSI[8];",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1b) + 0x5a827999;   uVar26 = uVar20 * 0x40000000 | uVar20 >> 2;   uVar33 = unaff_RSI[9];",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1b) + 0x5a827999;   uVar28 = uVar27 * 0x40000000 | uVar27 >> 2;   uVar33 = unaff_RSI[10]",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8 | uVar33 << 0x18;   uVar27 = uVar22 * 0x40000000 | uVar22 >> 2;   uVar33 = unaff_RSI[0xb",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1b) + 0x5a827999;   uVar18 = uVar21 * 0x40000000 | uVar21 >> 2;   uVar33 = unaff_RSI[0xc",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1b) + 0x5a827999;   uVar14 = uVar22 * 0x40000000 | uVar22 >> 2;   uVar33 = unaff_RSI[0xd",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1b) + 0x5a827999;   uVar27 = uVar21 * 0x40000000 | uVar21 >> 2;   uVar33 = unaff_RSI[0xe",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8 | uVar33 << 0x18;   uVar29 = uVar28 * 0x40000000 | uVar28 >> 2;   uVar33 = unaff_RSI[0xf",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^ uVar32 ^ uVar16;   uVar32 = uVar22 * 0x40000000 | uVar22 >> 2;   uVar34 = uVar33 << 1 |",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "21 ^ uVar7 ^ uVar5;   uVar28 = uVar18 * 0x40000000 | uVar18 >> 2;   uVar22 = uVar33 << 1 |",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "3 ^ uVar16 ^ uVar6;   uVar16 = uVar14 * 0x40000000 | uVar14 >> 2;   uVar33 = uVar33 << 1 |",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1b) + 0x5a827999;   uVar14 = uVar27 * 0x40000000 | uVar27 >> 2;   uVar5 = uVar5 ^ uVar8",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x5a827999;   uVar32 = uVar29 * 0x40000000 | uVar29 >> 2;   uVar6 = uVar6 ^ uVar11",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar28 = uVar5 * 0x40000000 | uVar5 >> 2;   uVar5 = uVar8 ^ uVar12",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "t)((int)uVar5 < 0);   uVar16 = uVar18 * 0x40000000 | uVar18 >> 2;   uVar6 = uVar11 ^ uVar9",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar14 = uVar27 * 0x40000000 | uVar27 >> 2;   uVar6 = uVar12 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar11 = uVar8 * 0x40000000 | uVar8 >> 2;   uVar6 = uVar9 ^ uVar20",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar32 = uVar27 * 0x40000000 | uVar27 >> 2;   uVar6 = uVar17 ^ uVar2",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "t)((int)uVar6 < 0);   uVar28 = uVar18 * 0x40000000 | uVar18 >> 2;   uVar8 = uVar20 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar18 = uVar16 * 0x40000000 | uVar16 >> 2;   uVar8 = uVar25 ^ uVar2",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar20 = uVar17 * 0x40000000 | uVar17 >> 2;   uVar8 = uVar13 ^ uVar2",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar17 = uVar11 * 0x40000000 | uVar11 >> 2;   uVar11 = uVar26 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ")((int)uVar11 < 0);   uVar30 = uVar32 * 0x40000000 | uVar32 >> 2;   uVar11 = uVar21 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar28 = uVar13 * 0x40000000 | uVar13 >> 2;   uVar11 = uVar23 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar18 = uVar26 * 0x40000000 | uVar26 >> 2;   uVar20 = uVar34 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar21 = uVar13 * 0x40000000 | uVar13 >> 2;   uVar17 = uVar22 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ")((int)uVar17 < 0);   uVar26 = uVar20 * 0x40000000 | uVar20 >> 2;   uVar33 = uVar33 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar30 = uVar32 * 0x40000000 | uVar32 >> 2;   uVar33 = uVar7 ^ uVar5",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar32 = uVar28 * 0x40000000 | uVar28 >> 2;   uVar33 = uVar29 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar28 = uVar22 * 0x40000000 | uVar22 >> 2;   uVar33 = uVar5 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "t)((int)uVar33 < 0);   uVar22 = uVar7 * 0x40000000 | uVar7 >> 2;   uVar33 = uVar24 ^ uVar9",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar7 = uVar21 * 0x40000000 | uVar21 >> 2;   uVar33 = uVar12 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x6ed9eba1;   uVar29 = uVar5 * 0x40000000 | uVar5 >> 2;   uVar5 = uVar9 ^ uVar27",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar12 >> 0x1b);   uVar28 = uVar32 * 0x40000000 | uVar32 >> 2;   uVar5 = uVar6 ^ uVar14",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var15 + 0x8f1bbcdc;   uVar22 = uVar12 * 0x40000000 | uVar12 >> 2;   iVar10 = uVar7 + uVar5",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0 | uVar12 >> 0x1b);   uVar9 = iVar15 * 0x40000000 | uVar6 >> 2;   uVar6 = uVar14 ^ uVar25",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar27 >> 0x1b);   uVar12 = iVar10 * 0x40000000 | uVar12 >> 2;   uVar8 = uVar8 ^ uVar16",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0 | uVar7 >> 0x1b);   uVar28 = iVar31 * 0x40000000 | uVar27 >> 2;   uVar8 = uVar25 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var19 + 0x8f1bbcdc;   uVar14 = iVar15 * 0x40000000 | uVar7 >> 2;   iVar15 = uVar9 + uVar27",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0 | uVar9 >> 0x1b);   uVar22 = iVar19 * 0x40000000 | uVar25 >> 2;   uVar8 = uVar11 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0 | uVar11 >> 0x1b);   uVar9 = iVar15 * 0x40000000 | uVar9 >> 2;   uVar12 = uVar34 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar16 >> 0x1b);   uVar12 = iVar10 * 0x40000000 | uVar11 >> 2;   uVar11 = uVar13 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var31 + 0x8f1bbcdc;   uVar28 = iVar19 * 0x40000000 | uVar16 >> 2;   iVar19 = uVar22 + uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar13 >> 0x1b);   uVar22 = iVar31 * 0x40000000 | uVar14 >> 2;   uVar9 = uVar23 ^ uVar2",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar17 >> 0x1b);   uVar13 = iVar19 * 0x40000000 | uVar13 >> 2;   uVar12 = uVar20 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0 | uVar9 >> 0x1b);   uVar20 = iVar15 * 0x40000000 | uVar17 >> 2;   uVar17 = uVar26 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var31 + 0x8f1bbcdc;   uVar17 = iVar10 * 0x40000000 | uVar9 >> 2;   iVar10 = uVar22 + uVar2",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0 | uVar9 >> 0x1b);   uVar24 = iVar31 * 0x40000000 | uVar26 >> 2;   uVar33 = uVar33 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar33 >> 0x1b);   uVar16 = iVar10 * 0x40000000 | uVar9 >> 2;   uVar9 = uVar21 ^ uVar32",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar20 >> 0x1b);   uVar26 = iVar19 * 0x40000000 | uVar33 >> 2;   uVar33 = uVar5 ^ uVar6",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var10 + 0x8f1bbcdc;   uVar13 = iVar15 * 0x40000000 | uVar20 >> 2;   iVar19 = uVar24 + uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "| uVar32 >> 0x1b);   uVar20 = iVar10 * 0x40000000 | uVar9 >> 2;   uVar5 = uVar6 ^ uVar27",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var10 + 0x8f1bbcdc;   uVar30 = iVar19 * 0x40000000 | uVar32 >> 2;   uVar5 = uVar29 ^ uVar7",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "t)((int)uVar5 < 0);   uVar16 = iVar15 * 0x40000000 | uVar21 >> 2;   uVar5 = uVar27 ^ uVar8",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar21 = iVar10 * 0x40000000 | uVar6 >> 2;   uVar5 = uVar7 ^ uVar34",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar26 = uVar26 * 0x40000000 | uVar26 >> 2;   uVar5 = uVar8 ^ uVar25",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "nt)((int)uVar5 < 0);   uVar20 = uVar6 * 0x40000000 | uVar6 >> 2;   uVar5 = uVar34 ^ uVar11",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "b) + 0xca62c1d6   ;   uVar30 = uVar27 * 0x40000000 | uVar27 >> 2;   uVar5 = uVar25 ^ uVar2",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "1b) + 0xca62c1d6   ;   uVar16 = uVar7 * 0x40000000 | uVar7 >> 2;   uVar11 = uVar11 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar7 = uVar6 * 0x40000000 | uVar6 >> 2;   uVar6 = uVar23 ^ uVar28",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "t)((int)uVar6 < 0);   uVar21 = uVar25 * 0x40000000 | uVar25 >> 2;   uVar6 = uVar12 ^ uVar2",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar26 = uVar20 * 0x40000000 | uVar20 >> 2;   uVar6 = uVar28 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar30 = uVar23 * 0x40000000 | uVar23 >> 2;   uVar12 = uVar22 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar16 = uVar6 * 0x40000000 | uVar6 >> 2;   uVar6 = uVar14 ^ uVar33",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "t)((int)uVar6 < 0);   uVar22 = uVar20 * 0x40000000 | uVar20 >> 2;   uVar6 = uVar18 ^ uVar1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar7 = uVar21 * 0x40000000 | uVar21 >> 2;   uVar33 = uVar33 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0xca62c1d6;   uVar21 = uVar26 * 0x40000000 | uVar26 >> 2;   uVar33 = uVar17 ^ uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "9 ^ uVar11 ^ uVar6;   uVar16 = uVar14 * 0x40000000 | uVar14 >> 2;   uVar11 = uVar22 + uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^ uVar27 ^ uVar20;   uVar22 = uVar26 * 0x40000000 | uVar26 >> 2;   uVar6 = uVar20 << 1 |",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^ uVar25 ^ uVar17;   uVar25 = uVar11 * 0x40000000 | uVar11 >> 2;   uVar11 = uVar21 + uVar",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x1b) + 0xca62c1d6;   uVar17 = uVar20 * 0x40000000 | uVar20 >> 2;   uVar6 = uVar5 ^ uVar8",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r8 ^ uVar12 ^ uVar6;   uVar5 = uVar11 * 0x40000000 | uVar11 >> 2;   uVar33 = (uVar33 << 1",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar33 + uVar2;   unaff_RDI[2] = (uVar9 * 0x40000000 | uVar9 >> 2) + uVar3;   unaff_RDI[3] =",
+      "file": "009ea5a3",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 0.7417012453079224,
+      "raw": "0x3f3de022 (as float: 0.741701)",
+      "context": "Var32 | 0xf9b789a8;   uVar29 = uVar32 + 0x3f3de022;   uVar2 = uVar32 ^ 0x5459289c;   uVar2",
+      "file": "00a02082",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.5733193159103394,
+      "raw": "0x3f12c50e (as float: 0.573319)",
+      "context": "uVar25 = 0x247e7632;       uVar21 = 0x3f12c50e;     }     else {       bVar33 = uVar25",
+      "file": "00a02082",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.9999847412109375,
+      "raw": "0x3fffff80 (as float: 1.999985)",
+      "context": "uVar23 = 0;         if (((uVar22 & 0x3fffff80) != 0) || (param_1 <= uVar19)) {",
+      "file": "00c659d0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999958276748657,
+      "raw": "0x3fffffdd (as float: 1.999996)",
+      "context": "c7, 0xfffffc6 < iVar4)))) {     uVar3 = 0x3fffffdd;     if (iVar4 < 0x1ffffffd) {       uV",
+      "file": "00c8d380",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999958276748657,
+      "raw": "0x3fffffdd (as float: 1.999996)",
+      "context": ";         if (((param_1 & (int)uVar10 < 0x3fffffdd) != 1) ||            (*(int *)((longlon",
+      "file": "00c8d640",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999958276748657,
+      "raw": "0x3fffffdd (as float: 1.999996)",
+      "context": "(int)uVar10)))))) {           uVar11 = 0x3fffffdd;           if ((int)uVar10 < 0x1ffffffd",
+      "file": "00c8d640",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999958276748657,
+      "raw": "0x3fffffdd (as float: 1.999996)",
+      "context": "}       if (((param_1 & (int)uVar10 < 0x3fffffdd) != 1) ||          (*(int *)((longlong)",
+      "file": "00c8d640",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999958276748657,
+      "raw": "0x3fffffdd (as float: 1.999996)",
+      "context": "< (int)uVar10)))))) {         uVar11 = 0x3fffffdd;         if ((int)uVar10 < 0x1ffffffd)",
+      "file": "00c8d640",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999958276748657,
+      "raw": "0x3fffffdd (as float: 1.999996)",
+      "context": "(int)uVar10)))))))))) {       uVar11 = 0x3fffffdd;       if ((int)uVar10 < 0x1ffffffd) {",
+      "file": "00c8d640",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x55555555 + 0x2aaaaaa8U >> 2 | iVar7 * -0x40000000)) {           lVar10 = (longlong)iVar7;",
+      "file": "00f1e6e7",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x55555555 + 0x2aaaaaa8U >> 2 | iVar8 * -0x40000000)) {           lVar5 = (longlong)iVar8;",
+      "file": "00f1fe8c",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar8 >> 2 | uVar8 * 0x40000000));       auVar30 = vpslld_avx2(auVar29,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar24 >> 2 | uVar24 * 0x40000000));       auVar38 = vpshufd_avx2(auVar33",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar22 >> 2 | uVar22 * 0x40000000));       auVar30 = vpsrlq_avx2(auVar38,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar21 >> 2 | uVar21 * 0x40000000));       auVar31 = vpsrld_avx2(auVar38,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar20 >> 2 | uVar20 * 0x40000000));       auVar30 = vpslld_avx2(auVar29,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar12 >> 2 | uVar12 * 0x40000000));       auVar38 = vpshufd_avx2(auVar33",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar11 >> 2 | uVar11 * 0x40000000));       auVar30 = vpsrlq_avx2(auVar38,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar14 >> 2 | uVar14 * 0x40000000));       auVar31 = vpsrld_avx2(auVar38,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar8 >> 2 | uVar8 * 0x40000000));       auVar30 = vpslld_avx2(auVar29,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar24 >> 2 | uVar24 * 0x40000000));       auVar38 = vpshufd_avx2(auVar33",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar22 >> 2 | uVar22 * 0x40000000));       auVar30 = vpsrlq_avx2(auVar38,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar21 >> 2 | uVar21 * 0x40000000));       auVar31 = vpsrld_avx2(auVar38,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar20 >> 2 | uVar20 * 0x40000000));       auVar30 = vpslld_avx2(auVar29,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar12 >> 2 | uVar12 * 0x40000000));       auVar38 = vpshufd_avx2(auVar33",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar11 >> 2 | uVar11 * 0x40000000));       auVar30 = vpsrlq_avx2(auVar38,",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar14 >> 2 | uVar14 * 0x40000000);       iVar9 = iVar9 + ((uVar11 ^ uVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0) ^              (uVar8 >> 2 | uVar8 * 0x40000000));     iVar9 = uVar22 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar24 >> 2 | uVar24 * 0x40000000));     iVar9 = uVar21 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar22 >> 2 | uVar22 * 0x40000000));     iVar9 = uVar20 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar21 >> 2 | uVar21 * 0x40000000));     iVar9 = uVar12 + *(int *)pauVar1",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar20 >> 2 | uVar20 * 0x40000000));     iVar9 = uVar11 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar12 >> 2 | uVar12 * 0x40000000));     iVar9 = uVar14 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar11 >> 2 | uVar11 * 0x40000000));     iVar9 = uVar8 + *(int *)(pauVar1",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^             (uVar14 >> 2 | uVar14 * 0x40000000));     iVar9 = uVar24 + *(int *)*pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0) ^              (uVar8 >> 2 | uVar8 * 0x40000000));     iVar9 = uVar22 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar24 >> 2 | uVar24 * 0x40000000));     iVar9 = uVar21 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar22 >> 2 | uVar22 * 0x40000000));     iVar9 = uVar20 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar21 >> 2 | uVar21 * 0x40000000));     iVar9 = uVar12 + *(int *)pauVar1",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar20 >> 2 | uVar20 * 0x40000000));     iVar9 = uVar11 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar12 >> 2 | uVar12 * 0x40000000));     iVar9 = uVar14 + *(int *)(pauVar",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar11 >> 2 | uVar11 * 0x40000000));     iVar9 = uVar8 + *(int *)(pauVar1",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar14 >> 2 | uVar14 * 0x40000000)) + *piVar4;     uVar14 = uVar14 + piVa",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar8 >> 2 | uVar8 * 0x40000000));       iVar9 = uVar22 + *(int *)(*pau",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar24 >> 2 | uVar24 * 0x40000000));       iVar9 = uVar21 + *(int *)(*pau",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar22 >> 2 | uVar22 * 0x40000000));       iVar9 = uVar20 + *(int *)(*pau",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar21 >> 2 | uVar21 * 0x40000000));       iVar9 = uVar12 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar20 >> 2 | uVar20 * 0x40000000));       iVar9 = uVar11 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar12 >> 2 | uVar12 * 0x40000000));       iVar9 = uVar14 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar11 >> 2 | uVar11 * 0x40000000));       iVar9 = uVar8 + *(int *)(pauVa",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar14 >> 2 | uVar14 * 0x40000000));       iVar9 = uVar24 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar8 >> 2 | uVar8 * 0x40000000));       iVar9 = uVar22 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar24 >> 2 | uVar24 * 0x40000000));       iVar9 = uVar21 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar22 >> 2 | uVar22 * 0x40000000));       iVar9 = uVar20 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar21 >> 2 | uVar21 * 0x40000000));       iVar9 = uVar12 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar20 >> 2 | uVar20 * 0x40000000));       iVar9 = uVar11 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar12 >> 2 | uVar12 * 0x40000000));       iVar9 = uVar14 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar11 >> 2 | uVar11 * 0x40000000));       iVar10 = uVar8 + *(int *)(pauV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar14 >> 2 | uVar14 * 0x40000000);       iVar10 = iVar10 + ((uVar11 ^ uV",
+      "file": "00f54d40",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999995231628418,
+      "raw": "0x3ffffffc (as float: 2.000000)",
+      "context": "(unaff_RDI[3] * 2 - unaff_RDI[0x33]) + 0x3ffffffc;   auVar21._0_4_ = (unaff_RDI[4] * 2 -",
+      "file": "00fcee70",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999995231628418,
+      "raw": "0x3ffffffc (as float: 2.000000)",
+      "context": "(unaff_RDI[9] * 2 - unaff_RDI[0x39]) + 0x3ffffffc;   auVar11._0_4_ = (unaff_RDI[10] * 2 -",
+      "file": "00fcee70",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999995231628418,
+      "raw": "0x3ffffffc (as float: 2.000000)",
+      "context": "unaff_RDI[0xe] * 2 - unaff_RDI[0x3e]) + 0x3ffffffc;   uVar9 = (unaff_RDI[0xf] * 2 - unaff_",
+      "file": "00fcee70",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.9999990463256836,
+      "raw": "0x3ffffff8 (as float: 1.999999)",
+      "context": "(unaff_RDI[8] * 2 - unaff_RDI[0x38]) + 0x3ffffff8;   iStack_3c = (uVar1 >> 0x1c) + (uVar9",
+      "file": "00fcee70",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0 ||           (uVar20 = DAT_02803048 & 0x40000000 | (uint)DAT_0280304c & 0x800,",
+      "file": "01027470",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ",2);     uVar5 = uVar12 >> 2 | uVar12 * 0x40000000;     auVar26 = vpor_avx2(auVar17,auVar3",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r20);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_300._8_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + local_300._12_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = uVar10 + local_2e0._0_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ",8);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar17 = auVar19 ^ auVar30 ^ auVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "7,2);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar19 = vpor_avx2(auVar19,auVar3",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_2e0._12_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_2c0._0_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + local_2c0._4_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "26,8);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar20 = auVar24 ^ auVar29 ^ auVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ",2);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar24 = vpor_avx2(auVar20,auVar2",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "e80);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_2a0._0_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_2a0._4_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_2a0._8_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "9,8);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar20 = auVar25 ^ auVar27 ^ auVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20,2);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar25 = vpor_avx2(auVar20,auVar2",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "80);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + local_280._4_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_280._8_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_280._12_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4,8);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar20 = auVar23 ^ auVar26 ^ auVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0,2);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + local_260._4_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar17);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar23 = vpaddd_avx2(auVar17,_DAT",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + local_260._12_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_240._0_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ",8);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar20 = auVar30 ^ auVar19 ^ auVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0,2);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_240._8_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r30);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar30 = vpaddd_avx2(auVar2,_DAT_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + local_220._4_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "7,8);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar20 = auVar29 ^ auVar24 ^ auVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ",2);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_220._12_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar29 = vpaddd_avx2(auVar3,_DAT_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_1fc + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_8_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar20 = auVar27 ^ auVar25 ^ auVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0,2);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_1e0 + (uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar27 = vpaddd_avx2(auVar4,_DAT_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_1d8 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "2_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_1d4 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var20;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar26 = vpsrld_avx2(auVar20,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "26);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar26 = vpaddd_avx2(auVar18,_DAT",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_1b8 + ((u",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_1b4 + ((uV",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_1a0 + ((uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar20;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar19 = vpsrld_avx2(auVar20,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar19);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar2 = vpaddd_avx2(auVar19,_DAT_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_194 + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_180 + ((uV",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_17c + ((uV",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar20;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar24 = vpsrld_avx2(auVar20,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r24);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar3 = vpaddd_avx2(auVar21,_DAT_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_0_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = ((uVar6 ^ uVar13) & (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_15c + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_158 + ((u",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r20;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar25 = vpsrld_avx2(auVar20,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r25);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar4 = vpaddd_avx2(auVar22,_DAT_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_13c + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_8_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = ((uVar6 ^ uVar13) & (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_134 + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_120 + (uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_11c + (uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_118 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "2_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_114 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_0_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_fc + (uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_f8 + (uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_f4 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_e0 + (uVar10",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_dc + (uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_8_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_d4 + (uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_c0 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_bc + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_b8 + (uVar1",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "2_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_b4 + (uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_0_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_9c + (uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "[1];     uVar12 = (uVar6 >> 2 | uVar6 * 0x40000000) + unaff_RDI[2];     *unaff_RDI = uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "}     uVar10 = uVar5 >> 2 | uVar5 * 0x40000000;     pauVar14 = pauVar14 + 8;     uVar1",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+ 8;     uVar11 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar5 = uVar7 + uVar6 + local_300.",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar6 = uVar5 >> 2 | uVar5 * 0x40000000;     uVar7 = uVar9 + local_300._20_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar13 = uVar7 >> 2 | uVar7 * 0x40000000;     uVar5 = uVar12 + local_300._24_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar8 = uVar5 >> 2 | uVar5 * 0x40000000;     uVar12 = uVar10 + local_300._28_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar7 = uVar12 >> 2 | uVar12 * 0x40000000;     uVar5 = uVar11 + local_2e0._16_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar9 = uVar5 >> 2 | uVar5 * 0x40000000;     uVar6 = uVar6 + local_2e0._20_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar10 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar12 = uVar13 + local_2e0._24_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar5 = uVar12 >> 2 | uVar12 * 0x40000000;     uVar8 = uVar8 + local_2e0._28_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_2c0._16_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + local_2c0._20_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = uVar10 + local_2c0._24_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + local_2c0._28_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_2a0._16_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_2a0._20_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_2a0._24_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + local_2a0._28_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = uVar11 + local_280._16_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + local_280._20_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_280._24_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_280._28_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_260._16_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + local_260._20_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + local_260._28_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_240._16_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "c0);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_240._20_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + local_240._24_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "x20);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + local_240._28_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0x20);     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + local_220._20_4_ +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "e40);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + local_220._24_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + local_220._28_4_",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "6_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_1f0 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_1ec + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "24_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_1e4 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "6_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_1d0 + (uV",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_1cc + (uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_1c8 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_1c4 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "16_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = ((uVar6 ^ uVar13) & (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_1ac + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_1a8 + ((u",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_1a4 + ((uV",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "6_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_190 + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_18c + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "24_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = ((uVar6 ^ uVar13) & (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_184 + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "6_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_170 + ((u",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_16c + ((uV",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_168 + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "8_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_164 + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "16_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = ((uVar6 ^ uVar13) & (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_14c + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_148 + ((u",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ",4);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_144 + ((uV",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r23);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar28 = vpsrld_avx2(auVar31,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "e40);     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_12c + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "24_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = ((uVar6 ^ uVar13) & (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar6 = uVar5 + iStack_124 + ((uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "6_4_;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar30 = vpsrldq_avx2(auVar23,4);",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r25;     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     uVar8 = uVar12 + iStack_10c + (uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r29);     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar28 = vpsrld_avx2(auVar31,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar30;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     local_260 = vpaddd_avx2(auVar30,_D",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "16_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar10 = (uVar6 ^ uVar13 ^ uVar5)",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "_4_;     uVar9 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar29 = vpsrldq_avx2(auVar30,4);",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar23;     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar10 = uVar13 + iStack_e8 + (uVa",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "27);     uVar5 = uVar10 >> 2 | uVar10 * 0x40000000;     auVar28 = vpsrld_avx2(auVar31,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar29;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     local_240 = vpaddd_avx2(auVar29,_D",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0_4_;     uVar12 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar8 = uVar9 + iStack_cc + (uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "24_4_;     uVar7 = uVar8 >> 2 | uVar8 * 0x40000000;     auVar28 = vpsrldq_avx2(auVar29,4);",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "ar30;     uVar10 = uVar9 >> 2 | uVar9 * 0x40000000;     uVar6 = uVar5 + iStack_c4 + (uVar8",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "r27);     uVar11 = uVar6 >> 2 | uVar6 * 0x40000000;     auVar31 = vpsrld_avx2(auVar32,0x1e",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "Var27;     uVar5 = uVar9 >> 2 | uVar9 * 0x40000000;     local_220 = vpaddd_avx2(auVar27,_D",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "4_4_;     uVar13 = uVar8 >> 2 | uVar8 * 0x40000000;     uVar6 = uVar7 + iStack_a8 + (uVar9",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "28_4_;     uVar9 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar7 = uVar10 + iStack_a4 + (uVar",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "6_4_;     uVar12 = uVar7 >> 2 | uVar7 * 0x40000000;     uVar6 = (uVar6 ^ uVar13 ^ uVar5) +",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "20_4_;     uVar8 = uVar6 >> 2 | uVar6 * 0x40000000;     uVar7 = uVar5 + iStack_8c + (uVar7",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "I[1];     uVar7 = (uVar7 >> 2 | uVar7 * 0x40000000) + unaff_RDI[2];     *unaff_RDI = uVar6",
+      "file": "010834f0",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar5 >> 2 | uVar5 * 0x40000000));       auVar23 = vpslld_avx2(auVar22,",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar19 >> 2 | uVar19 * 0x40000000));       auVar31 = vpshufb_avx2(auVar26",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar18 >> 2 | uVar18 * 0x40000000));       auVar31 = vpshufb_avx2(auVar22",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar17 >> 2 | uVar17 * 0x40000000));       auVar24 = vpsrld_avx2(auVar31,",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar16 >> 2 | uVar16 * 0x40000000));       auVar23 = vpslld_avx2(auVar22,",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^               (uVar9 >> 2 | uVar9 * 0x40000000));       auVar31 = vpshufb_avx2(auVar26",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar8 >> 2 | uVar8 * 0x40000000));       auVar31 = vpshufb_avx2(auVar22",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar10 >> 2 | uVar10 * 0x40000000));       auVar24 = vpsrld_avx2(auVar31,",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar5 >> 2 | uVar5 * 0x40000000));       auVar23 = vpslld_avx2(auVar22,",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar19 >> 2 | uVar19 * 0x40000000));       auVar31 = vpshufb_avx2(auVar26",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar18 >> 2 | uVar18 * 0x40000000));       auVar31 = vpshufb_avx2(auVar22",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar17 >> 2 | uVar17 * 0x40000000));       auVar24 = vpsrld_avx2(auVar31,",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar16 >> 2 | uVar16 * 0x40000000));       auVar23 = vpslld_avx2(auVar22,",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^               (uVar9 >> 2 | uVar9 * 0x40000000));       auVar31 = vpshufb_avx2(auVar26",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar8 >> 2 | uVar8 * 0x40000000));       auVar31 = vpshufb_avx2(auVar22",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar10 >> 2 | uVar10 * 0x40000000);       iVar6 = iVar6 + ((uVar8 ^ uVar9",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0) ^              (uVar5 >> 2 | uVar5 * 0x40000000));     iVar6 = uVar18 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar19 >> 2 | uVar19 * 0x40000000));     iVar6 = uVar17 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar18 >> 2 | uVar18 * 0x40000000));     iVar6 = uVar16 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar17 >> 2 | uVar17 * 0x40000000));     iVar6 = uVar9 + *(int *)pauVar13",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^             (uVar16 >> 2 | uVar16 * 0x40000000));     iVar6 = uVar8 + *(int *)(pauVar1",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "00) ^             (uVar9 >> 2 | uVar9 * 0x40000000));     iVar6 = uVar10 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0) ^              (uVar8 >> 2 | uVar8 * 0x40000000));     iVar6 = uVar5 + *(int *)(pauVar1",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^             (uVar10 >> 2 | uVar10 * 0x40000000));     iVar6 = uVar19 + *(int *)*pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0) ^              (uVar5 >> 2 | uVar5 * 0x40000000));     iVar6 = uVar18 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar19 >> 2 | uVar19 * 0x40000000));     iVar6 = uVar17 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar18 >> 2 | uVar18 * 0x40000000));     iVar6 = uVar16 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^              (uVar17 >> 2 | uVar17 * 0x40000000));     iVar6 = uVar9 + *(int *)pauVar13",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^             (uVar16 >> 2 | uVar16 * 0x40000000));     iVar6 = uVar8 + *(int *)(pauVar1",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "00) ^             (uVar9 >> 2 | uVar9 * 0x40000000));     iVar6 = uVar10 + *(int *)(pauVar",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "0) ^              (uVar8 >> 2 | uVar8 * 0x40000000));     iVar6 = uVar5 + *(int *)(pauVar1",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^             (uVar10 >> 2 | uVar10 * 0x40000000)) + *piVar2;     uVar10 = uVar10 + piVa",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar5 >> 2 | uVar5 * 0x40000000));       iVar6 = uVar18 + *(int *)(*pau",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar19 >> 2 | uVar19 * 0x40000000));       iVar6 = uVar17 + *(int *)(*pau",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar18 >> 2 | uVar18 * 0x40000000));       iVar6 = uVar16 + *(int *)(*pau",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "(uVar17 >> 2 | uVar17 * 0x40000000));       iVar6 = uVar9 + *(int *)(pauVa",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar16 >> 2 | uVar16 * 0x40000000));       iVar6 = uVar8 + *(int *)(pauVa",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": ") ^               (uVar9 >> 2 | uVar9 * 0x40000000));       iVar6 = uVar10 + *(int *)(pauV",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^                (uVar8 >> 2 | uVar8 * 0x40000000));       iVar7 = uVar5 + *(int *)(pauVa",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "^               (uVar10 >> 2 | uVar10 * 0x40000000);       iVar7 = iVar7 + ((uVar8 ^ uVar9",
+      "file": "01090740",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar18 >> 0x22 | uVar18 * 0x40000000) ^ (uVar18 >> 0x27 | uVar18 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar16 >> 0x22 | uVar16 * 0x40000000) ^ (uVar16 >> 0x27 | uVar16 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar15 >> 0x22 | uVar15 * 0x40000000) ^ (uVar15 >> 0x27 | uVar15 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar14 >> 0x22 | uVar14 * 0x40000000) ^ (uVar14 >> 0x27 | uVar14 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar13 >> 0x22 | uVar13 * 0x40000000) ^ (uVar13 >> 0x27 | uVar13 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar6 >> 0x22 | uVar6 * 0x40000000) ^ (uVar6 >> 0x27 | uVar6 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar5 >> 0x22 | uVar5 * 0x40000000) ^ (uVar5 >> 0x27 | uVar5 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar7 >> 0x22 | uVar7 * 0x40000000) ^ (uVar7 >> 0x27 | uVar7 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar18 >> 0x22 | uVar18 * 0x40000000) ^ (uVar18 >> 0x27 | uVar18 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar16 >> 0x22 | uVar16 * 0x40000000) ^ (uVar16 >> 0x27 | uVar16 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar15 >> 0x22 | uVar15 * 0x40000000) ^ (uVar15 >> 0x27 | uVar15 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar14 >> 0x22 | uVar14 * 0x40000000) ^ (uVar14 >> 0x27 | uVar14 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar13 >> 0x22 | uVar13 * 0x40000000) ^ (uVar13 >> 0x27 | uVar13 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar6 >> 0x22 | uVar6 * 0x40000000) ^ (uVar6 >> 0x27 | uVar6 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar5 >> 0x22 | uVar5 * 0x40000000) ^ (uVar5 >> 0x27 | uVar5 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "uVar18 = (uVar7 >> 0x22 | uVar7 * 0x40000000) ^ (uVar7 >> 0x27 | uVar7 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar18 >> 0x22 | uVar18 * 0x40000000) ^ (uVar18 >> 0x27 | uVar18 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar16 >> 0x22 | uVar16 * 0x40000000) ^ (uVar16 >> 0x27 | uVar16 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar15 >> 0x22 | uVar15 * 0x40000000) ^ (uVar15 >> 0x27 | uVar15 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar14 >> 0x22 | uVar14 * 0x40000000) ^ (uVar14 >> 0x27 | uVar14 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar13 >> 0x22 | uVar13 * 0x40000000) ^ (uVar13 >> 0x27 | uVar13 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+             ((uVar6 >> 0x22 | uVar6 * 0x40000000) ^ (uVar6 >> 0x27 | uVar6 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+             ((uVar5 >> 0x22 | uVar5 * 0x40000000) ^ (uVar5 >> 0x27 | uVar5 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar7 >> 0x22 | uVar7 * 0x40000000) ^ (uVar7 >> 0x27 | uVar7 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar18 >> 0x22 | uVar18 * 0x40000000) ^ (uVar18 >> 0x27 | uVar18 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar16 >> 0x22 | uVar16 * 0x40000000) ^ (uVar16 >> 0x27 | uVar16 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar15 >> 0x22 | uVar15 * 0x40000000) ^ (uVar15 >> 0x27 | uVar15 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar14 >> 0x22 | uVar14 * 0x40000000) ^ (uVar14 >> 0x27 | uVar14 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar13 >> 0x22 | uVar13 * 0x40000000) ^ (uVar13 >> 0x27 | uVar13 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+             ((uVar6 >> 0x22 | uVar6 * 0x40000000) ^ (uVar6 >> 0x27 | uVar6 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+             ((uVar5 >> 0x22 | uVar5 * 0x40000000) ^ (uVar5 >> 0x27 | uVar5 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "+             ((uVar7 >> 0x22 | uVar7 * 0x40000000) ^ (uVar7 >> 0x27 | uVar7 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar18 >> 0x22 | uVar18 * 0x40000000) ^ (uVar18 >> 0x27 | uVar18 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar16 >> 0x22 | uVar16 * 0x40000000) ^ (uVar16 >> 0x27 | uVar16 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar15 >> 0x22 | uVar15 * 0x40000000) ^ (uVar15 >> 0x27 | uVar15 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar14 >> 0x22 | uVar14 * 0x40000000) ^ (uVar14 >> 0x27 | uVar14 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar13 >> 0x22 | uVar13 * 0x40000000) ^ (uVar13 >> 0x27 | uVar13 * 0x2000000",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar6 >> 0x22 | uVar6 * 0x40000000) ^ (uVar6 >> 0x27 | uVar6 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "((uVar5 >> 0x22 | uVar5 * 0x40000000) ^ (uVar5 >> 0x27 | uVar5 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 2.0,
+      "raw": "0x40000000 (as float: 2.000000)",
+      "context": "uVar18 = (uVar7 >> 0x22 | uVar7 * 0x40000000) ^ (uVar7 >> 0x27 | uVar7 * 0x2000000)",
+      "file": "01095980",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar75 + 0x2c) = 0x3f800000;                 lVar75 = (longlong)(in",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "glong *)(lVar76 + lVar75 * 8) + 0x2c) = 0x3f800000;                     lVar75 = lVar75 +",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "glong *)(lVar76 + lVar75 * 8) + 0x2c) = 0x3f800000;                       *(undefined4 *)(",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "g *)(lVar76 + 8 + lVar75 * 8) + 0x2c) = 0x3f800000;                       *(undefined4 *)(",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ")(lVar76 + 0x10 + lVar75 * 8) + 0x2c) = 0x3f800000                       ;",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ")(lVar76 + 0x18 + lVar75 * 8) + 0x2c) = 0x3f800000                       ;",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ")(lVar76 + 0x20 + lVar75 * 8) + 0x2c) = 0x3f800000                       ;",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ")(lVar76 + 0x28 + lVar75 * 8) + 0x2c) = 0x3f800000                       ;",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ")(lVar76 + 0x30 + lVar75 * 8) + 0x2c) = 0x3f800000                       ;",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ")(lVar76 + 0x38 + lVar75 * 8) + 0x2c) = 0x3f800000                       ;",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "= 0x3f800000;                               }",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "0x2c) = 0x3f800000;                                 }",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "0x2c) = 0x3f800000;                                 }",
+      "file": "0120b150",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "efined4 *)((longlong)local_48 + 0x24) = 0x3f800000;                   if (0 < local_218) {",
+      "file": "0120d5e0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar71 + 0x28) = 0x3f800000;                   *(undefined4 *)(lVar",
+      "file": "0120d5e0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.23000000417232513,
+      "raw": "0x3e6b851f (as float: 0.230000)",
+      "context": "defined4 *)(local_48[2] + uVar79 * 4) = 0x3e6b851f;           *(undefined4 *)(local_48[2]",
+      "file": "0120d5e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.12104e-44,
+      "raw": "1.12104e-44",
+      "context": "*(longlong *)(local_d8 + 4);         if ((float)local_98 == 1.12104e-44) {           uVar50 = 0;         }         else {",
+      "file": "012193d0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "undefined4 *)local_1b0[2];   *puVar20 = 0x3f800000;   local_1c8 = local_48;   puVar2 = (un",
+      "file": "012216b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.1,
+      "raw": "0.1",
+      "context": "4 < DAT_02391090) {                             local_124 = 0.1;                           }                           iVar",
+      "file": "0122b810",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "_local_88 = auVar5 << 0x40;             local_a4 = 1.4013e-45;             if (plVar34 < plVar33) goto LAB_0122e807; LAB_",
+      "file": "0122b810",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar30 + 100) = 0x3f800000;         FUN_00d50b20();         plVar3",
+      "file": "0122b810",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar20 + 100) = 0x3f800000;                       iVar29 = 0;",
+      "file": "0122b810",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(lVar20 + 100) = 0x3f800000;                       iVar10 = 0;",
+      "file": "0122b810",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.30000001192092896,
+      "raw": "0x3e99999a (as float: 0.300000)",
+      "context": "uVar62;   *(undefined4 *)(puVar4 + 8) = 0x3e99999a;   local_120 = (undefined1 *)((longlong",
+      "file": "015f4250",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "efined4 *)local_40[2];     *local_1d0 = 0x3f000000;     iVar25 = 0;     uVar62 = DAT_02390",
+      "file": "0161e440",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "lVar43 + 2000 + (longlong)iVar33 * 4) = 0x3f000000;                 *(undefined4 *)(lVar43",
+      "file": "01621ee0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "Var43 + (longlong)(500 - iVar33) * 4) = 0x3f000000;                 pfVar77 = local_a0;",
+      "file": "01621ee0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.20000000298023224,
+      "raw": "0x3e4ccccd (as float: 0.200000)",
+      "context": "*(undefined4 *)(lVar48 + lVar81 * 4) = 0x3e4ccccd;                   *(undefined4 *)(lVar",
+      "file": "01621ee0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 0.4000000059604645,
+      "raw": "0x3ecccccd (as float: 0.400000)",
+      "context": "pfVar88 + 4) + (longlong)puVar66 * 4) = 0x3ecccccd;               *(float *)(*(longlong *)",
+      "file": "01621ee0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 120.0,
+      "raw": "120.0",
+      "context": "= puVar6;   (*DAT_02572370)();   local_8c = 0;   local_c0 = 120.0;   local_e8 = *param_2;   local_e0 = 0;   pdVar10 = &local_",
+      "file": "017011a0",
+      "category": "possible_frequency"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "undefined4 *)(local_1d8 + uVar51 * 4) = 0x3f800000;         *(undefined4 *)(local_1d8 + 80",
+      "file": "01759fb0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ned4 *)(local_1d8 + 800 + uVar51 * 4) = 0x3f800000;         *(undefined4 *)(local_1d8 + 0x",
+      "file": "01759fb0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "d4 *)(local_1d8 + 0x640 + uVar51 * 4) = 0x3f800000;         *(undefined4 *)(local_1d8 + 20",
+      "file": "01759fb0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(local_1d8 + 2000 + uVar51 * 4) = 0x3f800000;         *(undefined4 *)(local_1d8 + 0x",
+      "file": "01759fb0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "d4 *)(local_1d8 + 0xaf0 + uVar51 * 4) = 0x3f800000;         *(undefined4 *)(local_1d8 + 0x",
+      "file": "01759fb0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "d4 *)(local_1d8 + 0xe10 + uVar51 * 4) = 0x3f800000;         pcVar3 = \"/System/Library/Fram",
+      "file": "01759fb0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.97747802734375,
+      "raw": "0x3f7a3c00 (as float: 0.977478)",
+      "context": "760;   *(undefined4 *)(lVar35 + 0x14) = 0x3f7a3c00;   *(undefined4 *)(lVar35 + 0x1c) = 0xb",
+      "file": "0176a9c0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ro();   lVar35 = plVar17[2];   pVar33 = 0x3f800000;   *(undefined8 *)(lVar35 + 0xc) = 0x3f",
+      "file": "0176a9c0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "fined4 **)((longlong)local_68 + 0x10) = 0x3f800000;       if ((*(char *)(*(longlong *)((lo",
+      "file": "018598b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*)((longlong)local_68 + 0x10) + 0x18) = 0x3f800000;       }       if (*(char *)(*(longlong",
+      "file": "018598b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*)((longlong)local_68 + 0x10) + 0x1c) = 0x3f800000;       }       FUN_00d50b20();       uV",
+      "file": "018598b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.1788051128387451,
+      "raw": "0x3f96e316 (as float: 1.178805)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f96e316;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.1524760723114014,
+      "raw": "0x3f938456 (as float: 1.152476)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f938456;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.1524760723114014,
+      "raw": "0x3f938456 (as float: 1.152476)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f938456;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.1524760723114014,
+      "raw": "0x3f938456 (as float: 1.152476)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f938456;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "small_multiplier"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f800000;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f800000;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f800000;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f800000;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f800000;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f800000;       FUN_00c8e690();       if (local_",
+      "file": "01862050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ed4 *)(puVar31[2] + (longlong)iVar29) = 0x3f800000;       FUN_00d50b20();       DAT_028afc",
+      "file": "01862050",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "al_40 + 0x10) + (longlong)iVar12 * 4) = 0x3f000000;     }     else {       FUN_018e1cf0();",
+      "file": "01866e10",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var12 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         cVar1 = pcVar3[1];         fVa",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var14 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "Var12 >> 0x1f)) * -0xc) *          4) = 0x3f800000;         fVar27 = fVar27 + DAT_02390124",
+      "file": "01866e10",
+      "category": "uncategorized"
+    },
+    {
+      "value": 5e-324,
+      "raw": "4.94065645841247e-324",
+      "context": "8 & 0xffffffff);                 }                 dVar21 = 4.94065645841247e-324;                 if (1 < iVar1) {                   dVar21",
+      "file": "019040e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 5e-324,
+      "raw": "4.94065645841247e-324",
+      "context": "if ((int)uVar17 < 2) {                         dVar21 = 4.94065645841247e-324;                         uVar10 = uVar13;",
+      "file": "019040e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1e-323,
+      "raw": "9.88131291682493e-324",
+      "context": "if ((int)uVar17 < 3) {                             dVar20 = 9.88131291682493e-324;                             uVar17 = uVar13;",
+      "file": "019040e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "*(undefined4 *)(local_70 + 0x1c) = 0x3f800000;         fVar9 = DAT_02394220;       }",
+      "file": "019452a0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "efined4 *)((longlong)local_40 + 0x1c) = 0x3f800000;           fVar12 = DAT_02394220;",
+      "file": "019452a0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "1cfc6a0(DAT_0239109c);       local_24 = 0x3f000000;       FUN_01cfc6a0(DAT_02390120);",
+      "file": "019694b0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ined8 *)&DAT_026b2470;       local_60 = 0x3f800000;       FUN_01f7ba60(DAT_02394294,local_",
+      "file": "019694b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.5,
+      "raw": "0x3f000000 (as float: 0.500000)",
+      "context": "1cfc6a0(DAT_02390128);       local_24 = 0x3f000000;       FUN_01cfc6a0(_DAT_023b294c);",
+      "file": "019698a0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ined8 *)&DAT_026b2470;       local_60 = 0x3f800000;       FUN_01f7ba60(DAT_02394294,local_",
+      "file": "019698a0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ndefined4 *)((longlong)plVar8 + 0x1c) = 0x3f800000;               fVar12 = DAT_02394220;",
+      "file": "0196b4b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ndefined4 *)((longlong)plVar9 + 0x1c) = 0x3f800000;               fVar11 = DAT_02394220;",
+      "file": "0196b9b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ndefined4 *)((longlong)plVar9 + 0x1c) = 0x3f800000;             fVar11 = DAT_02394220;",
+      "file": "0196b9b0",
+      "category": "uncategorized"
+    },
+    {
+      "value": 0.20000000298023224,
+      "raw": "0x3e4ccccd (as float: 0.200000)",
+      "context": ";   *(undefined4 *)(unaff_RDI + 0x43) = 0x3e4ccccd;   lVar4 = CONCAT44(DAT_023dccf4._4_4_,",
+      "file": "0198e770",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": ";   *(undefined4 *)(unaff_RDI + 0x79) = 0x3f800000;   *(undefined4 *)(unaff_RDI + 0x85) =",
+      "file": "0198e770",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.0,
+      "raw": "0x3f800000 (as float: 1.000000)",
+      "context": "ined4 *)((longlong)unaff_RDI + 0x51c) = 0x3f800000;   *(undefined4 *)((longlong)unaff_RDI",
+      "file": "0198e770",
+      "category": "uncategorized"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "== (void *)0x0) { LAB_01b2bbb0:                 local_44 = 1.4013e-45;                 local_f8 = 2;                 local_50 = 0",
+      "file": "01b2b5e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "uVar44 = FUN_00d50b00();                 local_44 = 1.4013e-45;                 local_f8 = 2;                 local_50 = C",
+      "file": "01b2b5e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 1.4013e-45,
+      "raw": "1.4013e-45",
+      "context": "uVar44 = FUN_00d50b00();                 local_44 = 1.4013e-45;                 local_f8 = 2;                 local_50 = C",
+      "file": "01b2b5e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "}                 local_f8 = 3;                 local_44 = 2.8026e-45;                 if (3 < iVar19) {                   local_",
+      "file": "01b2b5e0",
+      "category": "ratio/weight"
+    },
+    {
+      "value": 2.8026e-45,
+      "raw": "2.8026e-45",
+      "context": "if (3 < iVar19) {                   local_44 = 2.8026e-45;                   local_f8 = 3;                   lVar21 =",
+      "file": "01b2b5e0",
+      "category": "ratio/weight"
+    }
+  ]
+}

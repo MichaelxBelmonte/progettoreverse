@@ -1,0 +1,12 @@
+field	role	confidence	evidence	notes
+param_1	center_hz	high	window center derived as centerHz/binStepHz	from 014eecb0 it comes from cents->Hz
+param_2	window_hz	high	used as diff threshold and normalization denominator	in 014eecb0 built as max(minWidthHz, relativeWidth*centerHz)
+param_3	bin_step_hz	high	used as divisor in centerHz/binStepHz	converts hz to center bin
+param_4	window_span_bins	high	used with -0.5 and +1 to build lower/upper bounds	symmetric bin window
+hidden_rdi	trueFreqData_axis	very_high	used only in abs(centerHz - axis[i]) comparison	call chain 013903d0 -> 013924d0 -> 014eecb0 fixes it to getTrueFreqData
+hidden_rsi	magnitudeData_energy_buffer	very_high	multiplied by LUT and optionally depleted in place	call chain fixes it to getMagnitudeData
+hidden_rdx	tonalityData_mask_weight	very_high	min(1.0, extraMask[i]) scales contributions	call chain fixes it to getTonalityData
+rcx	out_local_overlap_evidence	high	written with weighted local evidence	and later lands in item+0x24
+r8d	bin_count	high	upper bound clamped to binCount/2	local half-spectrum span
+xmm4	consume_factor	medium	when above threshold, subtracts contrib*xmm4 from energy_buffer	enables residual/depletion mode
+lut	precomputed_window	high	00e84250 returns static LUT indexed by normalized distance	also reused open-coded in spectrum shaper

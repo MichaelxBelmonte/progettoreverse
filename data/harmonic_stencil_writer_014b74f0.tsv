@@ -1,0 +1,11 @@
+field	role	confidence	evidence	notes
+center_hz	harmonic_center_frequency	high	caller passes harmonicHz in xmm0	baseHz * harmonicIndex
+window_hz	lobe_half_width_hz	high	callee uses centerHz +/- windowHz to bound search	max(binStepHz, decay-derived term)
+bin_step_hz	hz_per_bin	high	callee divides by it to derive bin indices	from descriptor cache +0x50 in 013924d0
+window_span_bins	local_bin_span	high	callee adjusts bounds with 0.5 * spanBins	from descriptor cache +0x2c in 013924d0
+hidden_rdi	axis_per_bin	medium	callee uses abs(centerHz - axis[i])	likely frequency axis
+hidden_rsi	row_buffer	high	callee adds stamped values into rowBuffer[i]	zeroed per item row before harmonic loop
+edx	bin_count	high	callee clamps upper bound to it	row width / number of columns
+rcx	lut_wrapper	medium	callee dereferences wrapper then +0x10 to get LUT storage	type still unresolved
+xmm4	harmonic_weight	high	caller passes item+0x24 / harmonicIndex	scales stencil amplitude
+xmm5	lut_scale	high	literal 89128.9609375 passed at callsite	normalizes distance to LUT index

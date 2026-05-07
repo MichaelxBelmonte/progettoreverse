@@ -1,0 +1,45 @@
+// Reconstructed from MikeCore — 41 properties
+
+struct GNResponder {
+    bool                     _autoresizesSubviews;
+    bool                     _autoresizesSuperview;
+    bool                     _acceptsFirstMouse;
+    bool                     _subviewNeedDisplay;
+    float                    _alpha;
+    float                    _mouseOverIntensity;
+    bool                     _isTransparent;
+    bool                     _isBypassingEvents;
+    bool                     _drawingFrameReflectSubviews;
+    bool                     _isAutolayoutingSubviews;
+    bool                     _needsLayout;
+    float                    _visibilityPriority;
+    GNSize*                  _minSize;
+    GNSize*                  _maxSize;
+    GNEdgeInset*             _padding;
+    GNEdgeInset*             _margins;
+    bool                     _isSharedSizeScope;
+    GNSize*                  _minLayoutSizeCache;
+    GNSize*                  _availableLayoutSizeCache;
+    GNSize*                  _sharedLayoutSizeCache;
+    GNRect*                  _frame;
+    GNSize*                  _minFrameSize;
+    int32_t                  _isSettingFrame;
+    bool                     _unregisterToolTipLocalisationTargetAnyway;
+    bool                     _isDisplaying;
+    bool                     _isDisplayingToBuffer;
+    bool                     _isWidthSizable;
+    bool                     _isHeightSizable;
+    bool                     _closesWindowControllerWhenPerformingClose;
+    GNWindowStyleMask*       _styleMask;
+    GNSize*                  _minContentSize;
+    GNSize*                  _maxContentSize;
+    bool                     _cascadeWindows;
+    bool                     _propagatesChangesOnClose;
+    bool                     _localizesTitle;
+    bool                     _documentEdited;
+    int32_t                  _isSettingContentSize;
+    GNSize*                  _contentSize;
+    GNPoint*                 _mouseDownLocation;
+    int32_t                  _mouseDownFlags;
+    bool                     _isControllingWindow;
+};

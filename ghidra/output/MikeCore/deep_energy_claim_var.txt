@@ -1,0 +1,55 @@
+# Search: "energyClaim"
+STRING @ 01faa8b1: "_energyClaimFactor"
+  FUNC: FUN_0059ba40 @ 0059ba40
+    Size: 2643 bytes
+    Ref from: 0059c436
+    Called by (4):
+      FUN_0059b920@0059b920
+      FUN_005b9a00@005b9a00
+      FUN_005b9c40@005b9c40
+      FUN_0080d470@0080d470
+    Calls (16):
+      FUN_0034cf20@0034cf20
+      FUN_0059c6c0@0059c6c0
+      FUN_0059dd90@0059dd90
+      FUN_0059de80@0059de80
+      FUN_0059df60@0059df60
+      FUN_0059e040@0059e040
+      FUN_0059e120@0059e120
+      FUN_0059e200@0059e200
+      FUN_0059e2f0@0059e2f0
+      FUN_0059e3d0@0059e3d0
+      FUN_00e7ddf0@00e7ddf0
+      FUN_00e87980@00e87980
+      FUN_00e879c0@00e879c0
+      FUN_00e87c40@00e87c40
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_010ff5d0 @ 010ff5d0
+    Size: 3187 bytes
+    Ref from: 010ffeac
+    Called by (4):
+      FUN_010d2040@010d2040
+      FUN_010d2a50@010d2a50
+      FUN_010fee50@010fee50
+      FUN_01102d50@01102d50
+    Calls (16):
+      FUN_007ef2d0@007ef2d0
+      FUN_00d4ff80@00d4ff80
+      FUN_00e7ddf0@00e7ddf0
+      FUN_00e87980@00e87980
+      FUN_00e879c0@00e879c0
+      FUN_00e87c40@00e87c40
+      FUN_01100450@01100450
+      FUN_01100540@01100540
+      FUN_01100630@01100630
+      FUN_01100720@01100720
+      FUN_01100810@01100810
+      FUN_01100900@01100900
+      FUN_011009f0@011009f0
+      FUN_01100ae0@01100ae0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+
+STRING @ 0241e3c0: "energyClaimFactor"
+

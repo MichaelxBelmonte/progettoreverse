@@ -1,0 +1,33 @@
+# Search: "_spectrumSize"
+STRING @ 01f9ef23: "_spectrumSize"
+  FUNC: FUN_0003eae0 @ 0003eae0
+    Size: 350 bytes
+    Ref from: 0003eb18
+    Called by (1):
+      FUN_0003e610@0003e610
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011b2e50 @ 011b2e50
+    Size: 2923 bytes
+    Ref from: 011b32ea
+    Called by (1):
+      FUN_010e5470@010e5470
+    Calls (15):
+      FUN_00d4ff80@00d4ff80
+      FUN_00e7ddf0@00e7ddf0
+      FUN_00e87980@00e87980
+      FUN_00e879c0@00e879c0
+      FUN_011b2c10@011b2c10
+      FUN_011b3b90@011b3b90
+      FUN_011b3c80@011b3c80
+      FUN_011b3df0@011b3df0
+      FUN_011b3ed0@011b3ed0
+      FUN_011b3fb0@011b3fb0
+      FUN_011b4090@011b4090
+      FUN_011b4170@011b4170
+      FUN_011b4250@011b4250
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+

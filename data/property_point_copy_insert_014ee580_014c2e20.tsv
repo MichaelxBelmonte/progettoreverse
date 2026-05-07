@@ -1,0 +1,17 @@
+scope	offset_or_func	role	confidence	evidence
+helper	014ee580	property_point_copy_wrapper	very_high	short wrapper calls 014ee5f0 with copy flag set to 1
+helper	014ee5f0	nan_aware_property_point_deep_copy	very_high	disassembly copies scalar fields and deep-clones child objects at +0x30 and +0x38
+field_copy	+0x0c	discrete_index_copied	very_high	014ee5f0 copies src+0x0c to dst+0x0c
+field_copy	+0x10	nan_aware_scalar_copied	high	014ee5f0 copies src+0x10 if not NaN else writes NaN
+field_copy	+0x14	primary_value_copied	very_high	014ee5f0 copies src+0x14 to dst+0x14
+field_copy	+0x18	secondary_value_copied	very_high	014ee5f0 copies src+0x18 to dst+0x18
+field_copy	+0x1c	aux_scalar_copied	very_high	014ee5f0 copies src+0x1c to dst+0x1c
+field_copy	+0x20	nan_aware_optional_scalar_copied	high	014ee5f0 copies src+0x20 if not NaN else writes NaN
+field_copy	+0x24	aux_scalar_a_copied	very_high	014ee5f0 copies src+0x24 to dst+0x24
+field_copy	+0x28	aux_scalar_b_copied	very_high	014ee5f0 copies src+0x28 to dst+0x28
+field_copy	+0x2c	status_byte_not_copied	high	014ee5f0 performs no store to dst+0x2c while other scalar fields are copied
+field_copy	+0x40_plus	tail_scalars_0x40_0x44_0x48_0x4c_copied	high	014ee5f0 copies all four tail dword fields directly
+child	+0x30	optional_0x18_byte_child_deep_cloned	high	014ee5f0 allocates 0x18-byte child object and copies child+0x0c and child+0x10 when source child exists and copy flag is set
+child	+0x38	optional_0x20_byte_child_deep_cloned	high	014ee5f0 allocates 0x20-byte child object and copies child+0x0c/+0x10/+0x14/+0x18
+helper	014c2e20	ordered_insert_into_owner_plus_0x108_collection	high	disassembly reads owner+0x108 and point index at (*pointRef)+0x0c then routes to insert helpers based on adjacency/order
+callback	014c2e20	owner_virtual_callback_after_insert	medium_high	disassembly ends with call through owner vtable offset 0x450 after successful insertion

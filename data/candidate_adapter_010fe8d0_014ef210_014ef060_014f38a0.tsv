@@ -1,0 +1,24 @@
+scope,offset_or_func,role,confidence,evidence
+class_identity	010fe8d0	misclassified_field_registrar_for_0x168_candidate_adapter	very_high	sets vtables 0x25e7818/0x25e7c80 and registers field types MUElementAnalyzer/MUAudioSourceAttackItem/MUAudioSourceItem rather than a self class name
+class_identity	014ef210	construct_0x168_candidate_adapter	very_high	allocates 0x168 bytes, installs the same two vtables, zeroes 0x138..0x163 and calls 014ef060
+class_identity	014f38a0	lazy_get_or_build_candidate_adapter_by_index	high	validates index against 014c2f20/014c2f80, uses parent+0x108, allocates 0x168 object on miss and seeds child+0x138 from parent+0x138
+field	+0x108	child_slot_list	very_high	014ef060 appends each second-input child+0x20 into adapter+0x108 and 014f38a0 uses parent+0x108 as the indexed collection
+field	+0x138	analyzer_ref	very_high	014ef060 stores the first input ref here and 010fe8d0 types it as MUElementAnalyzer
+field	+0x140	assignedAttackItem_ref	high	010fe8d0 registers field type MUAudioSourceAttackItem at unaff_RDI[0x28]
+field	+0x148	assignedItem_ref	high	010fe8d0 registers field type MUAudioSourceItem at unaff_RDI[0x29]
+field	+0x150	isMarkedAsPreliminaryItem	very_high	010fe8d0 registers property name _isMarkedAsPreliminaryItem at byte offset 0x150
+field	+0x154	sortingValue	very_high	010fe8d0 registers property name _sortingValue at offset 0x154
+field	+0x158	harmonicNumber	very_high	010fe8d0 registers _harmonicNumber via unaff_RDI[0x2b], which is offset 0x158
+field	+0x15c	timePosIndexOfPitchCenterRelevanceStart	very_high	010fe8d0 registers _timePosIndexOfPitchCenterRelevanceStart at offset 0x15c
+field	+0x160	timePosIndexOfPitchCenterRelevanceEnd	very_high	010fe8d0 registers _timePosIndexOfPitchCenterRelevanceEnd via unaff_RDI[0x2c], which is offset 0x160
+field	014ef020	reset_or_default_helper_for_plus_0x80_and_final_interval_cluster	medium	virtual method writes NaN to +0x80 and touches +0x158 +0x15c +0x160 but exact lifecycle role is not yet closed
+template_node	0x25e74a0	MUAudioSourcePropertyPoint_vtable	very_high	same vtable appears in original MUAudioSourcePropertyPoint constructor 0110d1c0 and in memory read at 0x25e74a0
+template_node	014eef40	property_point_metadata_helper	very_high	registers string MUAudioSourcePropertyPoint with size 0x68
+template_node	014ee5f0	copy_property_point_core_fields	high	copies 0xc 0x14 0x18 0x1c 0x20 0x24 0x28 0x40 0x44 0x48 0x4c and optional nested refs at 0x30 and 0x38
+pipeline	014f7360	build_count_sized_property_point_slot_group	high	allocates fixed 0x20 nodes plus count-sized subgroup later indexed by sourceItem+0x28
+pipeline	014ef060	attach_property_point_slot_refs_into_candidate_adapter	very_high	iterates second input list and appends child+0x20 refs into adapter+0x108
+pipeline	014f0020	write_per_slot_metrics_to_child_plus_0x18_and_plus_0x1c	high	consumes adapter child-list and writes downstream slot metrics
+pipeline	014f0770	consume_child_plus_0x14_and_plus_0x18_to_update_parent_bounds	high	reads two parallel float series from child-list and updates parent+0x15c and parent+0x2c
+pipeline	014f0c40	consume_child_plus_0x14_plus_0x18_plus_0x1c	high	reads three parallel float series from child-list for higher-order processing
+drift	reconstructed/structs/MUElementAnalyzer.h	misassigned_candidate_adapter_fields	very_high	auto-header places _isMarkedAsPreliminaryItem _sortingValue _harmonicNumber and relevance interval on MUElementAnalyzer
+drift	reconstructed/structs/MUVibratoRange.h	misbucketed_candidate_adapter_cluster	very_high	auto-header groups analyzer attack item and relevance fields under MUVibratoRange even though runtime evidence points to the 0x168 adapter

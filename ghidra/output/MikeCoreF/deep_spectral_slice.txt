@@ -1,0 +1,365 @@
+# Search: "MUSpectralTimeSlice"
+STRING @ 024232c3: "MUSpectralTimeSlice"
+  FUNC: FUN_011477c0 @ 011477c0
+    Size: 11251 bytes
+    Ref from: 011481ad
+    Called by (1):
+      FUN_010dcb40@010dcb40
+    Calls (44):
+      FUN_00046630@00046630
+      FUN_00e84050@00e84050
+      FUN_00e8dbb0@00e8dbb0
+      FUN_00e8dbf0@00e8dbf0
+      FUN_01146f10@01146f10
+      FUN_0114ad20@0114ad20
+      FUN_0114ae10@0114ae10
+      FUN_0114af00@0114af00
+      FUN_0114aff0@0114aff0
+      FUN_0114b0e0@0114b0e0
+      FUN_0114b1d0@0114b1d0
+      FUN_0114b2b0@0114b2b0
+      FUN_0114b390@0114b390
+      FUN_0114b470@0114b470
+      FUN_0114b550@0114b550
+      FUN_0114b630@0114b630
+      FUN_0114b720@0114b720
+      FUN_0114b810@0114b810
+      FUN_0114b900@0114b900
+      FUN_0114b9f0@0114b9f0
+  FUNC: FUN_011477c0 @ 011477c0
+    Size: 11251 bytes
+    Ref from: 0114820f
+    Called by (1):
+      FUN_010dcb40@010dcb40
+    Calls (44):
+      FUN_00046630@00046630
+      FUN_00e84050@00e84050
+      FUN_00e8dbb0@00e8dbb0
+      FUN_00e8dbf0@00e8dbf0
+      FUN_01146f10@01146f10
+      FUN_0114ad20@0114ad20
+      FUN_0114ae10@0114ae10
+      FUN_0114af00@0114af00
+      FUN_0114aff0@0114aff0
+      FUN_0114b0e0@0114b0e0
+      FUN_0114b1d0@0114b1d0
+      FUN_0114b2b0@0114b2b0
+      FUN_0114b390@0114b390
+      FUN_0114b470@0114b470
+      FUN_0114b550@0114b550
+      FUN_0114b630@0114b630
+      FUN_0114b720@0114b720
+      FUN_0114b810@0114b810
+      FUN_0114b900@0114b900
+      FUN_0114b9f0@0114b9f0
+
+STRING @ 0242a072: "MUSpectralTimeSlice::initFromTimeSignal(): incomplete parameters!"
+  FUNC: FUN_015cb1a0 @ 015cb1a0
+    Size: 4323 bytes
+    Ref from: 015cb205
+    Called by (1):
+      FUN_015cb0f0@015cb0f0
+    Calls (28):
+      FUN_00c94060@00c94060
+      FUN_00c97b60@00c97b60
+      FUN_00c97b70@00c97b70
+      FUN_00d270d0@00d270d0
+      FUN_00d55fd0@00d55fd0
+      FUN_00d56170@00d56170
+      FUN_00d56b90@00d56b90
+      FUN_00d56bb0@00d56bb0
+      FUN_00e41090@00e41090
+      FUN_00e839e0@00e839e0
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      FUN_00e89280@00e89280
+      FUN_00e89740@00e89740
+      FUN_00e89fb0@00e89fb0
+      FUN_00e91c10@00e91c10
+      FUN_00e92dc0@00e92dc0
+      FUN_00e92de0@00e92de0
+      FUN_00e92e00@00e92e00
+      FUN_00e95ec0@00e95ec0
+
+STRING @ 0242a0b4: "MUSpectralTimeSlice::initFromTimeSignal(): no valid neighbourTimeSlice for trueFreqs!"
+  FUNC: FUN_015cb1a0 @ 015cb1a0
+    Size: 4323 bytes
+    Ref from: 015cbb6d
+    Called by (1):
+      FUN_015cb0f0@015cb0f0
+    Calls (28):
+      FUN_00c94060@00c94060
+      FUN_00c97b60@00c97b60
+      FUN_00c97b70@00c97b70
+      FUN_00d270d0@00d270d0
+      FUN_00d55fd0@00d55fd0
+      FUN_00d56170@00d56170
+      FUN_00d56b90@00d56b90
+      FUN_00d56bb0@00d56bb0
+      FUN_00e41090@00e41090
+      FUN_00e839e0@00e839e0
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      FUN_00e89280@00e89280
+      FUN_00e89740@00e89740
+      FUN_00e89fb0@00e89fb0
+      FUN_00e91c10@00e91c10
+      FUN_00e92dc0@00e92dc0
+      FUN_00e92de0@00e92de0
+      FUN_00e92e00@00e92e00
+      FUN_00e95ec0@00e95ec0
+
+STRING @ 0242a10a: "MUSpectralTimeSlice::takeDataFromTimeSlice(): inconsistent data"
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015cca8d
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+
+STRING @ 0242a14a: "MUSpectralTimeSlice::getComplexSpectrum(): no complexSpectrum data"
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015ccceb
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+
+STRING @ 0242a18d: "MUSpectralTimeSlice::getMagnitudeData(): no magnitude data"
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015ccd18
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+  FUNC: FUN_015cce60 @ 015cce60
+    Size: 58 bytes
+    Ref from: 015cce83
+    Called by (22):
+      FUN_00149da0@00149da0
+      FUN_011f0c40@011f0c40
+      FUN_01227bd0@01227bd0
+      FUN_0135d2e0@0135d2e0
+      FUN_0135fd50@0135fd50
+      FUN_01395f10@01395f10
+      FUN_013971e0@013971e0
+      FUN_013e8540@013e8540
+      FUN_01493d20@01493d20
+      FUN_01497150@01497150
+      FUN_014b7a00@014b7a00
+      FUN_014b9560@014b9560
+      FUN_014c7340@014c7340
+      FUN_014e06e0@014e06e0
+      FUN_014fb170@014fb170
+      ... and 7 more
+    Calls (1):
+      FUN_00e88ac0@00e88ac0
+
+STRING @ 0242a1c8: "MUSpectralTimeSlice::getPhaseData(): no phase data"
+  FUNC: FUN_015cb1a0 @ 015cb1a0
+    Size: 4323 bytes
+    Ref from: 015cbb4b
+    Called by (1):
+      FUN_015cb0f0@015cb0f0
+    Calls (28):
+      FUN_00c94060@00c94060
+      FUN_00c97b60@00c97b60
+      FUN_00c97b70@00c97b70
+      FUN_00d270d0@00d270d0
+      FUN_00d55fd0@00d55fd0
+      FUN_00d56170@00d56170
+      FUN_00d56b90@00d56b90
+      FUN_00d56bb0@00d56bb0
+      FUN_00e41090@00e41090
+      FUN_00e839e0@00e839e0
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      FUN_00e89280@00e89280
+      FUN_00e89740@00e89740
+      FUN_00e89fb0@00e89fb0
+      FUN_00e91c10@00e91c10
+      FUN_00e92dc0@00e92dc0
+      FUN_00e92de0@00e92de0
+      FUN_00e92e00@00e92e00
+      FUN_00e95ec0@00e95ec0
+  FUNC: FUN_015cb1a0 @ 015cb1a0
+    Size: 4323 bytes
+    Ref from: 015cbee2
+    Called by (1):
+      FUN_015cb0f0@015cb0f0
+    Calls (28):
+      FUN_00c94060@00c94060
+      FUN_00c97b60@00c97b60
+      FUN_00c97b70@00c97b70
+      FUN_00d270d0@00d270d0
+      FUN_00d55fd0@00d55fd0
+      FUN_00d56170@00d56170
+      FUN_00d56b90@00d56b90
+      FUN_00d56bb0@00d56bb0
+      FUN_00e41090@00e41090
+      FUN_00e839e0@00e839e0
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      FUN_00e89280@00e89280
+      FUN_00e89740@00e89740
+      FUN_00e89fb0@00e89fb0
+      FUN_00e91c10@00e91c10
+      FUN_00e92dc0@00e92dc0
+      FUN_00e92de0@00e92de0
+      FUN_00e92e00@00e92e00
+      FUN_00e95ec0@00e95ec0
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015ccd45
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+  FUNC: FUN_015cc620 @ 015cc620
+    Size: 58 bytes
+    Ref from: 015cc643
+    Called by (3):
+      FUN_011f0c40@011f0c40
+      FUN_01497150@01497150
+      FUN_018f8710@018f8710
+    Calls (1):
+      FUN_00e88ac0@00e88ac0
+
+STRING @ 0242a1fb: "MUSpectralTimeSlice::getTrueFreqData(): no trueFreq data"
+  FUNC: FUN_015cc660 @ 015cc660
+    Size: 837 bytes
+    Ref from: 015cc68b
+    Called by (1):
+      FUN_015cb1a0@015cb1a0
+    Calls (4):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      FUN_00e89280@00e89280
+      FUN_015cdc20@015cdc20
+  FUNC: FUN_015cc9c0 @ 015cc9c0
+    Size: 58 bytes
+    Ref from: 015cc9e3
+    Called by (13):
+      FUN_0135d2e0@0135d2e0
+      FUN_0135fd50@0135fd50
+      FUN_01395f10@01395f10
+      FUN_013971e0@013971e0
+      FUN_01497150@01497150
+      FUN_014b7a00@014b7a00
+      FUN_014e06e0@014e06e0
+      FUN_014fb170@014fb170
+      FUN_0160bf70@0160bf70
+      FUN_0161b0b0@0161b0b0
+      FUN_01624010@01624010
+      FUN_01627c10@01627c10
+      FUN_0164dec0@0164dec0
+    Calls (1):
+      FUN_00e88ac0@00e88ac0
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015ccd72
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+
+STRING @ 0242a234: "MUSpectralTimeSlice::getTonalityData(): no tonality data"
+  FUNC: FUN_015ccea0 @ 015ccea0
+    Size: 58 bytes
+    Ref from: 015ccec3
+    Called by (9):
+      FUN_0135d2e0@0135d2e0
+      FUN_01395f10@01395f10
+      FUN_013971e0@013971e0
+      FUN_013a9370@013a9370
+      FUN_013e8540@013e8540
+      FUN_01497150@01497150
+      FUN_014fb170@014fb170
+      FUN_01624010@01624010
+      FUN_01627c10@01627c10
+    Calls (1):
+      FUN_00e88ac0@00e88ac0
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015ccd9f
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+
+STRING @ 0242a26d: "MUSpectralTimeSlice::getTrueTimeSampleOffsetData(): no trueTimeSampleOffsetData data"
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015ccdcc
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+  FUNC: FUN_015ccee0 @ 015ccee0
+    Size: 58 bytes
+    Ref from: 015ccf03
+    Called by (6):
+      FUN_01497150@01497150
+      FUN_014b7a00@014b7a00
+      FUN_0161b0b0@0161b0b0
+      FUN_01624010@01624010
+      FUN_01627c10@01627c10
+      FUN_0164dec0@0164dec0
+    Calls (1):
+      FUN_00e88ac0@00e88ac0
+
+STRING @ 0242a2c2: "MUSpectralTimeSlice::getTransiencyData(): no transiencyData data"
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015ccdf9
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+  FUNC: FUN_015ccf20 @ 015ccf20
+    Size: 58 bytes
+    Ref from: 015ccf43
+    Called by (3):
+      FUN_00144890@00144890
+      FUN_01624010@01624010
+      FUN_01627c10@01627c10
+    Calls (1):
+      FUN_00e88ac0@00e88ac0
+
+STRING @ 0242a303: "MUSpectralTimeSlice::getTransiencyData(): no vectorData data"
+  FUNC: FUN_015cca00 @ 015cca00
+    Size: 1118 bytes
+    Ref from: 015cce26
+    Called by (1):
+      FUN_014b7a00@014b7a00
+    Calls (3):
+      FUN_00e88ac0@00e88ac0
+      FUN_00e89220@00e89220
+      _memcpy@0239b128
+  FUNC: FUN_015ccf60 @ 015ccf60
+    Size: 58 bytes
+    Ref from: 015ccf83
+    Called by (1):
+      FUN_01227bd0@01227bd0
+    Calls (1):
+      FUN_00e88ac0@00e88ac0
+

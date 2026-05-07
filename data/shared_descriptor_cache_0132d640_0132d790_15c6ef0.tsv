@@ -1,0 +1,23 @@
+scope	offset_or_func	role	confidence	evidence
+state_field	+0x1a0	shared_descriptor_cache_ptr	very_high	0132d790 loads state+0x1a0 and 0132d640 installs new 0x88-byte object there
+0132d790	func	get_or_build_descriptor_cache	very_high	returns wrapper to state+0x1a0 and calls 0132d640 on miss
+0132d640	func	build_descriptor_cache	very_high	allocates 0x88 bytes then populates via 15c6ef0
+descriptor_field	+0x10	sampleRateLike_double	high	15c6ef0 writes xmm0 here and later uses it to derive timing/scales
+descriptor_field	+0x18	scaleConstantLike	medium	15c6ef0 selects it from constants based on +0x10
+descriptor_field	+0x20	fftSize_or_spectrumSize	very_high	15c6ef0 writes requested size and poly path passes it to 00e83120
+descriptor_field	+0x24	halfFftSize	high	15c6ef0 writes size/2 and 15c7140 uses it for ramp generation
+descriptor_field	+0x28	countA	medium	15c6ef0 writes it and 0132d640 copies it back to state+0x94
+descriptor_field	+0x2c	referenceScaleLike	high	15c7140 divides by it while filling cache at descriptor+0x68
+descriptor_field	+0x30	timeSliceSampleCountLike	high	MUAudioSourceDescription methods use it as sample-domain divisor
+descriptor_field	+0x38	timeSliceTimeDistanceLike	high	MUAudioSourceDescription methods use it as temporal delta
+descriptor_field	+0x40	nearestPowerOfTwoLike	medium	15c6ef0 derives it numerically from other descriptor fields
+descriptor_field	+0x48	derivedPair_double2	medium	15c6ef0 writes two doubles derived from +0x40/+0x20 and +0x18
+descriptor_field	+0x68	cache_ptr_A	high	15c6ef0 clears it and 15c7140 fills it
+descriptor_field	+0x70	cache_ptr_B	high	15c6ef0 clears it and 015c73a0 later fills it
+descriptor_field	+0x78	cache_ptr_C	medium	15c6ef0 clears it
+descriptor_field	+0x80	cache_ptr_D	high	15c6ef0 frees and nulls it explicitly via e83070
+descriptor_field	+0x88	assembledElementRendererCount_or_analysisLaneCount	very_high	0132dbe0 is a trivial getter of *(int*)(obj+0x88) and poly scales 24x/2x/6x plus slot template construction from it
+descriptor_field	+0xa0	sampleToIndexScale	high	0132dc40 getter and 0132dca0 uses it in sampleOffset->index mapping
+descriptor_field	+0xa8	maxIndexClamp	high	0132dc90 getter and 0132dca0 clamps computed index with it
+poly_bridge	self+0x68	state_or_source_description_wrapper	high	poly path unwraps self+0x68 then immediately uses 0132d790/0132dbe0 on the resulting object
+poly_bridge	self+0x90	sampleCount_or_rangeLenLike	medium	poly bridge forwards it as r8 into 013903d0 with sampleStart fixed at zero

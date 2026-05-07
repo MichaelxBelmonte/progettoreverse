@@ -1,0 +1,19 @@
+scope	offset_or_func	role	confidence	evidence
+identity	DAT_02572358	GNList_family_vtable	very_high	014f7360 allocates 0x20-byte objects with DAT_02572358 and 0078dab0 registers GNList with size 0x20
+identity	0078dab0	register_GNList_size_0x20	very_high	metadata builder contains GNList string and size 0x20
+container	puVar15	final_output_list	very_high	014f7360 returns puVar15 via *unaff_RDI at function end
+container	puVar16	active_work_list	high	outer do-while continues until *(int*)(puVar16+0xc) becomes zero and multiple inner loops iterate over puVar16[2]
+container	puVar17	sorted_then_truncated_shortlist_for_conflict_resolution	very_high	014f7360 first sorts puVar17 descending by MUMatrixPathPoint+0x34 via 00d242c0/014f9df0 then uses all items if count<10 else only floor(count/4)*3 items before calling 014f6fc0
+container	puVar18	next_pass_staging_list	medium	at end of each pass local_c0 is set to puVar18 before 00d214d0 and loop continues while puVar16 is non-empty
+container	puVar19	slot_bucket_list	very_high	indexed by sourceItem+0x28 and neighbor offsets to reach count-sized subgroup buckets
+payload	MUMatrixPathPoint	local_shortlist_payload_family	very_high	0116d770 size 0x40 and property names xPosIndex yValue relevanceQuality bestNeighbourQuality shouldBeProcessed align exactly with 014f7360
+helper	014f6db0	point_to_singleton_MUMatrixPath_bridge	very_high	calls 0116cb00 then 014f6d10 to wrap one MUMatrixPathPoint into its own MUMatrixPath and set containingPath
+helper	014f6e40	edge_selector_first_or_last_from_GNList	high	if edx>0 selects first element, else selects last element from input GNList
+helper	014f6fc0	adjacency_merge_helper_between_neighbor_candidate_lists	very_high	compares edge xPosIndex values between paths and appends adjacent list forward or reverse while writing MUMatrixPathPoint+0x18 containingPath back-links
+helper	00d242c0	qsort_r_based_in_place_shortlist_sort	very_high	sorts the full GNList array in place; no filtering occurs inside the helper
+helper	014f9df0	bestNeighbourQuality_descending_comparator	very_high	comparator object used by 014f7360; reads MUMatrixPathPoint+0x34 and returns descending order
+policy	014f7360_post_sort	keep_all_if_count_below_10_else_keep_first_75pct_floor	very_high	shortlist merge scans all items for small sets and only floor(count/4)*3 items for larger sets
+state_byte	+0xc	terminal_or_no_winner_marker	medium	set to 0 when no winning local_50 emerges for current puVar16 node
+state_byte	+0xd	current_pass_winner_marker	high	reset to 0 at pass start and set to 1 on nodes that win local selection
+state_byte	+0xe	suppressed_or_resolved_out_marker	high	set to 1 after 014f6fc0 resolves overlap/conflict and disables competing candidate
+pipeline	014f7360	build_fixed_GNList_topology_then_rank_sort_truncate_then_merge_adjacency	very_high	creates five fixed GNList containers plus count-sized GNList bucket subgroup then performs local ranking, descending shortlist sort on bestNeighbourQuality, explicit cutdown and adjacency merge before higher-level adapters

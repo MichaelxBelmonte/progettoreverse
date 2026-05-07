@@ -1,0 +1,70 @@
+{
+  "MikeCore": {
+    "size": 45533664,
+    "size_mb": "43.4 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCore: Mach-O 64-bit bundle x86_64",
+    "md5": "f36b74b8e011a27845817bd1a100c72b",
+    "exported_symbols": 4513,
+    "string_count": 34657,
+    "description": "DSP engine, double precision"
+  },
+  "MikeCoreF": {
+    "size": 95175856,
+    "size_mb": "90.8 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCoreF: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit bundle x86_64] [arm64]\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCoreF (for architecture x86_64):\tMach-O 64-bit bundle x86_64\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCoreF (for architecture arm64):\tMach-O 64-bit bundle arm64",
+    "md5": "ca1824c710237e313fb3b6e482d9c371",
+    "exported_symbols": 4456,
+    "string_count": 81662,
+    "description": "DSP engine, float/single precision, Universal (x86_64+ARM64)"
+  },
+  "mike": {
+    "size": 219552,
+    "size_mb": "0.2 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/mike: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit bundle x86_64] [arm64:Mach-O 64-bit bundle arm64]\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/mike (for architecture x86_64):\tMach-O 64-bit bundle x86_64\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/mike (for architecture arm64):\tMach-O 64-bit bundle arm64",
+    "md5": "5157061383c82942fd47c3ca9abd1e7f",
+    "exported_symbols": 3,
+    "string_count": 144,
+    "description": "VST3 wrapper"
+  },
+  "MikeAU": {
+    "size": 224704,
+    "size_mb": "0.2 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeAU: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit bundle x86_64] [arm64:Mach-O 64-bit bundle arm64]\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeAU (for architecture x86_64):\tMach-O 64-bit bundle x86_64\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeAU (for architecture arm64):\tMach-O 64-bit bundle arm64",
+    "md5": "a26f1d18049019864e806efba8c2147f",
+    "exported_symbols": 2,
+    "string_count": 164,
+    "description": "AudioUnit wrapper"
+  },
+  "MikeAAX": {
+    "size": 406032,
+    "size_mb": "0.4 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeAAX: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit bundle x86_64] [arm64:Mach-O 64-bit bundle arm64]\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeAAX (for architecture x86_64):\tMach-O 64-bit bundle x86_64\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeAAX (for architecture arm64):\tMach-O 64-bit bundle arm64",
+    "md5": "164126bd4a7f98650ad0a893c64ff2f0",
+    "exported_symbols": 7,
+    "string_count": 423,
+    "description": "AAX wrapper"
+  },
+  "MikeStandalone": {
+    "size": 152624,
+    "size_mb": "0.1 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeStandalone: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64:Mach-O 64-bit executable arm64]\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeStandalone (for architecture x86_64):\tMach-O 64-bit executable x86_64\n/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeStandalone (for architecture arm64):\tMach-O 64-bit executable arm64",
+    "md5": "441260320dbdbaafcc5d9b0e89ad3593",
+    "exported_symbols": 1,
+    "string_count": 62,
+    "description": "Standalone app wrapper"
+  },
+  "Resources.rrr": {
+    "size": 29166952,
+    "size_mb": "27.8 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/Resources.rrr: data",
+    "magic_bytes": "00000000: 474e 4641 0000 0014 0000 0000 0000 0001  GNFA............",
+    "description": "Proprietary resource file (28MB)"
+  },
+  "default.metallib": {
+    "size": 5698,
+    "size_mb": "0.0 MB",
+    "file_type": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/default.metallib: MetalLib (MacOS), version 1.2.2",
+    "magic_bytes": "00000000: 4d54 4c42 0180 0200 0200 0000 0000 0000  MTLB............",
+    "description": "Metal GPU shader library (5.6KB)"
+  }
+}

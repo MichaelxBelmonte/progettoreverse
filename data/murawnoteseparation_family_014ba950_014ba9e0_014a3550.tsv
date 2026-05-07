@@ -1,0 +1,46 @@
+scope	offset_or_func	role	confidence	evidence
+identity	MURawNoteSeparation	interval_gate_carrier_family	very_high	014baaf0 registers string MURawNoteSeparation with size 0x48
+builder	014ba9e0	constructor_with_start_weight_flag	very_high	allocates 0x48 and writes start/end at +0x10/+0x18 scalar at +0x20 class at +0x3c
+abi	014ba9e0	xmm0_start_xmm1_strength_esi_flag	very_high	disassembly stores xmm0 to +0x10/+0x18 xmm1 to +0x20 and esi to +0x3c
+builder	014ba950	copy_constructor_clone	very_high	clones +0x10..+0x40 from source object
+builder	014a2170	class1_class2_positive_run_builder	medium_high	detects positive-to-nonpositive runs gates length by param_3 sampleRate-like extracts local max above g_0239424c passes max as xmm1 and flag 1 or 2 as esi to 014ba9e0
+builder	014afb20	class8_masked_contrast_peak_builder	high	removes prior class 8 items builds positive mask and local contrast gate g_02391090 then calls 014ba9e0 with esi 8 and xmm1 holding accepted contrast
+transform	014afb20	class8_delta_moving_contrast_smooth_pipeline	high	delta=input[i]-input[i-1]; moving contrast abs(sum(delta over 0.0227*rate))*0.01; clamp 4.0; smooth with 5*(rate/441) then 30*(rate/441); accept valley segment max-min >0.1 under mask
+transform	015c1480	width_to_exponential_alpha	very_high	uses expf stub 0x1f9b1c6 and constant -2.5f to compute alpha=expf(-2.5f/width) after FLT_MIN guard
+transform	015c0b60	bidirectional_exponential_smoother_core	high	uses logf stub 0x1f9b322 to recover radius=max(1,trunc(-2.5/logf(alpha))) then applies recurrence state=sample+alpha*(state-sample) in-place with mode-dependent scratch edge loops
+transform	015c0b60_mode0	scratch_prefix_bzero	high	mode 0 branch calls bzero on 2*radius float scratch prefix before common recurrence; do not replace with guessed full zero padding
+allocator	00e83010	non_zeroing_scratch_allocator	high	015c0b60 allocates scratch through 00e83010; sibling 00e83020 is the alloc+bzero helper and is not used here
+transform	014afb20_class8	mode0_exponential_smoothing_short_long	high	calls 015c1480 twice with ecx=0 widths 5*(rate/441) and 30*(rate/441); wrapper passes r8d=1 for reverse pass
+writer	014a3550	field34_field38_peak_gate_writer	high	updates a two-lane state with coefficient 0.5 over local buffer region and writes peak lane0 to +0x34 and peak lane1 to +0x38
+builder	01484bc0	synthetic_class1_peer_builder	high	class1 fallback calls 014ba9e0 with start=current.start xmm1=1.0f and esi=0x40 then inserts peer into auxiliary list
+constant	g_0239424c	class1_class2_local_max_gate_0_0f	very_high	__TEXT.__const bytes at 0x0239424c decode as float 0.0 used by 014a2170 ucomiss gate
+constant	g_02391090	class8_contrast_gate_0_1f	very_high	__TEXT.__const bytes at 0x02391090 decode as float 0.100000001 used by 014afb20 contrast gate
+constant	g_02390108	class8_mask_run_window_0_05_double	very_high	__TEXT.__const bytes at 0x02390108 decode as double 0.05 multiplied by sampleRate-like parameter
+constant	g_0240e400	class8_contrast_window_0_0227_double	very_high	__TEXT.__const bytes at 0x0240e400 decode as double 0.0227 used for contrast buffer window
+constant	g_0240f0f0	class8_window_normalizer_441_double	very_high	__TEXT.__const bytes at 0x0240f0f0 decode as double 441.0 used in param_1/g_0240f0f0
+constant	g_02390140	float_abs_sign_mask	very_high	__TEXT.__const bytes at 0x02390140 decode as u32 0x7fffffff used for abs float in class8 moving contrast
+constant	g_02394254	moving_contrast_scale_0_01f	very_high	__TEXT.__const bytes at 0x02394254 decode as float 0.00999999978 used to scale abs moving sum
+constant	g_023945d0_0x23945d4	peak_gate_writer_half_coefficients	very_high	__TEXT.__const bytes at 0x023945d0..0x023945d4 decode as float 0.5 and 0.5 used by 014a3550 state=(state+samplePair)*0.5
+constant	g_02390d2c	class8_threshold_sentinel_4_0f	very_high	__TEXT.__const bytes at 0x02390d2c decode as float 4.0 used as threshold/sentinel in contrast path
+constant	g_0240e280_28c	class8_vector_thresholds_4_0f	very_high	__TEXT.__const bytes at 0x0240e280..0x0240e28c decode as four float 4.0 values loaded by movaps in contrast path
+constant	g_023908d8	class8_smoothing_factor_5_0f	very_high	__TEXT.__const bytes at 0x023908d8 decode as float 5.0 used before 015c1480
+constant	g_0241fd58	class8_smoothing_factor_30_0f	very_high	__TEXT.__const bytes at 0x0241fd58 decode as float 30.0 used before 015c1480
+constant	g_02394274	float_min_guard	very_high	__TEXT.__const bytes at 0x02394274 decode as FLT_MIN 1.17549435e-38 used by 015c1480 and 015c0b60
+constant	0x0241106c	exponential_smoother_minus_2_5f	very_high	__TEXT.__const bytes at 0x0241106c decode as float -2.5 used in expf(-2.5f/width)
+constant	0x02411070	exponential_smoother_minus_2_5_double	very_high	__TEXT.__const bytes at 0x02411070 decode as double -2.5 used in -2.5/logf(alpha)
+constant	g_0240e30c	max_search_low_sentinel_minus_1000f	very_high	__TEXT.__const bytes at 0x0240e30c decode as float -1000.0 used as low sentinel
+constant	g_02394264	contrast_high_sentinel_10000f	very_high	__TEXT.__const bytes at 0x02394264 decode as float 10000.0 used as high sentinel/floor path
+constant	0x02390124	synthetic_peer_strength_1_0f	very_high	__TEXT.__const bytes at 0x02390124 decode as float 1.0 used by 01484bc0 synthetic 0x40 peer
+writer	014a3550	downstream_metric_writer	high	populates +0x28 +0x2c +0x30 +0x34 +0x38 on separation items
+consumer	014a3900	adjacent_candidate_arbitration	high	reads +0x10 +0x18 +0x20 +0x28 +0x2c +0x34 +0x38 +0x3c
+consumer	014a42b0	gap_weighted_selection	high	reads +0x10 +0x18 +0x20 +0x34 +0x38 +0x3c and treats class 8 specially
+field	+0x10	interval_start_double	very_high	set directly by 014ba9e0
+field	+0x18	interval_end_double	very_high	initialized equal to start by 014ba9e0 and later updated downstream
+field	+0x20	base_strength_or_gate_weight	high	set by 014ba9e0 from xmm1; builder origin is local run max for class 1/2 local contrast for class 8 and 1.0f for synthetic 0x40 peers
+field	+0x28	score_like_scalar	high	written by 014a3550 and consumed by 014a3900 against target 1.0
+field	+0x2c	secondary_scalar_margin_or_residual	medium	written by 014a3550 and multiplied in 014a3900
+field	+0x30	local_ranking_or_contrast_weight	medium_high	written by 014a3550
+field	+0x34	paired_local_smoothed_peak_gate_a	high	written by 014a3550 from peak lane0 of half-smoothed two-buffer state; max-merged in 014a3900 and OR-gated in 014a42b0
+field	+0x38	paired_local_smoothed_peak_gate_b	high	written by 014a3550 from peak lane1 of half-smoothed two-buffer state; max-merged in 014a3900 and OR-gated in 014a42b0
+field	+0x3c	class_state_flag_set	very_high	set by 014ba9e0 callsite values 1 2 8 0x10 0x40 observed across analyzer and mono builder paths
+field	+0x40	selected_match_or_linked_peer_pointer	very_high	copied by 014ba950; 014af180 retains/stores winner and 01484bc0 consumes or synthesizes linked peers through this slot

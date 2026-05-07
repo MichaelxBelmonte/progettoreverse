@@ -1,0 +1,16 @@
+.DS_Store
+._*
+
+.claude/
+.xdg_config/
+
+0x013903d0
+Screenshot *.png
+
+__pycache__/
+*.pyc
+
+build/
+cmake-build-*/
+
+ghidra/projects/

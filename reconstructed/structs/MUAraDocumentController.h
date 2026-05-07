@@ -1,0 +1,44 @@
+// Reconstructed from MikeCore — 40 properties
+
+struct MUAraDocumentController {
+    bool                     _cacheWarmUpDoWarmUp;
+    double                   _cacheWarmUpLastStartTime;
+    double                   _hostPlaybackParamsLastStartTime;
+    double                   _cacheWarmUpLastCursorTime;
+    double                   _cacheWarmUpLastLeftCycleQuarter;
+    int64_t                  _expectedNextAraHostSampleIndex;
+    int32_t                  _replaceBufferSize;
+    double                   _renderStateTime;
+    bool                     _renderStateHostIsPlaying;
+    bool                     _renderStateRenderingEnabled;
+    bool                     _shouldTransferContextReset;
+    bool                     _shouldTransferContextEnabled;
+    bool                     _lastTransferContextEnabled;
+    bool                     _hostPlaybackParamsCycleActive;
+    bool                     _isAAX;
+    bool                     _hostPlaybackParamsCycleTimeValid;
+    double                   _hostPlaybackParamsCycleStartQuarter;
+    double                   _hostPlaybackParamsCycleEndQuarter;
+    double                   _hostPlaybackParamsCursorTime;
+    double                   _hostPlaybackParamsTempo;
+    int64_t                  _hostPlaybackParamsRenderSampleIndex;
+    float                    _localPlaybackVolume;
+    bool                     _hostCycleChanged;
+    int32_t                  _outOfSyncSamples;
+    double                   _lastHostTempo;
+    bool                     _tempoMapRecordingState;
+    bool                     _doRegisterObserver;
+    bool                     _awaitsFirstTransfer;
+    SInt32*                  _renderLock;
+    bool                     _callSimulateProcessSamples;
+    bool                     _realtimeStretchingEnabled;
+    bool                     _enquededAuxiliaryRenderersPending;
+    GNDoubleRange*           _hostSelectedVisibleRange;
+    bool                     _isPlaybackRenderer;
+    bool                     _isEditorRenderer;
+    bool                     _isEditorView;
+    bool                     _doUpdateCycle;
+    bool                     _archiveIsPotentiallyUnstable;
+    bool                     _mustSyncPitchSystemsAfterImportingPreM41Archive;
+    bool                     _isUnstable;
+};

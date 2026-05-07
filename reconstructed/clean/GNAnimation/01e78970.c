@@ -1,0 +1,65 @@
+// Function: FUN_01e78970
+// Address: 01e78970
+// Size: 1248 bytes
+// Class: GNAnimation
+// String references:
+//   "GNAnimation"
+// === GNAnimation properties ===
+//   GNAnimationCurve _interpolationMethod
+//                   _mergesSegmentsAtBorders
+//                   _isMoving
+//                   _isStretching
+//                   _allowGaps
+//                   _isEditingSequence
+//                   _splitsOnBars
+//                   _titleRects
+//                   _visibleRange
+
+
+void FUN_01e78970(void)
+
+{
+  int iVar1;
+  void*this_ptr;
+  
+  FUN_00d4ff80();
+  *this_ptr = &g_026c3e50;
+  FUN_01e78f30();
+  *(void*)(this_ptr + 3) = 0;
+  // [STATIC_INIT: property registration]
+  if (g_02801523 == '\0') {
+    FUN_01e79290();
+    FUN_00e87980();
+  }
+  FUN_01e794c0();
+  FUN_01e79740();
+  this_ptr[6] = 0;
+  // [STATIC_INIT: property registration]
+  if (g_02801523 == '\0') {
+    FUN_01e799c0();
+    FUN_00e87980();
+  }
+  FUN_01e79b30();
+  FUN_01e79e20();
+  this_ptr[9] = 0;
+  this_ptr[10] = 0;
+  // [STATIC_INIT: property registration]
+  if (g_02801523 == '\0') {
+    FUN_01e7a110();
+    FUN_00e87980();
+  }
+  *(void*)(this_ptr + 0xb) = 0;
+  // [STATIC_INIT: property registration]
+  if (g_02801523 == '\0') {
+    FUN_01e7a280();
+    FUN_00e87980();
+  }
+  this_ptr[0xc] = 0;
+  // [STATIC_INIT: property registration]
+  if (g_02801523 == '\0') {
+    FUN_01e7a3f0();
+    FUN_00e87980();
+  }
+  return;
+}
+

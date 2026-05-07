@@ -1,0 +1,110 @@
+// Function: FUN_00496ec0
+// Address: 00496ec0
+// Size: 761 bytes
+// Class: MUAudioFileSource
+
+uint64_t FUN_00496ec0(void* param_1,char param_2)
+
+{
+  uint uVar1;
+  void *pvVar2;
+  uint64_t uVar3;
+  int64_t this_ptr;
+  int64_t local_50;
+  char local_48;
+  int64_t local_40;
+  char local_38;
+  
+  if (*(int64_t *)(this_ptr + 0x118) == 0) {
+    uVar3 = 0;
+  }
+  else {
+    FUN_00d50b00();
+    pvVar2 = _pthread_getspecific(param_1);
+    if (pvVar2 != (void *)0x0) {
+      FUN_00e8b990();
+    }
+    FUN_0134a600();
+    if ((local_38 != '\0') && (local_40 != 0)) {
+      FUN_00d50b20();
+    }
+    if (local_40 == 0) {
+      uVar3 = 0;
+    }
+    else {
+      pvVar2 = _pthread_getspecific(param_1);
+      if (pvVar2 != (void *)0x0) {
+        FUN_00e8b990();
+      }
+      FUN_0134a600();
+      pvVar2 = _pthread_getspecific(param_1);
+      if (pvVar2 != (void *)0x0) {
+        FUN_00e8b990();
+      }
+      pvVar2 = _pthread_getspecific(param_1);
+      if (pvVar2 != (void *)0x0) {
+        FUN_00e8b990();
+      }
+      FUN_0134a540();
+      if (local_48 == '\0') {
+        if (local_50 != 0) {
+          FUN_00d50b00();
+        }
+      }
+      else {
+        local_48 = '\0';
+      }
+      uVar1 = FUN_00d51e10();
+      if (local_50 != 0) {
+        FUN_00d50b20();
+      }
+      if ((local_48 != '\0') && (local_50 != 0)) {
+        FUN_00d50b20();
+      }
+      if ((local_38 != '\0') && (local_40 != 0)) {
+        FUN_00d50b20();
+      }
+      if (param_2 == '\x01' && (char)uVar1 == '\0') {
+        pvVar2 = _pthread_getspecific(param_1);
+        if (pvVar2 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        pvVar2 = _pthread_getspecific(param_1);
+        if (pvVar2 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        FUN_0134a600();
+        pvVar2 = _pthread_getspecific(param_1);
+        if (pvVar2 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        FUN_00d51d20();
+        if (local_38 == '\0') {
+          if (local_40 != 0) {
+            FUN_00d50b00();
+          }
+        }
+        else {
+          local_38 = '\0';
+        }
+        FUN_0134a580();
+        if (local_40 != 0) {
+          FUN_00d50b20();
+        }
+        if ((local_38 != '\0') && (local_40 != 0)) {
+          FUN_00d50b20();
+        }
+        if ((local_48 != '\0') && (local_50 != 0)) {
+          FUN_00d50b20();
+        }
+        uVar3 = CONCAT71((int7)((uint64_t)local_40 >> 8),1);
+      }
+      else {
+        uVar3 = (uint64_t)uVar1 ^ 1;
+      }
+    }
+    FUN_00d50b20();
+  }
+  return uVar3 & 0xffffffff;
+}
+

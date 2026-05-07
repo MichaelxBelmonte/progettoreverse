@@ -1,0 +1,204 @@
+openjdk version "25.0.2" 2026-01-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.2+10 (build 25.0.2+10-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.2+10 (build 25.0.2+10-LTS, mixed mode)
+INFO  Using log config file: jar:file:/Applications/ghidra_12.0.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/.xdg_config/ghidra/ghidra_12.0.4_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/.xdg_config/ghidra/ghidra_12.0.4_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (575 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (2508 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 89 extension points (43 false positives) (ClassSearcher)  
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldOffset has been called by org.apache.felix.framework.util.SecureAction (file:/Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/Base/lib/org.apache.felix.framework-7.0.5.jar)
+WARNING: Please consider reporting this to the maintainers of class org.apache.felix.framework.util.SecureAction
+WARNING: sun.misc.Unsafe::staticFieldOffset will be removed in a future release
+INFO  HEADLESS Script Paths:
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/Jython/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Processors/8051/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/ghidra/projects/MikeCoreF_Project (HeadlessAnalyzer)  
+INFO  Creating project: /Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/ghidra/projects/MikeCoreF_Project (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/ghidra/projects/MikeCoreF_Project (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCoreF (HeadlessAnalyzer)  
+WARN  Using unknown opinion: Mac OS X Mach-O, x86:LE:64:default:windows (LcsHintLoadSpecChooser)  
+INFO  Using Loader: Mac OS X Mach-O (ProgramLoader)  
+INFO  Using Language/Compiler: x86:LE:64:default:windows (ProgramLoader)  
+INFO  Using Library Search Path: [., /System/Library/dyld/dyld_shared_cache_arm64e, /System/Library/dyld/dyld_shared_cache_x86_64, /System/Library/dyld/dyld_shared_cache_x86_64h, /System/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e, /System/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64, /System/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64h, /Users/michaelbelmonte/Library/Java/Extensions, /Library/Java/Extensions, /Network/Library/Java/Extensions, /System/Library/Java/Extensions, /usr/lib/java] (ProgramLoader)  
+INFO  Additional info:
+Loading file:///Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCoreF?MD5=ca1824c710237e313fb3b6e482d9c371...
+------------------------------------------------
+
+Linking the External Programs of 'MikeCoreF' to imported libraries...
+  [/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa] -> not found in project
+  [/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate] -> not found in project
+  [/System/Library/Frameworks/Security.framework/Versions/A/Security] -> not found in project
+  [/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit] -> not found in project
+  [/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore] -> not found in project
+  [/System/Library/Frameworks/Metal.framework/Versions/A/Metal] -> not found in project
+  [/System/Library/Frameworks/MetalKit.framework/Versions/A/MetalKit] -> not found in project
+  [/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation] -> not found in project
+  [/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox] -> not found in project
+  [/System/Library/Frameworks/AudioUnit.framework/Versions/A/AudioUnit] -> not found in project
+  [/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio] -> not found in project
+  [/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI] -> not found in project
+  [/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration] -> not found in project
+  [/usr/lib/libc++.1.dylib] -> not found in project
+  [/usr/lib/libSystem.B.dylib] -> not found in project
+  [/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit] -> not found in project
+  [/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices] -> not found in project
+  [/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork] -> not found in project
+  [/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation] -> not found in project
+  [/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics] -> not found in project
+  [/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices] -> not found in project
+  [/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText] -> not found in project
+  [/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation] -> not found in project
+  [/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO] -> not found in project
+  [/usr/lib/libobjc.A.dylib] -> not found in project
+------------------------------------------------
+
+ (ProgramLoader)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCoreF (HeadlessAnalyzer)  
+INFO  hit non-returning function, restarting decompiler switch analyzer later (DecompilerSwitchAnalyzer)  
+WARN  Decompiling 0215e650, pcode error at 0215e99a: Unable to resolve constructor at 0215e99a (DecompileCallback)  
+WARN  Decompiling 02183570, pcode error at 021844e6: Unable to resolve constructor at 021844e6 (DecompileCallback)  
+WARN  Decompiling 023103c0, pcode error at 023128da: Unable to resolve constructor at 023128da (DecompileCallback)  
+WARN  Decompiling 021805f0, pcode error at 02180b06: Unable to resolve constructor at 02180b06 (DecompileCallback)  
+WARN  Decompiling 023404f0, pcode error at 023406bd: Unable to resolve constructor at 023406bd (DecompileCallback)  
+WARN  Decompiling 02164440, pcode error at 02164856: Unable to resolve constructor at 02164856 (DecompileCallback)  
+WARN  Decompiling 021b6ad0, pcode error at 021b7ad1: Unable to resolve constructor at 021b7ad1 (DecompileCallback)  
+WARN  Decompiling 02373eb0, pcode error at 02374d40: Failed to resolve varnode <Sreg>, index=7 (DecompileCallback)  
+WARN  Decompiling 0227d680, pcode error at 0227f4ab: Unable to resolve constructor at 0227f4ab (DecompileCallback)  
+ERROR VarnodeContext: out of address spaces at @006b9ad9 for: RAX-006b9ad9 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0041ba59 for: ESI-0041ba59 (VarnodeContext)  
+WARN  PackedDatabase cache failure for: /Applications/ghidra_12.0.4_PUBLIC/Ghidra/Features/Base/data/typeinfo/mac_10.9/mac_osx.gdt, permission denied: /var/tmp/michaelbelmonte-ghidra/packed-db-cache (PackedDatabase)  
+INFO  Applied data type archive: mac_osx (ApplyDataArchiveAnalyzer)  
+WARN  Unable to fully apply external demangled Address Table at 030a8528: std::istream::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8530: std::ostream::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8538: std::iostream::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8540: std::streambuf::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8548: std::__shared_weak_count::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8550: std::locale::facet::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8558: std::ios_base::failure::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8560: std::out_of_range::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8568: std::bad_exception::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8570: std::runtime_error::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8578: std::invalid_argument::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8580: std::bad_cast::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8588: std::bad_alloc::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8590: int::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8598: short::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85a0: unsigned_short::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85a8: long_long::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85b0: __cxxabiv1::__class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85b8: __cxxabiv1::__pointer_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85c0: __cxxabiv1::__si_class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85c8: __cxxabiv1::__vmi_class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85d0: std::system_error::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85d8: std::istream::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85e0: std::num_get<char,std::istreambuf_iterator<char,std::char_traits<char>>>::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85e8: std::ios_base::failure::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85f0: std::ios::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a85f8: std::length_error::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8600: std::out_of_range::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 030a8608: std::invalid_argument::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::istream::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::ostream::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::iostream::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::streambuf::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::__shared_weak_count::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::locale::facet::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::ios_base::failure::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::out_of_range::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::bad_exception::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::runtime_error::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::invalid_argument::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::bad_cast::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::bad_alloc::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::int::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::short::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::unsigned_short::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::long_long::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::__cxxabiv1::__class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::__cxxabiv1::__pointer_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::__cxxabiv1::__si_class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::__cxxabiv1::__vmi_class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::system_error::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::istream::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::num_get<char,std::istreambuf_iterator<char,std::char_traits<char>>>::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::ios_base::failure::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::ios::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::length_error::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::out_of_range::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table: /usr/lib/libc++.1.dylib::std::invalid_argument::vtable (DemangledAddressTable)  
+ERROR VarnodeContext: out of address spaces at @006b9ad9 for: RAX-006b9ad9 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0041ba59 for: ESI-0041ba59 (VarnodeContext)  
+WARN  Decompiling 00f58c00, pcode error at 00f59098: Unable to resolve constructor at 00f59098 (DecompileCallback)  
+WARN  Decompiling 00faa5c0, pcode error at 00faba40: Unable to resolve constructor at 00faba40 (DecompileCallback)  
+WARN  Decompiling 01098040, pcode error at 010999a1: Unable to resolve constructor at 010999a1 (DecompileCallback)  
+WARN  Decompiling 023103c0, pcode error at 023128da: Unable to resolve constructor at 023128da (DecompileCallback)  
+WARN  Decompiling 02373eb0, pcode error at 02374d40: Failed to resolve varnode <Sreg>, index=7 (DecompileCallback)  
+INFO  -----------------------------------------------------
+    ASCII Strings                              2.685 secs
+    Apply Data Archives                        0.604 secs
+    CFStrings                                  0.005 secs
+    Call Convention ID                         6.670 secs
+    Call-Fixup Installer                       0.219 secs
+    Create Address Tables                      5.074 secs
+    Create Address Tables - One Time           0.494 secs
+    Create Function                            7.864 secs
+    Data Reference                            24.686 secs
+    Decompiler Switch Analysis               159.815 secs
+    Decompiler Switch Analysis - One Time      5.026 secs
+    Demangler GNU                              1.263 secs
+    Disassemble Entry Points                   5.387 secs
+    Disassemble Entry Points - One Time        1.298 secs
+    Embedded Media                             0.159 secs
+    External Entry References                  0.033 secs
+    Function ID                               14.782 secs
+    Function Start Search                      0.124 secs
+    Mach-O Function Starts                    12.562 secs
+    Non-Returning Functions - Discovered     208.586 secs
+    Non-Returning Functions - Known            0.015 secs
+    Objective-C 2 Class                        1.203 secs
+    Objective-C 2 Decompiler Message         583.580 secs
+    Reference                                  6.327 secs
+    Shared Return Calls                        9.440 secs
+    Stack                                    135.708 secs
+    Subroutine References                     81.068 secs
+    Subroutine References - One Time           0.014 secs
+    x86 Constant Reference Analyzer          136.089 secs
+-----------------------------------------------------
+     Total Time   1410 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCoreF (HeadlessAnalyzer)  
+INFO  /MikeCoreF: file created (michaelbelmonte) (LocalFileSystem)  
+INFO  REPORT: Save succeeded for: /MikeCoreF (MikeCoreF_Project:/MikeCoreF) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)

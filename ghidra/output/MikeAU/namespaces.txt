@@ -1,0 +1,5 @@
+3	565	GNAudioUnitViewFactory_20241202_165345
+4	24	/usr/lib/libc++.1.dylib
+1	6	/usr/lib/libc++.1.dylib::std
+3	3	/usr/lib/libobjc.A.dylib
+# Total: 4

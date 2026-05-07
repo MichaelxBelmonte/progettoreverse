@@ -1,0 +1,17 @@
+phase	evidence	confidence	notes
+list_iteration	reads *arg1+0xc and *arg1+0x10	high	iterates array of item pointers
+descriptor_cache	uses this_ptr+0x1a0 via 0132d640	high	stateful kernel, not pure function
+operational_signature	self/items/magnitudeData/trueFreqData/tonalityData/globalScale/harmonicDecay/harmonicColumns + 2 stack flags	high	decompiled 4-arg signature is incomplete and mis-typed
+stack_flag_a	item_list_ownership_or_mode	medium	selects between two near-identical early loops and appears more lifetime-related than DSP-related
+stack_flag_b	enable_tonality_weighting	high	anded with tonalityData!=NULL flag before weighted final scoring path
+item_param_a	reads item+0x10 and may lazy-fill via 014eed60	medium	float parameter per item
+item_pitch_like	reads item+0x14 and feeds exp2f	high	log-pitch-like or harmonic spacing control
+item_param_b	reads item+0x20 and may lazy-fill via 014eecb0	medium	float parameter per item
+item_score_out	zeros then writes item+0x28	high	final score/claim/relevance output
+harmonic_template	uses exp2f + powf + 014b74f0 in loop	high	builds multi-order kernel up to param_4 * step
+harmonic_stencil_writer	014b74f0 adds per-harmonic lobes into zeroed row buffer	high	stamping weight is consistent with item+0x24 / harmonicIndex
+column_normalization	normalizes columns separated by param_4	high	prevents uncontrolled growth across orders
+spectral_buffers_hidden	magnitudeData/trueFreqData/tonalityData all passed explicitly from 013903d0	very_high	trueFreq is reused as axis; magnitude as energy; tonality as scoring/mask buffer
+external_buffer_scoring	uses tonalityData as visible per-bin scoring buffer in final accumulation	high	magnitude and trueFreq are also passed but support helper/local geometry
+final_unweighted_score	score_i = sum magnitudeData[k] * rowTemplate[i][k] for k>=1	high	column 0 excluded; semantic form after loop unrolling
+final_tonality_weighted_score	score_i = sum magnitudeData[k] * rowTemplate[i][k] * min(1, tonalityData[k]) for k>=1	high	activated only when tonalityData exists and stack flag enables weighting

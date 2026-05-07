@@ -1,0 +1,281 @@
+# Numeric constants extracted from MikeCore DSP code
+# Total: 620 constants from 15 classes
+
+
+============================================================
+  GNFastFourierTransformer — 1 constants
+============================================================
+
+  [small_multiplier]
+           2.000000  0x1d;   }   else {     if (unaff_ESI != 0x40000000) goto LAB_00e83485;
+
+
+============================================================
+  MUAudioSourceAttackItem — 2 constants
+============================================================
+
+  [ratio/weight]
+           0.000000  param_1 = local_c8;           }           dVar27 = 4.94065645841247e-3
+           0.000000  ;             local_b8[5] = local_150;             dVar27 = 9.88131291
+
+
+============================================================
+  MUAudioSourcePrincipalItem — 13 constants
+============================================================
+
+  [ratio/weight]
+           0.000000  _4_,(local_60._0_4_ + local_4c) * DAT_0239011c);   fVar64 = 2.24208e-4
+           0.000000  66 * 2);   } while ((int)fVar66 < iVar51 * 4);   local_4c = 5.73972e-4
+           0.000000  if (*pfVar1 < DAT_0240d16c) {             param_7[lVar41] = 1e-07;    
+           0.000000  fVar64 < _UNK_02416634) {             param_7[lVar41 + 1] = 1e-07;    
+           0.000000  fVar66 < _UNK_02416638) {             param_7[lVar41 + 2] = 1e-07;    
+           0.000000  fVar67 < _UNK_0241663c) {             param_7[lVar41 + 3] = 1e-07;    
+           0.000000  (fVar69 < DAT_0240d16c) {             param_7[lVar41 + 4] = 1e-07;    
+           0.000000  (fVar8 < _UNK_02416634) {             param_7[lVar41 + 5] = 1e-07;    
+           0.000000  (fVar9 < _UNK_02416638) {             param_7[lVar41 + 6] = 1e-07;    
+           0.000000  fVar10 < _UNK_0241663c) {             param_7[lVar41 + 7] = 1e-07;    
+           0.500000  *(undefined4 *)(lVar15 + 0x10) = 0x3f000000;               FUN_00d50b2
+           0.600000  ined4 *)((longlong)unaff_RDI + 0x184) = 0x3f19999a;     if (unaff_RDI[
+
+  [small_multiplier]
+           2.000000  333333 + 0x19999998U >> 2 | local_154 * 0x40000000) <                 
+
+
+============================================================
+  MUElementAnalyzer — 30 constants
+============================================================
+
+  [ratio/weight]
+           0.000000  (uVar47 + 0xc));             }             if (local_144 != 2.8026e-45
+           0.000000  uVar47 = puVar50[2];             if (local_144 == 2.8026e-45) {       
+           0.000000  glong)unaff_RDI + 0xe1) = 0;               if (local_144 != 2.8026e-45
+           0.000000  r47 + 0xc));               }               if (local_144 == 2.8026e-45
+           0.000100  if (local_78 < DAT_023d59b4) {               local_78 = 0.0001;       
+           0.001000  RSI;     if (*(int *)(lVar29 + 0xc) < 1) {       *param_4 = 0.001;    
+           0.333300  uVar24 = (ulonglong)uVar21;           local_78 = 0.3333;           if 
+           0.600000  if (*pfVar23 < fVar31) {           pfVar19[uVar24] = 0.6;         }   
+           0.600000  if (fVar5 < fVar33) {           pfVar19[uVar24 + 1] = 0.6;         }  
+           0.600000  ];         }         else {           pfVar19[uVar24 + 2] = 0.6;      
+           0.600000  LAB_014ae7cb; LAB_014ae840:           pfVar19[uVar24 + 3] = 0.6;      
+           0.600000  if (fVar5 < fVar31) {           pfVar19[uVar24 + 4] = 0.6;         }  
+           0.600000  if (fVar6 < fVar33) {           pfVar19[uVar24 + 5] = 0.6;         }  
+           0.600000  if (fVar7 < fVar32) {           pfVar19[uVar24 + 6] = 0.6;         }  
+           0.600000  if (fVar8 < fVar17) {           pfVar19[uVar24 + 7] = 0.6;         }  
+           0.600000  1 && fVar31 != pfVar19[uVar21]) {         pfVar19[uVar21] = 0.6;      
+
+  [small_multiplier]
+           1.050000  CONCAT44(uVar79,0x40c00000),local_c8,0x3f866666,0,                  *(
+           2.000000  ;           do {             *piVar24 = 0x40000000;             piVar2
+           2.000000  *piVar24 = 0x40000000;                             piVar24 =
+           4.000000  *(undefined4 *)(lVar19 + uVar21 * 4) = 0x40800000;         }         i
+           4.000000  ndefined4 *)(lVar19 + 8 + uVar21 * 4) = 0x40800000;           if (fVar
+           4.000000  ndefined4 *)(lVar19 + 4 + uVar21 * 4) = 0x40800000;           if (fVar
+           4.000000  efined4 *)(lVar19 + 0xc + uVar21 * 4) = 0x40800000;           pfVar2 =
+           4.000000  fined4 *)(lVar19 + 0x10 + uVar21 * 4) = 0x40800000;         }         
+           4.000000  fined4 *)(lVar19 + 0x14 + uVar21 * 4) = 0x40800000;         }         
+           4.000000  fined4 *)(lVar19 + 0x18 + uVar21 * 4) = 0x40800000;         }         
+           4.000000  fined4 *)(lVar19 + 0x1c + uVar21 * 4) = 0x40800000;         }         
+           4.000000  *(undefined4 *)(lVar19 + uVar27 * 4) = 0x40800000;       }       uVar2
+           6.000000  al_58,                  CONCAT44(uVar79,0x40c00000),local_c8,0x3f86666
+          16.000000  240e368 + (ulonglong)(iVar44 == 2) * 4),0x41800000);     puVar49 = loc
+
+
+============================================================
+  MULSSComponentRenderer — 33 constants
+============================================================
+
+  [ratio/weight]
+           0.000000  50));     if (local_b50 < DAT_0240d188) {       local_b74 = 1.4013e-45
+           0.000000  AT71((int7)((ulonglong)local_c38 >> 8),1));     local_9ac = 1.4013e-45
+           0.000000  ) = 0;                       *(float *)(unaff_RDI + 0x2c) = 1.4013e-45
+           0.000000  else {                         if (local_a2c == 1.4013e-45) {         
+           0.000000  ocal_a00 < DAT_0240d188) {                         fVar98 = 1.4013e-45
+           0.000000  1);                     }                     if (fVar98 != 1.4013e-45
+           0.000000  ') {         if (0 < (int)fVar60) {           if (fVar60 == 1.4013e-45
+           0.000000  lVar42 = (longlong)(int)fVar60;         if (local_a2c == 1.4013e-45) {
+           0.000000  '\0') &&                           (*(float *)local_948 == 2.8026e-45)
+           0.000000  if (*pfVar8 < fVar19) {           in_RCX[uVar10] = 1.1754944e-38;     
+           0.000000  if (fVar1 < fVar22) {           in_RCX[uVar10 + 1] = 1.1754944e-38;   
+           0.000000  if (fVar2 < fVar20) {           in_RCX[uVar10 + 2] = 1.1754944e-38;   
+           0.000000  LAB_012b9e95; LAB_012b9f06:           in_RCX[uVar10 + 3] = 1.1754944e-
+           0.000000  if (fVar1 < fVar19) {           in_RCX[uVar10 + 4] = 1.1754944e-38;   
+           0.000000  if (fVar2 < fVar22) {           in_RCX[uVar10 + 5] = 1.1754944e-38;   
+           0.000000  if (fVar3 < fVar20) {           in_RCX[uVar10 + 6] = 1.1754944e-38;   
+           0.000000  if (fVar4 < fVar21) {           in_RCX[uVar10 + 7] = 1.1754944e-38;   
+           0.000000  r19 && fVar19 != in_RCX[uVar11]) {         in_RCX[uVar11] = 1.1754944e
+
+  [uncategorized]
+           1.000000  ned4 *)((longlong)ppppppfVar81 + 0xc) = 0x3f800000;             }     
+           1.000000  ned4 *)((longlong)ppppppfVar81 + 0xc) = 0x3f800000;               fVar
+           1.000000  *ppppppfVar131 = (float *****)0x3f800000;                     if (7 < 
+           1.000000  ppppppfVar131[lVar42] = (float *****)0x3f800000;                      
+           1.000000  (float *******)CONCAT44(local_8d0._4_4_,0x3f800000);           fVar98 
+           1.000000  thread_key_t)uVar22;         local_7c = 0x3f800000;         local_31 =
+           1.000000  if (param_3 == 0) {           *puVar2 = 0x3f800000;         }         
+           1.000000  B_012b9cb0:             puVar2[lVar9] = 0x3f800000;             lVar9 
+           1.000000  *puVar3 = *puVar1;           *puVar2 = 0x3f800000;         }         f
+           1.000000  B_012b9bb0:             puVar2[lVar9] = 0x3f800000;             lVar9 
+           1.000000  *(undefined4 *)(lVar10 + uVar19 * 4) = 0x3f800000;                   u
+           1.000000  ed4 *)(lVar10 + (ulonglong)uVar9 * 4) = 0x3f800000;                   
+           1.000000  ed4 *)(lVar10 + (ulonglong)uVar9 * 4) = 0x3f800000;                   
+           1.000000  *(undefined4 *)(lVar10 + uVar19 * 4) = 0x3f800000;                   u
+           1.000000  *(undefined4 *)(lVar10 + uVar19 * 4) = 0x3f800000;                 uVa
+
+
+============================================================
+  MUPitchMapper — 8 constants
+============================================================
+
+  [possible_frequency]
+         100.000000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x42c80000;       FUN_00d21140
+
+  [ratio/weight]
+           0.500000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x3f000000;       FUN_00d21140
+
+  [small_multiplier]
+           2.500000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x40200000;       FUN_00d21140
+           2.800000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x40333333;       FUN_00d21140
+           5.000000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x40a00000;       FUN_00d21140
+           8.000000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x41000000;       FUN_00d21140
+           9.000000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x41100000;       FUN_00d21140
+          10.000000  ndefined4 *)((longlong)puVar2 + 0x14) = 0x41200000;       FUN_00d21140
+
+
+============================================================
+  MUPulseAssignmentTarget — 1 constants
+============================================================
+
+  [small_multiplier]
+           1.200000  Var32;   *(undefined4 *)(puVar37 + 2) = 0x3f99999a;   FUN_012a52b0(); 
+
+
+============================================================
+  MUSampledFunction — 4 constants
+============================================================
+
+  [ratio/weight]
+           0.000000  fVar59);               fVar59 = 0.0;               dVar28 = 4.94065645
+           0.000000  t)(float)local_48;                   if ((float)local_48 == 1.4013e-45
+
+  [uncategorized]
+           1.000000  defined4 *)((longlong)plVar13 + 0x1c) = 0x3f800000;             fVar15
+           1.000000  defined4 *)((longlong)plVar13 + 0x1c) = 0x3f800000;           *(undefi
+
+
+============================================================
+  MUScalePitchSystem — 27 constants
+============================================================
+
+  [ratio/weight]
+           0.000000  else {       local_88._0_8_ = local_70;       fVar15 = 1.4013e-45;    
+           0.000000  if (local_68[0] != '\0') goto LAB_0199c855;       fVar15 = 1.4013e-45;
+           0.000000  ong *)0x0) {         FUN_00d50b00();       }       fVar15 = 1.4013e-45
+           0.000000  (int)fVar47 % iVar7), (int)fVar15 < 0xb)) {       fVar15 = 1.4013e-44;
+           0.000000  int)fVar47 % iVar7), (int)fVar57 < 0xb)) {         fVar57 = 1.4013e-44
+           0.333330  _01cfc6a0(DAT_0241be1c);     local_9c = 0x3eaaaa3b;     FUN_01cfc6a0(D
+           0.407872  (int)((ulonglong)_UNK_0241bee8 >> 0x20),0x3ed0d4aa);     plVar2 = (lon
+           0.500000  _0241be30,DAT_0241be34);     local_98 = 0x3f000000;     FUN_01cfbee0(D
+           0.500000  _0241be38,DAT_0241be3c);     local_94 = 0x3f000000;     FUN_01cfbee0(D
+           0.500000  FUN_01cfc6a0();           local_48 = 0x3f000000;           FUN_01cfc6a
+           0.500000  FUN_01cfc6a0();           local_44 = 0x3f000000;           FUN_01cfc6a
+           0.666660  _01cfc6a0(DAT_0241be20);     local_98 = 0x3f2aaa3b;     FUN_01cfc6a0(D
+           0.700000  *(undefined4 *)(DAT_028b2a40 + 2) = 0x3f333333;             *(undefine
+           0.700000  defined4 *)((longlong)puVar12 + 0x14) = 0x3f333333;             *(unde
+           0.700000  *(undefined4 *)(puVar12 + 3) = 0x3f333333;             *(undefined1 *)
+           0.900000  1cfc6a0(DAT_02390124);       local_28 = 0x3f666666;       FUN_01cfc6a0
+           0.900000  1cfc6a0(DAT_0241c6e0);       local_28 = 0x3f666666;       FUN_01cfc6a0
+           0.900000  1cfc6a0(DAT_02390120);       local_28 = 0x3f666666;       FUN_01cfc6a0
+           0.900000  FUN_01cfc6a0();         local_48 = 0x3f666666;         FUN_01cfc6a0();
+
+  [small_multiplier]
+          12.000000  ();         }       }       uStack_34 = 0x41400000;       if (1 < *(in
+
+  [uncategorized]
+           1.000000  1cfc6a0(DAT_02390124);       local_24 = 0x3f800000;       FUN_01ae52c0
+           1.000000  1cfc6a0(DAT_023b8bc0);       local_24 = 0x3f800000;       FUN_01ae52c0
+           1.000000  1cfc6a0(DAT_023b3888);       local_24 = 0x3f800000;       FUN_01ae52c0
+           1.000000  _01cfc6a0(DAT_0241be24);     local_94 = 0x3f800000;     pplVar5 = &loc
+           1.000000  _0241be44,DAT_0241be48);     local_f0 = 0x3f800000;     pplVar5 = &loc
+           1.000000  FUN_01cfc6a0();         local_44 = 0x3f800000;         FUN_01ae52c0(&l
+           1.000000  FUN_01cfc6a0();           local_c4 = 0x3f800000;           FUN_01ae52c
+
+
+============================================================
+  MUSpectralTimeSlice — 7 constants
+============================================================
+
+  [ratio/weight]
+           0.200000  + uVar8 * 8) + 0x20) =                  0x3e4ccccd;           }       
+           0.200000  + uVar8 * 8) + 0x20) =                  0x3e4ccccd;           }       
+           0.200000  )(lVar11 + 0x10) + uVar8 * 8) + 0x20) = 0x3e4ccccd         ;       }  
+
+  [small_multiplier]
+           4.000000  00000;   *(undefined4 *)(puVar15 + 1) = 0x40800000;   FUN_00c8e690(); 
+
+  [uncategorized]
+           1.000000  + uVar8 * 8) + 0x20) =                  0x3f800000;           }       
+           1.000000  + uVar8 * 8) + 0x20) =                  0x3f800000;           }       
+           1.000000  10) + uVar8 * 8) + 0x20) =              0x3f800000;       }     }   } 
+
+
+============================================================
+  MUSpectrumShaper — 20 constants
+============================================================
+
+  [possible_frequency]
+         100.000000  local_40;   char local_38;      local_8c = 1;   local_88 = 100.0;   lo
+
+  [ratio/weight]
+           0.000000  r69;         lVar17 = lVar53 + 0x7e4;         if (fVar67 != 1.4013e-45
+           0.000000  = *(undefined **)(unaff_RDI + 0x96);         if (fVar59 == 1.4013e-45)
+           0.000000  fVar59 = (float)(iVar52 + 1);           fVar67 = 1.4013e-45;          
+           0.000000  if (fVar67 != 1.4013e-45) {           if (fVar67 != 2.8026e-45) {     
+           0.000000  ram_4;   insertps(auVar45,fVar41,0x10);   unaff_RDI[0x67] = 1.41531e-4
+           0.000000  ar67 < DAT_02394274) {                     local_68[0x16] = 1.1754944e
+           0.000100  3d59b4) { LAB_01495248:                       local_68[4] = 0.0001;   
+           0.333333  *(undefined4 *)(puVar22 + 4) = 0x3eaaaaab;         local_80 = pfVar47;
+           0.600000  ined4 *)((longlong)unaff_RDI + 0x184) = 0x3f19999a;     pvVar13 = _pth
+           0.707000  g *)(lVar2 + 0x10) + (longlong)iVar4) = 0x3f34fdf4;     uVar7 = FUN_00
+
+  [small_multiplier]
+           2.000000  uVar29 = (ulonglong)((uint)uVar30 & 0x3fffffff);           uVar45 = lV
+          10.766602  ;   local_88 = 100.0;   local_84 = 0x43c80000;   local_80 = 10.766602;
+
+  [uncategorized]
+           1.000000  ;   *(undefined4 *)(unaff_RDI + 0xb0) = 0x3f800000;   *(undefined8 *)(
+           1.000000  defined4 *)((longlong)puVar13 + 0x14) = 0x3f800000;       if (*(char *
+           1.000000  *(undefined4 *)(lVar13 + lVar9 * 4) = 0x3f800000;           iVar19 = *
+           1.000000  *(undefined4 *)(lVar27 + lVar44 * 4) = 0x3f800000;                    
+           1.000000  ong *)(local_48 + 0x10) + uVar29 * 4) = 0x3f800000;                 *(
+           1.000000  ong *)(local_48 + 0x10) + uVar29 * 4) = 0x3f800000;               }   
+           1.000000  g *)(lVar2 + 0x10) + (longlong)iVar4) = 0x3f800000;     uVar7 = FUN_00
+
+
+============================================================
+  MUTempoAnalyzerEvent — 4 constants
+============================================================
+
+  [ratio/weight]
+           0.500000  0000;     *(undefined4 *)(puVar3 + 1) = 0x3f000000;   }   if (in_CL !=
+
+  [uncategorized]
+           1.000000  **(undefined4 **)(local_48 + 0x10) = 0x3f800000;     goto LAB_016027d7
+           1.000000  *(undefined4 *)(lVar2 + lVar24 * 4) = 0x3f800000;   }   else {     pfV
+           1.000000  *(undefined4 *)(lVar2 + lVar24 * 4) = 0x3f800000;   }   if (unaff_SIL 
+
+
+============================================================
+  MUTool — 1 constants
+============================================================
+
+  [small_multiplier]
+           2.000000  t *)(*local_b0 + 0x18) & 0xf000000f) != 0x40000000)) {       local_1a8
+
+
+============================================================
+  QualityScoring — 1 constants
+============================================================
+
+  [small_multiplier]
+           2.000000  ab:       *(undefined4 *)(plVar4 + 9) = 0x40000000;       fVar22 = DAT
+

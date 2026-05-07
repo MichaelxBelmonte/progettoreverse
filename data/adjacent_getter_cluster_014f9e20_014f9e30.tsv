@@ -1,0 +1,8 @@
+scope	target	role	confidence	evidence
+helper	014f9e20	byte_getter_at_plus_0x38	very_high	disassembly is movb 0x38(%rdi), %al; retq
+helper	014f9e30	float_getter_at_plus_0x3c	very_high	disassembly is movss 0x3c(%rdi), %xmm0; retq
+callsite	014fdd70	getter_cluster_used_in_MUPercussivePitchSystem	high	decompiled MUPercussivePitchSystem/014fdd70 calls 014f9e30 on a receiver sourced via 0152c0c0 and later calls 014f9e20 on iterated list elements
+callsite	014fa1c0	repeated_boolean_gate_via_014f9e20	medium_high	decompiled Unknown/014fa1c0 calls 014f9e20 multiple times through nested gating logic
+classification	index_lookup	no_clean_owner_for_014f9e20_014f9e30_or_0152c0c0	high	no address hits in current index_classified.tsv index.tsv or func_names.tsv
+inference	MUMatrixPathPoint_plus_0x3c	not_proven	very_high	no registrar in 0116d770 no writer in 014f9d00 and no direct use proven in tight 014f7360 corridor
+inference	getter_cluster	adjacent_carrier_not_canonical_shortlist_payload	high	current evidence places the getters in a nearby carrier path rather than inside the proven MUMatrixPathPoint field map

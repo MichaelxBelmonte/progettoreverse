@@ -1,0 +1,54 @@
+# Search: "sampleRateReduction"
+STRING @ 02421cb6: "_sampleRateReductionForOutputReadBuffer"
+  FUNC: FUN_0112cf80 @ 0112cf80
+    Size: 322 bytes
+    Ref from: 0112cfb8
+    Called by (1):
+      FUN_01125330@01125330
+    Calls (3):
+      FUN_010f8dd0@010f8dd0
+      ___cxa_guard_acquire@0239ad92
+      ___cxa_guard_release@0239ad98
+
+STRING @ 02421cde: "_sampleRateReductionForFourierProcessing"
+  FUNC: FUN_0112d0f0 @ 0112d0f0
+    Size: 322 bytes
+    Ref from: 0112d128
+    Called by (1):
+      FUN_01125330@01125330
+    Calls (3):
+      FUN_010f8dd0@010f8dd0
+      ___cxa_guard_acquire@0239ad92
+      ___cxa_guard_release@0239ad98
+
+STRING @ 02421d07: "_sampleRateReductionsRatio"
+  FUNC: FUN_0112d260 @ 0112d260
+    Size: 322 bytes
+    Ref from: 0112d298
+    Called by (1):
+      FUN_01125330@01125330
+    Calls (3):
+      FUN_010f8dd0@010f8dd0
+      ___cxa_guard_acquire@0239ad92
+      ___cxa_guard_release@0239ad98
+
+STRING @ 02424eae: "_sampleRateReduction"
+  FUNC: FUN_0117c110 @ 0117c110
+    Size: 177 bytes
+    Ref from: 0117c148
+    Called by (1):
+      FUN_0117a200@0117a200
+    Calls (3):
+      FUN_00d55ee0@00d55ee0
+      ___cxa_guard_acquire@0239ad92
+      ___cxa_guard_release@0239ad98
+  FUNC: FUN_011cca70 @ 011cca70
+    Size: 177 bytes
+    Ref from: 011ccaa8
+    Called by (1):
+      FUN_011cbb30@011cbb30
+    Calls (3):
+      FUN_00d55ee0@00d55ee0
+      ___cxa_guard_acquire@0239ad92
+      ___cxa_guard_release@0239ad98
+

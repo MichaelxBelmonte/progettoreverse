@@ -1,0 +1,4 @@
+100000000	__mh_execute_header
+100000000	MACH_HEADER
+1000033f0	entry
+# Total: 3

@@ -1,0 +1,95 @@
+// Function: FUN_01505ea0
+// Address: 01505ea0
+// Size: 503 bytes
+// Class: GNString
+// === GNString properties ===
+//   bool            _dragEnabled
+//   bool            _dropEnabled
+//   double          _transferStartTime
+//   double          _transferEndTime
+//   double          _userStartTime
+//   double          _userEndTime
+
+
+uint64_t FUN_01505ea0(void* param_1)
+
+{
+  int64_t lVar1;
+  char cVar2;
+  void *pvVar3;
+  int iVar4;
+  int64_t this_ptr;
+  uint64_t unaff_R15;
+  undefined7 uVar6;
+  uint64_t uVar5;
+  bool bVar7;
+  int64_t local_78;
+  char local_70;
+  int64_t local_68;
+  char local_60;
+  int64_t local_58;
+  char local_50;
+  
+  uVar6 = (undefined7)((uint64_t)unaff_R15 >> 8);
+  if (*(int64_t *)(this_ptr + 0x38) == 0) {
+    uVar5 = CONCAT71(uVar6,1);
+  }
+  else {
+    pvVar3 = _pthread_getspecific(param_1);
+    if (pvVar3 != (void *)0x0) {
+      FUN_00e8b990();
+    }
+    FUN_0150eff0();
+    if (*(int *)(local_58 + 0xc) == 0) {
+      bVar7 = true;
+    }
+    else {
+      pvVar3 = _pthread_getspecific(param_1);
+      if (pvVar3 != (void *)0x0) {
+        FUN_00e8b990();
+      }
+      FUN_0150d280();
+      if (*(int *)(local_68 + 0xc) == 0) {
+        bVar7 = false;
+      }
+      else {
+        pvVar3 = _pthread_getspecific(param_1);
+        if (pvVar3 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        FUN_0150eff0();
+        bVar7 = *(int *)(local_78 + 0xc) == 0;
+        if (local_70 != '\0') {
+          FUN_00d50b20();
+        }
+      }
+      if ((local_60 != '\0') && (local_68 != 0)) {
+        FUN_00d50b20();
+      }
+    }
+    if ((local_50 != '\0') && (local_58 != 0)) {
+      FUN_00d50b20();
+    }
+    uVar5 = CONCAT71(uVar6,1);
+    if ((!bVar7) && (lVar1 = *(int64_t *)(this_ptr + 0x40), *(int *)(lVar1 + 0xc) != 0)) {
+      iVar4 = 0;
+      do {
+        if (*(int *)(lVar1 + 0xc) <= iVar4) {
+          FUN_01507540();
+          uVar5 = 0;
+          goto LAB_01506085;
+        }
+        pvVar3 = _pthread_getspecific(param_1);
+        if (pvVar3 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        cVar2 = FUN_012cccd0();
+        iVar4 = iVar4 + 1;
+      } while (cVar2 == '\0');
+      FUN_01507540();
+    }
+  }
+LAB_01506085:
+  return uVar5 & 0xffffffff;
+}
+

@@ -1,0 +1,58 @@
+# Search: "windowOverlap"
+STRING @ 0202077b: "_windowOverlapForTimeSlices"
+  FUNC: FUN_01176880 @ 01176880
+    Size: 322 bytes
+    Ref from: 011768b8
+    Called by (1):
+      FUN_01174240@01174240
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_01103ee0 @ 01103ee0
+    Size: 9650 bytes
+    Ref from: 011058af
+    Called by (1):
+      FUN_010d23d0@010d23d0
+    Calls (52):
+      FUN_002771e0@002771e0
+      FUN_00d4ff80@00d4ff80
+      FUN_00e7ddf0@00e7ddf0
+      FUN_00e87980@00e87980
+      FUN_00e879c0@00e879c0
+      FUN_01106f80@01106f80
+      FUN_01107070@01107070
+      FUN_01107160@01107160
+      FUN_01107240@01107240
+      FUN_01107330@01107330
+      FUN_01107420@01107420
+      FUN_01107510@01107510
+      FUN_01107600@01107600
+      FUN_011076e0@011076e0
+      FUN_011077d0@011077d0
+      FUN_011078c0@011078c0
+      FUN_011079b0@011079b0
+      FUN_01107aa0@01107aa0
+      FUN_01107b90@01107b90
+      FUN_01107c80@01107c80
+  FUNC: FUN_011c6f40 @ 011c6f40
+    Size: 322 bytes
+    Ref from: 011c6f78
+    Called by (1):
+      FUN_011c5bb0@011c5bb0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+
+STRING @ 02027a09: "_windowOverlapForTrueFreqs"
+  FUNC: FUN_011c70b0 @ 011c70b0
+    Size: 322 bytes
+    Ref from: 011c70e8
+    Called by (1):
+      FUN_011c5bb0@011c5bb0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+

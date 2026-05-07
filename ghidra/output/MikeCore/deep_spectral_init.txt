@@ -1,0 +1,57 @@
+# Search: "initFromTimeSignal"
+STRING @ 02029f64: "MUSpectralTimeSlice::initFromTimeSignal(): incomplete parameters!"
+  FUNC: FUN_015c4e40 @ 015c4e40
+    Size: 4396 bytes
+    Ref from: 015c4ea8
+    Called by (1):
+      FUN_015c4d90@015c4d90
+    Calls (28):
+      FUN_00c8e690@00c8e690
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00d21140@00d21140
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+      FUN_00e3aec0@00e3aec0
+      FUN_00e7d780@00e7d780
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_00e83530@00e83530
+      FUN_00e83da0@00e83da0
+      FUN_00e8b990@00e8b990
+      FUN_00e8cb50@00e8cb50
+      FUN_00e8cb70@00e8cb70
+      FUN_00e8cb90@00e8cb90
+      FUN_00e8fc40@00e8fc40
+
+STRING @ 02029fa6: "MUSpectralTimeSlice::initFromTimeSignal(): no valid neighbourTimeSlice for trueFreqs!"
+  FUNC: FUN_015c4e40 @ 015c4e40
+    Size: 4396 bytes
+    Ref from: 015c584d
+    Called by (1):
+      FUN_015c4d90@015c4d90
+    Calls (28):
+      FUN_00c8e690@00c8e690
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00d21140@00d21140
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+      FUN_00e3aec0@00e3aec0
+      FUN_00e7d780@00e7d780
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_00e83530@00e83530
+      FUN_00e83da0@00e83da0
+      FUN_00e8b990@00e8b990
+      FUN_00e8cb50@00e8cb50
+      FUN_00e8cb70@00e8cb70
+      FUN_00e8cb90@00e8cb90
+      FUN_00e8fc40@00e8fc40
+

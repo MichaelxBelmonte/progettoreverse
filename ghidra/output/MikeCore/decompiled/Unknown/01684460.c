@@ -1,0 +1,82 @@
+// Function: FUN_01684460
+// Address: 01684460
+// Size: 501 bytes
+// Class: Unknown
+
+
+void FUN_01684460(longlong *param_1,undefined8 param_2,longlong *param_3,int param_4)
+
+{
+  longlong lVar1;
+  int iVar2;
+  int iVar3;
+  int iVar4;
+  undefined8 uVar5;
+  undefined8 uVar6;
+  void *pvVar7;
+  pthread_key_t pVar8;
+  longlong unaff_RSI;
+  longlong *unaff_RDI;
+  longlong local_70;
+  char local_68;
+  
+  if ((param_1 != (longlong *)0x0) && (*param_1 != 0)) {
+    *param_1 = 0;
+    if ((char)param_1[1] != '\0') {
+      FUN_00d50b20();
+    }
+    *(undefined1 *)(param_1 + 1) = 0;
+  }
+  if ((param_3 != (longlong *)0x0) && (*param_3 != 0)) {
+    *param_3 = 0;
+    if ((char)param_3[1] != '\0') {
+      FUN_00d50b20();
+    }
+    *(undefined1 *)(param_3 + 1) = 0;
+  }
+  lVar1 = *(longlong *)(*(longlong *)(unaff_RSI + 0x30) + 0x30);
+  if ((lVar1 != 0) && (iVar2 = (**(code **)(lVar1 + 0x20))(), iVar2 != 0)) {
+    iVar3 = (**(code **)(lVar1 + 0x20))();
+    iVar2 = (**(code **)(lVar1 + 0x28))();
+    if (iVar3 == 0) {
+      iVar4 = 2;
+    }
+    else {
+      iVar4 = (**(code **)(lVar1 + 0x28))(iVar2,0x15);
+    }
+    if (iVar4 < iVar2) {
+      iVar2 = iVar4;
+    }
+    if (param_4 <= iVar2) {
+      uVar6 = 0;
+      uVar5 = (**(code **)(lVar1 + 0x30))(0,0x14);
+      if (iVar3 != 0) {
+        uVar6 = (**(code **)(lVar1 + 0x30))(0,0x15);
+      }
+      FUN_01684680(uVar6,uVar5,iVar3 != 0,param_1,param_1,param_2);
+      pVar8 = (pthread_key_t)uVar6;
+      if ((local_68 == '\0') && (local_70 != 0)) {
+        FUN_00d50b00();
+      }
+      (**(code **)(lVar1 + 0x48))();
+      if (iVar3 != 0) {
+        (**(code **)(lVar1 + 0x48))();
+      }
+      if (local_70 != 0) {
+        pvVar7 = _pthread_getspecific(pVar8);
+        if (pvVar7 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        FUN_016c1150();
+      }
+      *unaff_RDI = local_70;
+      *(undefined1 *)(unaff_RDI + 1) = 1;
+      return;
+    }
+  }
+  *(undefined1 *)(unaff_RDI + 1) = 0;
+  *unaff_RDI = 0;
+  return;
+}
+
+

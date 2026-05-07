@@ -1,0 +1,41 @@
+# Search: "DNA2Test_"
+STRING @ 0240e420: "DNA2Test_UseEQ"
+
+STRING @ 024186b0: "DNA2Test_UseDNA2"
+
+STRING @ 024186e0: "DNA2Test_UseStackedFft"
+
+STRING @ 02418710: "DNA2Test_DetectMonophonic"
+
+STRING @ 02418750: "DNA2Test_WriteNoiseFiles"
+
+STRING @ 02418790: "DNA2Test_SeparateRaspiness"
+
+STRING @ 024187d0: "DNA2Test_DetectBluesHarp"
+
+STRING @ 02418810: "DNA2Test_DetectBluesHarpSubharmonicsMode"
+
+STRING @ 02418850: "DNA2Test_DetectBluesHarpMultiplePaths"
+
+STRING @ 02418890: "DNA2Test_UseEnergyClaim"
+
+STRING @ 024188d0: "DNA2Test_TestValue1"
+
+STRING @ 02418900: "DNA2Test_TestValue2"
+
+STRING @ 02418930: "DNA2Test_TestValue3"
+
+STRING @ 02418960: "DNA2Test_TestValue4"
+
+STRING @ 02418990: "DNA2Test_TestValue5"
+
+STRING @ 024189c0: "DNA2Test_ShowQuality"
+
+STRING @ 024189f0: "DNA2Test_ShowRelevance"
+
+STRING @ 02418a20: "DNA2Test_ShowRelativeRelevance"
+
+STRING @ 02418a50: "DNA2Test_ShowNormalized"
+
+STRING @ 02418a80: "DNA2Test_DisplayedHarmonic"
+

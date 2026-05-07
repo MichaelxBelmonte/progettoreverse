@@ -1,0 +1,3409 @@
+{
+  "total_functions": 7860,
+  "total_classes": 567,
+  "total_code_bytes": 14044244,
+  "classes": {
+    "Unknown": {
+      "functions": 1847,
+      "total_bytes": 3507136,
+      "fields": 35,
+      "methods_with_names": 141
+    },
+    "GNString": {
+      "functions": 994,
+      "total_bytes": 1928205,
+      "fields": 1,
+      "methods_with_names": 22
+    },
+    "GNList": {
+      "functions": 346,
+      "total_bytes": 709498,
+      "fields": 0,
+      "methods_with_names": 2
+    },
+    "MDMetaWindowController": {
+      "functions": 230,
+      "total_bytes": 401215,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElementAnalyzer": {
+      "functions": 124,
+      "total_bytes": 397898,
+      "fields": 0,
+      "methods_with_names": 6
+    },
+    "MUSpectrumShaper": {
+      "functions": 155,
+      "total_bytes": 395827,
+      "fields": 0,
+      "methods_with_names": 5
+    },
+    "MUScalePitchSystem": {
+      "functions": 137,
+      "total_bytes": 275231,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFilePath": {
+      "functions": 143,
+      "total_bytes": 271731,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNData": {
+      "functions": 111,
+      "total_bytes": 238955,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "MUAudioSourcePrincipalItem": {
+      "functions": 66,
+      "total_bytes": 230169,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNUni": {
+      "functions": 183,
+      "total_bytes": 224688,
+      "fields": 0,
+      "methods_with_names": 6
+    },
+    "MDEditorViewController": {
+      "functions": 72,
+      "total_bytes": 204252,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioFileSource": {
+      "functions": 98,
+      "total_bytes": 179763,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULSSGenerator": {
+      "functions": 114,
+      "total_bytes": 170163,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMultipleValue": {
+      "functions": 117,
+      "total_bytes": 163233,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNValue": {
+      "functions": 106,
+      "total_bytes": 149746,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUSampledFunction": {
+      "functions": 44,
+      "total_bytes": 131646,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULSSComponentRenderer": {
+      "functions": 21,
+      "total_bytes": 116289,
+      "fields": 0,
+      "methods_with_names": 4
+    },
+    "GNInt": {
+      "functions": 82,
+      "total_bytes": 113571,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioSourceDescription": {
+      "functions": 35,
+      "total_bytes": 101444,
+      "fields": 0,
+      "methods_with_names": 2
+    },
+    "MUPercussivePitchSystem": {
+      "functions": 46,
+      "total_bytes": 92051,
+      "fields": 0,
+      "methods_with_names": 5
+    },
+    "MUAraAudioSource": {
+      "functions": 54,
+      "total_bytes": 80256,
+      "fields": 0,
+      "methods_with_names": 2
+    },
+    "MDURLOpenedController": {
+      "functions": 37,
+      "total_bytes": 76554,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTool": {
+      "functions": 37,
+      "total_bytes": 73501,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDictionary": {
+      "functions": 49,
+      "total_bytes": 71124,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDEditorScrollView": {
+      "functions": 39,
+      "total_bytes": 63780,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNScrollView": {
+      "functions": 42,
+      "total_bytes": 61957,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNObject": {
+      "functions": 34,
+      "total_bytes": 56081,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioSourceSibilantItem": {
+      "functions": 27,
+      "total_bytes": 54537,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleBrowserItem": {
+      "functions": 28,
+      "total_bytes": 54444,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPulseAssignmentTarget": {
+      "functions": 25,
+      "total_bytes": 52973,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDetectionEditorView": {
+      "functions": 34,
+      "total_bytes": 52179,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioSourceAttackItem": {
+      "functions": 18,
+      "total_bytes": 51238,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUEditorElementView": {
+      "functions": 43,
+      "total_bytes": 50310,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPitchMapper": {
+      "functions": 25,
+      "total_bytes": 49591,
+      "fields": 0,
+      "methods_with_names": 2
+    },
+    "MUDataPointFunction": {
+      "functions": 28,
+      "total_bytes": 49590,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleRulerView": {
+      "functions": 12,
+      "total_bytes": 46814,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "GNFraction": {
+      "functions": 33,
+      "total_bytes": 45453,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDate": {
+      "functions": 26,
+      "total_bytes": 44657,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTableView": {
+      "functions": 21,
+      "total_bytes": 44148,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileChunk": {
+      "functions": 32,
+      "total_bytes": 42493,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDPluginDocument": {
+      "functions": 24,
+      "total_bytes": 42362,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraContentReader": {
+      "functions": 22,
+      "total_bytes": 39251,
+      "fields": 0,
+      "methods_with_names": 3
+    },
+    "MDAudioTrackItem": {
+      "functions": 25,
+      "total_bytes": 37967,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoAnalyzerEvent": {
+      "functions": 31,
+      "total_bytes": 36828,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUBarSignature": {
+      "functions": 14,
+      "total_bytes": 35972,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioProcessor": {
+      "functions": 29,
+      "total_bytes": 35334,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudGainReductionView": {
+      "functions": 21,
+      "total_bytes": 34548,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAdvancedTempoDetectionDialog": {
+      "functions": 20,
+      "total_bytes": 33303,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "OsSignatureMac": {
+      "functions": 30,
+      "total_bytes": 33208,
+      "fields": 0,
+      "methods_with_names": 10
+    },
+    "GNTextAutoCompleterItem": {
+      "functions": 32,
+      "total_bytes": 32205,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraDocumentController": {
+      "functions": 24,
+      "total_bytes": 32132,
+      "fields": 0,
+      "methods_with_names": 5
+    },
+    "GNControl": {
+      "functions": 18,
+      "total_bytes": 30505,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoEditorView": {
+      "functions": 18,
+      "total_bytes": 30234,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNHeartbeatHandler": {
+      "functions": 22,
+      "total_bytes": 28315,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMultiRulerView": {
+      "functions": 20,
+      "total_bytes": 28274,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUEditorSubview": {
+      "functions": 17,
+      "total_bytes": 26907,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUVoiceMapperVoiceOption": {
+      "functions": 6,
+      "total_bytes": 26331,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNEvent": {
+      "functions": 11,
+      "total_bytes": 26189,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPopUpButton": {
+      "functions": 26,
+      "total_bytes": 26004,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudConvolver": {
+      "functions": 11,
+      "total_bytes": 25933,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "TSocket": {
+      "functions": 20,
+      "total_bytes": 25440,
+      "fields": 0,
+      "methods_with_names": 5
+    },
+    "MDWorkspaceView": {
+      "functions": 15,
+      "total_bytes": 24626,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDistinction": {
+      "functions": 13,
+      "total_bytes": 24306,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRootView": {
+      "functions": 14,
+      "total_bytes": 24188,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudTapedesk": {
+      "functions": 19,
+      "total_bytes": 23950,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleOpenPanel": {
+      "functions": 4,
+      "total_bytes": 23060,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleRegion": {
+      "functions": 4,
+      "total_bytes": 22904,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMenuItem": {
+      "functions": 21,
+      "total_bytes": 22397,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDDocumentViewController": {
+      "functions": 10,
+      "total_bytes": 21683,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSerialNumber": {
+      "functions": 16,
+      "total_bytes": 21545,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNStringTable": {
+      "functions": 15,
+      "total_bytes": 21415,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTextView": {
+      "functions": 12,
+      "total_bytes": 21196,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleStretchTuningCtrl": {
+      "functions": 10,
+      "total_bytes": 21100,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNClipView": {
+      "functions": 18,
+      "total_bytes": 21011,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUSpectralTimeSlice": {
+      "functions": 13,
+      "total_bytes": 20931,
+      "fields": 0,
+      "methods_with_names": 3
+    },
+    "QualityScoring": {
+      "functions": 9,
+      "total_bytes": 20712,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDNotificationObserver": {
+      "functions": 18,
+      "total_bytes": 20324,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackItem": {
+      "functions": 10,
+      "total_bytes": 20300,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScalePanel": {
+      "functions": 13,
+      "total_bytes": 20119,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTableColumnAssoc": {
+      "functions": 20,
+      "total_bytes": 19852,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUBarSignatureMapItem": {
+      "functions": 2,
+      "total_bytes": 19556,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPropertyObserver": {
+      "functions": 11,
+      "total_bytes": 19489,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MURelativeTimeProgressor": {
+      "functions": 8,
+      "total_bytes": 18735,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDetectionSeparationTool": {
+      "functions": 8,
+      "total_bytes": 18388,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackView": {
+      "functions": 14,
+      "total_bytes": 18109,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUHorizontalOverviewScroller": {
+      "functions": 15,
+      "total_bytes": 17828,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDExportAudioController": {
+      "functions": 8,
+      "total_bytes": 17030,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioIOSlot": {
+      "functions": 11,
+      "total_bytes": 17018,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDExportController": {
+      "functions": 8,
+      "total_bytes": 16380,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNModuleView": {
+      "functions": 12,
+      "total_bytes": 16341,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNNull": {
+      "functions": 13,
+      "total_bytes": 16218,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "MDDetectionAudioSourceInsp": {
+      "functions": 2,
+      "total_bytes": 16038,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNClassDescription": {
+      "functions": 8,
+      "total_bytes": 15370,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAmplitudeAnalyzer": {
+      "functions": 9,
+      "total_bytes": 15365,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTrackInsp": {
+      "functions": 7,
+      "total_bytes": 14977,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPitchSystemRulerView": {
+      "functions": 10,
+      "total_bytes": 14917,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUVoiceMapper": {
+      "functions": 8,
+      "total_bytes": 14904,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDScaleModeSequenceView": {
+      "functions": 6,
+      "total_bytes": 14892,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioSourceItem": {
+      "functions": 11,
+      "total_bytes": 14886,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "MUScaleModeSequence": {
+      "functions": 9,
+      "total_bytes": 14841,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "Resynthesis": {
+      "functions": 1,
+      "total_bytes": 14689,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDProjectInsp": {
+      "functions": 8,
+      "total_bytes": 14407,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNView": {
+      "functions": 3,
+      "total_bytes": 14258,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDPluginTransferTempoDialog": {
+      "functions": 8,
+      "total_bytes": 14101,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFileType": {
+      "functions": 10,
+      "total_bytes": 13981,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFile": {
+      "functions": 9,
+      "total_bytes": 13890,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiFile": {
+      "functions": 12,
+      "total_bytes": 13816,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUThirdsCircle": {
+      "functions": 13,
+      "total_bytes": 13798,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTimeGridController": {
+      "functions": 8,
+      "total_bytes": 13664,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDFileBrowserInsp": {
+      "functions": 7,
+      "total_bytes": 13527,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNEditingContextReadCopySyncObserver": {
+      "functions": 9,
+      "total_bytes": 13411,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUSignatureEditorRulerView": {
+      "functions": 9,
+      "total_bytes": 13300,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNResponder": {
+      "functions": 7,
+      "total_bytes": 13192,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOperationProgressObserver": {
+      "functions": 15,
+      "total_bytes": 13041,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTextFieldDragAndEditHandler": {
+      "functions": 16,
+      "total_bytes": 13034,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDPluginMenuViewController": {
+      "functions": 5,
+      "total_bytes": 12043,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTabView": {
+      "functions": 9,
+      "total_bytes": 11566,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUChord": {
+      "functions": 9,
+      "total_bytes": 11263,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUBeatSelection": {
+      "functions": 9,
+      "total_bytes": 11160,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDErrorController": {
+      "functions": 8,
+      "total_bytes": 11093,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNError": {
+      "functions": 5,
+      "total_bytes": 10909,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDAudioTrackHeaderViewController": {
+      "functions": 10,
+      "total_bytes": 10681,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDAsyncProcess": {
+      "functions": 6,
+      "total_bytes": 10589,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTimeHandleToolViewInfo": {
+      "functions": 5,
+      "total_bytes": 10548,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRadialColorGradient": {
+      "functions": 13,
+      "total_bytes": 10475,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioEffectRenderProcessorIdentifier": {
+      "functions": 10,
+      "total_bytes": 10465,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudCompG": {
+      "functions": 8,
+      "total_bytes": 10199,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPerformanceRenderer": {
+      "functions": 5,
+      "total_bytes": 10079,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCoord": {
+      "functions": 10,
+      "total_bytes": 10060,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOA": {
+      "functions": 11,
+      "total_bytes": 9784,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRunLoopObserverDelegate": {
+      "functions": 2,
+      "total_bytes": 9746,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNActionGroup": {
+      "functions": 5,
+      "total_bytes": 9687,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNShortCutOutlineController": {
+      "functions": 4,
+      "total_bytes": 9615,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarLayouter": {
+      "functions": 9,
+      "total_bytes": 9610,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCelemonyHTTPUploadRequest": {
+      "functions": 8,
+      "total_bytes": 9491,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDVolumeSlider": {
+      "functions": 8,
+      "total_bytes": 9491,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudParametricEQ": {
+      "functions": 8,
+      "total_bytes": 9457,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDMetaDocumentController": {
+      "functions": 5,
+      "total_bytes": 9265,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFont": {
+      "functions": 5,
+      "total_bytes": 9173,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPlugInWrapperDelegate": {
+      "functions": 6,
+      "total_bytes": 9165,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNImage": {
+      "functions": 5,
+      "total_bytes": 8980,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNForeignThreadPool": {
+      "functions": 11,
+      "total_bytes": 8972,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioMeterView": {
+      "functions": 3,
+      "total_bytes": 8713,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMenu": {
+      "functions": 8,
+      "total_bytes": 8686,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDictionaryImpl": {
+      "functions": 1,
+      "total_bytes": 8571,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "MUElementFadeInspector": {
+      "functions": 4,
+      "total_bytes": 8419,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTooltipsPrefCtrl": {
+      "functions": 9,
+      "total_bytes": 8311,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNToolBoxTool": {
+      "functions": 3,
+      "total_bytes": 8213,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUQuarterSequenceView": {
+      "functions": 2,
+      "total_bytes": 8196,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "PitchDetection": {
+      "functions": 1,
+      "total_bytes": 8173,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNColor": {
+      "functions": 8,
+      "total_bytes": 8156,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLocaleExportController": {
+      "functions": 6,
+      "total_bytes": 8156,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBCFA": {
+      "functions": 9,
+      "total_bytes": 8077,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraPlugInWrapperDelegate": {
+      "functions": 8,
+      "total_bytes": 8041,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "GNInfoController": {
+      "functions": 10,
+      "total_bytes": 8038,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLocalizationTarget": {
+      "functions": 7,
+      "total_bytes": 7868,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarTempoPluginCtrl": {
+      "functions": 4,
+      "total_bytes": 7769,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFormatter": {
+      "functions": 4,
+      "total_bytes": 7713,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUNoiseMapper": {
+      "functions": 7,
+      "total_bytes": 7582,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFastFourierTransformer": {
+      "functions": 8,
+      "total_bytes": 7515,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudMutronIIIWah": {
+      "functions": 2,
+      "total_bytes": 7515,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDCopyDataToController": {
+      "functions": 4,
+      "total_bytes": 7473,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarTempoCtrl": {
+      "functions": 3,
+      "total_bytes": 7406,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioDevicePrefCtrl": {
+      "functions": 2,
+      "total_bytes": 7336,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElement": {
+      "functions": 6,
+      "total_bytes": 7332,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackHeaderViewController": {
+      "functions": 3,
+      "total_bytes": 7280,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBKVA": {
+      "functions": 9,
+      "total_bytes": 7250,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNUIDesignerDoc": {
+      "functions": 5,
+      "total_bytes": 7224,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDKeyModifierActionHelper": {
+      "functions": 3,
+      "total_bytes": 7218,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAttributeType": {
+      "functions": 7,
+      "total_bytes": 7082,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNKeyValueUnarchiverDelegate": {
+      "functions": 3,
+      "total_bytes": 7076,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCustomAlertPanel": {
+      "functions": 4,
+      "total_bytes": 7056,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDProjectAudioSource": {
+      "functions": 8,
+      "total_bytes": 7010,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNURL": {
+      "functions": 6,
+      "total_bytes": 6999,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "MDRecordingPrefCtrl": {
+      "functions": 3,
+      "total_bytes": 6789,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElementPitchInspector": {
+      "functions": 6,
+      "total_bytes": 6778,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPullDownButton": {
+      "functions": 8,
+      "total_bytes": 6760,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUFader": {
+      "functions": 5,
+      "total_bytes": 6693,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDQuantizeController": {
+      "functions": 7,
+      "total_bytes": 6692,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNStorage": {
+      "functions": 1,
+      "total_bytes": 6672,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudParametricEQView": {
+      "functions": 3,
+      "total_bytes": 6668,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MURenderSliceTimeContext": {
+      "functions": 6,
+      "total_bytes": 6614,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTestValuesController": {
+      "functions": 8,
+      "total_bytes": 6602,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleDetectionOptionsData": {
+      "functions": 4,
+      "total_bytes": 6467,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDFileBrowserItemControl": {
+      "functions": 4,
+      "total_bytes": 6244,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDetectionPitchCenterAssignmentInspector": {
+      "functions": 5,
+      "total_bytes": 6213,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudCompressor": {
+      "functions": 4,
+      "total_bytes": 6195,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraMusicalContext": {
+      "functions": 2,
+      "total_bytes": 6128,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDetectionActivationSlider": {
+      "functions": 6,
+      "total_bytes": 6106,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBackgroundView": {
+      "functions": 5,
+      "total_bytes": 6059,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDLayer": {
+      "functions": 5,
+      "total_bytes": 6009,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNUpdateCheckController": {
+      "functions": 4,
+      "total_bytes": 6008,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNGraphicsContextState": {
+      "functions": 6,
+      "total_bytes": 6001,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDHorizontalRulerSelectorView": {
+      "functions": 5,
+      "total_bytes": 5963,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDScaleEditorSelectorView": {
+      "functions": 3,
+      "total_bytes": 5944,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCompressor": {
+      "functions": 7,
+      "total_bytes": 5914,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLocaleDataProvider": {
+      "functions": 2,
+      "total_bytes": 5900,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDLogoView": {
+      "functions": 2,
+      "total_bytes": 5734,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDActivityDiagramView": {
+      "functions": 5,
+      "total_bytes": 5674,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultimicEngine": {
+      "functions": 1,
+      "total_bytes": 5659,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNActionRegistration": {
+      "functions": 6,
+      "total_bytes": 5626,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudConvolverController": {
+      "functions": 4,
+      "total_bytes": 5598,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUColorCorrectionCtrl": {
+      "functions": 5,
+      "total_bytes": 5555,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleCreationData": {
+      "functions": 5,
+      "total_bytes": 5533,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarVolumeCtrl": {
+      "functions": 4,
+      "total_bytes": 5428,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackDropTarget": {
+      "functions": 7,
+      "total_bytes": 5411,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarLeftConfigCtrl": {
+      "functions": 4,
+      "total_bytes": 5319,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleSavePanel": {
+      "functions": 4,
+      "total_bytes": 5218,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTempIOCtrl": {
+      "functions": 6,
+      "total_bytes": 5172,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiFileTrack": {
+      "functions": 5,
+      "total_bytes": 5170,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAlertPanel": {
+      "functions": 4,
+      "total_bytes": 5089,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDViewSettings": {
+      "functions": 5,
+      "total_bytes": 5010,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDDocumentConversionSheet": {
+      "functions": 4,
+      "total_bytes": 4972,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTagOptionAttribute": {
+      "functions": 6,
+      "total_bytes": 4864,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNHTTPRequest": {
+      "functions": 2,
+      "total_bytes": 4766,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioSourceSeparationPrefCtrl": {
+      "functions": 4,
+      "total_bytes": 4697,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileWAVEReader": {
+      "functions": 2,
+      "total_bytes": 4541,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOutlineViewDataSource": {
+      "functions": 3,
+      "total_bytes": 4523,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDEditorView": {
+      "functions": 6,
+      "total_bytes": 4467,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNOverloudConvolverIR": {
+      "functions": 3,
+      "total_bytes": 4432,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRunLoopState": {
+      "functions": 6,
+      "total_bytes": 4426,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTrack": {
+      "functions": 4,
+      "total_bytes": 4373,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUChordLabelingSystem": {
+      "functions": 6,
+      "total_bytes": 4277,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDElementInsp": {
+      "functions": 2,
+      "total_bytes": 4249,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarTransportCtrl": {
+      "functions": 2,
+      "total_bytes": 4194,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarPluginTransferCtrl": {
+      "functions": 3,
+      "total_bytes": 4163,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDSystemLoadView": {
+      "functions": 3,
+      "total_bytes": 4106,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFileArchivePrivate": {
+      "functions": 4,
+      "total_bytes": 4089,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPreviewController": {
+      "functions": 2,
+      "total_bytes": 4039,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNInspector": {
+      "functions": 3,
+      "total_bytes": 4019,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioSourcePropertyPoint": {
+      "functions": 1,
+      "total_bytes": 3984,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDAnalyserTestView": {
+      "functions": 3,
+      "total_bytes": 3979,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDetectionPitchIndexAssignmentInspector": {
+      "functions": 4,
+      "total_bytes": 3913,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDEditorDescription": {
+      "functions": 4,
+      "total_bytes": 3911,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarLeftPluginConfigCtrl": {
+      "functions": 2,
+      "total_bytes": 3903,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTimeSliceParameterBuffer": {
+      "functions": 2,
+      "total_bytes": 3903,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSlider": {
+      "functions": 1,
+      "total_bytes": 3815,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUSpectralPointDNA": {
+      "functions": 1,
+      "total_bytes": 3766,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUBezierFunctionPoint": {
+      "functions": 4,
+      "total_bytes": 3731,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDPluginWindowResizeView": {
+      "functions": 4,
+      "total_bytes": 3719,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraModelManager": {
+      "functions": 6,
+      "total_bytes": 3696,
+      "fields": 0,
+      "methods_with_names": 2
+    },
+    "MUPartMappingState": {
+      "functions": 1,
+      "total_bytes": 3653,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUGrooveBasedQuarterSignatureSegment": {
+      "functions": 2,
+      "total_bytes": 3635,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUCandidateScale": {
+      "functions": 2,
+      "total_bytes": 3574,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDExportControllerHelper": {
+      "functions": 4,
+      "total_bytes": 3566,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiFileReader": {
+      "functions": 2,
+      "total_bytes": 3540,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDebugObjectBrowser": {
+      "functions": 3,
+      "total_bytes": 3508,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSplitView": {
+      "functions": 5,
+      "total_bytes": 3305,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarActivityCtrl": {
+      "functions": 2,
+      "total_bytes": 3299,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAlignmentAnchor": {
+      "functions": 1,
+      "total_bytes": 3282,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDAudioSourceInsp": {
+      "functions": 3,
+      "total_bytes": 3272,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPitchClassMapper": {
+      "functions": 5,
+      "total_bytes": 3259,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioProcessorTimeInfo": {
+      "functions": 1,
+      "total_bytes": 3221,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBinaryArchiveTypeInfoContainer": {
+      "functions": 3,
+      "total_bytes": 3167,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBrowser": {
+      "functions": 2,
+      "total_bytes": 3062,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNToolBox": {
+      "functions": 2,
+      "total_bytes": 3035,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioPlugInDescription": {
+      "functions": 4,
+      "total_bytes": 2961,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioProcessorController": {
+      "functions": 4,
+      "total_bytes": 2955,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarEditModeCtrl": {
+      "functions": 2,
+      "total_bytes": 2893,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUChordHarmonyNote": {
+      "functions": 1,
+      "total_bytes": 2867,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNJSONGenerator": {
+      "functions": 4,
+      "total_bytes": 2850,
+      "fields": 0,
+      "methods_with_names": 4
+    },
+    "MUPitchApproachMapper": {
+      "functions": 5,
+      "total_bytes": 2842,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDWelcomePanelController": {
+      "functions": 3,
+      "total_bytes": 2829,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBinaryKeyValueUnarchiver": {
+      "functions": 4,
+      "total_bytes": 2828,
+      "fields": 0,
+      "methods_with_names": 2
+    },
+    "GNTableViewMouseEventHandler": {
+      "functions": 2,
+      "total_bytes": 2813,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiEventPacket": {
+      "functions": 3,
+      "total_bytes": 2755,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraPlugInWrapper": {
+      "functions": 2,
+      "total_bytes": 2749,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoEditorViewItem": {
+      "functions": 2,
+      "total_bytes": 2680,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTranspositionMapper": {
+      "functions": 3,
+      "total_bytes": 2664,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "EnergyClaimSystem": {
+      "functions": 1,
+      "total_bytes": 2643,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileALACReader": {
+      "functions": 1,
+      "total_bytes": 2638,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNToolbar": {
+      "functions": 3,
+      "total_bytes": 2631,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraTrackObserver": {
+      "functions": 3,
+      "total_bytes": 2602,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMenuView": {
+      "functions": 3,
+      "total_bytes": 2589,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDAsyncDocumentAdder": {
+      "functions": 3,
+      "total_bytes": 2579,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDetectionBaseInsp": {
+      "functions": 4,
+      "total_bytes": 2579,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAssociationBinding": {
+      "functions": 3,
+      "total_bytes": 2545,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDExportControllerFormat": {
+      "functions": 3,
+      "total_bytes": 2530,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraMinApiGeneration": {
+      "functions": 1,
+      "total_bytes": 2524,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "MDToolbarScaleModeCtrl": {
+      "functions": 2,
+      "total_bytes": 2501,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNIconsView": {
+      "functions": 1,
+      "total_bytes": 2482,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarEditorViewCtrl": {
+      "functions": 2,
+      "total_bytes": 2476,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPotentialPathConnectionType": {
+      "functions": 3,
+      "total_bytes": 2469,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDDetectionElementInsp": {
+      "functions": 3,
+      "total_bytes": 2463,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNThread": {
+      "functions": 2,
+      "total_bytes": 2446,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSimpleXMLStream": {
+      "functions": 2,
+      "total_bytes": 2422,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDWorkspaceLayoutStrategy": {
+      "functions": 3,
+      "total_bytes": 2412,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioHALDevice": {
+      "functions": 1,
+      "total_bytes": 2403,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLabel": {
+      "functions": 2,
+      "total_bytes": 2390,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNQualifierVariable": {
+      "functions": 3,
+      "total_bytes": 2374,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNModelObject": {
+      "functions": 2,
+      "total_bytes": 2326,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNHTTPProcessor": {
+      "functions": 2,
+      "total_bytes": 2312,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDVolumeFader": {
+      "functions": 3,
+      "total_bytes": 2311,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUCTCandidateChord": {
+      "functions": 2,
+      "total_bytes": 2300,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarPositionCtrl": {
+      "functions": 3,
+      "total_bytes": 2298,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDPlaybackController": {
+      "functions": 4,
+      "total_bytes": 2291,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSimpleXMLElement": {
+      "functions": 2,
+      "total_bytes": 2251,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBinaryKeyValueArchiverDelegate": {
+      "functions": 3,
+      "total_bytes": 2222,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioSimpleFilter": {
+      "functions": 2,
+      "total_bytes": 2205,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTestValue": {
+      "functions": 1,
+      "total_bytes": 2201,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleTuningIntervalForAnalysis": {
+      "functions": 1,
+      "total_bytes": 2198,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUBrowserItem": {
+      "functions": 2,
+      "total_bytes": 2184,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUST": {
+      "functions": 2,
+      "total_bytes": 2153,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPart": {
+      "functions": 3,
+      "total_bytes": 2123,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSplitViewItem": {
+      "functions": 2,
+      "total_bytes": 2109,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUChordRootAnalyzerEntry": {
+      "functions": 1,
+      "total_bytes": 2099,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileALACWriter": {
+      "functions": 3,
+      "total_bytes": 2084,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDWorkspaceModuleViewController": {
+      "functions": 2,
+      "total_bytes": 2041,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "LsObjectCache": {
+      "functions": 3,
+      "total_bytes": 2031,
+      "fields": 0,
+      "methods_with_names": 2
+    },
+    "MUTrackRenderer": {
+      "functions": 1,
+      "total_bytes": 1995,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTableViewAssoc": {
+      "functions": 3,
+      "total_bytes": 1984,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCelemonyHTTPDownloadRequest": {
+      "functions": 1,
+      "total_bytes": 1949,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDisplayPerformanceTimeMapper": {
+      "functions": 2,
+      "total_bytes": 1949,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTestViewController": {
+      "functions": 3,
+      "total_bytes": 1914,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoEditorRulerView": {
+      "functions": 2,
+      "total_bytes": 1913,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTransferPluginTrackHeaderViewController": {
+      "functions": 3,
+      "total_bytes": 1899,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToneScaleController": {
+      "functions": 2,
+      "total_bytes": 1877,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUComposition": {
+      "functions": 1,
+      "total_bytes": 1862,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLicenseResult": {
+      "functions": 2,
+      "total_bytes": 1830,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTimeFormatter": {
+      "functions": 2,
+      "total_bytes": 1823,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleDetectionOptionsCtrl": {
+      "functions": 3,
+      "total_bytes": 1816,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNJSONParser": {
+      "functions": 1,
+      "total_bytes": 1809,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarAraClickCtrl": {
+      "functions": 2,
+      "total_bytes": 1809,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUFilterEngine": {
+      "functions": 1,
+      "total_bytes": 1774,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPlaybackView": {
+      "functions": 2,
+      "total_bytes": 1768,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUQuarterAssignmentBeat": {
+      "functions": 2,
+      "total_bytes": 1768,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAnimation": {
+      "functions": 2,
+      "total_bytes": 1767,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDNoLicenseController": {
+      "functions": 2,
+      "total_bytes": 1750,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileNFFReader": {
+      "functions": 1,
+      "total_bytes": 1746,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDAnimation": {
+      "functions": 2,
+      "total_bytes": 1740,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNJob": {
+      "functions": 3,
+      "total_bytes": 1667,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoDetectionRegion": {
+      "functions": 1,
+      "total_bytes": 1662,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBorderStyle": {
+      "functions": 3,
+      "total_bytes": 1660,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTimeline": {
+      "functions": 2,
+      "total_bytes": 1659,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPlugInControllerWrapper": {
+      "functions": 3,
+      "total_bytes": 1657,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPlugInWrapper": {
+      "functions": 1,
+      "total_bytes": 1653,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNUndoManager": {
+      "functions": 1,
+      "total_bytes": 1652,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCornerRadius": {
+      "functions": 2,
+      "total_bytes": 1642,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULineMapper": {
+      "functions": 2,
+      "total_bytes": 1642,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNComboBox": {
+      "functions": 3,
+      "total_bytes": 1632,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioRecorder": {
+      "functions": 1,
+      "total_bytes": 1631,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTypedStream": {
+      "functions": 2,
+      "total_bytes": 1619,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackTrackElement": {
+      "functions": 2,
+      "total_bytes": 1618,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUNoiseRange": {
+      "functions": 1,
+      "total_bytes": 1608,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFetchSpecification": {
+      "functions": 1,
+      "total_bytes": 1586,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDExportControllerItem": {
+      "functions": 2,
+      "total_bytes": 1570,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoPeriod": {
+      "functions": 1,
+      "total_bytes": 1566,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiValue": {
+      "functions": 1,
+      "total_bytes": 1561,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileWAVEWriter": {
+      "functions": 1,
+      "total_bytes": 1560,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioRingBuffer": {
+      "functions": 1,
+      "total_bytes": 1552,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileAIFFReader": {
+      "functions": 1,
+      "total_bytes": 1519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileSNDReader": {
+      "functions": 1,
+      "total_bytes": 1504,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoopComponentId": {
+      "functions": 2,
+      "total_bytes": 1471,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBrowserDataSource": {
+      "functions": 2,
+      "total_bytes": 1468,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUSamplerComponentRenderer": {
+      "functions": 1,
+      "total_bytes": 1462,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioProcessorEvent": {
+      "functions": 2,
+      "total_bytes": 1452,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElementRealtimeInfo": {
+      "functions": 2,
+      "total_bytes": 1447,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUClickRenderer": {
+      "functions": 1,
+      "total_bytes": 1397,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFile": {
+      "functions": 2,
+      "total_bytes": 1385,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSocket": {
+      "functions": 2,
+      "total_bytes": 1382,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarGridCtrl": {
+      "functions": 1,
+      "total_bytes": 1367,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarPreListeningCtrl": {
+      "functions": 1,
+      "total_bytes": 1367,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPitchMatrixPeak": {
+      "functions": 1,
+      "total_bytes": 1365,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPBListWrapper": {
+      "functions": 2,
+      "total_bytes": 1364,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPropertyObserverRegistration": {
+      "functions": 2,
+      "total_bytes": 1351,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRange": {
+      "functions": 2,
+      "total_bytes": 1351,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDExportControllerRegion": {
+      "functions": 2,
+      "total_bytes": 1344,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLicenseActivationDataDecryptor": {
+      "functions": 2,
+      "total_bytes": 1337,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNWizardView": {
+      "functions": 2,
+      "total_bytes": 1337,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAffineTransform": {
+      "functions": 1,
+      "total_bytes": 1336,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAlignmentAnchorOffset": {
+      "functions": 1,
+      "total_bytes": 1333,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUChordSequence": {
+      "functions": 2,
+      "total_bytes": 1316,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoEditorDrawHelper": {
+      "functions": 1,
+      "total_bytes": 1316,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiKeyboardView": {
+      "functions": 1,
+      "total_bytes": 1313,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNQueue": {
+      "functions": 1,
+      "total_bytes": 1281,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAppearance": {
+      "functions": 2,
+      "total_bytes": 1274,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarQuantizeMacrosCtrl": {
+      "functions": 2,
+      "total_bytes": 1274,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDElementQuantizeWrapper": {
+      "functions": 2,
+      "total_bytes": 1271,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNValueTransformer": {
+      "functions": 1,
+      "total_bytes": 1254,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPerformanceMidiExporter": {
+      "functions": 2,
+      "total_bytes": 1253,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPrintSettings": {
+      "functions": 2,
+      "total_bytes": 1236,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNStackView": {
+      "functions": 2,
+      "total_bytes": 1235,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUSamplerElementRenderer": {
+      "functions": 1,
+      "total_bytes": 1228,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNShortCutSearchField": {
+      "functions": 2,
+      "total_bytes": 1217,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUChordParser": {
+      "functions": 1,
+      "total_bytes": 1216,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUBrowserView": {
+      "functions": 2,
+      "total_bytes": 1201,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRadioButton": {
+      "functions": 2,
+      "total_bytes": 1196,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMatrixPathPoint": {
+      "functions": 1,
+      "total_bytes": 1187,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDCopyAndPaste": {
+      "functions": 2,
+      "total_bytes": 1177,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNJobCenter": {
+      "functions": 1,
+      "total_bytes": 1175,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTextField": {
+      "functions": 2,
+      "total_bytes": 1173,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPolyMidiInstrument": {
+      "functions": 2,
+      "total_bytes": 1172,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScalePitchSystemSequence": {
+      "functions": 2,
+      "total_bytes": 1163,
+      "fields": 0,
+      "methods_with_names": 1
+    },
+    "MUQuarterAssignmentResolution": {
+      "functions": 1,
+      "total_bytes": 1158,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNControlBackInfo": {
+      "functions": 1,
+      "total_bytes": 1150,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBrowserDataField": {
+      "functions": 2,
+      "total_bytes": 1149,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoopComponentPitchRangeDummyEnumRegistrationClass": {
+      "functions": 2,
+      "total_bytes": 1140,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleRulerHeaderSquareTextField": {
+      "functions": 2,
+      "total_bytes": 1132,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUSignatureEditorView": {
+      "functions": 2,
+      "total_bytes": 1129,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUEqualBeatsRange": {
+      "functions": 1,
+      "total_bytes": 1118,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNWindowPositionConstraint": {
+      "functions": 1,
+      "total_bytes": 1107,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioProcessorView": {
+      "functions": 2,
+      "total_bytes": 1089,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLayoutLine": {
+      "functions": 1,
+      "total_bytes": 1089,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTrackPreloadRange": {
+      "functions": 2,
+      "total_bytes": 1076,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUEditorReferenceElementView": {
+      "functions": 1,
+      "total_bytes": 1072,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBinaryKeyValueUnarchiverObjectInfo": {
+      "functions": 1,
+      "total_bytes": 1068,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUEnvelopeDrawPath": {
+      "functions": 1,
+      "total_bytes": 1065,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUChordContext": {
+      "functions": 2,
+      "total_bytes": 1064,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNComboBoxAssoc": {
+      "functions": 2,
+      "total_bytes": 1056,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMethodInvocation": {
+      "functions": 1,
+      "total_bytes": 1056,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTimeGridSetter": {
+      "functions": 1,
+      "total_bytes": 1039,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBitfield": {
+      "functions": 2,
+      "total_bytes": 1036,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileNFFWriter": {
+      "functions": 2,
+      "total_bytes": 1029,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileSNDWriter": {
+      "functions": 2,
+      "total_bytes": 1029,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarEditMixCtrl": {
+      "functions": 1,
+      "total_bytes": 1026,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarRightConfigCtrl": {
+      "functions": 1,
+      "total_bytes": 1026,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiFileTimeSignature": {
+      "functions": 1,
+      "total_bytes": 1022,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDScrollViewAddsView": {
+      "functions": 1,
+      "total_bytes": 1017,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBinaryKeyValueArchiverKeyValueTypeInfo": {
+      "functions": 1,
+      "total_bytes": 1011,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileCacheEntry": {
+      "functions": 1,
+      "total_bytes": 1008,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUBarSignatureMap": {
+      "functions": 1,
+      "total_bytes": 1007,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUNoteMappingState": {
+      "functions": 1,
+      "total_bytes": 970,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUNote": {
+      "functions": 1,
+      "total_bytes": 964,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScrubbingTimeProgressor": {
+      "functions": 1,
+      "total_bytes": 958,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDecomposedAudioSignalCopyRegion": {
+      "functions": 1,
+      "total_bytes": 952,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRect": {
+      "functions": 1,
+      "total_bytes": 941,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSymmetricFIRFilter": {
+      "functions": 1,
+      "total_bytes": 926,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSnapContext": {
+      "functions": 1,
+      "total_bytes": 918,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAnalyzedBeat": {
+      "functions": 1,
+      "total_bytes": 918,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioTimeStamp": {
+      "functions": 1,
+      "total_bytes": 916,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUGrooveBasedGrooveAssignmentEntry": {
+      "functions": 1,
+      "total_bytes": 905,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPlaybackRequest": {
+      "functions": 1,
+      "total_bytes": 902,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPropertyPointPitchAlternative": {
+      "functions": 1,
+      "total_bytes": 902,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCTypeID": {
+      "functions": 1,
+      "total_bytes": 883,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCFFReader": {
+      "functions": 1,
+      "total_bytes": 863,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNActionQueue": {
+      "functions": 1,
+      "total_bytes": 854,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDWorkspaceTabHeaderViewItem": {
+      "functions": 1,
+      "total_bytes": 834,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNProperty": {
+      "functions": 1,
+      "total_bytes": 830,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioSampleFormat": {
+      "functions": 1,
+      "total_bytes": 824,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDrawPath": {
+      "functions": 1,
+      "total_bytes": 818,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRunLoopObserver": {
+      "functions": 1,
+      "total_bytes": 812,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNWindow": {
+      "functions": 1,
+      "total_bytes": 798,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiEvent": {
+      "functions": 1,
+      "total_bytes": 792,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDisplayTimeMapperGridLine": {
+      "functions": 1,
+      "total_bytes": 789,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiFileKeySignature": {
+      "functions": 1,
+      "total_bytes": 766,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPDFView": {
+      "functions": 1,
+      "total_bytes": 761,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAlignmentAssignment": {
+      "functions": 1,
+      "total_bytes": 740,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDInspectorViewController": {
+      "functions": 1,
+      "total_bytes": 739,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPasteboardElementPasteIdentifier": {
+      "functions": 1,
+      "total_bytes": 734,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTempoDetectionRange": {
+      "functions": 1,
+      "total_bytes": 728,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTableViewDelegate": {
+      "functions": 1,
+      "total_bytes": 717,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULSSElementRenderRequest": {
+      "functions": 1,
+      "total_bytes": 716,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDEditorViewAggregate": {
+      "functions": 1,
+      "total_bytes": 710,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNUnarchiverImporter": {
+      "functions": 1,
+      "total_bytes": 708,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoop": {
+      "functions": 1,
+      "total_bytes": 701,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMatrixPath": {
+      "functions": 1,
+      "total_bytes": 695,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiConnection": {
+      "functions": 1,
+      "total_bytes": 685,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDToolbarRightPluginConfigCtrl": {
+      "functions": 1,
+      "total_bytes": 685,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNIconsViewAssoc": {
+      "functions": 1,
+      "total_bytes": 683,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiComponent": {
+      "functions": 1,
+      "total_bytes": 679,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUFormant": {
+      "functions": 1,
+      "total_bytes": 677,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNRangeFactorFormatter": {
+      "functions": 1,
+      "total_bytes": 674,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLicenseContext": {
+      "functions": 1,
+      "total_bytes": 664,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNNumberFormatter": {
+      "functions": 1,
+      "total_bytes": 663,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTask": {
+      "functions": 1,
+      "total_bytes": 658,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCustomCircularSlider": {
+      "functions": 1,
+      "total_bytes": 656,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNNotificationCenter": {
+      "functions": 1,
+      "total_bytes": 656,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUColorCorrectionView": {
+      "functions": 1,
+      "total_bytes": 656,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioRecorderCenter": {
+      "functions": 1,
+      "total_bytes": 647,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNGraphicsContext": {
+      "functions": 1,
+      "total_bytes": 635,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackTracksView": {
+      "functions": 1,
+      "total_bytes": 622,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULibraryFileKind": {
+      "functions": 1,
+      "total_bytes": 617,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoopComponentDensityDummyEnumRegistrationClass": {
+      "functions": 1,
+      "total_bytes": 613,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoopToneDummyEnumRegistrationClass": {
+      "functions": 1,
+      "total_bytes": 613,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNVariable": {
+      "functions": 1,
+      "total_bytes": 610,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUGrooveBasedQuarterAnalyzer": {
+      "functions": 1,
+      "total_bytes": 609,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScrollerSlider": {
+      "functions": 1,
+      "total_bytes": 607,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPlugInHostDocument": {
+      "functions": 1,
+      "total_bytes": 605,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTableTextDataField": {
+      "functions": 1,
+      "total_bytes": 604,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTimer": {
+      "functions": 1,
+      "total_bytes": 602,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDProgressViewBar": {
+      "functions": 1,
+      "total_bytes": 602,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNScroller": {
+      "functions": 1,
+      "total_bytes": 598,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNStream": {
+      "functions": 1,
+      "total_bytes": 596,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDProgressViewController": {
+      "functions": 1,
+      "total_bytes": 596,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoopWatermarkAnalyzer": {
+      "functions": 1,
+      "total_bytes": 595,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleBrowser": {
+      "functions": 1,
+      "total_bytes": 592,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElementFormantInspector": {
+      "functions": 1,
+      "total_bytes": 590,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTextViewDelegate": {
+      "functions": 1,
+      "total_bytes": 589,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDraggingInfo": {
+      "functions": 1,
+      "total_bytes": 587,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFormattedTitleAssoc": {
+      "functions": 1,
+      "total_bytes": 585,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDetectionQuarterAssignmentInspector": {
+      "functions": 1,
+      "total_bytes": 583,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElementAmplitudeInspector": {
+      "functions": 1,
+      "total_bytes": 583,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileAIFFWriter": {
+      "functions": 1,
+      "total_bytes": 582,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNNotification": {
+      "functions": 1,
+      "total_bytes": 581,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDChordSequenceView": {
+      "functions": 1,
+      "total_bytes": 581,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSwitchButton": {
+      "functions": 1,
+      "total_bytes": 580,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleRulerHeaderProgressButton": {
+      "functions": 1,
+      "total_bytes": 580,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackDropTargets": {
+      "functions": 1,
+      "total_bytes": 579,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAnimationView": {
+      "functions": 1,
+      "total_bytes": 578,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDPluginPreferencesController": {
+      "functions": 1,
+      "total_bytes": 572,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPasteboardHandler": {
+      "functions": 1,
+      "total_bytes": 572,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileFormat": {
+      "functions": 1,
+      "total_bytes": 571,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoopWorkflowStep": {
+      "functions": 1,
+      "total_bytes": 571,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDPluginTimeProgressor": {
+      "functions": 1,
+      "total_bytes": 570,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCelemonyAccountClient": {
+      "functions": 1,
+      "total_bytes": 569,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAudioGeneratorRenderer": {
+      "functions": 1,
+      "total_bytes": 569,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileCache": {
+      "functions": 1,
+      "total_bytes": 568,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPointBasedFunctionView": {
+      "functions": 1,
+      "total_bytes": 568,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULSSElementRenderer": {
+      "functions": 1,
+      "total_bytes": 561,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPopUpButtonAssoc": {
+      "functions": 1,
+      "total_bytes": 556,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFilePreloadRange": {
+      "functions": 1,
+      "total_bytes": 554,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNStringAnalyzer": {
+      "functions": 1,
+      "total_bytes": 553,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPartMapperScaleScope": {
+      "functions": 1,
+      "total_bytes": 553,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNClassModel": {
+      "functions": 1,
+      "total_bytes": 551,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNModuleViewAssoc": {
+      "functions": 1,
+      "total_bytes": 551,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCursor": {
+      "functions": 1,
+      "total_bytes": 550,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiFileKeyType": {
+      "functions": 1,
+      "total_bytes": 550,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSoundFileCacheRequest": {
+      "functions": 1,
+      "total_bytes": 550,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPitchTitleDisplayMode": {
+      "functions": 1,
+      "total_bytes": 550,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUAraPersistentObject": {
+      "functions": 1,
+      "total_bytes": 548,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNBoxView": {
+      "functions": 1,
+      "total_bytes": 547,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MULoopSwingResolutionIndexDummyEnumRegistrationClass": {
+      "functions": 1,
+      "total_bytes": 547,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNToolbarPalette": {
+      "functions": 1,
+      "total_bytes": 545,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElementTimeInspector": {
+      "functions": 1,
+      "total_bytes": 544,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleStretchTuningView": {
+      "functions": 1,
+      "total_bytes": 544,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNTypographicLayout": {
+      "functions": 1,
+      "total_bytes": 542,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUHostTimelineReader": {
+      "functions": 1,
+      "total_bytes": 541,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCustomAssoc": {
+      "functions": 1,
+      "total_bytes": 539,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNHashAlgorithm": {
+      "functions": 1,
+      "total_bytes": 536,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUElementRenderCluster": {
+      "functions": 1,
+      "total_bytes": 533,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUGrooveBasedGrooveAssignment": {
+      "functions": 1,
+      "total_bytes": 533,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAudioNullDevice": {
+      "functions": 1,
+      "total_bytes": 532,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNButtonType": {
+      "functions": 1,
+      "total_bytes": 532,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNCharacterFormat": {
+      "functions": 1,
+      "total_bytes": 532,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPropertyPointSpecialProperty": {
+      "functions": 1,
+      "total_bytes": 532,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUFretInstrumentVoicing": {
+      "functions": 1,
+      "total_bytes": 531,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNUIDObjectConnection": {
+      "functions": 1,
+      "total_bytes": 528,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMPDReader": {
+      "functions": 1,
+      "total_bytes": 528,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUScaleCreatePitchSystemCtrl": {
+      "functions": 1,
+      "total_bytes": 528,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFontDescription": {
+      "functions": 1,
+      "total_bytes": 527,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNToolBoxView": {
+      "functions": 1,
+      "total_bytes": 521,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNAction": {
+      "functions": 1,
+      "total_bytes": 519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSortOrderDirection": {
+      "functions": 1,
+      "total_bytes": 519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNSortOrdering": {
+      "functions": 1,
+      "total_bytes": 519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNToolTipLocation": {
+      "functions": 1,
+      "total_bytes": 519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDRightInspectorController": {
+      "functions": 1,
+      "total_bytes": 519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUDescriptionGrade": {
+      "functions": 1,
+      "total_bytes": 519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPitchRunMapper": {
+      "functions": 1,
+      "total_bytes": 519,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNMidiFileTempo": {
+      "functions": 1,
+      "total_bytes": 518,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPitchDriftTool": {
+      "functions": 1,
+      "total_bytes": 518,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNPDFImage": {
+      "functions": 1,
+      "total_bytes": 515,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNToolTipController": {
+      "functions": 1,
+      "total_bytes": 514,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNFileArchive": {
+      "functions": 1,
+      "total_bytes": 512,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNHeartbeatHandlerRegistration": {
+      "functions": 1,
+      "total_bytes": 512,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNLicenseILokProcessor": {
+      "functions": 1,
+      "total_bytes": 512,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUEventBasedQuarterAssignmentAnalyzer": {
+      "functions": 1,
+      "total_bytes": 512,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTimelineRulerView": {
+      "functions": 1,
+      "total_bytes": 512,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMultiTrackTrackView": {
+      "functions": 1,
+      "total_bytes": 510,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUPerformanceTimeView": {
+      "functions": 1,
+      "total_bytes": 510,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNParagraphFormat": {
+      "functions": 1,
+      "total_bytes": 508,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDTempoEditorHelper": {
+      "functions": 1,
+      "total_bytes": 508,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUMidiIOSlot": {
+      "functions": 1,
+      "total_bytes": 508,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNControlAssoc": {
+      "functions": 1,
+      "total_bytes": 506,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "GNDisplayGroup": {
+      "functions": 1,
+      "total_bytes": 506,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MDDetectionEditorElementView": {
+      "functions": 1,
+      "total_bytes": 500,
+      "fields": 0,
+      "methods_with_names": 0
+    },
+    "MUTurkishPentachord": {
+      "functions": 1,
+      "total_bytes": 500,
+      "fields": 0,
+      "methods_with_names": 0
+    }
+  }
+}

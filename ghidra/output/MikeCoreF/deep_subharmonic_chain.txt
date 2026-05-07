@@ -1,0 +1,13 @@
+# Search: "subharmonicChain"
+STRING @ 0242891f: "_subharmonicChains"
+  FUNC: FUN_011eb540 @ 011eb540
+    Size: 246 bytes
+    Ref from: 011eb5a5
+    Called by (1):
+      FUN_011eb400@011eb400
+    Calls (4):
+      FUN_00d55ee0@00d55ee0
+      FUN_00e84050@00e84050
+      ___cxa_guard_acquire@0239ad92
+      ___cxa_guard_release@0239ad98
+

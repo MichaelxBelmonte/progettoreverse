@@ -1,0 +1,11 @@
+kind	address_or_slot	finding	confidence	evidence
+identity	014328b0	builds_MUPosValue_object	high	assembly allocates 0x20 bytes, writes doubles at +0x10 and +0x18, and adjacent registration block names MUPosValue size 0x20
+field	014328b0	MUPosValue+0x10_pos_x	high	adjacent comparator 01432980 compares offset +0x10 between two wrapped objects
+field	014328b0	MUPosValue+0x18_value_y	high	adjacent comparator 01432950 compares offset +0x18 between two wrapped objects
+abi	014328b0	out_wrapper_rdi_valid_flag_plus8	high	assembly stores object pointer to *(r14) and writes byte 1 at 0x8(r14)
+identity	01432b10	builds_extended_triple_value_object	medium_high	assembly allocates 0x28 bytes and writes doubles at +0x10 +0x18 +0x20
+nonidentity	014328b0	not_MUPitchMatrixPeak_builder	very_high	0149c330 directly allocates g_025e4538 for MUPitchMatrixPeak while 014328b0 assembly converges on MUPosValue size 0x20
+consumer	014a08f0	uses_014328b0_as_pos_value_exporter	high	014a08f0 builds wrapper results from computed position/value pairs rather than peak nodes
+consumer	014a0df0	uses_014328b0_as_pos_value_exporter	high	014a0df0 projects local_40 +0x10/+0x18 into FUN_014328b0 position/value arguments
+consumer	01984dd0	uses_014328b0_generic_coordinate_value_builder	medium_high	MUSpectrumShaper callsite passes index-like x and magnitude-like scalar
+consumer	014f0c40	uses_01432b10_extended_coordinate_builder	medium_high	GNInt cluster uses 01432b10 in contexts that need more than a single value scalar

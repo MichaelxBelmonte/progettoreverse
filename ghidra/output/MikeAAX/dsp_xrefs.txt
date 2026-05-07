@@ -1,0 +1,6 @@
+00000af8	[MIDI]	"/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI"
+00020bb4	[MIDI]	"MIDI Transport"
+  XREFS: FUN_00014390@0001455d;
+00020c5c	[tempo]	"tempo > 0.0"
+  XREFS: FUN_000149e0@00014c50;
+# Total: 3

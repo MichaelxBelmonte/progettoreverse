@@ -1,0 +1,9 @@
+offset	role	confidence	evidence	notes
+0x10	harmonic_descriptor_from_external_curve	medium	014eed60 writes item+0x10 after harmonic interpolation	not primary kernel input in 013924d0
+0x14	absolute_pitch_cents	high	014eed60 and 014eecb0 use 8.175799 * exp2(pitch / 1200)	pitch stored in cents-like absolute scale
+0x20	base_frequency_hz_like	high	014eecb0 stores clamped hz derived from item+0x14	lazy-filled and only validated in 013924d0
+0x24	aux_overlap_or_residual_float	medium	014eecb0 passes &item+0x24 to 014b71e0 then compares it as float and floors it to FLT_MIN	not a pure bitfield
+0x28	claim_or_activation_score	high	013924d0 writes it; 014e9f00 sums it; 01356870 and 014f4330 seed it	continuous downstream weight
+0x54	running_item_index	medium	014f4330 writes incrementing ordinal	probably creation order or local id
+0x58	secondary_energy_or_quality_weight	medium	014f4330 writes it; 014eccd0 multiplies with item+0x10 and item+0x20; 014902f0 propagates it via max	active numeric weight, not passive metadata
+warning	distinct_matching_item_family	high	014b3460 uses +0x20 as flag and +0x28/+0x30 as link pointers	do not merge layouts

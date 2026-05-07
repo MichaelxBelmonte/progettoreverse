@@ -1,0 +1,8 @@
+scope	target	role	confidence	evidence
+abi	00e83530	forward_dst_src_aliasable_wrapper	very_high	disassembly shows rdx used as ctoz source and rsi used as final ztoc destination
+abi	00e83640	inverse_like_src_dst_aliasable_wrapper	very_high	disassembly shows rsi used as ctoz source and rdx used as final ztoc destination
+callsite	015c4e40	forward_called_with_distinct_src_dst	very_high	disassembly at 15c5a8a to 15c5a98 loads rsi and rdx from different caller buffers before call
+callsite	00e3d570	forward_called_with_distinct_src_dst	very_high	disassembly at e3d5b4 to e3d5bf and e3d5ed to e3d5f3 loads different rsi rdx buffers
+callsite	00e3d570	inverse_alias_src_eq_dst	very_high	disassembly at e3d87c to e3d895 passes rsi equals rdx before tail jump to 00e83640
+layout	015c4e40	dc_nyquist_then_re_im_pairs	very_high	after transform the function handles param_2[0] and param_2[1] specially then iterates param_2[2k+2] param_2[2k+3]
+layout	00e3d570	first_two_cells_special_then_pairs_from_index_two	high	the function treats indices 0 and 1 specially then loops from index 2 over complex pairs

@@ -1,0 +1,93 @@
+// Function: FUN_0171e8d0
+// Address: 0171e8d0
+// Size: 501 bytes
+// Class: GNString
+// === GNString properties ===
+//   bool            _dragEnabled
+//   bool            _dropEnabled
+//   double          _transferStartTime
+//   double          _transferEndTime
+//   double          _userStartTime
+//   double          _userEndTime
+
+
+void FUN_0171e8d0(void)
+
+{
+  void*puVar1;
+  void*this_ptr;
+  bool bVar2;
+  int64_t local_38;
+  char local_30;
+  
+  puVar1 = g_028adae8;
+  if ((g_028adae8 == (void*)0x0) || (g_028adaf1 == '\0')) {
+    FUN_00e8cb50();
+    if (g_028adae8 == (void*)0x0) {
+      puVar1 = (void*)FUN_00e8fc40();
+      FUN_00d4ff40();
+      *puVar1 = &g_02572358;
+      (*g_02572370)();
+      bVar2 = g_028adae8 == (void*)0x0;
+      g_028adae8 = puVar1;
+      if (((bVar2) || (FUN_00d50b20(), g_028adae8 != (void*)0x0)) && (g_028adaf0 == '\0')
+         ) {
+        g_028adaf0 = '\x01';
+        FUN_00e8cb90();
+      }
+      FUN_00d933c0();
+      if (local_30 == '\0') {
+        if (local_38 != 0) {
+          FUN_00d50b00();
+        }
+      }
+      else {
+        local_30 = '\0';
+      }
+      FUN_00d21140();
+      if (local_38 != 0) {
+        FUN_00d50b20();
+      }
+      if ((local_30 != '\0') && (local_38 != 0)) {
+        FUN_00d50b20();
+      }
+      FUN_00d933c0();
+      if (local_30 == '\0') {
+        if (local_38 != 0) {
+          FUN_00d50b00();
+        }
+      }
+      else {
+        local_30 = '\0';
+      }
+      FUN_00d21140();
+      if (local_38 != 0) {
+        FUN_00d50b20();
+      }
+      if ((local_30 != '\0') && (local_38 != 0)) {
+        FUN_00d50b20();
+      }
+      g_028adaf1 = '\x01';
+      FUN_00e8cb70();
+    }
+    else {
+      g_028adaf1 = '\x01';
+      FUN_00e8cb70();
+    }
+    puVar1 = g_028adae8;
+    *(void*)(this_ptr + 1) = 0;
+    if (puVar1 == (void*)0x0) {
+      puVar1 = (void*)0x0;
+      goto LAB_0171eaa7;
+    }
+  }
+  else {
+    *(void*)(this_ptr + 1) = 0;
+  }
+  FUN_00d50b00();
+LAB_0171eaa7:
+  *this_ptr = puVar1;
+  *(void*)(this_ptr + 1) = 1;
+  return;
+}
+

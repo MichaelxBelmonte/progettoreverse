@@ -1,0 +1,17 @@
+scope	target	role	confidence	evidence
+field	MULSSGenerator+0x78	input_or_source_member_collection	medium	01bd7b90 reads count and bifurcates count==1 versus count>=2, multi branch builds or reuses +0x98
+field	MULSSGenerator+0x80	transient_source_input_pointer	medium_high	01653e10 stores *arg1 to +0x80 and 0015a600 clears +0x80 at end of pass
+field	MULSSGenerator+0x88	external_current_source_slot	medium	0015a600 routes +0x88 through 012e7fb0 and 012e68b0; 01bd8c50 invokes virtuals on +0x88
+field	MULSSGenerator+0x90	first_generated_graph_handle	high	01653e10 stores result of 012c9ae0(...,1) into +0x90; 01657410 and 01659860 consume it in first pass
+field	MULSSGenerator+0x98	second_generated_graph_handle_child_registry	high	01653e10 stores result of 012c9ae0(...,0) into +0x98; 0164e420, 01652cd0, 01652170 and 01bd7b90 iterate it as list-like object
+field	MULSSGenerator+0xa8	nested_child_source_link	high	0164e420 rebinds +0xa8; 012e61a0 and 012e7210 treat it as recursive child list
+field	MULSSGenerator+0xb0	direct_local_payload_list_link	high	0164f500 copies arg1+0xb0 to this+0xb0; 012e7210 seeds aggregate from +0xb0; 012f7880, 012f9cd0 and 012f8840 iterate it
+field	MULSSGenerator+0xb8	derived_cache_object_slot	medium	012e7900 builds helper objects and assigns +0xb8 from 010f2780-derived result
+field	MULSSGenerator+0x118	principal_item_backref_like_object	high	012cfa20 assigns g_0252ff98 object to +0x118; 012e57f0 and 012e5b20 runtime-check it before shaper/principal-item helper calls
+mutator	01653e10	instance_setup_two_graph_handles	high	sets +0x80, stores 012c9ae0(...,1) to +0x90, stores 012c9ae0(...,0) to +0x98, initializes +0x68 and +0xa5
+mutator	0164e420	rebind_nested_child_source_link	high	replaces +0xa8 with detach/attach lifecycle and propagates notifications through +0x98 child/work registry
+mutator	0164f500	copy_merge_lss_topology	high	temporarily clears source +0xa8, calls 0164e420, copies source +0xb0, triggers 01733c40
+mutator	01652170	aggregate_b0_when_98_empty_and_a8_present	medium_high	when +0x98 is empty and +0xa8 exists, calls 012cb110 -> 012e7210 and forwards aggregate to 012879b0
+mutator	01652930	process_direct_payload_list	medium_high	recovers +0xb0 via 012e5ae0 and passes it to 012f0b60 with operational flags
+mutator	012f0b60	central_lss_payload_propagator	medium_high	reads arg1+0xb0 count, may create GNList g_02572358, re-enters 012cb110 -> 012e7210, calls MUPercussivePitchSystem helpers 01519670/01516650/01516720/0150ddd0, updates arg1+0xb8 and may set arg1+0x88; 01519670 now closed as abs scalar diff gate >= 0.001f
+mutator	012f7880_012f9cd0_012f8840	payload_list_passes_over_b0	medium_high	all iterate +0xb0 as GNList-like payload list; final payload type and musical semantics remain open

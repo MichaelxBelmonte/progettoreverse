@@ -1,0 +1,42 @@
+// Reconstructed from MikeCore — 38 properties
+
+struct GNFraction {
+    GNFraction*              _linesPerSecond;
+    double                   _secondsPerGrid;
+    double                   _offset;
+    GNFraction*              _startQuarter;
+    double                   _quarterDeviation;
+    bool                     _isAccent;
+    GNFraction*              _subdivison;
+    double                   _timeAnchor;
+    int32_t                  _pulseSegmentSize;
+    int32_t                  _timeSegmentSize;
+    bool                     _isDefaultDivisionTriplets;
+    GNFraction*              _defaultPulseMultiple;
+    double                   _defaultSubPulseDuration;
+    int32_t                  _beatsPerBar;
+    GNFraction*              _pulseAnchor;
+    GNFraction*              _pulsesPerQuarter;
+    GNFraction*              _beatsPerQuarter;
+    GNFraction*              _quarterAtPulseAnchor;
+    int32_t                  _beatAtPulseAnchor;
+    int32_t                  _barAtPulseAnchor;
+    bool                     _isRecording;
+    float                    _clickLevel;
+    bool                     _isClicking;
+    bool                     _isMutingAllTracks;
+    bool                     _isIgnoringSourceTimeForElementTimeFunction;
+    double                   _releaseDuration;
+    double                   _preplayDuration;
+    GNFraction*              _clickResolution;
+    float                    _clickFrequency;
+    GNFraction*              _duration;
+    GNFraction*              _swingResolution;
+    float                    _swingFactor;
+    bool                     _showsMixedFraction;
+    bool                     _reducingDisabled;
+    GNFraction*              _resolution;
+    bool                     _isTransitional;
+    int32_t                  _startBarIndexCache;
+    GNFraction*              _startBeatCache;
+};

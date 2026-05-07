@@ -1,0 +1,193 @@
+// Function: FUN_0034d310
+// Address: 0034d310
+// Size: 1091 bytes
+// Class: MUDetectionSeparationTool
+
+void FUN_0034d310(void)
+
+{
+  void*this_ptr;
+  
+  *this_ptr = &g_02626f88;
+  this_ptr[2] = &g_02628600;
+  this_ptr[0x28] = &g_02628640;
+  this_ptr[0x29] = &g_02628690;
+  this_ptr[0x2a] = &g_026286c0;
+  if (this_ptr[0xa6] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0xa5] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x9e] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x9d] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x99] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x97] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x95] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x94] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x93] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x92] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x91] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x90] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x8f] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x8e] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x8d] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x8c] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x8b] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x89] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x87] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x86] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x84] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x83] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x82] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x81] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x80] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x7f] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x7e] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x7c] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x7a] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x77] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x76] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x75] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x73] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x71] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x70] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x6f] != 0) {
+    FUN_00d50b20();
+  }
+  if ((int64_t *)this_ptr[0x69] != (int64_t *)0x0) {
+    (**(code **)(*(int64_t *)this_ptr[0x69] + 0x10))();
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x67] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x66] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[99] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x59] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x58] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x4f] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x4d] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x4c] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x4b] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x4a] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x49] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x48] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x47] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x46] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x45] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x42] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x41] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x3e] != 0) {
+    FUN_00d50b20();
+  }
+  if (this_ptr[0x3d] != 0) {
+    FUN_00d50b20();
+  }
+  *this_ptr = &g_0262d9a0;
+  this_ptr[2] = &g_0262e310;
+  if (this_ptr[0x27] != 0) {
+    FUN_00d50b20();
+  }
+  FUN_0006d770();
+  return;
+}
+

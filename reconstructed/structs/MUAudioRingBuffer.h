@@ -1,0 +1,48 @@
+// Reconstructed from MikeCore — 44 properties
+
+struct MUAudioRingBuffer {
+    /*  */ void*             _pluginDocument;
+    /*  */ void*             _replaceBufferSize;
+    /*  */ void*             _renderStateTime;
+    /*  */ void*             _renderStateHostIsPlaying;
+    /*  */ void*             _renderStateRenderingEnabled;
+    /*  */ void*             _shouldTransferContextReset;
+    /*  */ void*             _shouldTransferContextEnabled;
+    /*  */ void*             _lastTransferContextEnabled;
+    /*  */ void*             _hostPlaybackParamsCycleActive;
+    /*  */ void*             _isAAX;
+    /*  */ void*             _hostPlaybackParamsCycleTimeValid;
+    /*  */ void*             _hostPlaybackParamsCycleStartQuarter;
+    /*  */ void*             _hostPlaybackParamsCycleEndQuarter;
+    /*  */ void*             _hostPlaybackParamsCursorTime;
+    /*  */ void*             _hostPlaybackParamsTempo;
+    /*  */ void*             _hostPlaybackParamsRenderSampleIndex;
+    /*  */ void*             _localPlaybackRenderer;
+    /*  */ void*             _localScrubbingTimeProgressor;
+    /*  */ void*             _localPlaybackPendingRequest;
+    /*  */ void*             _localPlaybackVolume;
+    /*  */ void*             _hostCycleTimeJump;
+    /*  */ void*             _hostCycleChanged;
+    /*  */ void*             _preallocRenderSliceTimeContext;
+    /*  */ void*             _recordedTimeContexts;
+    /*  */ void*             _outOfSyncSamples;
+    /*  */ void*             _lastHostTempo;
+    /*  */ void*             _tempoMapRecordingState;
+    /*  */ void*             _doRegisterObserver;
+    /*  */ void*             _awaitsFirstTransfer;
+    /*  */ void*             _unconvertedParameterState;
+    /*  */ void*             _renderLock;
+    /*  */ void*             _callSimulateProcessSamples;
+    /*  */ void*             _realtimeStretchingEnabled;
+    /*  */ void*             _enquededAuxiliaryRenderersPending;
+    /*  */ void*             _processedAuxiliaryRenderers;
+    /*  */ void*             _addedAuxiliaryRenderers;
+    /*  */ void*             _removedAuxiliaryRenderers;
+    /*  */ void*             _araDocumentController;
+    /*  */ void*             _araPlaybackRegionsForPlayback;
+    /*  */ void*             _araPlaybackRegionsForPrelisten;
+    /*  */ void*             _araSequenceTracksForPrelisten;
+    /*  */ void*             _originalHostSelectedPlaybackRegions;
+    /*  */ void*             _originalHostSelectedSequenceTracks;
+    /*  */ void*             _filteredHostSelectedPlaybackRegions;
+};

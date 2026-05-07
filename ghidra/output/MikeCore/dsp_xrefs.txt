@@ -1,0 +1,2248 @@
+00000f08	[MIDI]	"/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI"
+01f9d4f3	[beat]	"_heartbeatHandlerRegistrations"
+  XREFS: FUN_00008ef0@00008f4d;
+01f9d512	[beat]	"GNHeartbeatHandlerRegistration"
+  XREFS: FUN_01f4a920@01f4a9a5; FUN_01f4aa70@01f4abc3; FUN_01f4add0@01f4ae81; FUN_01f4aca0@01f4acee; FUN_01f4a530@01f4a563; FUN_01f4a790@01f4a841; FUN_01f4a630@01f4a6af; FUN_01f28cc0@01f28dac; FUN_000067e0@00006e86;
+01f9d531	[beat]	"_heartbeatHandlerRegistrationsLock"
+  XREFS: FUN_00008fe0@0000903d;
+01f9d554	[beat]	"_heartbeatTimer"
+  XREFS: FUN_000090d0@0000912d;
+01f9d6a8	[window]	"_windowsOnlyShowMenuOnStartUp"
+  XREFS: FUN_000067e0@000079a0;
+01f9d6c6	[window]	"_windowsOnlyCreatePreferencesMenuItemIfNeeded"
+  XREFS: FUN_000067e0@00007a16;
+01f9d6f4	[window]	"_windowsOnlyCreateInfoMenuItemIfNeeded"
+  XREFS: FUN_000067e0@00007a8c;
+01f9d893	[detect]	"_detectAfterTransfer"
+  XREFS: FUN_0000aae0@0000ac4c;
+01f9e7fc	[fft]	"_fft1"
+  XREFS: FUN_000373a0@00037403;
+01f9e81b	[fft]	"_fft2"
+  XREFS: FUN_000376d0@00037733;
+01f9ef23	[spectrum]	"_spectrumSize"
+  XREFS: FUN_0003eae0@0003eb18; FUN_011b2e50@011b32ea;
+01f9f919	[window]	"_window"
+  XREFS: FUN_0005b1d0@0005b22d; FUN_0020f6b0@0020f6ec; FUN_0020e5b0@0020e683; FUN_0020e5b0@0020e6af; FUN_000a4c20@000a4c81;
+01f9f921	[window]	"_windowControllers"
+  XREFS: FUN_0005b2c0@0005b2fc; FUN_0005aa20@0005ab12; FUN_0005aa20@0005ab3e; FUN_005b19a0@005b1a01;
+01fa099e	[detect]	"_detectionInProgress"
+  XREFS: FUN_000b0540@000b0578; FUN_000ada50@000ada88;
+01fa09d0	[Pitch]	"_quantizePitchButton"
+  XREFS: FUN_0057a1a0@0057a205; FUN_000adff0@000ae053;
+01fa0a06	[detect]	"_detectionObserver"
+  XREFS: FUN_000b10c0@000b1125; FUN_000ae8c0@000ae925;
+01fa0b6f	[pitch]	"_pitchOffsetSlider"
+  XREFS: FUN_000b2210@000b2273; FUN_00591500@00591565;
+01fa0beb	[beat]	"GNHeartbeatHandler"
+  XREFS: FUN_01bdbfa0@01bdc2fa; FUN_00afa9e0@00afaab2; FUN_005dab40@005daea3; FUN_000fabd0@000fae5e; FUN_008196d0@00819cdb; FUN_018b8a80@018b8bb0; FUN_00858d80@00858f33; FUN_00838f20@008391cd; FUN_0055f640@0055f85d; FUN_0059ed40@005a1773; FUN_0057e5d0@0057e71c; FUN_0169d230@0169d7ae; FUN_000fc500@000fc627; FUN_0059c6c0@0059c8b6; FUN_001b3bf0@001b3d61; FUN_01e731f0@01e7340d; FUN_000b2d80@000b2e95; FUN_005d1b20@005d20a3; FUN_005b1e40@005b2dc4; FUN_00571120@00571282; FUN_00210580@002107af; FUN_00bf5290@00bf5462; FUN_0118be50@0118c63f; FUN_01f4a920@01f4a974; FUN_01f4aa70@01f4ab7c; FUN_005880e0@005882a7; FUN_0084ee20@00850082; FUN_003ae120@003ae2e4; FUN_0084d700@0084daa5; FUN_0030cb40@0030cdac; FUN_0018cef0@0018d10b; FUN_0038c320@0038c478; FUN_00c4c550@00c4c642; FUN_006024d0@00603bc2; FUN_00302550@00302cbb; FUN_00847230@00847735;
+01fa1289	[fft]	"_fftCountDiagramView"
+  XREFS: FUN_000fd700@000fd765;
+01fa14ef	[tempo]	"%@.tempo.%@"
+  XREFS: FUN_001227e0@0012388e;
+01fa19ca	[pitch]	"%p::_pitchSystem"
+  XREFS: FUN_00153100@00153228; FUN_00153530@001538aa; FUN_0150aa70@0150aaef; FUN_0150a640@0150a768; FUN_01323a40@01323b8b; FUN_01324620@01324e2c;
+01fa1a36	[Pitch]	"MUPitchSystem"
+  XREFS: FUN_0083a1a0@0083a1e9; FUN_019ff870@019ff8d8; FUN_0015ea50@0015ea8c;
+01fa1a44	[Pitch]	"MU12TETPitchSystem"
+  XREFS: FUN_014f9e70@014fa0ba; FUN_014fed80@014fedb3; FUN_00153530@0015424d; FUN_0150aa70@0150b738; FUN_010ee140@010ee236; FUN_010ee000@010ee07e; FUN_010ce440@010ce5a4; FUN_010edd20@010eddd1; FUN_010ede90@010edf41; FUN_010ed520@010ed66e; FUN_010ed520@010ed5c4; FUN_01324620@01325fe3;
+01fa1a57	[Pitch]	"MUPercussivePitchSystem"
+  XREFS: FUN_002bbb70@002bc49c; FUN_00153530@001542f7; FUN_01bab160@01babf3f; FUN_01a2b2e0@01a2ca15; FUN_0150aa70@0150b7e2; FUN_005039a0@0050425e; FUN_010e0390@010e04ca; FUN_01786140@01786173; FUN_01324620@0132613f;
+01fa1a6f	[Pitch]	"MUScalePitchSystem"
+  XREFS: FUN_0151bc40@0151bd3e; FUN_01b17840@01b17f52; FUN_019fffa0@019fffe9; FUN_01a1e750@01a1fe5e; FUN_00853880@008538fb; FUN_01ad3cb0@01ad3d88; FUN_00853150@008531cb; FUN_00153530@001543a1; FUN_00851f50@00851fcb; FUN_017178d0@017180e1; FUN_019b7a60@019b8139; FUN_019973f0@019979a7; FUN_011177d0@01117819; FUN_01994460@01996282; FUN_019f65a0@019f7135; FUN_019d51d0@019d658d; FUN_019d51d0@019d64d4; FUN_019d51d0@019d6642; FUN_017955a0@01795686; FUN_01a2b2e0@01a2c96b; FUN_01a2b2e0@01a2d249; FUN_0150aa70@0150b88c; FUN_0084a190@0084a1f8; FUN_01a29bc0@01a2a8c4; FUN_00849f10@00849f78; FUN_019eff40@019f00a2; FUN_01a2db70@01a2e488; FUN_019cddf0@019ce746; FUN_0084d700@0084d7a1; FUN_0176ca50@0176ca83; FUN_005039a0@005041a9; FUN_01520950@01520a46; FUN_01520810@0152088e; FUN_01520b00@01520bb1; FUN_01520de0@01520e91; FUN_01520c70@01520d21; FUN_01520f50@01521001; FUN_015200c0@015203eb; FUN_015200c0@01520341; FUN_015200c0@01520297; FUN_015200c0@015201ed; FUN_01a00290@01a002d9; FUN_01520520@0152059e; FUN_01520660@01520756; FUN_01a26560@01a28360; FUN_011a6790@011a681d; FUN_01b25670@01b26460; FUN_01324620@01326091; FUN_01324620@013261e9;
+01fa1ad4	[Formant]	"handleAudioSourceFormantsUp"
+  XREFS: FUN_0047a4c0@0047ae90; FUN_0015f220@0015f3d2; FUN_0032c700@0032c9cd;
+01fa1af0	[Formant]	"handleAudioSourceFormantsDown"
+  XREFS: FUN_0047a4c0@0047af21; FUN_0015f220@0015f463; FUN_0032c700@0032ca5e;
+01fa31e7	[filter]	"_filterQualifier"
+  XREFS: FUN_001c5240@001c529d;
+01fa4ee9	[window]	"_windowBackgroundColor"
+  XREFS: FUN_01e8faa0@01e8faf2; FUN_0020d6a0@0020d6f2;
+01fa4f36	[window]	"_windowFillBorderColor"
+  XREFS: FUN_0020d940@0020d992;
+01fa4f4d	[window]	"_windowFillCenterColor"
+  XREFS: FUN_0020da20@0020da72;
+01fa5125	[window]	"_windowController"
+  XREFS: FUN_005b7000@005b7069; FUN_0020f6b0@0020f711;
+01fa53b1	[Pitch]	"handleOpenQuantizePitchDialog"
+  XREFS: FUN_00212cd0@00213628;
+01fa55cd	[Pitch]	"handleToggleShowPitchCurve"
+  XREFS: FUN_00212cd0@0021405a;
+01fa56ce	[Detect]	"handleToggleEditingDetection"
+  XREFS: FUN_00212cd0@00214573;
+01fa5700	[Detect]	"handleDetectTimelineWithSelection"
+  XREFS: FUN_00212cd0@00214695; FUN_006f07b0@006f0c0e;
+01fa5722	[Detect]	"handleDetectTimelineWithSelectionAndMerge"
+  XREFS: FUN_00212cd0@00214726; FUN_006f07b0@006f0c9f;
+01fa58a8	[Detect]	"onDetectionTargetChanged"
+  XREFS: FUN_00212cd0@00214f14;
+01fa5ab0	[Pitch]	"handleTogglePitchToChordAdaptionEnabled"
+  XREFS: FUN_00212cd0@00215d1f;
+01fa5ad8	[Pitch]	"handleSelectPitchToChordAdaptionMode"
+  XREFS: FUN_00212cd0@00215db0;
+01fa5afd	[Pitch]	"handleSelectPitchToChordAdaptionContext"
+  XREFS: FUN_00212cd0@00215e41;
+01fa5ff0	[detect]	"_detectsChurchModes"
+  XREFS: FUN_002720c0@00272488; FUN_01114900@01114f48;
+01fa6004	[detect]	"_detectsDetailedModeChanges"
+  XREFS: FUN_002720c0@002724fe; FUN_01114900@01115034;
+01fa6240	[Pitch]	"MUPitchSystemRulerView"
+  XREFS: FUN_0083a1a0@0083a21e; FUN_0083a300@0083a3f4; FUN_0083a4d0@0083a51e; FUN_0083a600@0083a6b1; FUN_0083a790@0083a841; FUN_00839940@00839c80; FUN_00839940@00839bba; FUN_00839940@00839af4; FUN_00839da0@00839e51; FUN_00839f30@0083a0c8; FUN_0197c0e0@0197c1b4; FUN_019f0970@019f0b60; FUN_00810180@008102fe; FUN_00275460@00275569; FUN_0050ef30@0050f01d; FUN_01a22610@01a22643;
+01fa629f	[Detect]	"MUDetectionSibilantRangeTool"
+  XREFS: FUN_002760e0@0027611c;
+01fa62d2	[Detect]	"MUDetectionSeparationTool"
+  XREFS: FUN_0195b3f0@0195b423; FUN_00253c20@00254967; FUN_0034b970@0034bcc9; FUN_0034b360@0034b6b9; FUN_0082a0d0@0082a1c6; FUN_00829f70@00829fee; FUN_0080c940@0080ca3e; FUN_0080c260@0080c374;
+01fa630c	[Detect]	"MUDetectionActivationTool"
+  XREFS: FUN_002769b0@002769ec; FUN_0080c260@0080c326;
+01fa6326	[Detect]	"MUDetectionCombiTool"
+  XREFS: FUN_00276bd0@00276c0c;
+01fa68e7	[Detect]	"onDetectionStateDidChanged"
+  XREFS: FUN_002e09c0@002e0cbc;
+01fa6961	[Detect]	"onStartEditingDetection"
+  XREFS: FUN_002e09c0@002e103a; FUN_00325340@003253ad;
+01fa6979	[Detect]	"onStopEditingDetection"
+  XREFS: FUN_002e09c0@002e10bb; FUN_00325340@0032542e;
+01fa6baf	[Detect]	"_knobOnlyHitDetection"
+  XREFS: FUN_002fb560@002fb598;
+01fa6dca	[detect]	"_detectionStateDidChangeObserver"
+  XREFS: FUN_003033b0@0030340d;
+01fa6ec0	[Detect]	"_startEditingDetectionObserver"
+  XREFS: FUN_0050def0@0050df4d; FUN_00303c10@00303c6d;
+01fa6edf	[Detect]	"_endEditingDetectionObserver"
+  XREFS: FUN_0050dfe0@0050e03d; FUN_00303d00@00303d5d;
+01fa7025	[detect]	"_detectionStateChangedObserver"
+  XREFS: FUN_00306330@00306395;
+01fa7375	[envelope]	"_envelopePath"
+  XREFS: FUN_008296e0@00829732; FUN_0030dcb0@0030dd13;
+01fa75c5	[Pitch]	"handleQuantizePitch"
+  XREFS: FUN_0032c700@0032c81a;
+01fa76fb	[Pitch]	"handleToggleCorrectPitchPreview"
+  XREFS: FUN_0033e7e0@0033eab5;
+01fa7774	[Detect]	"MDDetectionEditorElementView"
+  XREFS: FUN_0034bfb0@0034bfe3; FUN_00562380@005624c7;
+01fa77e1	[Detect]	"MDDetectionEditorView"
+  XREFS: FUN_007131f0@00713248; FUN_0034d920@0034d95c;
+01fa77f7	[Detect]	"MUDetectionEditorView"
+  XREFS: FUN_01bf95e0@01bf9beb; FUN_01bf95e0@01bf9b25; FUN_01958cf0@01958fc1; FUN_01bf85a0@01bf88f2; FUN_01bf85a0@01bf882c; FUN_01bff300@01bffa83; FUN_01bff300@01bff9bd; FUN_0059ed40@005a0ba7; FUN_01bfe010@01bfe0e4; FUN_0059e4b0@0059e580; FUN_01bbdb10@01bbdde1; FUN_01bbcdd0@01bbd5db; FUN_019547b0@019547e3; FUN_005ab850@005ab8ce; FUN_005ab9b0@005abaa6; FUN_005abb80@005abbfe; FUN_005abce0@005abdd6; FUN_005abeb0@005abf61; FUN_005ab020@005ab116; FUN_005ab1f0@005ab26e; FUN_005ab350@005ab446; FUN_005ab520@005ab59e; FUN_005ab680@005ab774; FUN_005aab90@005aac0e; FUN_005aacf0@005aade4; FUN_005aaec0@005aaf3e; FUN_005a97a0@005aa91d; FUN_005a97a0@005aa857; FUN_005a97a0@005aa791; FUN_005a97a0@005aa6cb; FUN_005a97a0@005aa605; FUN_005a97a0@005aa53f; FUN_005a97a0@005aa479; FUN_005a97a0@005aa3b3; FUN_005a97a0@005aa2ed; FUN_005a97a0@005aa227; FUN_005a97a0@005aa161; FUN_005a97a0@005aa09b; FUN_005a97a0@005a9fd5; FUN_005a97a0@005a9f0f; FUN_005a97a0@005a9e49; FUN_005a97a0@005a9d83; FUN_005a97a0@005a9cbd; FUN_019280d0@019282b1; FUN_0192fde0@019302ee; FUN_0192fde0@01930228; FUN_0192fde0@01930162; FUN_0192fde0@0193009c; FUN_005ae000@005ae07e; FUN_005ae160@005ae256; FUN_005ae330@005ae3ae; FUN_005ae490@005ae584; FUN_0192e4a0@0192e771; FUN_005ae660@005ae711; FUN_005ae7f0@005ae8a1; FUN_005ad890@005ad941; FUN_0034d920@0034da29; FUN_005ada20@005adad1; FUN_0192dad0@0192de22; FUN_0192dad0@0192dd5c; FUN_005adbb0@005adc61; FUN_005add40@005add8e; FUN_005ade70@005adf21; FUN_005ad0c0@005ad171; FUN_005ad250@005ad301; FUN_005ad3e0@005ad491; FUN_005ad570@005ad621; FUN_005ad700@005ad7b1; FUN_005ac8d0@005ac94e; FUN_005aca30@005acb24; FUN_005acc00@005acc7e; FUN_005acd60@005ace54; FUN_005acf30@005acfe1; FUN_005ac040@005ac0f1; FUN_005ac1d0@005ac281; FUN_005ac360@005ac411; FUN_005ac4f0@005ac669; FUN_005ac740@005ac7f1; FUN_01927ba0@01927ef2; FUN_01927ba0@01927e2c; FUN_01924a10@01926c01; FUN_01924a10@01926b3b; FUN_01924a10@019269cb; FUN_01924a10@01926905;
+01fa781a	[Detect]	"MUDetectionQuarterAssignmentTool"
+  XREFS: FUN_0034e020@0034e05c;
+01fa7eae	[stretch]	"_stretchButton"
+  XREFS: FUN_003af600@003af663;
+01fa7f25	[tempo]	"_tempoFormatter"
+  XREFS: FUN_0087f930@0087f968; FUN_003b05c0@003b05f8; FUN_0046e010@0046e048;
+01fa803e	[Detect]	"onDetectionStateChanged"
+  XREFS: FUN_003b9370@003b9674;
+01fa8315	[tempo]	"_tempoField"
+  XREFS: FUN_0046cea0@0046cf05;
+01fa8321	[tempo]	"_tempoSyncButton"
+  XREFS: FUN_0046d190@0046d1f5;
+01fa83a2	[Detect]	"_inDetectionEditorMode"
+  XREFS: FUN_0046e460@0046e498;
+01fa845b	[spectrum]	"_spectrumShaperButton"
+  XREFS: FUN_00877b50@00877bb5; FUN_0046f770@0046f7d5;
+01fa858d	[tempo]	"_tempoEditorChangedObserver"
+  XREFS: FUN_0087df00@0087df65; FUN_00473410@00473475;
+01fa878d	[Pitch]	"handleSwitchRobustPitchCurve"
+  XREFS: FUN_0047a4c0@0047aa08;
+01fa8819	[Formant]	"handleAudioSourceFormantsCharacter"
+  XREFS: FUN_0047a4c0@0047afb2;
+01fa887b	[Pitch]	"handleSetPitchOffset"
+  XREFS: FUN_0047a4c0@0047b165; FUN_006ebcb0@006ebd40;
+01fa8890	[Formant]	"handleSetFormantOffset"
+  XREFS: FUN_0047a4c0@0047b1f6;
+01fa89a9	[Pitch]	"handleRecalcAllElementsPitchCenter"
+  XREFS: FUN_0047a4c0@0047b7a0;
+01fa89cc	[Pitch]	"handleRecalcAllElementsPeriodsAndPitchCentersFromDecomposedAudioSignals"
+  XREFS: FUN_0047a4c0@0047b831;
+01fa8a14	[Pitch]	"handlePitchToChordAdaptionEnabledChanged"
+  XREFS: FUN_0047a4c0@0047b8c2;
+01fa8a3d	[Pitch]	"handlePitchToChordAdaptionModeChanged"
+  XREFS: FUN_0047a4c0@0047b953;
+01fa8a63	[Pitch]	"handlePitchToChordAdaptionContextChanged"
+  XREFS: FUN_0047a4c0@0047b9e4;
+01fa8a8c	[Detect]	"onStartEditionDetection"
+  XREFS: FUN_0047a4c0@0047ba75; FUN_006ebcb0@006ebef3;
+01fa8aa4	[Detect]	"onEditingDetectionTargetNotification"
+  XREFS: FUN_0047a4c0@0047bb97;
+01fa8ac9	[Detect]	"onDetectionRenderParametersChanged"
+  XREFS: FUN_0047a4c0@0047bc28;
+01fa8b7e	[Detect]	"MDDetectionAudioSourceInsp"
+  XREFS: FUN_0059b0f0@0059b1e6; FUN_0059b2c0@0059b33e; FUN_0059b420@0059b516; FUN_0059b5f0@0059b66e; FUN_0059b750@0059b846; FUN_0059a930@0059a9ae; FUN_0059aa90@0059ab86; FUN_0059ac60@0059acde; FUN_0049ad60@0049ad93; FUN_0059adc0@0059aeb6; FUN_0059af90@0059b00e; FUN_0059a100@0059a1f6; FUN_0059a2d0@0059a34e; FUN_0059a430@0059a526; FUN_0047a4c0@0047dc55; FUN_0047a4c0@0047db8f; FUN_0047a4c0@0047dac9; FUN_0047a4c0@0047da03; FUN_0047a4c0@0047d93d; FUN_0047a4c0@0047d877; FUN_0047a4c0@0047d7b1; FUN_0047a4c0@0047d6eb; FUN_0047a4c0@0047d625; FUN_0047a4c0@0047d55f; FUN_0047a4c0@0047d499; FUN_0047a4c0@0047d3d3; FUN_0047a4c0@0047d30d; FUN_0047a4c0@0047d247; FUN_0047a4c0@0047d181; FUN_0047a4c0@0047d0bb; FUN_0047a4c0@0047cff5; FUN_0047a4c0@0047cf2f; FUN_0047a4c0@0047ce69; FUN_0047a4c0@0047cda3; FUN_0047a4c0@0047ccdd; FUN_0047a4c0@0047cc17; FUN_0047a4c0@0047cb51; FUN_0047a4c0@0047ca8b; FUN_0047a4c0@0047c9c5; FUN_0047a4c0@0047c8ff; FUN_0047a4c0@0047c839; FUN_0047a4c0@0047c773; FUN_0047a4c0@0047c6ad; FUN_0047a4c0@0047c5e7; FUN_0047a4c0@0047c521; FUN_0047a4c0@0047c45b; FUN_0047a4c0@0047c395; FUN_0047a4c0@0047c2cf; FUN_0047a4c0@0047c209; FUN_0047a4c0@0047c143; FUN_0047a4c0@0047c07d; FUN_0047a4c0@0047bfb7; FUN_0047a4c0@0047bef1; FUN_0059a600@0059a67e; FUN_0059a760@0059a856; FUN_00599940@005999be; FUN_00599aa0@00599b96; FUN_00599c70@00599cee; FUN_00599dd0@00599ec6; FUN_00599fa0@0059a01e; FUN_00599160@00599211; FUN_005992f0@005993a1; FUN_00599480@00599531; FUN_00599610@0059968e; FUN_00599770@00599866; FUN_00598940@00598a36; FUN_00598b10@00598b8e; FUN_00598c70@00598d66; FUN_00598e40@00598ef1; FUN_00598fd0@00599081; FUN_00598180@005981fe; FUN_005982e0@005983d6; FUN_005984b0@0059852e; FUN_00598610@00598706; FUN_005987e0@0059885e; FUN_00593810@00593906; FUN_005939e0@00593a5e; FUN_00593b40@00593c36; FUN_00593d10@00593d8e; FUN_00593e70@00593f66; FUN_00593050@005930ce; FUN_005931b0@005932a6; FUN_00593380@005933fe; FUN_005934e0@005935d6; FUN_005936b0@0059372e; FUN_00592820@00592916; FUN_005929f0@00592a6e; FUN_00592b50@00592c46; FUN_00592d20@00592d9e; FUN_00592e80@00592f76; FUN_00592060@005920de; FUN_005921c0@005922b6; FUN_00592390@0059240e; FUN_005924f0@005925e6; FUN_005926c0@0059273e; FUN_00591830@00591926; FUN_00591a00@00591a7e; FUN_00591b60@00591c56; FUN_00591d30@00591dae; FUN_00591e90@00591f86; FUN_00591070@005910ee; FUN_005911d0@005912c4; FUN_005913a0@0059141e; FUN_00591500@005915f6; FUN_005916d0@0059174e; FUN_00590840@00590936; FUN_00590a10@00590a8e; FUN_00590b70@00590c66; FUN_00590d40@00590dbe; FUN_00590ea0@00590f96; FUN_00590080@005900fe; FUN_005901e0@005902d6; FUN_005903b0@0059042e; FUN_00590510@00590606; FUN_005906e0@0059075e; FUN_00597950@00597a46; FUN_00597b20@00597b9e; FUN_00597c80@00597d76; FUN_00597e50@00597ece; FUN_00597fb0@005980a6; FUN_00597190@0059720e; FUN_005972f0@005973e6; FUN_005974c0@0059753e; FUN_00597620@00597716; FUN_005977f0@0059786e; FUN_00596800@0059687e; FUN_00596960@00596a56; FUN_00596b30@00596bae; FUN_00596c90@00596d86; FUN_00596e60@00596ede; FUN_00596fc0@005970b6; FUN_005961a0@0059621e; FUN_00596300@005963f6; FUN_005964d0@0059654e; FUN_00596630@00596726; FUN_005959c0@00595a71; FUN_00595b50@00595c01; FUN_00595ce0@00595d91; FUN_00595e70@00595eee; FUN_00595fd0@005960c6; FUN_00595030@005950ae; FUN_00595190@00595286; FUN_00595360@005953de; FUN_005954c0@005955b4; FUN_00595690@0059570e; FUN_005957f0@005958e6; FUN_00594800@005948f6; FUN_005949d0@00594a4e; FUN_00594b30@00594c26; FUN_00594d00@00594d7e; FUN_00594e60@00594f56; FUN_00594040@005940be; FUN_005941a0@00594296; FUN_00594370@005943ee; FUN_005944d0@005945c6; FUN_005946a0@0059471e; FUN_0058f890@0058f941; FUN_0058fa20@0058fa9e; FUN_0058fb80@0058fc76; FUN_0058fd50@0058fdce; FUN_0058feb0@0058ffa6; FUN_0058f700@0058f7b1; FUN_0058deb0@0058ee50; FUN_0058deb0@0058ed8a; FUN_0058deb0@0058ecc4; FUN_0058deb0@0058ebfe; FUN_0058deb0@0058eb38; FUN_0058deb0@0058ea72; FUN_0058deb0@0058e9ac; FUN_0058deb0@0058e8e6; FUN_0058deb0@0058e820; FUN_0058deb0@0058e75a; FUN_005621b0@00562285;
+01fa8e71	[Detect]	"handleToggleScaleDetectiveDisplayMode"
+  XREFS: FUN_004fca20@004fcc8a;
+01fa8edc	[Pitch]	"handleSelectPitchSnapMode"
+  XREFS: FUN_004fca20@004fcf50; FUN_007f51e0@007f5256; FUN_0198aca0@0198cfcd;
+01fa8ef6	[Pitch]	"handleSwitchPitchDisplayMode"
+  XREFS: FUN_004fca20@004fcfde; FUN_007f51e0@007f5378; FUN_0198aca0@0198dd95;
+01fa8f13	[Pitch]	"handleSwitchPitchRulerTitleDisplayMode"
+  XREFS: FUN_004fca20@004fd06c; FUN_007f51e0@007f52e7; FUN_0198aca0@0198de13;
+01fa9025	[pitch]	"_pitchLinesBtn"
+  XREFS: FUN_0050a000@0050a065;
+01fa9111	[Detect]	"_isEditingDetection"
+  XREFS: FUN_0050da50@0050dcc2; FUN_01103ee0@01105ead; FUN_00880170@008801a8;
+01fa92d4	[pitch]	"_pitch"
+  XREFS: FUN_0053f150@0053f51a; FUN_0053d770@0053d7a8;
+01fa92db	[pitch]	"_pitchRange"
+  XREFS: FUN_0053f150@0053f6f2; FUN_0053d900@0053d938;
+01fa92e7	[formant]	"_formant"
+  XREFS: FUN_0053f150@0053f606; FUN_0053da90@0053dac8;
+01fa92f0	[formant]	"_formantRange"
+  XREFS: FUN_0053f150@0053f67c; FUN_0053dc20@0053dc58;
+01fa9427	[Pitch]	"_visiblePitchRangeLocation"
+  XREFS: FUN_0053f150@0053f8ca; FUN_00575d20@00575d58;
+01fa9442	[Pitch]	"_visiblePitchRangeLength"
+  XREFS: FUN_0053f150@0053f940; FUN_00575e90@00575ec8;
+01fa9590	[Pitch]	"MUWesternStandardPitchTitleSystemPrefCtrl"
+  XREFS: FUN_0191b730@0191b763; FUN_0191a310@0191a3ca; FUN_0054b190@0054b2bf; FUN_0054c080@0054c0fe; FUN_0054c1c0@0054c2b4;
+01fa95ba	[pitch]	"_pitchLabelsPopUp"
+  XREFS: FUN_0054c1c0@0054c223;
+01fa9abe	[tempo]	"_tempoEditorIsOpen"
+  XREFS: FUN_00576670@005766a8;
+01fa9b25	[pitch]	"_pitchModesDescription"
+  XREFS: FUN_00576d80@00576de5;
+01fa9b84	[Detect]	"_audioSourceDetectionField"
+  XREFS: FUN_005781c0@00578225; FUN_00586f60@00586fc3;
+01fa9bd3	[Formant]	"_audioSourceFormantsUpSlider"
+  XREFS: FUN_00578b50@00578bb5; FUN_005901e0@00590245; FUN_005878f0@00587953;
+01fa9bf0	[Formant]	"_audioSourceFormantsDownSlider"
+  XREFS: FUN_00578e80@00578ee5; FUN_00590510@00590575; FUN_00587c20@00587c83;
+01fa9c35	[Detect]	"_audioSourceDetectionFieldLabel"
+  XREFS: FUN_00579b40@00579ba5;
+01faa01a	[tempo]	"_tempoViewY0"
+  XREFS: FUN_00581680@0058241e;
+01faa027	[tempo]	"_tempoViewHeight"
+  XREFS: FUN_00581680@00582494;
+01faa038	[tempo]	"_tempoView"
+  XREFS: FUN_00581680@0058250a;
+01faa276	[detect]	"_detectionModePopup"
+  XREFS: FUN_0058fb80@0058fbe5;
+01faa28a	[Formant]	"_audioSourceFormantsCharacterSlider"
+  XREFS: FUN_00590840@005908a5;
+01faa2f4	[formant]	"_formantOffsetSlider"
+  XREFS: FUN_00591830@00591895;
+01faa309	[pitch]	"_pitchOffsetField"
+  XREFS: FUN_005921c0@00592225;
+01faa31b	[formant]	"_formantOffsetField"
+  XREFS: FUN_005924f0@00592555;
+01faa354	[Detect]	"_editingDetectionTargetObserver"
+  XREFS: FUN_005934e0@00593545;
+01faa374	[detect]	"_detectionParametersChangedObserver"
+  XREFS: FUN_00593810@00593875;
+01faa43b	[Detect]	"_copyDetectionMenuItem"
+  XREFS: FUN_005954c0@00595523;
+01faa4c4	[Pitch]	"_correctPitchPreviewSwitch"
+  XREFS: FUN_00596630@00596695;
+01faa4df	[sibilant]	"_sibilantsLabel"
+  XREFS: FUN_00596960@005969c5;
+01faa4ef	[sibilant]	"_sibilantsPopUp"
+  XREFS: FUN_00596c90@00596cf5;
+01faa4ff	[sibilant]	"_sibilantField"
+  XREFS: FUN_00596fc0@00597025;
+01faa50e	[sibilant]	"_sibilantSlider"
+  XREFS: FUN_005972f0@00597355;
+01faa51e	[sibilant]	"_sibilantPreviewSwitch"
+  XREFS: FUN_00597620@00597685;
+01faa535	[Pitch]	"_robustPitchCurveSwitch"
+  XREFS: FUN_00597950@005979b5;
+01faa54d	[formant]	"_formantsCharacterLabel"
+  XREFS: FUN_00597c80@00597ce5;
+01faa571	[tempo]	"_tempoLabel"
+  XREFS: FUN_005982e0@00598345;
+01faa57d	[pitch]	"_pitchLabel"
+  XREFS: FUN_00598610@00598675;
+01faa589	[formant]	"_formantLabel"
+  XREFS: FUN_00598940@005989a5;
+01faa597	[sibilant]	"_sibilantLabel"
+  XREFS: FUN_00598c70@00598cd5;
+01faa67a	[pitch]	"_pitchToChordAdaptionEnabledSwitch"
+  XREFS: FUN_0059b0f0@0059b155;
+01faa69d	[pitch]	"_pitchToChordAdaptionModePopup"
+  XREFS: FUN_0059b420@0059b485;
+01faa6bc	[pitch]	"_pitchToChordAdaptionContextPopup"
+  XREFS: FUN_0059b750@0059b7b5;
+01faa7a3	[pitch]	"_pitchPaths"
+  XREFS: FUN_0059e200@0059e25d;
+01faa7fc	[Pitch]	"_showsPitchCurve"
+  XREFS: FUN_0059ba40@0059c1d9; FUN_0059ed40@005a2b19;
+01faa813	[Pitch]	"_displayPitchCenterTransition"
+  XREFS: FUN_0059ba40@0059c2d1;
+01faa831	[envelope]	"_envelopeParamsDrawPath"
+  XREFS: FUN_0059e2f0@0059e342;
+01faa85c	[envelope]	"_envelopeParamsRecDrawPath"
+  XREFS: FUN_0059e3d0@0059e422;
+01faa877	[envelope]	"_envelopeParamsLastUpdateTime"
+  XREFS: FUN_0059ba40@0059c34a;
+01faa8b1	[energy]	"_energyClaimFactor"
+  XREFS: FUN_0059ba40@0059c436; FUN_010ff5d0@010ffeac;
+01faa94c	[envelope]	"_envelopeSquarenessTarget"
+  XREFS: FUN_0059ed40@005a1995;
+01faa9e3	[Pitch]	"_animatingZoomSrcPitchRange"
+  XREFS: FUN_0059ed40@005a1c59;
+01faaa0c	[Pitch]	"_animatingZoomDstPitchRange"
+  XREFS: FUN_0059ed40@005a1ccf;
+01faaac0	[Pitch]	"_animatingASDMidPitchCenter"
+  XREFS: FUN_0059ed40@005a1f93;
+01faab34	[Pitch]	"_minPitch"
+  XREFS: FUN_0059ed40@005a216b; FUN_00846230@00846268;
+01faab3e	[Pitch]	"_maxPitch"
+  XREFS: FUN_0059ed40@005a21e1; FUN_008463a0@008463d8;
+01faacba	[Pitch]	"_highlightPitch"
+  XREFS: FUN_0059ed40@005a2591;
+01faad3c	[Pitch]	"MUPitchSnapMode"
+  XREFS: FUN_005a62f0@005a6415; FUN_005a62f0@005a637e; FUN_005a6460@005a6585; FUN_005a6460@005a64ee;
+01faad4c	[pitch]	"_pitchSnapMode"
+  XREFS: FUN_005a62f0@005a63ec;
+01faad5b	[Pitch]	"_lastPitchSnapMode"
+  XREFS: FUN_005a6460@005a655c;
+01faada1	[Pitch]	"MUPitchDisplayMode"
+  XREFS: FUN_005a6750@005a687f; FUN_005a6750@005a67e8;
+01faadb4	[pitch]	"_pitchDisplayMode"
+  XREFS: FUN_0084ee20@008502b8; FUN_005a6750@005a6856;
+01faadc6	[Pitch]	"MUPitchTitleDisplayMode"
+  XREFS: FUN_00832d80@00832eb4; FUN_00832d80@00832e11; FUN_005a68d0@005a69f8; FUN_005a68d0@005a6961;
+01faadde	[pitch]	"_pitchRulerTitleDisplayMode"
+  XREFS: FUN_005a68d0@005a69cf;
+01faadfa	[pitch]	"_pitchSnapModeToneScaleAndTuningMenu"
+  XREFS: FUN_005a6a40@005a6a9d;
+01faaea5	[window]	"_windowDidBecomeMainNotificationRegistered"
+  XREFS: FUN_0059ed40@005a29b7;
+01faaf65	[Pitch]	"_doubleClickZoomHistoryPitchRange"
+  XREFS: FUN_0059ed40@005a2ec9;
+01fab038	[detect]	"_detectionButton"
+  XREFS: FUN_005a7570@005a75ca;
+01fab0f8	[Pitch]	"_editingFeedbackPitchCenters"
+  XREFS: FUN_005a7840@005a7892;
+01fab247	[detect]	"_detectionView"
+  XREFS: FUN_005a8320@005a837d;
+01fab476	[Pitch]	"_correctPitchRange"
+  XREFS: FUN_0059ed40@005a3a4f;
+01fab4a0	[Pitch]	"_showsPitchRelevancePoint"
+  XREFS: FUN_0059ed40@005a3b3b;
+01fab546	[pitch]	"_pitchSystemCache"
+  XREFS: FUN_005a95c0@005a961d; FUN_01183480@011834dd;
+01fab558	[Pitch]	"MUEditorPitchSystemCache"
+  XREFS: FUN_019f80e0@019f8113; FUN_019ff9e0@019ffa91; FUN_019ff870@019ff921; FUN_019ffb50@019ffc01; FUN_019ffdf0@019ffee6; FUN_019ffcc0@019ffd45; FUN_019fffa0@01a0001e; FUN_019ff370@019ff421; FUN_019ff260@019ff2ae; FUN_019ff5f0@019ff6a1; FUN_019ff4e0@019ff52e; FUN_019ff760@019ff7ae; FUN_0059ed40@005a1657; FUN_019fec60@019ff09c; FUN_019fec60@019feff2; FUN_019fec60@019fef48; FUN_019fec60@019fee9e; FUN_0198e580@0198e696; FUN_01a01130@01a011ae; FUN_01a01270@01a01364; FUN_01a009a0@01a00a94; FUN_01a00860@01a008de; FUN_01a00b50@01a00bce; FUN_01a00c90@01a00d84; FUN_01a00f80@01a01074; FUN_01a00e40@01a00ebe; FUN_01a000e0@01a001d4; FUN_01a003d0@01a004c4; FUN_01a00290@01a0030e; FUN_01a00580@01a00631; FUN_01a006f0@01a007a1;
+01fab5d7	[Detect]	"MUDetectionItemView"
+  XREFS: FUN_005ab850@005ab899; FUN_008291b0@008291ec;
+01fab635	[Pitch]	"_feebackUpperPitchLimit"
+  XREFS: FUN_005ac040@005ac078;
+01fab64d	[Pitch]	"_feebackLowerPitchLimit"
+  XREFS: FUN_005ac1d0@005ac208;
+01fab671	[Detect]	"MUDetectionEditorRenderStyle"
+  XREFS: FUN_005ac4f0@005ac624; FUN_005ac4f0@005ac581;
+01fab69b	[spectrum]	"_spectrumRendererVolume"
+  XREFS: FUN_005ac740@005ac778;
+01fab6e1	[attack]	"_attackActivationRect"
+  XREFS: FUN_005ad0c0@005ad0f8;
+01fab762	[attack]	"_attackItemTransparency"
+  XREFS: FUN_005ada20@005ada58;
+01fab77a	[attack]	"_attackItemLocation"
+  XREFS: FUN_005adbb0@005adbe8;
+01fab7bf	[detect]	"_detectionReferenceTrack"
+  XREFS: FUN_005ae490@005ae4f3;
+01fab7fe	[detect]	"_detectionEditorView"
+  XREFS: FUN_00713330@00713399; FUN_005ae980@005aea01; FUN_005ae980@005aea2c; FUN_005aece0@005aed1c;
+01fab84e	[Pitch]	"_isCorrectPitchPreviewEnabled"
+  XREFS: FUN_005ae980@005aebe9;
+01fab86c	[Detect]	"MDDetectionElementInsp"
+  XREFS: FUN_005b0130@005b0226; FUN_005b0300@005b037e; FUN_005b0460@005b0556; FUN_005b0630@005b06e1; FUN_005b07c0@005b0871; FUN_007eb210@007eb5b9; FUN_007eb210@007eb4f3; FUN_007eb210@007eb42d; FUN_005af970@005af9ee; FUN_005afad0@005afbc4; FUN_005afca0@005afd1e; FUN_005afe00@005afef4; FUN_005affd0@005b004e; FUN_005af2c0@005af4b6; FUN_005af2c0@005af3f0; FUN_005af640@005af6be; FUN_005af7a0@005af896; FUN_007eeb30@007eeb63; FUN_00562860@00562930;
+01fab9fd	[Detect]	"_attachedDetections"
+  XREFS: FUN_005b4940@005b4992;
+01faba22	[Detect]	"_isDetectionInProgress"
+  XREFS: FUN_005b1e40@005b2ec9;
+01fabbc8	[stretch]	"_stretchInsertGroup"
+  XREFS: FUN_005b1e40@005b2fb5;
+01fabbdc	[stretch]	"_stretchInsertStartTime"
+  XREFS: FUN_005b1e40@005b302b;
+01fabdd2	[tempo]	"_tempoEditorView"
+  XREFS: FUN_01c7faa0@01c7fb05; FUN_01c7de30@01c7de95; FUN_01c7d340@01c7d3a9; FUN_0085d760@0085d7c5; FUN_005b7660@005b76c3; FUN_00863000@0086303c; FUN_00862ea0@00862ecf; FUN_00862ea0@00862efa; FUN_005c2200@005c2263;
+01fabe3d	[tempo]	"_tempoEditorHelper"
+  XREFS: FUN_005b8430@005b8495; FUN_005c2b90@005c2bf5;
+01fac175	[detect]	"_detectionTargetObserver"
+  XREFS: FUN_005c4e90@005c4ef5;
+01fac221	[detect]	"_detectionStateObserver"
+  XREFS: FUN_005c61b0@005c6215;
+01fac2a1	[tempo]	"_tempoEditorMode"
+  XREFS: FUN_005c6d00@005c6e50;
+01fac2e3	[Pitch]	"_quantizePitchController"
+  XREFS: FUN_005c75c0@005c7625;
+01fac2fc	[Pitch]	"MDQuantizePitchController"
+  XREFS: FUN_005e23e0@005e241c; FUN_005c7460@005c74a9;
+01fac68d	[window]	"_windowMenu"
+  XREFS: FUN_005d17c0@005d1825;
+01fac88a	[Detect]	"_editingDetectionChangedObserver"
+  XREFS: FUN_005d7400@005d7465;
+01fac8ff	[spectrum]	"_spectrumShaperController"
+  XREFS: FUN_005d8240@005d82a5;
+01fac934	[spectrum]	"_spectrumShaperModuleController"
+  XREFS: FUN_005d8570@005d85d5;
+01facd3d	[window]	"_windowDidBecomeKeyObserver"
+  XREFS: FUN_005e1550@005e15b5;
+01fad1c4	[formant]	"_formantSlider"
+  XREFS: FUN_005ec440@005ec4a3;
+01fad1d3	[pitch]	"_pitchSlider"
+  XREFS: FUN_005ec770@005ec7d3;
+01fad1f0	[Detect]	"_defaultDetectionModePopup"
+  XREFS: FUN_005ecdd0@005ece33;
+01fad238	[pitch]	"_pitchField"
+  XREFS: FUN_005eddc0@005ede23;
+01fad244	[formant]	"_formantField"
+  XREFS: FUN_00830cb0@00830d13; FUN_005ee0f0@005ee153;
+01fad272	[Detect]	"_copyDetectionPullDown"
+  XREFS: FUN_005eea80@005eeae3;
+01fad3c9	[spectrum]	"_spectrumShaperVisible"
+  XREFS: FUN_005f2620@005f2658;
+01fad43f	[tempo]	"_tempoEditorInEditor"
+  XREFS: FUN_005f3190@005f32e0;
+01fad46d	[tempo]	"_tempoEditorInEditorDescription"
+  XREFS: FUN_005f3800@005f3838;
+01fade27	[tempo]	"_tempoMapRecordingState"
+  XREFS: FUN_006024d0@006047d7;
+01fadff8	[filter]	"_filteredHostSelectedPlaybackRegions"
+  XREFS: FUN_006072c0@0060731a;
+01fae01d	[filter]	"_filteredHostSelectedSequenceTracks"
+  XREFS: FUN_006073b0@0060740a;
+01fae1ca	[Detect]	"handleAdvancedTempoDetection"
+  XREFS: FUN_006122f0@006129a0; FUN_01c46d90@01c48235;
+01fae2bf	[Detect]	"handleToggleDetectionEditor"
+  XREFS: FUN_006122f0@00613069;
+01fae4c9	[Detect]	"handleEditingDetectionChanged"
+  XREFS: FUN_006122f0@00613def;
+01fae93e	[Detect]	"handleSetDefaultDetection"
+  XREFS: FUN_006c76c0@006c7b22;
+01fae995	[Pitch]	"handlePitchChanged"
+  XREFS: FUN_006c76c0@006c7d66;
+01fae9a8	[Formant]	"handleFormantChanged"
+  XREFS: FUN_01ba1260@01ba129c; FUN_006c76c0@006c7df7;
+01faea31	[Detect]	"handleCopyDetection"
+  XREFS: FUN_006c76c0@006c8310;
+01faed2f	[window]	"windowDidBecomeFirst"
+  XREFS: FUN_006f07b0@006f1b4d;
+01faedaa	[detect]	"_detectAfterTransferSwitchButton"
+  XREFS: FUN_00712020@00712083;
+01faf403	[frequency]	"_frequencyBands"
+  XREFS: FUN_007aa7c0@007aa812;
+01faf413	[frequency]	"_frequencyBandMagnitudeSlices"
+  XREFS: FUN_007aa8a0@007aa8f2;
+01faf431	[frequency]	"_frequencyBandsTransformer"
+  XREFS: FUN_007aa980@007aa9da;
+01faf4bd	[tempo]	"_tempo"
+  XREFS: FUN_01c7b140@01c7b178; FUN_00aff2e0@00b01422; FUN_01c2b230@01c2b5fb; FUN_007acc20@007acc58;
+01faf581	[beat]	"_beat"
+  XREFS: FUN_01234f40@01234fa9; FUN_01234170@0123419f; FUN_01234170@012341ca; FUN_012342c0@012342fc; FUN_012345f0@01234628; FUN_007ae5c0@007ae5f8;
+01faf79b	[beat]	"_beats"
+  XREFS: FUN_01233fb0@01233fec; FUN_01233e70@01233eaa; FUN_01233e70@01233ec4; FUN_007b47e0@007b4aac; FUN_0114acf0@0114ad55; FUN_011c2ec0@011c2f25;
+01fafdb8	[fft]	"_outputBuffersDidUnderrfftun"
+  XREFS: FUN_007c71c0@007c749f;
+01fb0183	[separation]	"_separationFolderField"
+  XREFS: FUN_00817b50@00817bb3;
+01fb0659	[pitch]	"_pitchTool"
+  XREFS: FUN_00825130@0082518d;
+01fb0664	[Pitch]	"MUPitchTool"
+  XREFS: FUN_0083ac20@0083ac5c; FUN_00824b20@00824c96;
+01fb0685	[Detect]	"MUDetectionActivationInsp"
+  XREFS: FUN_00825410@0082544c;
+01fb069f	[Detect]	"MUDetectionBaseInsp"
+  XREFS: FUN_01bfe810@01bfe843; FUN_01bfdce0@01bfdf18; FUN_01bfdce0@01bfde52; FUN_0080bf20@0080c0b0; FUN_008297c0@008298c9; FUN_00826b20@00826c29; FUN_00826040@00826136; FUN_00825bb0@00825c2e; FUN_00825d10@00825e06; FUN_00825ee0@00825f5e; FUN_00825410@00825519;
+01fb06b3	[spectrum]	"_spectrumBlendingSlider"
+  XREFS: FUN_00825d10@00825d75;
+01fb06cb	[tempo]	"_tempoSlider"
+  XREFS: FUN_00826040@008260a5;
+01fb06ea	[Detect]	"MUDetectionActivationSlider"
+  XREFS: FUN_0080a190@0080a33c; FUN_00829a10@00829b3c; FUN_01b8e8a0@01b8e8d3; FUN_01b8e0e0@01b8e4cb; FUN_01b8d9a0@01b8da5d; FUN_01b8db70@01b8ddef; FUN_00826800@008268b1; FUN_00826990@00826a41; FUN_00826580@008266ed; FUN_00826580@00826627; FUN_008256c0@00825792;
+01fb0722	[Detect]	"MUDetectionAmplitudeInsp"
+  XREFS: FUN_00826b20@00826b5c;
+01fb075d	[Detect]	"MUDetectionAmplitudeTool"
+  XREFS: FUN_008274e0@0082751c;
+01fb0776	[Detect]	"MUDetectionAttackAssignmentTool"
+  XREFS: FUN_00827700@0082773c;
+01fb0796	[Pitch]	"MUDetectionPitchIndexAssignmentTool"
+  XREFS: FUN_00827920@0082795c;
+01fb07ba	[Pitch]	"MUDetectionPitchCenterAssignmentTool"
+  XREFS: FUN_00827b40@00827b7c;
+01fb07df	[Pitch]	"MUDetectionPitchRelevanceTool"
+  XREFS: FUN_00827d60@00827d9c;
+01fb07fd	[Detect]	"MUDetectionQuarterAssignmentInspector"
+  XREFS: FUN_01a8b4a0@01a8b4d3; FUN_0080b600@0080b79a; FUN_008288b0@008288fe; FUN_008289e0@00828a91; FUN_01a881d0@01a8828d; FUN_00828250@008282ce; FUN_008283b0@008284a4; FUN_00828580@008285fe; FUN_008286e0@008287d4;
+01fb0837	[Pitch]	"MUDetectionPitchRelevanceInspector"
+  XREFS: FUN_01c3aeb0@01c3aee3; FUN_01c390e0@01c3919d; FUN_0080b970@0080bb23; FUN_00828be0@00828c5e; FUN_00828d40@00828e34;
+01fb0876	[separation]	"_separationTool"
+  XREFS: FUN_008290c0@0082911d;
+01fb08b2	[Detect]	"MUDetectionSeparationInsp"
+  XREFS: FUN_008297c0@008297fc;
+01fb08cc	[attack]	"_attackItemSlider"
+  XREFS: FUN_00829d20@00829d7d;
+01fb08de	[attack]	"_attackItemActivationTool"
+  XREFS: FUN_0082a0d0@0082a135;
+01fb08f8	[Detect]	"MUDetectionSeparationTypeTool"
+  XREFS: FUN_0082a2a0@0082a2dc;
+01fb0b73	[Formant]	"MUElementFormantInspector"
+  XREFS: FUN_00831140@008311f1; FUN_008312d0@0083131e; FUN_00831400@008314b1; FUN_008308f0@00830a43; FUN_00830b50@00830bce; FUN_00830cb0@00830da4; FUN_00830e80@00830ece; FUN_00830fb0@00831061; FUN_0080df20@0080e0c1; FUN_01ba3440@01ba3473; FUN_01ba1260@01ba131d;
+01fb0b8d	[Formant]	"_savedFormantOffsets"
+  XREFS: FUN_00831400@00831438;
+01fb0ba2	[Pitch]	"MUElementPitchDriftInspector"
+  XREFS: FUN_00831590@008315cc;
+01fb0bbf	[Pitch]	"MUElementPitchInspector"
+  XREFS: FUN_01bb3bc0@01bb3bf3; FUN_00832800@0083284e; FUN_00832930@008329e1; FUN_00832ac0@00832b0e; FUN_00832bf0@00832ca1; FUN_00832d80@00832ef9; FUN_00832040@00832134; FUN_00832210@0083228e; FUN_00832370@00832464; FUN_00832540@0083258e; FUN_00832670@00832721; FUN_00831880@00831a2b; FUN_00831bb0@00831c2e; FUN_00831d10@00831e04; FUN_00831ee0@00831f5e; FUN_0080e3e0@0080e4f9; FUN_01ba7eb0@01ba8259; FUN_01ba7eb0@01ba8193; FUN_01ba7eb0@01ba80cd;
+01fb0bf7	[frequency]	"_frequencyField"
+  XREFS: FUN_00832370@008323d3;
+01fb0c07	[Pitch]	"_savedPitchIndexes"
+  XREFS: FUN_00832670@008326a8;
+01fb0c1a	[pitch]	"_pitchOffsetFormatter"
+  XREFS: FUN_01c18a00@01c18a38; FUN_00832930@00832968;
+01fb0c30	[frequency]	"_frequencyFormatter"
+  XREFS: FUN_00832bf0@00832c28;
+01fb0c59	[pitch]	"_pitchTitleDisplayMode"
+  XREFS: FUN_00832d80@00832e84;
+01fb0c70	[Pitch]	"MUElementPitchModulationInspector"
+  XREFS: FUN_008330b0@008330ec;
+01fb0cc5	[Formant]	"MUFormantBarView"
+  XREFS: FUN_00835650@0083570c; FUN_00834db0@00834dec;
+01fb0ce5	[Formant]	"MUFormantTool"
+  XREFS: FUN_00835440@0083547c;
+01fb0cf3	[formant]	"_formantBarViews"
+  XREFS: FUN_008359a0@008359fd;
+01fb0d04	[Formant]	"_maintainsFormantBarViews"
+  XREFS: FUN_00835650@00835772;
+01fb0e0c	[pitch]	"_pitchIndexeselection"
+  XREFS: FUN_00839da0@00839dd8;
+01fb0e22	[pitch]	"_pitchSystem"
+  XREFS: FUN_0083a300@0083a363; FUN_019ff870@019ff8a8; FUN_01795be0@01795c3a; FUN_0084df00@0084df5a; FUN_011a6cc0@011a6d1d;
+01fb0e4b	[Pitch]	"MUPitchDriftTool"
+  XREFS: FUN_01a1a8c0@01a1a8f3; FUN_0080fc00@0080fd59;
+01fb0e5c	[Pitch]	"MUPitchModulationTool"
+  XREFS: FUN_0083a960@0083a99c;
+01fb1089	[Pitch]	"MUScaleCreatePitchSystemCtrl"
+  XREFS: FUN_008112f0@0081146f; FUN_00843060@008430de; FUN_008431a0@00843296; FUN_00843350@008433ce; FUN_00843490@00843586; FUN_00843640@008436be; FUN_00843780@00843876; FUN_01b41780@01b417b3;
+01fb1182	[Detect]	"MUScaleDetectionOptionsCtrl"
+  XREFS: FUN_01b53760@01b53976; FUN_01b53760@01b538cc; FUN_00811850@008119fa; FUN_01b55200@01b55233; FUN_00845830@0084587e; FUN_00845940@008459f1; FUN_008450e0@0084515e; FUN_00845220@00845316; FUN_008453d0@0084544e; FUN_00845510@00845606; FUN_008456c0@00845771; FUN_00844ea0@00844ff0;
+01fb11bc	[Detect]	"MUScaleDetectionOptionsData"
+  XREFS: FUN_00811bb0@00811c92; FUN_01b56960@01b56b7c; FUN_01b56960@01b56ad2; FUN_01b54370@01b54ab8; FUN_008460c0@00846171; FUN_00846230@008462e1; FUN_008463a0@00846451; FUN_00846510@008465c1; FUN_00846680@00846731; FUN_00845940@008459a8; FUN_00845b20@00845b53; FUN_00845c00@00845ffd; FUN_00845c00@00845f53; FUN_00845c00@00845ea9; FUN_00845c00@00845dff; FUN_00845c00@00845d55;
+01fb124b	[pitch]	"_pitchPopUp"
+  XREFS: FUN_00849100@00849165;
+01fb1257	[stretch]	"_stretchingPopUp"
+  XREFS: FUN_008493f0@00849455;
+01fb12a6	[Pitch]	"_openedPitchSystem"
+  XREFS: FUN_00849f10@00849f48;
+01fb12b9	[Pitch]	"_openedPitchSystemWithInsertedIntervals"
+  XREFS: FUN_0084a190@0084a1c8;
+01fb12e1	[Pitch]	"_modeIsUsedFromOpenedPitchSystem"
+  XREFS: FUN_0084a300@0084a338;
+01fb1302	[Pitch]	"_tuningIsUsedFromOpenedPitchSystem"
+  XREFS: FUN_0084a470@0084a4a8;
+01fb1325	[Pitch]	"_modeFundamentalOffsetIsUsedFromOpenedPitchSystem"
+  XREFS: FUN_0084a5e0@0084a618;
+01fb1357	[Pitch]	"_tuningPitchAnchorIsUsedFromOpenedPitchSystem"
+  XREFS: FUN_0084a750@0084a788;
+01fb1385	[Pitch]	"_tuningPitchAnchorOption"
+  XREFS: FUN_0084a8c0@0084a8f8;
+01fb139e	[stretch]	"_stretchingOption"
+  XREFS: FUN_0084aa30@0084aa68;
+01fb13b0	[Pitch]	"_modeIsUsedFromOpenedPitchSystemCanBeChanged"
+  XREFS: FUN_0084aba0@0084abd8;
+01fb13dd	[Pitch]	"_tuningIsUsedFromOpenedPitchSystemCanBeChanged"
+  XREFS: FUN_0084ad10@0084ad48;
+01fb140c	[Pitch]	"_modeFundamentalOffsetIsUsedFromOpenedPitchSystemCanBeChanged"
+  XREFS: FUN_0084ae80@0084aeb8;
+01fb144a	[Pitch]	"_tuningPitchAnchorIsUsedFromOpenedPitchSystemCanBeChanged"
+  XREFS: FUN_0084aff0@0084b028;
+01fb1484	[Pitch]	"_stretchingIsUsedFromOpenedPitchSystemCanBeChanged"
+  XREFS: FUN_0084b160@0084b198;
+01fb150b	[Pitch]	"_preferredUserPitchAnchorOption"
+  XREFS: FUN_0084b720@0084b758;
+01fb162e	[Pitch]	"_referencePitchIndex"
+  XREFS: FUN_0084d700@0084db65;
+01fb1643	[Pitch]	"_selectedPitchIndex"
+  XREFS: FUN_0084ee20@0085032e; FUN_0084d700@0084dbdb;
+01fb1724	[Pitch]	"_centDisplayReferencePitchIndex"
+  XREFS: FUN_0084ee20@008501cc;
+01fb175e	[Pitch]	"_clickedPitchIndex"
+  XREFS: FUN_0084ee20@008503a4;
+01fb1771	[Pitch]	"_clickedPitch"
+  XREFS: FUN_0084ee20@0085041a;
+01fb177f	[pitch]	"_pitchIndexIsHit"
+  XREFS: FUN_0084ee20@00850490;
+01fb17b5	[Pitch]	"_closestPitchIndex"
+  XREFS: FUN_0084ee20@00850506;
+01fb17c8	[Pitch]	"_closestPitch"
+  XREFS: FUN_0084ee20@0085057c;
+01fb17d6	[Pitch]	"_detectedPitchSystem"
+  XREFS: FUN_00851f50@00851fa2;
+01fb17eb	[detect]	"_detectionIsCyclic"
+  XREFS: FUN_0084ee20@008505f2;
+01fb17fe	[detect]	"_detectionCycleSizeCent"
+  XREFS: FUN_0084ee20@00850668;
+01fb1816	[Pitch]	"_detectionMinPitchCent"
+  XREFS: FUN_0084ee20@008506de;
+01fb182d	[Pitch]	"_detectionMaxPitchCent"
+  XREFS: FUN_0084ee20@00850754;
+01fb1844	[detect]	"_detectedCentArray"
+  XREFS: FUN_00852030@00852082;
+01fb1857	[Detect]	"_originallyDetectedModeDegrees"
+  XREFS: FUN_00852110@00852162;
+01fb1876	[Detect]	"_applyDetectionToScale"
+  XREFS: FUN_0084ee20@008507ca;
+01fb188d	[detect]	"_detectionInsertsChromaticIntervals"
+  XREFS: FUN_0084ee20@00850840;
+01fb18b1	[Detect]	"_scaleWasJustDetected"
+  XREFS: FUN_0084ee20@008508b6;
+01fb18c7	[Pitch]	"_preferredFundamentalPitchForDetection"
+  XREFS: FUN_0084ee20@0085092c;
+01fb18ee	[Pitch]	"_movingTuningPitchAnchor"
+  XREFS: FUN_0084ee20@008509a2;
+01fb1907	[Pitch]	"_setTuningPitchAnchor"
+  XREFS: FUN_0084ee20@00850a18;
+01fb191d	[Pitch]	"_tuningPitchAnchorAnimationOffset"
+  XREFS: FUN_0084ee20@00850a8e;
+01fb19f6	[Detect]	"_movingDetectedScale"
+  XREFS: FUN_0084ee20@00850d52;
+01fb1a85	[filter]	"_filterLabel"
+  XREFS: FUN_00852a40@00852a9d;
+01fb1aa4	[filter]	"_filterSlider"
+  XREFS: FUN_00852c20@00852c7d;
+01fb1b45	[Pitch]	"_previousPitchSystem"
+  XREFS: FUN_00853150@008531a2;
+01fb1b76	[Pitch]	"_callUpdateElementsForNewPitchSystemInSetPitchSystem"
+  XREFS: FUN_0084ee20@008510a7;
+01fb1bf5	[beat]	"_handlePreviewByHeartbeat"
+  XREFS: FUN_0084ee20@00851123;
+01fb1c38	[Pitch]	"_currentPitchSystemBeforeRunningOpenPanel"
+  XREFS: FUN_00853880@008538d2;
+01fb1c62	[Pitch]	"_clickedPitchIndexBeforeRunningOpenPanel"
+  XREFS: FUN_0084ee20@0085119c;
+01fb1c8b	[Pitch]	"_methodsEditingPitchSystem"
+  XREFS: FUN_0084ee20@00851212;
+01fb1ce3	[Pitch]	"_previousPitchIndex"
+  XREFS: FUN_0084ee20@00851374;
+01fb1e0d	[pitch]	"_pitchSwitch"
+  XREFS: FUN_00856980@008569e5;
+01fb1e1a	[stretch]	"_stretchingSwitch"
+  XREFS: FUN_00856c70@00856cd5;
+01fb1f60	[stretch]	"_stretchTuningView"
+  XREFS: FUN_008585f0@00858655;
+01fb1fb0	[stretch]	"_stretchingFunction"
+  XREFS: FUN_008593e0@00859445; FUN_01777670@017776cd;
+01fb21b3	[tempo]	"_tempoEditorRulerView"
+  XREFS: FUN_01c7d1f0@01c7d22a; FUN_01c7d1f0@01c7d244; FUN_01c7d340@01c7d37c; FUN_00863000@00863069;
+01fb2231	[tempo]	"_tempoRegionViews"
+  XREFS: FUN_00863cc0@00863cf8;
+01fb2273	[beat]	"_beatSelection"
+  XREFS: FUN_00865150@00865188;
+01fb22e8	[tempo]	"_tempoEditorDelegate"
+  XREFS: FUN_00865db0@00865e19;
+01fb23a1	[tempo]	"_tempoEditMode"
+  XREFS: FUN_00866df0@00866ef4;
+01fb2488	[tempo]	"_tempoAnalyzer"
+  XREFS: FUN_008687a0@00868805;
+01fb2497	[tempo]	"_tempoAnalyzerDialog"
+  XREFS: FUN_00868ad0@00868b35;
+01fb24ac	[Detect]	"MUAdvancedTempoDetectionDialog"
+  XREFS: FUN_01c787c0@01c78831; FUN_01c7f940@01c7f9be; FUN_01c7faa0@01c7fb96; FUN_01c7fdd0@01c7fec6; FUN_01c7fc70@01c7fcee; FUN_01c7f3f0@01c7f4ad; FUN_01c7f6a0@01c7f6d3; FUN_01c4a8b0@01c4aa09; FUN_00868970@008689b9;
+01fb2683	[Pitch]	"MUWesternStandardPitchTitleSystem"
+  XREFS: FUN_01118760@011187a9; FUN_00816320@008163eb; FUN_01116700@01116749; FUN_0086d120@0086d16e; FUN_0086d230@0086d2e1; FUN_0086d3a0@0086d451; FUN_0086c9a0@0086c9ee; FUN_0086cab0@0086cb61; FUN_0086cc20@0086cc6e; FUN_0086cd30@0086cde1; FUN_0086cea0@0086ceee; FUN_0086cfb0@0086d061; FUN_0086c7c0@0086c87b; FUN_01781370@017813a3;
+01fb2823	[Formant]	"MUFormant"
+  XREFS: FUN_00871100@00871149; FUN_008709a0@00870a51; FUN_00870b10@00870bc1; FUN_00870c80@00870d31; FUN_008705f0@00870623; FUN_008706d0@008708e4; FUN_008706d0@0087083a; FUN_008706d0@00870790; FUN_008171e0@008172a7;
+01fb282d	[frequency]	"_frequency"
+  XREFS: FUN_00afe410@00afe4f6; FUN_00b12770@00b127c2; FUN_008709a0@008709d8;
+01fb2856	[formant]	"_formants"
+  XREFS: FUN_00871240@008712a5;
+01fb2966	[beat]	"_beatFormatter"
+  XREFS: FUN_0087baf0@0087bb55;
+01fb2984	[tempo]	"_tempoTextField"
+  XREFS: FUN_0087cd80@0087cde5;
+01fb2994	[tempo]	"_tempoKindLabel"
+  XREFS: FUN_0087d070@0087d0d5;
+01fb29b8	[tempo]	"_tempoEditorButton"
+  XREFS: FUN_0087d640@0087d6a5;
+01fb2a15	[tempo]	"_tempoEditorObserver"
+  XREFS: FUN_0087f0a0@0087f105;
+01fb45d1	[tempo]	"temporary"
+  XREFS: FUN_00891288@008914c8;
+01fbaf54	[window]	"windows"
+  XREFS: FUN_008e4f74@008e57e8;
+01fbdd35	[Detect]	"newAuthLimitDetected"
+  XREFS: FUN_008fb112@008fb3a0;
+01fbde09	[Detect]	"newAuthLimitDetected="
+  XREFS: FUN_008fb62c@008fba21;
+01fc3e4a	[detect]	"Bad data size detected in the DecryptionAssistData for iLok1 KEY EXCHANGE data"
+  XREFS: FUN_009451f8@00945484;
+01fc3e99	[detect]	"Bad data size detected in the DecryptionAssistData for iLok1 QUICK CHALLENGE RESPONSE data"
+  XREFS: FUN_009451f8@00945624;
+01fc401b	[detect]	"Bad data size detected in the DecryptionAssistData for iLok2"
+  XREFS: FUN_009458d0@00945cf6;
+01fc560a	[detect]	"Bad Machine bindings detected while verifying license (UUID: %s) with allowed drift %d percent and ...
+  XREFS: FUN_00947d1c@00949237;
+01fc97e0	[detect]	"Error detected in Certifier::participantsAreValid().\nin_pAuthParticipantIds set content:\n"
+  XREFS: FUN_0098c45c@0098c69e;
+01fc9861	[detect]	"Error was detected for in_pAuthParticipantIds member with value: "
+  XREFS: FUN_0098c45c@0098c847;
+01fcafde	[Phase]	"virtual void pace::ILok2Commander::Phase1_MSTS_ILok_Start(CMD_CmmdPayload_Phase1_MSTS_ILok_Struct &...
+  XREFS: FUN_00998fb0@00998ffe;
+01fcb0ed	[Phase]	"virtual void pace::ILok2Commander::Phase1_MSTS_ILok_BuildCommand(CMD_CmmdPayload_Phase1_MSTS_ILok_S...
+  XREFS: FUN_00999074@009990c8;
+01fd1650	[detect]	"Duplicate uuid values detected. The offending objects have the LsRelation values %s and %s."
+  XREFS: FUN_009b5048@009b5219;
+01fd1a1f	[Detect]	"The LsSignedInfo objecy with uuid value %s does not have any LsSignedDigest objects in its digests ...
+  XREFS: FUN_009b654c@009b684e;
+01fd205c	[detect]	"Wrong type of LsRelation ws provided to LsCachedObjectVector<>::get(). We expected a LsRelation wit...
+  XREFS: FUN_009b8884@009b88b8;
+01fd2226	[detect]	"LsCachedObjectVector<>::%s(): Called for wrong object type. Expected entityId: %d but saw %d. Error...
+  XREFS: FUN_009b89d0@009b8a05;
+01fd2337	[detect]	"LsCachedObjectVector<>::%s(): No object in the cache with entityId: %d and instanceId: %ld. Error d...
+  XREFS: FUN_009b8b10@009b8b46;
+01fd244f	[detect]	"Query is disallowed in minimized liblicenseservices. Error detected in file %s at line %d."
+  XREFS: FUN_009b8c62@009b8c83;
+01fd2513	[detect]	"LsCachedObjectVector<>::at: Index out of range. Expected 0 <= index < %u, but saw index = %u for en...
+  XREFS: FUN_009b8d24@009b8d58;
+01fd2825	[detect]	"LsObjectCache::registerCachedObjectVector: Duplicate entityId: %d detected."
+  XREFS: FUN_009b99ca@009b99f9;
+01fd4212	[Detect]	"AuthMismatchDetected"
+01fd4227	[Detect]	"Auth Mismatch Detected"
+01fdc116	[Detect]	"kCERT_TamperingWithTheAcceptableRootKeysHasBeenDetectedErr"
+01fdc151	[Detect]	"kCERT_TamperingWithTheAcceptableRootKeysHasBeenDetectedErr387"
+01fdc571	[Phase]	"kMSTS_NonCA_MayNotExecutePhase2Err"
+01fdc594	[Phase]	"kMSTS_NonCA_MayNotExecutePhase2Err412"
+01fde27a	[Detect]	"kEEPROM_CertPartitionCorruptionDetectedErr"
+01fde2a5	[Detect]	"kEEPROM_CertPartitionCorruptionDetectedErr914"
+01fe1e2d	[Phase]	"kCMD_CommandCommunicationPhaseOutOfSequenceErr"
+01fe1e5c	[Phase]	"kCMD_CommandCommunicationPhaseOutOfSequenceErr1116"
+01fea97d	[detect]	"Duplicate entityId value detected."
+  XREFS: FUN_009c8006@009c81bb;
+01fea9b4	[detect]	"Duplicate instanceId value detected."
+  XREFS: FUN_009c8006@009c81ef;
+01fead59	[tempo]	"LsRelation contains a temporary instanceId value that is unrecognized."
+  XREFS: FUN_009c8006@009c84c7;
+01feaf2b	[detect]	"Duplicate uuid value detected."
+  XREFS: FUN_009c8006@009c85ff;
+01fec61f	[tempo]	"Could not create a temporary directory."
+01fed68b	[detect]	"An error was detected while trying to replace path components of the form $(PATH_TAG) within a path...
+  XREFS: FUN_009cbf24@009cbf37;
+01feee0b	[Detect]	"WardenErrorDebuggerDetected"
+01fef45a	[tempo]	"Cannot create a temporary experience data file on disk"
+01ffe8d0	[partial]	"TSocket::write_partial() send() "
+  XREFS: FUN_00ade1d0@00ade38c;
+01fff196	[Pitch]	"_delayCrystalPitch"
+  XREFS: FUN_00aff2e0@00b00f86;
+01fff1a9	[Pitch]	"_delayPitchDetune"
+  XREFS: FUN_00aff2e0@00b00ffc;
+01fff48c	[Pitch]	"_syncedDelayCrystalPitch"
+  XREFS: FUN_00aff2e0@00b02094;
+01fff4a5	[Pitch]	"_syncedDelayPitchDetune"
+  XREFS: FUN_00aff2e0@00b0210a;
+01ffff9e	[tempo]	"(timeStamp:%.2f, tempo:%.1f(%.3f))"
+  XREFS: FUN_00b5c5c0@00b5c603;
+02000427	[MIDI]	"MIDI"
+  XREFS: FUN_00b90f70@00b916b4;
+02000c44	[Phase]	"GNOverloudMRXPhase90"
+  XREFS: FUN_00c3c670@00c3c6a3; FUN_00bf2ba0@00bf2ccf;
+02000c90	[vibrato]	"GNOverloudUnivibrato"
+  XREFS: FUN_00c3c9a0@00c3c9d3; FUN_00bf31d0@00bf32ff;
+0200156d	[Pitch]	"setDelayCrystalPitch"
+  XREFS: FUN_00c5af10@00c5c024;
+02001582	[Pitch]	"setDelayPitchDetune"
+  XREFS: FUN_00c5af10@00c5c0a5;
+02003430	[detect]	"On address %p: Released object detected, its class seems to be %s\n"
+  XREFS: FUN_00d50c10@00d50c84;
+020060e4	[quality]	"\n\nbzip2/libbzip2: internal error number %d.\nThis is a bug in bzip2/libbzip2, %s.\nPlease report ...
+  XREFS: FUN_00e9e160@00e9e173;
+0200687f	[detect]	"No error detected"
+  XREFS: _ERR_getErrorString@00ef28b7;
+02006918	[detect]	"Data corruption detected"
+  XREFS: _ERR_getErrorString@00ef2842;
+020070b6	[window]	"invalid window size"
+  XREFS: FUN_00f47d00@00f4a023; FUN_00f47d00@00f4a02a;
+02008a3c	[envelope]	"enveloped-data"
+  XREFS: _SMIME_write_ASN1@00f68f2e; _SMIME_write_ASN1@00f68f35;
+02009ca5	[shift]	"BN_lshift"
+02009d49	[shift]	"BN_mod_lshift_quick"
+02009dbc	[shift]	"BN_rshift"
+02009ea4	[shift]	"invalid shift"
+02009f1f	[tempo]	"too many temporary variables"
+0200a043	[shift]	"crypto/bn/bn_shift.c"
+  XREFS: _BN_lshift@00f95826; _BN_rshift@00f95c6d;
+0200a68b	[envelope]	"d.envelopedData"
+0200aaea	[envelope]	"cms_enveloped_data_init"
+0200ab63	[envelope]	"cms_get0_enveloped"
+0200b0dc	[envelope]	"content type not enveloped data"
+0200b512	[envelope]	"type not enveloped data"
+0200dd21	[window]	"ecp_nistz256_windowed_mul"
+0200fccd	[envelope]	"digital envelope routines"
+020112c6	[partial]	"partially overlapping buffers"
+02012157	[envelope]	"pkcs7-envelopedData"
+020145f9	[quality]	"qualityLabelledData"
+020148e9	[partial]	"id-hex-partial-message"
+02019ef7	[envelope]	"d.enveloped"
+02019f03	[envelope]	"d.signed_and_enveloped"
+0201b754	[attack]	"sslv3 rollback attack"
+0201f7e8	[Pitch]	"MU12TETPitchClass"
+  XREFS: FUN_010ee580@010ee626; FUN_010ed130@010ed16c;
+0201f872	[pitch]	"_pitchClasses"
+  XREFS: FUN_010ee770@010ee7cd;
+0201f8f0	[beat]	"_beatMatchingWeightedQuality"
+  XREFS: FUN_010efe20@010efe58;
+0201f937	[Detect]	"MUTempoDetectionRegion"
+  XREFS: FUN_01132f60@0113303e; FUN_010f0100@010f0154; FUN_010e8bb0@010e8d04; FUN_011c3980@011c39fe; FUN_011c3ac0@011c3bb4; FUN_011c3da0@011c3e96; FUN_011c3c70@011c3cc4; FUN_011c3c70@011c3cf5; FUN_011c3f50@011c3fa4; FUN_011c3f50@011c3fd5; FUN_011c31b0@011c31e3; FUN_011c3290@011c387d; FUN_011c3290@011c37d3; FUN_011c3290@011c3729; FUN_011c3290@011c367f; FUN_011c3290@011c35d5; FUN_011c3290@011c352b; FUN_011c3290@011c3481; FUN_011c2a90@011c2ad9; FUN_011c51a0@011c5251; FUN_011c5030@011c50e1; FUN_011c5310@011c53c1; FUN_011c55c0@011c56b4; FUN_011c5480@011c54fe; FUN_011c4900@011c49b1; FUN_011c4be0@011c4c91; FUN_011c4a70@011c4b21; FUN_011c4d50@011c4e01; FUN_011c4ec0@011c4f71; FUN_011c4080@011c4176; FUN_011c4360@011c4456; FUN_011c4230@011c42b5; FUN_011c4510@011c4595; FUN_011c47f0@011c483e; FUN_011c4640@011c4736;
+0201f95f	[Detect]	"_useAutomaticDetection"
+  XREFS: FUN_010f06d0@010f0a14;
+0201f9df	[Detect]	"_allowAutomaticPolyphonicDetection"
+  XREFS: FUN_010f06d0@010f0cd8;
+0201fa2c	[detect]	"_detectionRange"
+  XREFS: FUN_010f14a0@010f14fd;
+0201fa4f	[pitch]	"_pitchOffsetFunction"
+  XREFS: FUN_010f1b90@010f1bed;
+0201fbc0	[tempo]	"_tempoFactor"
+  XREFS: FUN_0119fe60@0119fe98; FUN_010f3160@010f3789; FUN_01202860@01202898;
+02020015	[Phase]	"_resetAllPhasesAtAttack"
+  XREFS: FUN_010fc3b0@010fc704;
+0202002d	[Phase]	"_continueAllPhasesByDefault"
+  XREFS: FUN_010fc3b0@010fc77a;
+02020061	[Formant]	"_freqDomainFormantResolution"
+  XREFS: FUN_010fc3b0@010fc866;
+02020095	[Phase]	"_freqDomainPhaseResetParametersScale"
+  XREFS: FUN_010fc3b0@010fc952;
+020200ba	[Pitch]	"_formantPitchUpCompensationFactor"
+  XREFS: FUN_010fc3b0@010fc9c8;
+020200dc	[Pitch]	"_formantPitchDownCompensationFactor"
+  XREFS: FUN_010fc3b0@010fca3e;
+02020222	[pitch]	"_pitchCenter"
+  XREFS: FUN_010ff5d0@010ffe36; FUN_015f7c40@015f7c78; FUN_01135410@01136a68; FUN_011e1200@011e1238; FUN_01ca4f50@01ca4f88;
+02020238	[detect]	"_detectionQuality"
+  XREFS: FUN_010ff5d0@010fff22; FUN_011e1090@011e10c8;
+02020343	[pitch]	"_pitchRelevanceSampleOffset"
+  XREFS: FUN_01101190@011011c8;
+020203c2	[pitch]	"_pitchIndexAssignmentOffset"
+  XREFS: FUN_01101750@01101788;
+0202044e	[harmonic]	"_harmonicSpectrum"
+  XREFS: FUN_011025e0@01102645;
+02020482	[vibrato]	"_vibratoRanges"
+  XREFS: FUN_011028d0@01102935;
+020204e7	[harmonic]	"_harmonicNumber"
+  XREFS: FUN_010fe8d0@010fec34; FUN_011e2a60@011e2a98; FUN_011e4100@011e4138;
+020204f7	[Pitch]	"_timePosIndexOfPitchCenterRelevanceStart"
+  XREFS: FUN_010fe8d0@010fecaa;
+02020520	[Pitch]	"_timePosIndexOfPitchCenterRelevanceEnd"
+  XREFS: FUN_010fe8d0@010fed20;
+02020547	[attack]	"_attackQuality"
+  XREFS: FUN_0188b710@0188b748; FUN_018887c0@018887f8; FUN_011032b0@011032e8;
+02020572	[phase]	"_phaseDiffusionAtAttack"
+  XREFS: FUN_01103590@011035c8;
+0202058a	[Phase]	"_attackPhaseContinuingData"
+  XREFS: FUN_01103810@01103848;
+020205f7	[polyphonic]	"_polyphonicSeparationDirectoryIdentifier"
+  XREFS: FUN_01107160@011071b2;
+0202064f	[Pitch]	"_lowerSuggestedPitchRangeLimit"
+  XREFS: FUN_01103ee0@01105489;
+0202066e	[Pitch]	"_upperSuggestedPitchRangeLimit"
+  XREFS: FUN_01103ee0@011054ff;
+0202068d	[Detect]	"_itemDetectionQualityLimit"
+  XREFS: FUN_01bf95e0@01bf98c9; FUN_01bf95e0@01bf98f1; FUN_01103ee0@01105575;
+020206a8	[Detect]	"_attackItemDetectionQualityLimit"
+  XREFS: FUN_01bff300@01bff75b; FUN_01bff300@01bff783; FUN_01103ee0@011055eb;
+020206c9	[Detect]	"_attackItemDefaultDetectionQualityLimit"
+  XREFS: FUN_01bff300@01bff602; FUN_01bff300@01bff62a; FUN_01103ee0@01105661;
+02020733	[Detect]	"_itemDetectionVisualQualityLimit"
+  XREFS: FUN_01bf95e0@01bf9a16; FUN_01bf95e0@01bf9a3e; FUN_01948fc0@019496e0; FUN_01948fc0@0194a075; FUN_01948fc0@0194a09d; FUN_01948fc0@0194970b; FUN_01103ee0@011057c3;
+02020754	[Detect]	"_attackItemDetectionVisualQualityLimit"
+  XREFS: FUN_01bff300@01bff8ae; FUN_01bff300@01bff8d6; FUN_01948fc0@01949864; FUN_01948fc0@0194a1d3; FUN_01948fc0@0194a1fe; FUN_01948fc0@0194988c; FUN_01103ee0@01105839;
+0202077b	[window]	"_windowOverlapForTimeSlices"
+  XREFS: FUN_01176880@011768b8; FUN_01103ee0@011058af; FUN_011c6f40@011c6f78;
+020209fd	[Detect]	"_hasBestTempoDetection"
+  XREFS: FUN_01103ee0@01105c5f;
+02020a14	[Pitch]	"_didRecalcAllElementsPeriodsAndPitchCentersFromDecomposedAudioSignals"
+  XREFS: FUN_01103ee0@01105cd5;
+02020bbf	[energy]	"_energyRawMatrix"
+  XREFS: FUN_01103ee0@01106085;
+02020c7d	[Pitch]	"_findMonophonicPitchInFrequencyDomain"
+  XREFS: FUN_01103ee0@011062d3;
+02020d5a	[detect]	"_detectedRanges"
+  XREFS: FUN_011093c0@0110941d;
+02020dc3	[Pitch]	"_isPitchToChordAdaptionEnabled"
+  XREFS: FUN_011c8690@011c978c; FUN_01103ee0@011063bf;
+02020de2	[Pitch]	"MUPitchToChordAdaptionMode"
+  XREFS: FUN_011ca810@011ca938; FUN_011ca810@011ca8a1; FUN_01109770@01109898; FUN_01109770@01109801;
+02020dfd	[pitch]	"_pitchToChordAdaptionMode"
+  XREFS: FUN_011ca810@011ca90f; FUN_01109770@0110986f;
+02020e26	[pitch]	"_pitchToChordAdaptionContext"
+  XREFS: FUN_011ca980@011caa89; FUN_011098e0@011099e9;
+02020e67	[stretch]	"_stretchElements"
+  XREFS: FUN_01109a60@01109b69;
+02020e78	[separation]	"_separationChangeCount"
+  XREFS: FUN_01103ee0@01106435;
+02020ee6	[attack]	"_attackAudioSourceComponent"
+  XREFS: FUN_0110b4d0@0110b52a;
+02020f02	[sibilant]	"_sibilantAudioSourceComponent"
+  XREFS: FUN_013de140@013de237; FUN_013de140@013de256; FUN_0110b5c0@0110b61a;
+02020f9d	[pitch]	"_pitchCent"
+  XREFS: FUN_0187edf0@0187ee28; FUN_0110e4c0@0110e4f8;
+02020fa8	[Pitch]	"_filteredPitchCent"
+  XREFS: FUN_0110e630@0110e668;
+02020fbb	[pitch]	"_pitchQualityWeight"
+  XREFS: FUN_0110e7a0@0110e7d8;
+0202105a	[Pitch]	"_monoPitchAlternative"
+  XREFS: FUN_0110f300@0110f365;
+02021070	[Pitch]	"MUPropertyPointPitchAlternative"
+  XREFS: FUN_0119b8c0@0119b971; FUN_0119bba0@0119bc51; FUN_0119ba30@0119bae1; FUN_0119bd10@0119bdc1; FUN_0119b510@0119b805; FUN_0119b510@0119b75b; FUN_0119b510@0119b6b1; FUN_0119b510@0119b607; FUN_0110f1c0@0110f209; FUN_010e1f30@010e1ff3; FUN_015c7f20@015c7f53;
+02021090	[pitch]	"_pitchWithoutVibrato"
+  XREFS: FUN_0187eb10@0187eb48; FUN_0110f4b0@0110f4e8;
+020210a5	[pitch]	"_pitchHorizontality"
+  XREFS: FUN_0187ec80@0187ecb8; FUN_0110f620@0110f658;
+020210b9	[pitch]	"_pitchHarmonicQuality"
+  XREFS: FUN_0187ef60@0187ef98; FUN_0110f790@0110f7c8;
+020210cf	[pitch]	"_pitchByHarmonics"
+  XREFS: FUN_0187f240@0187f278; FUN_0110f900@0110f938;
+02021104	[Detect]	"_relevanceFromDetectionMatrix"
+  XREFS: FUN_0110fd50@0110fd88;
+02021122	[tempo]	"_temporaryAuxFloatValue1"
+  XREFS: FUN_0110fec0@0110fef8;
+0202113b	[tempo]	"_temporaryAuxFloatValue2"
+  XREFS: FUN_01110030@01110068;
+0202143b	[detect]	"_detectsBassNote"
+  XREFS: FUN_01114900@01114e5c;
+0202144c	[detect]	"_detectsChordExtensions"
+  XREFS: FUN_01114900@01114ed2;
+02021477	[detect]	"_detectsSingleMode"
+  XREFS: FUN_01114900@011150aa;
+0202149b	[Pitch]	"_reflectsPitchSystem"
+  XREFS: FUN_01114900@01115120;
+020214b0	[Pitch]	"_detectsPitchSystem"
+  XREFS: FUN_01114900@01115196;
+020214c4	[Pitch]	"_assumesLowestPitchAsRoot"
+  XREFS: FUN_01114900@0111520c;
+02021536	[Pitch]	"_reflectsPitch"
+  XREFS: FUN_01114900@0111545a;
+02021556	[Detect]	"_reflectsDetectionQuality"
+  XREFS: FUN_01114900@01115546;
+0202158d	[beat]	"_beatStrengthWeightning"
+  XREFS: FUN_01115940@0111599d;
+020215a5	[pitch]	"_pitchWeightning"
+  XREFS: FUN_01115a30@01115a8d;
+020215c9	[detect]	"_detectionQualityWeightning"
+  XREFS: FUN_01115c10@01115c6d;
+02021905	[phase]	"_phase"
+  XREFS: FUN_0111e340@0111e378; FUN_011ad650@011ad688;
+02021a0d	[formant]	"_formantFactor"
+  XREFS: FUN_01125680@011256e5;
+02021a65	[filter]	"_filter"
+  XREFS: FUN_0113c890@0113c8f5; FUN_00b12af0@00b12b4d; FUN_011770c0@011770f8; FUN_01145ba0@01145bfd; FUN_01125dd0@01125e33;
+02021acd	[Phase]	"_allowPeriodBasedPhaseReset"
+  XREFS: FUN_011263d0@01126408;
+02021c14	[Phase]	"_currentPhasesOfChannel"
+  XREFS: FUN_011273a0@011273d8;
+02021c38	[Phase]	"_currentPhaseIncrementsOfChannel"
+  XREFS: FUN_01127510@01127548;
+02021c73	[Phase]	"_accumulatedPhasesOfChannel"
+  XREFS: FUN_011277f0@01127828;
+02021c8f	[Phase]	"_previousPhasesOfChannel"
+  XREFS: FUN_01127960@01127998;
+02021cd5	[Phase]	"_binPhaseProcessingCount"
+  XREFS: FUN_01127db0@01127de8;
+02021d1a	[spectrum]	"_spectrumMagnitudeFactors"
+  XREFS: FUN_01128380@011283b8;
+02021d54	[Phase]	"_prevPhaseIncrements"
+  XREFS: FUN_011287d0@01128808;
+0202203e	[Phase]	"_isAnyPhaseProcessed"
+  XREFS: FUN_0112b2f0@0112b328;
+02022053	[Phase]	"_prevIsAnyPhaseProcessed"
+  XREFS: FUN_0112b460@0112b498;
+0202206c	[Phase]	"_currentPhaseIncrementsAndAmpsValid"
+  XREFS: FUN_0112b5d0@0112b608;
+02022090	[Phase]	"_previousPhasesValid"
+  XREFS: FUN_0112b740@0112b778;
+020220a5	[Phase]	"_accumulatedPhasesValid"
+  XREFS: FUN_0112b8b0@0112b8e8;
+020220bd	[Phase]	"_previousBlockHadPhaseReset"
+  XREFS: FUN_0112ba20@0112ba58;
+020220fd	[Phase]	"_pososcReadPhase"
+  XREFS: FUN_0112be70@0112bea8;
+0202210e	[Phase]	"_pososcOutPhase"
+  XREFS: FUN_0112bfe0@0112c018;
+0202218d	[Formant]	"_useMonophonicFormantProcessing"
+  XREFS: FUN_0112c880@0112c8b8;
+020221ad	[Phase]	"_synthSignalIsInAttackPhase"
+  XREFS: FUN_0112c9f0@0112ca28;
+020221c9	[Phase]	"_synthSignalPhase"
+  XREFS: FUN_0112cb60@0112cb98;
+02022252	[envelope]	"_envelopeEndBlendStarted"
+  XREFS: FUN_0112d570@0112d5a8;
+020222af	[formant]	"_formantEnvelopeEndBlendStartValue"
+  XREFS: FUN_0112db30@0112db68;
+020222d2	[spectrum]	"_spectrumDiffPowEnvelopeEndBlendStartValue"
+  XREFS: FUN_0112dca0@0112dcd8;
+02022363	[Phase]	"_tablePhase"
+  XREFS: FUN_0111f170@0111f241;
+020223f8	[pitch]	"_pitchRelations"
+  XREFS: FUN_0112fc10@0112fc6d;
+02022408	[Pitch]	"MUNotePitchRelation"
+  XREFS: FUN_0112f9e0@0112fa74; FUN_01180840@0118087c;
+02022575	[beat]	"_beatIndex"
+  XREFS: FUN_01132f60@01133074;
+020225a3	[Detect]	"MUDetectionRegion"
+  XREFS: FUN_01133320@0113339e; FUN_01133460@01133554; FUN_014324c0@014324f3; FUN_010d6140@010d626a;
+02022859	[pitch]	"_pitchModulationFactor"
+  XREFS: FUN_01135410@0113672e;
+02022870	[pitch]	"_pitchDriftFactor"
+  XREFS: FUN_01135410@011367a4;
+020229b0	[sibilant]	"_sibilantBalance"
+  XREFS: FUN_01135410@01136d2c; FUN_01169450@01169488;
+020229c1	[formant]	"_formantOffset"
+  XREFS: FUN_01135410@01136da2; FUN_011692e0@01169318;
+020229d0	[attack]	"_attackDuration"
+  XREFS: FUN_01135410@01136e18;
+02022a0d	[attack]	"_attackSlopeFactor"
+  XREFS: FUN_01135410@01136f04;
+02022adf	[formant]	"_formantRatioFunctionCache"
+  XREFS: FUN_01138ea0@01138efd;
+02022afa	[Pitch]	"_displayPitchFunctionCache"
+  XREFS: FUN_01138f90@01138fed;
+02022b15	[Pitch]	"_playbackPitchRatioFunctionCache"
+  XREFS: FUN_01139080@011390dd;
+02022b36	[vibrato]	"_vibratoCache"
+  XREFS: FUN_01139170@011391cd;
+02022b61	[Detect]	"_didFixDetection"
+  XREFS: FUN_01135410@011371c8;
+02022b7e	[Pitch]	"_didFixPitch"
+  XREFS: FUN_01135410@011372b4;
+02022bb1	[Detect]	"_isPolyphonicDetectionDisabled"
+  XREFS: FUN_0113bc40@0113bc78;
+02022c62	[Detect]	"_analyzerCanSwitchToPolyphonicDetection"
+  XREFS: FUN_0113cbf0@0113cc28;
+02022c8a	[Detect]	"_analyzerDidSwitchToPolyphonicDetection"
+  XREFS: FUN_0113cd80@0113cdb8;
+02022cee	[Detect]	"_skipTempoDetection"
+  XREFS: FUN_0113d630@0113d668;
+02022d8b	[tempo]	"_tempoPointsPerSecond"
+  XREFS: FUN_0113e7e0@0113e818;
+02022da1	[tempo]	"_tempoDetectionStartTime"
+  XREFS: FUN_0113e970@0113e9a8;
+02022ff9	[pitch]	"_pitchJumpsSum"
+  XREFS: FUN_01141790@01143218;
+02023008	[pitch]	"_pitchBarycenter"
+  XREFS: FUN_01141790@0114328e;
+02023069	[Pitch]	"_allPitchRangePerNote"
+  XREFS: FUN_01141790@011434dc;
+02023166	[pitch]	"_pitchMatrixTimePosCount"
+  XREFS: FUN_01141790@01143902;
+0202317f	[pitch]	"_pitchMatrix"
+  XREFS: FUN_01141790@01143978;
+0202318c	[pitch]	"_pitchMatrixPeaks"
+  XREFS: FUN_01145520@01145572;
+020231e5	[attack]	"_attackItems"
+  XREFS: FUN_011457e0@0114583d;
+0202323d	[DNA]	"_useDNA2ForPolyphonicDetection"
+  XREFS: FUN_01141790@011439ee;
+02023275	[Pitch]	"_polyPitchEnergyMatrixExtracted"
+  XREFS: FUN_01141790@01143b50;
+02023295	[Pitch]	"_polyPitchEnergyMatrixOriginal"
+  XREFS: FUN_01141790@01143bc6;
+020232b4	[Pitch]	"_polyPitchRelevanceMatrixExtracted"
+  XREFS: FUN_01141790@01143c3c;
+020232d7	[Pitch]	"_polyPitchRelevanceMatrixOriginal"
+  XREFS: FUN_01141790@01143cb2;
+020232f9	[Pitch]	"_polyPitchCentMatrixForAdditionalDisplay"
+  XREFS: FUN_01141790@01143d28;
+0202335e	[Pitch]	"_polyPitchMatrixVectorsMagnitude"
+  XREFS: FUN_01145d80@01145dd2;
+0202337f	[Pitch]	"_polyPitchMatrixVectorsY"
+  XREFS: FUN_01145e60@01145eb2;
+020233f3	[relevance]	"_relevanceMatrix"
+  XREFS: FUN_01146100@01146152;
+02023404	[relevance]	"_relevancePeaks"
+  XREFS: FUN_011461e0@01146232;
+020234ed	[Pitch]	"_originalColumnEnergyOfPolyPitchEnergyMatrixInv"
+  XREFS: FUN_01141790@0114414e;
+0202352f	[filter]	"_filteredSpectrogramMagnitudeSums"
+  XREFS: FUN_01141790@011442b0;
+0202396b	[filter]	"_filterArray"
+  XREFS: FUN_0114dae0@0114db18;
+02023978	[filter]	"_filteredValuesArray"
+  XREFS: FUN_0114dc50@0114dc88;
+0202398d	[filter]	"_filterArraySize"
+  XREFS: FUN_0114ddc0@0114ddf8;
+0202399e	[filter]	"_filteredValuesArraySize"
+  XREFS: FUN_0114df30@0114df68;
+020239b7	[filter]	"_filterDoubleArray"
+  XREFS: FUN_0114e0a0@0114e0d8;
+020239d3	[filter]	"_filteredValuesDoubleArray"
+  XREFS: FUN_0114e210@0114e248;
+020239ee	[filter]	"_filterDoubleArraySize"
+  XREFS: FUN_0114e380@0114e3b8;
+02023a05	[filter]	"_filteredValuesDoubleArraySize"
+  XREFS: FUN_0114e4f0@0114e528;
+02023be7	[Pitch]	"_reservesPitchRange"
+  XREFS: FUN_01152110@011522c6;
+02023bfb	[Pitch]	"_limitsHighestPitchIndex"
+  XREFS: FUN_01152110@0115233c;
+02023c14	[Pitch]	"_limitsLowestPitchIndex"
+  XREFS: FUN_01152110@011523b2;
+02023c4b	[Pitch]	"_isPitchAssignmentIrrelevant"
+  XREFS: FUN_01152110@0115249e;
+020248d4	[pitch]	"_pitchOffset"
+  XREFS: FUN_017964f0@01796ad3; FUN_01169170@011691a8;
+020248e1	[spectrum]	"_spectrumShaperParameterSet"
+  XREFS: FUN_011b10b0@011b10ec; FUN_01169710@01169779; FUN_011afb50@011afbc8; FUN_011afb50@011afbf5;
+02024933	[spectrum]	"_spectrumPlaybackAmplitudeFactor"
+  XREFS: FUN_01169bb0@01169be8;
+02024bae	[relevance]	"relevanceQuality"
+  XREFS: FUN_0116e7f0@0116e828;
+02024ddd	[overlap]	"_overlapCompensationFactor"
+  XREFS: FUN_011769f0@01176a28;
+02024ec9	[phase]	"_phasesAtTimeSlicesOfTracks"
+  XREFS: FUN_011784c0@011784f8;
+02024f66	[spectrum]	"_spectrum"
+  XREFS: FUN_01179210@01179248; FUN_01bdc9d0@01bdca33;
+02024feb	[pitch]	"_pitchIndex"
+  XREFS: FUN_0117a4b0@0117a7e4; FUN_0187e270@0187e2a8;
+0202502d	[Pitch]	"_sourcePitchIndexCache"
+  XREFS: FUN_0117af60@0117b339;
+02025171	[pitch]	"_pitchedNoteMappingsCache"
+  XREFS: FUN_0117c960@0117c9b2; FUN_01184450@011844a2;
+020251b0	[Pitch]	"_addressedPitchIndex"
+  XREFS: FUN_0117cd20@0117d038;
+020251c5	[Pitch]	"_minChordPitchIndexCache"
+  XREFS: FUN_0117cd20@0117d0ae;
+020251de	[Pitch]	"_maxChordPitchIndexCache"
+  XREFS: FUN_0117cd20@0117d124;
+020252f8	[Pitch]	"_minSourcePitchIndex"
+  XREFS: FUN_011803c0@011803f8;
+0202530d	[Pitch]	"_maxSourcePitchIndex"
+  XREFS: FUN_01180530@01180568;
+02025353	[Pitch]	"MUPitchRelationSystem"
+  XREFS: FUN_01180f10@01181038; FUN_01180f10@01180fa1;
+020253af	[Pitch]	"_originalPitchDeviation"
+  XREFS: FUN_01181260@0118162a;
+020253c7	[pitch]	"_pitchQuantization"
+  XREFS: FUN_01181260@011816a0;
+020253da	[pitch]	"_pitchWasSetManually"
+  XREFS: FUN_01181260@01181716;
+02025419	[pitch]	"_pitchDriftWasSetManually"
+  XREFS: FUN_01181260@01181878;
+02025503	[Pitch]	"MUScalePitchSystemSequence"
+  XREFS: FUN_0151ffe0@01520013; FUN_017964f0@017965da; FUN_0150a2e0@0150a480; FUN_01182110@01182587;
+02025537	[Pitch]	"_isPitchSystemCacheValid"
+  XREFS: FUN_01182110@01182783;
+020255a2	[Pitch]	"_weightedPitchDelta"
+  XREFS: FUN_01185a10@01185a48;
+020255b6	[Pitch]	"_reservedMinPitchIndex"
+  XREFS: FUN_01186540@01186578;
+020255cd	[Pitch]	"_reservedMaxPitchIndex"
+  XREFS: FUN_011866b0@011866e8;
+020255f9	[Pitch]	"_playedSourcePitchClasses"
+  XREFS: FUN_01186bb0@01186be8;
+02025613	[Pitch]	"_addressedTargetPitchIndexes"
+  XREFS: FUN_01186e30@01186e68;
+02025630	[Pitch]	"_addressedTargetPitchClasses"
+  XREFS: FUN_011870b0@011870e8;
+0202564d	[Pitch]	"_targetPitchIndexesMatchingSourceVoicing"
+  XREFS: FUN_01187330@01187368;
+02025701	[Pitch]	"_playedPitchClasses"
+  XREFS: FUN_01187fd0@01188008;
+02025715	[Pitch]	"_targetPitchIndexMap"
+  XREFS: FUN_01188250@01188288;
+0202572a	[Pitch]	"MUTargetPitchIndexMap"
+  XREFS: FUN_0118a1b0@0118a2a6; FUN_0118a070@0118a0ee; FUN_011898f0@0118993e; FUN_01189b70@01189bbe; FUN_01189a00@01189ab1; FUN_01189df0@01189e3e; FUN_01189c80@01189d31; FUN_01189f00@01189fb1; FUN_01189730@01189763; FUN_01188250@011882b8; FUN_010e0210@010e02b9;
+020257c7	[Pitch]	"_targetPitchIndexes"
+  XREFS: FUN_01189a00@01189a38; FUN_0154fe80@0154feb8;
+020257db	[Pitch]	"_weightedPitchDeltas"
+  XREFS: FUN_01189c80@01189cb8;
+020257f0	[Pitch]	"_targetPitcheCenters"
+  XREFS: FUN_01189f00@01189f38;
+02025805	[Detect]	"_isDetectionPerformance"
+  XREFS: FUN_0118a6a0@0118a8c4;
+02025cb7	[Pitch]	"MUPitchApproachMapper"
+  XREFS: FUN_01194a70@01194bf0; FUN_01194cb0@01194e30; FUN_01194ef0@01195073; FUN_01194790@011949a8; FUN_01194790@011948fe; FUN_01194790@01194854; FUN_017eb4b0@017eb4e3; FUN_010e0b20@010e0c0a;
+02025ccd	[Pitch]	"MUPitchApproachMapperScaleScope"
+  XREFS: FUN_01194a70@01194bab; FUN_01194a70@01194b08; FUN_01194cb0@01194deb; FUN_01194cb0@01194d48;
+02025d0b	[Pitch]	"MUPitchApproachSlideMode"
+  XREFS: FUN_01194ef0@0119502e; FUN_01194ef0@01194f8b;
+02025d2f	[Pitch]	"MUPitchClassMapper"
+  XREFS: FUN_017ff960@017ff993; FUN_01195860@011959f8; FUN_01195ab0@01195c30; FUN_01195cf0@01195e73; FUN_01195f30@01195fe1; FUN_01195190@0119555b; FUN_01195190@011954b1; FUN_01195190@01195407; FUN_01195190@0119535d; FUN_01195190@011952b3; FUN_01195620@011957a0; FUN_010e0ce0@010e0dd4;
+02025d42	[Pitch]	"MUPitchClassMapperMode"
+  XREFS: FUN_01195620@0119575b; FUN_01195620@011956b8;
+02025d7c	[Pitch]	"MUPitchClassMapperChordExpansionMode"
+  XREFS: FUN_01195ab0@01195beb; FUN_01195ab0@01195b48;
+02025db5	[Pitch]	"MUPitchClassMapperChordContractionMode"
+  XREFS: FUN_01195cf0@01195e2e; FUN_01195cf0@01195d8b;
+02025e04	[Pitch]	"MUPitchMapper"
+  XREFS: FUN_01197950@01197a01; FUN_01197ac0@01197b71; FUN_01197c30@01197dc8; FUN_01197e80@01198018; FUN_011970b0@01197161; FUN_01197390@01197441; FUN_01197220@011972d1; FUN_01197500@011975b1; FUN_011977e0@01197891; FUN_01197670@01197721; FUN_01196dd0@01196e81; FUN_01196c60@01196d11; FUN_01196f40@01196ff1; FUN_01196100@01196b8a; FUN_01196100@01196ae0; FUN_01196100@01196a36; FUN_01196100@0119698c; FUN_01196100@011968e2; FUN_01196100@01196838; FUN_01196100@0119678e; FUN_01196100@011966e4; FUN_01196100@0119663a; FUN_01196100@01196590; FUN_01196100@011964e6; FUN_01196100@0119643c; FUN_01196100@01196392; FUN_0180c810@0180c843; FUN_01803d20@01803ea7; FUN_01803d20@01803d7b; FUN_010e0eb0@010e0fb1;
+02025e2c	[Pitch]	"_minPitchIndex"
+  XREFS: FUN_01196f40@01196f78; FUN_011d4100@011d4138;
+02025e3b	[Pitch]	"_maxPitchIndex"
+  XREFS: FUN_011970b0@011970e8; FUN_011d4270@011d42a8;
+02025ed0	[Pitch]	"_lowestPitchDegreeMask"
+  XREFS: FUN_01197950@01197988;
+02025efc	[Pitch]	"_highestPitchDegreeMask"
+  XREFS: FUN_01197ac0@01197af8;
+02025f39	[Pitch]	"MUPitchMatrixPeak"
+  XREFS: FUN_01199080@01199176; FUN_01199360@01199456; FUN_01199230@01199284; FUN_01199230@011992b5; FUN_01198990@01198a41; FUN_01198820@011988d1; FUN_01198b00@01198bb1; FUN_01198de0@01198e91; FUN_01198c70@01198d21; FUN_01198f50@01198fa4; FUN_01198f50@01198fd5; FUN_01198120@011985e4; FUN_01198120@0119853a; FUN_01198120@01198490; FUN_01198120@011983e6; FUN_01198120@0119833c; FUN_01198120@01198292; FUN_011986b0@01198761; FUN_01432620@01432653; FUN_010e1090@010e115f;
+02025f5a	[pitch]	"pitchPosIndex"
+  XREFS: FUN_01198820@01198858;
+02025fbe	[Pitch]	"MUPitchRunMapper"
+  XREFS: FUN_011999d0@01199b46; FUN_01199860@01199911; FUN_01199590@011995c3; FUN_01199670@011997a4; FUN_01199670@011996fa; FUN_010e1230@010e131b;
+02025fea	[Pitch]	"MUPitchRunMapperScaleScope"
+  XREFS: FUN_011999d0@01199b01; FUN_011999d0@01199a5e;
+020260b3	[Pitch]	"_alternative1Pitch"
+  XREFS: FUN_0119b8c0@0119b8f8;
+020260c6	[Pitch]	"_alternative2Pitch"
+  XREFS: FUN_0119ba30@0119ba68;
+020261c3	[tempo]	"_tempoRegions"
+  XREFS: FUN_0119d200@0119d25d;
+020261e4	[tempo]	"_tempoJumpQuarters"
+  XREFS: FUN_0119d2f0@0119d342;
+02026307	[Pitch]	"_polyPitchCentMatrixForSum"
+  XREFS: FUN_0119def0@0119e5e3;
+02026322	[Pitch]	"_polyPitchCentMatricesForRawTracks"
+  XREFS: FUN_0119def0@0119e659;
+0202636a	[filter]	"_filteredSpectrogramAmpEnvelopesForRawTracks"
+  XREFS: FUN_0119def0@0119e745;
+020263d0	[Pitch]	"_polyPitchCentMatrixForDisplay"
+  XREFS: FUN_0119def0@0119e8a7;
+020266f4	[Pitch]	"_tuningPitchAnchorIsSuggestedRelevant"
+  XREFS: FUN_011a6790@011a6a7f;
+02026744	[stretch]	"_stretchingIsSuggestedRelevant"
+  XREFS: FUN_011a6790@011a6b6b;
+02026803	[Pitch]	"_westernStandardPitchIndexOffset"
+  XREFS: FUN_011a7e10@011a7fb9;
+0202689c	[quality]	"_qualityInFifthChain"
+  XREFS: FUN_011a9420@011a9458;
+020268b1	[quality]	"_qualityForModeEvaluation"
+  XREFS: FUN_011a9590@011a95c8;
+020268cb	[Pitch]	"_detectedPitch"
+  XREFS: FUN_011a9700@011a9738;
+020268eb	[filter]	"_filteredScrubTargetTime"
+  XREFS: FUN_011a9e10@011a9e48;
+02026904	[filter]	"_filteredPerformanceTimeDelta"
+  XREFS: FUN_011a9f80@011a9fb8;
+0202696b	[phase]	"_phaseData"
+  XREFS: FUN_011ab710@011ab748;
+020269dc	[DNA]	"MUSpectralPointDNA3"
+  XREFS: FUN_0181dfb0@0181dfe3; FUN_011ae900@011ae94e; FUN_011aeb80@011aebce; FUN_011aea10@011aeac1; FUN_011aec90@011aed41; FUN_011ae1d0@011ae281; FUN_011ae060@011ae111; FUN_011ae340@011ae3f1; FUN_011ae4b0@011ae561; FUN_011ae790@011ae841; FUN_011ae620@011ae6d1; FUN_011ad930@011ad9e1; FUN_011adaa0@011adb51; FUN_011add80@011ade31; FUN_011adc10@011adcc1; FUN_011adef0@011adfa1; FUN_011ad090@011ad141; FUN_011ad370@011ad421; FUN_011ad200@011ad2b1; FUN_011ad4e0@011ad591; FUN_011ad7c0@011ad871; FUN_011ad650@011ad701; FUN_011ac170@011acf95; FUN_011ac170@011aceeb; FUN_011ac170@011ace41; FUN_011ac170@011acd97; FUN_011ac170@011acced; FUN_011ac170@011acc43; FUN_011ac170@011acb99; FUN_011ac170@011acaef; FUN_011ac170@011aca45; FUN_011ac170@011ac99b; FUN_011ac170@011ac8f1; FUN_011ac170@011ac847; FUN_011ac170@011ac79d; FUN_011ac170@011ac6f3; FUN_011ac170@011ac649; FUN_011ac170@011ac59f; FUN_011ac170@011ac4f5; FUN_010e4d40@010e4e6d;
+02026b2c	[envelope]	"_envelopeType"
+  XREFS: FUN_011af9e0@011afadc;
+02026c42	[spectrum]	"_spectrumDiffPowEnvelope"
+  XREFS: FUN_011b1650@011b16b1;
+02026c5b	[formant]	"_formantEnvelope"
+  XREFS: FUN_011b1740@011b17a1;
+02026ce7	[Formant]	"_appliedEqualizerFormantFactors"
+  XREFS: FUN_011b1ad0@011b1b22;
+02026d07	[Pitch]	"_equalizerBandsPitchOffset"
+  XREFS: FUN_011b1bb0@011b1c02;
+02026d22	[Pitch]	"_overallSpectrumFundamentalPitchIndex"
+  XREFS: FUN_011afb50@011b0684;
+02026d9a	[Phase]	"_synthPhases"
+  XREFS: FUN_011afb50@011b08d2;
+02026e17	[Formant]	"_appliedEqualizerFormantFactorsAreValid"
+  XREFS: FUN_011afb50@011b0c0c;
+02026e96	[spectrum]	"_spectrumType"
+  XREFS: FUN_011b3c80@011b3d7c; FUN_011b2370@011b2471;
+02026ee4	[Formant]	"_needsProcessFormants"
+  XREFS: FUN_011b2e50@011b33d6;
+02026efa	[Formant]	"_needsProcessFormantsIsValid"
+  XREFS: FUN_011b2e50@011b344c;
+02026f5d	[formant]	"_formantFactors"
+  XREFS: FUN_011b4090@011b40e2;
+02027080	[Pitch]	"_joinsPitches"
+  XREFS: FUN_011b4c00@011b4ea4;
+0202708e	[Phase]	"_joinsPhases"
+  XREFS: FUN_011b4c00@011b4f1a;
+020270c1	[Formant]	"_joinsFormants"
+  XREFS: FUN_011b4c00@011b507c;
+020270d0	[pitch]	"_pitchTransitionDuration"
+  XREFS: FUN_011b4c00@011b50f2;
+02027106	[formant]	"_formantTransitionDuration"
+  XREFS: FUN_011b4c00@011b51de;
+0202783f	[tempo]	"_tempoPeriods"
+  XREFS: FUN_011c08d0@011c0935;
+02027876	[tempo]	"_tempoCourseStartIndex"
+  XREFS: FUN_011c0bf0@011c0c28;
+0202789d	[beat]	"_beatMatchingQuality"
+  XREFS: FUN_011c16f0@011c1728;
+020278fd	[Detect]	"MUTempoDetectionRange"
+  XREFS: FUN_010e8950@010e8a44; FUN_011c2920@011c29d1; FUN_011c2bd0@011c2cc4; FUN_011c2a90@011c2b0e; FUN_011c2d80@011c2dfe; FUN_011c2ec0@011c2fb6; FUN_011c2320@011c2567; FUN_011c2320@011c24bd; FUN_011c2320@011c2413; FUN_011c2240@011c2273; FUN_011c27b0@011c2861; FUN_011c2640@011c26f1;
+02027920	[tempo]	"_tempoRegion"
+  XREFS: FUN_011c2bd0@011c2c33;
+0202792d	[tempo]	"_tempoCourse"
+  XREFS: FUN_011c3ac0@011c3b23;
+02027982	[beat]	"_beatSequence"
+  XREFS: FUN_011c4900@011c4938;
+020279e1	[quality]	"_quality"
+  XREFS: FUN_00afcc80@00afcd89; FUN_012357d0@01235808; FUN_0188b150@0188b188; FUN_011c51a0@011c51d8;
+02027a09	[window]	"_windowOverlapForTrueFreqs"
+  XREFS: FUN_011c70b0@011c70e8;
+02027a3b	[Pitch]	"_monoPitchMatrixTimeSliceSampleCount"
+  XREFS: FUN_011c7500@011c7538;
+02027a60	[Pitch]	"_monoPitchMatrixTimeSliceTimeDistance"
+  XREFS: FUN_011c7670@011c76a8;
+02027ab7	[Phase]	"_expectedPhaseOffsets"
+  XREFS: FUN_011c7eb0@011c7ee8;
+02027cd2	[pitch]	"_pitchModulationSource"
+  XREFS: FUN_011cafa0@011caffd;
+0202828a	[pitch]	"_pitchDistanceWeight"
+  XREFS: FUN_011d81d0@011d8208;
+020283c8	[pitch]	"_pitchConsistency"
+  XREFS: FUN_011d9ee0@011d9f18;
+020283da	[tempo]	"_temporaryValue"
+  XREFS: FUN_011da050@011da088;
+0202841d	[Pitch]	"_averagePitchConsistency"
+  XREFS: FUN_011dab20@011dab58;
+0202846d	[relevance]	"_relevanceRank"
+  XREFS: FUN_011dcd10@011dcd48;
+0202847c	[relevance]	"_relevanceWeight"
+  XREFS: FUN_011dce80@011dceb8;
+020284a4	[vibrato]	"_vibratoQuality"
+  XREFS: FUN_011dd2d0@011dd308;
+020284b4	[portamento]	"_portamentoQuality"
+  XREFS: FUN_011dd440@011dd478;
+020284c7	[pitch]	"_pitchCurveSlope"
+  XREFS: FUN_011dd5b0@011dd5e8;
+020284d8	[pitch]	"_pitchCurveDeflection"
+  XREFS: FUN_011dd720@011dd758;
+0202850f	[beat]	"_beatingQuality"
+  XREFS: FUN_011ddce0@011ddd18;
+0202851f	[beat]	"_beatingFrequency"
+  XREFS: FUN_011dde50@011dde88;
+02028531	[beat]	"_beatingPhase"
+  XREFS: FUN_011ddfc0@011ddff8;
+0202853f	[separation]	"_separationQuality"
+  XREFS: FUN_011de130@011de168;
+02028552	[attack]	"_attackAssignmentQuality"
+  XREFS: FUN_011de2a0@011de2d8;
+020285fd	[harmonic]	"_harmonicMagnitudes"
+  XREFS: FUN_011dedc0@011dedf8;
+02028668	[attack]	"_attackItem"
+  XREFS: FUN_011df650@011df6b5; FUN_01889f70@01889fd3;
+0202869e	[harmonic]	"_harmonicPaths"
+  XREFS: FUN_011e0bf0@011e0c55;
+020286ad	[harmonic]	"_subharmonicPaths"
+  XREFS: FUN_011e0ee0@011e0f45;
+020286bf	[harmonic]	"_harmonicRatioQuality"
+  XREFS: FUN_011e2bd0@011e2c08; FUN_011e1370@011e13a8; FUN_011e43e0@011e4418;
+020286d5	[envelope]	"_envelopeRatioQuality"
+  XREFS: FUN_011e2d40@011e2d78; FUN_011e14e0@011e1518; FUN_011e4550@011e4588;
+020286eb	[pitch]	"_pitchCommonFateDeviation"
+  XREFS: FUN_011e2eb0@011e2ee8; FUN_011e1650@011e1688; FUN_011e46c0@011e46f8;
+02028705	[attack]	"_attackCommonFateDeviation"
+  XREFS: FUN_011e3020@011e3058; FUN_011e17c0@011e17f8; FUN_011e4830@011e4868;
+020287d9	[harmonic]	"_harmonicHitQuality"
+  XREFS: FUN_011e4270@011e42a8;
+02028811	[harmonic]	"_subharmonicChains"
+  XREFS: FUN_011e55a0@011e5605;
+0202895d	[pitch]	"_pitchClassId"
+  XREFS: FUN_011e7ee0@011e7f18;
+020289ff	[Pitch]	"_fundamentalPitchClass"
+  XREFS: FUN_011e9d40@011e9d78;
+02028eb8	[Pitch]	"setPitchCenter"
+  XREFS: FUN_012591f0@01259397;
+02028ec7	[Formant]	"setFormantOffset"
+  XREFS: FUN_012591f0@01259418;
+02028ef2	[MIDI]	"MIDI-Synth at %@"
+  XREFS: FUN_012a3fa0@012a402e;
+02029003	[FFT]	"Inappropriate table size for FFT (%I)!"
+  XREFS: FUN_012b98e0@012b9a76; FUN_012b96f0@012b9886;
+020290eb	[Pitch]	"setPitchTransitionDuration"
+  XREFS: FUN_012df270@012df35e;
+02029106	[Formant]	"setFormantTransitionDuration"
+  XREFS: FUN_012df270@012df3df;
+020291de	[Pitch]	"%p::_microtonalPitchSystem"
+  XREFS: FUN_01323a40@01323d55; FUN_01324620@01325606;
+02029388	[separation]	"Cannot create separation folder at %@"
+  XREFS: FUN_01394a40@01394c08;
+020295f3	[harmonic]	"_harmonics"
+  XREFS: FUN_01415bf0@01415c28;
+02029835	[Detect]	"MUElementAnalyzer::findPolyphonicDetectionItems(): propertyPoint->_timeSliceIndex > timeSliceCount"
+  XREFS: FUN_01447a70@0144f75c;
+02029990	[Pitch]	"MUAudioSourcePrincipalItem::redetectMonophonicPitchAtSuggestedPitchAndUpdatePotentialItem(): _prope...
+  XREFS: FUN_014ea210@014ea2ab;
+02029a0c	[vibrato]	"_vibratoStartSampleIndex"
+  XREFS: FUN_014edfa0@014ee143;
+02029a25	[vibrato]	"_vibratoSampleCount"
+  XREFS: FUN_014edfa0@014ee1b9;
+02029a39	[vibrato]	"_vibratoPeriodSampleCount"
+  XREFS: FUN_014edfa0@014ee22f;
+02029aaf	[Pitch]	"PitchSystem %@ %@ (A=%.0f Hz):\n"
+  XREFS: FUN_014fc970@014fca2e;
+02029b19	[Pitch]	"getPitch"
+  XREFS: FUN_01507980@015079c9;
+02029b39	[Pitch]	"_openStringPitchIndexes"
+  XREFS: FUN_0151c6f0@0151c728;
+02029b51	[pitch]	"_pitchIndexes"
+  XREFS: FUN_0151ccf0@0151cd42; FUN_01795eb0@01795f02;
+02029c62	[Pitch]	"_weightedPitchOffsetFromStandard"
+  XREFS: FUN_01520f50@01520f88;
+02029c83	[Pitch]	"getPitchForPitchIndex"
+  XREFS: FUN_01521110@01521197;
+02029c99	[Pitch]	"getClosestPitchIndexForPitch"
+  XREFS: FUN_01521110@01521215;
+02029cb6	[Pitch]	"getClosestScalePitchIndexForPitch"
+  XREFS: FUN_01521110@01521293;
+02029cd8	[Pitch]	"doesPitchIndexBelongToScale"
+  XREFS: FUN_01521110@01521311;
+02029d07	[beat]	"_beatsPerBar"
+  XREFS: FUN_01526d00@01526ed5;
+02029d33	[beat]	"_beatsPerQuarter"
+  XREFS: FUN_01526d00@01527037;
+02029d5a	[beat]	"_beatAtPulseAnchor"
+  XREFS: FUN_01526d00@01527123;
+02029de1	[Pitch]	"_totalPitchDelta"
+  XREFS: FUN_0154f7b0@0154f7e8;
+02029e02	[Pitch]	"_totalPitchCount"
+  XREFS: FUN_0154fa90@0154fac8;
+0202a0ba	[phase]	"MUSpectralTimeSlice::getPhaseData(): no phase data"
+  XREFS: FUN_015c4e40@015c582b; FUN_015c4e40@015c5bc5; FUN_015c6310@015c6333; FUN_015c6700@015c6a45;
+0202a236	[filter]	"filter2DimensionalMatrixHorizontallyWithFIRWithConstantSizeHannWindow: filterSize too big!"
+  XREFS: FUN_016039b0@016039fa;
+0202a291	[filter]	"filterMatrixUsingVectors : filterIndex >= fineStepHannWindowsCount !"
+  XREFS: FUN_01604f80@016053fc; FUN_01604f80@0160527f;
+0202a68a	[filter]	"false && \"audio source filter contains a persistent ID not used in the current graph\""
+  XREFS: FUN_0167bc80@0167f5ba;
+0202aafa	[tempo]	"tempoEntry != NULL"
+  XREFS: FUN_01684680@016849a6; FUN_01684680@01684d40; FUN_01684680@01684b9a;
+0202ab0d	[tempo]	"false && \"tempo reader returned non-ascending quarter positions\""
+  XREFS: FUN_01684680@01684d34; FUN_01684680@01684dae;
+0202ab4e	[tempo]	"false && \"tempo reader returned non-ascending time positions\""
+  XREFS: FUN_01684680@01684e98; FUN_01684680@01684df3;
+0202ab8c	[tempo]	"tempoEntriesCount >= 0"
+  XREFS: FUN_01684680@01684742;
+0202aba3	[tempo]	"tempoEntriesCount != 1"
+  XREFS: FUN_01684680@01684739;
+0202ae97	[tempo]	"false && \"changing playback regions for playback renderers requires temporarily disabling renderin...
+  XREFS: FUN_0168ea70@0168eb28; FUN_0168e5c0@0168e69d;
+0202b8ef	[stretch]	"_stretchingReflectsTempo"
+  XREFS: FUN_0169aa50@0169aa88;
+0202b99f	[stretch]	"_stretchFactor"
+  XREFS: FUN_0169b3b0@0169b3e8;
+0202be32	[Pitch]	"_mustSyncPitchSystemsAfterImportingPreM41Archive"
+  XREFS: FUN_016a5360@016a5567;
+0202d348	[tempo]	"(0 <= index) && (index < _tempoChanges->getCount())"
+  XREFS: FUN_0172e710@0172e736; FUN_0172e710@0172e76f;
+0202d52b	[pitch]	"_pitchSystemHint"
+  XREFS: FUN_017330a0@01733219;
+0202d53c	[tempo]	"_tempoChanges"
+  XREFS: FUN_017333d0@01733422;
+0202d659	[Pitch]	"_tuningPitchAnchor"
+  XREFS: FUN_0176d660@0176daad;
+0202d66c	[Pitch]	"_westernStandardPitchIndexAnchor"
+  XREFS: FUN_0176d660@0176db23;
+0202d68d	[Pitch]	"_suggestedMinPitch"
+  XREFS: FUN_0176d660@0176dc0f;
+0202d6a0	[Pitch]	"_suggestedMaxPitch"
+  XREFS: FUN_0176d660@0176dc85;
+0202d6b3	[Pitch]	"_suggestedMinPitchIndex"
+  XREFS: FUN_0176d660@0176dcfb;
+0202d6cb	[Pitch]	"_suggestedMaxPitchIndex"
+  XREFS: FUN_0176d660@0176dd71;
+0202d6ec	[stretch]	"_stretching"
+  XREFS: FUN_017770f0@0177715d; FUN_017770f0@01777189; FUN_01777580@017775bc; FUN_0176e1e0@0176e241;
+0202d721	[Pitch]	"_lowestStretchedPitch"
+  XREFS: FUN_017770f0@0177734a;
+0202d737	[Pitch]	"_highestStretchedPitch"
+  XREFS: FUN_017770f0@017773c0;
+0202d7c1	[Pitch]	"getPitchRange"
+  XREFS: FUN_01782d20@01783290;
+0202d812	[Pitch]	"MULoopComponentPitchRangeDummyEnumRegistrationClass"
+  XREFS: FUN_01782b70@01782c2f; FUN_01785110@017852c8; FUN_01784fe0@0178503e; FUN_01784ee0@01784f13;
+0202d8a2	[Detect]	"_performanceForDetectionQuality"
+  XREFS: FUN_01795dc0@01795e1a;
+0202d90e	[pitch]	"_pitchSystemSequence"
+  XREFS: FUN_017970a0@017970fa;
+0202d923	[beat]	"_beatDivision"
+  XREFS: FUN_017964f0@017968fb;
+0202d931	[beat]	"_beatCount"
+  XREFS: FUN_017964f0@01796971;
+0202d982	[pitch]	"_pitchClassWeightsAtBeats"
+  XREFS: FUN_01797430@01797482;
+0202d99c	[Pitch]	"_smoothedPitchClassWeightsAtBeats"
+  XREFS: FUN_01797510@01797562;
+0202dacb	[pitch]	"_pitchCoveragePos"
+  XREFS: FUN_017999f0@01799a28;
+0202dadd	[pitch]	"_pitchCoverageNeg"
+  XREFS: FUN_01799b60@01799b98;
+0202db3c	[Pitch]	"_bassMatchesLowestPitchIndex"
+  XREFS: FUN_0179a290@0179a2c8;
+0202dc8a	[beat]	"_beatType"
+  XREFS: FUN_017c5970@017c5a79;
+0202e289	[Pitch]	"_averagePitchIndex"
+  XREFS: FUN_017d66e0@017d6ab7;
+0202e347	[pitch]	"_pitchMapperStorage"
+  XREFS: FUN_017e7f70@017e7fd3;
+0202e35b	[Pitch]	"MUPitchMapperMappingStorage"
+  XREFS: FUN_01813190@01813284; FUN_01813050@018130ce; FUN_01813340@018133f1; FUN_018134b0@01813561; FUN_01813790@01813841; FUN_01813620@018136d1; FUN_01812970@01812a21; FUN_01812860@018128ae; FUN_01812bf0@01812ca1; FUN_01812ae0@01812b2e; FUN_01812d60@01812dde; FUN_01812ea0@01812f94; FUN_018121f0@018122a1; FUN_018120e0@0181212e; FUN_01812360@018123ae; FUN_018125e0@0181262e; FUN_01812470@01812521; FUN_018126f0@018127a1; FUN_01811960@018119ae; FUN_01811be0@01811c2e; FUN_01811a70@01811b21; FUN_01811cf0@01811da1; FUN_01811f70@01812021; FUN_01811e60@01811eae; FUN_018111e0@0181122e; FUN_018112f0@018113a1; FUN_01811570@01811621; FUN_01811460@018114ae; FUN_018117f0@018118a1; FUN_018116e0@0181172e; FUN_01810ba0@01810f82; FUN_01810ba0@01810ed8; FUN_01810ba0@01810e2e; FUN_01810ba0@01810d84; FUN_0180c360@0180c458; FUN_0180c700@0180c733; FUN_017e7e30@017e7e79;
+0202e3aa	[Phase]	"setSynthPhases"
+  XREFS: FUN_017eb5e0@017eb86c;
+0202e40c	[Pitch]	"MUPitchMapperEntry"
+  XREFS: FUN_018108c0@01810971; FUN_01810a30@01810ae1; FUN_01810360@01810411; FUN_018105e0@01810691; FUN_018104d0@0181051e; FUN_01810750@01810801; FUN_0180ff60@0181026e; FUN_0180ff60@018101c4; FUN_0180ff60@0181011a; FUN_0180ff60@01810070; FUN_0180cca0@0180ccd3; FUN_0180c150@0180c244;
+0202e41f	[Pitch]	"MUPitchMapperOption"
+  XREFS: FUN_01813050@01813099; FUN_01812d60@01812da9; FUN_0180bea0@0180bff2; FUN_0180f890@0180f941; FUN_0180fb70@0180fc21; FUN_0180fa00@0180fab1; FUN_0180fdf0@0180fea1; FUN_0180fce0@0180fd2e; FUN_0180f160@0180f211; FUN_0180f2d0@0180f381; FUN_0180f5b0@0180f661; FUN_0180f440@0180f4f1; FUN_0180f720@0180f7d1; FUN_0180e8c0@0180e971; FUN_0180eba0@0180ec51; FUN_0180ea30@0180eae1; FUN_0180ed10@0180edc1; FUN_0180eff0@0180f0a1; FUN_0180ee80@0180ef31; FUN_0180e1f0@0180e23e; FUN_0180e300@0180e3b1; FUN_0180e5e0@0180e691; FUN_0180e470@0180e521; FUN_0180e750@0180e801; FUN_0180d2e0@0180e0f3; FUN_0180d2e0@0180e049; FUN_0180d2e0@0180df9f; FUN_0180d2e0@0180def5; FUN_0180d2e0@0180de4b; FUN_0180d2e0@0180dda1; FUN_0180d2e0@0180dcf7; FUN_0180d2e0@0180dc4d; FUN_0180d2e0@0180dba3; FUN_0180d2e0@0180daf9; FUN_0180d2e0@0180da4f; FUN_0180d2e0@0180d9a5; FUN_0180d2e0@0180d8fb; FUN_0180d2e0@0180d851; FUN_0180d2e0@0180d7a7; FUN_0180d2e0@0180d6fd; FUN_0180d2e0@0180d653; FUN_0180cf90@0180cfc3;
+0202e433	[Pitch]	"MUPitchMapperWeight"
+  XREFS: FUN_01813900@01813b11; FUN_01813900@01813a67; FUN_01813900@018139bd; FUN_01813bd0@01813d59; FUN_01813f80@01814031; FUN_01813e10@01813ec1; FUN_0180d160@0180d193; FUN_0180c530@0180c5fa;
+0202e516	[Pitch]	"_lowestPitchIndexMatchesMask"
+  XREFS: FUN_0180f5b0@0180f5e8;
+0202e562	[Pitch]	"_highestPitchIndexMatchesMask"
+  XREFS: FUN_0180fa00@0180fa38;
+0202e5ad	[Pitch]	"_sourcePitchIndex"
+  XREFS: FUN_01810360@01810398;
+0202e5bf	[Pitch]	"_targetPitchIndexOptions"
+  XREFS: FUN_018105e0@01810618;
+0202e5e8	[Pitch]	"_targetPitchIndex"
+  XREFS: FUN_01810a30@01810a68;
+0202e619	[Pitch]	"entriesPerPitchIndex"
+  XREFS: FUN_01811a70@01811aa8;
+0202e638	[Pitch]	"addressedTargetPitchIndexes"
+  XREFS: FUN_018121f0@01812228;
+0202e654	[Pitch]	"addressedTargetPitchClasses"
+  XREFS: FUN_01812470@018124a8;
+0202e67b	[Pitch]	"targetPitchClasses"
+  XREFS: FUN_01812970@018129a8;
+0202e6ac	[Pitch]	"_lowestPitchMustMatch"
+  XREFS: FUN_018134b0@018134e8;
+0202e6c2	[Pitch]	"_highestPitchMustMatch"
+  XREFS: FUN_01813620@01813658;
+0202e6d9	[Pitch]	"MUPitchMapperCriterion"
+  XREFS: FUN_01813bd0@01813d14; FUN_01813bd0@01813c6e;
+0202e81b	[pitch]	"_pitchCenterQuality"
+  XREFS: FUN_0187f0d0@0187f108;
+0202e8c0	[pitch]	"_pitchClassWeights"
+  XREFS: FUN_01881950@01881988;
+0202ee19	[Pitch]	"MULoopComponentPitchRange"
+  XREFS: FUN_01785110@01785283; FUN_01785110@017851e0;
+0202eece	[Pitch]	"_rootPitchClass"
+  XREFS: FUN_018e5570@018e55a8;
+0202eede	[Pitch]	"_lowestNotePitchClass"
+  XREFS: FUN_018e56e0@018e5718;
+0202f184	[Pitch]	"handleSwitchDefaultWesternStandardPitchTitleSystem"
+  XREFS: FUN_0191a310@0191a34c;
+0202f310	[Pitch]	"handleSelectPitchTool"
+  XREFS: FUN_0198aca0@0198b929;
+0202f326	[Formant]	"handleSelectFormantTool"
+  XREFS: FUN_0198aca0@0198b9a7;
+0202f3ad	[Pitch]	"handleResetAllPitchRelatedChanges"
+  XREFS: FUN_0198aca0@0198be93;
+0202f3cf	[Pitch]	"handleResetPitchCenter"
+  XREFS: FUN_0198aca0@0198bf11;
+0202f3e6	[Pitch]	"handleResetPitchModulation"
+  XREFS: FUN_0198aca0@0198bf8f;
+0202f401	[Pitch]	"handleResetPitchDrift"
+  XREFS: FUN_0198aca0@0198c00d;
+0202f417	[Pitch]	"handleResetPitchTransition"
+  XREFS: FUN_0198aca0@0198c08b;
+0202f432	[Formant]	"handleResetFormant"
+  XREFS: FUN_0198aca0@0198c109;
+0202f445	[Formant]	"handleResetFormantTransition"
+  XREFS: FUN_0198aca0@0198c187;
+0202f55a	[Pitch]	"handleAddHugeRandomOffsetToPitchCenter"
+  XREFS: FUN_0198aca0@0198c673;
+0202f581	[Pitch]	"handleAddMidRandomOffsetToPitchCenter"
+  XREFS: FUN_0198aca0@0198c6f1;
+0202f5a7	[Pitch]	"handleAddLittleRandomOffsetToPitchCenter"
+  XREFS: FUN_0198aca0@0198c76f;
+0202f66d	[Detect]	"handleSelectDefaultDetectionMode"
+  XREFS: FUN_0198aca0@0198cae1;
+0202f6f2	[Pitch]	"handleSelectElementsOfSamePitchClass"
+  XREFS: FUN_0198aca0@0198ccd9;
+0202f717	[Pitch]	"handleSelectElementsOfSamePitchIndex"
+  XREFS: FUN_0198aca0@0198cd57;
+0202fac1	[Pitch]	"_chordPitchSystemCache"
+  XREFS: FUN_019ff370@019ff3a8;
+0202fad8	[Pitch]	"_chordScalePitchSystemCache"
+  XREFS: FUN_019ff5f0@019ff628;
+0202faf4	[Pitch]	"_gridPitchSystemCache"
+  XREFS: FUN_01a000e0@01a00143;
+0202fb0a	[Pitch]	"_timePitchSystem"
+  XREFS: FUN_01a003d0@01a00433;
+0202fb2d	[Pitch]	"MUDetectionPitchIndexAssignmentInspector"
+  XREFS: FUN_01a170a0@01a17194; FUN_01a173a0@01a17451; FUN_01a17270@01a172be; FUN_01a16f40@01a16fbe; FUN_01a152a0@01a15413; FUN_01a03bf0@01a03cad; FUN_01a05640@01a05673;
+0202fbb1	[Detect]	"handleToggleDetectsSlashChords"
+  XREFS: FUN_01a65460@01a656ef;
+0202fbd0	[Detect]	"handleToggleDetectsChordExtensions"
+  XREFS: FUN_01a65460@01a6576d;
+0202fdd2	[Pitch]	"handleSetIntervalCentForSelectedPitchIndex"
+  XREFS: FUN_01ad0ca0@01ad1103;
+0202ff88	[Pitch]	"handleSetPitchDisplayMode"
+  XREFS: FUN_01ad0ca0@01ad18e3;
+0202ffa2	[Pitch]	"handleSetWesternStandardPitchIndexOffsetForPitchIndexByAssignmentOffset"
+  XREFS: FUN_01ad0ca0@01ad1961;
+02030045	[Detect]	"handleToggleApplyDetectionToScale"
+  XREFS: FUN_01ad0ca0@01ad1b59;
+02030067	[detect]	"handleRedetectScale"
+  XREFS: FUN_01ad0ca0@01ad1bd7;
+0203007b	[Detect]	"handleToggleDetectionInsertsChromaticIntervals"
+  XREFS: FUN_01ad0ca0@01ad1c55;
+020300aa	[Detect]	"handleToggleKeepDetectionFundamental"
+  XREFS: FUN_01ad0ca0@01ad1cd3;
+020300cf	[Detect]	"handleOpenDetectionOptionsPanel"
+  XREFS: FUN_01ad0ca0@01ad1d51;
+020300ef	[Pitch]	"handleSavePitchSystem"
+  XREFS: FUN_01ad0ca0@01ad1dcf;
+02030105	[Pitch]	"handleSelectPitchSystem"
+  XREFS: FUN_01ad0ca0@01ad1e4d;
+02030158	[Pitch]	"MUScaleRulerView::setPitchSystem(): PitchSystem must be MUScalePitchSystem!"
+  XREFS: FUN_01ad3e60@01ad3f05;
+02030274	[Pitch]	"handlePitchPopUpChanged"
+  XREFS: FUN_01b302d0@01b3088e;
+020304c3	[Formant]	"handleMakeRandomFormantMapping"
+  XREFS: FUN_01b5c650@01b5ca16;
+020305e1	[Detect]	"handleToggleDetectsChurchModes"
+  XREFS: FUN_01b8eb50@01b8efbd;
+02030600	[Detect]	"handleToggleDetectsDetailedModeChanges"
+  XREFS: FUN_01b8eb50@01b8f03b;
+0203068f	[Detect]	"MUDetectionSibilantRangeInspector"
+  XREFS: FUN_01b8d130@01b8d163; FUN_01ba5860@01ba59b5;
+0203095a	[harmonic]	"_harmonicIsSelected"
+  XREFS: FUN_01bdd7e0@01bdd818;
+020309e2	[spectrum]	"_spectrumEditType"
+  XREFS: FUN_01bde350@01bde451;
+02030a5a	[envelope]	"_envelope"
+  XREFS: FUN_01bdf990@01bdf9f3;
+02030ba2	[spectrum]	"_spectrumDiffPowEnvelopeView"
+  XREFS: FUN_01be1ec0@01be1f25;
+02030bbf	[formant]	"_formantEnvelopeView"
+  XREFS: FUN_01be21b0@01be2215;
+02030bf1	[spectrum]	"_spectrumDisplayGroup"
+  XREFS: FUN_01be26f0@01be2755;
+02030c31	[spectrum]	"_spectrumView"
+  XREFS: FUN_01be2fc0@01be3025;
+02030dd8	[Pitch]	"MUDetectionPitchCenterAssignmentInspector"
+  XREFS: FUN_01c188d0@01c1891e; FUN_01c18a00@01c18ab1; FUN_01c185a0@01c1861e; FUN_01c18700@01c187f4; FUN_01c318c0@01c318f3; FUN_01c15c90@01c15e03; FUN_01c2fd80@01c2fe3d;
+02031475	[Pitch]	"Editing Pitch"
+  XREFS: FUN_01c91010@01c915bb;
+020318e7	[window]	"type mismatch: 'window' should be a dictionary"
+  XREFS: FUN_01cd2c30@01cd616a;
+02031cb0	[filter]	"_filterQuality"
+  XREFS: FUN_01d4e050@01d4e151;
+02031ff5	[window]	"%@ is not able to be resized due to the windows min content size."
+  XREFS: FUN_01d8d8e0@01d8dbb6; FUN_01d8d8e0@01d8dcd3;
+02032772	[window]	"%@: window not connected."
+  XREFS: FUN_01e52c50@01e53093; FUN_01e51a60@01e520c0; FUN_01e4fcf0@01e50890;
+0203297c	[window]	"_windowBackgroundImage"
+  XREFS: FUN_01e7e040@01e7e09a;
+02390568	[sibilant]	"sibilantBalance"
+02390c00	[tempo]	"tempoEditorMenuIdentifier"
+023910d0	[pitch]	"pitchSnapMode"
+02391210	[detect]	"detectAfterTransfer"
+023916c0	[Detect]	"handleToggleDetectionEditor"
+02391700	[Detect]	"DetectionSeparationTool"
+02391c50	[Pitch]	"handleSelectElementsOfSamePitchIndex"
+02391c80	[Pitch]	"handleSelectElementsOfSamePitchClass"
+02392150	[Pitch]	"handleOpenQuantizePitchDialog"
+02392310	[Pitch]	"handleToggleShowPitchCurve"
+02392718	[Detect]	"Scale Detective"
+02392730	[Detect]	"handleToggleScaleDetectiveDisplayMode"
+02392800	[Pitch]	"handleResetAllPitchRelatedChanges"
+02392830	[Pitch]	"handleResetPitchCenter"
+02392850	[Pitch]	"handleResetPitchModulation"
+02392870	[Pitch]	"handleResetPitchDrift"
+02392890	[Pitch]	"handleResetPitchTransition"
+023928b0	[Formant]	"handleResetFormant"
+023928d0	[Formant]	"handleResetFormantTransition"
+02392a30	[Pitch]	"handleAddHugeRandomOffsetToPitchCenter"
+02392a60	[Pitch]	"handleAddMidRandomOffsetToPitchCenter"
+02392a90	[Pitch]	"handleAddLittleRandomOffsetToPitchCenter"
+02392cc0	[Detect]	"handleDetectTimelineWithSelectionAndMerge"
+02392cf0	[Detect]	"handleDetectTimelineWithSelection"
+02392e00	[MIDI]	"Save As MIDI ..."
+02393030	[Detect]	"MDEditingDetectionDidStartNotification"
+02393060	[Detect]	"MDEditingDetectionDidStopNotification"
+02393450	[Detect]	"MDDetectionStateDidChangeNotification"
+02393730	[beat]	"beats"
+023944b8	[Formant]	"18 Formants"
+02394500	[Detect]	"Detection"
+02395030	[Detect]	"onDetectionTargetChanged"
+02395050	[Detect]	"MDEditingDetectionTarget"
+02395228	[Pitch]	"showsPitchCurve"
+023953a0	[Detect]	"MUDetectionEditorShowsReferenceMidiNotes"
+023953d0	[Detect]	"MUDetectionEditorUpdatesAudioImmediately"
+02395500	[Detect]	"MDFeaturePolyphonicDetection"
+023955e0	[tempo]	"Autoscroll temporarily deactivated"
+02395680	[detect]	"ConfirmtRedetectPanel"
+023956e0	[Detect]	"DetectionShowsNotes"
+023b02b0	[window]	"windowMenuIdentifier"
+023b06a0	[pitch]	"pitchToChordAdaptionIdentifier"
+023b0758	[attack]	"attackSpeed"
+023b0790	[Pitch]	"Pitch"
+023b0798	[pitch]	"pitchDrift"
+023b07a8	[Pitch]	"Pitch Drift"
+023b07b8	[pitch]	"pitchModulation"
+023b07d0	[Pitch]	"Pitch Modulation"
+023b07f0	[Formant]	"Formant"
+023b0830	[Detect]	"monoDetection"
+023b0840	[detect]	"detectionAmplitude"
+023b0860	[Detect]	"Detection Amplitude"
+023b0880	[detect]	"detectionActivation"
+023b08a0	[Detect]	"Detection Activation"
+023b08c0	[detect]	"detectionSeparation"
+023b08e0	[Detect]	"Detection Separation"
+023b0900	[detect]	"detectionPercussiveAttack"
+023b0920	[Detect]	"Detection Percussive Attack"
+023b0940	[Detect]	"DetectionQuarterAssignment"
+023b0960	[Detect]	"Detection Quarter Assignment"
+023b0980	[Pitch]	"DetectionPitchRelevance"
+023b09a0	[Pitch]	"Detection Pitch Relevance"
+023b09c0	[Detect]	"DetectionSibilantRange"
+023b09e0	[Detect]	"Detection Sibilant Range"
+023b0a40	[Pitch]	"DetectionPitchIndexAssignment"
+023b0a60	[Pitch]	"Detection Pitch Index Assignment"
+023b0a90	[Pitch]	"DetectionPitchCenterAssignment"
+023b0ab0	[Pitch]	"Detection Pitch Center Assignment"
+023b0b10	[Detect]	"MDDetectionAudioSource"
+023b0b40	[Detect]	"MDDetectionElement"
+023b0d90	[Pitch]	"Pitch Tools"
+023b0da0	[Pitch]	"handleSelectPitchTool"
+023b0dc0	[Pitch]	"Select Pitch Tool"
+023b0de0	[Pitch]	"handleSelectToolClassMUPitchTool"
+023b0e10	[Pitch]	"Select Pitch Modulation Tool"
+023b0e30	[Pitch]	"handleSelectToolClassMUPitchModulationTool"
+023b0e60	[Pitch]	"Select Pitch Drift Tool"
+023b0e80	[Pitch]	"handleSelectToolClassMUPitchDriftTool"
+023b0ea8	[Formant]	"Formant Tool"
+023b0ec0	[Formant]	"handleSelectFormantTool"
+023b0ee0	[Formant]	"Select Formant Tool"
+023b0f00	[Formant]	"handleSelectToolClassMUFormantTool"
+023b1200	[Detect]	"Select Detection Separation Type Tool"
+023b1230	[Detect]	"handleSelectToolClassMUDetectionSeparationTypeTool"
+023b12f0	[Detect]	"handleSelectToolClassMUDetectionActivationTool"
+023b1320	[Detect]	"Select Detection Separation Tool"
+023b1350	[Detect]	"handleSelectToolClassMUDetectionSeparationTool"
+023b1380	[Detect]	"Select Detection AttackAssignment Tool"
+023b13b0	[Detect]	"handleSelectToolClassMUDetectionAttackAssignmentTool"
+023b13f0	[Detect]	"Select Detection Amplitude Tool"
+023b1410	[Detect]	"handleSelectToolClassMUDetectionAmplitudeTool"
+023b1440	[Detect]	"Select Detection Quarter Assignment Tool"
+023b1470	[Detect]	"handleSelectToolClassMUDetectionQuarterAssignmentTool"
+023b14b0	[Pitch]	"Select Pitch Relevance Tool"
+023b14d0	[Pitch]	"handleSelectToolClassMUDetectionPitchRelevanceTool"
+023b1530	[Detect]	"handleSelectToolClassMUDetectionSibilantRangeTool"
+023b18a0	[Detect]	"DetectiveMiniIcon"
+023b1f70	[Detect]	"onStartEditingDetection"
+023b1f90	[Detect]	"onStopEditingDetection"
+023b2460	[Detect]	"onDetectionStateDidChanged"
+023b2700	[Detect]	"track.performance.isDetectionPerformance"
+023b2768	[detect]	"not detected"
+023b2830	[Detect]	"MDInspectorNamesDetection.gnui"
+023b29a0	[Detect]	"MUDetectionRenderSpectrumVolume"
+023b29c0	[Detect]	"MUDetectionRenderStyle"
+023b29e0	[Detect]	"DetectionCombiTool"
+023b2a10	[Detect]	"DetectionActivationTool"
+023b2a40	[Detect]	"DetectionSeparationTypeTool"
+023b2a60	[Detect]	"DetectionAttackAssignmentTool"
+023b2a90	[Detect]	"DetectionSibilantRangeTool"
+023b2ab0	[Detect]	"DetectionAmplitudeTool"
+023b2ad0	[Pitch]	"DetectionPitchIndexAssignmentTool"
+023b2b00	[Detect]	"DetectionQuarterAssignmentTool"
+023b2b20	[Pitch]	"DetectionPitchRelevanceTool"
+023b2b40	[Pitch]	"DetectionPitchCenterAssignmentTool"
+023b2b80	[Detect]	"MUDetectionCombiTool"
+023b2bd0	[Detect]	"MDDetectionEditorQuantizationPreviewChangedNotificatio"
+023b2c30	[Pitch]	"handleToggleCorrectPitchPreview"
+023b31b0	[Detect]	"MDUseDetectedTimelineAfterDetection"
+023b31e0	[Detect]	"MDStandalonRecoringDetection"
+023b34d8	[Pitch]	"PitchTool"
+023b34f0	[Pitch]	"PitchModulationTool"
+023b3508	[Pitch]	"PitchDriftTool"
+023b3518	[Formant]	"FormantTool"
+023b35f0	[detect]	"switch to detection mode"
+023b3710	[tempo]	"Multiply tempo by"
+023b38b0	[Detect]	"onDetectionStateChanged"
+023b3e60	[Detect]	"performance.isDetectionPerformance"
+023b3e90	[Detect]	"onStartEditionDetection"
+023b3ed0	[Detect]	"onEditingDetectionTargetNotification"
+023b3f40	[Detect]	"onDetectionRenderParametersChanged"
+023b3f70	[Detect]	"MUDetectionRenderParameterChanged"
+023b3fd0	[Formant]	"Formant Up"
+023b3fe0	[Formant]	"Formant Down"
+023b3ff0	[Detect]	"MDCopyDetection"
+023b40c0	[pitch]	"The effect of this slider is only audible with altered prelisten tempo or pitch."
+023b4160	[pitch]	"The effect of this slider is only audible with prelisten pitch with positive value."
+023b41c0	[pitch]	"The effect of this slider is only audible with prelisten pitch with negative value."
+023b4220	[Pitch]	"This slider has no audible effect until the Preview Formants or Pitch control is adjusted."
+023b4280	[Formant]	"Formant Center"
+023b4480	[Formant]	"Formant Character"
+023b4a90	[Pitch]	"MUEditorViewDidSelectPitchSnapNotification"
+023b4b20	[Pitch]	"handleSelectPitchSnapMode"
+023b4b40	[Pitch]	"handleSwitchPitchDisplayMode"
+023b4b60	[Pitch]	"handleSwitchPitchRulerTitleDisplayMode"
+023b4bc0	[Pitch]	"handleSetIntervalCentForSelectedPitchIndex"
+023b56e5	[Detect]	"=MUScaleRulerViewDisplayScaleDetection"
+023b572f	[Detect]	"?MDDetectionEditMode"
+023b57ed	[pitch]	"=MUPolyphonicUnpitchedDescriptionType"
+023b584c	[Pitch]	"=MUPitchSnapOff"
+023b585c	[Pitch]	"=MUPitchSnapSemitone"
+023b5871	[Pitch]	"=MUPitchSnapScale"
+023b5883	[Pitch]	"=MUPitchSnapScaleRelative"
+023b58f8	[Pitch]	"=MUPitchDisplayAbsolutePiano"
+023b5915	[Pitch]	"?MUPitchDisplayRelativePiano"
+023b5932	[Pitch]	"?MUPitchDisplayPitchLines"
+023b594c	[Pitch]	"?MUPitchDisplayChordNotes"
+023b5966	[Pitch]	"?MUPitchDisplayChordScaleNotes"
+023b5985	[Pitch]	"=MUPitchRulerDisplayTuningTitles"
+023b59a6	[Pitch]	"?MUPitchRulerDisplayModeTitles"
+023b5a23	[Detect]	"?MUDetectionEditorRenderOrignal"
+023b5a43	[Detect]	"?MUDetectionEditorRenderSpectrum"
+023b5fc0	[Detect]	"handleEditingDetectionChanged"
+023b6690	[tempo]	"tempo"
+023b66c0	[tempo]	"Approve $tempo File Tempo"
+023b6a00	[pitch]	"generator.pitchOffset"
+023b6a30	[formant]	"generator.formantOffset"
+023b6a60	[pitch]	"MDFeaturePolyphonicUnpitched"
+023b6b10	[Detect]	"handleCopyDetection"
+023b7020	[Pitch]	"PreviewPitchPrefixWithSpacer"
+023b7100	[Pitch]	"visiblePitchRangeLocation"
+023b7120	[Pitch]	"visiblePitchRangeLength"
+023b7260	[window]	"windowDidBecomeFirst"
+023b78a0	[Pitch]	"Toggle Correct Pitch Preview"
+023b78c0	[attack]	"Move attack to right peak"
+023b7910	[attack]	"Move attack to left peak"
+023b7c2a	[Detect]	"?MDDetectionSetup"
+023b7e80	[Detect]	"MDReplaceElementsAfterDetection"
+023b7ef0	[Detect]	"MDPluginTransferDetection"
+023b7f10	[detect]	"isRedetection"
+023b7fb0	[polyphonic]	"com.celemony.analyzerParameterSet.polyphonicWithDistinctAttacks"
+023b8120	[pitch]	"MUPolyphonicUnpitchedDescriptionType"
+023b8210	[Pitch]	"MDQuantizePitchController.gnui"
+023b82a0	[pitch]	"pitch"
+023b82a8	[pitch]	"pitchRange"
+023b82c0	[formant]	"formantRange"
+023b82f0	[Pitch]	"PitchRange"
+023b8300	[Formant]	"FormantRange"
+023b8390	[attack]	"attackAudioSourceComponent"
+023ce265	[quality]	"N5boost14operators_impl21less_than_comparable1IN4pace13PaceExceptionENS0_20equality_comparable1IS3_...
+023ce2f5	[quality]	"N5boost14operators_impl20equality_comparable1IN4pace13PaceExceptionENS0_16operators_detail10empty_b...
+023ce8c3	[quality]	"N5boost14operators_impl21less_than_comparable1IN4pace14MachineBindingENS0_20equality_comparable1IS3...
+023ce954	[quality]	"N5boost14operators_impl20equality_comparable1IN4pace14MachineBindingENS0_16operators_detail10empty_...
+023ceb01	[quality]	"N5boost14operators_impl21less_than_comparable1IN4pace9MachineIdENS0_20equality_comparable1IS3_NS0_1...
+023ceb8c	[quality]	"N5boost14operators_impl20equality_comparable1IN4pace9MachineIdENS0_16operators_detail10empty_baseIS...
+023d55eb	[Phase]	"?GNAudioPhaserEffectType"
+023d6398	[MIDI]	"InterMIDI"
+023d63a8	[MIDI]	"MIDI Solutions"
+023d64a8	[MIDI]	"MIDI the World"
+023d64c8	[MIDI]	"Micros 'N MIDI"
+023d7250	[MIDI]	"IBK MIDI"
+023d7db0	[MIDI]	"MIDI File Format"
+023d8600	[separation]	"separationCachePosixPath"
+023d8f50	[Pitch]	"midiPitchFraction"
+023d9227	[beat]	"0beat count"
+023d9af0	[attack]	"attackTime"
+023d9e38	[Phase]	"Phaser"
+023d9f48	[vibrato]	"Univibrato"
+023d9f60	[filter]	"filter"
+023da0b0	[MIDI]	"MIDI file contains varying tempo."
+023da0e0	[MIDI]	"MIDI file contains none or multiple tracks."
+023da140	[MIDI]	"Cannot read MIDI file."
+023db7f8	[Phase]	"Phase"
+023db800	[phase]	"phase"
+023db948	[attack]	"attackSide"
+023dbda0	[Pitch]	"delayPitchDetune"
+023dbdc0	[Pitch]	"delayCrystalPitch"
+0240b543	[Detect]	"A=MUDetectedDescriptionGrade"
+0240b60f	[Pitch]	"=MUPitchToChordTranspositionMode"
+0240b630	[Pitch]	"=MUPitchToChordInversionMode"
+0240b801	[Detect]	"=MULibraryFileKindDetectionReferences"
+  XREFS: FUN_018bc080@018bc124; FUN_01151740@011517eb;
+0240bee0	[Pitch]	"=MUDiatonicPitchRelationSystem"
+0240beff	[Pitch]	"?MUChromaticPitchRelationSystem"
+0240bfb6	[Pitch]	"=MUPitchApproachMapperChromaticScope"
+0240bfdb	[Pitch]	"=MUPitchApproachMapperKeyScaleScope"
+0240bfff	[Pitch]	"=MUPitchApproachMapperChordScaleScope"
+0240c025	[Pitch]	"=MUPitchApproachMapperLocalScaleScope"
+0240c04b	[Pitch]	"=MUPitchApproachMapperAvoidScaleScope"
+0240c071	[Pitch]	"=MUPitchApproachNoSlideMode"
+0240c08d	[Pitch]	"=MUPitchApproachTransitionSlideMode"
+0240c0b1	[Pitch]	"=MUPitchApproachBendingSlideMode"
+0240c0d2	[Pitch]	"=MUPitchClassMapperChromaticMode"
+0240c0f3	[Pitch]	"=MUPitchClassMapperScaleMode"
+0240c110	[Pitch]	"=MUPitchClassMapperChordNotesMode"
+0240c132	[Pitch]	"=MUPitchClassMapperSubChordMode"
+0240c152	[Pitch]	"=MUPitchClassMapperSubChordAndGenderMode"
+0240c17b	[Pitch]	"=MUPitchClassMapperChordScaleScope"
+0240c19e	[Pitch]	"=MUPitchClassMapperAvoidScaleScope"
+0240c1c1	[Pitch]	"=MUPitchClassMapperRemoveHighDegreesFromSource"
+0240c1f0	[Pitch]	"=MUPitchClassMapperRemoveLowDegreesFromSource"
+0240c21e	[Pitch]	"=MUPitchClassMapperAddChromaticExtensionsToTarget"
+0240c250	[Pitch]	"=MUPitchClassMapperAddDiatonicExtensionsToTarget"
+0240c281	[Pitch]	"=MUPitchClassMapperUserChordExpansionMode"
+0240c2ab	[Pitch]	"=MUPitchClassMapperRemoveHighDegreesFromTarget"
+0240c2da	[Pitch]	"=MUPitchClassMapperRemoveLowDegreesFromTarget"
+0240c308	[Pitch]	"=MUPitchClassMapperUserChordContractionMode"
+0240c407	[Pitch]	"?MUPitchRunMapperChromaticScope"
+0240c427	[Pitch]	"?MUPitchRunMapperKeyScaleScope"
+0240c446	[Pitch]	"?MUPitchRunMapperChordScaleScope"
+0240c467	[Pitch]	"?MUPitchRunMapperLocalScaleScope"
+0240c4ff	[Formant]	"=MUSpectrumShaperFormantEnvelopeType"
+0240c825	[Pitch]	"=MUTranspositionMapperMostPitchIndexSource"
+0240d060	[formant]	"formantOffset"
+0240d070	[attack]	"attackSlopeFactor"
+0240d090	[MIDI]	"MIDI-Synth <no port>"
+0240d210	[FFT]	"GNFFTException"
+0240d330	[formant]	"formantTransitionDuration"
+0240d520	[pitch]	"pitchSystem"
+0240d530	[Pitch]	"microtonalPitchSystem"
+0240dc38	[envelope]	"envelope"
+0240dc80	[pitch]	"com.celemony.analyzerParameterSet.polyphonicUnpitched"
+0240dd60	[polyphonic]	"com.celemony.analyzerParameterSet.polyphonic"
+0240dfde	[detect]	"#<detectsChurchModes"
+0240e000	[detect]	"detectsChordExtensions"
+0240e020	[detect]	"detectsChordBassNote"
+0240e420	[DNA]	"DNA2Test_UseEQ"
+0240e520	[Pitch]	"PitchClassTitles"
+0240e600	[Detect]	"Melodyne Detection Document"
+0240e8b0	[pitch]	"pitchId"
+0240ea20	[harmonic]	"Minor (harmonic)"
+0240ef1c	[Pitch]	"=MUPitchClassMapperPentatonicScaleScope"
+0240ef44	[Pitch]	"=MUPitchClassMapperSharpNinthPentatonicScaleScope"
+0240f500	[Pitch]	"playInfo.arrPitchRatio"
+0240f520	[Formant]	"playInfo.arrFormantRatio"
+0240f540	[portamento]	"playInfo.portamentoTime"
+0240f6e0	[tempo]	"tempoCompensation"
+0240f700	[Detect]	"MDDetectSoundfileParameters"
+0240f720	[Pitch]	"lowPitchLimit"
+0240f730	[Pitch]	"highPitchLimit"
+0240f740	[separation]	"separationPeakLimit"
+0240f780	[pitch]	"pitchDetectionSensitivity"
+0240f860	[Pitch]	"shouldAdaptPitchTransition"
+0240f8e0	[Pitch]	"maxSlopeForPitchTransition"
+0240f920	[tempo]	"tempoDefinitionMode"
+0240f940	[tempo]	"tempoFromNameDigitOffset"
+0240f9e0	[detect]	"detectSoundfileParameters"
+0240fa00	[pitch]	"pitchRatio"
+0240fa10	[formant]	"formantRatio"
+0240fb20	[Pitch]	"shouldUsePitchBend"
+0240fb38	[pitch]	"pitchBendMode"
+0240fb48	[pitch]	"pitchBendRange"
+0240fb78	[envelope]	"envelopeCtrlNum"
+0240fb90	[envelope]	"envelopeMapLowLimit"
+0240fbb0	[envelope]	"envelopeMapHighLimit"
+0240fbd0	[envelope]	"envelopeMapPower"
+0240fc08	[pitch]	"pitchBarycenter"
+0240fd90	[pitch]	"pitchHoldQuality"
+0240fda8	[pitch]	"pitchQuality"
+0240fde0	[pitch]	"pitchDetectCorrection"
+0240fe00	[Pitch]	"origPitchCenterWasEditedManually"
+0240fe30	[beat]	"beatAssignmentWasEditedManually"
+0240fe50	[Pitch]	"origPitchCenter"
+0240fe60	[pitch]	"pitchOffset"
+0240fe70	[pitch]	"pitchCorrection"
+0240fe90	[formant]	"formant"
+0240fe98	[pitch]	"pitchTransition"
+0240fec0	[formant]	"formantTransition"
+0240ff20	[Pitch]	"wantsPitchTransition"
+0240ff40	[Pitch]	"bestPitchPosition"
+024101f0	[Pitch]	"currentPitchDiffToAssignedPitch"
+02410230	[Pitch]	"origDisplayPitchCenter"
+02410290	[formant]	"formantCorrection"
+02410310	[stretch]	"stretchPositionRatio"
+02410328	[stretch]	"stretchScalePow"
+02410398	[attack]	"attack"
+024103a0	[formant]	"formantResolution"
+02410410	[energy]	"energyAtPosition"
+02410428	[energy]	"energySlope"
+02410478	[separation]	"separationType"
+02410520	[Detect]	"hasDetectedNotes"
+02410590	[Detect]	"oldDetectionQualities"
+024105b0	[Detect]	"oldDetectedPeriods"
+024105d0	[Pitch]	"oldIsPitchedSound"
+02410670	[Formant]	"defaultFormantShiftForUpTranspositions"
+024106a0	[Formant]	"defaultFormantShiftForDownTranspositions"
+024107b0	[Pitch]	"allPitchRangePerNote"
+024108f0	[detect]	"detectionState"
+02410f50	[Pitch]	"formantPitchCompensationFactor"
+02411ef0	[Pitch]	"westernStandardPitchIndexAnchor"
+02411f10	[stretch]	"stretching"
+02412020	[Pitch]	"scalePitchSystemDefaultTuning"
+02412040	[Pitch]	"MU12TETPitchSystemDefaultTuning"
+02412250	[Pitch]	"MUWesternStandardPitchTitleSystem.gnui"
+024122a0	[Pitch]	"MUWesternStandardPitchTitleSystemRegisteredNotification"
+024122e0	[Pitch]	"westernStandardDefaultPitchTitleSystemIdentifier"
+024123ae	[Pitch]	"=MULoopComponentPitchRangeUndefined"
+  XREFS: FUN_01785110@01785174;
+024123d2	[Pitch]	"=MULoopComponentPitchRangeLow"
+  XREFS: FUN_01785110@0178518e;
+024123f0	[Pitch]	"?MULoopComponentPitchRangeMid"
+0241240e	[Pitch]	"?MULoopComponentPitchRangeHigh"
+02412638	[harmonic]	"harmonic minor"
+02412660	[harmonic]	"harmonic minor 5"
+02412680	[harmonic]	"harmonic minor 5 dom"
+02413450	[overlap]	"Turkish Makam Evic. Compound Makam, Segah on F#, overlapping with Ussak on A."
+024135c0	[overlap]	"Turkish Makam Saba. Saba on A, overlapping with an approximated Zirguleli Hicaz scale on C. Instead...
+02414570	[overlap]	"Turkish Makam Irak. Compound Makam, Segah on F#, overlapping with Ussak on A. The secondary degrees...
+02414620	[overlap]	"Turkish Makam Evic. Compound Makam, scale structure like Makam Irak, Segah on F#, overlapping with ...
+024146a0	[overlap]	"Turkish Makam Bestenigar. Compound Makam, Segah on F#, overlapping with Saba on A and Hicaz on C. I...
+02414740	[overlap]	"Turkish Makam Sevkefza. Compound Makam, consisting of a Acem Asiran scale on F, overlapping with Ni...
+024147e0	[overlap]	"Turkish Makam Suzidilara. Compound Makam, a Mahur scale on G (= Cargah transposed to G) overlapping...
+024148a0	[overlap]	"Turkish Makam Sazkar. Compound Makam, a Rast scale on G overlapping with a Segah pentachord on B, w...
+02414950	[overlap]	"Turkish Makam Zavil. Compound Makam, a Mahur scale on G overlapping with a Nikriz pentachord on G, ...
+024149f0	[overlap]	"Turkish Makam Acem. Compound Makam, a Bayati scale on A overlapping with a Cargah pentachord on F, ...
+02414d80	[overlap]	"Turkish Makam Saba. Saba on A, overlapping with an appoximated Zirguleli Hicaz scale on C. Instead ...
+02415780	[Pitch]	"MUScaleWesternStandardPitchIndexAnchor"
+024157b0	[Pitch]	"MUScaleTuningPitchAnchor"
+02415b40	[Pitch]	"/Users/peter/Desktop/ScalesSorted/With Pitch"
+02415cc0	[Pitch]	"MUScalePitchSystemVersionException"
+02415d30	[Pitch]	"tuningPitchAnchorIsSuggestedRelevant"
+02415d90	[stretch]	"stretchingIsSuggestedRelevant"
+02416600	[Pitch]	"MUPitchApproachMapper"
+02416748	[Phase]	"synthPhases"
+02416760	[Pitch]	"MUPitchClassMapper"
+02416810	[Pitch]	"lowestPitchIndexMatchesMask"
+02416860	[Pitch]	"highestPitchIndexMatchesMask"
+02416920	[pitch]	"pitchMapperWeights"
+024169c0	[pitch]	"pitchDeltaFactor"
+02416a08	[Pitch]	"MUPitchMapper"
+02416a20	[Pitch]	"lowestPitchMustMatchBass"
+02416a40	[Pitch]	"lowestPitchCanMatchFifths"
+02416a60	[Pitch]	"highestPitchShouldMatchRootOrFifth"
+02416a83	[Pitch]	"?MUPitchMapperHasCrossingsCriterion"
+02416aa7	[Pitch]	"?MUPitchMapperExceedsLimitsCriterion"
+02416acc	[Pitch]	"?MUPitchMapperLowestPitchIndexMatchesMaskCriterion"
+02416aff	[Pitch]	"?MUPitchMapperLowestIntervalMatchesForthOrFifthCriterion"
+02416b38	[Pitch]	"?MUPitchMapperHighestPitchIndexMatchesMaskCriterion"
+02416b6c	[Pitch]	"?MUPitchMapperChordCoverageCriterion"
+02416b91	[Pitch]	"?MUPitchMapperDoubleCountCriterion"
+02416bb4	[Pitch]	"?MUPitchMapperSuspensionsExtensionQualityCriterion"
+02416be7	[Pitch]	"?MUPitchMapperTranspositionMatchesPreferredDirectionCriterion"
+02416c25	[Pitch]	"?MUPitchMapperWeightedDistanceCriterion"
+02416c4d	[Pitch]	"?MUPitchMapperTranspositionCriterion"
+02416c72	[Pitch]	"?MUPitchMapperVoicingDistanceCriterion"
+02416c99	[Pitch]	"?MUPitchMapperHasMinorSecondCriterion"
+02416cbf	[Pitch]	"?MUPitchMapperMatchVoicingCriterion"
+02417b40	[stretch]	"AlignTest_stretchTolerance"
+024182d0	[stretch]	"ResynthTest_stretch"
+02418480	[formant]	"ResynthTest_formant"
+024184a0	[Pitch]	"ResynthTest_quantizePitch"
+024184c0	[Pitch]	"Quantize Pitch"
+024184d0	[Pitch]	"ResynthTest_smoothPitch"
+024184e8	[Pitch]	"Smooth Pitch"
+024186a0	[DNA]	"DNA2 Test"
+024186b0	[DNA]	"DNA2Test_UseDNA2"
+024186c8	[DNA]	"Use DNA2"
+024186e0	[DNA]	"DNA2Test_UseStackedFft"
+02418710	[DNA]	"DNA2Test_DetectMonophonic"
+02418730	[Detect]	"Detect Monophonic"
+02418750	[DNA]	"DNA2Test_WriteNoiseFiles"
+02418790	[DNA]	"DNA2Test_SeparateRaspiness"
+024187d0	[DNA]	"DNA2Test_DetectBluesHarp"
+024187f0	[Detect]	"Detect Blues Harp"
+02418810	[DNA]	"DNA2Test_DetectBluesHarpSubharmonicsMode"
+02418850	[DNA]	"DNA2Test_DetectBluesHarpMultiplePaths"
+02418890	[DNA]	"DNA2Test_UseEnergyClaim"
+024188d0	[DNA]	"DNA2Test_TestValue1"
+02418900	[DNA]	"DNA2Test_TestValue2"
+02418930	[DNA]	"DNA2Test_TestValue3"
+02418960	[DNA]	"DNA2Test_TestValue4"
+02418990	[DNA]	"DNA2Test_TestValue5"
+024189c0	[DNA]	"DNA2Test_ShowQuality"
+024189f0	[DNA]	"DNA2Test_ShowRelevance"
+02418a20	[DNA]	"DNA2Test_ShowRelativeRelevance"
+02418a50	[DNA]	"DNA2Test_ShowNormalized"
+02418a80	[DNA]	"DNA2Test_DisplayedHarmonic"
+02419010	[Phase]	"CymbalCleaning_RandPhase"
+02419030	[Phase]	"Random Phase"
+02419080	[Detect]	"CymbalCleaning_DetectHiPass"
+024191f0	[Formant]	"Formants"
+02419200	[Formant]	"Formants_MasterVolume"
+02419220	[Formant]	"Formants_Emphasize"
+02419250	[Formant]	"Formants_Transpose"
+02419270	[Formant]	"Formants_LoToOriginal"
+024192a0	[Formant]	"Formants_Offset750Hz"
+024192d0	[Formant]	"Formants_Offset1500Hz"
+02419300	[Formant]	"Formants_Offset3000Hz"
+02419330	[Formant]	"Formants_Offset5000Hz"
+02419358	[Formant]	"Formants_Vowel"
+02419370	[Formant]	"Formants_VowelCycle"
+024193a0	[Formant]	"Formants_SynthAmp"
+024193d0	[Formant]	"Formants_NoiseAmp"
+02419400	[Formant]	"Formants_AddOriginal"
+02419430	[Formant]	"Formants_SpectrumFilter"
+02419460	[Formant]	"Formants_TimeFilter"
+02419488	[Formant]	"Formants Synth"
+024194a0	[Formant]	"FormantsSynth_FundamentalAmp"
+024194d0	[Formant]	"FormantsSynth_FundamentalRandom"
+02419500	[Formant]	"FormantsSynth_Subharmonic2Amp"
+02419530	[Formant]	"FormantsSynth_Subharmonic2Random"
+02419570	[Formant]	"FormantsSynth_Subharmonic3Amp"
+024195a0	[Formant]	"FormantsSynth_Subharmonic3Random"
+024195e0	[Formant]	"FormantsSynth_Subharmonic4Amp"
+02419610	[Formant]	"FormantsSynth_Subharmonic4Random"
+02419650	[Formant]	"FormantsSynth_WaveNoise"
+02419680	[Formant]	"FormantsSynth_ConstNoise"
+024196b0	[Formant]	"FormantsSynth_TimeRandom"
+024196e0	[Formant]	"FormantsSynth_PulseDecay"
+02419710	[Formant]	"FormantsSynth_GrowlHiPass"
+024199c0	[Detect]	"Detection-Ref"
+0241ae3c	[Pitch]	"=MUPitchClassMapperKeyScaleScope"
+0241ae60	[Pitch]	"=MUPitchClassMapperLocalScaleScope"
+0241ae88	[Pitch]	"=MUPitchClassMapperSixthSeventhScaleScope"
+0241af50	[pitch]	"pitchSnapModeToneScaleAndTuningMenuIdentifier"
+0241aff0	[Detect]	"CursorDetectionActivation"
+0241b170	[Pitch]	"CursorPitchLimit"
+0241b190	[Detect]	"MUDetectionEditorViewDidChangeRenderStyleNotification"
+0241b1d0	[Detect]	"DetectionAudioSourceDesc"
+0241b300	[pitch]	"pitchModulationFactor"
+0241b320	[pitch]	"pitchDriftFactor"
+0241b370	[pitch]	"pitchRelevanceSampleOffset"
+0241b460	[Phase]	"synthPhasesSlider"
+0241b480	[Phase]	"SpectrumShaperSynthPhaseLeft"
+0241b4a0	[Phase]	"SpectrumShaperSynthPhaseRight"
+0241b6cf	[Pitch]	"?MUEditorViewPitchSystemDidChangeNotification"
+0241b750	[pitch]	"pitchSnapModeKey"
+0241b780	[pitch]	"pitchDisplayModeKey"
+0241b7a0	[pitch]	"pitchRulerTitleDisplayModeKey"
+0241b8c0	[Pitch]	"tuningPitchAnchor"
+0241b900	[stretch]	"stretchingFunction"
+0241ba50	[Pitch]	"MUEditorViewDidChangePitchDisplayMode"
+0241ba80	[Pitch]	"MUEditorViewDidChangePitchRulerTitleDisplayMode"
+0241bb70	[Pitch]	"minPitch"
+0241bb80	[Pitch]	"maxPitch"
+0241bba0	[pitch]	"pitchDisplayMode"
+0241bbc0	[pitch]	"pitchTileDisplayMode"
+0241bca0	[pitch]	"pitchIndexAssignmentOffset"
+0241bcc0	[Formant]	"CursorFormant"
+0241bd10	[Pitch]	"CursorPitchRelevance"
+0241bd30	[Pitch]	"CursorAssignPitchIndex"
+0241bd60	[Pitch]	"CursorPitchDrift"
+0241bd80	[Pitch]	"CursorPitchModulation"
+0241bde0	[Pitch]	"CursorPitch"
+0241bdf0	[pitch]	"pitchTransitionDuration"
+0241c210	[Detect]	"handleToggleDetectsSlashChords"
+0241c240	[Detect]	"handleToggleDetectsChordExtensions"
+0241c690	[Formant]	"Formants: "
+0241c9d0	[Pitch]	"scaleRulerViewPitchDisplayMode"
+0241ca20	[Pitch]	"MUWesternStandardPitchTitleSystemDefaultTitleSystemChangedNotification"
+0241cad0	[pitch]	"pitchIndex"
+0241cae0	[pitch]	"pitchCenter"
+0241caf0	[pitch]	"pitchOffsetRatio"
+0241cc20	[Pitch]	"equivalentPitchSystem"
+0241cc50	[Pitch]	"clickedPitchIndex"
+0241ceb8	[Detect]	"DetectionMenu"
+0241cfb0	[Pitch]	"handleSavePitchSystem"
+0241cfe8	[Detect]	"Detected"
+0241d130	[Pitch]	"handleSetWesternStandardPitchIndexOffsetForPitchIndexByAssignmentOffset"
+0241d360	[Pitch]	"handlePitchPopUpChanged"
+0241d410	[Pitch]	"Pitch from Preset"
+0241d460	[stretch]	"Keep Unstretched"
+0241d500	[Pitch]	"MUScaleCreatePitchSystemCtrl.gnui"
+0241db60	[detect]	"detectsDetailedModeChanges"
+0241dc10	[Detect]	"handleToggleDetectsChurchModes"
+0241e3c0	[energy]	"energyClaimFactor"
+0241e5e0	[Pitch]	"CursorAssignPitchCenter"
+0241ea80	[Detect]	"MUAdvancedTempoDetectionDialog"
+0241fa78	[stretch]	"stretchLeft"
+0241faa8	[stretch]	"stretchRight"
+0241fad8	[stretch]	"stretchTop"
+0241fb08	[stretch]	"stretchBottom"
+0241fb38	[stretch]	"stretchWidth"
+0241fb68	[stretch]	"stretchHeight"
+02421a08	[window]	"window"
+024250f7	[window]	"window"
+02425885	[window]	"_windowDidBecomeKey:"
+  XREFS: GNCocoaRootView_20241202_165327::setRootView:@01f1be1a;
+02426881	[window]	"windowShouldClose:"
+02426894	[window]	"windowWillReturnFieldEditor:toObject:"
+024268ba	[window]	"windowWillResize:toSize:"
+024268d3	[window]	"windowWillUseStandardFrame:defaultFrame:"
+024268fc	[window]	"windowShouldZoom:toFrame:"
+02426916	[window]	"windowWillReturnUndoManager:"
+02426933	[window]	"window:willPositionSheet:usingRect:"
+02426957	[window]	"window:shouldPopUpDocumentPathMenu:"
+0242697b	[window]	"window:shouldDragDocumentWithEvent:from:withPasteboard:"
+024269b3	[window]	"window:willUseFullScreenContentSize:"
+024269d8	[window]	"window:willUseFullScreenPresentationOptions:"
+02426a2e	[window]	"window:startCustomAnimationToEnterFullScreenWithDuration:"
+02426a68	[window]	"windowDidFailToEnterFullScreen:"
+02426ab0	[window]	"window:startCustomAnimationToExitFullScreenWithDuration:"
+02426b1b	[window]	"window:startCustomAnimationToEnterFullScreenOnScreen:withDuration:"
+02426b5e	[window]	"windowDidFailToExitFullScreen:"
+02426b7d	[window]	"window:willResizeForVersionBrowserWithMaxPreferredSize:maxAllowedSize:"
+02426bc4	[window]	"window:willEncodeRestorableState:"
+02426be6	[window]	"window:didDecodeRestorableState:"
+02426c07	[window]	"windowDidResize:"
+02426c18	[window]	"windowDidExpose:"
+02426c29	[window]	"windowWillMove:"
+02426c39	[window]	"windowDidMove:"
+02426c48	[window]	"windowDidBecomeKey:"
+02426c5c	[window]	"windowDidResignKey:"
+02426c70	[window]	"windowDidBecomeMain:"
+02426c85	[window]	"windowDidResignMain:"
+02426c9a	[window]	"windowWillClose:"
+02426cab	[window]	"windowWillMiniaturize:"
+02426cc2	[window]	"windowDidMiniaturize:"
+02426cd8	[window]	"windowDidDeminiaturize:"
+02426cf0	[window]	"windowDidUpdate:"
+02426d01	[window]	"windowDidChangeScreen:"
+02426d18	[window]	"windowDidChangeScreenProfile:"
+02426d36	[window]	"windowDidChangeBackingProperties:"
+02426d58	[window]	"windowWillBeginSheet:"
+02426d6e	[window]	"windowDidEndSheet:"
+02426d81	[window]	"windowWillStartLiveResize:"
+02426d9c	[window]	"windowDidEndLiveResize:"
+02426db4	[window]	"windowWillEnterFullScreen:"
+02426dcf	[window]	"windowDidEnterFullScreen:"
+02426de9	[window]	"windowWillExitFullScreen:"
+02426e03	[window]	"windowDidExitFullScreen:"
+02426e1c	[window]	"windowWillEnterVersionBrowser:"
+02426e3b	[window]	"windowDidEnterVersionBrowser:"
+02426e59	[window]	"windowWillExitVersionBrowser:"
+02426e77	[window]	"windowDidExitVersionBrowser:"
+02426e94	[window]	"windowDidChangeOcclusionState:"
+028c1de3	[MIDI]	"_kMIDIPropertyManufacturer"
+028c1e0b	[MIDI]	"_kMIDIPropertyName"
+029b1b8c	[MIDI]	"_MIDIClientCreate"
+029b1ba6	[MIDI]	"_MIDIClientDispose"
+029b1bc1	[MIDI]	"_MIDIEndpointGetEntity"
+029b1be0	[MIDI]	"_MIDIEntityGetDevice"
+029b1bfd	[MIDI]	"_MIDIFlushOutput"
+029b1c16	[MIDI]	"_MIDIGetDestination"
+029b1c32	[MIDI]	"_MIDIGetNumberOfDestinations"
+029b1c57	[MIDI]	"_MIDIGetNumberOfSources"
+029b1c77	[MIDI]	"_MIDIGetSource"
+029b1c8e	[MIDI]	"_MIDIInputPortCreate"
+029b1cab	[MIDI]	"_MIDIObjectGetStringProperty"
+029b1cd0	[MIDI]	"_MIDIOutputPortCreate"
+029b1cee	[MIDI]	"_MIDIPortConnectSource"
+029b1d0d	[MIDI]	"_MIDIPortDisconnectSource"
+029b1d2f	[MIDI]	"_MIDIPortDispose"
+029b1d48	[MIDI]	"_MIDISend"
+029b3fcf	[fft]	"_difftime"
+029b504b	[fft]	"_vDSP_create_fftsetup"
+029b507c	[fft]	"_vDSP_destroy_fftsetup"
+029b509b	[fft]	"_vDSP_fft_zrip"
+029b772d	[partial]	"s_partially_overlapping"
+029bb12d	[shift]	"lshift_fixed_top"
+029bb141	[shift]	"rshift_fixed_top"
+029bb544	[shift]	"lshift"
+029bbaa8	[shift]	"shift"
+029bbea0	[shift]	"shift"
+029bc779	[envelope]	"get0_enveloped"
+029c80d8	[shift]	"unshift"
+02ac6340	[shift]	"_BN_lshift"
+02ac634b	[shift]	"_BN_lshift1"
+02ac6417	[shift]	"_BN_mod_lshift"
+02ac6426	[shift]	"_BN_mod_lshift1"
+02ac6436	[shift]	"_BN_mod_lshift1_quick"
+02ac644c	[shift]	"_BN_mod_lshift_quick"
+02ac65b7	[shift]	"_BN_rshift"
+02ac65c2	[shift]	"_BN_rshift1"
+02acea94	[shift]	"_OPENSSL_sk_shift"
+02aceab7	[shift]	"_OPENSSL_sk_unshift"
+02bc0221	[shift]	"_bn_lshift_fixed_top"
+02bc0357	[shift]	"_bn_rshift_fixed_top"
+02bc076e	[envelope]	"_cms_get0_enveloped"
+02bc3907	[partial]	"_is_partially_overlapping"
+02bc5cfe	[MIDI]	"_MIDIClientCreate"
+02bc5d10	[MIDI]	"_MIDIClientDispose"
+02bc5d23	[MIDI]	"_MIDIEndpointGetEntity"
+02bc5d3a	[MIDI]	"_MIDIEntityGetDevice"
+02bc5d4f	[MIDI]	"_MIDIFlushOutput"
+02bc5d60	[MIDI]	"_MIDIGetDestination"
+02bc5d74	[MIDI]	"_MIDIGetNumberOfDestinations"
+02bc5d91	[MIDI]	"_MIDIGetNumberOfSources"
+02bc5da9	[MIDI]	"_MIDIGetSource"
+02bc5db8	[MIDI]	"_MIDIInputPortCreate"
+02bc5dcd	[MIDI]	"_MIDIObjectGetStringProperty"
+02bc5dea	[MIDI]	"_MIDIOutputPortCreate"
+02bc5e00	[MIDI]	"_MIDIPortConnectSource"
+02bc5e17	[MIDI]	"_MIDIPortDisconnectSource"
+02bc5e31	[MIDI]	"_MIDIPortDispose"
+02bc5e42	[MIDI]	"_MIDISend"
+02bc92c6	[fft]	"_difftime"
+02bc96dc	[MIDI]	"_kMIDIPropertyManufacturer"
+02bc96f7	[MIDI]	"_kMIDIPropertyName"
+02bc9ef7	[fft]	"_vDSP_create_fftsetup"
+02bc9f18	[fft]	"_vDSP_destroy_fftsetup"
+02bc9f2f	[fft]	"_vDSP_fft_zrip"
+# Total: 1452

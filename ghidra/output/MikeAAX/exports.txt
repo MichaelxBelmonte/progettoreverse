@@ -1,0 +1,8 @@
+0001f06a	_ACFRegisterPlugin
+0001f089	_ACFRegisterComponent
+0001f0a8	_ACFGetClassFactory
+0001f0c7	_ACFCanUnloadNow
+0001f0e6	_ACFStartup
+0001f105	_ACFShutdown
+0001f124	_ACFGetSDKVersion
+# Total: 7

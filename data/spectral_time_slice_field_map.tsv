@@ -1,0 +1,13 @@
+offset	role	getter_or_builder	status	confidence	notes
+0x0c	binCount	init/takeDataFromTimeSlice	verified	high	array length used across payload copies
+0x10	complexSpectrum	takeDataFromTimeSlice bit 0x01; init alloc+copy	verified	high	8 bytes per bin, interleaved complex pairs
+0x18	magnitudeData	015c6b60	verified	high	filled by sqrt(re^2 + im^2)
+0x20	phaseData	015c6310	verified	high	filled by atan2f
+0x28	trueFreqData	015c66c0	verified	high	derived from neighbour-slice phase delta
+0x30	tonalityData	015c6ba0	verified	high	populated via 015c6350 from trueFreqData
+0x38	trueTimeSampleOffsetData	015c6be0	verified	high	derived from intra-slice phase delta
+0x40	transiencyData	015c6c20	verified	high	getter proven; writer not yet isolated
+0x48	vectorData	015c6c60	verified	high	auxiliary 2-float-per-bin vector used by trueFreq/time-offset derivation
+0x68	trueFreq_reference_cache	015c7140	inferred	medium	float ramp cache used before trueFreq derivation
+0x70	aux_timing_cache	015c73a0	inferred	medium	float ramp cache tied to arg1+0x50
+0x80	tonality_lookup_cache	015c7920	inferred	medium	lookup table consumed by 015c6350

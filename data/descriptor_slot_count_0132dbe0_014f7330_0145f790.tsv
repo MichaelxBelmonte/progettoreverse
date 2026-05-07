@@ -1,0 +1,15 @@
+scope	offset_or_func	role	confidence	evidence
+descriptor_field	+0x88	assembledElementRendererCount_or_analysisLaneCount	very_high	0132dbe0 returns *(int*)(descriptor+0x88); poly uses it for 24x/2x/6x scaling and downstream slot collections
+poly_use	0x1447c5c	alloc_24xcount	high	poly computes esi = 24 * count immediately after loading descriptor+0x88
+poly_use	0x144819d	build_template_collection_from_count	high	poly calls 014f7330 with rdx = count from descriptor+0x88
+poly_use	0x144868b	double_and_sixfold_scaling	high	poly derives 2 * count and 6 * count for downstream buffer/stride logic
+helper	014f7330	build_renderer_slot_template_group	high	thin wrapper into 014f7360 which allocates fixed 0x20 nodes plus a count-sized subgroup
+helper	014f7360	map_sourceItem_plus_0x28_into_count_sized_group	high	reads sourceItem+0x28 then indexes into subgroup built with count
+helper	014f6f10	extract_ref_at_item_plus_0x10	very_high	returns wrapper over *(item+0x10)
+helper	014ef210	build_0x168_adapter_from_two_refs	high	allocates 0x168 object and attaches two refs via 14ef060
+helper	014f0020	write_child_plus_0x18_and_plus_0x1c_metrics	high	reads adapter child-list and writes per-child downstream floats at +0x18 and +0x1c
+helper	014f0770	consume_child_plus_0x14_and_plus_0x18_for_parent_bounds	high	reads parallel arrays from child list and updates parent bounds at +0x15c and +0x2c
+helper	014f0c40	consume_child_plus_0x14_plus_0x18_plus_0x1c	high	reads three per-child float series from adapter child-list for higher-order processing
+cross_check	0145f790	materialize_count_indexed_slot_objects	high	loops 0..count-1 from 0132dbe0 and writes slot index at +0xc with default float params
+shaper_field	MUSpectrumShaper+0x100	_assembledElementRendererCount	high	01430a30 compares FUN_014308d0 against this+0x100
+shaper_field	MUSpectrumShaper+0x108	assembled_renderer_collection	high	01430a30 and 01431180 operate on entries of this collection

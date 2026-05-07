@@ -1,0 +1,16 @@
+# Address	Name
+00adb600	TSocket::peek
+00adb8e0	TSocket::open
+00adcfd0	TSocket::open
+00add580	TSocket::read
+00ade1d0	TSocket::write_partial
+0133bd20	MUAudioSourceDescription::cleanupOverlappingPotentialItemsForPrincipalItem
+01351de0	MUAudioSourceDescription::_activateItem
+013903d0	MUAudioSourceDescription::assignEnergyClaimsInSampleRange
+0146c830	MUElementAnalyzer::makeMonophonicItems
+014ea210	MUAudioSourcePrincipalItem::redetectMonophonicPitchAtSuggestedPitchAndUpdatePotentialItem
+0158c060	MUElementAnalyzer::makeMonophonicItems
+015c4e40	MUSpectralTimeSlice::getPhaseData
+015c6350	MUSpectralTimeSlice::getTrueFreqData
+015c6700	MUSpectralTimeSlice::getComplexSpectrum
+01ad3e60	MUScaleRulerView::setPitchSystem

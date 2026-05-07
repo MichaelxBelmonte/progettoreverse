@@ -1,0 +1,30 @@
+{
+  "MikeCore": {
+    "status": "success",
+    "project": "MikeCore_Project",
+    "elapsed_sec": 1577,
+    "log": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/ghidra/output/ghidra_MikeCore.log"
+  },
+  "MikeCoreF": {
+    "status": "success",
+    "project": "MikeCoreF_Project",
+    "elapsed_sec": 1423,
+    "log": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/ghidra/output/ghidra_MikeCoreF.log"
+  },
+  "mike": {
+    "status": "exists",
+    "project": "Progetto_Mike"
+  },
+  "MikeAU": {
+    "status": "exists",
+    "project": "MikeAU_Project"
+  },
+  "MikeAAX": {
+    "status": "exists",
+    "project": "MikeAAX_Project"
+  },
+  "MikeStandalone": {
+    "status": "exists",
+    "project": "MikeStandalone_Project"
+  }
+}

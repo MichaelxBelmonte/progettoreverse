@@ -1,0 +1,9 @@
+offset	role	confidence	evidence
+MUElementAnalyzer+0xf4	_allTonality	very_high	property registration 01141790 binds +0xf4 to _allTonality and 014a74b0 writes this slot
+MUElementAnalyzer+0xf8	_allCentDiffPerMillisecond	very_high	property registration 01141790 binds +0xf8 to _allCentDiffPerMillisecond and 014a74b0 writes normalized scalar at 0x14a82ed..0x14a8325
+MUElementAnalyzer+0xfc	_allPitchRangePerNote	very_high	property registration 01141790 binds +0xfc to _allPitchRangePerNote and 014a74b0 writes weighted pitch-span scalar at 0x14a8329..0x14a834e
+MUElementAnalyzer+0x100	_allEnergyRelevantRegionRatio	very_high	property registration 01141790 binds +0x100 to _allEnergyRelevantRegionRatio and 014a74b0 stores sorted middle value of interval-ratio buffer
+MUElementAnalyzer+0x104	_allAttackPeakQuality	very_high	property registration 01141790 binds +0x104 to _allAttackPeakQuality and 014a74b0 stores sorted middle value of linked field20 buffer
+MUElementAnalyzer+0x108	_allAttackPeakToEnergyRegionRatio	very_high	property registration 01141790 binds +0x108 to _allAttackPeakToEnergyRegionRatio and 014a74b0 stores count_non_null_item_plus_0x40 divided by total_count
+function	014a74b0	multi_output_metric_writer_for_analyzer_gate_cluster	very_high	callsite in 01484bc0 passes six contiguous output pointers self+0xf4 through self+0x108
+constant	DAT_02394254	linked_field20_missing_or_empty_default_0_01	very_high	__TEXT.__const dump at 0x02394254 is 0x3c23d70a i.e. 0.01f; used as per-item missing-link fill and empty-list fallback

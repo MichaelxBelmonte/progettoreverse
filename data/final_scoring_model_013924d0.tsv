@@ -1,0 +1,11 @@
+phase	component	confidence	evidence	notes
+matrix_shape	rowTemplate[itemCount][harmonicColumns]	high	temporary buffer allocated before per-item row fill	item-major linear float buffer
+column_normalization	range_k_1_to_H_minus_1	very_high	normalization loop starts from r11=1 and runs until harmonicColumns	excludes column 0
+column_normalization	formula	high	columnSum[k] then rowTemplate[i][k] *= 1.0 / columnSum[k]	applied only when sum exceeds epsilon floor
+final_unweighted	input_signal	very_high	final dot product uses magnitudeData	from -0xe8(%rbp)
+final_unweighted	formula	high	score_i += magnitudeData[k] * rowTemplate[i][k]	semantic form after undoing loop unrolling
+final_weighted	activation_gate	high	requires tonalityData != NULL and enableTonalityWeighting	flag stored in -0x31(%rbp)
+final_weighted	weight_formula	very_high	weight_k = min(1.0, tonalityData[k])	clamped per bin
+final_weighted	formula	high	score_i += magnitudeData[k] * rowTemplate[i][k] * min(1.0, tonalityData[k])	pairwise unrolled implementation
+final_scoring	column_zero_excluded	high	all final loops start from k=1	column 0 not used in observed score path
+buffer_roles	trueFreqData_upstream_only	high	trueFreqData not used in final dot product	but used upstream in 014eecb0 -> 014b71e0

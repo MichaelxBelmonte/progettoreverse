@@ -1,0 +1,30 @@
+# Search: "assignEnergyClaimsInSampleRange"
+STRING @ 02029329: "MUAudioSourceDescription::assignEnergyClaimsInSampleRange(): wrong object type in list"
+  FUNC: FUN_013903d0 @ 013903d0
+    Size: 5999 bytes
+    Ref from: 013912b1
+    Called by (2):
+      FUN_01353f80@01353f80
+      FUN_01447a70@01447a70
+    Calls (25):
+      FUN_007eece0@007eece0
+      FUN_00d21140@00d21140
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_00e83120@00e83120
+      FUN_00e83da0@00e83da0
+      FUN_00e85ea0@00e85ea0
+      FUN_00e8b990@00e8b990
+      FUN_00e8fc40@00e8fc40
+      FUN_010fe3b0@010fe3b0
+      FUN_0132d640@0132d640
+      FUN_013924d0@013924d0
+      FUN_013de560@013de560
+      FUN_014c2a40@014c2a40
+      FUN_014c3020@014c3020
+

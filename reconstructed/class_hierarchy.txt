@@ -1,0 +1,11 @@
+# MikeCore Class Hierarchy
+# Total classes with RTTI: 2
+# Vtables: 0
+
+
+============================================================
+  GN_Generic — 2 classes
+============================================================
+
+  [      ] [        ] GNException
+  [      ] [        ] GNObject

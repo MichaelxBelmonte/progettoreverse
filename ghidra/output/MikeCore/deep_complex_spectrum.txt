@@ -1,0 +1,34 @@
+# Search: "complexSpectrum"
+STRING @ 02021d90: "_complexSpectrumOfChannel"
+  FUNC: FUN_01128ab0 @ 01128ab0
+    Size: 322 bytes
+    Ref from: 01128ae8
+    Called by (1):
+      FUN_0111f300@0111f300
+    Calls (3):
+      FUN_010f2dd0@010f2dd0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+
+STRING @ 0202694b: "_complexSpectrum"
+  FUNC: FUN_011ab430 @ 011ab430
+    Size: 322 bytes
+    Ref from: 011ab468
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+
+STRING @ 0202a03c: "MUSpectralTimeSlice::getComplexSpectrum(): no complexSpectrum data"
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c69eb
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+

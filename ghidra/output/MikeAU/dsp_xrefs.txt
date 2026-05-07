@@ -1,0 +1,3 @@
+00000e18	[MIDI]	"/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI"
+0000b4c8	[quality]	"render-quality"
+# Total: 2

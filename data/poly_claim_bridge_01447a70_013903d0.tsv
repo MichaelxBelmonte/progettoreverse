@@ -1,0 +1,22 @@
+scope	location	register_or_slot	value_or_source	semantic_role	confidence	notes
+013903d0_entry	0x139040c	rdi	-0xf8(%rbp)	out_wrapper	very_high	function writes result into *out_wrapper and sets ownership byte on short path
+013903d0_entry	0x1390405	rsi	-0xc8(%rbp)	state_or_description_like	high	reads +0x1a0 and +0x88 as descriptor/time-slice metadata
+013903d0_entry	0x1390402	rdx	r14	source_item_list_ref	very_high	dereferences (*arg)+0xc and (*arg)+0x10 as count/array
+013903d0_entry	0x13903fe	rcx	-0x50(%rbp)	sample_start	high	divided by descriptor->0x30 before range iteration
+013903d0_entry	0x13903fb	r8	r13	sample_count_or_len	high	added to sample_start to produce range end
+013903d0_entry	0x13903f4	r9d	-0x120(%rbp)	flagA_mode_or_ownership	high	forwarded to 013924d0 as first stack byte
+013903d0_entry	0x13903ec	xmm0	-0x114(%rbp)	callback_value_base	medium	used later only in callback/progress-like value synthesis
+013903d0_entry	0x13903e4	xmm1	-0x118(%rbp)	callback_value_scale	medium	used later only in callback/progress-like value synthesis
+013903d0_call_013924d0	0x1391b42	0x10(%rbp)	-> 0x8(%rsp)	flagB_enable_tonality_weighting	high	caller-controlled byte passed to 013924d0 second stack arg
+013903d0_post_claim	0x1391b87	0x18(%rbp)	stack arg 2	callback_sink_ref	high	dereferenced then virtual call at +0x380 with synthesized float
+01447a70_callsite	0x14593fb	rdi	&(-0x9a0)	assign_claim_out_wrapper	very_high	released immediately after call if ownership byte set
+01447a70_callsite	0x1459419	rsi	rbx	assign_claim_state	high	object dereferenced from wrapper at self+0x68 after thread-local unwrap
+01447a70_callsite	0x1459402	rdx	&(-0x488)	assign_claim_source_items	high	input wrapper built from local pointer + zero ownership byte
+01447a70_callsite	0x145941c	rcx	0	assign_claim_sample_start	very_high	observed zero start in poly call
+01447a70_callsite	0x145941e	r8	self+0x90 via r14	assign_claim_sample_len_like	medium	self field used as range length/count with sampleStart fixed at zero
+01447a70_callsite	0x1459421	r9d	0	assign_claim_flagA_zero	very_high	disables nonzero mode byte into 013924d0
+01447a70_callsite	0x14593f4	[rsp]	0	assign_claim_flagB_zero	very_high	observed poly call disables tonality-weighted gate
+01447a70_callsite	0x14593ef	[rsp+8]	&(-0x3e0)	assign_claim_callback_sink	very_high	wrapper built from self (-0x1a8) with ownership byte 1
+01447a70_self_field	0x1447b86	self+0x68	&self_field_wrapper	state_or_source_description_wrapper	high	same wrapper later dereferenced into rsi for 013903d0 and reused in mono path with 0132dc40/0132d790
+01447a70_self_field	0x14593c0	self+0x90	loaded into r14	sample_count_or_range_len_like	medium	forwarded as r8 into 013903d0 with sampleStart fixed at zero
+01447a70_self_field	0x1447f11	self+0x3c	byte flag	cancel_or_request_stop_like	medium	checked after vcall *0x380(self) before early abort path

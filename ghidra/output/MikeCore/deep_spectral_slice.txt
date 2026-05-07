@@ -1,0 +1,689 @@
+# Search: "MUSpectralTimeSlice"
+STRING @ 020231b5: "MUSpectralTimeSlice"
+  FUNC: FUN_011ab9f0 @ 011ab9f0
+    Size: 322 bytes
+    Ref from: 011abaa1
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011ab880 @ 011ab880
+    Size: 322 bytes
+    Ref from: 011ab931
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011abb60 @ 011abb60
+    Size: 322 bytes
+    Ref from: 011abc11
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011abcd0 @ 011abcd0
+    Size: 322 bytes
+    Ref from: 011abd81
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011abfb0 @ 011abfb0
+    Size: 322 bytes
+    Ref from: 011ac061
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011abe40 @ 011abe40
+    Size: 322 bytes
+    Ref from: 011abef1
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011ab2c0 @ 011ab2c0
+    Size: 322 bytes
+    Ref from: 011ab371
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011ab5a0 @ 011ab5a0
+    Size: 322 bytes
+    Ref from: 011ab651
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011ab430 @ 011ab430
+    Size: 322 bytes
+    Ref from: 011ab4e1
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011ab710 @ 011ab710
+    Size: 322 bytes
+    Ref from: 011ab7c1
+    Called by (1):
+      FUN_011aa9e0@011aa9e0
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011ab1f4
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011ab14a
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011ab0a0
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011aaff6
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011aaf4c
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011aaea2
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011aadf8
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011aad4e
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011aaca4
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_011aa9e0 @ 011aa9e0
+    Size: 2213 bytes
+    Ref from: 011aabfa
+    Called by (1):
+      FUN_010e4b80@010e4b80
+    Calls (15):
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff80@00d4ff80
+      FUN_00e87980@00e87980
+      FUN_011ab2c0@011ab2c0
+      FUN_011ab430@011ab430
+      FUN_011ab5a0@011ab5a0
+      FUN_011ab710@011ab710
+      FUN_011ab880@011ab880
+      FUN_011ab9f0@011ab9f0
+      FUN_011abb60@011abb60
+      FUN_011abcd0@011abcd0
+      FUN_011abe40@011abe40
+      FUN_011abfb0@011abfb0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_01141790 @ 01141790
+    Size: 11251 bytes
+    Ref from: 0114217d
+    Called by (1):
+      FUN_010d6b40@010d6b40
+    Calls (44):
+      FUN_00044470@00044470
+      FUN_00e7ddf0@00e7ddf0
+      FUN_00e87980@00e87980
+      FUN_00e879c0@00e879c0
+      FUN_01140ee0@01140ee0
+      FUN_01144cf0@01144cf0
+      FUN_01144de0@01144de0
+      FUN_01144ed0@01144ed0
+      FUN_01144fc0@01144fc0
+      FUN_011450b0@011450b0
+      FUN_011451a0@011451a0
+      FUN_01145280@01145280
+      FUN_01145360@01145360
+      FUN_01145440@01145440
+      FUN_01145520@01145520
+      FUN_01145600@01145600
+      FUN_011456f0@011456f0
+      FUN_011457e0@011457e0
+      FUN_011458d0@011458d0
+      FUN_011459c0@011459c0
+  FUNC: FUN_01141790 @ 01141790
+    Size: 11251 bytes
+    Ref from: 011421df
+    Called by (1):
+      FUN_010d6b40@010d6b40
+    Calls (44):
+      FUN_00044470@00044470
+      FUN_00e7ddf0@00e7ddf0
+      FUN_00e87980@00e87980
+      FUN_00e879c0@00e879c0
+      FUN_01140ee0@01140ee0
+      FUN_01144cf0@01144cf0
+      FUN_01144de0@01144de0
+      FUN_01144ed0@01144ed0
+      FUN_01144fc0@01144fc0
+      FUN_011450b0@011450b0
+      FUN_011451a0@011451a0
+      FUN_01145280@01145280
+      FUN_01145360@01145360
+      FUN_01145440@01145440
+      FUN_01145520@01145520
+      FUN_01145600@01145600
+      FUN_011456f0@011456f0
+      FUN_011457e0@011457e0
+      FUN_011458d0@011458d0
+      FUN_011459c0@011459c0
+  FUNC: FUN_015c6cd0 @ 015c6cd0
+    Size: 196 bytes
+    Ref from: 015c6d03
+    Calls (3):
+      FUN_00d4fe50@00d4fe50
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+  FUNC: FUN_010e4b80 @ 010e4b80
+    Size: 377 bytes
+    Ref from: 010e4c68
+    Called by (1):
+      FUN_010cdb40@010cdb40
+    Calls (11):
+      FUN_000064f0@000064f0
+      FUN_00d4fe50@00d4fe50
+      FUN_00d4ff40@00d4ff40
+      FUN_00d4ffa0@00d4ffa0
+      FUN_00d50c00@00d50c00
+      FUN_00e87760@00e87760
+      FUN_00e87770@00e87770
+      FUN_00e87920@00e87920
+      FUN_011aa9e0@011aa9e0
+      ___cxa_guard_acquire@01f9b06a
+      ___cxa_guard_release@01f9b070
+
+STRING @ 02029f64: "MUSpectralTimeSlice::initFromTimeSignal(): incomplete parameters!"
+  FUNC: FUN_015c4e40 @ 015c4e40
+    Size: 4396 bytes
+    Ref from: 015c4ea8
+    Called by (1):
+      FUN_015c4d90@015c4d90
+    Calls (28):
+      FUN_00c8e690@00c8e690
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00d21140@00d21140
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+      FUN_00e3aec0@00e3aec0
+      FUN_00e7d780@00e7d780
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_00e83530@00e83530
+      FUN_00e83da0@00e83da0
+      FUN_00e8b990@00e8b990
+      FUN_00e8cb50@00e8cb50
+      FUN_00e8cb70@00e8cb70
+      FUN_00e8cb90@00e8cb90
+      FUN_00e8fc40@00e8fc40
+
+STRING @ 02029fa6: "MUSpectralTimeSlice::initFromTimeSignal(): no valid neighbourTimeSlice for trueFreqs!"
+  FUNC: FUN_015c4e40 @ 015c4e40
+    Size: 4396 bytes
+    Ref from: 015c584d
+    Called by (1):
+      FUN_015c4d90@015c4d90
+    Calls (28):
+      FUN_00c8e690@00c8e690
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00d21140@00d21140
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+      FUN_00e3aec0@00e3aec0
+      FUN_00e7d780@00e7d780
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_00e83530@00e83530
+      FUN_00e83da0@00e83da0
+      FUN_00e8b990@00e8b990
+      FUN_00e8cb50@00e8cb50
+      FUN_00e8cb70@00e8cb70
+      FUN_00e8cb90@00e8cb90
+      FUN_00e8fc40@00e8fc40
+
+STRING @ 02029ffc: "MUSpectralTimeSlice::takeDataFromTimeSlice(): inconsistent data"
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c678d
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+
+STRING @ 0202a03c: "MUSpectralTimeSlice::getComplexSpectrum(): no complexSpectrum data"
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c69eb
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+
+STRING @ 0202a07f: "MUSpectralTimeSlice::getMagnitudeData(): no magnitude data"
+  FUNC: FUN_015c6b60 @ 015c6b60
+    Size: 58 bytes
+    Ref from: 015c6b83
+    Called by (22):
+      FUN_001474b0@001474b0
+      FUN_011eaca0@011eaca0
+      FUN_012216b0@012216b0
+      FUN_01356870@01356870
+      FUN_013593a0@013593a0
+      FUN_0138f140@0138f140
+      FUN_013903d0@013903d0
+      FUN_013e1740@013e1740
+      FUN_0148ced0@0148ced0
+      FUN_014902f0@014902f0
+      FUN_014b0a60@014b0a60
+      FUN_014b25b0@014b25b0
+      FUN_014c03f0@014c03f0
+      FUN_014d9720@014d9720
+      FUN_014f4330@014f4330
+      ... and 7 more
+    Calls (1):
+      FUN_00e828a0@00e828a0
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c6a18
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+
+STRING @ 0202a0ba: "MUSpectralTimeSlice::getPhaseData(): no phase data"
+  FUNC: FUN_015c4e40 @ 015c4e40
+    Size: 4396 bytes
+    Ref from: 015c582b
+    Called by (1):
+      FUN_015c4d90@015c4d90
+    Calls (28):
+      FUN_00c8e690@00c8e690
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00d21140@00d21140
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+      FUN_00e3aec0@00e3aec0
+      FUN_00e7d780@00e7d780
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_00e83530@00e83530
+      FUN_00e83da0@00e83da0
+      FUN_00e8b990@00e8b990
+      FUN_00e8cb50@00e8cb50
+      FUN_00e8cb70@00e8cb70
+      FUN_00e8cb90@00e8cb90
+      FUN_00e8fc40@00e8fc40
+  FUNC: FUN_015c4e40 @ 015c4e40
+    Size: 4396 bytes
+    Ref from: 015c5bc5
+    Called by (1):
+      FUN_015c4d90@015c4d90
+    Calls (28):
+      FUN_00c8e690@00c8e690
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00d21140@00d21140
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+      FUN_00e3aec0@00e3aec0
+      FUN_00e7d780@00e7d780
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_00e83530@00e83530
+      FUN_00e83da0@00e83da0
+      FUN_00e8b990@00e8b990
+      FUN_00e8cb50@00e8cb50
+      FUN_00e8cb70@00e8cb70
+      FUN_00e8cb90@00e8cb90
+      FUN_00e8fc40@00e8fc40
+  FUNC: FUN_015c6310 @ 015c6310
+    Size: 58 bytes
+    Ref from: 015c6333
+    Called by (3):
+      FUN_011eaca0@011eaca0
+      FUN_014902f0@014902f0
+      FUN_018f0ec0@018f0ec0
+    Calls (1):
+      FUN_00e828a0@00e828a0
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c6a45
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+
+STRING @ 0202a0ed: "MUSpectralTimeSlice::getTrueFreqData(): no trueFreq data"
+  FUNC: FUN_015c6350 @ 015c6350
+    Size: 864 bytes
+    Ref from: 015c6627
+    Called by (1):
+      FUN_015c4e40@015c4e40
+    Calls (4):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      FUN_00e83070@00e83070
+      FUN_015c7920@015c7920
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c6a72
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+  FUNC: FUN_015c66c0 @ 015c66c0
+    Size: 58 bytes
+    Ref from: 015c66e3
+    Called by (13):
+      FUN_01356870@01356870
+      FUN_013593a0@013593a0
+      FUN_0138f140@0138f140
+      FUN_013903d0@013903d0
+      FUN_014902f0@014902f0
+      FUN_014b0a60@014b0a60
+      FUN_014d9720@014d9720
+      FUN_014f4330@014f4330
+      FUN_01606530@01606530
+      FUN_01615660@01615660
+      FUN_0161e440@0161e440
+      FUN_01621ee0@01621ee0
+      FUN_01647910@01647910
+    Calls (1):
+      FUN_00e828a0@00e828a0
+
+STRING @ 0202a126: "MUSpectralTimeSlice::getTonalityData(): no tonality data"
+  FUNC: FUN_015c6ba0 @ 015c6ba0
+    Size: 58 bytes
+    Ref from: 015c6bc3
+    Called by (9):
+      FUN_01356870@01356870
+      FUN_0138f140@0138f140
+      FUN_013903d0@013903d0
+      FUN_013a2780@013a2780
+      FUN_013e1740@013e1740
+      FUN_014902f0@014902f0
+      FUN_014f4330@014f4330
+      FUN_0161e440@0161e440
+      FUN_01621ee0@01621ee0
+    Calls (1):
+      FUN_00e828a0@00e828a0
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c6a9f
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+
+STRING @ 0202a15f: "MUSpectralTimeSlice::getTrueTimeSampleOffsetData(): no trueTimeSampleOffsetData data"
+  FUNC: FUN_015c6be0 @ 015c6be0
+    Size: 58 bytes
+    Ref from: 015c6c03
+    Called by (6):
+      FUN_014902f0@014902f0
+      FUN_014b0a60@014b0a60
+      FUN_01615660@01615660
+      FUN_0161e440@0161e440
+      FUN_01621ee0@01621ee0
+      FUN_01647910@01647910
+    Calls (1):
+      FUN_00e828a0@00e828a0
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c6acc
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+
+STRING @ 0202a1b4: "MUSpectralTimeSlice::getTransiencyData(): no transiencyData data"
+  FUNC: FUN_015c6c20 @ 015c6c20
+    Size: 58 bytes
+    Ref from: 015c6c43
+    Called by (3):
+      FUN_00141fc0@00141fc0
+      FUN_0161e440@0161e440
+      FUN_01621ee0@01621ee0
+    Calls (1):
+      FUN_00e828a0@00e828a0
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c6af9
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+
+STRING @ 0202a1f5: "MUSpectralTimeSlice::getTransiencyData(): no vectorData data"
+  FUNC: FUN_015c6c60 @ 015c6c60
+    Size: 58 bytes
+    Ref from: 015c6c83
+    Called by (1):
+      FUN_012216b0@012216b0
+    Calls (1):
+      FUN_00e828a0@00e828a0
+  FUNC: FUN_015c6700 @ 015c6700
+    Size: 1118 bytes
+    Ref from: 015c6b26
+    Called by (1):
+      FUN_014b0a60@014b0a60
+    Calls (3):
+      FUN_00e828a0@00e828a0
+      FUN_00e83010@00e83010
+      _memcpy@01f9b37c
+

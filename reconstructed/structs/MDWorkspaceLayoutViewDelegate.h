@@ -1,0 +1,43 @@
+// Reconstructed from MikeCore — 39 properties
+
+struct MDWorkspaceLayoutViewDelegate {
+    /*  */ void*             _additionalView;
+    /*  */ void*             _selectorView;
+    /*  */ void*             _layoutView;
+    /*  */ void*             _wrapperView;
+    /*  */ void*             _inspectorPanelCache;
+    /*  */ void*             _categoryFilters;
+    /*  */ void*             _modeDisplayedCategories;
+    /*  */ void*             _displayedCategories;
+    /*  */ void*             _wrapperLayout;
+    /*  */ void*             _layoutFailedObserver;
+    /*  */ void*             _windowMenu;
+    /*  */ void*             _firstDocumentEntry;
+    /*  */ void*             _layoutRootView;
+    /*  */ void*             _lastLayoutedFrame;
+    /*  */ void*             _transportPositionAtBottom;
+    /*  */ void*             _documentTabPositionAtBottom;
+    /*  */ void*             _documentsContainerController;
+    /*  */ void*             _horizontalLayoutView;
+    /*  */ void*             _inspectorLeftController;
+    /*  */ void*             _inspectorRightController;
+    /*  */ void*             _documentLayoutView;
+    /*  */ void*             _trackAndEditorView;
+    /*  */ void*             _editorLayoutView;
+    /*  */ void*             _toolbarLayouter;
+    /*  */ void*             _pluginMenuViewController;
+    /*  */ void*             _pluginMenuCtrl;
+    /*  */ void*             _editorList;
+    /*  */ void*             _showsResizeView;
+    /*  */ void*             _doMakeMultiTrackFirstResponder;
+    /*  */ void*             _ignoreHeartBeats;
+    /*  */ void*             _mainMenuChangedObserver;
+    /*  */ void*             _mainResponderChangedObserver;
+    /*  */ void*             _timeGridSetterModifiedObserver;
+    /*  */ void*             _editingDetectionChangedObserver;
+    /*  */ void*             _transportToolbar;
+    /*  */ void*             _lastMainResponderView;
+    /*  */ void*             _orderFrontDisable;
+    /*  */ void*             _selectedViewController;
+    /*  */ void*             _spectrumShaperController;
+};

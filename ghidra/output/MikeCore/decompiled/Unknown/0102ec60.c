@@ -1,0 +1,157 @@
+// Function: FUN_0102ec60
+// Address: 0102ec60
+// Size: 1107 bytes
+// Class: Unknown
+// String references:
+//   "crypto/evp/e_des3.c"
+
+
+ulonglong FUN_0102ec60(undefined1 *param_1,undefined8 *param_2,uchar *param_3,char *param_4)
+
+{
+  longlong lVar1;
+  code *pcVar2;
+  int iVar3;
+  size_t sVar4;
+  ulonglong uVar5;
+  undefined8 *puVar6;
+  undefined8 uVar7;
+  DES_key_schedule *pDVar8;
+  uchar *puVar9;
+  undefined8 *unaff_RSI;
+  undefined1 *puVar10;
+  DES_key_schedule *pDVar11;
+  int in_stack_ffffffffffffff98;
+  undefined4 in_stack_ffffffffffffff9c;
+  int in_stack_ffffffffffffffa0;
+  
+  lVar1 = *(longlong *)PTR____stack_chk_guard_024a9898;
+  uVar5 = 0xffffffff;
+  puVar9 = (uchar *)0xc000000000000007;
+  if (((ulonglong)param_1 & 0xc000000000000007) == 0) {
+    iVar3 = _is_partially_overlapping(0xc000000000000007,(ulonglong)param_1 & 0xffffffff);
+    if (iVar3 == 0) {
+      iVar3 = _EVP_CIPHER_CTX_encrypting();
+      if (iVar3 == 0) {
+        uVar5 = 0xffffffff;
+        if (param_1 < &MACH_HEADER.flags) goto LAB_0102ecd4;
+        if (unaff_RSI == (undefined8 *)0x0) {
+          uVar5 = (ulonglong)((int)param_1 - 0x10);
+          goto LAB_0102ecd4;
+        }
+        puVar6 = (undefined8 *)_EVP_CIPHER_CTX_iv_noconst();
+        *puVar6 = 0x521e8792ca2dd4a;
+        puVar9 = (uchar *)_EVP_CIPHER_CTX_get_cipher_data();
+        pcVar2 = *(code **)(puVar9 + 0x180);
+        if (pcVar2 == (code *)0x0) {
+          pDVar11 = (DES_key_schedule *)(puVar9 + 0x80);
+          pDVar8 = (DES_key_schedule *)(puVar9 + 0x100);
+          _EVP_CIPHER_CTX_iv_noconst();
+          _EVP_CIPHER_CTX_encrypting();
+          sVar4 = (size_t)pDVar11;
+          _DES_ede3_cbc_encrypt
+                    (puVar9,(uchar *)&MACH_HEADER.cpusubtype,sVar4,pDVar8,pDVar8,pDVar11,
+                     (DES_cblock *)CONCAT44(in_stack_ffffffffffffff9c,in_stack_ffffffffffffff98),
+                     in_stack_ffffffffffffffa0);
+        }
+        else {
+          sVar4 = _EVP_CIPHER_CTX_iv_noconst();
+          (*pcVar2)(puVar9,8);
+        }
+        if (unaff_RSI == param_2) {
+          _memmove(puVar9,param_1 + -8,sVar4);
+          param_2 = unaff_RSI + -1;
+        }
+        puVar10 = param_1 + -0x10;
+        FUN_0102e3c0(puVar10,param_2 + 1);
+        pDVar11 = (DES_key_schedule *)(param_1 + -8 + (longlong)param_2);
+        puVar9 = (uchar *)_EVP_CIPHER_CTX_get_cipher_data();
+        pcVar2 = *(code **)(puVar9 + 0x180);
+        if (pcVar2 == (code *)0x0) {
+          pDVar8 = (DES_key_schedule *)(puVar9 + 0x80);
+          _EVP_CIPHER_CTX_iv_noconst();
+          _EVP_CIPHER_CTX_encrypting();
+          _DES_ede3_cbc_encrypt
+                    (puVar9,(uchar *)&MACH_HEADER.cpusubtype,(long)pDVar8,
+                     (DES_key_schedule *)(puVar9 + 0x100),pDVar8,pDVar11,
+                     (DES_cblock *)CONCAT44(in_stack_ffffffffffffff9c,in_stack_ffffffffffffff98),
+                     in_stack_ffffffffffffffa0);
+        }
+        else {
+          uVar7 = _EVP_CIPHER_CTX_iv_noconst();
+          (*pcVar2)(puVar9,8,uVar7);
+        }
+        _BUF_reverse();
+        _BUF_reverse();
+        _EVP_CIPHER_CTX_iv_noconst();
+        _BUF_reverse();
+        FUN_0102e3c0(puVar10);
+        puVar9 = (uchar *)_EVP_CIPHER_CTX_get_cipher_data();
+        pcVar2 = *(code **)(puVar9 + 0x180);
+        if (pcVar2 == (code *)0x0) {
+          pDVar11 = (DES_key_schedule *)(puVar9 + 0x80);
+          pDVar8 = (DES_key_schedule *)_EVP_CIPHER_CTX_iv_noconst();
+          _EVP_CIPHER_CTX_encrypting();
+          _DES_ede3_cbc_encrypt
+                    (puVar9,(uchar *)&MACH_HEADER.cpusubtype,(long)pDVar11,
+                     (DES_key_schedule *)(puVar9 + 0x100),pDVar8,pDVar11,
+                     (DES_cblock *)CONCAT44(in_stack_ffffffffffffff9c,in_stack_ffffffffffffff98),
+                     in_stack_ffffffffffffffa0);
+        }
+        else {
+          pDVar11 = (DES_key_schedule *)_EVP_CIPHER_CTX_iv_noconst();
+          (*pcVar2)(puVar9,8);
+        }
+        _SHA1(puVar9,(size_t)&stack0xffffffffffffff98,(uchar *)pDVar11);
+        sVar4 = 8;
+        iVar3 = _CRYPTO_memcmp(puVar9,&MACH_HEADER.cpusubtype,(size_t)pDVar11);
+        _OPENSSL_cleanse(puVar9,sVar4);
+        _OPENSSL_cleanse(puVar9,sVar4);
+        _OPENSSL_cleanse(puVar9,sVar4);
+        _EVP_CIPHER_CTX_iv_noconst();
+        _OPENSSL_cleanse(puVar9,sVar4);
+        if ((iVar3 == 0) && (uVar5 = (ulonglong)puVar10 & 0xffffffff, (int)puVar10 != -1))
+        goto LAB_0102ecd4;
+        _OPENSSL_cleanse(puVar9,sVar4);
+      }
+      else {
+        if (unaff_RSI == (undefined8 *)0x0) {
+          uVar5 = (ulonglong)((int)param_1 + 0x10);
+          goto LAB_0102ecd4;
+        }
+        _memmove(puVar9,param_1,(size_t)param_3);
+        sVar4 = (size_t)&stack0xffffffffffffff98;
+        _SHA1(puVar9,sVar4,param_3);
+        *(ulonglong *)((longlong)(unaff_RSI + 1) + (longlong)param_1) =
+             CONCAT44(in_stack_ffffffffffffff9c,in_stack_ffffffffffffff98);
+        _OPENSSL_cleanse(puVar9,sVar4);
+        _EVP_CIPHER_CTX_iv_noconst();
+        iVar3 = _RAND_bytes(puVar9,sVar4);
+        if (0 < iVar3) {
+          puVar6 = (undefined8 *)_EVP_CIPHER_CTX_iv_noconst();
+          *unaff_RSI = *puVar6;
+          FUN_0102e3c0(param_1 + 8,unaff_RSI + 1);
+          _BUF_reverse();
+          puVar6 = (undefined8 *)_EVP_CIPHER_CTX_iv_noconst();
+          *puVar6 = 0x521e8792ca2dd4a;
+          FUN_0102e3c0(param_1 + 0x10);
+          uVar5 = (ulonglong)(param_1 + 0x10) & 0xffffffff;
+          goto LAB_0102ecd4;
+        }
+      }
+      uVar5 = 0xffffffff;
+    }
+    else {
+      _ERR_put_error(0x2010540,0xa2,0x18e,param_4,in_stack_ffffffffffffff98);
+      uVar5 = 0;
+    }
+  }
+LAB_0102ecd4:
+  if (*(longlong *)PTR____stack_chk_guard_024a9898 != lVar1) {
+                    /* WARNING: Subroutine does not return */
+    ___stack_chk_fail();
+  }
+  return uVar5;
+}
+
+

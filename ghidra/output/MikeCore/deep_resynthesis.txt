@@ -1,0 +1,29 @@
+# Search: "Resynthesized"
+STRING @ 0202e797: "%@/Desktop/Resynthesized %I.aif"
+  FUNC: FUN_018431f0 @ 018431f0
+    Size: 14689 bytes
+    Ref from: 018467c7
+    Called by (1):
+      FUN_01848f00@01848f00
+    Calls (56):
+      FUN_00022d50@00022d50
+      FUN_00243390@00243390
+      FUN_00c8e690@00c8e690
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00c9ff50@00c9ff50
+      FUN_00ca0840@00ca0840
+      FUN_00ce71c0@00ce71c0
+      FUN_00d21140@00d21140
+      FUN_00d216c0@00d216c0
+      FUN_00d23310@00d23310
+      FUN_00d23d70@00d23d70
+      FUN_00d242c0@00d242c0
+      FUN_00d45790@00d45790
+      FUN_00d468f0@00d468f0
+      FUN_00d46dc0@00d46dc0
+      FUN_00d470c0@00d470c0
+      FUN_00d4ff40@00d4ff40
+      FUN_00d500e0@00d500e0
+      FUN_00d50b00@00d50b00
+

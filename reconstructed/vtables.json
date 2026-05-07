@@ -1,0 +1,16 @@
+{
+  "total_classes": 2,
+  "vtable_count": 0,
+  "typeinfo_count": 3,
+  "rtti_count": 2,
+  "categories": {
+    "GN_Generic": 2
+  },
+  "vtables": {},
+  "classes_by_category": {
+    "GN_Generic": [
+      "GNException",
+      "GNObject"
+    ]
+  }
+}

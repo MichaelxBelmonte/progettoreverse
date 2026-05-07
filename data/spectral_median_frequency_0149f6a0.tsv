@@ -1,0 +1,8 @@
+scope	target	role	confidence	evidence
+function	0149f6a0	spectral_median_frequency_hz_estimator	very_high	repeated 00e83530 execution then re^2+im^2 accumulation sqrt cumulative 50 percent threshold and final bin to Hz conversion
+constant	0239011c	half_energy_threshold	very_high	lldb memory read shows 0.5 and function uses it at line 467 to build cumulative threshold
+constant	0240e370	base_reference_sample_rate	very_high	lldb memory read shows 44000 and function uses it at line 77 to derive reduction factor
+constant	0240e33c	frame_size_1024	very_high	lldb memory read shows 1024 and function subtracts 1024 times reduction factor at line 217
+constant	0241d650	bin_to_hz_scale_one_over_1024	very_high	lldb memory read shows 0.0009765625 and function multiplies it into final return at line 502
+constant	0241126c	max_bin_fallback_512	very_high	lldb memory read shows 512 and function uses it as fallback bin at line 491
+caller	01484bc0	downstream_threshold_floor_or_reference_use	high	caller takes estimator result at line 544 then clamps a downstream threshold window at lines 545 to 550

@@ -1,0 +1,6 @@
+scope	target	role	confidence	evidence
+caller	01484bc0	unique_direct_consumer_in_mikecore	very_high	full binary llvm-objdump grep shows only one direct call at 0x14857f3 and local decompiled xref set matches
+field	MUElementAnalyzer+0x110	cached_spectral_median_frequency_hz	high	01484bc0 stores FUN_0149f6a0 return into *(float *)(this_ptr + 0x22)
+call	01484bc0->014a74b0	threshold_seeded_from_cached_median_and_writes_self_plus_0xf4_to_0x108	high	decompiled call uses max floor against self+0x110 scaled then passes outputs at self+0xf4 and self+0x108; objdump materializes self+0xf4 self+0xf8 self+0xfc self+0x100 self+0x104 self+0x108
+call	01484bc0->014a89c0	prefilter_raw_note_separation_from_cached_median	high	objdump loads self+0x110 rescales and clamps then calls 014a89c0; callee filters items by threshold against item+0x20 and start time bounds
+inference	MUElementAnalyzer+0xb0	full_time_window_upper_bound_for_014a89c0	medium_high	callsite passes xmm1 zero and xmm2 from self+0xb0 while 014a89c0 compares item start in param2 <= start < param3

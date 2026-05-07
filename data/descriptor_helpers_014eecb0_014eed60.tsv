@@ -1,0 +1,4 @@
+function	output_field	confidence	verified_behavior	notes
+014eed60	0x10	high	converts item+0x14 from cents to hz then computes a harmonic-weighted average over an external float table	floors result to 1e-4
+014eecb0	0x20 and 0x24	very_high	converts item+0x14 from cents to hz then stores clamped hz to item+0x20 and delegates aux-float update through 014b71e0	call path now fixed as trueFreqData->freqAxis, magnitudeData->energyBuffer, tonalityData->extra weight; 0x24 is compared as float and floored to FLT_MIN
+014b71e0	0x24	very_high	windowed helper used by 014eecb0 with trueFreqData axis, magnitudeData energy buffer and tonalityData mask/weight	primary remaining question is exact numeric role of tonalityData

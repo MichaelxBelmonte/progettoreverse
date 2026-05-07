@@ -1,0 +1,29 @@
+# Search: "findMonophonicPitchInFrequencyDomain"
+STRING @ 02420d8b: "_findMonophonicPitchInFrequencyDomain"
+  FUNC: FUN_01109ef0 @ 01109ef0
+    Size: 9650 bytes
+    Ref from: 0110c2e3
+    Called by (1):
+      FUN_010d83d0@010d83d0
+    Calls (52):
+      FUN_0027a770@0027a770
+      FUN_00d56010@00d56010
+      FUN_00e84050@00e84050
+      FUN_00e8dbb0@00e8dbb0
+      FUN_00e8dbf0@00e8dbf0
+      FUN_0110cf90@0110cf90
+      FUN_0110d080@0110d080
+      FUN_0110d170@0110d170
+      FUN_0110d250@0110d250
+      FUN_0110d340@0110d340
+      FUN_0110d430@0110d430
+      FUN_0110d520@0110d520
+      FUN_0110d610@0110d610
+      FUN_0110d6f0@0110d6f0
+      FUN_0110d7e0@0110d7e0
+      FUN_0110d8d0@0110d8d0
+      FUN_0110d9c0@0110d9c0
+      FUN_0110dab0@0110dab0
+      FUN_0110dba0@0110dba0
+      FUN_0110dc90@0110dc90
+

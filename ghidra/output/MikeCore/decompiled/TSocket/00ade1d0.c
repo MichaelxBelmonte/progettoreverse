@@ -1,0 +1,130 @@
+// Function: FUN_00ade1d0
+// Address: 00ade1d0
+// Size: 760 bytes
+// Class: TSocket
+// String references:
+//   "TSocket::write_partial() send() "
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+ssize_t FUN_00ade1d0(ulong param_1,string *param_2,size_t param_3,int param_4)
+
+{
+  uint uVar1;
+  undefined8 uVar2;
+  ssize_t sVar3;
+  undefined8 *puVar4;
+  int *piVar5;
+  uint *puVar6;
+  ulong uVar7;
+  void *pvVar8;
+  longlong unaff_RDI;
+  undefined4 uVar9;
+  byte local_50;
+  byte local_38;
+  undefined6 uStack_37;
+  undefined1 uStack_31;
+  undefined1 uStack_30;
+  undefined6 uStack_2f;
+  undefined1 uStack_29;
+  undefined8 *local_28;
+  
+  if (*(int *)(unaff_RDI + 0x40) == -1) {
+    puVar4 = (undefined8 *)___cxa_allocate_exception();
+    local_28 = operator_new(param_1);
+    local_38 = (byte)_DAT_023d4f10;
+    uStack_37 = (undefined6)((ulonglong)_DAT_023d4f10 >> 8);
+    uStack_31 = (undefined1)((ulonglong)_DAT_023d4f10 >> 0x38);
+    uStack_30 = (undefined1)_UNK_023d4f18;
+    uStack_2f = (undefined6)((ulonglong)_UNK_023d4f18 >> 8);
+    uStack_29 = (undefined1)((ulonglong)_UNK_023d4f18 >> 0x38);
+    *(undefined8 *)((longlong)local_28 + 0x17) = 0x74656b636f73206e;
+    local_28[2] = 0x6e65706f2d6e6f6e;
+    local_28[1] = 0x206e6f2065746972;
+    *local_28 = 0x772064656c6c6143;
+    *(undefined1 *)((longlong)local_28 + 0x1f) = 0;
+    *puVar4 = &DAT_02517278;
+    uVar9 = std::string::string((string *)0x772064656c6c6143,param_2);
+    *puVar4 = &DAT_0252c498;
+    *(undefined4 *)(puVar4 + 4) = 1;
+                    /* WARNING: Subroutine does not return */
+    ___cxa_throw(uVar9,FUN_00953b70);
+  }
+  param_2 = (string *)((ulonglong)param_2 & 0xffffffff);
+  uVar7 = 0x80000;
+  sVar3 = _send(0x80000,param_2,param_3,param_4);
+  if (sVar3 < 0) {
+    piVar5 = ___error();
+    sVar3 = 0;
+    if ((*piVar5 != 0x23) && (piVar5 = ___error(), *piVar5 != 0x23)) {
+      puVar6 = (uint *)___error();
+      uVar1 = *puVar6;
+      FUN_00adb250();
+      puVar4 = (undefined8 *)std::string::insert(uVar7,"TSocket::write_partial() send() ");
+      local_28 = (undefined8 *)puVar4[2];
+      pvVar8 = (void *)*puVar4;
+      uVar2 = puVar4[1];
+      uStack_30 = (undefined1)uVar2;
+      uStack_2f = (undefined6)((ulonglong)uVar2 >> 8);
+      uStack_29 = (undefined1)((ulonglong)uVar2 >> 0x38);
+      local_38 = (byte)pvVar8;
+      uStack_37 = (undefined6)((ulonglong)pvVar8 >> 8);
+      uStack_31 = (undefined1)((ulonglong)pvVar8 >> 0x38);
+      *puVar4 = 0;
+      puVar4[1] = 0;
+      puVar4[2] = 0;
+      FUN_00ad1610(pvVar8,uVar1);
+      if ((local_38 & 1) != 0) {
+        operator_delete(pvVar8);
+      }
+      if ((local_50 & 1) != 0) {
+        operator_delete(pvVar8);
+      }
+      ___cxa_allocate_exception();
+      if ((uVar1 < 0x3a) && ((0x240000100000000U >> ((ulonglong)uVar1 & 0x3f) & 1) != 0)) {
+        local_38 = 0x1c;
+        uStack_37 = 0x286574697277;
+        uStack_31 = 0x29;
+        uStack_30 = 0x20;
+        uStack_2f = 0x2928646e6573;
+        uStack_29 = 0;
+        uVar9 = FUN_00adac50(uVar1,&local_38);
+                    /* WARNING: Subroutine does not return */
+        ___cxa_throw(uVar9,FUN_00953b70);
+      }
+      local_38 = 0x1c;
+      uStack_37 = 0x286574697277;
+      uStack_31 = 0x29;
+      uStack_30 = 0x20;
+      uStack_2f = 0x2928646e6573;
+      uStack_29 = 0;
+      uVar9 = FUN_00adac50(uVar1,&local_38);
+                    /* WARNING: Subroutine does not return */
+      ___cxa_throw(uVar9,FUN_00953b70);
+    }
+  }
+  else if (sVar3 == 0) {
+    puVar4 = (undefined8 *)___cxa_allocate_exception();
+    local_28 = operator_new(uVar7);
+    local_38 = (byte)_DAT_023d4f20;
+    uStack_37 = (undefined6)((ulonglong)_DAT_023d4f20 >> 8);
+    uStack_31 = (undefined1)((ulonglong)_DAT_023d4f20 >> 0x38);
+    uStack_30 = (undefined1)_UNK_023d4f28;
+    uStack_2f = (undefined6)((ulonglong)_UNK_023d4f28 >> 8);
+    uStack_29 = (undefined1)((ulonglong)_UNK_023d4f28 >> 0x38);
+    *(undefined8 *)((longlong)local_28 + 0xf) = 0x2e302064656e7275;
+    local_28[1] = 0x7574657220646e65;
+    *local_28 = 0x732074656b636f53;
+    *(undefined1 *)((longlong)local_28 + 0x17) = 0;
+    *puVar4 = &DAT_02517278;
+    uVar9 = std::string::string((string *)0x732074656b636f53,param_2);
+    *puVar4 = &DAT_0252c498;
+    *(undefined4 *)(puVar4 + 4) = 1;
+                    /* WARNING: Subroutine does not return */
+    ___cxa_throw(uVar9,FUN_00953b70);
+  }
+  return sVar3;
+}
+
+

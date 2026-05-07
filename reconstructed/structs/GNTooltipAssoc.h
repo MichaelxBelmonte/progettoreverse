@@ -1,0 +1,47 @@
+// Reconstructed from MikeCore — 43 properties
+
+struct GNTooltipAssoc {
+    /*  */ void*             _irTitles;
+    /*  */ void*             _titles;
+    /*  */ void*             _userParameters;
+    /*  */ void*             _userParameterIndexes;
+    /*  */ void*             _currentGainReduction;
+    /*  */ void*             _gainReductionFactor;
+    /*  */ void*             _inputLevelFactor;
+    /*  */ void*             _outputLevelFactor;
+    /*  */ void*             _levelSelection;
+    /*  */ void*             _impulseResponses;
+    /*  */ void*             _mutingSamples;
+    /*  */ void*             _soloIRs;
+    /*  */ void*             _tapeInputLevelFactor;
+    /*  */ void*             _tapeOutputLevelFactor;
+    /*  */ void*             _tapeLevelType;
+    /*  */ void*             _tapeInputOutputLink;
+    /*  */ void*             _linkOverrun;
+    /*  */ void*             _recordingUserParameterKeys;
+    /*  */ void*             _factor;
+    /*  */ void*             _needleOriginOffset;
+    /*  */ void*             _dbLabels;
+    /*  */ void*             _dbLabelDegrees;
+    /*  */ void*             _dbs;
+    /*  */ void*             _defaultMicGain;
+    /*  */ void*             _defaultLineGain;
+    /*  */ void*             _buttons;
+    /*  */ void*             _normalizedMinValue;
+    /*  */ void*             _normalizedMaxValue;
+    /*  */ void*             _inverse;
+    /*  */ void*             _gainReductionSideFactor;
+    /*  */ void*             _inputLevelSideFactor;
+    /*  */ void*             _outputLevelSideFactor;
+    /*  */ void*             _levelSelectionSide;
+    /*  */ void*             _offValue;
+    /*  */ void*             _defaultValueKey;
+    /*  */ void*             _helperFormatter;
+    /*  */ void*             _sideView;
+    /*  */ void*             _gainView;
+    /*  */ void*             _overloudProcessor;
+    /*  */ void*             _overloudCompressor;
+    /*  */ void*             _reductionFactors;
+    /*  */ void*             _reductionFactorIndex;
+    /*  */ void*             _openAutomationButton;
+};

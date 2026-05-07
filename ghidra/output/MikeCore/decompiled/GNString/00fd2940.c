@@ -1,0 +1,214 @@
+// Function: FUN_00fd2940
+// Address: 00fd2940
+// Size: 895 bytes
+// Class: GNString
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_00fd2940(undefined8 param_1,int param_2)
+
+{
+  int iVar1;
+  uint uVar2;
+  uint uVar3;
+  uint uVar4;
+  int *unaff_RDI;
+  uint uVar5;
+  undefined8 uVar6;
+  undefined1 auVar7 [16];
+  undefined1 auVar8 [16];
+  uint uVar9;
+  uint uVar10;
+  uint uVar12;
+  uint uVar13;
+  undefined1 auVar11 [16];
+  uint uVar14;
+  undefined1 auVar15 [16];
+  undefined1 auVar16 [16];
+  undefined1 auVar17 [16];
+  undefined1 auVar18 [16];
+  undefined1 auVar19 [16];
+  int local_f8;
+  int iStack_f4;
+  int iStack_f0;
+  int iStack_ec;
+  int local_e8;
+  int iStack_e4;
+  int iStack_e0;
+  int iStack_dc;
+  int local_d8;
+  int local_d4;
+  int local_d0;
+  int iStack_cc;
+  int iStack_c8;
+  int iStack_c4;
+  int local_c0;
+  int local_bc;
+  int local_b8;
+  int iStack_b4;
+  int iStack_b0;
+  int iStack_ac;
+  int local_a8;
+  int iStack_a4;
+  int iStack_a0;
+  int iStack_9c;
+  int local_98;
+  int iStack_94;
+  int iStack_90;
+  int iStack_8c;
+  int local_88;
+  int iStack_84;
+  int iStack_80;
+  int iStack_7c;
+  int local_78;
+  int iStack_74;
+  int iStack_70;
+  int iStack_6c;
+  int local_68;
+  int iStack_64;
+  int iStack_60;
+  int iStack_5c;
+  int local_58;
+  int local_54;
+  int local_50;
+  int iStack_4c;
+  int iStack_48;
+  int iStack_44;
+  int local_40;
+  uint local_3c;
+  longlong local_38;
+  
+  local_38 = *(longlong *)PTR____stack_chk_guard_024a9898;
+  uVar6 = FUN_00fd1300();
+  _gf_mul(uVar6,&local_b8);
+  local_b8 = unaff_RDI[0x10] + *unaff_RDI;
+  iStack_b4 = unaff_RDI[0x11] + unaff_RDI[1];
+  iStack_b0 = unaff_RDI[0x12] + unaff_RDI[2];
+  iStack_ac = unaff_RDI[0x13] + unaff_RDI[3];
+  local_a8 = unaff_RDI[0x14] + unaff_RDI[4];
+  iStack_a4 = unaff_RDI[0x15] + unaff_RDI[5];
+  iStack_a0 = unaff_RDI[0x16] + unaff_RDI[6];
+  iStack_9c = unaff_RDI[0x17] + unaff_RDI[7];
+  local_98 = unaff_RDI[0x18] + unaff_RDI[8];
+  iStack_94 = unaff_RDI[0x19] + unaff_RDI[9];
+  iStack_90 = unaff_RDI[0x1a] + unaff_RDI[10];
+  iStack_8c = unaff_RDI[0x1b] + unaff_RDI[0xb];
+  auVar7 = *(undefined1 (*) [16])(unaff_RDI + 0xc);
+  local_88 = unaff_RDI[0x1c] + auVar7._0_4_;
+  iStack_84 = unaff_RDI[0x1d] + auVar7._4_4_;
+  iStack_80 = unaff_RDI[0x1e] + auVar7._8_4_;
+  iStack_7c = unaff_RDI[0x1f] + auVar7._12_4_;
+  uVar6 = _gf_mul(auVar7._0_8_,&local_b8);
+  _gf_mul(uVar6,unaff_RDI + 0x30);
+  iVar1 = unaff_RDI[0x10];
+  local_f8 = iVar1 + local_78;
+  iStack_f4 = unaff_RDI[0x11] + iStack_74;
+  iStack_f0 = unaff_RDI[0x12] + iStack_70;
+  iStack_ec = unaff_RDI[0x13] + iStack_6c;
+  local_e8 = unaff_RDI[0x14] + local_68;
+  iStack_e4 = unaff_RDI[0x15] + iStack_64;
+  iStack_e0 = unaff_RDI[0x16] + iStack_60;
+  iStack_dc = unaff_RDI[0x17] + iStack_5c;
+  local_d8 = unaff_RDI[0x18] + local_58;
+  local_d4 = unaff_RDI[0x19] + local_54;
+  local_d0 = unaff_RDI[0x1a] + local_50;
+  iStack_cc = unaff_RDI[0x1b] + iStack_4c;
+  iStack_c8 = unaff_RDI[0x1c] + iStack_48;
+  iStack_c4 = unaff_RDI[0x1d] + iStack_44;
+  local_c0 = unaff_RDI[0x1e] + local_40;
+  local_bc = unaff_RDI[0x1f] + local_3c;
+  auVar18._4_4_ = iVar1;
+  auVar18._0_4_ = iVar1;
+  auVar18._8_4_ = unaff_RDI[0x11];
+  auVar18._12_4_ = unaff_RDI[0x12];
+  auVar11 = pblendw(ZEXT416((uint)unaff_RDI[0x1f]),auVar18,0xfc);
+  auVar16._4_4_ = local_78;
+  auVar16._0_4_ = local_78;
+  auVar16._8_4_ = iStack_74;
+  auVar16._12_4_ = iStack_70;
+  auVar16 = pblendw(ZEXT416(local_3c),auVar16,0xfc);
+  uVar5 = (unaff_RDI[0x13] - iStack_6c) + 0x1ffffffe;
+  auVar7._0_4_ = (unaff_RDI[0x14] - local_68) + _DAT_023fa9d0;
+  auVar7._4_4_ = (unaff_RDI[0x15] - iStack_64) + _UNK_023fa9d4;
+  auVar7._8_4_ = (unaff_RDI[0x16] - iStack_60) + _UNK_023fa9d8;
+  auVar7._12_4_ = (unaff_RDI[0x17] - iStack_5c) + _UNK_023fa9dc;
+  uVar2 = (unaff_RDI[0x19] - local_54) + 0x1ffffffe;
+  auVar8._0_4_ = (unaff_RDI[0x1a] - local_50) + _DAT_023fa9d0;
+  auVar8._4_4_ = (unaff_RDI[0x1b] - iStack_4c) + _UNK_023fa9d4;
+  auVar8._8_4_ = (unaff_RDI[0x1c] - iStack_48) + _UNK_023fa9d8;
+  auVar8._12_4_ = (unaff_RDI[0x1d] - iStack_44) + _UNK_023fa9dc;
+  uVar4 = (unaff_RDI[0x1e] - local_40) + 0x1ffffffe;
+  uVar9 = (auVar11._0_4_ - auVar16._0_4_) + _DAT_023fa9d0;
+  uVar12 = (auVar11._4_4_ - auVar16._4_4_) + _UNK_023fa9d4;
+  uVar13 = (auVar11._8_4_ - auVar16._8_4_) + _UNK_023fa9d8;
+  uVar14 = (auVar11._12_4_ - auVar16._12_4_) + _UNK_023fa9dc;
+  auVar11._0_8_ = CONCAT44(uVar13,uVar12);
+  auVar11._8_4_ = uVar14;
+  auVar11._12_4_ = uVar14;
+  uVar10 = uVar9 >> 0x1c;
+  uVar3 = uVar10 + (unaff_RDI[0x18] - local_58) + 0x1ffffffc;
+  iStack_7c = (uVar4 >> 0x1c) + (uVar9 & 0xfffffff);
+  iStack_80 = (auVar8._12_4_ >> 0x1c) + (uVar4 & 0xfffffff);
+  auVar19._4_4_ = auVar8._0_4_;
+  auVar19._0_4_ = auVar8._0_4_;
+  auVar19._8_4_ = auVar8._4_4_;
+  auVar19._12_4_ = auVar8._8_4_;
+  auVar8 = auVar8 & _DAT_023fa9b0;
+  auVar16 = pblendw(auVar19,ZEXT416(uVar2),3);
+  iStack_90 = (auVar16._0_4_ >> 0x1c) + auVar8._0_4_;
+  iStack_8c = (auVar16._4_4_ >> 0x1c) + auVar8._4_4_;
+  local_88 = (auVar16._8_4_ >> 0x1c) + auVar8._8_4_;
+  iStack_84 = (auVar16._12_4_ >> 0x1c) + auVar8._12_4_;
+  iStack_94 = (uVar3 >> 0x1c) + (uVar2 & 0xfffffff);
+  local_98 = (auVar7._12_4_ >> 0x1c) + (uVar3 & 0xfffffff);
+  auVar17._4_4_ = auVar7._0_4_;
+  auVar17._0_4_ = auVar7._0_4_;
+  auVar17._8_4_ = auVar7._4_4_;
+  auVar17._12_4_ = auVar7._8_4_;
+  auVar7 = auVar7 & _DAT_023fa9b0;
+  auVar8 = pblendw(auVar17,ZEXT416(uVar5),3);
+  local_a8 = (auVar8._0_4_ >> 0x1c) + auVar7._0_4_;
+  iStack_a4 = (auVar8._4_4_ >> 0x1c) + auVar7._4_4_;
+  iStack_a0 = (auVar8._8_4_ >> 0x1c) + auVar7._8_4_;
+  iStack_9c = (auVar8._12_4_ >> 0x1c) + auVar7._12_4_;
+  auVar15._8_8_ = auVar11._8_8_ & 0xffffffff | (ulonglong)uVar5 << 0x20;
+  auVar15._0_8_ = auVar11._0_8_;
+  auVar15 = auVar15 & _DAT_023fa9b0;
+  local_b8 = auVar15._0_4_ + uVar10;
+  iStack_b4 = auVar15._4_4_ + (uVar12 >> 0x1c);
+  iStack_b0 = auVar15._8_4_ + (uVar13 >> 0x1c);
+  iStack_ac = auVar15._12_4_ + (uVar14 >> 0x1c);
+  auVar7 = *(undefined1 (*) [16])(unaff_RDI + 8);
+  auVar8 = *(undefined1 (*) [16])(unaff_RDI + 0xc);
+  unaff_RDI[0x10] = *unaff_RDI + unaff_RDI[0x20];
+  unaff_RDI[0x11] = unaff_RDI[1] + unaff_RDI[0x21];
+  unaff_RDI[0x12] = unaff_RDI[2] + unaff_RDI[0x22];
+  unaff_RDI[0x13] = unaff_RDI[3] + unaff_RDI[0x23];
+  unaff_RDI[0x14] = unaff_RDI[0x24] + unaff_RDI[4];
+  unaff_RDI[0x15] = unaff_RDI[0x25] + unaff_RDI[5];
+  unaff_RDI[0x16] = unaff_RDI[0x26] + unaff_RDI[6];
+  unaff_RDI[0x17] = unaff_RDI[0x27] + unaff_RDI[7];
+  unaff_RDI[0x18] = unaff_RDI[0x28] + auVar7._0_4_;
+  unaff_RDI[0x19] = unaff_RDI[0x29] + auVar7._4_4_;
+  unaff_RDI[0x1a] = unaff_RDI[0x2a] + auVar7._8_4_;
+  unaff_RDI[0x1b] = unaff_RDI[0x2b] + auVar7._12_4_;
+  unaff_RDI[0x1c] = unaff_RDI[0x2c] + auVar8._0_4_;
+  unaff_RDI[0x1d] = unaff_RDI[0x2d] + auVar8._4_4_;
+  unaff_RDI[0x1e] = unaff_RDI[0x2e] + auVar8._8_4_;
+  unaff_RDI[0x1f] = unaff_RDI[0x2f] + auVar8._12_4_;
+  uVar6 = FUN_00fd1300();
+  uVar6 = _gf_mul(uVar6,unaff_RDI + 0x10);
+  uVar6 = _gf_mul(uVar6,&local_b8);
+  uVar6 = _gf_mul(uVar6,&local_f8);
+  if (param_2 == 0) {
+    _gf_mul(uVar6,&local_f8);
+  }
+  if (*(longlong *)PTR____stack_chk_guard_024a9898 == local_38) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail();
+}
+
+

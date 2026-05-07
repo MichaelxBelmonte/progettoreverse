@@ -1,0 +1,22 @@
+# Search: "Inappropriate table size for FFT"
+STRING @ 02029003: "Inappropriate table size for FFT (%I)!"
+  FUNC: FUN_012b98e0 @ 012b98e0
+    Size: 448 bytes
+    Ref from: 012b9a76
+    Called by (1):
+      FUN_012a8c90@012a8c90
+    Calls (3):
+      FUN_00cc7b40@00cc7b40
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+  FUNC: FUN_012b96f0 @ 012b96f0
+    Size: 448 bytes
+    Ref from: 012b9886
+    Called by (2):
+      FUN_012a8c90@012a8c90
+      FUN_012b5260@012b5260
+    Calls (3):
+      FUN_00cc7b40@00cc7b40
+      FUN_00d50b00@00d50b00
+      FUN_00d50b20@00d50b20
+

@@ -1,0 +1,11 @@
+kind	address_or_slot	finding	confidence	evidence
+identity	01432b10	builds_extended_triple_value_point_object	high	assembly allocates 0x28 bytes and writes doubles at +0x10 +0x18 +0x20
+field	01432b10	plus_0x10_position_or_index	high	GNInt consumes *(double *)(obj + 0x10) as int-like bin/index and MUSpectrumShaper seeds it from local best-bin index
+field	01432b10	plus_0x18_value_or_amplitude	high	GNInt compares *(double *)(obj + 0x18) between adjacent candidates and MUSpectrumShaper seeds it from the best local value
+field	01432b10	plus_0x20_gating_or_prominence_scalar	medium_high	GNInt prunes and thresholds candidates on obj + 0x20 using zero tests and g_02390448
+consumer	014f0c40	local_extrema_candidate_list	high	GNInt emits 01432b10 objects on both local minima and local maxima branches and then merges or removes them using +0x10 +0x18 +0x20
+consumer	014902f0	shaper_best_bin_marker	medium_high	MUSpectrumShaper builds one object from best local bin/value pair and repeatedly reuses the same builder in nearby thresholded paths
+scope	01432b10	direct_callers_limited_to_GNInt_and_MUSpectrumShaper	high	rg over reconstructed clean corpus shows direct calls only in 014f0c40 and 014902f0 plus combined mirrors
+nonidentity	01432b10	not_MUPosValue	high	MUPosValue is size 0x20 with only +0x10/+0x18 and adjacent registration by name while 01432b10 is size 0x28 with an extra scalar
+nonidentity	01432b10	not_MUPitchMatrixPeak	very_high	real MUPitchMatrixPeak nodes are allocated through g_025e4538 in 0149c330 rather than 01432b10
+caution	014902f0	decompiler_loses_extra_builder_args	high	repeated decompiled calls to 01432b10 show only local_d8._0_8_ but surrounding logic indicates omitted XMM or stack arguments rather than a true one-argument ABI

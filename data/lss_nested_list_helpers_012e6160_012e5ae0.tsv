@@ -1,0 +1,13 @@
+scope	target	role	confidence	evidence
+function	012e6160	getter_source_plus_0xa8	very_high	disassembly reads 0xa8(%rsi), retains non-null pointer, stores wrapper pointer and ownership flag
+function	012e5ae0	getter_source_plus_0xb0	very_high	disassembly reads 0xb0(%rsi), retains non-null pointer, stores wrapper pointer and ownership flag
+cluster	012e57f0_012e5b20_012e61a0	MULSSGenerator_LSS_graph_adjacent	high	index_classified places 012e57f0 and 012e5b20 as MULSSGenerator original and 012e61a0 by addr_proximity_backward; static init strings reference MULSSGenerator
+function	012e61a0	recursive_a8_nested_list_expansion	high	reads arg+0xa8 as GNList-like object, checks child element+0xa8 list counts, allocates g_02572358 GNList when expansion is needed
+function	012e7210	recursive_collect_b0_over_a8_children	high	reads source+0xb0 as initial direct/local list, recurses over source+0xa8 child list, appends each child aggregate via list merge helper
+offset	012e7210_source_plus_0xa8	nested_child_list_link	high	012e7210 treats +0xa8 as GNList-like children and recurses over every element
+offset	012e7210_source_plus_0xb0	direct_payload_list_link	high	012e7210 uses +0xb0 as the initial retained result list before child aggregation
+consumer	012cce00	MULSSGenerator_graph_materialization_consumer	high	uses 012e6160 and 012e5ae0 counts to choose LSS materialization/update helpers including 012e6000, 012e57e0, 012e5f80, 012e7d10, 012e7900 and 012e68b0
+consumer	01650af0	LSS_to_principal_item_bridge	medium_high	two passes through 01505930 -> 012cb110 -> 012e6160 -> 012e5ae0 followed by MUAudioSourcePrincipalItem routines 012992a0 and 012996f0
+consumer	0078e820	MUElementAnalyzer_first_link_consumer	medium_high	builds analyzer GNList and then consumes 012cb110 -> 012e6160 before identity comparison/linking of sublists
+dispatcher	01433f60_staging_list	LSS_nested_list_flatten_to_principal_item_payload	high	callsite chain materializes +0xa8 then +0xb0 nested links before appending payloads and runtime-checking payload class via 00e85ea0
+negative	012e6160_012e5ae0_offsets	not_next_previous_sequence_names	very_high	registrars expose _nextItemInSequence/_previousItemInSequence strings without offset binding; principal item consumers already show distinct sequence-like fields at +0xa0/+0xa8

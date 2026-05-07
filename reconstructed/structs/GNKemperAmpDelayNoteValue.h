@@ -1,0 +1,47 @@
+// Reconstructed from MikeCore — 43 properties
+
+struct GNKemperAmpDelayNoteValue {
+    /*  */ void*             _delayNoteValue1;
+    /*  */ void*             _delayNoteValue2;
+    /*  */ void*             _diMixFactor;
+    /*  */ void*             _isDiMixEnabled;
+    /*  */ void*             _isDiMixBlending;
+    /*  */ void*             _isDiMixInverted;
+    /*  */ void*             _rigTitle;
+    /*  */ void*             _rigData;
+    /*  */ void*             _rigTempo;
+    /*  */ void*             _isTempoSyncingToSong;
+    /*  */ void*             _isTempoWrapAroundEnabled;
+    /*  */ void*             _ref;
+    /*  */ void*             _refSampleRate;
+    /*  */ void*             _rigDataLock;
+    /*  */ void*             _syncedGain;
+    /*  */ void*             _syncedIsStackActive;
+    /*  */ void*             _syncedEqBass;
+    /*  */ void*             _syncedEqMiddle;
+    /*  */ void*             _syncedEqTreble;
+    /*  */ void*             _syncedEqPresence;
+    /*  */ void*             _syncedIsDelayActive;
+    /*  */ void*             _syncedDelayType;
+    /*  */ void*             _syncedDelayMix;
+    /*  */ void*             _syncedDelayFeedback;
+    /*  */ void*             _syncedDelayBandwidth;
+    /*  */ void*             _syncedDelayFrequency;
+    /*  */ void*             _syncedDelayModulation;
+    /*  */ void*             _syncedDelayDucking;
+    /*  */ void*             _syncedDelayLowCut;
+    /*  */ void*             _syncedDelayHighCut;
+    /*  */ void*             _syncedDelayReverseMix;
+    /*  */ void*             _syncedDelayStereo;
+    /*  */ void*             _syncedDelayFlutterIntensity;
+    /*  */ void*             _syncedDelayFlutterRate;
+    /*  */ void*             _syncedDelayGrit;
+    /*  */ void*             _syncedDelaySwell;
+    /*  */ void*             _syncedDelaySmear;
+    /*  */ void*             _syncedDelayChorus;
+    /*  */ void*             _syncedDelayCrystalMix;
+    /*  */ void*             _syncedDelayCrystalPitch;
+    /*  */ void*             _syncedDelayPitchDetune;
+    /*  */ void*             _syncedDelayNoteValue1;
+    /*  */ void*             _syncedDelayNoteValue2;
+};

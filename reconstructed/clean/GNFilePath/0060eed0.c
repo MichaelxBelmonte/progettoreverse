@@ -1,0 +1,142 @@
+// Function: FUN_0060eed0
+// Address: 0060eed0
+// Size: 740 bytes
+// Class: GNFilePath
+// String references:
+//   "GNFilePath"
+//   "GNList"
+
+uint32_t FUN_0060eed0(void)
+
+{
+  int64_t *plVar1;
+  char cVar2;
+  int iVar3;
+  int64_t this_ptr;
+  int64_t **pplVar4;
+  uint32_t uVar5;
+  int64_t *local_70;
+  char local_68;
+  int64_t local_60;
+  char local_58;
+  int64_t local_50;
+  char local_48;
+  int64_t *local_40;
+  char local_38;
+  
+  uVar5 = FUN_01d384d0();
+  local_50 = g_026fcec0;
+  if (g_026fcec0 != 0) {
+    uVar5 = FUN_00d50b00();
+  }
+  local_48 = '\x01';
+  FUN_01cac990(uVar5,&local_50);
+  plVar1 = local_70;
+  if ((g_027048b0 == '\0') && (iVar3 = ___cxa_guard_acquire(), iVar3 != 0)) {
+    g_026cd478 = FUN_00d4fe50();
+    g_026cd460 = "GNList";
+    g_026cd468 = 0x20;
+    g_026cd470 = FUN_00018210;
+    g_026cd480 = 0;
+    ram_00000000026cd488 = 0;
+    g_026cd490 = 0;
+    g_026cd508 = 0;
+    ram_00000000026cd510 = 0;
+    g_026cd518 = 0;
+    g_026cd51a = 6;
+    g_026cd498 = 0;
+    ram_00000000026cd4a0 = 0;
+    g_026cd4a8 = 0;
+    ram_00000000026cd4b0 = 0;
+    g_026cd4b8 = 0;
+    ram_00000000026cd4c0 = 0;
+    g_026cd4c8 = 0;
+    ram_00000000026cd4d0 = 0;
+    g_026cd4d8 = 0;
+    ram_00000000026cd4e0 = 0;
+    g_026cd4e8 = 0;
+    ram_00000000026cd4f0 = 0;
+    g_026cd4f8 = 0;
+    ram_00000000026cd500 = 0;
+    g_026cd523 = 0;
+    g_026cd51b = 0;
+    ___cxa_guard_release();
+  }
+  pplVar4 = (int64_t **)&g_02802688;
+  if (plVar1 != (int64_t *)0x0) {
+    (**(code **)(*plVar1 + 0x360))();
+    cVar2 = FUN_00e85ea0();
+    if (cVar2 != '\0') {
+      if ((g_026fde10 == '\0') && (iVar3 = ___cxa_guard_acquire(), iVar3 != 0)) {
+        g_026d1818 = FUN_00d4fe50();
+        g_026d1800 = "GNFilePath";
+        g_026d1808 = 0x40;
+        g_026d1810 = FUN_00041050;
+        g_026d1820 = 0;
+        ram_00000000026d1828 = 0;
+        g_026d1830 = 0;
+        ram_00000000026d1838 = 0;
+        g_026d1840 = 0;
+        ram_00000000026d1848 = 0;
+        g_026d1850 = 0;
+        ram_00000000026d1858 = 0;
+        g_026d1860 = 0;
+        ram_00000000026d1868 = 0;
+        g_026d1870 = 0;
+        ram_00000000026d1878 = 0;
+        g_026d1880 = 0;
+        ram_00000000026d1888 = 0;
+        g_026d1890 = 0;
+        ram_00000000026d1898 = 0;
+        g_026d18a0 = 0;
+        ram_00000000026d18a8 = 0;
+        g_026d18b0 = 0;
+        ram_00000000026d18b8 = 0;
+        g_026d18c0 = 0;
+        ___cxa_guard_release();
+      }
+      cVar2 = FUN_00e8da30();
+      pplVar4 = &local_70;
+      if (cVar2 == '\0') {
+        pplVar4 = (int64_t **)&g_02802688;
+      }
+    }
+  }
+  plVar1 = *pplVar4;
+  if (*(char *)(pplVar4 + 1) == '\0') {
+    if (plVar1 != (int64_t *)0x0) {
+      FUN_00d50b00();
+    }
+  }
+  else {
+    *(void*)(pplVar4 + 1) = 0;
+  }
+  if ((local_68 != '\0') && (local_70 != (int64_t *)0x0)) {
+    FUN_00d50b20();
+  }
+  if ((local_48 != '\0') && (local_50 != 0)) {
+    FUN_00d50b20();
+  }
+  if ((local_58 != '\0') && (local_60 != 0)) {
+    FUN_00d50b20();
+  }
+  if (plVar1 == (int64_t *)0x0) {
+    uVar5 = 0;
+  }
+  else {
+    if (*(int64_t **)(this_ptr + 0x200) == (int64_t *)0x0) {
+      uVar5 = 0;
+    }
+    else {
+      local_38 = '\0';
+      local_40 = plVar1;
+      uVar5 = (**(code **)(**(int64_t **)(this_ptr + 0x200) + 0x48))();
+      if ((local_38 != '\0') && (local_40 != (int64_t *)0x0)) {
+        FUN_00d50b20();
+      }
+    }
+    FUN_00d50b20();
+  }
+  return uVar5;
+}
+

@@ -1,0 +1,19 @@
+scope	offset_or_func	role	confidence	evidence
+identity	MUMatrixPathPoint	local_ranking_payload_family_for_014f7360	very_high	0116d770 registers MUMatrixPathPoint size 0x40 and initializes +0x28 +0x2c +0x30 +0x34 +0x38
+identity	0116d770	constructor_or_copy_init	very_high	calls field registrars for +0x10 +0x18 +0x20 then zeros xPosIndex yValue relevanceQuality bestNeighbourQuality shouldBeProcessed
+field	+0x10	bestNeighbourPoint_ref	very_high	0116dc60 registers bestNeighbourPoint and 014f7360 writes local_50[2]=local_88
+field	+0x18	containingPath_ref	very_high	0116df40 registers containingPath as MUMatrixPath and 014f6fc0 writes element+0x18=path
+field	+0x20	object_ref	very_high	0116e220 registers object as GNObject; 014f9d00 copies *objectWrapper; 014902f0 wraps the current source object directly before the call
+field	+0x28	xPosIndex_int	very_high	0116e510 registers xPosIndex and 014f6f40 reads 0x28 as int slot index
+field	+0x2c	yValue_float	very_high	0116e680 registers yValue and 014f7360 uses abs delta on this field
+field	+0x30	relevanceQuality_float	very_high	0116e7f0 registers relevanceQuality and 014f7360 multiplies local match score by this field
+field	+0x34	bestNeighbourQuality_float	very_high	0116e960 registers bestNeighbourQuality and 014f7360 stores winner score here
+field	+0x38	shouldBeProcessed_bool	very_high	0116ead0 registers shouldBeProcessed and 014f7360 toggles this byte on winning candidates
+builder	014f9d00	direct_MUMatrixPathPoint_builder	very_high	allocates 0x40 then writes xPosIndex yValue relevanceQuality and object into +0x28 +0x2c +0x30 +0x20
+helper	014f9df0	bestNeighbourQuality_descending_comparator	very_high	disassembly compares MUMatrixPathPoint+0x34 and returns -1/0/1 for descending shortlist order
+callsite	014902f0	source_plus_0xc_0x14_0x58_forwarded_into_014f9d00	very_high	disassembly at 0x1497792..0x14977b7 shows source+0xc -> xPosIndex, source+0x14 -> yValue, source+0x58 -> relevanceQuality, wrapped source -> object
+inference	MUMatrixPathPoint+0x20	upstream_source_item_back_reference	high	object field is not synthesized locally; it carries the current source object from MUSpectrumShaper loop
+family	MUMatrixPath	container_family_for_selected_points	very_high	0116cb00 builds MUMatrixPath size 0x18 and 014f6db0 wraps a single point into a path
+helper	014f6db0	singleton_MUMatrixPath_builder_from_point	very_high	allocates MUMatrixPath via 0116cb00 then calls 014f6d10 to attach point and set containingPath
+helper	014f6f40	read_edge_xPosIndex_from_path	very_high	extracts first or last point from MUMatrixPath and returns point+0x28
+helper	014f6fc0	merge_adjacent_MUMatrixPath_objects	very_high	compares edge xPosIndex values and appends adjacent path while rewriting containingPath back-links

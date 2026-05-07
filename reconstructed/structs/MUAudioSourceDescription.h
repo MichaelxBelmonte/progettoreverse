@@ -1,0 +1,42 @@
+// Reconstructed from MikeCore — 38 properties
+
+struct MUAudioSourceDescription {
+    MUAudioSourceDescriptionType* _currentDescriptionType;
+    bool                     _isNewDocument;
+    bool                     _isDetectionInProgress;
+    bool                     _insertGroupDefinesPerformanceTempo;
+    bool                     _stretchInsertGroup;
+    double                   _stretchInsertStartTime;
+    bool                     _createdFromSoundfile;
+    bool                     _timelineWasModified;
+    int32_t                  _recordingsInProgress;
+    bool                     _isComparing;
+    bool                     _followsHostRegionSelection;
+    bool                     _zoomsToHostRegionSelection;
+    int32_t                  _shouldDisplayStructureProblemDialog;
+    bool                     _shouldDisplayUnknownArchiveDialog;
+    bool                     _shouldDisplayImportedArchiveDialog;
+    bool                     _useAutomaticDetection;
+    bool                     _percussiveSeparation;
+    bool                     _hasDistinctAttacks;
+    bool                     _findSibilantPointsAutomatically;
+    bool                     _isPreliminary;
+    bool                     _isTonalicOnly;
+    bool                     _allowAutomaticPolyphonicDetection;
+    int64_t                  _startSampleIndex;
+    int64_t                  _sampleCount;
+    int64_t                  _signalEndSampleOffset;
+    int64_t                  _signalStartSampleOffset;
+    float                    _pitchCenter;
+    float                    _energyClaimFactor;
+    float                    _detectionQuality;
+    GNFraction*              _idealStartPulse;
+    GNFraction*              _idealEndPulse;
+    bool                     _isPreferredDivisionTriplets;
+    int32_t                  _preferredSubPulsesIndex;
+    bool                     _isResidual;
+    bool                     _rightSeparationTypeIsSetExplicitly;
+    float                    _amount;
+    int32_t                  _sampleOffset;
+    bool                     _isAudioAccessible;
+};

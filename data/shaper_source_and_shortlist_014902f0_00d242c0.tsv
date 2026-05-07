@@ -1,0 +1,14 @@
+scope	target	role	confidence	evidence
+callsite	014902f0@0x1497797	source_plus_0xc_to_MUMatrixPathPoint_xPosIndex	very_high	disassembly loads movl 0xc(%rax), %esi immediately before call 014f9d00
+callsite	014902f0@0x149779a	source_plus_0x14_to_MUMatrixPathPoint_yValue	very_high	disassembly loads movss 0x14(%rax), %xmm0 immediately before call 014f9d00
+callsite	014902f0@0x1497792	source_plus_0x58_to_MUMatrixPathPoint_relevanceQuality	very_high	disassembly loads movss 0x58(%rax), %xmm1 immediately before call 014f9d00
+callsite	014902f0@0x149779f	source_object_wrapped_and_forwarded_as_object_ref	very_high	disassembly stores rax to stack wrapper then passes wrapper in rdx to 014f9d00
+inference	MUMatrixPathPoint+0x20	back_reference_to_upstream_source_item	high	014f9d00 copies *objectWrapper and 014902f0 wraps current source object directly
+inference	source_item_family	claim_score_or_MUAudioSourceItem_family_carrier	medium_high	uses +0xc +0x14 +0x58 fields consistent with item-score family and MUAudioSourceItem-adjacent paths around g_025dc9e8
+helper	00d242c0	in_place_sort_of_full_list_via_qsort_r	very_high	disassembly shows qsort_r over list->data with list->count and comparator wrapper 00d24200
+helper	00d24200	comparator_wrapper_dispatch	very_high	unwraps compared elements and dispatches to caller-supplied comparator object
+helper	014f9df0	bestNeighbourQuality_descending_comparator	very_high	disassembly reads MUMatrixPathPoint+0x34 on both sides and returns -1/0/1 for descending order
+policy	014f7360_post_sort	count_lt_10_keep_all	very_high	decompiled formula leaves uVar14 equal to count when count < 10
+policy	014f7360_post_sort	count_ge_10_keep_floor_count_div_4_times_3	very_high	decompiled formula computes uVar14 = ((count >> 2) * 3) for nonnegative count >= 10
+policy	014f7360_post_sort	shortlist_merge_works_on_sorted_prefix_only	high	loop iterates only up to uVar14 after 00d242c0
+policy	014f7360_post_sort	sort_key_bestNeighbourQuality_desc	very_high	full shortlist is sorted descending by MUMatrixPathPoint+0x34 before cutdown

@@ -1,0 +1,136 @@
+// Function: FUN_016cf050
+// Address: 016cf050
+// Size: 812 bytes
+// Class: Unknown
+
+
+longlong * FUN_016cf050(void)
+
+{
+  int iVar1;
+  longlong lVar2;
+  bool bVar3;
+  bool bVar4;
+  void *pvVar5;
+  pthread_key_t pVar6;
+  longlong lVar7;
+  longlong unaff_RSI;
+  longlong *unaff_RDI;
+  longlong lVar8;
+  double dVar9;
+  double local_60;
+  longlong local_58;
+  char local_50;
+  double local_40;
+  longlong local_38;
+  
+  iVar1 = *(int *)(*(longlong *)(unaff_RSI + 0x60) + 0xc);
+  if (iVar1 == 0) {
+    *(undefined1 *)(unaff_RDI + 1) = 0;
+    *unaff_RDI = 0;
+    return unaff_RDI;
+  }
+  if (iVar1 == 1) {
+    local_38 = **(longlong **)(*(longlong *)(unaff_RSI + 0x60) + 0x10);
+    *(undefined1 *)(unaff_RDI + 1) = 0;
+    if (local_38 != 0) {
+LAB_016cf088:
+      FUN_00d50b00();
+    }
+  }
+  else {
+    if (iVar1 < 1) {
+      *(undefined1 *)(unaff_RDI + 1) = 0;
+    }
+    else {
+      local_60 = 0.0;
+      lVar8 = 0;
+      local_38 = 0;
+      lVar7 = 0;
+      bVar3 = false;
+      do {
+        pVar6 = (pthread_key_t)lVar7;
+        pvVar5 = _pthread_getspecific(pVar6);
+        if (pvVar5 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        FUN_01909dc0();
+        pvVar5 = _pthread_getspecific(pVar6);
+        if (pvVar5 != (void *)0x0) {
+          FUN_00e8b990();
+        }
+        dVar9 = (double)FUN_018fcb10();
+        lVar7 = (longlong)*(int *)(*(longlong *)(unaff_RSI + 0x60) + 0xc) + -1;
+        if (lVar8 < lVar7) {
+          pvVar5 = _pthread_getspecific((pthread_key_t)lVar7);
+          pVar6 = (pthread_key_t)lVar7;
+          if (pvVar5 != (void *)0x0) {
+            FUN_00e8b990();
+          }
+          FUN_01909dc0();
+          pvVar5 = _pthread_getspecific(pVar6);
+          if (pvVar5 != (void *)0x0) {
+            FUN_00e8b990();
+          }
+          local_40 = (double)FUN_018fcb10();
+        }
+        else {
+          pvVar5 = _pthread_getspecific((pthread_key_t)lVar7);
+          pVar6 = (pthread_key_t)lVar7;
+          if (pvVar5 != (void *)0x0) {
+            FUN_00e8b990();
+          }
+          FUN_01901340();
+          pvVar5 = _pthread_getspecific(pVar6);
+          if (pvVar5 != (void *)0x0) {
+            FUN_00e8b990();
+          }
+          local_40 = (double)FUN_01907950();
+          if ((local_50 != '\0') && (local_58 != 0)) {
+            FUN_00d50b20();
+          }
+        }
+        local_40 = local_40 - dVar9;
+        lVar7 = local_38;
+        bVar4 = bVar3;
+        if (local_60 < local_40) {
+          lVar2 = *(longlong *)(*(longlong *)(*(longlong *)(unaff_RSI + 0x60) + 0x10) + lVar8 * 8);
+          local_60 = local_40;
+          if (local_38 == lVar2) {
+            if ((!bVar3) && (lVar2 != 0)) {
+              FUN_00d50b00();
+              bVar4 = true;
+            }
+          }
+          else {
+            if (lVar2 != 0) {
+              FUN_00d50b00();
+            }
+            bVar4 = true;
+            lVar7 = lVar2;
+            if ((bVar3) && (local_38 != 0)) {
+              FUN_00d50b20();
+            }
+          }
+        }
+        bVar3 = bVar4;
+        local_38 = lVar7;
+        lVar8 = lVar8 + 1;
+        lVar7 = (longlong)*(int *)(*(longlong *)(unaff_RSI + 0x60) + 0xc);
+      } while (lVar8 < lVar7);
+      *(undefined1 *)(unaff_RDI + 1) = 0;
+      if (bVar3) {
+        *unaff_RDI = local_38;
+        goto LAB_016cf366;
+      }
+      if (local_38 != 0) goto LAB_016cf088;
+    }
+    local_38 = 0;
+  }
+  *unaff_RDI = local_38;
+LAB_016cf366:
+  *(undefined1 *)(unaff_RDI + 1) = 1;
+  return unaff_RDI;
+}
+
+

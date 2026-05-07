@@ -1,0 +1,58 @@
+# Search: "makeMonophonicItems"
+STRING @ 020297e6: "MUElementAnalyzer::makeMonophonicItems(): audioSourceItem != principalItem ???"
+  FUNC: FUN_0146c830 @ 0146c830
+    Size: 38131 bytes
+    Ref from: 01473290
+    Called by (1):
+      FUN_01433f60@01433f60
+    Calls (89):
+      FUN_00022d50@00022d50
+      FUN_00115860@00115860
+      FUN_007eeec0@007eeec0
+      FUN_007ef2d0@007ef2d0
+      FUN_007ef480@007ef480
+      FUN_00c8e2b0@00c8e2b0
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00ca0840@00ca0840
+      FUN_00ca13a0@00ca13a0
+      FUN_00d21140@00d21140
+      FUN_00d216c0@00d216c0
+      FUN_00d23340@00d23340
+      FUN_00d23370@00d23370
+      FUN_00d233f0@00d233f0
+      FUN_00d23620@00d23620
+      FUN_00d237a0@00d237a0
+      FUN_00d23d70@00d23d70
+      FUN_00d23f50@00d23f50
+      FUN_00d242c0@00d242c0
+
+STRING @ 02029e2e: "MUElementAnalyzer::makeMonophonicItems(): anchorSampleOffset > principalItem->getSampleCount()"
+  FUNC: FUN_0158c060 @ 0158c060
+    Size: 34784 bytes
+    Ref from: 01592ba3
+    Called by (2):
+      FUN_0158be60@0158be60
+      FUN_0159bec0@0159bec0
+    Calls (104):
+      FUN_000175c0@000175c0
+      FUN_00053ac0@00053ac0
+      FUN_00115860@00115860
+      FUN_00115af0@00115af0
+      FUN_002773c0@002773c0
+      FUN_007eeec0@007eeec0
+      FUN_007ef480@007ef480
+      FUN_00b88640@00b88640
+      FUN_00c811b0@00c811b0
+      FUN_00c8e2b0@00c8e2b0
+      FUN_00c92160@00c92160
+      FUN_00c92170@00c92170
+      FUN_00d21140@00d21140
+      FUN_00d21370@00d21370
+      FUN_00d242c0@00d242c0
+      FUN_00d45790@00d45790
+      FUN_00d45870@00d45870
+      FUN_00d459e0@00d459e0
+      FUN_00d45ad0@00d45ad0
+      FUN_00d45bc0@00d45bc0
+

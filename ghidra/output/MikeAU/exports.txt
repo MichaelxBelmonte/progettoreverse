@@ -1,0 +1,7 @@
+00001930	_GNAUv2ComponentEntry
+00001a50	_GNAUv2ComponentFactory
+0000cb80	_OBJC_METACLASS_$_GNAudioUnitViewFactory_20241202_165345
+0000cb80	GNAudioUnitViewFactory_20241202_165345
+0000cba8	_OBJC_CLASS_$_GNAudioUnitViewFactory_20241202_165345
+0000cba8	GNAudioUnitViewFactory_20241202_165345
+# Total: 6

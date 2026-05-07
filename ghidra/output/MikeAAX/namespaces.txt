@@ -1,0 +1,10 @@
+7	42	/usr/lib/libc++.1.dylib::std::string
+2	12	/usr/lib/libc++.1.dylib
+2	12	/usr/lib/libc++.1.dylib::std
+2	12	/usr/lib/libc++.1.dylib::std::__vector_base_common<true>
+2	12	/usr/lib/libc++.1.dylib::std::exception
+1	6	/usr/lib/libc++.1.dylib::std::__basic_string_common<true>
+1	6	/usr/lib/libc++.1.dylib::std::logic_error
+1	1	/usr/lib/libc++.1.dylib::std::length_error
+1	1	/usr/lib/libc++.1.dylib::std::out_of_range
+# Total: 9

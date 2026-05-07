@@ -1,0 +1,10 @@
+scope	target	role	confidence	evidence
+contract	00e83530	aliasable_dst_src_forward_packed_wrapper	very_high	disassembly shows distinct src and dst registers with caller side aliasing still possible
+contract	00e83640	aliasable_src_dst_inverse_like_packed_wrapper	very_high	disassembly shows distinct src and dst registers and at least one caller uses src equals dst aliasing
+caller	015c4e40	same_buffer_consumed_as_complex_magnitude_phase	very_high	three memcpy then 00e83530 then SQRT and atan2f over the transformed storage
+caller	00e3d570	forward_forward_complex_multiply_inverse_pattern	very_high	calls 00e83530 twice performs complex multiplication in place then 00e83640
+caller	012bcdc0	renderer_reads_complex_pairs_after_forward	high	after 00e83530 the renderer normalizes re im pairs from the transformed buffer
+caller	012ba340	renderer_forward_then_weight_then_inverse	high	components pass through 00e83530 and later 00e83640 after spectral-domain weighting
+correction	00e83530_00e83640	decompiler_return_values_are_not_canonical_contract	high	callers consume transformed buffers directly and disassembly shows buffer operating wrappers rather than semantic value producers
+parity	MikeCoreF	high_level_spectral_pipeline_parity	high	deep_spectral_init and deep_spectral_slice show thin adapter then MUSpectralTimeSlice initFromTimeSignal and the same slice getter family
+parity	MikeCoreF	exact_helper_address_mapping_open	medium	universal x86_64 arm64 bundle plus deep dumps not yet reconciled slice by slice so one to one helper aliases remain open

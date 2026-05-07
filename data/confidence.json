@@ -1,0 +1,618 @@
+[
+  {
+    "doc": "01_ARCHITETTURA",
+    "claim": "Wrapper espone solo 3 simboli (GetPluginFactory, bundleEntry, bundleExit)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "nm -T count: 3 symbols\n0000000000007894 T _GetPluginFactory\n000000000000a9e8 T _bundleEntry\n000000000000a9f0 T _bundleExit"
+  },
+  {
+    "doc": "01_ARCHITETTURA",
+    "claim": "Wrapper e' Universal Binary (arm64 + x86_64)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/mike: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit bundle x86_64] [arm64:Mach-O 64-bit bundle arm64]\n/Users/michael"
+  },
+  {
+    "doc": "01_ARCHITETTURA",
+    "claim": "Core e' solo x86_64 (Rosetta 2)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike/binaries/MikeCore: Mach-O 64-bit bundle x86_64"
+  },
+  {
+    "doc": "01_ARCHITETTURA",
+    "claim": "Core linka 15 framework attesi",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Found: Accelerate, Metal, MetalKit, CoreAudio, AudioToolbox, AVFoundation, CoreMIDI, Cocoa, Security, IOKit, QuartzCore, AppKit, CoreFoundation, CoreGraphics, Foundation\nMissing: none"
+  },
+  {
+    "doc": "01_ARCHITETTURA",
+    "claim": "Naming: MU* (DSP), MD* (Display), GN* (Generic)",
+    "confidence": 95,
+    "status": "VERIFIED",
+    "notes": "Prefix counts confirm the pattern",
+    "evidence": "MU*: 947 strings, MD*: 483 strings, GN*: 1192 strings"
+  },
+  {
+    "doc": "01_ARCHITETTURA",
+    "claim": "Tabella completa prefissi di classe nel Core",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Verifica se ci sono prefissi non documentati",
+    "evidence": "73 GNCo\n  65 MUAu\n  63 MUSc\n  63 MDTo\n  62 GNSo\n  61 GNOv\n  61 GNAu\n  54 MULo\n  44 GNMi\n  43 MUDe\n  43 MUAr\n  40 MDPr\n  39 MUSp\n  39 MDPl\n  37 GNFi"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Funzione hash E47C2F6A98B9 esiste nel Core",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Address: 0x0000000000015710",
+    "evidence": "nm result: 0000000000015710 T _E47C2F6A98B9"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Funzione hash C869701EF43D esiste nel Core",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Address: 0x0000000000013ad0",
+    "evidence": "nm result: 0000000000013ad0 T _C869701EF43D"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Funzione hash D1B1BBF33E6C esiste nel Core",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Address: 0x0000000000015720",
+    "evidence": "nm result: 0000000000015720 T _D1B1BBF33E6C"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Funzione hash F998CFF24768 esiste nel Core",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Address: 0x0000000000015730",
+    "evidence": "nm result: 0000000000015730 T _F998CFF24768"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Funzione hash C8C6A8649030 esiste nel Core",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Address: 0x0000000000015740",
+    "evidence": "nm result: 0000000000015740 T _C8C6A8649030"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper referenzia 'Core.sbb'",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Core.sbb"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper referenzia 'CoreF.sbb'",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "CoreF.sbb"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper referenzia 'Core-5.4.2.006.sbb'",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Core-5.4.2.006.sbb\nCore-5.4.2.006.sbb"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper referenzia 'CoreF-5.4.2.006.sbb'",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "CoreF-5.4.2.006.sbb\nCoreF-5.4.2.006.sbb"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper importa CFBundleCreate",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "U _CFBundleCreate"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper importa CFBundleLoadExecutable",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "U _CFBundleLoadExecutable"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper importa CFBundleGetFunctionPointerForName",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "U _CFBundleGetFunctionPointerForName"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "UUID 5653544D... decodes to 'VSTMlpgmelodyne '",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Hex in binary: YES\nDecoded: 'VSTMlpgmelodyne'"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Wrapper contiene 98 funzioni",
+    "confidence": 90,
+    "status": "VERIFIED",
+    "notes": "Counted 98 (doc says 98)",
+    "evidence": "Function prologues count: 98"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Code signing via SecRequirementCreateWithString",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "U _SecRequirementCreateWithString"
+  },
+  {
+    "doc": "02_WRAPPER_VST3",
+    "claim": "Stringhe ARA nel wrapper",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Gia' documentato",
+    "evidence": "Count: 2"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_create_fftsetup",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_fft_zrip",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_ctoz",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_ztoc",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_maxmgv",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_vadd",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_vmul",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_vsmul",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Core importa vDSP_vclr",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Stringa 'GNFFTException' presente",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "GNFFTException"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Stringa errore FFT table size presente",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Inappropriate table size for FFT (%I)!"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Variabile _fft1 presente",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "_fft1"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Variabile _fft2 presente",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "_fft2"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Variabile _sampleRateReductionForFourierProcessing",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Variabile _sampleRateReductionsRatio",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Parametro DNA2Test_UseStackedFft presente",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "DNA2Test_UseStackedFft"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Window type: Hann (sqrt-Hann)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Tipo di finestra FFT confermato",
+    "evidence": "_hannWindowSqrt"
+  },
+  {
+    "doc": "03_FFT",
+    "claim": "Variabili windowOverlap",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Gia' documentato",
+    "evidence": "_windowOverlapForTimeSlices\n_windowOverlapForTrueFreqs"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_UseDNA2",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_UseStackedFft",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_UseEnergyClaim",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_DetectMonophonic",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_DetectBluesHarp",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_SeparateRaspiness",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_WriteNoiseFiles",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_ShowQuality",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Parametro DNA2Test_ShowRelevance",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "DNA3 reference (MUSpectralPointDNA3)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "MUSpectralPointDNA3"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "MUElementAnalyzer classe presente",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "11 string references"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Metodo findPolyphonicDetectionItems()",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Trovato via stringa di errore",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Metodo makeMonophonicItems()",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Trovato via stringa di errore",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Metodo findMonophonicPitchInFrequencyDomain()",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Trovato via stringa di errore",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Metodo separateAttacksInTimeDomain()",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Trovato via stringa di errore",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Metodo detectAfterTransfer()",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Trovato via stringa di errore",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Metodo assignEnergyClaimsInSampleRange()",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Trovato via stringa di errore",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Variabile _analyzerCanSwitchToPolyphonicDetection",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Variabile _useDNA2ForPolyphonicDetection",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Variabile _polyPitchRelevanceMatrixOriginal",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Variabile _polyPitchRelevanceMatrixExtracted",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Variabile _energyClaimFactor",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Variabile _subharmonicChains",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Variabile _subharmonicPaths",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "FOUND"
+  },
+  {
+    "doc": "04_DNA_ALGORITHM",
+    "claim": "Totale stringhe contenenti 'DNA'",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Gia' documentato",
+    "evidence": "Count: 24"
+  },
+  {
+    "doc": "05_QUALITY_SCORING",
+    "claim": "Quality variables presenti nel binario (51/51)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Missing: 0",
+    "evidence": "Verified: 51, Total checked: 51"
+  },
+  {
+    "doc": "05_QUALITY_SCORING",
+    "claim": "Tutte le 47 quality variables sono documentate",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Nessuna quality variable mancante",
+    "evidence": "Total in binary: 47, All in doc: yes"
+  },
+  {
+    "doc": "06_FORMANT_SYNTHESIS",
+    "claim": "FormantsSynth parametri presenti (13/13)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Verified: 13/13"
+  },
+  {
+    "doc": "06_FORMANT_SYNTHESIS",
+    "claim": "Tutti i 13 parametri FormantsSynth_ sono documentati",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Nessun parametro mancante",
+    "evidence": "Total: 13, All in doc: yes"
+  },
+  {
+    "doc": "06_FORMANT_SYNTHESIS",
+    "claim": "Tutti i 37 tipi MUSpectrumShaper sono documentati",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Nessun tipo mancante",
+    "evidence": "Total: 37, All in doc: yes"
+  },
+  {
+    "doc": "07_DATA_STRUCTURES",
+    "claim": "MUSpectralTimeSlice metodi verificati (8/8)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Verified via error strings: 8/8"
+  },
+  {
+    "doc": "07_DATA_STRUCTURES",
+    "claim": "MUAudioSource* gerarchia verificata (7/7)",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "Verified: 7/7"
+  },
+  {
+    "doc": "07_DATA_STRUCTURES",
+    "claim": "Tutte le 28 classi MUAudioSource* sono documentate",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "Nessuna classe mancante",
+    "evidence": "Total: 28, All in doc: yes"
+  },
+  {
+    "doc": "08_SECURITY",
+    "claim": "PACE Anti-Piracy namespace presente",
+    "confidence": 90,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "MDWorkspaceView\nMDWorkspaceLayoutView\nMDWorkspaceModuleView\nMDWorkspaceViewResponder\nMDWorkspaceModuleViewController\n_keepsSpaceForWindowResizeButton\n_spacerColor\nGNWorkspace\nMDWorkspaceLayoutHorizont"
+  },
+  {
+    "doc": "08_SECURITY",
+    "claim": "OpenSSL presente nel binario",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "97 symbols found"
+  },
+  {
+    "doc": "08_SECURITY",
+    "claim": "CMS_EnvelopedData (PKCS#7) presente",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "0000000000fa8a00 T _CMS_EnvelopedData_create\n0000000002598198 S _CMS_EnvelopedData_it\n0000000000fa9ac0 T _cms_EnvelopedData_init_bio"
+  },
+  {
+    "doc": "08_SECURITY",
+    "claim": "SecRequirementCreateWithString nel wrapper",
+    "confidence": 100,
+    "status": "VERIFIED",
+    "notes": "",
+    "evidence": "U _SecRequirementCreateWithString"
+  }
+]

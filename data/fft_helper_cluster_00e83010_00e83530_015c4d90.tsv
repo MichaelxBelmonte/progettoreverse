@@ -1,0 +1,7 @@
+target	role	confidence	evidence
+00e83010	size_based_alloc_helper	very_high	disassembly shows sign extend of edi then tail jump to allocator 0xe8fc40
+00e83020	alloc_and_zero_helper	very_high	disassembly shows allocation then conditional zeroing path
+00e83070	safe_release_helper	very_high	disassembly tests pointer for null then tail jumps to release routine
+00e83530	forward_real_fft_wrapper	very_high	disassembly plus import binding show vDSP_ctoz vDSP_vsmul vDSP_fft_zrip vDSP_vsmul vDSP_ztoc on transformer buffers
+00e83640	inverse_like_fft_companion	high	disassembly shows vDSP_ctoz vDSP_vsmul fft_zrip direction minus one double vsmul then vDSP_ztoc
+015c4d90	muspectraltimeslice_init_adapter	high	disassembly copies ptr ownership wrappers to local stack wrappers then forwards into 015c4e40

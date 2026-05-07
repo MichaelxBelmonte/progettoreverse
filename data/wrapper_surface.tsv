@@ -1,0 +1,5 @@
+binary	type	functions	exports	core_markers	host_markers	conclusion
+mike	VST3	55	GetPluginFactory;bundleEntry;bundleExit	Core.sbb;CoreF.sbb;Core-5.4.2.006.sbb;CoreF-5.4.2.006.sbb	CoreMIDI	VST3 bootstrap sottile verso core condiviso
+MikeAU	AU	114	GNAUv2ComponentEntry;GNAUv2ComponentFactory	Core.sbb;CoreF.sbb;Core-5.4.2.006.sbb;CoreF-5.4.2.006.sbb	AudioComponentInstanceGetComponent;AudioComponentGetDescription;GNAudioUnitViewFactory;render-quality	bootstrap AudioUnit + view factory, DSP nel core
+MikeAAX	AAX	90	ACFRegisterPlugin;ACFRegisterComponent;ACFGetClassFactory;ACFCanUnloadNow;ACFStartup;ACFShutdown;ACFGetSDKVersion	Core.sbb;CoreF.sbb;Core-5.4.2.006.sbb;CoreF-5.4.2.006.sbb	GNAAXController.cpp;GNAAXFactory.cpp;MIDI Transport;tempo > 0.0	AAX wrapper con piu' logica host/licensing ma DSP nel core
+MikeStandalone	standalone	42	main/bootstrap applicativo implicito	Core.sbb;CoreF.sbb;Core-5.4.2.006.sbb;CoreF-5.4.2.006.sbb	CoreMIDI	shell desktop sottile verso core condiviso

@@ -1,0 +1,8 @@
+scope	target	role	confidence	evidence
+offset	MUElementAnalyzer+0x158	working_gnlist_slot_per_run	high	01484bc0 allocates a new DAT_02572358 object and stores it into this_ptr[0x2b] at run start then clears it later in the same function
+identity	DAT_02572358	GNList_vtable	very_high	already fixed in doc 32 GNList topology where DAT_02572358 is registered as GNList size 0x20
+use	01484bc0	populate_self_plus_0x158_via_stage_chain	high	slot is wrapped and forwarded into 0149c330 0149d5b0 0149ded0 0149e4a0 and 0149ebe0
+use	01484bc0	reuse_self_plus_0x158_in_late_stage	high	slot is passed again into 014aa770 and 014ab140 later in the same analyzer run
+behavior	01484bc0	clear_self_plus_0x158_before_late_phase	high	code releases this_ptr[0x2b] and sets it to zero before the later stage is entered
+consumer	01b71450	require_non_null_self_plus_0x158	medium_high	function exits early when this_ptr[0x2b] is null and otherwise uses that slot together with counters at +0x17c and +0x184
+distinction	MUElementAnalyzer+0xd0_vs_+0x158	persistent_peer_registry_vs_stage_working_list	high	+0xd0 feeds 014af180 class1/2 matcher corridor while +0x158 is allocated reset and reused as a separate GNList pipeline slot in 01484bc0

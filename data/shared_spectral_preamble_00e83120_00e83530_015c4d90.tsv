@@ -1,0 +1,11 @@
+scope	target	role	confidence	evidence
+pattern	00e83120	fft_factory_or_setup	very_high	recurrent first step in MUElementAnalyzer spectral callers and already canonical as GNFastFourierTransformer::create
+pattern	00e83010	size_based_alloc_helper_reused_as_work_buffer_provider	very_high	disassembly shows thin alloc wrapper and callers reuse it systematically for FFT and slice buffers
+pattern	00e83da0	float_table_or_buffer_provider	high	repeated in analyzer spectral callers and used in MUSpectralTimeSlice init before magnitude-like work
+pattern	00e83530	forward_real_fft_wrapper	very_high	disassembly plus import binding show vDSP_ctoz vDSP_vsmul vDSP_fft_zrip post transform sign normalization and vDSP_ztoc
+pattern	015c4d90	muspectraltimeslice_init_adapter	high	disassembly shows local ptr ownership wrappers then thin forwarding into 015c4e40
+caller	013903d0	shared_spectral_preamble_then_slice_build	very_high	613 617 618 619 645 714 show 00e83120 00e83da0 00e83010 x2 then 015c4d90
+caller	014b0a60	shared_spectral_preamble_with_optional_sqrt_then_slice_build	very_high	139 143 144 145 507 show same preamble and later sqrtps/sqrtss on local_100
+caller	0138f140	shared_spectral_preamble_then_slice_build	very_high	205 216 217 218 264 323 show same preamble and repeated 015c4d90 calls
+caller	0149f6a0	spectral_median_frequency_hz_estimator	very_high	61 74 75 76 121 161 385 plus 449 467 502 show setup repeated 00e83530 re^2+im^2 accumulation 50 percent cumulative threshold and Hz conversion
+slice	015c4e40	transform_to_complex_magnitude_phase_materialization	very_high	after 00e83530 the function fetches buffers via 00e83010 and fills magnitude/phase with SQRT and atan2f

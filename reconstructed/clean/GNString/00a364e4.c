@@ -1,0 +1,202 @@
+// Function: FUN_00a364e4
+// Address: 00a364e4
+// Size: 1153 bytes
+// Class: GNString
+// === GNString properties ===
+//   bool            _dragEnabled
+//   bool            _dropEnabled
+//   double          _transferStartTime
+//   double          _transferEndTime
+//   double          _userStartTime
+//   double          _userEndTime
+
+
+uint64_t FUN_00a364e4(ulong param_1)
+
+{
+  uint64_t uVar1;
+  uint64_t uVar2;
+  int64_t lVar3;
+  void*puVar4;
+  code *pcVar5;
+  void*puVar6;
+  void *pvVar7;
+  void *pvVar8;
+  _Unwind_Exception *exception_object;
+  void *pvVar9;
+  int64_t this_ptr;
+  size_t sVar10;
+  int64_t lVar11;
+  uint64_t uVar12;
+  int64_t lVar13;
+  int64_t local_60;
+  
+  puVar6 = operator_new(param_1);
+  exception_object = (_Unwind_Exception *)(segment_command_00000020.segname + 8);
+  *puVar6 = &g_0252a4c0;
+  puVar6[1] = &g_0252a720;
+  *(void*)(puVar6 + 2) = 0xffffffff;
+  puVar6[3] = 0xffffffffffffffff;
+  *(void*)(puVar6 + 4) = 0x101;
+  *(void*)(puVar6 + 5) = 0;
+  *(void*)((int64_t)puVar6 + 0x2c) = 0;
+  *(void*)((int64_t)puVar6 + 0x34) = 0;
+  *(void*)((int64_t)puVar6 + 0x3c) = 0;
+  *(void*)((int64_t)puVar6 + 0x44) = 0;
+  *(void*)((int64_t)puVar6 + 0x4c) = 0;
+  FUN_00a372d2();
+  FUN_00a372d2();
+  puVar6[0x15] = 0;
+  puVar6[0x14] = 0;
+  puVar6[0x13] = 0;
+  puVar6[0x12] = 0;
+  puVar6[0x11] = 0;
+  puVar6[0x10] = 0;
+  *(void*)(puVar6 + 0x16) = 0x100;
+  *(void*)((int64_t)puVar6 + 0xb2) = 0x10100000000;
+  FUN_00aa5ac6();
+  FUN_00a55de8();
+  uVar2 = puVar6[3];
+  lVar3 = *(int64_t *)(this_ptr + 8);
+  puVar4 = *(void**)(lVar3 + 0x10);
+  if (puVar4 == *(void**)(lVar3 + 0x18)) {
+    lVar11 = *(int64_t *)(lVar3 + 8);
+    pvVar7 = (void *)((int64_t)puVar4 - lVar11);
+    uVar1 = ((int64_t)pvVar7 >> 3) + 1;
+    sVar10 = 0xffffffff;
+    if (0x1fffffffffffffff < uVar1) goto LAB_00a36943;
+    lVar13 = (int64_t)*(void**)(lVar3 + 0x18) - lVar11;
+    exception_object = (_Unwind_Exception *)(lVar13 >> 3);
+    uVar12 = lVar13 >> 2;
+    if (uVar12 < uVar1) {
+      uVar12 = uVar1;
+    }
+    if ((_Unwind_Exception *)0xffffffffffffffe < exception_object) {
+      uVar12 = 0x1fffffffffffffff;
+    }
+    if (uVar12 == 0) {
+      pvVar9 = (void *)0x0;
+    }
+    else {
+      if (0x1fffffffffffffff < uVar12) goto LAB_00a36948;
+      sVar10 = 0xffffffff;
+      pvVar9 = operator_new((ulong)exception_object);
+    }
+    exception_object = (_Unwind_Exception *)((int64_t)pvVar9 + uVar12 * 8);
+    lVar13 = (int64_t)pvVar9 + ((int64_t)pvVar7 >> 3) * 8 + 8;
+    *(void*)(lVar13 + -8) = uVar2;
+    if (0 < (int64_t)pvVar7) {
+      _memcpy(exception_object,pvVar7,sVar10);
+    }
+    *(void **)(lVar3 + 8) = pvVar9;
+    *(int64_t *)(lVar3 + 0x10) = lVar13;
+    *(_Unwind_Exception **)(lVar3 + 0x18) = exception_object;
+    if (lVar11 != 0) {
+      operator_delete(exception_object);
+    }
+  }
+  else {
+    *puVar4 = uVar2;
+    *(void**)(lVar3 + 0x10) = puVar4 + 1;
+  }
+  FUN_009b4be0();
+  FUN_00a369a8();
+  puVar4 = *(void**)(this_ptr + 0x40);
+  if (puVar4 == *(void**)(this_ptr + 0x48)) {
+    lVar3 = *(int64_t *)(this_ptr + 0x38);
+    pvVar7 = (void *)((int64_t)puVar4 - lVar3);
+    uVar1 = ((int64_t)pvVar7 >> 3) + 1;
+    if (0x1fffffffffffffff < uVar1) goto LAB_00a36943;
+    lVar11 = (int64_t)*(void**)(this_ptr + 0x48) - lVar3;
+    exception_object = (_Unwind_Exception *)(lVar11 >> 3);
+    uVar12 = lVar11 >> 2;
+    if (uVar12 < uVar1) {
+      uVar12 = uVar1;
+    }
+    if ((_Unwind_Exception *)0xffffffffffffffe < exception_object) {
+      uVar12 = 0x1fffffffffffffff;
+    }
+    if (uVar12 == 0) {
+      pvVar9 = (void *)0x0;
+    }
+    else {
+      if (0x1fffffffffffffff < uVar12) goto LAB_00a36948;
+      pvVar9 = operator_new((ulong)exception_object);
+    }
+    lVar11 = (int64_t)pvVar9 + ((int64_t)pvVar7 >> 3) * 8 + 8;
+    *(void**)(lVar11 + -8) = puVar6;
+    if (0 < (int64_t)pvVar7) {
+      _memcpy(exception_object,pvVar7,(size_t)lVar3);
+    }
+    *(void **)(this_ptr + 0x38) = pvVar9;
+    *(int64_t *)(this_ptr + 0x40) = lVar11;
+    *(void **)(this_ptr + 0x48) = (void *)((int64_t)pvVar9 + uVar12 * 8);
+    if (lVar3 != 0) {
+      operator_delete(exception_object);
+    }
+  }
+  else {
+    *puVar4 = puVar6;
+    *(void**)(this_ptr + 0x40) = puVar4 + 1;
+  }
+  pvVar7 = operator_new((ulong)exception_object);
+  FUN_00a55710();
+  puVar4 = *(void**)(this_ptr + 0x28);
+  sVar10 = 0xffffffff;
+  if (puVar4 == *(void**)(this_ptr + 0x30)) {
+    lVar3 = *(int64_t *)(this_ptr + 0x20);
+    pvVar9 = (void *)((int64_t)puVar4 - lVar3);
+    uVar1 = ((int64_t)pvVar9 >> 3) + 1;
+    if (0x1fffffffffffffff < uVar1) {
+LAB_00a36943:
+                          std::__vector_base_common<true>::__throw_length_error();
+    }
+    lVar11 = (int64_t)*(void**)(this_ptr + 0x30) - lVar3;
+    exception_object = (_Unwind_Exception *)(lVar11 >> 3);
+    uVar12 = lVar11 >> 2;
+    if (uVar12 < uVar1) {
+      uVar12 = uVar1;
+    }
+    if ((_Unwind_Exception *)0xffffffffffffffe < exception_object) {
+      uVar12 = 0x1fffffffffffffff;
+    }
+    if (uVar12 == 0) {
+      pvVar8 = (void *)0x0;
+    }
+    else {
+      if (0x1fffffffffffffff < uVar12) {
+LAB_00a36948:
+        FUN_00a37354();
+        FUN_00aa9aa2();
+        __Unwind_Resume(exception_object);
+                            pcVar5 = invalidInstructionException();
+        (*pcVar5)();
+      }
+      sVar10 = 0xffffffff;
+      pvVar8 = operator_new((ulong)exception_object);
+    }
+    lVar11 = (int64_t)pvVar8 + ((int64_t)pvVar9 >> 3) * 8 + 8;
+    *(void **)(lVar11 + -8) = pvVar7;
+    if (0 < (int64_t)pvVar9) {
+      _memcpy(exception_object,pvVar9,sVar10);
+    }
+    *(void **)(this_ptr + 0x20) = pvVar8;
+    *(int64_t *)(this_ptr + 0x28) = lVar11;
+    *(void **)(this_ptr + 0x30) = (void *)((int64_t)pvVar8 + uVar12 * 8);
+    if (lVar3 != 0) {
+      operator_delete(exception_object);
+    }
+  }
+  else {
+    *puVar4 = pvVar7;
+    *(void**)(this_ptr + 0x28) = puVar4 + 1;
+  }
+  FUN_00aa9d4e();
+  if (0x7fffffff00000000 < local_60) {
+    FUN_009b9a6e();
+  }
+  uVar2 = *(void*)(*(int64_t *)(this_ptr + 0x28) + -8);
+  FUN_00aa9aa2();
+  return uVar2;
+}
+

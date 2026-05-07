@@ -1,0 +1,8 @@
+address	role	confidence	verified_inbound	verified_outbound	verified_surface	inference	next_gui_check
+0x01433f60	dna2_dispatcher	high	unknown_upstream	0x01447a70,0x0146c830	dispatch mono/poly	predicate branch probabilmente letto da stato analyzer	isolare i basic block che precedono i due callsite
+0x01447a70	polyphonic_core	high	0x01433f60	0x013903d0,138 callees totali	stage centrale DNA2	multi-loop iterativo con criteri di stop ancora opachi	annotare loop header e uso del return di 0x013903d0
+0x0146c830	monophonic_builder	high	0x01433f60	89 callees totali	liste/item monofonici	rifinitura e merge/anchor di item piu' che spectral front-end	mappare criteri di merge e flag item
+0x013903d0	energy_claim_kernel	very_high	0x01353f80,0x01447a70	0x015c4d90,0x015c6b60,0x015c66c0,0x015c6ba0,0x013924d0	sample-range to time-slice claims	range sample->slice, lettura magnitude/trueFreq/tonality, update downstream	rinominare locali e capire esattamente cosa accumula 0x013924d0
+0x015c4e40	spectral_slice_init	high	unknown_upstream	unknown_downstream	initFromTimeSignal e cache/tabelle log	func_names.tsv lo nomina ancora getPhaseData	confermare signature reale e campi scritti nella slice
+0x01141790	analyzer_property_graph	very_high	class init helpers	property helper siblings	_pitchMatrix,_timeSliceCount,_useDNA2ForPolyphonicDetection,_polyPitchEnergyMatrix*,_polyPitchRelevanceMatrix*	registra superfici, non fa update numerico	seguire i veri writer numerici a valle
+0x01103ee0	analyzer_copy_init_and_property_graph	high	0x010d23d0	property helper siblings	copy 0x10..0x30 from source object,_windowOverlapForTimeSlices,_energyRawMatrix,_findMonophonicPitchInFrequencyDomain	nodo strutturale di state/property graph, non STFT loop primario	cercare loop STFT reale separato

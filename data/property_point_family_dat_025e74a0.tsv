@@ -1,0 +1,15 @@
+scope	offset_or_func	role	confidence	evidence
+identity	DAT_025e74a0	property_point_family_vtable	very_high	014e1210 0145f790 014ea210 014e8b20 and 014ea7b0 all allocate objects with DAT_025e74a0
+builder	014e1210	interpolating_property_point_builder	very_high	writes +0x0c index +0x14/+0x18 paired value +0x1c 0.1f +0x20 NaN +0x24/+0x28 interpolated scalars
+builder	0145f790	count_sized_property_point_seed_builder	high	allocates DAT_025e74a0 objects indexed 0..count-1 and seeds float template values
+builder	014ea210	property_point_list_builder_from_item_path	high	allocates DAT_025e74a0 per source element and writes +0x14/+0x18 from copied scalar array
+builder	014e8b20	property_point_builder_in_audio_source_item_path	medium_high	allocates DAT_025e74a0 repeatedly in MUAudioSourceItem path after local weighting math
+builder	014ea7b0	property_point_status_reader	very_high	reads byte at object+0x2c and xors with 1 proving status-byte semantics
+field	+0x0c	discrete_sequence_index	high	014e1210 and 0145f790 assign running integer index
+field	+0x14	primary_interpolated_value	medium_high	014e1210 writes interpolated scalar and 014ea210 mirrors copied value here
+field	+0x18	paired_secondary_value_or_weight	medium	014e1210 mirrors +0x14 and 014e8b20 uses +0x18 in weighting math
+field	+0x1c	small_default_scalar_0_1f	high	014e1210 stores 0x3dcccccd
+field	+0x20	optional_scalar_default_nan	high	014e1210 stores 0x7fc00000
+field	+0x24	interpolated_scalar_axis_a	medium	014e1210 derives and stores interpolated scalar here
+field	+0x28	interpolated_scalar_axis_b	medium	014e1210 and 0145f790 store second scalar here
+field	+0x2c	boolean_status_byte	very_high	014ea7b0 uses *(byte*)(...+0x2c)^1 and all builders zero-init a byte here

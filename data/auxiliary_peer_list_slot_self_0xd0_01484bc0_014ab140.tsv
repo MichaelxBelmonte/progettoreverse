@@ -1,0 +1,10 @@
+scope	target	role	confidence	evidence
+offset	MUElementAnalyzer+0xd0	auxiliary_peer_list_slot	high	this_ptr[0x1a] is loaded in 01484bc0 then copied to local_f8 and reused as lVar63 in the class1 and class2 matcher corridor
+constructor	002773c0	initialize_self_plus_0xd0_as_gnlist	high	constructor zeroes this_ptr[0x1a] then allocates a DAT_02572358 GNList object into that slot
+constructor	011410f0	initialize_self_plus_0xd0_as_gnlist	high	constructor zeroes this_ptr[0x1a] then allocates a DAT_02572358 GNList object into that slot
+use	01484bc0	load_self_plus_0xd0_into_local_f8	very_high	lines 1909..1913 load this_ptr[0x1a] and copy it into local_f8 before the raw-note matcher corridor
+use	01484bc0	pass_self_plus_0xd0_as_secondary_list_to_014af180_class2	very_high	lines 2231..2234 populate local_310 from lVar63 then call 014af180 with classCode 2
+use	01484bc0	pass_self_plus_0xd0_as_secondary_list_to_014af180_class1	very_high	lines 2285..2288 populate local_2f0 from lVar63 then call 014af180 with classCode 1
+use	01484bc0	find_insert_target_for_class1_peer_registry	very_high	class1 branch uses FUN_00d237a0 and FUN_00d23370 against the same lVar63 derived from self+0xd0
+use	01484bc0->014ab140	reuse_same_slot_in_later_analyzer_phase	high	lines 3705..3712 load this_ptr[0x1a] again and forward it into 014ab140
+typehint	g_02572358	concrete_GNList_container	very_high	DAT_02572358 is already fixed as GNList in the dedicated GNList topology ledger

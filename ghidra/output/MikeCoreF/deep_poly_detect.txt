@@ -1,0 +1,29 @@
+# Search: "findPolyphonicDetectionItems"
+STRING @ 02429943: "MUElementAnalyzer::findPolyphonicDetectionItems(): propertyPoint->_timeSliceIndex > timeSliceCount"
+  FUNC: FUN_0144ea10 @ 0144ea10
+    Size: 72175 bytes
+    Ref from: 01456783
+    Called by (1):
+      FUN_0143b040@0143b040
+    Calls (138):
+      FUN_007a07a0@007a07a0
+      FUN_00c94060@00c94060
+      FUN_00c97b60@00c97b60
+      FUN_00c97b70@00c97b70
+      FUN_00d270d0@00d270d0
+      FUN_00d27440@00d27440
+      FUN_00d27630@00d27630
+      FUN_00d292d0@00d292d0
+      FUN_00d294f0@00d294f0
+      FUN_00d29570@00d29570
+      FUN_00d29cc0@00d29cc0
+      FUN_00d29ea0@00d29ea0
+      FUN_00d2a210@00d2a210
+      FUN_00d55fd0@00d55fd0
+      FUN_00d56170@00d56170
+      FUN_00d56b90@00d56b90
+      FUN_00d56bb0@00d56bb0
+      FUN_00e3a440@00e3a440
+      FUN_00e3ac30@00e3ac30
+      FUN_00e81a80@00e81a80
+

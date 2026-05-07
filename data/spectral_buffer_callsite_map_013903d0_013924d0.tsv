@@ -1,0 +1,21 @@
+stage	source	register_or_slot	target	semantic	confidence	notes
+013903d0_callsite	015c6b60	rdx	013924d0	magnitudeData	very_high	return stored in r13 then moved to rdx before call
+013903d0_callsite	015c66c0	rcx	013924d0	trueFreqData	very_high	return stored in r12 then moved to rcx before call
+013903d0_callsite	015c6ba0	r8	013924d0	tonalityData	very_high	return stored in r15 then moved to r8 before call
+013903d0_callsite	global	xmm0	013924d0	global_scale	high	used later both in harmonic weight and helper width build
+013903d0_callsite	global	xmm1	013924d0	harmonic_decay_exponent	very_high	loaded into powf exponent path
+013903d0_callsite	local	r9d	013924d0	harmonic_column_count	high	from -0xb4(%rbp)
+013903d0_callsite	local_[rsp]	stackFlagA	013924d0	item_list_ownership_mode	medium	byte from -0x120(%rbp); selects early duplicated loop path and looks lifetime-related
+013903d0_callsite	local_[rsp+8]	stackFlagB	013924d0	enable_tonality_weighting	high	byte from caller 0x10(%rbp); anded with tonalityData!=NULL before weighted final path
+013924d0_to_014eecb0	trueFreqData	rsi	014eecb0	freq_axis_input	very_high	passed from r15
+013924d0_to_014eecb0	magnitudeData	rdx	014eecb0	energy_input	very_high	passed from -0xe8(%rbp)
+013924d0_to_014eecb0	tonalityData	rcx	014eecb0	extra_weight_input	very_high	passed from -0xb8(%rbp)
+014eecb0_to_014b71e0	trueFreqData	rdi	014b71e0	freq_axis	very_high	reaches hidden rdi unchanged
+014eecb0_to_014b71e0	magnitudeData	rsi	014b71e0	energy_buffer	very_high	reaches hidden rsi unchanged
+014eecb0_to_014b71e0	tonalityData	rdx	014b71e0	extra_mask_weight	very_high	reaches hidden rdx unchanged
+014eecb0_to_014b71e0	item_plus_0x24	rcx	014b71e0	out_local_overlap_evidence	very_high	leaq 0x24(%rbx), %r15 then moved to rcx
+014902f0_callsite	local_[rsp]	stackFlagA	013924d0	item_list_ownership_mode	high	shaper callsite writes zero
+014902f0_callsite	local_[rsp+8]	stackFlagB	013924d0	enable_tonality_weighting	high	shaper callsite writes zero
+014902f0_callsite	magnitudeData	rdx	013924d0	magnitudeData	very_high	shaper stores getMagnitudeData to -0xa0 then moves to rdx
+014902f0_callsite	trueFreqData	rcx	013924d0	trueFreqData	very_high	shaper stores getTrueFreqData to -0xd0 then moves to rcx
+014902f0_callsite	tonalityData	r8	013924d0	tonalityData	very_high	shaper stores getTonalityData to -0xb0/%rbx then moves to r8

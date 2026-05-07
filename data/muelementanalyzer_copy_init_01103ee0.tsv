@@ -1,0 +1,9 @@
+scope	target	role	confidence	evidence
+entry	01103ee0	base_init_then_vtable_swap	very_high	decompiled entry calls 00d4ff80 writes temporary vtable DAT_02590538 copies fields from unaff_RSI then switches to DAT_025d8f90
+entry	01103ee0	source_field_copy_0x10_to_0x30	very_high	decompiled entry copies source offsets 0x10 0x14 0x18 0x1c 0x20 0x24 0x28 0x2c 0x30 into destination before registration phase
+property	_windowOverlapForTimeSlices	state_property_registration	very_high	01103ee0 registers _windowOverlapForTimeSlices with type GNInt in decompiled file around line 311
+property	_energyRawMatrix	state_property_registration	very_high	01103ee0 registers _energyRawMatrix with type float * in decompiled file around line 846
+property	_findMonophonicPitchInFrequencyDomain	state_property_registration	very_high	01103ee0 registers _findMonophonicPitchInFrequencyDomain with type bool in decompiled file around line 963
+property	_audioSourceDescription	state_property_registration	high	multiple registration paths bind _audioSourceDescription and related MUAudioSource* classes
+inference	01103ee0	MUElementAnalyzer_copy_init_and_property_graph	high	entry pattern plus long registration sequence fit structural init much better than STFT loop
+inference	01103ee0	not_primary_stft_loop	high	no tight float-buffer math FFT factory or spectral transform loop emerges in the local decompiled body

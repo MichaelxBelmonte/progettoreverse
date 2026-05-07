@@ -1,0 +1,13 @@
+scope	target	role	confidence	evidence
+callsite	01484bc0->014af180(classCode=2)	propagation_match_path	very_high	assembly at 0x1488ebe..0x1488ed0 sets ecx=2 while reusing the same threshold seed in xmm0 and global end in xmm2
+callsite	01484bc0->014af180(classCode=1)	peer_materialization_match_path	very_high	assembly at 0x1489064..0x1489076 sets ecx=1 while reusing the same threshold seed in xmm0 and global end in xmm2
+field	MURawNoteSeparation+0x40	linked_peer_pointer	very_high	post-match code in both branches dereferences item+0x40 as a retained peer object and may overwrite it
+flag	MURawNoteSeparation+0x3c:0x1	base_class_1	very_high	class1 post-loop in 01484bc0 processes items whose flags equal 1 after matcher call with ecx=1
+flag	MURawNoteSeparation+0x3c:0x2	base_class_2	very_high	class2 post-loop in 01484bc0 processes items whose flags equal 2 after matcher call with ecx=2
+flag	MURawNoteSeparation+0x3c:0x20	selected_by_class2_peer_mark	high	class2 post-loop copies peer start to current start and ORs peer flags with 0x20
+flag	MURawNoteSeparation+0x3c:0x40	selected_or_synthetic_class1_peer_mark	high	class1 post-loop ORs matched peer with 0x40 and the fallback builder 014ba9e0 is called with esi=0x40
+behavior	class2_post_match	propagate_existing_peer_only	high	if current flags are 2 and current+0x40 is non-null code copies peer start and does not build or insert new carrier
+behavior	class1_post_match_existing	find_index_of_existing_peer	high	if current flags are 1 and current+0x40 is non-null code copies peer start marks peer with 0x40 and queries aux-list index via 00d237a0
+behavior	class1_post_match_fallback	build_and_insert_synthetic_peer	very_high	if current flags are 1 and current+0x40 is null code scans aux list builds a new 0x40 peer with 014ba9e0 inserts it with 00d23370 and stores it into current+0x40
+behavior	class1_post_match_cleanup	remove_unclaimed_neighbours_inside_interval	high	after peer resolution code removes following aux-list entries whose start stays before current end and whose flags&0x70 equal 0
+consumer	014a3900	complementary_pairing_between_base_classes_1_and_2	medium_high	interval gate model applies asymmetric short-gap tests between class2 and class1 neighbours in both directions

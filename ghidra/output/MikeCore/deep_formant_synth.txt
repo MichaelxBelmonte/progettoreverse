@@ -1,0 +1,27 @@
+# Search: "FormantsSynth_"
+STRING @ 024194a0: "FormantsSynth_FundamentalAmp"
+
+STRING @ 024194d0: "FormantsSynth_FundamentalRandom"
+
+STRING @ 02419500: "FormantsSynth_Subharmonic2Amp"
+
+STRING @ 02419530: "FormantsSynth_Subharmonic2Random"
+
+STRING @ 02419570: "FormantsSynth_Subharmonic3Amp"
+
+STRING @ 024195a0: "FormantsSynth_Subharmonic3Random"
+
+STRING @ 024195e0: "FormantsSynth_Subharmonic4Amp"
+
+STRING @ 02419610: "FormantsSynth_Subharmonic4Random"
+
+STRING @ 02419650: "FormantsSynth_WaveNoise"
+
+STRING @ 02419680: "FormantsSynth_ConstNoise"
+
+STRING @ 024196b0: "FormantsSynth_TimeRandom"
+
+STRING @ 024196e0: "FormantsSynth_PulseDecay"
+
+STRING @ 02419710: "FormantsSynth_GrowlHiPass"
+

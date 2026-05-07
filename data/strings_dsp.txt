@@ -1,0 +1,2599 @@
+  tracks:%@
+ AMUScaleStretchTuningCtrl.gnui
+ keyIndex:
+#<detectsChurchModes
+%@.tempo.%@
+%@/Desktop/Resynthesized %I.aif
+%@/OverlapAtItemMargins
+%I Note(s) of %I File(s)
+%p::_microtonalPitchSystem
+%p::_pitchSystem
+(0 <= index) && (index < _tempoChanges->getCount())
+(GNMidiFile (sequence %I, timebase %s, starttime offset %.4f, largest timestamp %.4f):
+(GNMidiFileTrack:
+(timeStamp:%.2f, tempo:%.1f(%.3f))
+*** A special note about internal error number 1007 ***
+/Users/peter/Desktop/ScalesSorted/12 Notes
+/Users/peter/Desktop/ScalesSorted/With Pitch
+0beat count
+18 Formants
+=GNActionNoTracking
+=GNMidiFileMajorKey
+=GNMidiFileMinorKey
+=GNMidiFileTimeBaseQuarters
+=GNMidiFileTimeBaseSeconds
+=GNStretchHorizontalAlignment
+=GNStretchVerticalAlignment
+=MDAudioUndefinedTrack
+=MDMainResponderViewIdMultiTrack
+=MDTrackContentDisplayStyleBlobs
+=MDTrackContentDisplayStyleScore
+=MDTrackContentDisplayStyleWaveform
+=MDTrackEditMode
+=MDTrackHeaderHeightLarge
+=MDTrackHeaderHeightMiddle
+=MDTrackHeaderHeightSmall
+=MUAdjustAttackAndStretchBodyStretchingMode
+=MUAdjustAttackAndStretchOrCropDecayStretchingMode
+=MUBarSignatureMapStretchMode
+=MUChromaticApproachNote
+=MUDiatonicPitchRelationSystem
+=MUEditTimelineAndStretchElementsMode
+=MUGrooveCombinedBeatType
+=MUGrooveDownBeatType
+=MUGrooveUpBeatType
+=MULibraryFileKindDetectionReferences
+=MULibraryInvalidFileKind
+=MULineMapperNoteScope
+=MULinearStretchingMode
+=MULoopAssetImpulseResponseType
+=MULoopComponentPitchRangeLow
+=MULoopComponentPitchRangeUndefined
+=MULoopHarmonicInstrumentType
+=MUNoteAnticipationDefaultMode
+=MUNoteAnticipationOffMode
+=MUNoteAnticipationSuggestedMode
+=MUPartMapperPolyphonicVoicingMode
+=MUPitchApproachBendingSlideMode
+=MUPitchApproachMapperAvoidScaleScope
+=MUPitchApproachMapperChordScaleScope
+=MUPitchApproachMapperChromaticScope
+=MUPitchApproachMapperKeyScaleScope
+=MUPitchApproachMapperLocalScaleScope
+=MUPitchApproachNoSlideMode
+=MUPitchApproachTransitionSlideMode
+=MUPitchClassMapperAddChromaticExtensionsToTarget
+=MUPitchClassMapperAddDiatonicExtensionsToTarget
+=MUPitchClassMapperAvoidScaleScope
+=MUPitchClassMapperChordNotesMode
+=MUPitchClassMapperChordScaleScope
+=MUPitchClassMapperChromaticMode
+=MUPitchClassMapperKeyScaleScope
+=MUPitchClassMapperLocalScaleScope
+=MUPitchClassMapperPentatonicScaleScope
+=MUPitchClassMapperRemoveHighDegreesFromSource
+=MUPitchClassMapperRemoveHighDegreesFromTarget
+=MUPitchClassMapperRemoveLowDegreesFromSource
+=MUPitchClassMapperRemoveLowDegreesFromTarget
+=MUPitchClassMapperScaleMode
+=MUPitchClassMapperSharpNinthPentatonicScaleScope
+=MUPitchClassMapperSixthSeventhScaleScope
+=MUPitchClassMapperSubChordAndGenderMode
+=MUPitchClassMapperSubChordMode
+=MUPitchClassMapperUserChordContractionMode
+=MUPitchClassMapperUserChordExpansionMode
+=MUPitchDisplayAbsolutePiano
+=MUPitchRulerDisplayTuningTitles
+=MUPitchSnapOff
+=MUPitchSnapScale
+=MUPitchSnapScaleRelative
+=MUPitchSnapSemitone
+=MUPitchToChordInversionMode
+=MUPitchToChordTranspositionMode
+=MUPlayingElementsModeNoAnimation
+=MUPolyphonicDescriptionType
+=MUPolyphonicUnpitchedDescriptionType
+=MURecordingAnalyzerTrackTypeAudio
+=MURecordingAnalyzerTrackTypeReference
+=MURecordingAnalyzerTrackTypeReferenceWithVoice
+=MURecordingAnalyzerTrackTypeSum
+=MUScaleApproachNote
+=MUScaleRulerViewDisplayNoteSelection
+=MUScaleRulerViewDisplayScaleDetection
+=MUSlaveTrackStartAndEndCrop
+=MUSlaveTrackStartAndEndFade
+=MUSlaveTrackStartAndEndUndefinedFade
+=MUSpectrumShaperAmpEnvelopeType
+=MUSpectrumShaperCommonSpectrumType
+=MUSpectrumShaperEditTypeBell
+=MUSpectrumShaperEditTypeNone
+=MUSpectrumShaperEditTypePlateau
+=MUSpectrumShaperEditTypeWave
+=MUSpectrumShaperEqualizerBandsSpectrumType
+=MUSpectrumShaperFormantEnvelopeType
+=MUSpectrumShaperLowerSpectrumType
+=MUSpectrumShaperSawAmpsPowEnvelopeType
+=MUSpectrumShaperSpectrumDiffPowEnvelopeType
+=MUSpectrumShaperUpperSpectrumType
+=MUTargetChordNote
+=MUTrackDualMode
+=MUTrackPerformanceMode
+=MUTrackRegionMode
+=MUTranspositionMapperMostPitchIndexSource
+=MUTranspositionMapperNearestChordNoteTarget
+=MUTranspositionMapperNextLineNoteTarget
+=MUTranspositionMapperPentatonicRiffTarget
+=MUTranspositionMapperSharpNinthPentatonicRiffTarget
+=MUUndefinedNote
+?Chord Track
+?GNActionContinueTracking
+?GNActionStartTracking
+?GNActionStopTracking
+?GNAudioPhaserEffectType
+?GNMidiInstrumentPolyMode
+?GNMidiInstrumentSoloContinueMode
+?GNMidiInstrumentSoloRetriggerMode
+?GNQualifierSelectorNotEqual1
+?MDAudioAraPluginTrack
+?MDAudioStandaloneTrack
+?MDAudioTransferPluginTrack
+?MDDetectionEditMode
+?MDDetectionSetup
+?MDExportAsReferenceTrackRegionType
+?MDExportFormatLeadSheetTempo
+?MDExportFormatMidi
+?MDExportFormatTempo
+?MDExportFromStartOfReferenceTrackRegionType
+?MDExportIndividualFileForEachNoteRegionType
+?MDExportIndividualRangeForEachTrackRegionType
+?MDPlayingState
+?MUAudioSourceDescriptionDoNotStretchOnInsert
+?MUAudioSourceDescriptionStretchModeUndefined
+?MUAudioSourceDescriptionStretchOnInsert
+?MUChromaticPitchRelationSystem
+?MUDetectionEditorRenderOrignal
+?MUDetectionEditorRenderSpectrum
+?MUEditorViewPitchSystemDidChangeNotification
+?MULoopComponentPitchRangeHigh
+?MULoopComponentPitchRangeMid
+?MUModulationSetTarget
+?MUMultiTrackDisplayBoth
+?MUMultiTrackDisplayHeadersOnly
+?MUPitchDisplayChordNotes
+?MUPitchDisplayChordScaleNotes
+?MUPitchDisplayPitchLines
+?MUPitchDisplayRelativePiano
+?MUPitchMapperChordCoverageCriterion
+?MUPitchMapperDoubleCountCriterion
+?MUPitchMapperExceedsLimitsCriterion
+?MUPitchMapperHasCrossingsCriterion
+?MUPitchMapperHasMinorSecondCriterion
+?MUPitchMapperHighestPitchIndexMatchesMaskCriterion
+?MUPitchMapperLowestIntervalMatchesForthOrFifthCriterion
+?MUPitchMapperLowestPitchIndexMatchesMaskCriterion
+?MUPitchMapperMatchVoicingCriterion
+?MUPitchMapperSuspensionsExtensionQualityCriterion
+?MUPitchMapperTranspositionCriterion
+?MUPitchMapperTranspositionMatchesPreferredDirectionCriterion
+?MUPitchMapperVoicingDistanceCriterion
+?MUPitchMapperWeightedDistanceCriterion
+?MUPitchRulerDisplayModeTitles
+?MUPitchRunMapperChordScaleScope
+?MUPitchRunMapperChromaticScope
+?MUPitchRunMapperKeyScaleScope
+?MUPitchRunMapperLocalScaleScope
+?MUPlayingElementsModeAnimated
+?MUPlayingElementsModeSimple
+?MUTempoEditCurrentSubdivisionMode
+?MUTempoEditNoneMode
+?MUTimeStretchEndToolMode
+?MUTimeStretchStartToolMode
+?MUTimelineToolModeBeatAfterUndefinedRange
+?MUTimelineToolModeBeatBeforeUndefinedRange
+?MUTimelineToolModeBeatInUndefinedRange
+?MUTimelineToolModeBeatLeftContRamp
+?MUTimelineToolModeBeatLeftLeapRamp
+?MUTimelineToolModeBeatRightContRamp
+?MUTimelineToolModeBeatRightLeapRamp
+?MUTimelineToolModeBeatSingle
+?MUTimelineToolModeBeatWave
+?MUTimelineToolModeTempoBell
+?MUTimelineToolModeTempoInUndefinedRange
+?MUTimelineToolModeTempoLeftContRamp
+?MUTimelineToolModeTempoLeftLeapRamp
+?MUTimelineToolModeTempoPlateau
+?MUTimelineToolModeTempoRightContRamp
+?MUTimelineToolModeTempoRightContSingle
+?MUTimelineToolModeTempoRightLeapRamp
+?MUTimelineToolModeTempoSingle
+@"NSTrackingArea"
+A=MUDetectedDescriptionGrade
+ActivationAgentSocketPathDoesNotExist
+AgentRegistryInsertError
+AlignTest_stretchTolerance
+An error occurred while trying to build this string.
+An error was detected while trying to replace path components of the form $(PATH_TAG) within a path string. This is either because the tag value PATH_TAG is not defined or because two or more such references created an infinite recursion loop.
+Apply Constant Tempo
+Apply Constant Tempo to %@ Files
+Apply Project Tempo
+Apply Project Tempo to %@ Files
+Approve $tempo File Tempo
+As Reference Track
+Asn1NullItemPointer
+Auth Mismatch Detected
+AuthMismatchDetected
+Autoscroll temporarily deactivated
+BN_lshift
+BN_mod_lshift_quick
+BN_rshift
+Bad Machine bindings detected while verifying license (UUID: %s) with allowed drift %d percent and actual drift %d
+Bad data size detected in the DecryptionAssistData for iLok1 KEY EXCHANGE data
+Bad data size detected in the DecryptionAssistData for iLok1 QUICK CHALLENGE RESPONSE data
+Bad data size detected in the DecryptionAssistData for iLok2
+BadResponseToChallenge
+Band1 Frequency
+Band2 Frequency
+Beatnik
+Blend Notes
+Boost Harmonics
+CMDFeatureSpectrumShaper
+CMS_EnvelopedData
+CMS_EnvelopedData_create
+Cannot create a temporary experience data file on disk
+Cannot read MIDI file.
+Caught an exception trying to  release the database commit lock.
+Caught an exception trying to get the database commit lock.
+Clear Track-Editing Buttons
+Clear Track-Reference Buttons
+Clear Track-Transfer Buttons
+ClientConnectionOpener::closeNoThrow: Suppressing exception trying to close the connection.
+Command-Alt-Shift-b
+Command-Alt-Shift-d
+Command-Alt-Shift-e
+Command-Alt-Shift-f
+Command-Alt-Shift-p
+Command-Alt-Shift-s
+Command-Shift-c
+Command-Shift-n
+Command-Shift-s
+Command-Shift-t
+Command-Shift-z
+ConfirmtRedetectPanel
+Constant    $VarTempo
+Convolver
+Copy Note Assignment Data of File $VarFileTitle to Song
+Copy Song Data To Note Assignment of $VarFileCount selected Files
+Copy Song Data To Note Assignment of File $VarFileTitle
+CopyFilesSourceDoesNotExist
+Could not create a temporary directory.
+Could not resolve the symlink to the executable we're trying to sign.
+CouldNotCreateTemporaryDir
+Create new Scale on '$noteTitle'...
+Crosstalking Track
+CursorAssignBeat
+CursorAssignPitchCenter
+CursorAssignPitchIndex
+CursorBeatLeftLeapRamp
+CursorBeatRightLeapRamp
+CursorBeatStep
+CursorBeatWave
+CursorDetectionActivation
+CursorEnvelopeDecayStart
+CursorEnvelopeHold
+CursorEnvelopeNoHold
+CursorEnvelopeRiseEnd
+CursorEnvelopeStart
+CursorFormant
+CursorPitch
+CursorPitchDrift
+CursorPitchLimit
+CursorPitchModulation
+CursorPitchRelevance
+CursorTempoBell
+CursorTempoLeftContRamp
+CursorTempoLeftContSingle
+CursorTempoLeftLeapRamp
+CursorTempoPlateau
+CursorTempoRightContRamp
+CursorTempoRightContSingle
+CursorTempoRightLeapRamp
+CursorTempoSingle
+CursorTimeStretch
+CymbalCleaning_DetectHiPass
+CymbalCleaning_RandPhase
+DNA2 Test
+DNA2Test_DetectBluesHarp
+DNA2Test_DetectBluesHarpMultiplePaths
+DNA2Test_DetectBluesHarpSubharmonicsMode
+DNA2Test_DetectMonophonic
+DNA2Test_DisplayedHarmonic
+DNA2Test_SeparateRaspiness
+DNA2Test_ShowNormalized
+DNA2Test_ShowQuality
+DNA2Test_ShowRelativeRelevance
+DNA2Test_ShowRelevance
+DNA2Test_TestValue1
+DNA2Test_TestValue2
+DNA2Test_TestValue3
+DNA2Test_TestValue4
+DNA2Test_TestValue5
+DNA2Test_UseDNA2
+DNA2Test_UseEQ
+DNA2Test_UseEnergyClaim
+DNA2Test_UseStackedFft
+DNA2Test_WriteNoiseFiles
+Data corruption detected
+DefineTempo
+Defines Project Tempo
+Defines Project Tempo (when dropped on trackheader)
+Detect Blues Harp
+Detect Monophonic
+Detected
+Detection
+Detection Activation
+Detection Amplitude
+Detection Percussive Attack
+Detection Pitch Center Assignment
+Detection Pitch Index Assignment
+Detection Pitch Relevance
+Detection Quarter Assignment
+Detection Separation
+Detection Sibilant Range
+Detection-Ref
+DetectionActivationTool
+DetectionAmplitudeTool
+DetectionAttackAssignmentTool
+DetectionAudioSourceDesc
+DetectionCombiTool
+DetectionMenu
+DetectionPitchCenterAssignment
+DetectionPitchCenterAssignmentTool
+DetectionPitchIndexAssignment
+DetectionPitchIndexAssignmentTool
+DetectionPitchRelevance
+DetectionPitchRelevanceTool
+DetectionQuarterAssignment
+DetectionQuarterAssignmentTool
+DetectionSeparationTool
+DetectionSeparationTypeTool
+DetectionShowsNotes
+DetectionSibilantRange
+DetectionSibilantRangeTool
+DetectiveMiniIcon
+Displayed Harmonic
+Duplicate entityId value detected.
+Duplicate instanceId value detected.
+Duplicate uuid value detected.
+Duplicate uuid values detected. The offending objects have the LsRelation values %s and %s.
+Editing Pitch
+Editor/SpectrumShaper (V)
+Element Stretch
+EnableMidiReferenceNotes
+EnvelopeColorTableDefault
+EnvelopeColorTableReadOnlyDefault
+EnvelopeColorTableReadOnlySelected
+EnvelopeColorTableSelected
+Error detected in Certifier::participantsAreValid().
+Error trying to intialize an x509 certificate with openssl.
+Error trying to open a keychain file.
+Error was detected for in_pAuthParticipantIds member with value: 
+ExperienceResourcesDoNotExist
+FileDoesNotExist
+Files Define Complementary Project Tempo
+Files Define Complementary Project Tempo (when dropped on trackheader)
+FindAuthRecord returned %d storage records and saying there is more, but there is not more
+Folder Track
+Follows Project Tempo (Autostrech is on)
+Formant
+Formant Center
+Formant Character
+Formant Down
+Formant Tool
+Formant Up
+FormantRange
+FormantTool
+Formants
+Formants Synth
+Formants: 
+FormantsSynth_ConstNoise
+FormantsSynth_FundamentalAmp
+FormantsSynth_FundamentalRandom
+FormantsSynth_GrowlHiPass
+FormantsSynth_PulseDecay
+FormantsSynth_Subharmonic2Amp
+FormantsSynth_Subharmonic2Random
+FormantsSynth_Subharmonic3Amp
+FormantsSynth_Subharmonic3Random
+FormantsSynth_Subharmonic4Amp
+FormantsSynth_Subharmonic4Random
+FormantsSynth_TimeRandom
+FormantsSynth_WaveNoise
+Formants_AddOriginal
+Formants_Emphasize
+Formants_LoToOriginal
+Formants_MasterVolume
+Formants_NoiseAmp
+Formants_Offset1500Hz
+Formants_Offset3000Hz
+Formants_Offset5000Hz
+Formants_Offset750Hz
+Formants_SpectrumFilter
+Formants_SynthAmp
+Formants_TimeFilter
+Formants_Transpose
+Formants_Vowel
+Formants_VowelCycle
+Frequency
+From Start of Reference Track until End of Arrangement
+GNActionTrackingState
+GNAudioMixerTrack
+GNAudioProcessorMovedBetweenPlugInHostTracksNotification
+GNFFTException
+GNFrequencyFormatter
+GNHeartbeatHandler
+GNHeartbeatHandlerRegistration
+GNInternetSocketConnectTemporarilyFailedException
+GNKemperAmpDelayNoteValue
+GNMidiAudioEventMapper
+GNMidiComponent
+GNMidiConnection
+GNMidiEvent
+GNMidiEventPacket
+GNMidiFile
+GNMidiFileEventPacketList
+GNMidiFileKeySignature
+GNMidiFileKeySignatureList
+GNMidiFileKeyType
+GNMidiFileReader
+GNMidiFileReaderBrokenStructureException
+GNMidiFileReaderPrematureEndOfFileException
+GNMidiFileReaderUnsupportedFormatException
+GNMidiFileTempo
+GNMidiFileTempoList
+GNMidiFileTimeBase
+GNMidiFileTimeSignature
+GNMidiFileTimeSignatureList
+GNMidiFileTimedData
+GNMidiFileTimedDataList
+GNMidiFileTrack
+GNMidiFileWriter
+GNMidiFileWriterCantEncodeDataException
+GNMidiInstrument
+GNMidiInstrumentVoiceMode
+GNMidiInterface
+GNMidiKeyboardReceiver
+GNMidiKeyboardView
+GNMidiKeyboardViewDidPressKeyNotification
+GNMidiKeyboardViewDidReleaseKeyNotification
+GNMidiNoteNumber
+GNMidiPort
+GNMidiPortConfigurationDidChangeNotification
+GNMidiPortDefaultConfigurationChangedNotification
+GNMidiQueue
+GNMidiQueueDidReceiveEventsNotification
+GNMidiShortCutHandler
+GNMidiSynthesizer
+GNMidiSynthesizerOperator
+GNMidiSystemExclusiveEvent
+GNMidiTimeStamp
+GNMidiValue
+GNMidiValue *
+GNMonoMidiInstrument
+GNNotEditedKeySequences
+GNOverloudConvolver
+GNOverloudConvolverController
+GNOverloudConvolverControllerUpdateIRNotification
+GNOverloudConvolverIR
+GNOverloudConvolverParameterIdentifier
+GNOverloudMRXPhase90
+GNPlugInHostTrack
+GNPlugInHostTrackColorChangedNotification
+GNPlugInHostTrackFocusChangedNotification
+GNPlugInHostTrackPositionChangedNotification
+GNPlugInHostTrackSelectionChangedNotification
+GNPlugInHostTrackTitleChangedNotification
+GNPlugInHostTrackVisibilityChangedNotification
+GNPolyMidiInstrument
+GNPolyMidiInstrumentVoice
+GNTableViewTrackingFinishedAction
+GetContentDecryptionKeyInput
+GetContentDecryptionKeyInput(
+Got a system error copying a directory.
+GuitarNylonSingleNotes.mpd
+HCoriginalTrack
+Harmonic Minor
+High Frequency
+HostTrackMiniIcon
+HttpServerFileDoesNotExist
+IBK MIDI
+ILok2AuthExOutputNotEqualToInput
+IOPrimaryInterface
+IR0 EQ1 Frequency
+IR0 EQ2 Frequency
+IR1 EQ1 Frequency
+IR1 EQ2 Frequency
+IR2 EQ1 Frequency
+IR2 EQ2 Frequency
+IR3 EQ1 Frequency
+IR3 EQ2 Frequency
+IR4 EQ1 Frequency
+IR4 EQ2 Frequency
+IgnoreHostTrackId
+IgnoreHostTrackPosition
+IgnoreHostTrackSelection
+IgnoreHostTrackTitle
+Ilok2Protocols::~Ilok2Protocols: Suppressing exception trying to close the connection.
+Ilok2ProtocolsOpener::~Ilok2ProtocolsOpener: Suppressing exception trying to close the connection.
+IlokNotEmpty
+Inappropriate table size for FFT (%I)!
+Individual File for each Note
+Individual Range for each Track
+Insert Attack at  Cursor and Split Note
+Integer Stretch
+InterMIDI
+Keep '$noteTitle' as Fundamental
+Keep Current Stretching
+Keep Original Tempo (Autostrech is off)
+Keep Unstretched
+Key:%d Gen:%d Sig:%d/%d Beats:%d Loop:%s
+KeyInUse
+Loading tracks...
+Low Frequency
+LsCachedObjectVector<>::%s(): Called for wrong object type. Expected entityId: %d but saw %d. Error detected in file %s at line %d.
+LsCachedObjectVector<>::%s(): No object in the cache with entityId: %d and instanceId: %ld. Error detected in file %s at line %d.
+LsCachedObjectVector<>::at: Index out of range. Expected 0 <= index < %u, but saw index = %u for entityId: %d. Error detected in file %s at line %d.
+LsObjectCache::registerCachedObjectVector: Duplicate entityId: %d detected.
+LsRelation contains a temporary instanceId value that is unrecognized.
+M-Audio / Midiman
+MDAraPluginTrackHeaderViewController
+MDAudioTrackHeaderViewController
+MDAudioTrackItem
+MDAudioTrackItemElementView
+MDAudioTrackItemType
+MDAudioTrackTrackElement
+MDAudioTrackView
+MDAutoStretchPrefKey
+MDCopyDetection
+MDCopyTempoTo
+MDDetectSoundfileParameters
+MDDetectionAudioSource
+MDDetectionAudioSourceInsp
+MDDetectionEditorElementView
+MDDetectionEditorQuantizationPreviewChangedNotificatio
+MDDetectionEditorView
+MDDetectionElement
+MDDetectionElementInsp
+MDDetectionStateDidChangeNotification
+MDEditingDetectionDidStartNotification
+MDEditingDetectionDidStopNotification
+MDEditingDetectionTarget
+MDExportRegionSetting
+MDExportTrackReferenzSetting
+MDFeatureImportExportTempo
+MDFeatureMidiExport
+MDFeaturePolyphonicDetection
+MDFeaturePolyphonicUnpitched
+MDFeatureTempoEditor
+MDFeatureTrackHeaders
+MDFeatureTrackInspector
+MDFeatureTracks
+MDImportCreateSumTrack
+MDImportSplitReferenceTracks
+MDInspectorNamesDetection.gnui
+MDLastModeIsTrackMode
+MDLayerSelectTrack
+MDMelodyNote
+MDMetaWindowSpectrumShaperLayoutChangedNotification
+MDMultiTrackHeaderViewController
+MDMultiTrackItem
+MDMultiTrackScrollView
+MDMultiTrackTracksView
+MDMultiTrackView
+MDMultiTrackViewDelegate
+MDMultiTrackViewDidSetObjectsNotification
+MDPluginMultiTrackCornerViewController
+MDPluginTrackHeaderViewController
+MDPluginTrackNameDidChangeNotification
+MDPluginTransferDetection
+MDPluginTransferTempoDialog
+MDPluginTransferTempoDialog.gnui
+MDPrefsMultiTrackEditorLayoutKey
+MDPrefsPlugSpectrumEditorLayoutKey
+MDPrefsPlugSpectrumShaperVisibleKey
+MDPrefsSpectrumEditorLayoutKey
+MDPrefsSpectrumShaperVisibleKey
+MDPrefsTempoEditorInEditorDescriptionKey
+MDQuantizePitchController
+MDQuantizePitchController.gnui
+MDRawNoteSeparation
+MDReplaceElementsAfterDetection
+MDSequenceTracksDidChangeNotification
+MDSpectrumShaperController
+MDStandalonRecoringDetection
+MDStandaloneMultiTrackCornerViewController
+MDStandaloneTrackHeaderViewController
+MDTempoEditorChangedNotification
+MDTempoEditorHelper
+MDTempoEditorHelper2
+MDTimeTrack
+MDToolbarTempoCtrl
+MDToolbarTempoPluginCtrl
+MDToolbarTempoPluginCtrl.gnui
+MDToolbarTrackMemoryUsageCtrl
+MDTrack
+MDTrackChangedNotification
+MDTrackContentDisplayStyle
+MDTrackHeaderHeight
+MDTrackInsp
+MDTrackKey
+MDTrackViewItemDoubleClickedNotification
+MDTransferPluginTrackHeaderViewController
+MDUseDetectedTimelineAfterDetection
+MDWorkspaceLayoutSpectrum
+MDnsActivityInProgressError
+MIDI
+MIDI File Format
+MIDI Solutions
+MIDI file contains none or multiple tracks.
+MIDI file contains varying tempo.
+MIDI the World
+MIDI-Synth <no port>
+MIDI-Synth at %@
+MU12TETPitchClass
+MU12TETPitchSystem
+MU12TETPitchSystemDefaultTuning
+MUAdvancedTempoDetectionDialog
+MUAnalyzedBeat
+MUAraContentNoteEntry
+MUAraMusicalContextDidAddSequenceTrack
+MUAraNotesContentReader
+MUAraObservableTrackOwner
+MUAraTempoEntriesContentReader
+MUAraTrackColor
+MUAraTrackObservationHelper
+MUAraTrackObserver
+MUAudioSourceDescription::cleanupOverlappingPotentialItemsForPrincipalItem(): item not in _audioSourcePotentialItems
+MUAudioSourceDescription::cleanupOverlappingPotentialItemsForPrincipalItem(): wrong object type in list
+MUAudioSourceDescriptionStretchMode
+MUAudioSourceItemHarmonicSpectrum
+MUAudioSourcePrincipalItem::redetectMonophonicPitchAtSuggestedPitchAndUpdatePotentialItem(): _propertyPoints inconsistency!
+MUBeatFormatter
+MUBeatGrid
+MUBeatSelection
+MUChordHarmonyNote
+MUComponentSpectrumRenderer
+MUDerivedFinalBeat
+MUDetectionActivationInsp
+MUDetectionActivationSlider
+MUDetectionActivationTool
+MUDetectionAmplitudeInsp
+MUDetectionAmplitudeTool
+MUDetectionAttackAssignmentTool
+MUDetectionBaseInsp
+MUDetectionCombiTool
+MUDetectionEditorRenderStyle
+MUDetectionEditorShowsReferenceMidiNotes
+MUDetectionEditorUpdatesAudioImmediately
+MUDetectionEditorView
+MUDetectionEditorViewDidChangeRenderStyleNotification
+MUDetectionItemView
+MUDetectionPitchCenterAssignmentInspector
+MUDetectionPitchCenterAssignmentTool
+MUDetectionPitchIndexAssignmentInspector
+MUDetectionPitchIndexAssignmentTool
+MUDetectionPitchRelevanceInspector
+MUDetectionPitchRelevanceTool
+MUDetectionQuarterAssignmentInspector
+MUDetectionQuarterAssignmentTool
+MUDetectionRegion
+MUDetectionRenderParameterChanged
+MUDetectionRenderSpectrumVolume
+MUDetectionRenderStyle
+MUDetectionSeparationInsp
+MUDetectionSeparationTool
+MUDetectionSeparationTypeTool
+MUDetectionSibilantRangeInspector
+MUDetectionSibilantRangeTool
+MUDocumentMidiImporter
+MUEditorNoteView
+MUEditorPitchSystemCache
+MUEditorViewDidChangePitchDisplayMode
+MUEditorViewDidChangePitchRulerTitleDisplayMode
+MUEditorViewDidSelectPitchSnapNotification
+MUElementAnalyzer::findPolyphonicDetectionItems(): propertyPoint->_timeSliceIndex > timeSliceCount
+MUElementAnalyzerEngine::findAmpEnvelope: call without sourceSignal not implemented!
+MUElementFormantInspector
+MUElementPitchDriftInspector
+MUElementPitchInspector
+MUElementPitchModulationInspector
+MUElementStretchingMode
+MUEnvelopeDrawPath
+MUEnvelopeDrawPathDataSource
+MUEnvelopePath
+MUEnvelopePathDataSource
+MUEqualBeatsRange
+MUExternalMidiSynthesizer
+MUExternalMidiSynthesizerRenderer
+MUFormant
+MUFormantBarView
+MUFormantTool
+MUGrooveBeatType
+MULoopComponentPitchRange
+MULoopComponentPitchRangeDummyEnumRegistrationClass
+MULoopTrackTypeMask
+MUM32Importer::createAudioSourceDescriptionForNotes: mono (propertyPoint->_timeSliceIndex != iSlice) !
+MUMidiComponent
+MUMidiExportSynthesizerRenderer
+MUMidiIOConfiguration
+MUMidiIOSlot
+MUMidiSynthesizer
+MUMidiSynthesizerPlugIn
+MUMidiSynthesizerRenderer
+MUMidiSynthesizerRendererPressedKey
+MUMultiTrackDidChangeSelectionNotification
+MUMultiTrackDisplayMode
+MUMultiTrackDropTarget
+MUMultiTrackDropTargets
+MUMultiTrackHeaderViewControl
+MUMultiTrackHeaderViewController
+MUMultiTrackItem
+MUMultiTrackScrollDidPerfomTileNotification
+MUMultiTrackScrollView
+MUMultiTrackTimeGridDidChangeNotification
+MUMultiTrackTrackElement
+MUMultiTrackTrackElementExceededNotification
+MUMultiTrackTrackElementView
+MUMultiTrackTrackView
+MUMultiTrackTracksView
+MUMultiTrackView
+MUMultiTrackViewVisibleRectDidChangedNotification
+MUNote
+MUNoteAnticipationMode
+MUNoteClassification
+MUNoteDirectionMask
+MUNoteMapping
+MUNoteMappingGroup
+MUNoteMappingLine
+MUNoteMappingState
+MUNotePitchRelation
+MUNoteRealization
+MUPercussivePitchSystem
+MUPerformanceMidiExporter
+MUPitchApproachMapper
+MUPitchApproachMapperScaleScope
+MUPitchApproachSlideMode
+MUPitchClassMapper
+MUPitchClassMapperChordContractionMode
+MUPitchClassMapperChordExpansionMode
+MUPitchClassMapperMode
+MUPitchDisplayMode
+MUPitchDriftTool
+MUPitchMapper
+MUPitchMapperCriterion
+MUPitchMapperEntry
+MUPitchMapperMappingStorage
+MUPitchMapperOption
+MUPitchMapperWeight
+MUPitchMatrixPeak
+MUPitchModulationTool
+MUPitchRelationSystem
+MUPitchRunMapper
+MUPitchRunMapperScaleScope
+MUPitchSnapMode
+MUPitchSystem
+MUPitchSystemRulerView
+MUPitchTitleDisplayMode
+MUPitchToChordAdaptionMode
+MUPitchTool
+MUPlayingElementsMode
+MUPolyphonicDescriptionType
+MUPolyphonicUnpitchedDescriptionType
+MUPropertyPointPitchAlternative
+MUQuarterAssignmentBeat
+MURawNoteSeparation
+MURecordingAnalyzerReferenceTrackInfo
+MURecordingAnalyzerTrackType
+MUScaleCreatePitchSystemCtrl
+MUScaleCreatePitchSystemCtrl.gnui
+MUScaleDetectionOptionsCtrl
+MUScaleDetectionOptionsData
+MUScalePitchSystem
+MUScalePitchSystemSequence
+MUScalePitchSystemVersionException
+MUScaleRulerView::setPitchSystem(): PitchSystem must be MUScalePitchSystem!
+MUScaleStretchTuningCtrl
+MUScaleStretchTuningView
+MUScaleStretching
+MUScaleTuningPitchAnchor
+MUScaleWesternStandardPitchIndexAnchor
+MUSlaveTrackStartAndEndFadeMode
+MUSpectralPointDNA3
+MUSpectralTimeSlice::getComplexSpectrum(): no complexSpectrum data
+MUSpectralTimeSlice::getPhaseData(): no phase data
+MUSpectrumShaperAmpPowFormatter
+MUSpectrumShaperController
+MUSpectrumShaperDiffFormatter
+MUSpectrumShaperDisplayInfo
+MUSpectrumShaperDisplayInfoBuffer
+MUSpectrumShaperEditType
+MUSpectrumShaperEnvelope
+MUSpectrumShaperEnvelopeType
+MUSpectrumShaperEnvelopeView
+MUSpectrumShaperGainFormatter
+MUSpectrumShaperModuleLayouter
+MUSpectrumShaperMultipleSelectionHandler
+MUSpectrumShaperParameterSet
+MUSpectrumShaperSlider
+MUSpectrumShaperSpectrum
+MUSpectrumShaperSpectrumCtrl
+MUSpectrumShaperSpectrumEqualizerBandsCombWidthFormatter
+MUSpectrumShaperSpectrumType
+MUSpectrumShaperSpectrumView
+MUSpectrumShaperSynthCtrl
+MUSpectrumShaperTiltFormatter
+MUSpectrumShaperTonalPowFormatter
+MUTargetPitchIndexMap
+MUTempoAnalyzer
+MUTempoAnalyzerEvent
+MUTempoCourse
+MUTempoDetectionRange
+MUTempoDetectionRegion
+MUTempoEditMode
+MUTempoEditorChangeHelper
+MUTempoEditorDelegate
+MUTempoEditorDidChangeNotification
+MUTempoEditorDidDidTimeline
+MUTempoEditorDrawHelper
+MUTempoEditorHelper
+MUTempoEditorIsChangingNotification
+MUTempoEditorRulerView
+MUTempoEditorSubview
+MUTempoEditorView
+MUTempoEditorView.gnui
+MUTempoEditorViewItem
+MUTempoEditorWillEditTimeline
+MUTempoFormatter
+MUTempoPeriod
+MUTempoRegion
+MUTimeLineViewWillStartPlayingBackNotification
+MUTimeStretchTool
+MUTimeStretchToolMode
+MUTrack
+MUTrackAudioRecorder
+MUTrackAutomation
+MUTrackDidAddAnalyzedElementsNotification
+MUTrackElementsCache
+MUTrackOperationMode
+MUTrackPreloadRange
+MUTrackRenderer
+MUTrackSet
+MUTrackTimeSegment
+MUTrackWillAddAnalyzedElementsNotification
+MUTurkishNote
+MUWesternStandardPitchTitleSystem
+MUWesternStandardPitchTitleSystem.gnui
+MUWesternStandardPitchTitleSystemDefaultTitleSystemChangedNotification
+MUWesternStandardPitchTitleSystemPrefCtrl
+MUWesternStandardPitchTitleSystemRegisteredNotification
+Melodyne Detection Document
+Melodyne multitrack
+Micros 'N MIDI
+Mid1 Frequency
+Mid2 Frequency
+Mid3 Frequency
+Midi
+Midi Channel %I
+Midi Port
+MidiEvent: 0x%02X
+MidiEvent: 0x%02X, 0x%02X
+MidiEvent: 0x%02X, 0x%02X, 0x%02X
+MidiLite / Castle Studios Productions
+MidiPort "%@" (%s, %s)
+Midisoft
+Minor (harmonic)
+MultimicTest_normalizeTracks
+MultimicTest_otherTracksReduction
+MultimicTest_singleTrackMode
+Multiply tempo by
+N4pace4eden6thrift9authorize28GetContentDecryptionKeyInputE
+N4pace4eden6thrift9authorize31ReportStaleCachedAuthEntryInputE
+New Track
+No Stretching
+No error detected
+Normalize Tracks
+NotEnoughDataInStream
+Note
+Note Assignment Group
+Note Grid Settings
+Note Leveling
+NoteAssignmentActionGroup
+NoteOff: %I,%I
+NoteOn: %I,%I
+Noteheads
+OldName
+On address %p: Released object detected, its class seems to be %s
+Open Tempo Editor in Define Mode
+OptionsDocFileDoesNotExistError
+PKCS7_ENVELOPE
+PKCS7_SIGN_ENVELOPE
+PNTestMidiView
+PNTestMidiWindow
+PNTestRawChordNote
+POLICYINFO
+Pedal Notes
+Phase
+Phaser
+Pitch
+Pitch Drift
+Pitch Modulation
+Pitch Tools
+Pitch from Preset
+PitchClassTitles
+PitchDriftTool
+PitchModulationTool
+PitchRange
+PitchSystem %@ %@ (A=%.0f Hz):
+PitchTool
+PreviewPitchPrefixWithSpacer
+PreviewTempoPrefixWithSpacer
+Quantize Pitch
+QuantizeRefTrack
+Quasimidi
+Query is disallowed in minimized liblicenseservices. Error detected in file %s at line %d.
+Ran out of bytes trying to trim a private key
+Ran out of stack space trying to match the regular expression.
+Random Phase
+Rename Track
+ReportStaleCachedAuthEntryInput
+ReportStaleCachedAuthEntryInput(
+ResynthTest_blendNotes
+ResynthTest_formant
+ResynthTest_quantizePitch
+ResynthTest_smoothPitch
+ResynthTest_stretch
+ResynthTest_vibStretchMode
+Save As MIDI ...
+Scale Detective
+Select Detection Amplitude Tool
+Select Detection AttackAssignment Tool
+Select Detection Quarter Assignment Tool
+Select Detection Separation Tool
+Select Detection Separation Type Tool
+Select Formant Tool
+Select Pitch Drift Tool
+Select Pitch Modulation Tool
+Select Pitch Relevance Tool
+Select Pitch Tool
+Selecting Notes Group
+SelectingNotesActionGroup
+Separate Notes as Trills
+Shift
+Shift-
+Shift-Down
+Shift-Left
+Shift-Right
+Shift-Up
+Show Tempo Editor in Change Mode
+Show Tempo Editor in Define Mode
+Shows Reference Midi Notes
+SignerUnknownPkStandardName
+Smooth Pitch
+SoundWrapperFileDoesNotExist
+Spectrum Design
+Spectrum Filter
+Spectrum Shaper
+Spectrum Shaper Test
+SpectrumShaper
+SpectrumShaperAmpPow0
+SpectrumShaperAmpPowLeft
+SpectrumShaperAmpPowRight
+SpectrumShaperCombRight
+SpectrumShaperDiff0
+SpectrumShaperDiff1
+SpectrumShaperDiffLeft
+SpectrumShaperDiffRight
+SpectrumShaperDoubleSawTooth
+SpectrumShaperEmphasize0
+SpectrumShaperEmphasizeLeft
+SpectrumShaperEmphasizeLeft2
+SpectrumShaperEmphasizeRight
+SpectrumShaperEmphasizeRight2
+SpectrumShaperFlat
+SpectrumShaperSawTooth
+SpectrumShaperSquare
+SpectrumShaperSynthAmpRight
+SpectrumShaperSynthPhaseLeft
+SpectrumShaperSynthPhaseRight
+SpectrumShaperTilt0
+SpectrumShaperTiltLeft
+SpectrumShaperTiltRight
+SpectrumShaperViolinKey
+SpectrumShaperWave
+SpectrumShaper_TestValue1
+SpectrumShaper_TestValue2
+SpectrumShaper_TestValue3
+SpectrumShaper_TestValue4
+Standing Notes
+Stretch Factor
+Stretch Test
+Stretch Tolerance
+StretchTest_AmpInterpolation
+StretchTest_AutoDecay
+StretchTest_DecayStart
+StretchTest_DecayTarget
+StretchTest_ElementStretch
+StretchTest_FindDecayPoint
+StretchTest_IntegerStretch
+StretchTest_OutWindow
+StretchTest_QualityLimit
+StretchTest_ReleaseDuration
+StretchTest_StretchFactor
+StretchTest_TargetOverlap
+StretchTest_TestValue
+StretchTest_WindowSize
+StretchTest_ZeroPadding
+TSocket::write_partial() send() 
+Take Stretching from Preset
+Target Overlap
+Tempo
+Tempo Editing Group
+Tempo Map
+Tempo Test
+TempoEditingGroup
+TempoImportFailedPanel
+TempoLinkIcon
+TempoTest_TestValue1
+TempoTest_TestValue2
+TempoTest_TestValue3
+TempoTest_TestValue4
+TempoTest_TestValue5
+TempoTransferStretchBlobs
+TempoUnlinkIcon
+Temporal Acuity
+Temporarily unable to connect: %s
+Temporary error looking up host:%@, try again
+The LsSignedInfo objecy with uuid value %s does not have any LsSignedDigest objects in its digests relationship. Detected while attempting to verify the signature on the object with selfRelation value %s and uuid value: %s.
+The PACE code signing certificate on your iLok is expired. You must renew that certificate before you can digitally sign with the iLok. To renew the certificate, run the iLok License Manager and re-sync your iLok. Please see the GettingStartedGuide.rtf for details on authorizing and certifying your iLok for signing.
+The client process that is trying to access a remote server is no longer running.
+The effect of this slider is only audible with altered prelisten tempo or pitch.
+The effect of this slider is only audible with prelisten pitch with negative value.
+The effect of this slider is only audible with prelisten pitch with positive value.
+The software that you are trying to run needs an update.  Go to www.ilok.com to download and run the latest License Support installer.
+The wire-format object underlying this proxy object has disappeared.
+This OS version does not support copying a directory.
+This slider has no audible effect until the Preview Formants or Pitch control is adjusted.
+Toggle Correct Pitch Preview
+Toggle Track-Editing Buttons
+Toggle Track-Reference Buttons
+Track
+Track Group
+TrackActionGroup
+TrackAndEditorLayoutView (V)
+Tracks
+Tracktion
+Transients
+Transients only available for Poly Playback Type.
+Turkish Makam Acem. Compound Makam, a Bayati scale on A overlapping with a Cargah pentachord on F, which results in both B (- 1 comma) and Bb being used.
+Turkish Makam Basit Suznak. Rast on G, Hicaz on D. As the 2nd note in Tetrachord Hicaz is generally played higher than written in this Makam, E is added as a secondary degree.
+Turkish Makam Bestenigar. Compound Makam, Segah on F#, overlapping with Saba on A and Hicaz on C. Instead of the octave F#, F natural is used.
+Turkish Makam Evic. Compound Makam, Segah on F#, overlapping with Ussak on A.
+Turkish Makam Evic. Compound Makam, scale structure like Makam Irak, Segah on F#, overlapping with Ussak on A.
+Turkish Makam Gerdaniye. Compound Makam, a Huseyni scale on A and a Rast scale on G. Both share the same notes, so no additional notes are used.
+Turkish Makam Huzzam. Huzzam on B (- 1 comma), Hicaz on F#. The leading tone may be lowered to A (natural).  As the 2nd note in Tetrachord Hicaz is generally played higher than written in this Makam, E is added as a secondary degree.
+Turkish Makam Irak. Compound Makam, Segah on F#, overlapping with Ussak on A. The secondary degrees C# and E# are used if the scale is extended below the octave.
+Turkish Makam Karcigar. Ussak on A, Hicaz on D. The secondary degree Bb may be used if the scale is extended above the octave.  As the 2nd note in Tetrachord Hicaz is generally played higher than written in this Makam, E is added as a secondary degree.
+Turkish Makam Saba. Saba on A, overlapping with an appoximated Zirguleli Hicaz scale on C. Instead of the octave A, Ab natural is used.
+Turkish Makam Saba. Saba on A, overlapping with an approximated Zirguleli Hicaz scale on C. Instead of the octave A, Ab is used.
+Turkish Makam Sazkar. Compound Makam, a Rast scale on G overlapping with a Segah pentachord on B, which results in both E and E a comma lower being used.
+Turkish Makam Sevkefza. Compound Makam, consisting of a Acem Asiran scale on F, overlapping with Nikriz on F and a Zirguleli Hicaz scale on C
+Turkish Makam Suzidilara. Compound Makam, a Mahur scale on G (= Cargah transposed to G) overlapping with a Cargah scale on C, which results in both F and F# being used.
+Turkish Makam Zavil. Compound Makam, a Mahur scale on G overlapping with a Nikriz pentachord on G, which results in either B and C, or Bb and C# being used.
+UnknownTemporaryInstanceId
+Untune Harmonics
+Use DNA2
+Use Stacked Fft
+UserIdDoesNotExist
+VarTempo
+Variable    $VarTempo
+Verifying - %s
+Vib Stretch Mode
+WardenErrorDebuggerDetected
+WarnElementsOnMultipleTracksPanel
+WrapperBinaryDoesNotExist
+Wrong type of LsRelation ws provided to LsCachedObjectVector<>::get(). We expected a LsRelation with Entity ID value: %ld, but saw: %ld and instanceId: %ld. Error detected in file %s at line %d.
+_accumulatedPhasesOfChannel
+_accumulatedPhasesValid
+_activateKeyModifierTrackingHack
+_activationTrackingChangesDidFail
+_addedDisplayInfos
+_addressedPitchIndex
+_addressedTargetPitchClasses
+_addressedTargetPitchIndexes
+_allMidiEvents
+_allPitchRangePerNote
+_allStartBeat
+_allTempoPeriodColumns
+_allTempoRegions
+_allTransientsPaths
+_allXSlicesMaxPeakYIndex
+_allowAutomaticPolyphonicDetection
+_allowPeriodBasedPhaseReset
+_alternative1Pitch
+_alternative2Pitch
+_ampEnvelope
+_ampEnvelopeEndBlendStartValue
+_ampEnvelopeView
+_amplitudeEnvelope
+_amplitudeEnvelopeCache
+_analyzedBeat
+_analyzedTempoRegion
+_analyzerCanSwitchToPolyphonicDetection
+_analyzerDidSwitchToPolyphonicDetection
+_anchorOffsetsForSlaveTracks
+_animatedElementOnTrackViews
+_animatedYHeightForHarmonic
+_animatingASDMidPitchCenter
+_animatingZoomDstPitchRange
+_animatingZoomSrcPitchRange
+_appliedEqualizerFormantFactors
+_appliedEqualizerFormantFactorsAreValid
+_appliedSpectrumFactors
+_appliedSpectrumFactorsAreValid
+_applyDetectionToScale
+_araCompareTrack
+_araRulerDisplayBeatGrid
+_araSequenceTracksForPrelisten
+_araTempoMenuButton
+_assumesLowestPitchAsRoot
+_attachedDetections
+_attackItemDefaultDetectionQualityLimit
+_attackItemDetectionQualityLimit
+_attackItemDetectionVisualQualityLimit
+_attackPhaseContinuingData
+_audioSourceDescriptionsOfReferenceTracks
+_audioSourceDescriptionsOfSummedTracks
+_audioSourceDetectionField
+_audioSourceDetectionFieldLabel
+_audioSourceFormantsCharacterSlider
+_audioSourceFormantsDownSlider
+_audioSourceFormantsUpSlider
+_audioSourceTransientsSlider
+_autoStretchButton
+_autoStretchesIfNeeded
+_averagePitchConsistency
+_averagePitchIndex
+_baseNote
+_bassMatchesLowestPitchIndex
+_beat
+_beatAtPulseAnchor
+_beatCount
+_beatDivision
+_beatFormatter
+_beatIndex
+_beatMatchingQuality
+_beatMatchingWeightedQuality
+_beatSelection
+_beatSequence
+_beatStrengthWeightning
+_beatType
+_beatingFrequency
+_beatingPhase
+_beatingQuality
+_beats
+_beatsPerBar
+_beatsPerQuarter
+_belongsToMainNotes
+_binPhaseProcessingCount
+_blendSpectrumField
+_blendSpectrumSlider
+_cachedBeatGridLines
+_callUpdateElementsForNewPitchSystemInSetPitchSystem
+_canUseSpectrumShaper
+_centDisplayReferencePitchIndex
+_chordChangeWeightsAtBeats
+_chordNames
+_chordPitchSystemCache
+_chordScalePitchSystemCache
+_cleanupTrackingArea
+_clickFrequency
+_clickedAnchorTempo
+_clickedPitch
+_clickedPitchIndex
+_clickedPitchIndexBeforeRunningOpenPanel
+_closestPitch
+_closestPitchIndex
+_coarseBeatGrid
+_commonSpectrum
+_compareDiffSumsForSlaveTracks
+_compareTrack
+_complexSpectrum
+_complexSpectrumOfChannel
+_componentSpectrumRendererPool
+_constantTempoButton
+_continueAllPhasesByDefault
+_conversionTrackForEditModeSwitch
+_copyDetectionMenuItem
+_copyDetectionPullDown
+_copyNotesPullDown
+_copyTempo
+_copyTempoButton
+_correctPitchPreviewSwitch
+_correctPitchRange
+_correlatedTempoEvents
+_currentAraTempo
+_currentEnvelopeSquareness
+_currentHostTempoAnchors
+_currentPhaseIncrementsAndAmpsValid
+_currentPhaseIncrementsOfChannel
+_currentPhasesOfChannel
+_currentPitchSystemBeforeRunningOpenPanel
+_currentSpectrumOfChannel
+_currentTempo
+_currentTempoIsConstant
+_currentTrack
+_customizedNoteBackgroundColor
+_customizedNoteBorderColor
+_dataPrototypeTracksMouseDown
+_decomposedMagnitudesAtTimeSlicesOfTracks
+_defaultDetectionModePopup
+_definesTempoIfNeeded
+_delayCrystalPitch
+_delayFrequency
+_delayNoteValue1
+_delayNoteValue2
+_delayPitchDetune
+_densityIndex
+_detectAfterTransfer
+_detectAfterTransferSwitchButton
+_detectedCentArray
+_detectedPitch
+_detectedPitchSystem
+_detectedRanges
+_detectionButton
+_detectionCycleSizeCent
+_detectionEditorView
+_detectionInProgress
+_detectionInsertsChromaticIntervals
+_detectionIsCyclic
+_detectionMaxPitchCent
+_detectionMinPitchCent
+_detectionModePopup
+_detectionObserver
+_detectionParametersChangedObserver
+_detectionQuality
+_detectionQualityWeightning
+_detectionRange
+_detectionReferenceTrack
+_detectionStateChangedObserver
+_detectionStateDidChangeObserver
+_detectionStateObserver
+_detectionTargetObserver
+_detectionView
+_detectsBassNote
+_detectsChordExtensions
+_detectsChurchModes
+_detectsDetailedModeChanges
+_detectsPitchSystem
+_detectsSingleMode
+_didFindTempoEvents
+_didFixDetection
+_didFixPitch
+_didRecalcAllElementsPeriodsAndPitchCentersFromDecomposedAudioSignals
+_didShiftTime
+_displayBeatGrid
+_displayInfo
+_displayInfoBuffer
+_displayInfoBuffers
+_displayInfoGenerators
+_displayInfoPlaybackRenderers
+_displayInfos
+_displayPitchCenterTransition
+_displayPitchFunctionCache
+_displayTempoRatioRange
+_displayValuesAtBeats1
+_displayValuesAtBeats2
+_displayValuesAtBeats3
+_displayValuesAtBeats4
+_displayedEnvelopeDuration
+_distictsByIntValue
+_doMakeMultiTrackFirstResponder
+_doubleClickZoomHistoryPitchRange
+_drawsTrackedCell
+_dropTempoRect
+_edit%c%sByInsertingAtIndex
+_editBeatGrid
+_editByInsertingItemAtIndex
+_editTempoRegion
+_editingDetectionChangedObserver
+_editingDetectionTargetObserver
+_editingFeedbackPitchCenters
+_editorSpectrumShaperContainer
+_editorSpectrumShaperLayout
+_effectTempo
+_effectTempoFactor
+_elementStretchingMode
+_elementTempoEvents
+_elementsGroupedBySequenceTrack
+_endBeat
+_endEditingDetectionObserver
+_entryIndexRange
+_envelope
+_envelopeEndBlendStarted
+_envelopeParamsDrawPath
+_envelopeParamsLastUpdateTime
+_envelopeParamsRecDrawPath
+_envelopePath
+_envelopeRatioQuality
+_envelopeSquarenessTarget
+_envelopeType
+_equalizerBandsPitchOffset
+_equalizerBandsSpectrum
+_expectedPhaseOffsets
+_externalMidiSynthesizer
+_feebackLowerPitchLimit
+_feebackUpperPitchLimit
+_feedbackElementsOnTrack
+_fft1
+_fft2
+_fftCountDiagramView
+_filteredHostSelectedSequenceTracks
+_filteredPitchCent
+_filteredSpectrogramAmpEnvelopesForRawTracks
+_findMonophonicPitchInFrequencyDomain
+_firstBeatPosition
+_firstKeyboardNavigationTarget
+_firstMissingEntryIndex
+_firstSpectrumTime
+_firstValidBeat
+_forcesStereoTracks
+_formant
+_formantBarViews
+_formantEnvelope
+_formantEnvelopeEndBlendStartValue
+_formantEnvelopeView
+_formantFactor
+_formantFactors
+_formantField
+_formantLabel
+_formantOffset
+_formantOffsetField
+_formantOffsetSlider
+_formantPitchDownCompensationFactor
+_formantPitchUpCompensationFactor
+_formantRange
+_formantRatioFunctionCache
+_formantSlider
+_formantTransitionDuration
+_formants
+_formantsCharacterLabel
+_freqDomainFormantResolution
+_freqDomainPhaseResetParametersScale
+_frequency
+_frequencyBandMagnitudeSlices
+_frequencyBands
+_frequencyBandsTransformer
+_frequencyField
+_frequencyFormatter
+_fundamentalPitchClass
+_gridPitchSystemCache
+_grooveBeatProperties
+_handlePreviewByHeartbeat
+_harmonicHitQuality
+_harmonicIsSelected
+_harmonicMagnitudes
+_harmonicNumber
+_harmonicPaths
+_harmonicRatioQuality
+_harmonicSpectrum
+_harmonics
+_hasBestTempoDetection
+_heartbeatHandlerRegistrations
+_heartbeatHandlerRegistrationsLock
+_heartbeatTimer
+_hiddenSequenceTracks
+_hidesTransientProperties
+_highNote
+_highestPitchDegreeMask
+_highestPitchIndexMatchesMask
+_highestPitchMustMatch
+_highestStretchedPitch
+_highlightPitch
+_highlightedBeatValuePoint
+_hitHarmonic
+_hostPlaybackParamsTempo
+_hostTrack
+_hostTrackChangedNotification
+_hostTrackNameChangedNotification
+_hostTrackPositionChangedNotification
+_hostTracks
+_ignoreHeartBeats
+_inDetectionEditorMode
+_initialTimeStretchingOffset
+_insertGroupDefinesPerformanceTempo
+_interpretTabAsKeyboardNavigation
+_intervalChainNoteCount
+_invSourceSamplePositionIncrementForOriginalTempo
+_isAnyPhaseProcessed
+_isBeatGrid
+_isCorrectPitchPreviewEnabled
+_isDemoBeepPlaying
+_isDetectionInProgress
+_isDetectionPerformance
+_isDisplaying
+_isDisplayingToBuffer
+_isEditingDetection
+_isInConstantTempoRegion
+_isKeyboardNavigationEnabled
+_isMutingAllTracks
+_isNoteStart
+_isPitchAssignmentIrrelevant
+_isPitchSystemCacheValid
+_isPitchToChordAdaptionEnabled
+_isPlaying
+_isPlayingBack
+_isPlayingBackFirstCycle
+_isPlayingBackLastCycle
+_isPlayingBackRequested
+_isPolyphonic
+_isPolyphonicDetectionDisabled
+_isSlaveTrackValid
+_isStretching
+_isTempoSyncingToSong
+_isTempoWrapAroundEnabled
+_isTrackTitleEditable
+_isTrackingAllChanges
+_isTrackingChanges
+_isTrackingValueChanges
+_isTransient
+_isTransientClass
+_itemDetectionQualityLimit
+_itemDetectionVisualQualityLimit
+_joinsFormants
+_joinsPhases
+_joinsPitches
+_joinsTempoMapAngles
+_keepsPolyphonicElementLengths
+_keyIndex
+_knobOnlyHitDetection
+_labelReferenceTrack
+_largestTrackTimeCounter
+_lastExportedNote
+_lastHostTempo
+_lastKeyboardNavigationTarget
+_lastPitchSnapMode
+_lastRenderTransportWasPlaying
+_lastTempoFactor
+_lastTrackRange
+_lastValidBeat
+_limitsHighestPitchIndex
+_limitsLowestPitchIndex
+_lowNote
+_lowerSpectrum
+_lowerSuggestedPitchRangeLimit
+_lowestNotePitchClass
+_lowestPitchDegreeMask
+_lowestPitchIndexMatchesMask
+_lowestPitchMustMatch
+_lowestStretchedPitch
+_magnitudeRanksAtTimeSlicesOfTracks
+_maintainsFormantBarViews
+_mapsTipletsToBeats
+_masterTrack
+_maxChordPitchIndexCache
+_maxDisplayedHarmonic
+_maxDisplayedTempo
+_maxPitch
+_maxPitchIndex
+_maxSourcePitchIndex
+_maxTempoFactor
+_methodsEditingPitchSystem
+_midiComponents
+_midiEvent
+_midiEventCount
+_midiEventPackets
+_midiEvents
+_midiFile
+_midiInSlot
+_midiInputQueue
+_midiNoteNumber
+_midiPackets
+_midiPortIdentifier
+_midiTimeline
+_minChordPitchIndexCache
+_minDisplayedTempo
+_minPitch
+_minPitchIndex
+_minSourcePitchIndex
+_modeFundamentalOffsetIsUsedFromOpenedPitchSystem
+_modeFundamentalOffsetIsUsedFromOpenedPitchSystemCanBeChanged
+_modeIsUsedFromOpenedPitchSystem
+_modeIsUsedFromOpenedPitchSystemCanBeChanged
+_modelSpectrumSignalsCache
+_modelSpectrumSize
+_monoPitchAlternative
+_monoPitchMatrixTimeSliceSampleCount
+_monoPitchMatrixTimeSliceTimeDistance
+_mouseTrackingPrototype
+_mouseTrackingPrototypeRect
+_mouseTrackingValue
+_mouseTrackingValueColumnIndex
+_mouseTrackingValueRowIndex
+_movingDetectedScale
+_movingTuningPitchAnchor
+_muTrack
+_multiTrackButton
+_multiTrackEditorLayout
+_multiTrackItem
+_multiTrackView
+_multiTrackViewDelegate
+_multiTrackViews
+_multithreadedTrackRenderersCount
+_multithreadedTrackRenderersDone
+_mustSyncPitchSystemsAfterImportingPreM41Archive
+_mutedTracks
+_needsProcessEnvelope
+_needsProcessEnvelopeIsValid
+_needsProcessFormants
+_needsProcessFormantsIsValid
+_needsProcessSpectrumShaper
+_newNoteCoordinates
+_newNoteCoordinatesInitiated
+_nextKeyboardNavigationTarget
+_nextNote
+_noTempoEditorMenuItem
+_notEditedKeySequences
+_notOnTrack
+_note
+_noteBackgroundColor
+_noteBorderColor
+_noteClassification
+_noteDirectionMask
+_noteEnd
+_noteMappingCache
+_noteMappingGroup
+_noteMappingGroups
+_noteMappingId
+_noteMappingLines
+_noteMappings
+_noteMappingsPerQuarterRangeCache
+_noteNameField
+_noteNamesBtn
+_noteNumber
+_noteRealization
+_noteSelectionColumnWidth
+_noteSelectionPlusScaleSelectionColumnWidth
+_noteSeparations
+_noteStart
+_noteViews
+_notes
+_notesAtBeats
+_notesAtSlices
+_notifyTrackChange
+_notifyTrackChanged
+_nudgeBeatGrid
+_numberOfPlayingVoices
+_observeTrack
+_oldElementsOnTracksOfInsertGroup
+_oldEndTimesForNotes
+_oldStartTimesForNotes
+_openStringPitchIndexes
+_openedPitchSystem
+_openedPitchSystemWithInsertedIntervals
+_origEnvelope
+_origMagnitudesAtTimeSlicesOfTracks
+_originalColumnEnergyOfPolyPitchEnergyMatrixInv
+_originalEnvelopeArray
+_originalHostSelectedSequenceTracks
+_originalHostTempoEntries
+_originalPitchDeviation
+_originallyDetectedModeDegrees
+_outputBuffersDidUnderrfftun
+_overallOverlapAtItemMarginsItem
+_overallSpectrum
+_overallSpectrumFreqPerBin
+_overallSpectrumFundamentalPitchIndex
+_overlapCompensationFactor
+_patchTempoField
+_patchTempoSlider
+_pathTemporaryValue
+_pathTemporaryValue1
+_performanceForDetectionQuality
+_performanceTimeBeatGrid
+_phase
+_phaseData
+_phaseDiffusionAtAttack
+_phasesAtTimeSlicesOfTracks
+_pitch
+_pitchBarycenter
+_pitchByHarmonics
+_pitchCent
+_pitchCenter
+_pitchCenterQuality
+_pitchClassId
+_pitchClassWeights
+_pitchClassWeightsAtBeats
+_pitchClasses
+_pitchCommonFateDeviation
+_pitchConsistency
+_pitchCoverageNeg
+_pitchCoveragePos
+_pitchCurveDeflection
+_pitchCurveSlope
+_pitchDisplayMode
+_pitchDistanceWeight
+_pitchDriftFactor
+_pitchDriftWasSetManually
+_pitchField
+_pitchHarmonicQuality
+_pitchHorizontality
+_pitchIndex
+_pitchIndexAssignmentOffset
+_pitchIndexIsHit
+_pitchIndexes
+_pitchIndexeselection
+_pitchJumpsSum
+_pitchLabel
+_pitchLabelsPopUp
+_pitchLinesBtn
+_pitchMapperStorage
+_pitchMatrix
+_pitchMatrixPeaks
+_pitchMatrixTimePosCount
+_pitchModesDescription
+_pitchModulationFactor
+_pitchModulationSource
+_pitchOffset
+_pitchOffsetField
+_pitchOffsetFormatter
+_pitchOffsetFunction
+_pitchOffsetSlider
+_pitchPaths
+_pitchPopUp
+_pitchQualityWeight
+_pitchQuantization
+_pitchRange
+_pitchRelations
+_pitchRelevanceSampleOffset
+_pitchRulerTitleDisplayMode
+_pitchSlider
+_pitchSnapMode
+_pitchSnapModeToneScaleAndTuningMenu
+_pitchSwitch
+_pitchSystem
+_pitchSystemCache
+_pitchSystemHint
+_pitchSystemSequence
+_pitchTitleDisplayMode
+_pitchToChordAdaptionContext
+_pitchToChordAdaptionContextPopup
+_pitchToChordAdaptionEnabledSwitch
+_pitchToChordAdaptionMode
+_pitchToChordAdaptionModePopup
+_pitchTool
+_pitchTransitionDuration
+_pitchWasSetManually
+_pitchWeightning
+_pitchWithoutVibrato
+_pitchedNoteMappingsCache
+_playbackPitchRatioFunctionCache
+_playedPitchClasses
+_playedSourcePitchClasses
+_playing
+_playingAnimation
+_playingComponentRenderers
+_playingElementRenderers
+_playingElements
+_playingElementsMode
+_playingItemProgress
+_playingPerformanceElements
+_playingRealtimeElements
+_playsSpectrumOnly
+_plugInHostTrack
+_plugInTrack
+_pluginTrackNameDidChangeObserver
+_pointTemporaryValue
+_pointTemporaryValue1
+_pointTemporaryValue2
+_pointTemporaryValue3
+_polyPitchCentMatricesForRawTracks
+_polyPitchCentMatrixForAdditionalDisplay
+_polyPitchCentMatrixForDisplay
+_polyPitchCentMatrixForSum
+_polyPitchEnergyMatrixExtracted
+_polyPitchEnergyMatrixOriginal
+_polyPitchMatrixVectorsMagnitude
+_polyPitchMatrixVectorsY
+_polyPitchRelevanceMatrixExtracted
+_polyPitchRelevanceMatrixOriginal
+_polyphonicSeparationDirectoryIdentifier
+_popUpReferenceTrack
+_pososcOutPhase
+_pososcReadPhase
+_preferredFundamentalPitchForDetection
+_preferredTempoWeightedQuality
+_preferredUserPitchAnchorOption
+_preferredUserStretchingOption
+_prevIsAnyPhaseProcessed
+_prevPhaseIncrements
+_previousBlockHadPhaseReset
+_previousKeyboardNavigationTarget
+_previousPhasesOfChannel
+_previousPhasesValid
+_previousPitchIndex
+_previousPitchSystem
+_processLowerSpectrum
+_processSpectrumShaper
+_processSpectrumShaperIsValid
+_processUpperSpectrum
+_processedMagnitudesAtTimeSlicesOfTracks
+_propertyPointsMagnitudeToEnvelopeAmplitudeFactor
+_propertyPointsMagnitudeToEnvelopeAmplitudeFactorSum
+_propertyPointsMagnitudeToEnvelopeAmplitudeFactorWeightSum
+_prototypeIsTrackingMouseDown
+_pulsesPerBeat
+_qualityInFifthChain
+_quantizePitchButton
+_quantizePitchController
+_rawNotes
+_realtimeStretchingEnabled
+_rebuildEnvelopeTime
+_receiveOnAllMidiSources
+_recordingAnalyzerTrackType
+_referenceFrequency
+_referenceMidiDocument
+_referencePitchIndex
+_referenceTrack
+_referenceTrackMenu
+_referenceTracks
+_referenceTracksInfo
+_refersToSpectrumShaperParameterSet
+_reflectsBeatStrength
+_reflectsDetectionQuality
+_reflectsPitch
+_reflectsPitchSystem
+_regionTracks
+_relatesToNextNote
+_relationTemporaryValue
+_relevanceFromDetectionMatrix
+_removedDisplayInfos
+_renameTrackTextField
+_renderStateHostIsPlaying
+_renderTracks
+_reservedMaxPitchIndex
+_reservedMinPitchIndex
+_reservesPitchRange
+_resetAllPhasesAtAttack
+_rigTempo
+_robustPitchCurveSwitch
+_rootPitchClass
+_rootTrack
+_rootTrackObserver
+_rootTrackRenderers
+_savedFormantOffsets
+_savedPitchIndexes
+_savedTrackValues
+_scaleAlternativesAtBeats
+_scaleWasJustDetected
+_scrollTrackToVisible
+_selectedCustomizedNoteBackgroundColor
+_selectedCustomizedNoteBorderColor
+_selectedMovingNoteBackgroundColor
+_selectedNoteBackgroundColor
+_selectedNoteBorderColor
+_selectedPitchIndex
+_selectedSpectrumShaperTabs
+_selectedTracks
+_selectionIsTemporary
+_sendsNoteOffsOnActiveSenseLeaks
+_sequenceTrack
+_sequenceTracks
+_sequenceTracksRootTrack
+_setTuningPitchAnchor
+_shouldMeshNotesOnTimeJump
+_showsNoteDisplacement
+_showsNoteSeparations
+_showsNotes
+_showsPitchCurve
+_showsPitchRelevancePoint
+_showsReferenceMidiNotes
+_skipTempoDetection
+_skipZoomToFitAverageTempo
+_slaveTrackEndFadeMode
+_slaveTrackStartFadeMode
+_slaveTracks
+_smoothedPitchClassWeightsAtBeats
+_soloTracks
+_sourcePitchIndex
+_sourcePitchIndexCache
+_sourceSamplePositionIncrementForOriginalTempo
+_sourceTrackIndex
+_specifyModificationTempo
+_specifyModificationTempoValue
+_spectrogramAmpEnvelopesForRawTracks
+_spectrum
+_spectrumBlendingSlider
+_spectrumDiffPowEnvelope
+_spectrumDiffPowEnvelopeEndBlendStartValue
+_spectrumDiffPowEnvelopeView
+_spectrumDisplayGroup
+_spectrumEditType
+_spectrumMagnitudeFactors
+_spectrumPlaybackAmplitudeFactor
+_spectrumRendererVolume
+_spectrumShaperButton
+_spectrumShaperController
+_spectrumShaperModuleController
+_spectrumShaperParameterSet
+_spectrumShaperVisible
+_spectrumSize
+_spectrumType
+_spectrumView
+_startBeat
+_startBeatCache
+_startEditingDetectionObserver
+_startPlayBackAtTimeInHeartBeatHandler
+_stretchButton
+_stretchElements
+_stretchFactor
+_stretchInsertGroup
+_stretchInsertStartTime
+_stretchTuningView
+_stretching
+_stretchingFunction
+_stretchingIsSuggestedRelevant
+_stretchingIsUsedFromOpenedPitchSystemCanBeChanged
+_stretchingOption
+_stretchingPopUp
+_stretchingReflectsTempo
+_stretchingSwitch
+_subTracksChangedObserver
+_subharmonicChains
+_subharmonicPaths
+_subtracks
+_suggestedMaxPitch
+_suggestedMaxPitchIndex
+_suggestedMinPitch
+_suggestedMinPitchIndex
+_supertrack
+_syncMultiTrackAfterTicks
+_syncedDelayCrystalPitch
+_syncedDelayFrequency
+_syncedDelayNoteValue1
+_syncedDelayNoteValue2
+_syncedDelayPitchDetune
+_synthPhases
+_synthSignalIsInAttackPhase
+_synthSignalPhase
+_tablePhase
+_targetNoteOmittedWeight
+_targetPitchIndex
+_targetPitchIndexMap
+_targetPitchIndexOptions
+_targetPitchIndexes
+_targetPitchIndexesMatchingSourceVoicing
+_targetPitcheCenters
+_targetTrack
+_tempo
+_tempoAnalyzer
+_tempoAnalyzerDialog
+_tempoChanges
+_tempoCourse
+_tempoCourseStartIndex
+_tempoDetectionStartTime
+_tempoEditMode
+_tempoEditorButton
+_tempoEditorChangedObserver
+_tempoEditorDelegate
+_tempoEditorHelper
+_tempoEditorInEditor
+_tempoEditorInEditorDescription
+_tempoEditorIsOpen
+_tempoEditorMode
+_tempoEditorObserver
+_tempoEditorRulerView
+_tempoEditorView
+_tempoFactor
+_tempoField
+_tempoFormatter
+_tempoJumpQuarters
+_tempoKindLabel
+_tempoLabel
+_tempoMapRecordingState
+_tempoPeriods
+_tempoPointsPerSecond
+_tempoRegion
+_tempoRegionViews
+_tempoRegions
+_tempoSlider
+_tempoSyncButton
+_tempoTextField
+_tempoView
+_tempoViewHeight
+_tempoViewY0
+_temporaryAuxFloatValue1
+_temporaryAuxFloatValue2
+_temporaryValue
+_testMidiWindow
+_testTrack
+_timeDistanceOfTempoPoints
+_timePitchSystem
+_timePosIndexOfPitchCenterRelevanceEnd
+_timePosIndexOfPitchCenterRelevanceStart
+_timeStretchEndTool
+_timeStretchStartTool
+_toolbarTempoCtrl
+_toolbarTempoPluginCtrl
+_toolbarTrackMemoryUsageCtrl
+_totalPitchCount
+_totalPitchDelta
+_track
+_trackAndEditorView
+_trackChangedObserver
+_trackContributionsToSum
+_trackCount
+_trackDisplayStyle
+_trackEditButton
+_trackElement
+_trackHeaderHeight
+_trackHeaderWidth
+_trackIndex
+_trackInfo
+_trackItem
+_trackItemType
+_trackLayerCollection
+_trackNormalizingFactors
+_trackOberver
+_trackObjectCount
+_trackObserver
+_trackOrder
+_trackPreloadRanges
+_trackReductions
+_trackReference
+_trackRenderersCache
+_trackSelectionDidChange
+_trackSet
+_trackSetIdentifierCache
+_trackSets
+_trackTimeCounter
+_trackTitles
+_trackTypeLabel
+_trackTypeMask
+_trackTypePopup
+_trackUpdateRange
+_trackView
+_trackedElements
+_trackingArea
+_trackingState
+_tracks
+_tracksAreInitialized
+_tracksCount
+_tracksModelChangesAndInvalidatesSourcesPBoardType
+_tracksView
+_transferTempoDialog
+_transportPlaying
+_tuningIsUsedFromOpenedPitchSystem
+_tuningIsUsedFromOpenedPitchSystemCanBeChanged
+_tuningPitchAnchor
+_tuningPitchAnchorAnimationOffset
+_tuningPitchAnchorIsSuggestedRelevant
+_tuningPitchAnchorIsUsedFromOpenedPitchSystem
+_tuningPitchAnchorIsUsedFromOpenedPitchSystemCanBeChanged
+_tuningPitchAnchorOption
+_updateSpectrumShaperDisabled
+_upperSpectrum
+_upperSuggestedPitchRangeLimit
+_useAutomaticDetection
+_useDNA2ForPolyphonicDetection
+_useFactorsAtTimeSlicesOfTracks
+_useMonophonicFormantProcessing
+_usedBeats
+_usedTempoRegion
+_variableBeatCountEndAnchor
+_variableTempoButton
+_visiblePitchRangeLength
+_visiblePitchRangeLocation
+_wasPlayingBack
+_weightedPitchDelta
+_weightedPitchDeltas
+_weightedPitchOffsetFromStandard
+_westernStandardPitchIndexAnchor
+_westernStandardPitchIndexOffset
+_windowOverlapForTimeSlices
+_windowOverlapForTrueFreqs
+_xForHarmonic
+_yHeightForHarmonic
+_yHeightForReferenceHarmonic
+_zoomToFitAverageTempoDisabled
+_zoomToWholeSpectrum
+ac-proxying
+addRegionTrack
+addTrackingArea:
+addressedTargetPitchClasses
+addressedTargetPitchIndexes
+algorithmIdIlok1
+algorithmIdIlok1=
+algorithmIdIlok2
+algorithmIdIlok2=
+allPitchRangePerNote
+amplitudeEnvelope
+amplitudeEnvelopeCache
+arrPlayTempo
+associatedName
+authorityInfoAccess
+averageColorSpectrum
+band1Frequency
+band2Frequency
+beatAssignmentWasEditedManually
+beats
+bestPitchPosition
+cleartext track 2
+clickedPitchIndex
+cms_EnvelopedData_init_bio
+cms_enveloped_data_init
+cms_get0_enveloped
+com.celemony.MUBeatSelectionPboardType
+com.celemony.MUSpectrumShaperEqualizerBandsPboardType
+com.celemony.MUSpectrumShaperParameterSetPBoardType
+com.celemony.MUSpectrumShaperSpectrumPboardType
+com.celemony.MUTrackCountPBoardType
+com.celemony.analyzerParameterSet.polyphonic
+com.celemony.analyzerParameterSet.polyphonicUnpitched
+com.celemony.analyzerParameterSet.polyphonicWithDistinctAttacks
+content type not enveloped data
+crypto/bn/bn_shift.c
+currentPitchDiffToAssignedPitch
+currentTempo
+d.enveloped
+d.envelopedData
+d.signed_and_enveloped
+defaultFormantShiftForDownTranspositions
+defaultFormantShiftForUpTranspositions
+delayCrystalPitch
+delayFrequency
+delayNoteValue1
+delayNoteValue2
+delayPitchDetune
+detectAfterTransfer
+detectSoundfileParameters
+detectionActivation
+detectionAmplitude
+detectionPercussiveAttack
+detectionSeparation
+detectionState
+detectsChordBassNote
+detectsChordExtensions
+detectsDetailedModeChanges
+digital envelope routines
+distinguishedName
+dmdName
+doesPitchIndexBelongToScale
+dontStretch
+eNotificationImportance_Note
+encrypted track 2
+entriesPerPitchIndex
+envelope
+envelopeCtrlNum
+envelopeMapHighLimit
+envelopeMapLowLimit
+envelopeMapPower
+enveloped-data
+equivalentPitchSystem
+error verifying pkcs12 mac
+failed querying file size
+false && "changing playback regions for playback renderers requires temporarily disabling rendering"
+false && "tempo reader returned non-ascending quarter positions"
+false && "tempo reader returned non-ascending time positions"
+feedbackElementOnTrack
+formant
+formantCorrection
+formantOffset
+formantPitchCompensationFactor
+formantRange
+formantRatio
+formantResolution
+formantTransition
+formantTransitionDuration
+generator.formantOffset
+generator.pitchOffset
+getClosestPitchIndexForPitch
+getClosestScalePitchIndexForPitch
+getEnvelope
+getNoneReferenceSubtracks
+getPitch
+getPitchForPitchIndex
+getPitchRange
+getRootTrack
+getSpectrum
+getSubtracksAndAutomations
+getTrackSets
+global.midi
+handleAddHugeRandomOffsetToPitchCenter
+handleAddLittleRandomOffsetToPitchCenter
+handleAddMidRandomOffsetToPitchCenter
+handleAddTrack
+handleAddTrackAfter
+handleAdvancedTempoDetection
+handleAnalyzeTrack
+handleAraApplySongTempoToFiles
+handleAraApproveFileTempo
+handleAraAssignFileTempo
+handleAraMultiplyTempoBy
+handleAudioSourceFormantsCharacter
+handleAudioSourceFormantsDown
+handleAudioSourceFormantsUp
+handleAudioSourceTransients
+handleBlendSpectrum
+handleCancelRecordedTempo
+handleCancelTempoAnalyzer
+handleCopyDetection
+handleCopyNoteAssignmentDataToSong
+handleCopyNotesFrom
+handleCopySongDataToNoteAssignment
+handleCopySpectrumShaperParameterSet
+handleCopySpectrumShaperTarget
+handleCopyTempoChanged
+handleDebugToggleTempoEditor
+handleDeleteTracks
+handleDetectTimelineWithSelection
+handleDetectTimelineWithSelectionAndMerge
+handleDuplicateTracks
+handleEditTempoMenuItem
+handleEditingDetectionChanged
+handleExportTempoAsMidi
+handleFillInTempoAnchors
+handleFinishEditingTrackName
+handleFollowCursorTracks
+handleFormantChanged
+handleFrequencyChanged
+handleGroupTracks
+handleHostTrackChanged
+handleHostTrackNameChanged
+handleHostTrackPositionChanged
+handleImportMidiAutomation
+handleImportTempo
+handleInterpolateTempoForAnchors
+handleMakeConstantTempo
+handleMakeRandomFormantMapping
+handleMakeRandomSpectrum
+handleMakeTempoDefined
+handleMakeTempoUndefined
+handleMakeTempoUndefinedToEnd
+handleMakeTempoUndefinedToStart
+handleMergeNote
+handleMergeTracks
+handleMuteNotes
+handleNoteNameChanged
+handleNoteOffsetChanged
+handleOpenDetectionOptionsPanel
+handleOpenQuantizePitchDialog
+handlePasteSpectrumShaperParameterSet
+handlePasteSpectrumShaperTarget
+handlePatchTempo
+handlePitchChanged
+handlePitchPopUpChanged
+handlePitchToChordAdaptionContextChanged
+handlePitchToChordAdaptionEnabledChanged
+handlePitchToChordAdaptionModeChanged
+handlePluginImportTempo
+handlePluginSaveAsMidi
+handleQuantizePitch
+handleRecalcAllElementsPeriodsAndPitchCentersFromDecomposedAudioSignals
+handleRecalcAllElementsPitchCenter
+handleRedetectScale
+handleRemoveConstantTempoAnchors
+handleRenameTrackAction
+handleReseparateNotesWithBeatGrid
+handleResetAllPitchRelatedChanges
+handleResetElementTimingAndTempo
+handleResetFormant
+handleResetFormantTransition
+handleResetPitchCenter
+handleResetPitchDrift
+handleResetPitchModulation
+handleResetPitchTransition
+handleResetSpectrumShaper
+handleSaveAsMidiLeadSheet
+handleSavePitchSystem
+handleSelectDefaultDetectionMode
+handleSelectElementsOfSameBeat
+handleSelectElementsOfSamePitchClass
+handleSelectElementsOfSamePitchIndex
+handleSelectFormantTool
+handleSelectPitchSnapMode
+handleSelectPitchSystem
+handleSelectPitchToChordAdaptionContext
+handleSelectPitchToChordAdaptionMode
+handleSelectPitchTool
+handleSelectReferenceTrack
+handleSelectToolClassMUDetectionActivationTool
+handleSelectToolClassMUDetectionAmplitudeTool
+handleSelectToolClassMUDetectionAttackAssignmentTool
+handleSelectToolClassMUDetectionPitchRelevanceTool
+handleSelectToolClassMUDetectionQuarterAssignmentTool
+handleSelectToolClassMUDetectionSeparationTool
+handleSelectToolClassMUDetectionSeparationTypeTool
+handleSelectToolClassMUDetectionSibilantRangeTool
+handleSelectToolClassMUFormantTool
+handleSelectToolClassMUPitchDriftTool
+handleSelectToolClassMUPitchModulationTool
+handleSelectToolClassMUPitchTool
+handleSeparateNote
+handleSeparateNotesAsTrills
+handleSetDefaultDetection
+handleSetFormantOffset
+handleSetIntervalCentForSelectedPitchIndex
+handleSetPitchDisplayMode
+handleSetPitchOffset
+handleSetSpectrumShaperTargetToOriginal
+handleSetSpectrumShaperTargetToZero
+handleSetWesternStandardPitchIndexOffsetForPitchIndexByAssignmentOffset
+handleSetupSumAndReferenceTrack
+handleShowMidiTestWindow
+handleShowNoteInspector
+handleShowPolyphonicAnalyzerResult
+handleShowTrackInspector
+handleSmoothenTempoAnchors
+handleSmoothenTempoAnchorsLocal
+handleSmoothenTempoAnchorsWide
+handleSnapReplaceRangesToNotes
+handleSpecifyModificationTempo
+handleSplitAudioSourcesIntoTracks
+handleSplitTrack
+handleStretchTuning
+handleStretchingPopUpChanged
+handleSwitchDefaultWesternStandardPitchTitleSystem
+handleSwitchPitchDisplayMode
+handleSwitchPitchRulerTitleDisplayMode
+handleSwitchRobustPitchCurve
+handleSynchronizeTempo
+handleTempoChanged
+handleTempoRegionsToSubdivisionTempo
+handleToggleApplyDetectionToScale
+handleToggleAutoStretch
+handleToggleCorrectPitchPreview
+handleToggleDetectionEditor
+handleToggleDetectionInsertsChromaticIntervals
+handleToggleDetectsChordExtensions
+handleToggleDetectsChurchModes
+handleToggleDetectsDetailedModeChanges
+handleToggleDetectsSlashChords
+handleToggleEditingDetection
+handleToggleFeedbackElementsOnTrack
+handleToggleImportCreateSumTrack
+handleToggleImportSplitReferenceTracks
+handleToggleKeepDetectionFundamental
+handleToggleMultitrackArrangement
+handleToggleMultitrackHeader
+handleTogglePitchToChordAdaptionEnabled
+handleToggleScaleDetectiveDisplayMode
+handleToggleShowChangeTempoEditor
+handleToggleShowDefineTempoEditor
+handleToggleShowNoteSeparations
+handleToggleShowNotes
+handleToggleShowPitchCurve
+handleToggleShowPlayingNotes
+handleToggleShowTempoEditor
+handleToggleShowsLinearBeats
+handleToggleShowsReferenceMidiNotes
+handleToggleSpectrumShaper
+handleToggleTempoEditor
+handleToggleTrackMute
+handleToggleTrackRecord
+handleToggleTrackSolo
+handleToggleZoomToWholeSpectrum
+handleTrackChanged
+handleTrackEditClicked
+handleTrackEditMode
+handleTrackHeightChanged
+handleTransferAllFromReferenceTracks
+handleTransferRecordedTempo
+handleUnEditAllTracks
+handleUnMuteAllTracks
+handleUnRecordAllTracks
+handleUnReferenzAllTracks
+handleUnSoloAllTracks
+handleUngroupTracks
+harmonic minor
+harmonic minor 5
+harmonic minor 5 dom
+hasDetectedNotes
+highFrequency
+highPitchLimit
+highestPitchIndexMatchesMask
+highestPitchShouldMatchRootOrFifth
+id-hex-partial-message
+id-smime-ct-authEnvelopedData
+imported track
+impulseResponseTitle
+individualBeats
+invalid shift
+ir0_eq1Frequency
+ir0_eq2Frequency
+ir1_eq1Frequency
+ir1_eq2Frequency
+ir2_eq1Frequency
+ir2_eq2Frequency
+ir3_eq1Frequency
+ir3_eq2Frequency
+ir4_eq1Frequency
+ir4_eq2Frequency
+isGroupedWithNextNote
+isNotEqualTo
+isNoteGroupMainNote
+isPolyphonic
+isRedetection
+isTempoSyncingToSong
+isTempoWrapAroundEnabled
+isTransient
+kActivationCodeNotEligibleForBump
+kAlertLevel_Note
+kCERT_EEPROM_CertMustNotBeAtROMCertLevelErr
+kCERT_EEPROM_CertMustNotBeAtROMCertLevelErr384
+kCERT_ROM_CertMustBeAtROMCertLevelErr
+kCERT_ROM_CertMustBeAtROMCertLevelErr383
+kCERT_SubjectIssueNumberFoundNotErr
+kCERT_SubjectIssueNumberFoundNotErr313
+kCERT_TamperingWithTheAcceptableRootKeysHasBeenDetectedErr
+kCERT_TamperingWithTheAcceptableRootKeysHasBeenDetectedErr387
+kCMD_CommandCommunicationPhaseOutOfSequenceErr
+kCMD_CommandCommunicationPhaseOutOfSequenceErr1116
+kCMD_NoAsymmetricKeyInSecretDataRecordErr
+kCMD_NoAsymmetricKeyInSecretDataRecordErr1069
+kCMD_NoSymmetricKeyInSecretDataRecordErr
+kCMD_NoSymmetricKeyInSecretDataRecordErr1068
+kCMD_OnlyInquiryCommandsAllowedErr
+kCMD_OnlyInquiryCommandsAllowedErr1097
+kCMD_SignedMessageExpirationCannotExceedCertExpirationErr
+kCMD_SignedMessageExpirationCannotExceedCertExpirationErr1202
+kCMD_ThisCommandCannotEncryptSignedMessagesErr
+kCMD_ThisCommandCannotEncryptSignedMessagesErr1205
+kEEPROM_CertPartitionCorruptionDetectedErr
+kEEPROM_CertPartitionCorruptionDetectedErr914
+kEEPROM_NotEnoughSpaceInAuthPartitionErr
+kEEPROM_NotEnoughSpaceInAuthPartitionErr918
+kEEPROM_NotEnoughSpaceInCertPartitionErr
+kEEPROM_NotEnoughSpaceInCertPartitionErr916
+kEEPROM_NotEnoughSpaceInExtraPartition1Err
+kEEPROM_NotEnoughSpaceInExtraPartition1Err917
+kEEPROM_NotEnoughSpaceInExtraPartition2Err
+kEEPROM_NotEnoughSpaceInExtraPartition2Err919
+kEEPROM_NotEnoughSpaceInFirmwarePartitionErr
+kEEPROM_NotEnoughSpaceInFirmwarePartitionErr921
+kEEPROM_ReservedEmptyRecordTrackingErr
+kEEPROM_ReservedEmptyRecordTrackingErr904
+kMSTS_NonCA_MayNotExecutePhase2Err
+kMSTS_NonCA_MayNotExecutePhase2Err412
+kOverlap
+kTemporary
+kTimeLimitFlagsReadOnly_GracePeriodDaysShift
+kXorShiftCrypt
+keyBaseNote
+keyExchangeAlgorithmIdIlok2
+keyExchangeAlgorithmIdIlok2=
+keyInfo
+keyNoteCentData
+keyUsedNotesData
+localizedName
+localizedName=
+lowFrequency
+lowPitchLimit
+lowestPitchCanMatchFifths
+lowestPitchIndexMatchesMask
+lowestPitchMustMatchBass
+maxPitch
+maxSlopeForPitchTransition
+maxTempoFactor
+mdTrack
+melodyNotes
+methodName
+microtonalPitchSystem
+mid1Frequency
+mid2Frequency
+mid3Frequency
+midi
+midiPitchFraction
+midiSendChannel
+midiSendInstrumentTrack
+midiSendPortIdentifier
+midiSendReWireIdentifier
+midiUnityNote
+minPitch
+mixerTrack
+monoDetection
+newAuthLimitDetected
+newAuthLimitDetected=
+not detected
+note
+noteAssignedManually
+noteCurveAlignRate
+noteCurveWideAlignRate
+noteSeparationMode
+noteSeparations
+noteTitle
+noteType
+notes
+notesHaveTonalMeaning
+notesPerOctave
+object.userInfo.MDTrackKey.isMuted
+object.userInfo.MDTrackKey.isSolo
+object.userInfo.MDTrackKey.volume
+oldDetectedPeriods
+oldDetectionQualities
+oldIsPitchedSound
+oldName
+onDetectionRenderParametersChanged
+onDetectionStateChanged
+onDetectionStateDidChanged
+onDetectionTargetChanged
+onEditingDetectionTargetNotification
+onPluginTrackNameDidChange
+onSequenceTracksChanged
+onStartEditingDetection
+onStartEditionDetection
+onStopEditingDetection
+onTempoEditorChanged
+onTempoEditorIsChanging
+onTrackChanged
+onTrackElementsDidChange
+origDisplayPitchCenter
+origEnvelope
+origPitchCenter
+origPitchCenterWasEditedManually
+origTempo
+outGroupTrack
+partially overlapping buffers
+performance.isDetectionPerformance
+phase
+pitch
+pitchBarycenter
+pitchBendMode
+pitchBendRange
+pitchCenter
+pitchCorrection
+pitchDeltaFactor
+pitchDetectCorrection
+pitchDetectionSensitivity
+pitchDisplayMode
+pitchDisplayModeKey
+pitchDrift
+pitchDriftFactor
+pitchHoldQuality
+pitchId
+pitchIndex
+pitchIndexAssignmentOffset
+pitchMapperWeights
+pitchModulation
+pitchModulationFactor
+pitchOffset
+pitchOffsetRatio
+pitchPosIndex
+pitchQuality
+pitchRange
+pitchRatio
+pitchRelevanceSampleOffset
+pitchRulerTitleDisplayModeKey
+pitchSnapMode
+pitchSnapModeKey
+pitchSnapModeToneScaleAndTuningMenuIdentifier
+pitchSystem
+pitchTileDisplayMode
+pitchToChordAdaptionIdentifier
+pitchTransition
+pitchTransitionDuration
+pkStandardName
+pkStandardName=
+pkcs7-envelopedData
+pkcs7-signedAndEnvelopedData
+playInfo.arrFormantRatio
+playInfo.arrPitchRatio
+playInfo.portamentoTime
+playTempoAdaption
+playingTuningChord
+playingTuningChord_old
+quantizeMasterTrack
+queryNote:
+quickAlgorithmIdIlok1
+quickAlgorithmIdIlok1=
+recordingAnalyzerTrackType
+removeRegionTrack
+removeTrackingArea:
+requestTrackingNumber
+requestTrackingNumber=
+responseType
+rigTempo
+rsaOAEPEncryptionSET
+scaleBaseNote
+scaleNoteCentData
+scalePitchSystemDefaultTuning
+scaleRulerViewPitchDisplayMode
+scaleUsedNotesData
+securityInfo
+securityInfo=
+sequenceTracksDidChange
+setCanUseSpectrumShaper
+setCext-Track2Data
+setDelayCrystalPitch
+setDelayFrequency
+setDelayNoteValue1
+setDelayNoteValue2
+setDelayPitchDetune
+setEnvelope
+setFormantOffset
+setFormantTransitionDuration
+setIsTransient
+setNeedsDisplayInRect:
+setPitchCenter
+setPitchTransitionDuration
+setSpectrum
+setSynthPhases
+setTrackHeaderHeight
+setext-track2
+shouldAdaptPitchTransition
+shouldChangeKeyNotes
+shouldForceAllNotesToScalePositionsOnScaleSnap
+shouldSendMidi
+shouldSetTempoZeroToSoundZero
+shouldUseEnvelope
+shouldUsePitchBend
+showsNoteSeparations
+showsNotes
+showsPitchCurve
+showsReferenceMidiNotes
+silenceNoteLimit
+sourceTrack
+startEnvelopeFactor
+stretchBottom
+stretchHeight
+stretchLeft
+stretchPositionRatio
+stretchRight
+stretchScalePow
+stretchTop
+stretchWidth
+stretching
+stretchingFunction
+stretchingIsSuggestedRelevant
+subtracks
+switch to detection mode
+synthPhases
+synthPhasesSlider
+targetPitchClasses
+tempo
+tempoCompensation
+tempoDefinitionMode
+tempoEditorMenuIdentifier
+tempoEntriesCount != 1
+tempoEntriesCount >= 0
+tempoEntry != NULL
+tempoFromNameDigitOffset
+temporary
+timeTrack
+too many temporary variables
+track
+track%I
+track.performance.isDetectionPerformance
+trackMenuIdentifier
+trackingAreas
+tracks
+tracktion
+tuningPitchAnchor
+tuningPitchAnchorIsSuggestedRelevant
+type not enveloped data
+unstructuredName
+updateTrackingAreas
+userDefinedTempo
+userInfo.MDTrackKey.volume
+virtual void pace::ILok2Commander::Phase1_MSTS_ILok_BuildCommand(CMD_CmmdPayload_Phase1_MSTS_ILok_Struct &, pace::eden::thrift::ilok::CommandPacket &)
+virtual void pace::ILok2Commander::Phase1_MSTS_ILok_Start(CMD_CmmdPayload_Phase1_MSTS_ILok_Struct &, pace::eden::thrift::ilok::CommandPacket &, pace::eden::thrift::ilok::ResultPacket &, pace::eden::thrift::ilok::CommandPacket &, pace::eden::thrift::ilok::ResultPacket &)
+virtual void pace::ILokCert::FindPublicKey_ByIndex(uint32_t, uint32_t &, BIG_PublicKeyECC_Struct &)
+visiblePitchRangeLength
+visiblePitchRangeLocation
+wantedTempoCompensation
+wantsPitchTransition
+wantsPososcStretch
+westernStandardDefaultPitchTitleSystemIdentifier
+westernStandardPitchIndexAnchor
+{mdElement={MDAudioTrackItem=selectedElements.object.elements;};}
+{mdFileBrowser={MDAudioTrackItem=selectedElements.object.elements;};}
+{mdTrack={MDAudioTrackItem=object;MUElement=track;};}
+{muTrack={MDAudioTrackItem=object;MUElement=track;};}

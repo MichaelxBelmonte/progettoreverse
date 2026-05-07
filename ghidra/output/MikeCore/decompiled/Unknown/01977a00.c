@@ -1,0 +1,123 @@
+// Function: FUN_01977a00
+// Address: 01977a00
+// Size: 1452 bytes
+// Class: Unknown
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_01977a00(undefined8 param_1)
+
+{
+  DAT_028b0c98._0_7_ = 0;
+  ram0x028b0c9f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0ca8._0_7_ = 0;
+  ram0x028b0caf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0cb8._0_7_ = 0;
+  ram0x028b0cbf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0cc8._0_7_ = 0;
+  ram0x028b0ccf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0cd8._0_7_ = 0;
+  ram0x028b0cdf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0ce8._0_7_ = 0;
+  ram0x028b0cef = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0cf8._0_7_ = 0;
+  ram0x028b0cff = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d08._0_7_ = 0;
+  ram0x028b0d0f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d18._0_7_ = 0;
+  ram0x028b0d1f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d28._0_7_ = 0;
+  ram0x028b0d2f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d38._0_7_ = 0;
+  ram0x028b0d3f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d48._0_7_ = 0;
+  ram0x028b0d4f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d58._0_7_ = 0;
+  ram0x028b0d5f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d68._0_7_ = 0;
+  ram0x028b0d6f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d78._0_7_ = 0;
+  ram0x028b0d7f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d88._0_7_ = 0;
+  ram0x028b0d8f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0d98._0_7_ = 0;
+  ram0x028b0d9f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0da8._0_7_ = 0;
+  ram0x028b0daf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0db8._0_7_ = 0;
+  ram0x028b0dbf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0dc8._0_7_ = 0;
+  ram0x028b0dcf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0dd8._0_7_ = 0;
+  ram0x028b0ddf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0de8._0_7_ = 0;
+  ram0x028b0def = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0df8._0_7_ = 0;
+  ram0x028b0dff = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e08._0_7_ = 0;
+  ram0x028b0e0f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e18._0_7_ = 0;
+  ram0x028b0e1f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e28._0_7_ = 0;
+  ram0x028b0e2f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e38._0_7_ = 0;
+  ram0x028b0e3f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e48._0_7_ = 0;
+  ram0x028b0e4f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e58._0_7_ = 0;
+  ram0x028b0e5f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e68._0_7_ = 0;
+  ram0x028b0e6f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e78._0_7_ = 0;
+  ram0x028b0e7f = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0e88._0_7_ = 0;
+  ram0x028b0e8f = 0;
+  ___cxa_atexit(param_1,0);
+  _DAT_028b0e98 = 0;
+  _DAT_028b0e9f = 0;
+  ___cxa_atexit(param_1,0);
+  _DAT_028b0ea8 = 0;
+  _DAT_028b0eaf = 0;
+  ___cxa_atexit(param_1,0);
+  _DAT_028b0eb8 = 0;
+  _DAT_028b0ebf = 0;
+  ___cxa_atexit(param_1,0);
+  DAT_028b0ec8._0_7_ = 0;
+  ram0x028b0ecf = 0;
+  ___cxa_atexit(param_1,0);
+  return;
+}
+
+

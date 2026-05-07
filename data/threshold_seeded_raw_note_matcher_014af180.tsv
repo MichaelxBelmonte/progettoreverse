@@ -1,0 +1,9 @@
+scope	target	role	confidence	evidence
+function	014af180	raw_note_matcher_with_threshold_seed	very_high	per item loop filters by class code builds local time window selects best candidate and stores winner in item+0x40
+field	MURawNoteSeparation+0x3c	class_code_filter	very_high	matcher processes only items with current->field_3c == in_ECX
+field	MURawNoteSeparation+0x20	base_gate_strength	very_high	candidate accepted only if thresholdSeed < candidate->field_20 and score multiplies by field_20
+field	MURawNoteSeparation+0x30	class1_ranking_weight	high	classCode 1 score path multiplies by candidate->field_30
+field	MURawNoteSeparation+0x2c	non_class1_ranking_weight	high	classCode non-1 score path multiplies by candidate->field_2c
+field	MURawNoteSeparation+0x40	selected_match_pointer	very_high	matcher retains winner and stores it into current->field_40 replacing previous link
+call	014a74b0->014af180	build_class2_links_for_plus_0x104_plus_0x108_metrics	high	014a74b0 calls matcher with class code 2 then aggregates linked field_20 medians and coverage ratio
+constant	DAT_023942d0	local_window_midpoint_factor_0_5	very_high	__TEXT.__const dump at 0x023942d0 is 000000000000e03f i.e. double 0.5 used in lower and upper midpoint bounds
