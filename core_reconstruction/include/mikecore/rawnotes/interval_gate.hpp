@@ -38,6 +38,24 @@ namespace mikecore::rawnotes
         const RawNoteSeparation& first,
         const RawNoteSeparation& second) noexcept;
 
+    [[nodiscard]] bool adjacent_pair_passes_class_gap(
+        const RawNoteSeparation& first,
+        const RawNoteSeparation& second,
+        double class1_to_class2_max_start_delta,
+        double class2_to_class1_max_start_delta) noexcept;
+
+    [[nodiscard]] bool adjacent_pair_has_no_closer_competing_third(
+        const RawNoteSeparation& first,
+        const RawNoteSeparation& second,
+        const RawNoteSeparation* third) noexcept;
+
+    [[nodiscard]] bool adjacent_pair_is_arbitration_eligible(
+        const RawNoteSeparation& first,
+        const RawNoteSeparation& second,
+        const RawNoteSeparation* third,
+        double class1_to_class2_max_start_delta,
+        double class2_to_class1_max_start_delta) noexcept;
+
     void merge_raw_note_max_fields(
         RawNoteSeparation& destination,
         const RawNoteSeparation& source) noexcept;

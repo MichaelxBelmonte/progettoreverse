@@ -36,7 +36,7 @@ constant	0x02390124	synthetic_peer_strength_1_0f	very_high	__TEXT.__const bytes 
 writer	014a3550	downstream_metric_writer	high	populates +0x28 +0x2c +0x30 +0x34 +0x38 on separation items
 consumer	014a3900	adjacent_candidate_arbitration	high	reads +0x10 +0x18 +0x20 +0x28 +0x2c +0x34 +0x38 +0x3c
 consumer	014a42b0	gap_weighted_selection	high	reads +0x10 +0x18 +0x20 +0x34 +0x38 +0x3c and treats class 8 specially
-implementation	014a3900_014a42b0	interval_gate_subset_clean_room	high	core_reconstruction implements closed scalar/predicate pieces only: arbitration cost, max-field merge, flag OR, peak-gate predicate
+implementation	014a3900_014a42b0	interval_gate_subset_clean_room	high	core_reconstruction implements closed scalar/predicate pieces only: class-gap eligibility, third-neighbour guard, arbitration cost, max-field merge, flag OR, peak-gate predicate
 field	+0x10	interval_start_double	very_high	set directly by 014ba9e0
 field	+0x18	interval_end_double	very_high	initialized equal to start by 014ba9e0 and later updated downstream
 field	+0x20	base_strength_or_gate_weight	high	set by 014ba9e0 from xmm1; builder origin is local run max for class 1/2 local contrast for class 8 and 1.0f for synthetic 0x40 peers

@@ -24,6 +24,58 @@ namespace mikecore::rawnotes
         return plan;
     }
 
+    bool adjacent_pair_passes_class_gap(
+        const RawNoteSeparation& first,
+        const RawNoteSeparation& second,
+        double class1_to_class2_max_start_delta,
+        double class2_to_class1_max_start_delta) noexcept
+    {
+        const double start_delta = second.interval_start - first.interval_start;
+        if (first.matches_class_code(raw_note_base_class_1) &&
+            second.matches_class_code(raw_note_base_class_2)) {
+            return start_delta < class1_to_class2_max_start_delta;
+        }
+
+        if (first.matches_class_code(raw_note_base_class_2) &&
+            second.matches_class_code(raw_note_base_class_1)) {
+            return start_delta < class2_to_class1_max_start_delta;
+        }
+
+        return false;
+    }
+
+    bool adjacent_pair_has_no_closer_competing_third(
+        const RawNoteSeparation& first,
+        const RawNoteSeparation& second,
+        const RawNoteSeparation* third) noexcept
+    {
+        if (third == nullptr) {
+            return true;
+        }
+
+        if (second.class_state_flags == third->class_state_flags) {
+            return true;
+        }
+
+        return second.interval_start - first.interval_start <=
+               third->interval_start - second.interval_start;
+    }
+
+    bool adjacent_pair_is_arbitration_eligible(
+        const RawNoteSeparation& first,
+        const RawNoteSeparation& second,
+        const RawNoteSeparation* third,
+        double class1_to_class2_max_start_delta,
+        double class2_to_class1_max_start_delta) noexcept
+    {
+        return adjacent_pair_passes_class_gap(
+                   first,
+                   second,
+                   class1_to_class2_max_start_delta,
+                   class2_to_class1_max_start_delta) &&
+               adjacent_pair_has_no_closer_competing_third(first, second, third);
+    }
+
     void merge_raw_note_max_fields(
         RawNoteSeparation& destination,
         const RawNoteSeparation& source) noexcept

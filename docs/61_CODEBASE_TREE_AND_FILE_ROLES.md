@@ -185,7 +185,7 @@ core_reconstruction/
 | `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match. |
 | `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `item->+0x40->+0x20`, mediana e coverage. |
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
-| `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: costo pair-arbitration, merge max/OR e predicato peak-gate; esclusi ranking gap e mutazioni lista. |
+| `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: class-gap `1/2`, third-neighbour guard, costo pair-arbitration, merge max/OR e predicato peak-gate; esclusi ranking gap e mutazioni lista. |
 | `rawnotes/paired_peak_gate.*` | Kernel `014a3550` per peak gates `+0x34/+0x38`, senza il writer completo `+0x2c/+0x30`. |
 | `rawnotes/raw_note_class8_builder.*` | Builder candidati class `8`: mask, run filter, linked-successor protected ranges, contrasto locale, smoothing breve/lunga e gate `max-min`. |
 
