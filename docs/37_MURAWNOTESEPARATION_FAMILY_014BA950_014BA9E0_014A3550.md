@@ -305,7 +305,12 @@ Il flusso high-level della classe `8` e' ora piu' stretto:
 1. Rimuove dalla lista esistente tutti gli item con `field_3c == 8`.
 2. Costruisce una mask positiva da `param_3[i] > 0`.
 3. Cancella run troppo corte usando `window = int(0.05 * sampleRate-like)`.
-4. Corregge/azzera zone della mask intorno a item esistenti con linked peer, per evitare candidate interne gia' reclamate.
+4. Corregge/azzera zone della mask intorno a item esistenti con linked peer, per evitare candidate interne gia' reclamate:
+   - il gate e' sul successore: `nextItem + 0x40 != 0`
+   - la zona protetta usa l'item corrente: `start = +0x10`, `end = +0x18`, `protectedUntil = +0x28`
+   - `begin = endIndex - min(int(0.05 * sampleRate-like), floor((endIndex - startIndex) / 3))`
+   - `end = int(protectedUntil * sampleRate-like)`
+   - la mask viene azzerata su `[begin, end)` se `begin < end`
 5. Calcola il primo differenziale del buffer input: `delta[i] = input[i] - input[i - 1]`, con `delta[0] = 0`.
 6. Calcola un moving contrast centrato usando `contrast = abs(sum(delta over 0.0227 * sampleRate-like window)) * 0.01`.
 7. Clampa il contrasto a `4.0f`.
@@ -330,9 +335,9 @@ Implementazione clean-room aperta:
 - `core_reconstruction/include/mikecore/rawnotes/raw_note_class8_builder.hpp`
 - `core_reconstruction/src/rawnotes/raw_note_class8_builder.cpp`
 
-Perimetro implementato: mask positiva, filtro run corte, azzeramento di range protetti forniti dal caller, delta, moving contrast, clamp, smoothing breve/lunga e materializzazione dei candidate `field_3c == 8`.
+Perimetro implementato: mask positiva, filtro run corte, helper di costruzione dei range protetti da item con successore linked, delta, moving contrast, clamp, smoothing breve/lunga e materializzazione dei candidate `field_3c == 8`.
 
-Guardrail: il mapping esatto da item/peer gia' esistenti a range protetti resta fuori dal builder finche' il caller owner-specific non e' chiuso. Lo smoother mode `0` di `015c0b60` e' implementato per il path classe `8`, ma non sono implementati gli altri mode dello smoother.
+Guardrail: il builder espone il mapping osservato come `Class8LinkedItemSpan`, ma il nome canonico della famiglia owner che fornisce `+0x10/+0x18/+0x28/+0x40` resta prudente. Lo smoother mode `0` di `015c0b60` e' implementato per il path classe `8`, ma non sono implementati gli altri mode dello smoother.
 
 ---
 
@@ -359,4 +364,4 @@ Correzione strutturale:
 
 1. Nominare le due lane input di `014a3550` che alimentano i peak gates `+0x34/+0x38`.
 2. Stringere il ruolo esatto del valore `0x10` nel ramo mono di `01484bc0`.
-3. Collegare nel caller owner-specific il mapping da item/peer gia' reclamati a range protetti del builder classe `8`.
+3. Chiudere il nome canonico della famiglia owner che alimenta `Class8LinkedItemSpan`.

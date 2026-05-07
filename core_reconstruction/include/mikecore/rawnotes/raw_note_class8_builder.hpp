@@ -39,6 +39,14 @@ namespace mikecore::rawnotes
         std::size_t end_index = 0;
     };
 
+    struct Class8LinkedItemSpan final
+    {
+        double interval_start = 0.0;
+        double interval_end = 0.0;
+        double protected_until = 0.0;
+        bool has_selected_match = false;
+    };
+
     [[nodiscard]] std::size_t class8_window_sample_count(
         double seconds,
         double sample_rate_like) noexcept;
@@ -53,6 +61,10 @@ namespace mikecore::rawnotes
     void clear_mask_ranges(
         std::vector<bool>& mask,
         std::span<const Class8ProtectedRange> protected_ranges) noexcept;
+
+    [[nodiscard]] std::vector<Class8ProtectedRange> build_linked_successor_protected_ranges(
+        std::span<const Class8LinkedItemSpan> items,
+        double sample_rate_like);
 
     [[nodiscard]] std::vector<float> first_difference(
         std::span<const float> input);

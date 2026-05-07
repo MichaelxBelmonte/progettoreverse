@@ -11,6 +11,7 @@ transform	015c0b60	bidirectional_exponential_smoother_core	high	uses logf stub 0
 transform	015c0b60_mode0	scratch_prefix_bzero_and_loop_order	high	mode 0 branch calls bzero on 2*radius float scratch prefix then common loop performs left warmup forward buffer right tail warmup reverse and reverse buffer; do not replace with guessed independent zero-state passes
 allocator	00e83010	non_zeroing_scratch_allocator	high	015c0b60 allocates scratch through 00e83010; sibling 00e83020 is the alloc+bzero helper and is not used here
 transform	014afb20_class8	mode0_exponential_smoothing_short_long	high	calls 015c1480 twice with ecx=0 widths 5*(rate/441) and 30*(rate/441); wrapper passes r8d=1 for reverse pass
+transform	014afb20_class8	linked_successor_mask_protected_range	high	if next item has +0x40 selected peer zero current item mask tail from end-min(0.05*rate,floor((end-start)/3)) to current +0x28 converted to sample index
 writer	014a3550	field34_field38_peak_gate_writer	high	updates a two-lane state with coefficient 0.5 over local buffer region and writes peak lane0 to +0x34 and peak lane1 to +0x38
 builder	01484bc0	synthetic_class1_peer_builder	high	class1 fallback calls 014ba9e0 with start=current.start xmm1=1.0f and esi=0x40 then inserts peer into auxiliary list
 constant	g_0239424c	class1_class2_local_max_gate_0_0f	very_high	__TEXT.__const bytes at 0x0239424c decode as float 0.0 used by 014a2170 ucomiss gate

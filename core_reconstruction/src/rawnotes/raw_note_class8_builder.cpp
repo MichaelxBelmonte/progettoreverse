@@ -4,6 +4,7 @@
 
 #include <algorithm>
 #include <cstddef>
+#include <cstdint>
 #include <cmath>
 #include <optional>
 
@@ -39,6 +40,18 @@ namespace mikecore::rawnotes
             const float prev_slope = values[index] - values[index - 1];
             const float next_slope = values[index + 1] - values[index];
             return prev_slope < 0.0f && 0.0f <= next_slope;
+        }
+
+        [[nodiscard]] std::int64_t truncated_nonnegative_sample_index(
+            double value,
+            double sample_rate_like) noexcept
+        {
+            const double scaled = value * sample_rate_like;
+            if (scaled <= 0.0) {
+                return 0;
+            }
+
+            return static_cast<std::int64_t>(scaled);
         }
     }
 
@@ -105,6 +118,48 @@ namespace mikecore::rawnotes
                           false);
             }
         }
+    }
+
+    std::vector<Class8ProtectedRange> build_linked_successor_protected_ranges(
+        std::span<const Class8LinkedItemSpan> items,
+        double sample_rate_like)
+    {
+        std::vector<Class8ProtectedRange> ranges;
+        if (items.size() < 2 || sample_rate_like <= 0.0) {
+            return ranges;
+        }
+
+        const std::int64_t run_window = static_cast<std::int64_t>(
+            class8_window_sample_count(
+                raw_note_class8_positive_run_window_seconds,
+                sample_rate_like));
+
+        for (std::size_t index = 0; index + 1 < items.size(); ++index) {
+            if (!items[index + 1].has_selected_match) {
+                continue;
+            }
+
+            const Class8LinkedItemSpan& item = items[index];
+            const std::int64_t start_index =
+                truncated_nonnegative_sample_index(item.interval_start, sample_rate_like);
+            const std::int64_t end_index =
+                truncated_nonnegative_sample_index(item.interval_end, sample_rate_like);
+            const std::int64_t protected_until_index =
+                truncated_nonnegative_sample_index(item.protected_until, sample_rate_like);
+
+            const std::int64_t duration = std::max<std::int64_t>(0, end_index - start_index);
+            const std::int64_t backoff = std::min(run_window, duration / 3);
+            const std::int64_t protected_begin = end_index - backoff;
+
+            if (protected_begin < protected_until_index) {
+                ranges.push_back(Class8ProtectedRange{
+                    .begin_index = static_cast<std::size_t>(protected_begin),
+                    .end_index = static_cast<std::size_t>(protected_until_index),
+                });
+            }
+        }
+
+        return ranges;
     }
 
     std::vector<float> first_difference(std::span<const float> input)
