@@ -286,4 +286,63 @@ namespace mikecore::rawnotes
 
         return choice;
     }
+
+    RawNoteGapSelectionPlan plan_raw_note_gap_selection(
+        std::span<const RawNoteSeparation> candidates,
+        std::span<const RawNoteSeparation> initially_selected,
+        float minimum_score_threshold,
+        float non_class8_min_gap,
+        float class8_min_gap,
+        float class8_extra_scale,
+        double right_fallback)
+    {
+        RawNoteGapSelectionPlan plan{};
+        plan.selected.assign(initially_selected.begin(), initially_selected.end());
+
+        std::vector<RawNoteSeparation> remaining{
+            candidates.begin(),
+            candidates.end()};
+        std::vector<std::size_t> original_indices;
+        original_indices.reserve(remaining.size());
+        for (std::size_t index = 0; index < remaining.size(); ++index) {
+            original_indices.push_back(index);
+        }
+
+        while (!remaining.empty()) {
+            const RawNoteGapCandidateChoice choice = choose_raw_note_gap_candidate(
+                remaining,
+                plan.selected,
+                minimum_score_threshold,
+                non_class8_min_gap,
+                class8_min_gap,
+                class8_extra_scale,
+                right_fallback);
+
+            if (!choice.found) {
+                break;
+            }
+
+            RawNoteGapSelectionStep step{};
+            step.inserted = choice.insertable;
+            step.original_candidate_index = original_indices[choice.candidate_index];
+            step.remaining_candidate_index = choice.candidate_index;
+            step.insertion_index = choice.insertion_index;
+            step.score = choice.score;
+            step.gap_span = choice.gap_span;
+
+            if (choice.insertable) {
+                plan.selected.insert(
+                    plan.selected.begin() + static_cast<std::ptrdiff_t>(choice.insertion_index),
+                    remaining[choice.candidate_index]);
+            }
+
+            plan.steps.push_back(step);
+            remaining.erase(
+                remaining.begin() + static_cast<std::ptrdiff_t>(choice.candidate_index));
+            original_indices.erase(
+                original_indices.begin() + static_cast<std::ptrdiff_t>(choice.candidate_index));
+        }
+
+        return plan;
+    }
 }

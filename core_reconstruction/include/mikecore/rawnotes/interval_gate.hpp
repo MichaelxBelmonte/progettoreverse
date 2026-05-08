@@ -4,6 +4,7 @@
 
 #include <cstddef>
 #include <span>
+#include <vector>
 
 namespace mikecore::rawnotes
 {
@@ -55,6 +56,22 @@ namespace mikecore::rawnotes
         std::size_t insertion_index = 0;
         float score = 0.0f;
         double gap_span = 0.0;
+    };
+
+    struct RawNoteGapSelectionStep final
+    {
+        bool inserted = false;
+        std::size_t original_candidate_index = 0;
+        std::size_t remaining_candidate_index = 0;
+        std::size_t insertion_index = 0;
+        float score = 0.0f;
+        double gap_span = 0.0;
+    };
+
+    struct RawNoteGapSelectionPlan final
+    {
+        std::vector<RawNoteGapSelectionStep> steps;
+        std::vector<RawNoteSeparation> selected;
     };
 
     [[nodiscard]] float raw_note_pair_arbitration_cost(
@@ -143,4 +160,13 @@ namespace mikecore::rawnotes
         float class8_min_gap,
         float class8_extra_scale,
         double right_fallback) noexcept;
+
+    [[nodiscard]] RawNoteGapSelectionPlan plan_raw_note_gap_selection(
+        std::span<const RawNoteSeparation> candidates,
+        std::span<const RawNoteSeparation> initially_selected,
+        float minimum_score_threshold,
+        float non_class8_min_gap,
+        float class8_min_gap,
+        float class8_extra_scale,
+        double right_fallback);
 }

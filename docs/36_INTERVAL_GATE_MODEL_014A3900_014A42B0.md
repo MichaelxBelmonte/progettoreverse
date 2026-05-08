@@ -241,7 +241,7 @@ Implementazione clean-room aperta:
 - `core_reconstruction/include/mikecore/rawnotes/interval_gate.hpp`
 - `core_reconstruction/src/rawnotes/interval_gate.cpp`
 
-Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield, predicato peak-gate di `014a42b0`, predicato candidato primario, helper scalari del ranking gap e planner one-pass su liste gia' ordinate:
+Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield, predicato peak-gate di `014a42b0`, predicato candidato primario, helper scalari del ranking gap, planner one-pass e planner iterativo su liste gia' ordinate:
 
 ```c
 span = min(current.end - previous.start_or_leftFallback,
@@ -258,8 +258,17 @@ selezione osservato senza ownership:
 - accetta solo score strettamente maggiori di `bestScore` e `param_1`
 - ricalcola boundary e `insertable` per il candidato scelto
 
-Restano fuori la mutazione `GNList`, il refcount/ownership e il loop completo di
-selezione/inserimento di `014a42b0`.
+Il planner iterativo `plan_raw_note_gap_selection()` replica la policy del loop
+senza usare `GNList`:
+
+- copia candidati e selected iniziali in vettori locali
+- ripete la scelta one-pass finche' resta un candidato sopra `param_1`
+- inserisce nel vettore selected solo se `insertable == true`
+- rimuove comunque il candidato scelto dalla lista dei rimanenti, anche quando non viene inserito
+- conserva `original_candidate_index` per collegare ogni step al candidato input originale
+
+Restano fuori la mutazione `GNList`, il refcount/ownership e la replica binaria
+del contenitore originale di `014a42b0`.
 
 ---
 

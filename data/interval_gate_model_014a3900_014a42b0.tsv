@@ -1,7 +1,7 @@
 scope	offset_or_func	role	confidence	evidence
 consumer	014a3900	adjacent_candidate_arbitration	high	uses (1-field_28)^2 weighted by field_20 and field_2c to choose between adjacent candidates
 consumer	014a42b0	interval_gap_gated_selection	high	computes ranking span from current +0x10/+0x18 against previous +0x10 and next +0x18 then scales field_20 by gap-aware factor
-implementation	014a3900_014a42b0	interval_gate_subset_clean_room	high	core_reconstruction implements class1/class2 class-gap eligibility third-neighbour guard pair arbitration cost max-field merge flag OR peak-gate predicate primary candidate gate scalar gap-ranking helpers and one-pass candidate choice planner; GNList mutation/refcount and full selection loop remain outside the gate
+implementation	014a3900_014a42b0	interval_gate_subset_clean_room	high	core_reconstruction implements class1/class2 class-gap eligibility third-neighbour guard pair arbitration cost max-field merge flag OR peak-gate predicate primary candidate gate scalar gap-ranking helpers one-pass candidate choice planner and vector-backed iterative selection planner; GNList mutation/refcount remain outside the gate
 constant	0x023b5570	one_float	very_high	lldb memory read shows 1.0f
 constant	0x023b5574	one_float	very_high	lldb memory read shows 1.0f
 constant	0x023908ec	gap_score_base_multiplier	very_high	__TEXT.__const decodes as float 10.0 and feeds powf minimum score seed
