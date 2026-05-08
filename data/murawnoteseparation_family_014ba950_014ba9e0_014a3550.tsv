@@ -6,6 +6,8 @@ builder	014ba950	copy_constructor_clone	very_high	clones +0x10..+0x40 from sourc
 implementation	014ba9e0_014ba950	carrier_constructor_and_clone_clean_room	very_high	core_reconstruction exposes make_raw_note_separation(start,strength,flags) and clone_raw_note_separation(source)
 builder	014a2170	class1_class2_positive_run_builder	medium_high	detects positive-to-nonpositive runs gates length by param_3 sampleRate-like extracts local max above g_0239424c passes max as xmm1 and flag 1 or 2 as esi to 014ba9e0
 implementation	014a2170_prepared_subset	class12_prepared_positive_run_builder_clean_room	high	core_reconstruction implements the prepared-buffer materializer only: strict positive-run length gate local max >0 start from peak time or overlapping existing item start and canonical flags 1/2; preprocessing via 015c2d90 remains outside
+transform	015c2d90_015c2da0	class12_output_only_zero_state_high_shelf_preprocessor	high	015c2d90 wrapper sets r8d=0 then 015c2da0 output-only rdx=0 branch builds RBJ-style high-shelf coefficients with exp10(gain/40) sin/cos 2pi cutoff/sampleRate and applies forward then reverse filtering
+implementation	014a2170_raw_preprocess_subset	class12_raw_buffer_preprocessor_clean_room	high	core_reconstruction implements the 014a2170 preprocessing subset: adaptive cutoff clamp reference*0.3 to 15..30 separate baseline subtract per branch then max residual shared baseline at cutoff 7.0; generic 015c2da0 output modes remain outside
 builder	014afb20	class8_masked_contrast_peak_builder	high	removes prior class 8 items builds positive mask and local contrast gate g_02391090 then calls 014ba9e0 with esi 8 and xmm1 holding accepted contrast
 transform	014afb20	class8_delta_moving_contrast_smooth_pipeline	high	delta=input[i]-input[i-1]; moving contrast abs(sum(delta over 0.0227*rate))*0.01; clamp 4.0; smooth with 5*(rate/441) then 30*(rate/441); accept valley segment max-min >0.1 under mask
 transform	015c1480	width_to_exponential_alpha	very_high	uses expf stub 0x1f9b1c6 and constant -2.5f to compute alpha=expf(-2.5f/width) after FLT_MIN guard
@@ -36,6 +38,14 @@ constant	0x02411070	exponential_smoother_minus_2_5_double	very_high	__TEXT.__con
 constant	g_0240e30c	max_search_low_sentinel_minus_1000f	very_high	__TEXT.__const bytes at 0x0240e30c decode as float -1000.0 used as low sentinel
 constant	g_02394264	contrast_high_sentinel_10000f	very_high	__TEXT.__const bytes at 0x02394264 decode as float 10000.0 used as high sentinel/floor path
 constant	0x02390124	synthetic_peer_strength_1_0f	very_high	__TEXT.__const bytes at 0x02390124 decode as float 1.0 used by 01484bc0 synthetic 0x40 peer
+constant	g_023b1698	class12_preprocess_gain_minus_40f	very_high	__TEXT.__const bytes at 0x023b1698 decode as float -40.0 loaded before 015c2d90 in 014a2170
+constant	g_02390120	class12_preprocess_shape_0_8f	very_high	__TEXT.__const bytes at 0x02390120 decode as float 0.8000000119 passed in xmm2 to 015c2d90 in 014a2170
+constant	g_0239011c	class12_preprocess_half_0_5f	very_high	__TEXT.__const bytes at 0x0239011c decode as float 0.5 used for cutoff Nyquist clamp in 015c2da0
+constant	g_02394288	class12_adaptive_cutoff_scale_0_3f	very_high	__TEXT.__const bytes at 0x02394288 decode as float 0.3000000119 used by 014a2170 before min 30 max 15 clamp
+constant	g_023945a4	class12_adaptive_cutoff_floor_15f	very_high	__TEXT.__const bytes at 0x023945a4 decode as float 15.0 used by maxss after reference*0.3 clamp
+constant	g_0241c3ec	class12_shared_baseline_cutoff_7f	very_high	__TEXT.__const bytes at 0x0241c3ec decode as float 7.0 loaded before the shared max-residual baseline filter
+constant	g_02395718	class12_biquad_gain_exp10_divisor_40_double	very_high	__TEXT.__const bytes at 0x02395718 decode as double 40.0 used in exp10(gain/40)
+constant	g_02411080	class12_biquad_two_pi_double	very_high	__TEXT.__const bytes at 0x02411080 decode as double 6.283185307179586 used for sin/cos cutoff angle
 writer	014a3550	downstream_metric_writer	high	populates +0x28 +0x2c +0x30 +0x34 +0x38 on separation items
 consumer	014a3900	adjacent_candidate_arbitration	high	reads +0x10 +0x18 +0x20 +0x28 +0x2c +0x34 +0x38 +0x3c
 consumer	014a42b0	gap_weighted_selection	high	reads +0x10 +0x18 +0x20 +0x34 +0x38 +0x3c and treats class 8 specially

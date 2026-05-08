@@ -1,9 +1,21 @@
 #include "mikecore/rawnotes/raw_note_class12_builder.hpp"
 
+#include <algorithm>
+#include <cmath>
+
 namespace mikecore::rawnotes
 {
     namespace
     {
+        struct Class12BiquadCoefficients final
+        {
+            float b0 = 0.0f;
+            float b1 = 0.0f;
+            float b2 = 0.0f;
+            float a1 = 0.0f;
+            float a2 = 0.0f;
+        };
+
         [[nodiscard]] double sample_index_to_time(
             std::size_t index,
             double sample_rate_like) noexcept
@@ -24,6 +36,111 @@ namespace mikecore::rawnotes
             float current) noexcept
         {
             return previous <= 0.0f && 0.0f < current;
+        }
+
+        [[nodiscard]] std::optional<Class12BiquadCoefficients>
+        make_class12_high_shelf_coefficients(
+            double sample_rate_like,
+            float cutoff) noexcept
+        {
+            if (sample_rate_like <= 0.0 ||
+                cutoff <= 0.0f ||
+                raw_note_class12_baseline_shape_scalar <= 0.0f) {
+                return std::nullopt;
+            }
+
+            const double clamped_cutoff = std::min<double>(
+                cutoff,
+                static_cast<double>(raw_note_class12_nyquist_cutoff_scale) *
+                    sample_rate_like);
+            if (clamped_cutoff <= 0.0) {
+                return std::nullopt;
+            }
+
+            const double gain = std::pow(
+                10.0,
+                static_cast<double>(raw_note_class12_baseline_gain_db) /
+                    raw_note_class12_gain_exp10_divisor);
+            const double omega = raw_note_class12_two_pi * clamped_cutoff / sample_rate_like;
+            const double sin_omega = std::sin(omega);
+            const double cos_omega = std::cos(omega);
+            const double alpha =
+                sin_omega * (std::sqrt(gain) /
+                             static_cast<double>(raw_note_class12_baseline_shape_scalar));
+
+            const double gain_plus_one = gain + 1.0;
+            const double gain_minus_one = gain - 1.0;
+            const double a0 =
+                gain_plus_one - gain_minus_one * cos_omega + alpha;
+            if (a0 == 0.0) {
+                return std::nullopt;
+            }
+
+            return Class12BiquadCoefficients{
+                .b0 = static_cast<float>(
+                    gain * (gain_plus_one + gain_minus_one * cos_omega + alpha) / a0),
+                .b1 = static_cast<float>(
+                    -2.0 * gain * (gain_minus_one + gain_plus_one * cos_omega) / a0),
+                .b2 = static_cast<float>(
+                    gain * (gain_plus_one + gain_minus_one * cos_omega - alpha) / a0),
+                .a1 = static_cast<float>(
+                    2.0 * (gain_minus_one - gain_plus_one * cos_omega) / a0),
+                .a2 = static_cast<float>(
+                    (gain_plus_one - gain_minus_one * cos_omega - alpha) / a0),
+            };
+        }
+
+        void apply_biquad_forward(
+            std::span<float> samples,
+            const Class12BiquadCoefficients& coefficients) noexcept
+        {
+            float x1 = 0.0f;
+            float x2 = 0.0f;
+            float y1 = 0.0f;
+            float y2 = 0.0f;
+
+            for (float& sample : samples) {
+                const float x0 = sample;
+                const float y0 =
+                    coefficients.b0 * x0 +
+                    coefficients.b1 * x1 +
+                    coefficients.b2 * x2 -
+                    coefficients.a1 * y1 -
+                    coefficients.a2 * y2;
+
+                sample = y0;
+                x2 = x1;
+                x1 = x0;
+                y2 = y1;
+                y1 = y0;
+            }
+        }
+
+        void apply_biquad_reverse(
+            std::span<float> samples,
+            const Class12BiquadCoefficients& coefficients) noexcept
+        {
+            float x1 = 0.0f;
+            float x2 = 0.0f;
+            float y1 = 0.0f;
+            float y2 = 0.0f;
+
+            for (std::size_t offset = samples.size(); offset != 0; --offset) {
+                float& sample = samples[offset - 1];
+                const float x0 = sample;
+                const float y0 =
+                    coefficients.b0 * x0 +
+                    coefficients.b1 * x1 +
+                    coefficients.b2 * x2 -
+                    coefficients.a1 * y1 -
+                    coefficients.a2 * y2;
+
+                sample = y0;
+                x2 = x1;
+                x1 = x0;
+                y2 = y1;
+                y1 = y0;
+            }
         }
     }
 
@@ -103,6 +220,92 @@ namespace mikecore::rawnotes
         }
 
         return sample_index_to_time(peak_index, sample_rate_like);
+    }
+
+    float class12_initial_baseline_cutoff(float reference_scalar) noexcept
+    {
+        return std::clamp(
+            reference_scalar * raw_note_class12_reference_cutoff_scale,
+            raw_note_class12_initial_cutoff_floor,
+            raw_note_class12_initial_cutoff_ceiling);
+    }
+
+    std::vector<float> class12_zero_phase_high_shelf_baseline(
+        std::span<const float> input,
+        double sample_rate_like,
+        float cutoff) noexcept
+    {
+        std::vector<float> baseline(input.begin(), input.end());
+        const std::optional<Class12BiquadCoefficients> coefficients =
+            make_class12_high_shelf_coefficients(sample_rate_like, cutoff);
+        if (baseline.empty()) {
+            return baseline;
+        }
+
+        if (!coefficients.has_value()) {
+            std::fill(baseline.begin(), baseline.end(), 0.0f);
+            return baseline;
+        }
+
+        apply_biquad_forward(baseline, *coefficients);
+        apply_biquad_reverse(baseline, *coefficients);
+        return baseline;
+    }
+
+    Class12PreprocessedBuffers preprocess_class12_detection_buffers(
+        std::span<const float> class1_input,
+        std::span<const float> class2_input,
+        const Class12PreprocessConfig& config)
+    {
+        Class12PreprocessedBuffers prepared{
+            .class1_values = std::vector<float>(class1_input.begin(), class1_input.end()),
+            .class2_values = std::vector<float>(class2_input.begin(), class2_input.end()),
+        };
+
+        if (prepared.class1_values.empty() ||
+            prepared.class2_values.empty() ||
+            prepared.class1_values.size() != prepared.class2_values.size() ||
+            config.sample_rate_like <= 0.0) {
+            return prepared;
+        }
+
+        const float adaptive_cutoff =
+            class12_initial_baseline_cutoff(config.reference_scalar);
+
+        const std::vector<float> class1_baseline =
+            class12_zero_phase_high_shelf_baseline(
+                prepared.class1_values,
+                config.sample_rate_like,
+                adaptive_cutoff);
+        const std::vector<float> class2_baseline =
+            class12_zero_phase_high_shelf_baseline(
+                prepared.class2_values,
+                config.sample_rate_like,
+                adaptive_cutoff);
+
+        for (std::size_t index = 0; index < prepared.class1_values.size(); ++index) {
+            prepared.class1_values[index] -= class1_baseline[index];
+            prepared.class2_values[index] -= class2_baseline[index];
+        }
+
+        std::vector<float> shared_baseline_source(prepared.class1_values.size(), 0.0f);
+        for (std::size_t index = 0; index < shared_baseline_source.size(); ++index) {
+            shared_baseline_source[index] =
+                std::max(prepared.class1_values[index], prepared.class2_values[index]);
+        }
+
+        const std::vector<float> shared_baseline =
+            class12_zero_phase_high_shelf_baseline(
+                shared_baseline_source,
+                config.sample_rate_like,
+                raw_note_class12_shared_baseline_cutoff);
+
+        for (std::size_t index = 0; index < prepared.class1_values.size(); ++index) {
+            prepared.class1_values[index] -= shared_baseline[index];
+            prepared.class2_values[index] -= shared_baseline[index];
+        }
+
+        return prepared;
     }
 
     std::vector<RawNoteSeparation> build_class12_raw_note_candidates_from_prepared_branch(
@@ -188,5 +391,33 @@ namespace mikecore::rawnotes
             class2_candidates.end());
 
         return candidates;
+    }
+
+    std::vector<RawNoteSeparation> build_class12_raw_note_candidates_from_raw_buffers(
+        std::span<const float> class1_input,
+        std::span<const float> class2_input,
+        std::span<const RawNoteSeparation> class1_existing_items,
+        std::span<const RawNoteSeparation> class2_existing_items,
+        const Class12PreprocessConfig& preprocess_config,
+        const Class12PreparedBuilderConfig& builder_config)
+    {
+        const Class12PreprocessedBuffers prepared =
+            preprocess_class12_detection_buffers(
+                class1_input,
+                class2_input,
+                preprocess_config);
+
+        return build_class12_raw_note_candidates_from_prepared_buffers(
+            Class12PreparedBranch{
+                .prepared_values = prepared.class1_values,
+                .existing_items = class1_existing_items,
+                .class_state_flags = raw_note_base_class_1,
+            },
+            Class12PreparedBranch{
+                .prepared_values = prepared.class2_values,
+                .existing_items = class2_existing_items,
+                .class_state_flags = raw_note_base_class_2,
+            },
+            builder_config);
     }
 }

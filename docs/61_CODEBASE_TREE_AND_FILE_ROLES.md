@@ -58,8 +58,8 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 29 | 148K | codice clean-room compilabile |
-| `docs/` | 63 | 660K | ledger, decisioni, mappe e stato reverse |
+| `core_reconstruction/` | 29 | 160K | codice clean-room compilabile |
+| `docs/` | 64 | 672K | ledger, decisioni, mappe e stato reverse |
 | `data/` | 52 | 376K | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
 | `binaries/` | 8 | 163M | target binari analizzati |
@@ -189,7 +189,7 @@ core_reconstruction/
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
 | `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: class-gap `1/2`, third-neighbour guard, costo pair-arbitration, merge max/OR e predicato peak-gate; esclusi ranking gap e mutazioni lista. |
 | `rawnotes/paired_peak_gate.*` | Kernel `014a3550` per peak gates `+0x34/+0x38`, senza il writer completo `+0x2c/+0x30`. |
-| `rawnotes/raw_note_class12_builder.*` | Subset prepared-buffer `014a2170` per candidati class `1/2`: run positive, durata strict, massimo locale `> 0.0f`, start da peak o item esistente; preprocessing `015c2d90` escluso. |
+| `rawnotes/raw_note_class12_builder.*` | Subset `014a2170` per candidati class `1/2`: preprocessing output-only `015c2d90`, high-shelf bidirezionale, baseline condiviso, run positive, durata strict, massimo locale `> 0.0f` e start da peak o item esistente. |
 | `rawnotes/raw_note_class8_builder.*` | Builder candidati class `8`: mask, run filter, linked-successor protected ranges, contrasto locale, smoothing breve/lunga e gate `max-min`. |
 
 Stato:

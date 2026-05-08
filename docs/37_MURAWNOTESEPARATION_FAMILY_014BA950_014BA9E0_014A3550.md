@@ -239,14 +239,16 @@ Quindi per i candidate `1/2`:
 
 Subset clean-room implementato in `raw_note_class12_builder.*`:
 
-- input: due buffer float gia' preparati e le liste esistenti corrispondenti
+- input: due buffer float gia' preparati, oppure due buffer raw passati dal preprocessing `014a2170 -> 015c2d90`
 - gate fine-run: `prev > 0 && current <= 0`
 - durata: `run_start + trunc(minimumRunSeconds * sampleRate-like) < run_end`
 - strength: massimo locale della run, accettato solo se `g_0239424c < max`, con `g_0239424c = 0.0f`
 - start: item esistente sovrapposto se trovato dal ramo, altrimenti `peakIndex / sampleRate-like`
 - flags canonici: `1` per il primo branch, `2` per il secondo branch
 
-Guardrail: questo non implementa il preprocessing/baseline `015c2d90` che precede la scansione. Quel blocco resta fuori fino a chiusura indipendente.
+Il preprocessing clean-room implementato e' limitato al branch `rdx == 0`, `r8d = 0` di `015c2d90 -> 015c2da0`: high-shelf bidirezionale zero-state, baseline separato sui due branch, poi baseline condiviso su `max(residual1, residual2)`.
+
+Guardrail: il helper generico `015c2da0` con output doppi e seed-state resta fuori. Il dettaglio e' in [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md).
 
 ### `014afb20`: classe `8`
 
@@ -312,6 +314,14 @@ Le costanti principali del corridoio `014a2170 / 014afb20` sono ora lette dirett
 | `g_0240e30c` | `float` | `-1000.0f` | sentinel basso per max-search |
 | `g_02394264` | `float` | `10000.0f` | sentinel alto/floor nel contrast path |
 | `0x02390124` | `float` | `1.0f` | strength del peer sintetico `0x40` in `01484bc0` |
+| `g_023b1698` | `float` | `-40.0f` | gain dB del preprocessing `015c2d90` in `014a2170` |
+| `g_02390120` | `float` | `0.8000000119f` | scalar shape/Q-like del preprocessing `015c2d90` |
+| `g_0239011c` | `float` | `0.5f` | clamp Nyquist nel biquad `015c2da0` |
+| `g_02394288` | `float` | `0.3000000119f` | scala cutoff adattivo classi `1/2` |
+| `g_023945a4` | `float` | `15.0f` | floor cutoff adattivo classi `1/2` |
+| `g_0241c3ec` | `float` | `7.0f` | cutoff del baseline condiviso classi `1/2` |
+| `g_02395718` | `double` | `40.0` | divisore `exp10(gain / 40)` nel biquad `015c2da0` |
+| `g_02411080` | `double` | `6.283185307179586` | `2*pi` per sin/cos del cutoff nel biquad `015c2da0` |
 
 Impatto: le soglie non sono piu' "simboliche non lette". Il kernel `015c1480` e' ora ristretto a smoother esponenziale; resta da trascrivere con cautela l'ordine esatto degli edge-pass se serve bit identity.
 

@@ -96,13 +96,15 @@ Se manca uno di questi quattro elementi, il modulo non passa in implementazione.
    - [48_ANALYZER_GATE_METRIC_CLUSTER_014A74B0_01484BC0.md](48_ANALYZER_GATE_METRIC_CLUSTER_014A74B0_01484BC0.md)
    - [49_THRESHOLD_SEEDED_RAW_NOTE_MATCHER_014AF180.md](49_THRESHOLD_SEEDED_RAW_NOTE_MATCHER_014AF180.md)
    - [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md)
+   - [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md)
    Chiuso:
    - carrier `MURawNoteSeparation` size `0x48`
    - ABI `014ba9e0`: `xmm0=start`, `xmm1=base strength`, `esi=class/state flag`
    - helper clean-room `014ba9e0 / 014ba950`: constructor start/strength/flag e clone completo del carrier
    - helper constructor-only del peer sintetico `01484bc0`: `start=current.start`, strength `1.0f`, flag `0x40`
    - origine builder-side di `+0x20`: massimo locale per classi `1/2`, contrasto locale per classe `8`, `1.0f` per peer sintetici `0x40`
-   - materializzatore prepared-buffer `014a2170` per classi `1/2`: fine-run positiva, durata strict, massimo locale `> 0.0f`, start su peak o riallineamento a item esistente; escluso preprocessing `015c2d90`
+   - preprocessing subset `014a2170 -> 015c2d90`: branch output-only `015c2da0`, high-shelf bidirezionale zero-state, cutoff adattivo `15..30` e baseline condiviso `7.0`
+   - materializzatore `014a2170` per classi `1/2`: fine-run positiva, durata strict, massimo locale `> 0.0f`, start su peak o riallineamento a item esistente
    - `+0x40` come selected match / linked peer pointer, non metadata
    - `+0x34/+0x38` corretti da threshold pair a paired local smoothed peak gates: writer `014a3550`, max merge `014a3900`, OR gate `014a42b0`
    - kernel paired peak-gate di `014a3550` implementato: `state = (state + samplePair) * 0.5`, peak max e write su `+0x34/+0x38`

@@ -111,6 +111,7 @@ Progetto_Reverse_Mike/
 | [59_PERCUSSIVE_PITCH_SYSTEM_BRIDGE_012F0B60.md](59_PERCUSSIVE_PITCH_SYSTEM_BRIDGE_012F0B60.md) | Ponte LSS -> `MUPercussivePitchSystem`: `01519670` gate split/clone in cents, `01516650` wrapper e bridge range `+0x80/+0x88` | Attivo |
 | [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md) | Chiusura del kernel `015c1480 / 015c0b60`: smoother esponenziale forward/reverse usato dalla pipeline raw-note classe `8` | Attivo |
 | [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md) | Tree operativo della codebase: directory, file curati, output generati, ruoli e policy di modifica | Attivo |
+| [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md) | Subset preprocessing classi `1/2`: wrapper `015c2d90`, branch output-only di `015c2da0`, high-shelf bidirezionale e baseline condiviso `014a2170` | Attivo |
 
 ## Tools
 
@@ -159,6 +160,7 @@ python3 tools/pipeline.py verify
 
 ## Ultime Aggiunte Doc
 
+- [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md)
 - [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md)
 - [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md)
 - [52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md](52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md)
