@@ -5,6 +5,7 @@ abi	014ba9e0	xmm0_start_xmm1_strength_esi_flag	very_high	disassembly stores xmm0
 builder	014ba950	copy_constructor_clone	very_high	clones +0x10..+0x40 from source object
 implementation	014ba9e0_014ba950	carrier_constructor_and_clone_clean_room	very_high	core_reconstruction exposes make_raw_note_separation(start,strength,flags) and clone_raw_note_separation(source)
 builder	014a2170	class1_class2_positive_run_builder	medium_high	detects positive-to-nonpositive runs gates length by param_3 sampleRate-like extracts local max above g_0239424c passes max as xmm1 and flag 1 or 2 as esi to 014ba9e0
+implementation	014a2170_prepared_subset	class12_prepared_positive_run_builder_clean_room	high	core_reconstruction implements the prepared-buffer materializer only: strict positive-run length gate local max >0 start from peak time or overlapping existing item start and canonical flags 1/2; preprocessing via 015c2d90 remains outside
 builder	014afb20	class8_masked_contrast_peak_builder	high	removes prior class 8 items builds positive mask and local contrast gate g_02391090 then calls 014ba9e0 with esi 8 and xmm1 holding accepted contrast
 transform	014afb20	class8_delta_moving_contrast_smooth_pipeline	high	delta=input[i]-input[i-1]; moving contrast abs(sum(delta over 0.0227*rate))*0.01; clamp 4.0; smooth with 5*(rate/441) then 30*(rate/441); accept valley segment max-min >0.1 under mask
 transform	015c1480	width_to_exponential_alpha	very_high	uses expf stub 0x1f9b1c6 and constant -2.5f to compute alpha=expf(-2.5f/width) after FLT_MIN guard

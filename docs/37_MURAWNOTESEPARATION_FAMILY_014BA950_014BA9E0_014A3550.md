@@ -237,6 +237,17 @@ Quindi per i candidate `1/2`:
 - `+0x3c` nasce dal branch sorgente (`1` o `2`)
 - lo start e' ricavato da posizione campione convertita in tempo, oppure riallineato su item esistente quando il ramo trova overlap gia' presente
 
+Subset clean-room implementato in `raw_note_class12_builder.*`:
+
+- input: due buffer float gia' preparati e le liste esistenti corrispondenti
+- gate fine-run: `prev > 0 && current <= 0`
+- durata: `run_start + trunc(minimumRunSeconds * sampleRate-like) < run_end`
+- strength: massimo locale della run, accettato solo se `g_0239424c < max`, con `g_0239424c = 0.0f`
+- start: item esistente sovrapposto se trovato dal ramo, altrimenti `peakIndex / sampleRate-like`
+- flags canonici: `1` per il primo branch, `2` per il secondo branch
+
+Guardrail: questo non implementa il preprocessing/baseline `015c2d90` che precede la scansione. Quel blocco resta fuori fino a chiusura indipendente.
+
 ### `014afb20`: classe `8`
 
 `014afb20` prima rimuove dalla lista gli item gia' marcati `field_3c == 8`, poi costruisce una maschera positiva da `param_3`, elimina run troppo corte usando una finestra derivata da `g_02390108 * sampleRate-like`, e passa a una pipeline di contrasto locale.

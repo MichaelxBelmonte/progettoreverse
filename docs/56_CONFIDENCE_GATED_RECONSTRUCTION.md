@@ -102,6 +102,7 @@ Se manca uno di questi quattro elementi, il modulo non passa in implementazione.
    - helper clean-room `014ba9e0 / 014ba950`: constructor start/strength/flag e clone completo del carrier
    - helper constructor-only del peer sintetico `01484bc0`: `start=current.start`, strength `1.0f`, flag `0x40`
    - origine builder-side di `+0x20`: massimo locale per classi `1/2`, contrasto locale per classe `8`, `1.0f` per peer sintetici `0x40`
+   - materializzatore prepared-buffer `014a2170` per classi `1/2`: fine-run positiva, durata strict, massimo locale `> 0.0f`, start su peak o riallineamento a item esistente; escluso preprocessing `015c2d90`
    - `+0x40` come selected match / linked peer pointer, non metadata
    - `+0x34/+0x38` corretti da threshold pair a paired local smoothed peak gates: writer `014a3550`, max merge `014a3900`, OR gate `014a42b0`
    - kernel paired peak-gate di `014a3550` implementato: `state = (state + samplePair) * 0.5`, peak max e write su `+0x34/+0x38`

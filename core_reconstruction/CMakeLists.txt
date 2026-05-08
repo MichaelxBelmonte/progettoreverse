@@ -13,6 +13,7 @@ add_library(mikecore_runtime_fft
     src/rawnotes/exponential_smoother.cpp
     src/rawnotes/interval_gate.cpp
     src/rawnotes/paired_peak_gate.cpp
+    src/rawnotes/raw_note_class12_builder.cpp
     src/rawnotes/raw_note_class8_builder.cpp
     src/rawnotes/threshold_seed_matcher.cpp
     src/fft/stft_frontend.cpp
