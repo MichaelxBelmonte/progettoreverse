@@ -183,4 +183,89 @@ namespace mikecore::rawnotes
             class8_min_gap);
         return threshold < gap_span;
     }
+
+    std::size_t raw_note_gap_insertion_index(
+        std::span<const RawNoteSeparation> selected,
+        const RawNoteSeparation& candidate) noexcept
+    {
+        std::size_t index = 0;
+        while (index < selected.size() &&
+               selected[index].interval_start < candidate.interval_start) {
+            ++index;
+        }
+        return index;
+    }
+
+    RawNoteGapBoundary raw_note_gap_boundary_at(
+        std::span<const RawNoteSeparation> selected,
+        std::size_t insertion_index,
+        double right_fallback) noexcept
+    {
+        RawNoteGapBoundary boundary{};
+        boundary.right_fallback = right_fallback;
+
+        if (insertion_index > 0 && insertion_index <= selected.size()) {
+            boundary.previous = &selected[insertion_index - 1];
+        }
+
+        if (insertion_index < selected.size()) {
+            boundary.next = &selected[insertion_index];
+        }
+
+        return boundary;
+    }
+
+    RawNoteGapCandidateChoice choose_raw_note_gap_candidate(
+        std::span<const RawNoteSeparation> candidates,
+        std::span<const RawNoteSeparation> selected,
+        float minimum_score_threshold,
+        float non_class8_min_gap,
+        float class8_min_gap,
+        float class8_extra_scale,
+        double right_fallback) noexcept
+    {
+        RawNoteGapCandidateChoice choice{};
+        float best_score = minimum_score_threshold;
+        const float selection_exponent =
+            raw_note_gap_selection_exponent(minimum_score_threshold);
+
+        for (std::size_t index = 0; index < candidates.size(); ++index) {
+            const RawNoteSeparation& candidate = candidates[index];
+            const std::size_t insertion_index =
+                raw_note_gap_insertion_index(selected, candidate);
+            const RawNoteGapBoundary boundary =
+                raw_note_gap_boundary_at(selected, insertion_index, right_fallback);
+            const double gap_span = raw_note_gap_span(candidate, boundary);
+            const float score = raw_note_gap_score(
+                candidate,
+                gap_span,
+                selection_exponent,
+                class8_extra_scale);
+
+            if (best_score < score && minimum_score_threshold < score) {
+                best_score = score;
+                choice.found = true;
+                choice.candidate_index = index;
+                choice.insertion_index = insertion_index;
+                choice.score = score;
+                choice.gap_span = gap_span;
+            }
+        }
+
+        if (choice.found) {
+            const RawNoteSeparation& candidate = candidates[choice.candidate_index];
+            const RawNoteGapBoundary boundary = raw_note_gap_boundary_at(
+                selected,
+                choice.insertion_index,
+                right_fallback);
+            choice.gap_span = raw_note_gap_span(candidate, boundary);
+            choice.insertable = raw_note_gap_insertable(
+                candidate,
+                boundary,
+                non_class8_min_gap,
+                class8_min_gap);
+        }
+
+        return choice;
+    }
 }

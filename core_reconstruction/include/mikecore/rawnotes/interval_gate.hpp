@@ -2,6 +2,9 @@
 
 #include "mikecore/rawnotes/raw_note_separation.hpp"
 
+#include <cstddef>
+#include <span>
+
 namespace mikecore::rawnotes
 {
     /*
@@ -42,6 +45,16 @@ namespace mikecore::rawnotes
         const RawNoteSeparation* next = nullptr;
         double left_fallback = raw_note_gap_left_fallback;
         double right_fallback = 0.0;
+    };
+
+    struct RawNoteGapCandidateChoice final
+    {
+        bool found = false;
+        bool insertable = false;
+        std::size_t candidate_index = 0;
+        std::size_t insertion_index = 0;
+        float score = 0.0f;
+        double gap_span = 0.0;
     };
 
     [[nodiscard]] float raw_note_pair_arbitration_cost(
@@ -105,4 +118,22 @@ namespace mikecore::rawnotes
         const RawNoteGapBoundary& boundary,
         float non_class8_min_gap,
         float class8_min_gap) noexcept;
+
+    [[nodiscard]] std::size_t raw_note_gap_insertion_index(
+        std::span<const RawNoteSeparation> selected,
+        const RawNoteSeparation& candidate) noexcept;
+
+    [[nodiscard]] RawNoteGapBoundary raw_note_gap_boundary_at(
+        std::span<const RawNoteSeparation> selected,
+        std::size_t insertion_index,
+        double right_fallback) noexcept;
+
+    [[nodiscard]] RawNoteGapCandidateChoice choose_raw_note_gap_candidate(
+        std::span<const RawNoteSeparation> candidates,
+        std::span<const RawNoteSeparation> selected,
+        float minimum_score_threshold,
+        float non_class8_min_gap,
+        float class8_min_gap,
+        float class8_extra_scale,
+        double right_fallback) noexcept;
 }

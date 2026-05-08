@@ -233,7 +233,7 @@ Implementazione clean-room aperta:
 - `core_reconstruction/include/mikecore/rawnotes/interval_gate.hpp`
 - `core_reconstruction/src/rawnotes/interval_gate.cpp`
 
-Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield, predicato peak-gate di `014a42b0` e helper scalari del ranking gap:
+Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield, predicato peak-gate di `014a42b0`, helper scalari del ranking gap e planner one-pass su liste gia' ordinate:
 
 ```c
 span = min(current.end - previous.start_or_leftFallback,
@@ -241,6 +241,14 @@ span = min(current.end - previous.start_or_leftFallback,
 score = gapWeight(span) * field_20 * optionalClass8Scale;
 insertable = span > classSpecificMinGap;
 ```
+
+Il planner clean-room `choose_raw_note_gap_candidate()` replica il blocco di
+selezione osservato senza ownership:
+
+- calcola l'indice di inserimento come prima posizione con `selected.start >= candidate.start`
+- inizializza `bestScore` a `param_1`
+- accetta solo score strettamente maggiori di `bestScore` e `param_1`
+- ricalcola boundary e `insertable` per il candidato scelto
 
 Restano fuori la mutazione `GNList`, il refcount/ownership e il loop completo di
 selezione/inserimento di `014a42b0`.

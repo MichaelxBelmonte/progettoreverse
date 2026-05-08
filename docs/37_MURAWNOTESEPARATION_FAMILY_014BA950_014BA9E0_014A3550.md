@@ -118,7 +118,7 @@ Implementa formule per `+0x28/+0x2c/+0x30/+0x34/+0x38` su item e lane
 caller-supplied. Restano fuori traversal `GNList`, retain/release e nome
 musicale finale delle due lane.
 
-Il subset clean-room dei consumer `014a3900 / 014a42b0` e' aperto in `rawnotes/interval_gate.*`: test class-gap `1/2`, controllo del terzo vicino, costo pair-arbitration, merge max/OR dei campi chiusi, predicato peak-gate e helper scalari del ranking span/score. Il loop completo `GNList`, le mutazioni della lista e il refcount restano fuori perimetro.
+Il subset clean-room dei consumer `014a3900 / 014a42b0` e' aperto in `rawnotes/interval_gate.*`: test class-gap `1/2`, controllo del terzo vicino, costo pair-arbitration, merge max/OR dei campi chiusi, predicato peak-gate, helper scalari del ranking span/score e planner one-pass del candidato migliore. Il loop completo `GNList`, le mutazioni della lista e il refcount restano fuori perimetro.
 
 ---
 
