@@ -130,6 +130,13 @@ namespace mikecore::rawnotes
         float peak_gate_threshold,
         float class8_base_gate_threshold) noexcept;
 
+    [[nodiscard]] std::vector<RawNoteSeparation> collect_primary_gap_candidates(
+        std::span<const RawNoteSeparation> source,
+        bool include_class8_candidates,
+        float base_gate_threshold,
+        float peak_gate_threshold,
+        float class8_base_gate_threshold);
+
     [[nodiscard]] float raw_note_gap_selection_exponent(
         float minimum_score_threshold) noexcept;
 

@@ -187,7 +187,7 @@ core_reconstruction/
 | `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match. |
 | `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `item->+0x40->+0x20`, mediana e coverage. |
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
-| `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: class-gap `1/2`, third-neighbour guard, costo pair-arbitration, metadata class `2` a `+0x24`, merge max/OR, predicato peak-gate, predicato candidato primario, helper scalari ranking span/score, planner one-pass e planner iterativo vector-backed; esclusi contenitore/refcount `GNList` originali. |
+| `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: class-gap `1/2`, third-neighbour guard, costo pair-arbitration, metadata class `2` a `+0x24`, merge max/OR, predicato peak-gate, predicato/collector candidato primario, helper scalari ranking span/score, planner one-pass e planner iterativo vector-backed; esclusi contenitore/refcount `GNList` originali. |
 | `rawnotes/paired_peak_gate.*` | Subset numerico `014a3550`: metriche `+0x28/+0x2c/+0x30` e peak gates `+0x34/+0x38`, senza traversal `GNList`/refcount. |
 | `rawnotes/raw_note_class12_builder.*` | Subset `014a2170` per candidati class `1/2`: preprocessing output-only `015c2d90`, high-shelf bidirezionale, baseline condiviso, run positive, durata strict, massimo locale `> 0.0f` e start da peak o item esistente. |
 | `rawnotes/raw_note_class8_builder.*` | Builder candidati class `8`: mask, run filter, linked-successor protected ranges, contrasto locale, smoothing breve/lunga e gate `max-min`. |

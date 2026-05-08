@@ -159,6 +159,30 @@ namespace mikecore::rawnotes
                passes_class8_base_gate(note, class8_base_gate_threshold);
     }
 
+    std::vector<RawNoteSeparation> collect_primary_gap_candidates(
+        std::span<const RawNoteSeparation> source,
+        bool include_class8_candidates,
+        float base_gate_threshold,
+        float peak_gate_threshold,
+        float class8_base_gate_threshold)
+    {
+        std::vector<RawNoteSeparation> candidates;
+        candidates.reserve(source.size());
+
+        for (const RawNoteSeparation& note : source) {
+            if (passes_primary_gap_candidate_gate(
+                    note,
+                    include_class8_candidates,
+                    base_gate_threshold,
+                    peak_gate_threshold,
+                    class8_base_gate_threshold)) {
+                candidates.push_back(note);
+            }
+        }
+
+        return candidates;
+    }
+
     float raw_note_gap_selection_exponent(
         float minimum_score_threshold) noexcept
     {

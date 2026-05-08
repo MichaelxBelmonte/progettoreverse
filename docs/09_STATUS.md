@@ -120,7 +120,7 @@
 - raw-note smoother esteso per scalar pieces e loop mode `0` di `015c1480 / 015c0b60`: `alpha = expf(-2.5f / width)`, radius da `logf(alpha)`, recurrence one-pole, bzero prefix, warm-up sinistro, forward buffer, tail destro, warm-up reverse e reverse buffer
 - raw-note builder classe `8` operativo in clean-room per mask, filtro run corte, mapping linked-successor item a range protetti, delta, contrasto centrato, smoothing breve/lunga e gate `max-min`; resta prudente il nome canonico dell'owner che fornisce quegli item
 - raw-note metric writer aperto per il subset numerico `014a3550`: `+0x28`, ranking weights `+0x2c/+0x30` e peak gates `+0x34/+0x38`; restano fuori traversal `GNList` e refcount
-- raw-note interval gate subset aperto per `014a3900 / 014a42b0`: costo pair-arbitration, metadata class `2` a `+0x24`, merge max/OR dei campi chiusi, predicato peak-gate, predicato candidato primario, helper scalari ranking span/score, planner one-pass e planner iterativo vector-backed; contenitore/refcount `GNList` originali restano fuori
+- raw-note interval gate subset aperto per `014a3900 / 014a42b0`: costo pair-arbitration, metadata class `2` a `+0x24`, merge max/OR dei campi chiusi, predicato peak-gate, predicato/collector candidato primario, helper scalari ranking span/score, planner one-pass e planner iterativo vector-backed; contenitore/refcount `GNList` originali restano fuori
 - supporto analyzer gate esteso con default `0.01f`, coverage dei linked peers e nomi canonici `_allTonality / _allCentDiffPerMillisecond / _allPitchRangePerNote / _allEnergyRelevantRegionRatio / _allAttackPeakQuality / _allAttackPeakToEnergyRegionRatio`
 - `DNA2`, quality aggregate e resynthesis restano fuori dal codice attivo
 
