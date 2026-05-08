@@ -115,6 +115,24 @@ namespace mikecore::rawnotes
                class8_base_gate_threshold < note.base_gate_strength;
     }
 
+    bool passes_primary_gap_candidate_gate(
+        const RawNoteSeparation& note,
+        bool include_class8_candidates,
+        float base_gate_threshold,
+        float peak_gate_threshold,
+        float class8_base_gate_threshold) noexcept
+    {
+        if (passes_interval_peak_gate(
+                note,
+                base_gate_threshold,
+                peak_gate_threshold)) {
+            return true;
+        }
+
+        return include_class8_candidates &&
+               passes_class8_base_gate(note, class8_base_gate_threshold);
+    }
+
     float raw_note_gap_selection_exponent(
         float minimum_score_threshold) noexcept
     {

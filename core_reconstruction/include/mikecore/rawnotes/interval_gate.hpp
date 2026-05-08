@@ -95,6 +95,13 @@ namespace mikecore::rawnotes
         const RawNoteSeparation& note,
         float class8_base_gate_threshold) noexcept;
 
+    [[nodiscard]] bool passes_primary_gap_candidate_gate(
+        const RawNoteSeparation& note,
+        bool include_class8_candidates,
+        float base_gate_threshold,
+        float peak_gate_threshold,
+        float class8_base_gate_threshold) noexcept;
+
     [[nodiscard]] float raw_note_gap_selection_exponent(
         float minimum_score_threshold) noexcept;
 

@@ -195,6 +195,14 @@ if ((flags & 0x33) != 0 &&
 }
 ```
 
+Il filtro candidato primario e' ora implementato come predicato unico:
+
+```c
+primaryCandidate =
+    passesPeakGate(item, param_2, param_3) ||
+    (includeClass8 && flags == 8 && class8BaseGate < item->field_20);
+```
+
 Questo rende il modello piu' forte:
 
 - `+0x34 / +0x38` non sono score indipendenti scollegati
@@ -233,7 +241,7 @@ Implementazione clean-room aperta:
 - `core_reconstruction/include/mikecore/rawnotes/interval_gate.hpp`
 - `core_reconstruction/src/rawnotes/interval_gate.cpp`
 
-Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield, predicato peak-gate di `014a42b0`, helper scalari del ranking gap e planner one-pass su liste gia' ordinate:
+Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield, predicato peak-gate di `014a42b0`, predicato candidato primario, helper scalari del ranking gap e planner one-pass su liste gia' ordinate:
 
 ```c
 span = min(current.end - previous.start_or_leftFallback,
