@@ -1,6 +1,7 @@
 #include "mikecore/rawnotes/interval_gate.hpp"
 
 #include <algorithm>
+#include <cmath>
 
 namespace mikecore::rawnotes
 {
@@ -112,5 +113,74 @@ namespace mikecore::rawnotes
     {
         return note.class_state_flags == raw_note_observed_flag_0x8 &&
                class8_base_gate_threshold < note.base_gate_strength;
+    }
+
+    float raw_note_gap_selection_exponent(
+        float minimum_score_threshold) noexcept
+    {
+        return std::min(
+            raw_note_gap_score_cap,
+            std::pow(
+                raw_note_gap_score_base_multiplier * minimum_score_threshold,
+                raw_note_gap_score_exponent_power));
+    }
+
+    double raw_note_gap_span(
+        const RawNoteSeparation& note,
+        const RawNoteGapBoundary& boundary) noexcept
+    {
+        const double left_boundary =
+            boundary.previous != nullptr ? boundary.previous->interval_start
+                                         : boundary.left_fallback;
+        const double right_boundary =
+            boundary.next != nullptr ? boundary.next->interval_end
+                                     : boundary.right_fallback;
+
+        const double left_span = note.interval_end - left_boundary;
+        const double right_span = right_boundary - note.interval_start;
+        return std::min(left_span, right_span);
+    }
+
+    float raw_note_gap_score(
+        const RawNoteSeparation& note,
+        double gap_span,
+        float selection_exponent,
+        float class8_extra_scale) noexcept
+    {
+        const double scaled_gap = gap_span * raw_note_gap_scale;
+        const float gap_weight =
+            scaled_gap >= 1.0
+                ? raw_note_gap_score_cap
+                : static_cast<float>(std::pow(scaled_gap, selection_exponent));
+
+        float score = gap_weight * note.base_gate_strength;
+        if (note.class_state_flags == raw_note_observed_flag_0x8) {
+            score *= class8_extra_scale;
+        }
+        return score;
+    }
+
+    float raw_note_gap_insert_threshold(
+        const RawNoteSeparation& note,
+        float non_class8_min_gap,
+        float class8_min_gap) noexcept
+    {
+        return note.class_state_flags == raw_note_observed_flag_0x8
+                   ? class8_min_gap
+                   : non_class8_min_gap;
+    }
+
+    bool raw_note_gap_insertable(
+        const RawNoteSeparation& note,
+        const RawNoteGapBoundary& boundary,
+        float non_class8_min_gap,
+        float class8_min_gap) noexcept
+    {
+        const double gap_span = raw_note_gap_span(note, boundary);
+        const double threshold = raw_note_gap_insert_threshold(
+            note,
+            non_class8_min_gap,
+            class8_min_gap);
+        return threshold < gap_span;
     }
 }

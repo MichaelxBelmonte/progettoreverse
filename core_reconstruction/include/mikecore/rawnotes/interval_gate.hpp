@@ -8,9 +8,9 @@ namespace mikecore::rawnotes
      * Confidence gate: IMPLEMENTABLE >= 0.90 for the closed scalar/predicate
      * pieces of 014a3900 / 014a42b0.
      *
-     * This module intentionally does not implement list mutation, gap-ranking,
-     * or the full 014a42b0 selection loop: several constants and ownership
-     * edges remain outside the clean-room gate.
+     * This module intentionally does not implement GNList mutation/refcount or
+     * the full 014a42b0 selection loop. The closed gap-ranking scalar helpers
+     * are exposed separately so callers can keep list ownership out-of-band.
      *
      * Reverse refs:
      * - docs/36_INTERVAL_GATE_MODEL_014A3900_014A42B0.md
@@ -18,6 +18,11 @@ namespace mikecore::rawnotes
      */
 
     inline constexpr float raw_note_arbitration_score_target = 1.0f;
+    inline constexpr float raw_note_gap_score_base_multiplier = 10.0f;
+    inline constexpr float raw_note_gap_score_exponent_power = 0.30000001192092896f;
+    inline constexpr float raw_note_gap_score_cap = 1.0f;
+    inline constexpr double raw_note_gap_left_fallback = -0.699999988079071;
+    inline constexpr double raw_note_gap_scale = 1.4285714626312256;
     inline constexpr std::uint32_t raw_note_interval_peak_gate_mask =
         raw_note_base_class_1 |
         raw_note_base_class_2 |
@@ -29,6 +34,14 @@ namespace mikecore::rawnotes
         // In 014a3900 the <= branch keeps the second object as merge destination.
         // This is branch direction, not a musical "winner" label.
         bool merge_first_into_second = false;
+    };
+
+    struct RawNoteGapBoundary final
+    {
+        const RawNoteSeparation* previous = nullptr;
+        const RawNoteSeparation* next = nullptr;
+        double left_fallback = raw_note_gap_left_fallback;
+        double right_fallback = 0.0;
     };
 
     [[nodiscard]] float raw_note_pair_arbitration_cost(
@@ -68,4 +81,28 @@ namespace mikecore::rawnotes
     [[nodiscard]] bool passes_class8_base_gate(
         const RawNoteSeparation& note,
         float class8_base_gate_threshold) noexcept;
+
+    [[nodiscard]] float raw_note_gap_selection_exponent(
+        float minimum_score_threshold) noexcept;
+
+    [[nodiscard]] double raw_note_gap_span(
+        const RawNoteSeparation& note,
+        const RawNoteGapBoundary& boundary) noexcept;
+
+    [[nodiscard]] float raw_note_gap_score(
+        const RawNoteSeparation& note,
+        double gap_span,
+        float selection_exponent,
+        float class8_extra_scale) noexcept;
+
+    [[nodiscard]] float raw_note_gap_insert_threshold(
+        const RawNoteSeparation& note,
+        float non_class8_min_gap,
+        float class8_min_gap) noexcept;
+
+    [[nodiscard]] bool raw_note_gap_insertable(
+        const RawNoteSeparation& note,
+        const RawNoteGapBoundary& boundary,
+        float non_class8_min_gap,
+        float class8_min_gap) noexcept;
 }

@@ -1,6 +1,6 @@
 # 36 — Interval Gate Model `0x014a3900 / 0x014a42b0`
 
-**Ultimo aggiornamento:** 2026-05-07
+**Ultimo aggiornamento:** 2026-05-08
 
 ## Obiettivo
 
@@ -36,22 +36,30 @@ Correzione importante:
 
 La prova forte arriva da `014a42b0`.
 
-Nel loop centrale la funzione calcola il gap libero attorno a un item usando:
+Nel loop di ranking di `014a42b0` la funzione calcola uno span locale attorno
+a un item usando:
 
 - `current->+0x10`
 - `current->+0x18`
-- il `+0x18` del vicino precedente
-- il `+0x10` del vicino successivo
+- il `+0x10` del vicino precedente, o fallback `-0.699999988079071`
+- il `+0x18` del vicino successivo, o fallback destro passato in `xmm7`
 
 Schema osservato:
 
 ```c
-leftGap  = current->end   - previous->end_or_default;
-rightGap = next->start_or_default - current->start;
-gap = min(leftGap, rightGap);
+leftSpan  = current->end - previous->start_or_leftFallback;
+rightSpan = next->end_or_rightFallback - current->start;
+span = min(leftSpan, rightSpan);
 ```
 
-Questo uso e' incompatibile con score o flag e molto coerente con:
+Nota di correzione: una lettura precedente descriveva questo passaggio come
+`previous.end / next.start`. Il disassembly dei due blocchi di ranking
+`014a4bd2..014a4c15` e `014a4ee4..014a4f26` mostra invece letture dirette da
+`previous + 0x10` e `next + 0x18` in questo path. Questo non cambia la field map
+dei bounds, ma cambia il nome corretto del calcolo: non e' un semplice "free
+gap", e' lo span di ranking effettivamente usato dal gate.
+
+Questo uso e' incompatibile con score o flag e resta coerente con:
 
 - `+0x10` = interval start
 - `+0x18` = interval end
@@ -63,6 +71,21 @@ Confidence qui e' alta.
 ## 2. `+0x20` E' Un Base Gate Weight
 
 Sempre in `014a42b0`, dopo avere calcolato il gap locale, la funzione costruisce uno score di selezione `fVar22` partendo da `item + 0x20`.
+
+Costanti chiuse dal binario:
+
+- `g_023908ec = 10.0f`
+- `g_02394288 = 0.30000001192092896f`
+- `g_02390124 = 1.0f`
+- `g_0238fee8 = 1.0`
+- `g_0240e3d8 = -0.699999988079071`
+- `g_0240e3e0 = 1.4285714626312256`
+
+L'esponente di selezione e':
+
+```c
+exponent = min(powf(10.0f * minimumScoreThreshold, 0.30000001192092896f), 1.0f);
+```
 
 Due casi osservati:
 
@@ -76,7 +99,7 @@ if (flags == 8) score *= extraScale;
 2. gap piu' stretto:
 
 ```c
-score = pow(gap * const, exponent) * item->field_20;
+score = pow(span * 1.4285714626312256, exponent) * item->field_20;
 if (flags == 8) score *= extraScale;
 ```
 
@@ -210,7 +233,17 @@ Implementazione clean-room aperta:
 - `core_reconstruction/include/mikecore/rawnotes/interval_gate.hpp`
 - `core_reconstruction/src/rawnotes/interval_gate.cpp`
 
-Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield e predicato peak-gate di `014a42b0`. Restano fuori ranking gap completo, mutazioni di lista e scoring finale di selezione.
+Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test class-gap tra coppie adiacenti `1/2`, controllo del terzo vicino, costo di pair-arbitration `(1.0 - field_28)^2 * field_20 * field_2c`, merge max dei campi float chiusi, OR del bitfield, predicato peak-gate di `014a42b0` e helper scalari del ranking gap:
+
+```c
+span = min(current.end - previous.start_or_leftFallback,
+           next.end_or_rightFallback - current.start);
+score = gapWeight(span) * field_20 * optionalClass8Scale;
+insertable = span > classSpecificMinGap;
+```
+
+Restano fuori la mutazione `GNList`, il refcount/ownership e il loop completo di
+selezione/inserimento di `014a42b0`.
 
 ---
 
@@ -218,8 +251,8 @@ Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test clas
 
 | Offset | Ruolo operativo | Confidence | Evidenza |
 |--------|-----------------|------------|----------|
-| `+0x10` | interval start (double) | High | `014a42b0` calcola gap verso il vicino successivo |
-| `+0x18` | interval end (double) | High | `014a42b0` calcola gap verso il vicino precedente |
+| `+0x10` | interval start (double) | High | `014a42b0` usa `current.start` e `previous.start` nel ranking span |
+| `+0x18` | interval end (double) | High | `014a42b0` usa `current.end` e `next.end` nel ranking span |
 | `+0x20` | base gate weight / base priority | High | `014a42b0` costruisce lo score di selezione partendo da questo campo |
 | `+0x28` | score-like scalar con optimum `1.0` | High | `014a3900` usa `(1.0 - field_28)^2`; doc 22 lo lega al claim path |
 | `+0x2c` | non-class1 ranking weight | High | `014a3550` lo scrive; `014a3900` lo usa come fattore moltiplicativo; `014af180` lo usa nei path non-class1 |
@@ -238,12 +271,15 @@ Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test clas
    - base gate weight
    - score-like scalar a target `1.0`
    - paired local peak gates `+0x34/+0x38`
+   - ranking span e score gap-weighted di `014a42b0`
 3. Questo chiarisce meglio come il DSP score prodotto a monte venga poi trasformato in candidati selezionabili downstream.
 
 ---
 
 ## Next Step
 
-1. Stringere il significato preciso di `+0x20` ai callsite di `014ba9e0`.
-2. Rifinire il significato finale del flag `8` ora che e' confermato come builder-assigned flag value.
-3. Nominare le due lane input di `014a3550` senza confonderle con soglie statiche.
+1. Ricostruire il loop completo `GNList` di `014a42b0` solo quando ownership e
+   ordine di inserimento saranno chiusi.
+2. Stringere il significato preciso di `+0x20` ai callsite di `014ba9e0`.
+3. Rifinire il significato finale del flag `8` ora che e' confermato come builder-assigned flag value.
+4. Nominare le due lane input di `014a3550` senza confonderle con soglie statiche.
