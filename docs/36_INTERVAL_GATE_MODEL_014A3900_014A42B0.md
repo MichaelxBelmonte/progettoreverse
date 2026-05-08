@@ -116,23 +116,35 @@ Questo riallinea bene `014a3900` con:
 
 ---
 
-## 4. `+0x2c` Resta Un Campo Forte Ma Non Ancora Nominabile
+## 4. `+0x2c / +0x30` Sono Ranking Scalars Specifici
 
-Qui la situazione va tenuta rigorosa.
+Aggiornamento `2026-05-08`: il writer `014a3550` e il matcher `014af180`
+chiudono il ruolo operativo dei due campi senza richiedere un nome musicale dei
+buffer input.
 
-Abbiamo un uso forte direttamente sul corridoio giusto:
+`014a3550` scrive:
 
-1. in `014a3900`:
-   - `+0x2c` moltiplica il costo `(1 - score)^2 * field_20`
-   - quindi si comporta come fattore di scala/evidenza nel merge
+```text
++0x2c = average(future non-class1 lane) -
+        min(+0x28, average(previous non-class1 lane))
 
-La lettura corretta oggi e':
++0x30 = average(future class1 lane) -
+        average(previous class1 lane)
+```
 
-- `+0x2c` e' un forte scalar secondario di relevance/scale
-- entra nell'arbitration cost downstream
-- il naming finale preciso resta aperto
+`014af180` poi usa:
 
-Non e' prudente ridurlo gia' a "time", "pitch", "distance" o "energy" puro.
+- `+0x30` per il path `classCode == 1`
+- `+0x2c` per i path non-class1
+
+`014a3900` usa `+0x2c` nel costo:
+
+```c
+cost = (1.0f - field_28)^2 * field_20 * field_2c;
+```
+
+Quindi `+0x2c` e `+0x30` sono ranking/selection weights class-specific. Il
+nome musicale finale delle due lane input resta aperto.
 
 ---
 
@@ -173,7 +185,10 @@ Implementazione clean-room aperta:
 - `core_reconstruction/include/mikecore/rawnotes/paired_peak_gate.hpp`
 - `core_reconstruction/src/rawnotes/paired_peak_gate.cpp`
 
-Perimetro implementato: solo il kernel ad alta confidence `state = (state + samplePair) * 0.5` e `peak = max(peak, state)` con write su `RawNoteSeparation +0x34/+0x38`. Il writer completo `014a3550` resta fuori dal codice per i campi `+0x2c/+0x30`.
+Perimetro implementato: kernel `state = (state + samplePair) * 0.5`,
+warmup sulla finestra precedente e peak sulla finestra successiva, con write su
+`RawNoteSeparation +0x34/+0x38`. Il subset numerico completo del writer e' ora
+in `rawnotes/paired_peak_gate.*`; traversal `GNList` e refcount restano fuori.
 
 ---
 
@@ -207,8 +222,8 @@ Perimetro implementato: solo i pezzi chiusi con confidence alta, cioe' test clas
 | `+0x18` | interval end (double) | High | `014a42b0` calcola gap verso il vicino precedente |
 | `+0x20` | base gate weight / base priority | High | `014a42b0` costruisce lo score di selezione partendo da questo campo |
 | `+0x28` | score-like scalar con optimum `1.0` | High | `014a3900` usa `(1.0 - field_28)^2`; doc 22 lo lega al claim path |
-| `+0x2c` | secondary relevance/scale scalar | Medium | `014a3550` lo scrive, `014a3900` lo usa come fattore moltiplicativo |
-| `+0x30` | writer-populated auxiliary scalar | Low-Medium | `014a3550` lo scrive; ruolo finale ancora da stringere senza analogie con `014f7360` |
+| `+0x2c` | non-class1 ranking weight | High | `014a3550` lo scrive; `014a3900` lo usa come fattore moltiplicativo; `014af180` lo usa nei path non-class1 |
+| `+0x30` | class1 ranking weight | High | `014a3550` lo scrive; `014af180` lo usa per `classCode == 1` |
 | `+0x34` | paired local smoothed peak gate A | High | max writer in `014a3550`, max merge in `014a3900`, OR gate in `014a42b0` |
 | `+0x38` | paired local smoothed peak gate B | High | max writer in `014a3550`, max merge in `014a3900`, OR gate in `014a42b0` |
 | `+0x3c` | class/state bitfield | High | OR bitwise, mask `0x33`, special value `8` |

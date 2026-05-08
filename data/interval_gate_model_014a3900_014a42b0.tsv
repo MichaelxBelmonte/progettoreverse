@@ -8,8 +8,8 @@ field	+0x10	interval_start_double	high	014a42b0 uses next_start - current_start 
 field	+0x18	interval_end_double	high	014a42b0 uses current_end - previous_end style gap arithmetic on double field
 field	+0x20	base_gate_weight	high	014a42b0 constructs selection score starting from this scalar and modulates it by gap
 field	+0x28	score_like_scalar_targeting_one	high	014a3900 uses (1.0 - field_28)^2 and docs 22/27 tie this field to claim score
-field	+0x2c	secondary_relevance_or_scale_scalar	medium	014a3550 writes this field and 014a3900 multiplies arbitration cost by it
-field	+0x30	writer_populated_auxiliary_scalar	low_medium	014a3550 writes this field but its exact downstream role inside MURawNoteSeparation remains open
+field	+0x2c	non_class1_ranking_weight	high	014a3550 writes future non-class1 average minus min(center score previous average); 014a3900 multiplies arbitration cost by it and 014af180 uses it outside classCode 1
+field	+0x30	class1_ranking_weight	high	014a3550 writes future class1 average minus previous class1 average; 014af180 uses it for classCode 1
 field	+0x34	paired_local_smoothed_peak_gate_a	high	014a3550 writes peak lane0 014a3900 max-merges it and 014a42b0 OR-gates param_3 against it
 field	+0x38	paired_local_smoothed_peak_gate_b	high	014a3550 writes peak lane1 014a3900 max-merges it and 014a42b0 OR-gates param_3 against it
 field	+0x3c	class_state_bitfield	high	014a3900 ors flags, 014a42b0 masks with 0x33 and treats value 8 specially

@@ -77,7 +77,7 @@ Il writer osservato e' coerente con:
 | Offset | Ruolo operativo oggi piu' prudente | Confidence |
 |--------|------------------------------------|------------|
 | `+0x28` | score-like scalar locale | High |
-| `+0x2c` | non-class1 ranking weight nel matcher `014af180` | Medium-High |
+| `+0x2c` | non-class1 ranking weight nel matcher `014af180` | High |
 | `+0x30` | class1 ranking weight nel matcher `014af180` | High |
 | `+0x34` | paired local smoothed peak gate A | High |
 | `+0x38` | paired local smoothed peak gate B | High |
@@ -113,7 +113,10 @@ Il carrier clean-room espone ora anche il subset very-high di `014ba9e0 / 014ba9
 
 Il subset constructor del peer sintetico `01484bc0` e' esposto come `make_synthetic_class1_peer(current)`: usa `current.start`, `+0x20 = 1.0f` e flag `0x40`. Inserimento ordinato nella lista e cleanup dei vicini restano fuori.
 
-Il kernel clean-room e' aperto in `rawnotes/paired_peak_gate.*`. Non implementa ancora il writer completo `014a3550`, perche' i campi `+0x2c/+0x30` restano sotto confidence piu' bassa del gate operativo.
+Il subset numerico clean-room e' aperto in `rawnotes/paired_peak_gate.*`.
+Implementa formule per `+0x28/+0x2c/+0x30/+0x34/+0x38` su item e lane
+caller-supplied. Restano fuori traversal `GNList`, retain/release e nome
+musicale finale delle due lane.
 
 Il subset clean-room dei consumer `014a3900 / 014a42b0` e' aperto in `rawnotes/interval_gate.*`: test class-gap `1/2`, controllo del terzo vicino, costo pair-arbitration, merge max/OR dei campi chiusi e predicato peak-gate. Il ranking gap completo e le mutazioni della lista restano fuori perimetro.
 

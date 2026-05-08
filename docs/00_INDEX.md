@@ -112,6 +112,7 @@ Progetto_Reverse_Mike/
 | [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md) | Chiusura del kernel `015c1480 / 015c0b60`: smoother esponenziale forward/reverse usato dalla pipeline raw-note classe `8` | Attivo |
 | [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md) | Tree operativo della codebase: directory, file curati, output generati, ruoli e policy di modifica | Attivo |
 | [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md) | Subset preprocessing classi `1/2`: wrapper `015c2d90`, branch output-only di `015c2da0`, high-shelf bidirezionale e baseline condiviso `014a2170` | Attivo |
+| [63_RAW_NOTE_METRIC_WRITER_014A3550.md](63_RAW_NOTE_METRIC_WRITER_014A3550.md) | Subset numerico del writer raw-note `014a3550`: formule per `+0x28/+0x2c/+0x30` e warmup/range dei peak gates `+0x34/+0x38` | Attivo |
 
 ## Tools
 
@@ -160,6 +161,7 @@ python3 tools/pipeline.py verify
 
 ## Ultime Aggiunte Doc
 
+- [63_RAW_NOTE_METRIC_WRITER_014A3550.md](63_RAW_NOTE_METRIC_WRITER_014A3550.md)
 - [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md)
 - [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md)
 - [60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md](60_EXPONENTIAL_SMOOTHER_015C1480_015C0B60.md)
