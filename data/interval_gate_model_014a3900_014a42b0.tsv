@@ -1,5 +1,5 @@
 scope	offset_or_func	role	confidence	evidence
-consumer	014a3900	adjacent_candidate_arbitration	high	uses (1-field_28)^2 weighted by field_20 and field_2c to choose between adjacent candidates
+consumer	014a3900	adjacent_candidate_arbitration	high	uses (1-field_28)^2 weighted by field_20 and field_2c to choose between adjacent candidates and writes +0x24 when absorbing a left class2 candidate
 consumer	014a42b0	interval_gap_gated_selection	high	computes ranking span from current +0x10/+0x18 against previous +0x10 and next +0x18 then scales field_20 by gap-aware factor
 implementation	014a3900_014a42b0	interval_gate_subset_clean_room	high	core_reconstruction implements class1/class2 class-gap eligibility third-neighbour guard pair arbitration cost max-field merge flag OR peak-gate predicate primary candidate gate scalar gap-ranking helpers one-pass candidate choice planner and vector-backed iterative selection planner; GNList mutation/refcount remain outside the gate
 constant	0x023b5570	one_float	very_high	lldb memory read shows 1.0f
@@ -13,6 +13,7 @@ constant	0x0240e3e0	gap_scale_double	very_high	__TEXT.__const decodes as double 
 field	+0x10	interval_start_double	high	014a42b0 uses current start and previous start in ranking span arithmetic
 field	+0x18	interval_end_double	high	014a42b0 uses current end and next end in ranking span arithmetic
 field	+0x20	base_gate_weight	high	014a42b0 constructs selection score starting from this scalar and modulates it by gap
+field	+0x24	absorbed_class2_base_strength	high	014a3900 copies left class2 +0x20 here when destination is not the left class2 candidate
 field	+0x28	score_like_scalar_targeting_one	high	014a3900 uses (1.0 - field_28)^2 and docs 22/27 tie this field to claim score
 field	+0x2c	non_class1_ranking_weight	high	014a3550 writes future non-class1 average minus min(center score previous average); 014a3900 multiplies arbitration cost by it and 014af180 uses it outside classCode 1
 field	+0x30	class1_ranking_weight	high	014a3550 writes future class1 average minus previous class1 average; 014af180 uses it for classCode 1

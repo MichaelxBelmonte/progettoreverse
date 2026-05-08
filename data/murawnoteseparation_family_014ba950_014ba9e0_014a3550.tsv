@@ -47,12 +47,13 @@ constant	g_0241c3ec	class12_shared_baseline_cutoff_7f	very_high	__TEXT.__const b
 constant	g_02395718	class12_biquad_gain_exp10_divisor_40_double	very_high	__TEXT.__const bytes at 0x02395718 decode as double 40.0 used in exp10(gain/40)
 constant	g_02411080	class12_biquad_two_pi_double	very_high	__TEXT.__const bytes at 0x02411080 decode as double 6.283185307179586 used for sin/cos cutoff angle
 writer	014a3550	downstream_metric_writer	high	populates +0x28 +0x2c +0x30 +0x34 +0x38 on separation items
-consumer	014a3900	adjacent_candidate_arbitration	high	reads +0x10 +0x18 +0x20 +0x28 +0x2c +0x34 +0x38 +0x3c
+consumer	014a3900	adjacent_candidate_arbitration	high	reads +0x10 +0x18 +0x20 +0x28 +0x2c +0x34 +0x38 +0x3c and writes +0x18/+0x24 on absorbed left class2 candidate
 consumer	014a42b0	gap_weighted_selection	high	reads +0x10 +0x18 +0x20 +0x34 +0x38 +0x3c and treats class 8 specially
 implementation	014a3900_014a42b0	interval_gate_subset_clean_room	high	core_reconstruction implements closed scalar/predicate pieces: class-gap eligibility, third-neighbour guard, arbitration cost, max-field merge, flag OR, peak-gate predicate, primary candidate gate, gap-ranking span/score helpers, one-pass candidate choice planner, vector-backed iterative selection planner
 field	+0x10	interval_start_double	very_high	set directly by 014ba9e0
 field	+0x18	interval_end_double	very_high	initialized equal to start by 014ba9e0 and later updated downstream
 field	+0x20	base_strength_or_gate_weight	high	set by 014ba9e0 from xmm1; builder origin is local run max for class 1/2 local contrast for class 8 and 1.0f for synthetic 0x40 peers
+field	+0x24	absorbed_class2_base_strength	high	014a3900 writes left class2 source +0x20 into destination +0x24 when the left class2 candidate is absorbed into the right candidate
 field	+0x28	score_like_scalar	high	written by 014a3550 and consumed by 014a3900 against target 1.0
 field	+0x2c	non_class1_ranking_weight	high	written by 014a3550 as future non-class1 average minus min(center score previous non-class1 average) and used by 014af180 for non-class1 score path
 field	+0x30	class1_ranking_weight	high	written by 014a3550 as future class1 average minus previous class1 average and used by 014af180 for classCode 1 score path

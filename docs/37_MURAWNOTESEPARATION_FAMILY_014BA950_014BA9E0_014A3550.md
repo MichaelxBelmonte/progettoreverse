@@ -76,6 +76,7 @@ Il writer osservato e' coerente con:
 
 | Offset | Ruolo operativo oggi piu' prudente | Confidence |
 |--------|------------------------------------|------------|
+| `+0x24` | absorbed class2 base strength scritto da `014a3900` | High |
 | `+0x28` | score-like scalar locale | High |
 | `+0x2c` | non-class1 ranking weight nel matcher `014af180` | High |
 | `+0x30` | class1 ranking weight nel matcher `014af180` | High |
@@ -84,6 +85,18 @@ Il writer osservato e' coerente con:
 | `+0x40` | selected match / linked peer pointer materializzato da `014af180` | Very High |
 
 I consumer `014a3900` e `014a42b0` restano coerenti con questa field map.
+
+Nota `014a3900`: quando il candidato sinistro ha `flags == 2` e viene assorbito
+in un destination diverso da se stesso, il consumer scrive:
+
+```c
+destination->+0x18 = left->+0x10;
+destination->+0x24 = left->+0x20;
+```
+
+Il core clean-room espone quindi `+0x24` come
+`absorbed_class2_base_strength`, senza estendere il significato oltre la copia
+osservata del base strength.
 
 ### `+0x34 / +0x38`: origine dal writer
 

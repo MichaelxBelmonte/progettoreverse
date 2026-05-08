@@ -96,6 +96,32 @@ namespace mikecore::rawnotes
         destination.class_state_flags |= source.class_state_flags;
     }
 
+    void apply_left_class2_absorption_metadata(
+        RawNoteSeparation& destination,
+        const RawNoteSeparation& left_candidate,
+        bool left_candidate_is_destination) noexcept
+    {
+        if (!left_candidate_is_destination &&
+            left_candidate.matches_class_code(raw_note_base_class_2)) {
+            destination.interval_end = left_candidate.interval_start;
+            destination.absorbed_class2_base_strength =
+                left_candidate.base_gate_strength;
+        }
+    }
+
+    void merge_raw_note_pair_fields(
+        RawNoteSeparation& destination,
+        const RawNoteSeparation& source,
+        const RawNoteSeparation& left_candidate,
+        bool left_candidate_is_destination) noexcept
+    {
+        apply_left_class2_absorption_metadata(
+            destination,
+            left_candidate,
+            left_candidate_is_destination);
+        merge_raw_note_max_fields(destination, source);
+    }
+
     bool passes_interval_peak_gate(
         const RawNoteSeparation& note,
         float base_gate_threshold,

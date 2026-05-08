@@ -169,6 +169,23 @@ cost = (1.0f - field_28)^2 * field_20 * field_2c;
 Quindi `+0x2c` e `+0x30` sono ranking/selection weights class-specific. Il
 nome musicale finale delle due lane input resta aperto.
 
+### `+0x24`: metadata di assorbimento class `2`
+
+Il disassembly di `014a3900` chiude anche una scrittura specifica che non fa
+parte del merge max:
+
+```c
+if (left.flags == 2 && destination != left) {
+    destination->field_18 = left->field_10;
+    destination->field_24 = left->field_20;
+}
+```
+
+Nel modello clean-room questo e' esposto come
+`absorbed_class2_base_strength`. Il nome e' volutamente operativo: il campo
+porta una copia del `base_gate_strength` del candidato sinistro class `2`
+assorbito, ma il ruolo musicale finale resta non nominato.
+
 ---
 
 ## 5. `+0x34 / +0x38` Sono Paired Local Peak Gates
@@ -279,6 +296,7 @@ del contenitore originale di `014a42b0`.
 | `+0x10` | interval start (double) | High | `014a42b0` usa `current.start` e `previous.start` nel ranking span |
 | `+0x18` | interval end (double) | High | `014a42b0` usa `current.end` e `next.end` nel ranking span |
 | `+0x20` | base gate weight / base priority | High | `014a42b0` costruisce lo score di selezione partendo da questo campo |
+| `+0x24` | absorbed class2 base strength | High | `014a3900` scrive `left.+0x20` qui quando un left class `2` viene assorbito |
 | `+0x28` | score-like scalar con optimum `1.0` | High | `014a3900` usa `(1.0 - field_28)^2`; doc 22 lo lega al claim path |
 | `+0x2c` | non-class1 ranking weight | High | `014a3550` lo scrive; `014a3900` lo usa come fattore moltiplicativo; `014af180` lo usa nei path non-class1 |
 | `+0x30` | class1 ranking weight | High | `014a3550` lo scrive; `014af180` lo usa per `classCode == 1` |

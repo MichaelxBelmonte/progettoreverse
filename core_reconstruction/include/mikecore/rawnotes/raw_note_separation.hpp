@@ -28,6 +28,7 @@ namespace mikecore::rawnotes
         double interval_end = 0.0;
 
         float base_gate_strength = 0.0f;
+        float absorbed_class2_base_strength = 0.0f;
         float score_like_scalar = 0.0f;
         float non_class1_ranking_weight = 0.0f;
         float class1_ranking_weight = 0.0f;

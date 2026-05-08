@@ -103,6 +103,17 @@ namespace mikecore::rawnotes
         RawNoteSeparation& destination,
         const RawNoteSeparation& source) noexcept;
 
+    void apply_left_class2_absorption_metadata(
+        RawNoteSeparation& destination,
+        const RawNoteSeparation& left_candidate,
+        bool left_candidate_is_destination) noexcept;
+
+    void merge_raw_note_pair_fields(
+        RawNoteSeparation& destination,
+        const RawNoteSeparation& source,
+        const RawNoteSeparation& left_candidate,
+        bool left_candidate_is_destination) noexcept;
+
     [[nodiscard]] bool passes_interval_peak_gate(
         const RawNoteSeparation& note,
         float base_gate_threshold,
