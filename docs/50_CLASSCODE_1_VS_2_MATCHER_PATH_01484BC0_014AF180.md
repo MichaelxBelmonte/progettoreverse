@@ -171,7 +171,7 @@ Il list target di find/insert non e' locale allo stack:
 
 Dopo aver trovato o creato il peer, il ramo `class 1` scorre in avanti la lista ausiliaria.
 
-Finche' `candidate.start < current.end`, rimuove i candidati con:
+Finche' `candidate.start <= current.end`, rimuove i candidati con:
 
 ```c
 (candidate->flags & 0x70) == 0
@@ -194,9 +194,14 @@ Implementazione clean-room chiusa:
   e marca il peer con `0x40`
 - `peer_cleanup_candidate_is_unclaimed(peer)` espone il predicato
   `(peer.flags & 0x70) == 0`
+- `plan_class1_peer_postprocess(current, auxiliaryPeers)` espone il planner
+  clean-room del ramo `class 1`: trova l'indice del peer esistente dentro la
+  lista ausiliaria, oppure calcola l'indice ordinato del peer sintetico
+  `0x40`; restituisce anche gli indici originali dei peer successivi da
+  pulire con il predicato `flags & 0x70`
 
-Restano fuori l'inserimento ordinato del peer sintetico nella lista ausiliaria
-e la rimozione mutante dei nodi `GNList`.
+Restano fuori retain/release e mutazione fisica dei nodi `GNList`; il planner
+usa solo `std::span` e indici.
 
 ---
 
@@ -253,7 +258,8 @@ Nota di chiusura successiva: `0x40` e' anche builder-assigned nel fallback sinte
 3. `MURawNoteSeparation + 0x40` va mantenuto come link strutturale, non derivabile al volo.
 4. I bit `0x20 / 0x40` non vanno piu' confusi con le classi base `1 / 2`.
 5. Il subset post-match non mutante e' ora implementato per propagation/claim
-   flags e predicato cleanup; resta fuori la mutazione della lista ausiliaria.
+   flags, predicato cleanup e piano vector-backed di insert/cleanup; resta
+   fuori la mutazione della lista ausiliaria `GNList`.
 
 ---
 

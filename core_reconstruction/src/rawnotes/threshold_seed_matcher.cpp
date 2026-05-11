@@ -268,4 +268,95 @@ namespace mikecore::rawnotes
     {
         return (peer.class_state_flags & raw_note_peer_claim_mask) == 0;
     }
+
+    std::size_t find_auxiliary_peer_index(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        const RawNoteSeparation* peer) noexcept
+    {
+        if (peer == nullptr) {
+            return raw_note_peer_index_not_found;
+        }
+
+        for (std::size_t index = 0; index < auxiliary_peers.size(); ++index) {
+            if (&auxiliary_peers[index] == peer) {
+                return index;
+            }
+        }
+        return raw_note_peer_index_not_found;
+    }
+
+    std::size_t class1_synthetic_peer_insertion_index(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        const RawNoteSeparation& current) noexcept
+    {
+        std::size_t index = 0;
+        while (index < auxiliary_peers.size() &&
+               auxiliary_peers[index].interval_start <= current.interval_start) {
+            ++index;
+        }
+        return index;
+    }
+
+    std::vector<std::size_t> collect_class1_peer_cleanup_indices(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        std::size_t first_original_index,
+        double current_end)
+    {
+        std::vector<std::size_t> indices;
+
+        for (std::size_t index = first_original_index;
+             index < auxiliary_peers.size();
+             ++index) {
+            const RawNoteSeparation& peer = auxiliary_peers[index];
+            if (current_end < peer.interval_start) {
+                break;
+            }
+
+            if (peer_cleanup_candidate_is_unclaimed(peer)) {
+                indices.push_back(index);
+            }
+        }
+
+        return indices;
+    }
+
+    Class1PeerPostprocessPlan plan_class1_peer_postprocess(
+        const RawNoteSeparation& current,
+        std::span<const RawNoteSeparation> auxiliary_peers)
+    {
+        Class1PeerPostprocessPlan plan{};
+        if (!current.matches_class_code(raw_note_base_class_1)) {
+            return plan;
+        }
+
+        plan.processed = true;
+
+        if (current.selected_match != nullptr) {
+            plan.existing_peer = true;
+            plan.peer_index =
+                find_auxiliary_peer_index(auxiliary_peers, current.selected_match);
+            plan.peer_index_resolved =
+                plan.peer_index != raw_note_peer_index_not_found;
+
+            if (plan.peer_index_resolved) {
+                plan.cleanup_original_indices = collect_class1_peer_cleanup_indices(
+                    auxiliary_peers,
+                    plan.peer_index + 1,
+                    current.interval_end);
+            }
+            return plan;
+        }
+
+        plan.synthetic_peer = true;
+        plan.peer_index = class1_synthetic_peer_insertion_index(
+            auxiliary_peers,
+            current);
+        plan.peer_index_resolved = true;
+        plan.synthetic_peer_value = make_synthetic_class1_peer(current);
+        plan.cleanup_original_indices = collect_class1_peer_cleanup_indices(
+            auxiliary_peers,
+            plan.peer_index,
+            current.interval_end);
+        return plan;
+    }
 }

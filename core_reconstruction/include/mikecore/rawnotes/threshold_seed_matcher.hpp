@@ -4,6 +4,7 @@
 
 #include <cstddef>
 #include <span>
+#include <vector>
 
 namespace mikecore::rawnotes
 {
@@ -30,6 +31,8 @@ namespace mikecore::rawnotes
     inline constexpr float raw_note_threshold_seed_floor = 0.7f;
     inline constexpr float raw_note_threshold_seed_reference_scale = 0.3f;
     inline constexpr float raw_note_threshold_seed_bridge_scale = 0.5f;
+    inline constexpr std::size_t raw_note_peer_index_not_found =
+        static_cast<std::size_t>(-1);
 
     struct LocalMatchWindow final
     {
@@ -58,6 +61,17 @@ namespace mikecore::rawnotes
     {
         std::size_t processed_count = 0;
         std::size_t matched_count = 0;
+    };
+
+    struct Class1PeerPostprocessPlan final
+    {
+        bool processed = false;
+        bool existing_peer = false;
+        bool synthetic_peer = false;
+        bool peer_index_resolved = false;
+        std::size_t peer_index = raw_note_peer_index_not_found;
+        RawNoteSeparation synthetic_peer_value{};
+        std::vector<std::size_t> cleanup_original_indices;
     };
 
     [[nodiscard]] float derive_direct_threshold_seed(
@@ -142,4 +156,21 @@ namespace mikecore::rawnotes
 
     [[nodiscard]] bool peer_cleanup_candidate_is_unclaimed(
         const RawNoteSeparation& peer) noexcept;
+
+    [[nodiscard]] std::size_t find_auxiliary_peer_index(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        const RawNoteSeparation* peer) noexcept;
+
+    [[nodiscard]] std::size_t class1_synthetic_peer_insertion_index(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        const RawNoteSeparation& current) noexcept;
+
+    [[nodiscard]] std::vector<std::size_t> collect_class1_peer_cleanup_indices(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        std::size_t first_original_index,
+        double current_end);
+
+    [[nodiscard]] Class1PeerPostprocessPlan plan_class1_peer_postprocess(
+        const RawNoteSeparation& current,
+        std::span<const RawNoteSeparation> auxiliary_peers);
 }
