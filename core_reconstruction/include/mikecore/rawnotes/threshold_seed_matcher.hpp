@@ -133,4 +133,13 @@ namespace mikecore::rawnotes
         float threshold_seed,
         double window_radius,
         double global_end) noexcept;
+
+    bool apply_class2_selected_peer_postprocess(
+        RawNoteSeparation& current) noexcept;
+
+    bool apply_class1_existing_peer_postprocess(
+        RawNoteSeparation& current) noexcept;
+
+    [[nodiscard]] bool peer_cleanup_candidate_is_unclaimed(
+        const RawNoteSeparation& peer) noexcept;
 }

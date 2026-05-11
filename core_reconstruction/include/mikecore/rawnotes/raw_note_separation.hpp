@@ -20,6 +20,10 @@ namespace mikecore::rawnotes
     inline constexpr std::uint32_t raw_note_observed_flag_0x10 = 0x10;
     inline constexpr std::uint32_t raw_note_selected_by_class2 = 0x20;
     inline constexpr std::uint32_t raw_note_selected_or_materialized_by_class1 = 0x40;
+    inline constexpr std::uint32_t raw_note_peer_claim_mask =
+        raw_note_observed_flag_0x10 |
+        raw_note_selected_by_class2 |
+        raw_note_selected_or_materialized_by_class1;
     inline constexpr float raw_note_synthetic_peer_base_strength = 1.0f;
 
     struct RawNoteSeparation final

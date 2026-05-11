@@ -1,6 +1,6 @@
 # 50 — ClassCode `1` vs `2` Matcher Path `0x01484bc0 / 0x014af180`
 
-**Ultimo aggiornamento:** 2026-04-22
+**Ultimo aggiornamento:** 2026-05-11
 
 ## Obiettivo
 
@@ -184,6 +184,20 @@ Questa e' la lettura operativa piu' prudente:
 - il ramo `class 1` compatta i peer vicini interni all'intervallo corrente
 - lascia vivere i peer gia' marcati da stati `0x10 / 0x20 / 0x40`
 
+Implementazione clean-room chiusa:
+
+- `apply_class2_selected_peer_postprocess(current)` replica il ramo class `2`
+  chiuso: copia `selected_match->start` in `current.start` e marca il peer con
+  `0x20`
+- `apply_class1_existing_peer_postprocess(current)` replica solo il ramo class
+  `1` con peer gia' esistente: copia `selected_match->start` in `current.start`
+  e marca il peer con `0x40`
+- `peer_cleanup_candidate_is_unclaimed(peer)` espone il predicato
+  `(peer.flags & 0x70) == 0`
+
+Restano fuori l'inserimento ordinato del peer sintetico nella lista ausiliaria
+e la rimozione mutante dei nodi `GNList`.
+
 ---
 
 ## 6. Relazione Con Il Modello Interval/Gate
@@ -238,6 +252,8 @@ Nota di chiusura successiva: `0x40` e' anche builder-assigned nel fallback sinte
    - cleanup dei peer vicini
 3. `MURawNoteSeparation + 0x40` va mantenuto come link strutturale, non derivabile al volo.
 4. I bit `0x20 / 0x40` non vanno piu' confusi con le classi base `1 / 2`.
+5. Il subset post-match non mutante e' ora implementato per propagation/claim
+   flags e predicato cleanup; resta fuori la mutazione della lista ausiliaria.
 
 ---
 

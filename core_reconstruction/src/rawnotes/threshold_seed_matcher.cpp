@@ -235,4 +235,37 @@ namespace mikecore::rawnotes
         }
         return result;
     }
+
+    bool apply_class2_selected_peer_postprocess(
+        RawNoteSeparation& current) noexcept
+    {
+        if (!current.matches_class_code(raw_note_base_class_2) ||
+            current.selected_match == nullptr) {
+            return false;
+        }
+
+        current.interval_start = current.selected_match->interval_start;
+        current.selected_match->class_state_flags |= raw_note_selected_by_class2;
+        return true;
+    }
+
+    bool apply_class1_existing_peer_postprocess(
+        RawNoteSeparation& current) noexcept
+    {
+        if (!current.matches_class_code(raw_note_base_class_1) ||
+            current.selected_match == nullptr) {
+            return false;
+        }
+
+        current.interval_start = current.selected_match->interval_start;
+        current.selected_match->class_state_flags |=
+            raw_note_selected_or_materialized_by_class1;
+        return true;
+    }
+
+    bool peer_cleanup_candidate_is_unclaimed(
+        const RawNoteSeparation& peer) noexcept
+    {
+        return (peer.class_state_flags & raw_note_peer_claim_mask) == 0;
+    }
 }

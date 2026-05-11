@@ -61,3 +61,4 @@ field	+0x34	paired_local_smoothed_peak_gate_a	high	written by 014a3550 from peak
 field	+0x38	paired_local_smoothed_peak_gate_b	high	written by 014a3550 from peak lane1 of half-smoothed two-buffer state; max-merged in 014a3900 and OR-gated in 014a42b0
 field	+0x3c	class_state_flag_set	very_high	set by 014ba9e0 callsite values 1 2 8 0x10 0x40 observed across analyzer and mono builder paths
 field	+0x40	selected_match_or_linked_peer_pointer	very_high	copied by 014ba950; 014af180 retains/stores winner and 01484bc0 consumes or synthesizes linked peers through this slot
+mask	+0x3c:0x70	peer_claim_cleanup_mask	high	01484bc0 cleanup removes only neighbours whose flags have none of 0x10 0x20 0x40 set
