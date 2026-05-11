@@ -9,3 +9,4 @@ function	014a74b0	multi_output_metric_writer_for_analyzer_gate_cluster	very_high
 constant	DAT_02394254	linked_field20_missing_or_empty_default_0_01	very_high	__TEXT.__const dump at 0x02394254 is 0x3c23d70a i.e. 0.01f; used as per-item missing-link fill and empty-list fallback
 constant	g_023b2c70	energy_relevant_neighbor_gap_limit_2_0	very_high	__TEXT.__const dump at 0x023b2c70 decodes as double 2.0 and gates nextStart-currentEnd before interval-ratio buffer append
 implementation	_allEnergyRelevantRegionRatio	clean_room_middle_interval_ratio	high	core_reconstruction implements consecutive-item interval ratio collection and sorted middle fallback 0.01f for the +0x100 aggregate without GNList traversal
+implementation	raw_note_analyzer_gate_cluster_subset	clean_room_partial_cluster_writer	high	core_reconstruction populates only +0x100 +0x104 +0x108 from raw-note spans; +0xf4 +0xf8 +0xfc remain outside this subset

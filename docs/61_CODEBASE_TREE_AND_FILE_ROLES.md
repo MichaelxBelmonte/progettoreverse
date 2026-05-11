@@ -185,7 +185,7 @@ core_reconstruction/
 | `runtime/analyzer_gate_cluster.hpp` | Struct dei sei scalar analyzer `+0xf4..+0x108`. |
 | `rawnotes/raw_note_separation.hpp` | Carrier clean-room `MURawNoteSeparation`, constructor `014ba9e0`, clone `014ba950` e helper constructor-only peer sintetico `01484bc0`. |
 | `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match, wrapper sequence-level su `std::span` e subset post-match `01484bc0` non mutante, incluso planner vector-backed di insert/cleanup class `1`; esclusi retain/release e mutazioni `GNList`. |
-| `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `014a74b0`: mediana ratio `_allEnergyRelevantRegionRatio`, `item->+0x40->+0x20`, mediana e coverage. |
+| `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `014a74b0`: mediana ratio `_allEnergyRelevantRegionRatio`, `item->+0x40->+0x20`, mediana, coverage e writer parziale dei soli campi `+0x100/+0x104/+0x108`. |
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
 | `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: class-gap `1/2`, third-neighbour guard, costo pair-arbitration, metadata class `2` a `+0x24`, merge max/OR, predicato peak-gate, predicato/collector candidato primario, helper scalari ranking span/score, planner one-pass e planner iterativo vector-backed; esclusi contenitore/refcount `GNList` originali. |
 | `rawnotes/paired_peak_gate.*` | Subset numerico `014a3550`: metriche `+0x28/+0x2c/+0x30` e peak gates `+0x34/+0x38`, senza traversal `GNList`/refcount. |

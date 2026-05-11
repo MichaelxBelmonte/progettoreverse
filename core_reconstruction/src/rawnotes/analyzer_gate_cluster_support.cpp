@@ -96,4 +96,22 @@ namespace mikecore::rawnotes
         aggregates.coverage_ratio = linked_field20_coverage_ratio(items);
         return aggregates;
     }
+
+    runtime::AnalyzerGateCluster compute_raw_note_analyzer_gate_cluster_subset(
+        std::span<const RawNoteSeparation> items,
+        double neighbor_gap_limit)
+    {
+        runtime::AnalyzerGateCluster cluster{};
+
+        cluster.all_energy_relevant_region_ratio =
+            compute_energy_relevant_region_ratio(items, neighbor_gap_limit);
+
+        const LinkedField20Aggregates linked_field20 =
+            compute_linked_field20_aggregates(items);
+        cluster.all_attack_peak_quality = linked_field20.middle_scalar;
+        cluster.all_attack_peak_to_energy_region_ratio =
+            linked_field20.coverage_ratio;
+
+        return cluster;
+    }
 }

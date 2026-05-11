@@ -1,6 +1,7 @@
 #pragma once
 
 #include "mikecore/rawnotes/raw_note_separation.hpp"
+#include "mikecore/runtime/analyzer_gate_cluster.hpp"
 
 #include <optional>
 #include <span>
@@ -55,4 +56,8 @@ namespace mikecore::rawnotes
 
     [[nodiscard]] LinkedField20Aggregates compute_linked_field20_aggregates(
         std::span<const RawNoteSeparation> items) noexcept;
+
+    [[nodiscard]] runtime::AnalyzerGateCluster compute_raw_note_analyzer_gate_cluster_subset(
+        std::span<const RawNoteSeparation> items,
+        double neighbor_gap_limit = energy_relevant_region_neighbor_gap_limit);
 }

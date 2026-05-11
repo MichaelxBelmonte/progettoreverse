@@ -182,6 +182,10 @@ Subset clean-room implementato:
 
 - `collect_energy_relevant_region_ratios(items, neighborGapLimit)`
 - `compute_energy_relevant_region_ratio(items, neighborGapLimit)`
+- `compute_raw_note_analyzer_gate_cluster_subset(items, neighborGapLimit)`
+  popola solo `+0x100`, `+0x104` e `+0x108`; i campi `+0xf4`,
+  `+0xf8` e `+0xfc` restano fuori da questo subset perche' dipendono da
+  formule e traversal non inclusi qui
 
 ### `_allAttackPeakQuality` (`+0x104`)
 

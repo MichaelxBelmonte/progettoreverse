@@ -273,6 +273,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
   - mediana `_allEnergyRelevantRegionRatio` su ratio consecutivi con gap limit `2.0`
   - raccolta `item->+0x40->+0x20`
   - `linked-field20 coverage ratio`
+  - writer parziale `AnalyzerGateCluster` solo per `+0x100/+0x104/+0x108`
   - field map canonica `+0xf4..+0x108` chiusa via property registration di `MUElementAnalyzer`
 
 Build locale verificata il `2026-04-22` con target:
