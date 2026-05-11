@@ -34,6 +34,42 @@ namespace mikecore::rawnotes
         return scalars;
     }
 
+    std::vector<float> collect_energy_relevant_region_ratios(
+        std::span<const RawNoteSeparation> items,
+        double neighbor_gap_limit)
+    {
+        std::vector<float> ratios;
+        if (items.size() < 2) {
+            return ratios;
+        }
+
+        ratios.reserve(items.size() - 1);
+        for (std::size_t index = 0; index + 1 < items.size(); ++index) {
+            const RawNoteSeparation& current = items[index];
+            const RawNoteSeparation& next = items[index + 1];
+            if (next.interval_start - current.interval_end >= neighbor_gap_limit) {
+                continue;
+            }
+
+            ratios.push_back(static_cast<float>(
+                (current.interval_end - current.interval_start) /
+                (next.interval_start - current.interval_start)));
+        }
+
+        return ratios;
+    }
+
+    float compute_energy_relevant_region_ratio(
+        std::span<const RawNoteSeparation> items,
+        double neighbor_gap_limit)
+    {
+        const std::vector<float> ratios =
+            collect_energy_relevant_region_ratios(items, neighbor_gap_limit);
+        return middle_sorted_value_or_default(
+            ratios,
+            energy_relevant_region_empty_fallback);
+    }
+
     float linked_field20_coverage_ratio(std::span<const RawNoteSeparation> items) noexcept
     {
         if (items.empty()) {

@@ -270,6 +270,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
   solo per:
   - estrazione middle-value da buffer ordinato
   - default scalar `0.01f` del path `+0x104`
+  - mediana `_allEnergyRelevantRegionRatio` su ratio consecutivi con gap limit `2.0`
   - raccolta `item->+0x40->+0x20`
   - `linked-field20 coverage ratio`
   - field map canonica `+0xf4..+0x108` chiusa via property registration di `MUElementAnalyzer`

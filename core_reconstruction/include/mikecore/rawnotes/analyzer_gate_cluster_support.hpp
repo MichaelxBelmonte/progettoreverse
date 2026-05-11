@@ -26,6 +26,8 @@ namespace mikecore::rawnotes
 
     inline constexpr float linked_field20_default_scalar = 0.01f;
     inline constexpr float linked_field20_empty_list_fallback = 0.01f;
+    inline constexpr double energy_relevant_region_neighbor_gap_limit = 2.0;
+    inline constexpr float energy_relevant_region_empty_fallback = 0.01f;
 
     struct LinkedField20Aggregates final
     {
@@ -39,6 +41,14 @@ namespace mikecore::rawnotes
 
     [[nodiscard]] std::vector<float> collect_linked_field20_scalars(
         std::span<const RawNoteSeparation> items);
+
+    [[nodiscard]] std::vector<float> collect_energy_relevant_region_ratios(
+        std::span<const RawNoteSeparation> items,
+        double neighbor_gap_limit = energy_relevant_region_neighbor_gap_limit);
+
+    [[nodiscard]] float compute_energy_relevant_region_ratio(
+        std::span<const RawNoteSeparation> items,
+        double neighbor_gap_limit = energy_relevant_region_neighbor_gap_limit);
 
     [[nodiscard]] float linked_field20_coverage_ratio(
         std::span<const RawNoteSeparation> items) noexcept;

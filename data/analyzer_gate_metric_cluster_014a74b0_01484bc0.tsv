@@ -7,3 +7,5 @@ MUElementAnalyzer+0x104	_allAttackPeakQuality	very_high	property registration 01
 MUElementAnalyzer+0x108	_allAttackPeakToEnergyRegionRatio	very_high	property registration 01141790 binds +0x108 to _allAttackPeakToEnergyRegionRatio and 014a74b0 stores count_non_null_item_plus_0x40 divided by total_count
 function	014a74b0	multi_output_metric_writer_for_analyzer_gate_cluster	very_high	callsite in 01484bc0 passes six contiguous output pointers self+0xf4 through self+0x108
 constant	DAT_02394254	linked_field20_missing_or_empty_default_0_01	very_high	__TEXT.__const dump at 0x02394254 is 0x3c23d70a i.e. 0.01f; used as per-item missing-link fill and empty-list fallback
+constant	g_023b2c70	energy_relevant_neighbor_gap_limit_2_0	very_high	__TEXT.__const dump at 0x023b2c70 decodes as double 2.0 and gates nextStart-currentEnd before interval-ratio buffer append
+implementation	_allEnergyRelevantRegionRatio	clean_room_middle_interval_ratio	high	core_reconstruction implements consecutive-item interval ratio collection and sorted middle fallback 0.01f for the +0x100 aggregate without GNList traversal

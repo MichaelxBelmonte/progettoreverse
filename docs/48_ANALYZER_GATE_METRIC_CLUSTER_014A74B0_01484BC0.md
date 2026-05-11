@@ -1,6 +1,6 @@
 # 48 — Analyzer Gate Metric Cluster `0x014a74b0 / 0x01484bc0`
 
-**Ultimo aggiornamento:** 2026-04-09
+**Ultimo aggiornamento:** 2026-05-11
 
 ## Obiettivo
 
@@ -167,6 +167,21 @@ Dal corpo C locale questo buffer nasce dal ramo:
 quindi la lettura piu' prudente oggi e':
 
 - mediana di overlap / adjacency ratio locale
+
+Il gate di inclusione del vicino e' chiuso dal branch:
+
+```c
+if (nextStart - currentEnd < 2.0)
+```
+
+`g_023b2c70` e' stato letto da `__TEXT,__const` a `0x023b2c70` come double
+`2.0`. Se nessun ratio entra nel buffer, il fallback osservato e' ancora
+`DAT_02394254 = 0.01f`.
+
+Subset clean-room implementato:
+
+- `collect_energy_relevant_region_ratios(items, neighborGapLimit)`
+- `compute_energy_relevant_region_ratio(items, neighborGapLimit)`
 
 ### `_allAttackPeakQuality` (`+0x104`)
 
