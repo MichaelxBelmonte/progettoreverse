@@ -251,7 +251,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
   - carrier `MURawNoteSeparation`
   - constructor/clone `014ba9e0 / 014ba950`
   - constructor-only peer sintetico `01484bc0` con strength `1.0f` e flag `0x40`
-  - post-match helper `01484bc0`: pipeline class `2` matcher-then-propagation su span, claim class `1`, predicato cleanup `flags & 0x70`, piano vector-backed di insert sintetico/cleanup class `1` e sequencer con cursore `uVar51`
+  - post-match helper `01484bc0`: pipeline class `2` matcher-then-propagation su span, pipeline-plan class `1` matcher-then-postprocess con cursore `uVar51`, predicato cleanup `flags & 0x70`
   - finestra locale del matcher
   - contratto `threshold-seeded matcher`
   - wrapper sequence-level del matcher `014af180` su `std::span`, senza retain/release `GNList`

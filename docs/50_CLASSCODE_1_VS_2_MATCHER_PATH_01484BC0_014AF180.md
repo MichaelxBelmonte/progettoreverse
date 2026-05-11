@@ -212,6 +212,10 @@ Implementazione clean-room chiusa:
   non mutante: mantiene il cursore `uVar51` tra gli item class `1` e si ferma
   quando un peer esistente non viene risolto nella lista ausiliaria, equivalente
   al branch `if ((int)uVar51 == -1) break`
+- `plan_class1_threshold_seeded_pipeline(...)` replica il perimetro prudente
+  del ramo class `1`: esegue `014af180(classCode=1)` per materializzare
+  `+0x40`, poi produce il piano post-match con cursore `uVar51`; non applica
+  retain/release, insert o remove `GNList`
 
 Restano fuori retain/release e mutazione fisica dei nodi `GNList`; il planner
 usa solo `std::span` e indici.

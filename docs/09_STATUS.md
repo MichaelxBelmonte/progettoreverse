@@ -115,7 +115,7 @@
 - feature locali aperte solo per `spectralMedianFrequencyHz`
 - raw-note layer aperto per carrier `MURawNoteSeparation`, contratto matcher seedato e builder candidati classe `8`
 - raw-note carrier esteso con constructor/clone clean-room `014ba9e0 / 014ba950`
-- raw-note peer sintetico/post-match `01484bc0` aperto nel subset corrente: constructor `start=current.start`, strength `1.0f`, flag `0x40`; pipeline class `2` matcher-then-propagation su span, claim class `1`, predicato cleanup `flags & 0x70`, piano vector-backed di insert sintetico/cleanup class `1` e sequencer con cursore `uVar51`
+- raw-note peer sintetico/post-match `01484bc0` aperto nel subset corrente: constructor `start=current.start`, strength `1.0f`, flag `0x40`; pipeline class `2` matcher-then-propagation su span; pipeline-plan class `1` matcher-then-postprocess con cursore `uVar51`; predicato cleanup `flags & 0x70`
 - raw-note matcher esteso con finestra locale canonicale e wrapper sequence-level `014af180` su `std::span`
 - raw-note smoother esteso per scalar pieces e loop mode `0` di `015c1480 / 015c0b60`: `alpha = expf(-2.5f / width)`, radius da `logf(alpha)`, recurrence one-pole, bzero prefix, warm-up sinistro, forward buffer, tail destro, warm-up reverse e reverse buffer
 - raw-note builder classe `8` operativo in clean-room per mask, filtro run corte, mapping linked-successor item a range protetti, delta, contrasto centrato, smoothing breve/lunga e gate `max-min`; resta prudente il nome canonico dell'owner che fornisce quegli item
