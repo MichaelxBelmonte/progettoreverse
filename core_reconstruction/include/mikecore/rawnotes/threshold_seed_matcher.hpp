@@ -91,6 +91,12 @@ namespace mikecore::rawnotes
         std::size_t processed_count = 0;
     };
 
+    struct Class2ThresholdSeededPipelineResult final
+    {
+        ThresholdSeedMatcherSequenceResult matcher;
+        PeerPostprocessSequenceResult postprocess;
+    };
+
     [[nodiscard]] float derive_direct_threshold_seed(
         float cached_spectral_reference) noexcept;
 
@@ -161,6 +167,14 @@ namespace mikecore::rawnotes
         std::span<RawNoteSeparation> current_items,
         std::span<RawNoteSeparation> candidates,
         std::uint32_t class_code,
+        float threshold_seed,
+        double window_radius,
+        double global_end) noexcept;
+
+    [[nodiscard]] Class2ThresholdSeededPipelineResult
+    run_class2_threshold_seeded_pipeline(
+        std::span<RawNoteSeparation> current_items,
+        std::span<RawNoteSeparation> candidates,
         float threshold_seed,
         double window_radius,
         double global_end) noexcept;

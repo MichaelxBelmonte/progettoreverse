@@ -237,6 +237,26 @@ namespace mikecore::rawnotes
         return result;
     }
 
+    Class2ThresholdSeededPipelineResult run_class2_threshold_seeded_pipeline(
+        std::span<RawNoteSeparation> current_items,
+        std::span<RawNoteSeparation> candidates,
+        float threshold_seed,
+        double window_radius,
+        double global_end) noexcept
+    {
+        Class2ThresholdSeededPipelineResult result{};
+        result.matcher = match_threshold_seeded_sequence(
+            current_items,
+            candidates,
+            raw_note_base_class_2,
+            threshold_seed,
+            window_radius,
+            global_end);
+        result.postprocess =
+            apply_class2_selected_peer_postprocess_sequence(current_items);
+        return result;
+    }
+
     bool apply_class2_selected_peer_postprocess(
         RawNoteSeparation& current) noexcept
     {
