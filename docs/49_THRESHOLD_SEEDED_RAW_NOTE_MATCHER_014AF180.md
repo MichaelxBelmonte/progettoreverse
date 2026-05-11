@@ -1,6 +1,6 @@
 # 49 — Threshold-Seeded Raw Note Matcher `0x014af180`
 
-**Ultimo aggiornamento:** 2026-04-30
+**Ultimo aggiornamento:** 2026-05-11
 
 ## Obiettivo
 
@@ -207,6 +207,33 @@ Questo spiega bene perche' `014a74b0` possa poi leggere:
 
 e costruire su quella lista le metriche `+0x104 / +0x108`.
 
+### Implementazione clean-room del loop
+
+Il core espone ora anche il wrapper di sequenza:
+
+```c
+match_threshold_seeded_sequence(
+    currentItems,
+    candidates,
+    classCode,
+    thresholdSeed,
+    windowRadius,
+    globalEnd);
+```
+
+La policy implementata e' la parte chiusa di `014af180`:
+
+- processa solo `current.flags == classCode`
+- deriva la finestra locale dal current e dal precedente nello span primario
+- seleziona il best candidate con lo score class-specific gia' documentato
+- scrive `current.selected_match = winner`
+- scrive `nullptr` quando nessun winner e' trovato
+
+Differenza intenzionale rispetto al binario: il wrapper clean-room scorre lo
+span candidato completo e non replica l'indice incrementale `GNList`/retain/release.
+Il risultato di matching resta equivalente per input ordinati e senza side effect
+di ownership, mentre la semantica del contenitore originale resta fuori gate.
+
 ---
 
 ## 7. Relazione Con `014a74b0`
@@ -267,6 +294,8 @@ Quindi il corridoio reale e':
    - distance weight `1.0 - abs(deltaStart) / windowRadius`
    - moltiplicatore class-specific `+0x30` oppure `+0x2c`
    - gate comune `+0x20`
+8. Il loop sequence-level e' ora disponibile in clean-room su `std::span`, con
+   materializzazione del link `+0x40` modellata come `selected_match`.
 
 Il dettaglio post-match e' ora fissato in [50_CLASSCODE_1_VS_2_MATCHER_PATH_01484BC0_014AF180.md](50_CLASSCODE_1_VS_2_MATCHER_PATH_01484BC0_014AF180.md).
 

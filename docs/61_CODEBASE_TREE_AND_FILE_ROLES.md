@@ -184,7 +184,7 @@ core_reconstruction/
 | `runtime/shared_descriptor_cache.*` | Cache descriptor condivisa e conversione sample/index. |
 | `runtime/analyzer_gate_cluster.hpp` | Struct dei sei scalar analyzer `+0xf4..+0x108`. |
 | `rawnotes/raw_note_separation.hpp` | Carrier clean-room `MURawNoteSeparation`, constructor `014ba9e0`, clone `014ba950` e helper constructor-only peer sintetico `01484bc0`. |
-| `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match. |
+| `rawnotes/threshold_seed_matcher.*` | Matcher seedato `014af180`: seed, finestra, score, best match e wrapper sequence-level su `std::span`; esclusi retain/release `GNList`. |
 | `rawnotes/analyzer_gate_cluster_support.*` | Aggregati `item->+0x40->+0x20`, mediana e coverage. |
 | `rawnotes/exponential_smoother.*` | Smoother `015c1480 / 015c0b60`, inclusi scalar pieces e loop mode `0` usato dal path class `8`. |
 | `rawnotes/interval_gate.*` | Subset `014a3900 / 014a42b0`: class-gap `1/2`, third-neighbour guard, costo pair-arbitration, metadata class `2` a `+0x24`, merge max/OR, predicato peak-gate, predicato/collector candidato primario, helper scalari ranking span/score, planner one-pass e planner iterativo vector-backed; esclusi contenitore/refcount `GNList` originali. |

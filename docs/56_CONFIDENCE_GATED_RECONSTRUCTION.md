@@ -253,6 +253,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
   - constructor-only peer sintetico `01484bc0` con strength `1.0f` e flag `0x40`
   - finestra locale del matcher
   - contratto `threshold-seeded matcher`
+  - wrapper sequence-level del matcher `014af180` su `std::span`, senza retain/release `GNList`
   - seed dinamico da cached spectral reference:
     `max(0.7f, reference * 0.3f)` e bridge `* 0.5f`
   - score di selezione candidato:

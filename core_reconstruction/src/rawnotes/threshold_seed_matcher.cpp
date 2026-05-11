@@ -51,10 +51,27 @@ namespace mikecore::rawnotes
         float threshold_seed,
         double global_end) noexcept
     {
+        return make_threshold_seed_matcher_query(
+            current,
+            previous,
+            class_code,
+            threshold_seed,
+            raw_note_match_window_radius,
+            global_end);
+    }
+
+    ThresholdSeedMatcherQuery make_threshold_seed_matcher_query(
+        const RawNoteSeparation& current,
+        const RawNoteSeparation* previous,
+        std::uint32_t class_code,
+        float threshold_seed,
+        double window_radius,
+        double global_end) noexcept
+    {
         const LocalMatchWindow window = derive_local_match_window(
             current,
             previous,
-            raw_note_match_window_radius,
+            window_radius,
             global_end);
 
         ThresholdSeedMatcherQuery query{};
@@ -62,7 +79,7 @@ namespace mikecore::rawnotes
         query.threshold_seed = threshold_seed;
         query.lower_time_bound = window.lower_time_bound;
         query.upper_time_bound = window.upper_time_bound;
-        query.window_radius = raw_note_match_window_radius;
+        query.window_radius = window_radius;
         return query;
     }
 
@@ -144,5 +161,78 @@ namespace mikecore::rawnotes
         RawNoteSeparation* winner) noexcept
     {
         current.selected_match = winner;
+    }
+
+    ThresholdSeedMatcherStep match_threshold_seeded_item(
+        std::span<RawNoteSeparation> current_items,
+        std::size_t current_index,
+        std::span<RawNoteSeparation> candidates,
+        std::uint32_t class_code,
+        float threshold_seed,
+        double window_radius,
+        double global_end) noexcept
+    {
+        ThresholdSeedMatcherStep step{};
+        step.current_index = current_index;
+
+        if (current_index >= current_items.size()) {
+            return step;
+        }
+
+        RawNoteSeparation& current = current_items[current_index];
+        if (!current.matches_class_code(class_code)) {
+            return step;
+        }
+
+        const RawNoteSeparation* previous =
+            current_index > 0 ? &current_items[current_index - 1] : nullptr;
+        const ThresholdSeedMatcherQuery query = make_threshold_seed_matcher_query(
+            current,
+            previous,
+            class_code,
+            threshold_seed,
+            window_radius,
+            global_end);
+
+        RawNoteSeparation* winner =
+            select_best_candidate_match(current, candidates, query);
+        materialize_selected_match(current, winner);
+
+        step.processed = true;
+        if (winner != nullptr) {
+            step.matched = true;
+            step.candidate_index =
+                static_cast<std::size_t>(winner - candidates.data());
+        }
+        return step;
+    }
+
+    ThresholdSeedMatcherSequenceResult match_threshold_seeded_sequence(
+        std::span<RawNoteSeparation> current_items,
+        std::span<RawNoteSeparation> candidates,
+        std::uint32_t class_code,
+        float threshold_seed,
+        double window_radius,
+        double global_end) noexcept
+    {
+        ThresholdSeedMatcherSequenceResult result{};
+        for (std::size_t index = 0; index < current_items.size(); ++index) {
+            const ThresholdSeedMatcherStep step = match_threshold_seeded_item(
+                current_items,
+                index,
+                candidates,
+                class_code,
+                threshold_seed,
+                window_radius,
+                global_end);
+
+            if (step.processed) {
+                ++result.processed_count;
+            }
+            if (step.matched) {
+                ++result.matched_count;
+            }
+        }
+        return result;
     }
 }

@@ -116,7 +116,7 @@
 - raw-note layer aperto per carrier `MURawNoteSeparation`, contratto matcher seedato e builder candidati classe `8`
 - raw-note carrier esteso con constructor/clone clean-room `014ba9e0 / 014ba950`
 - raw-note peer sintetico `01484bc0` aperto solo nel constructor subset: `start=current.start`, strength `1.0f`, flag `0x40`
-- raw-note matcher esteso con finestra locale canonicale
+- raw-note matcher esteso con finestra locale canonicale e wrapper sequence-level `014af180` su `std::span`
 - raw-note smoother esteso per scalar pieces e loop mode `0` di `015c1480 / 015c0b60`: `alpha = expf(-2.5f / width)`, radius da `logf(alpha)`, recurrence one-pole, bzero prefix, warm-up sinistro, forward buffer, tail destro, warm-up reverse e reverse buffer
 - raw-note builder classe `8` operativo in clean-room per mask, filtro run corte, mapping linked-successor item a range protetti, delta, contrasto centrato, smoothing breve/lunga e gate `max-min`; resta prudente il nome canonico dell'owner che fornisce quegli item
 - raw-note metric writer aperto per il subset numerico `014a3550`: `+0x28`, ranking weights `+0x2c/+0x30` e peak gates `+0x34/+0x38`; restano fuori traversal `GNList` e refcount

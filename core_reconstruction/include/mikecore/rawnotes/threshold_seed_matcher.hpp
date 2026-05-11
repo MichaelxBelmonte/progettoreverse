@@ -2,6 +2,7 @@
 
 #include "mikecore/rawnotes/raw_note_separation.hpp"
 
+#include <cstddef>
 #include <span>
 
 namespace mikecore::rawnotes
@@ -45,6 +46,20 @@ namespace mikecore::rawnotes
         double window_radius = raw_note_match_window_radius;
     };
 
+    struct ThresholdSeedMatcherStep final
+    {
+        bool processed = false;
+        bool matched = false;
+        std::size_t current_index = 0;
+        std::size_t candidate_index = 0;
+    };
+
+    struct ThresholdSeedMatcherSequenceResult final
+    {
+        std::size_t processed_count = 0;
+        std::size_t matched_count = 0;
+    };
+
     [[nodiscard]] float derive_direct_threshold_seed(
         float cached_spectral_reference) noexcept;
 
@@ -62,6 +77,14 @@ namespace mikecore::rawnotes
         const RawNoteSeparation* previous,
         std::uint32_t class_code,
         float threshold_seed,
+        double global_end) noexcept;
+
+    [[nodiscard]] ThresholdSeedMatcherQuery make_threshold_seed_matcher_query(
+        const RawNoteSeparation& current,
+        const RawNoteSeparation* previous,
+        std::uint32_t class_code,
+        float threshold_seed,
+        double window_radius,
         double global_end) noexcept;
 
     [[nodiscard]] bool candidate_is_inside_window(
@@ -93,4 +116,21 @@ namespace mikecore::rawnotes
     void materialize_selected_match(
         RawNoteSeparation& current,
         RawNoteSeparation* winner) noexcept;
+
+    [[nodiscard]] ThresholdSeedMatcherStep match_threshold_seeded_item(
+        std::span<RawNoteSeparation> current_items,
+        std::size_t current_index,
+        std::span<RawNoteSeparation> candidates,
+        std::uint32_t class_code,
+        float threshold_seed,
+        double window_radius,
+        double global_end) noexcept;
+
+    [[nodiscard]] ThresholdSeedMatcherSequenceResult match_threshold_seeded_sequence(
+        std::span<RawNoteSeparation> current_items,
+        std::span<RawNoteSeparation> candidates,
+        std::uint32_t class_code,
+        float threshold_seed,
+        double window_radius,
+        double global_end) noexcept;
 }
