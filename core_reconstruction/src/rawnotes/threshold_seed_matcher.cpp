@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <utility>
 
 namespace mikecore::rawnotes
 {
@@ -379,5 +380,46 @@ namespace mikecore::rawnotes
             plan.peer_index,
             current.interval_end);
         return plan;
+    }
+
+    Class1PeerPostprocessSequencePlan plan_class1_peer_postprocess_sequence(
+        std::span<const RawNoteSeparation> current_items,
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        std::size_t first_search_index)
+    {
+        Class1PeerPostprocessSequencePlan sequence{};
+        sequence.final_search_index =
+            std::min(first_search_index, auxiliary_peers.size());
+        sequence.plans.reserve(current_items.size());
+
+        for (const RawNoteSeparation& current : current_items) {
+            Class1PeerPostprocessPlan plan = plan_class1_peer_postprocess(
+                current,
+                auxiliary_peers,
+                sequence.final_search_index);
+
+            if (!plan.processed) {
+                continue;
+            }
+
+            ++sequence.processed_count;
+            if (plan.existing_peer) {
+                ++sequence.existing_peer_count;
+            }
+            if (plan.synthetic_peer) {
+                ++sequence.synthetic_peer_count;
+            }
+            if (!plan.peer_index_resolved) {
+                ++sequence.unresolved_peer_count;
+                sequence.stopped_on_unresolved_peer = true;
+                sequence.plans.push_back(std::move(plan));
+                break;
+            }
+
+            sequence.final_search_index = plan.peer_index;
+            sequence.plans.push_back(std::move(plan));
+        }
+
+        return sequence;
     }
 }

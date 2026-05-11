@@ -75,6 +75,17 @@ namespace mikecore::rawnotes
         std::vector<std::size_t> cleanup_original_indices;
     };
 
+    struct Class1PeerPostprocessSequencePlan final
+    {
+        std::vector<Class1PeerPostprocessPlan> plans;
+        std::size_t processed_count = 0;
+        std::size_t existing_peer_count = 0;
+        std::size_t synthetic_peer_count = 0;
+        std::size_t unresolved_peer_count = 0;
+        std::size_t final_search_index = 0;
+        bool stopped_on_unresolved_peer = false;
+    };
+
     [[nodiscard]] float derive_direct_threshold_seed(
         float cached_spectral_reference) noexcept;
 
@@ -184,4 +195,10 @@ namespace mikecore::rawnotes
         const RawNoteSeparation& current,
         std::span<const RawNoteSeparation> auxiliary_peers,
         std::size_t first_search_index);
+
+    [[nodiscard]] Class1PeerPostprocessSequencePlan
+    plan_class1_peer_postprocess_sequence(
+        std::span<const RawNoteSeparation> current_items,
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        std::size_t first_search_index = 0);
 }

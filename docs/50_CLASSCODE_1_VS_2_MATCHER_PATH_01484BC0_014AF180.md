@@ -202,6 +202,10 @@ Implementazione clean-room chiusa:
 - l'overload con `first_search_index` modella il cursore `uVar51` osservato
   nel fallback sintetico: la scan ordinata puo' ripartire dall'indice
   precedente invece che da zero
+- `plan_class1_peer_postprocess_sequence(...)` replica il loop esterno
+  non mutante: mantiene il cursore `uVar51` tra gli item class `1` e si ferma
+  quando un peer esistente non viene risolto nella lista ausiliaria, equivalente
+  al branch `if ((int)uVar51 == -1) break`
 
 Restano fuori retain/release e mutazione fisica dei nodi `GNList`; il planner
 usa solo `std::span` e indici.
