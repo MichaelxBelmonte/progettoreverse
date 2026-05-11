@@ -69,6 +69,7 @@ namespace mikecore::rawnotes
         bool existing_peer = false;
         bool synthetic_peer = false;
         bool peer_index_resolved = false;
+        std::size_t search_start_index = 0;
         std::size_t peer_index = raw_note_peer_index_not_found;
         RawNoteSeparation synthetic_peer_value{};
         std::vector<std::size_t> cleanup_original_indices;
@@ -165,6 +166,11 @@ namespace mikecore::rawnotes
         std::span<const RawNoteSeparation> auxiliary_peers,
         const RawNoteSeparation& current) noexcept;
 
+    [[nodiscard]] std::size_t class1_synthetic_peer_insertion_index(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        const RawNoteSeparation& current,
+        std::size_t first_search_index) noexcept;
+
     [[nodiscard]] std::vector<std::size_t> collect_class1_peer_cleanup_indices(
         std::span<const RawNoteSeparation> auxiliary_peers,
         std::size_t first_original_index,
@@ -173,4 +179,9 @@ namespace mikecore::rawnotes
     [[nodiscard]] Class1PeerPostprocessPlan plan_class1_peer_postprocess(
         const RawNoteSeparation& current,
         std::span<const RawNoteSeparation> auxiliary_peers);
+
+    [[nodiscard]] Class1PeerPostprocessPlan plan_class1_peer_postprocess(
+        const RawNoteSeparation& current,
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        std::size_t first_search_index);
 }

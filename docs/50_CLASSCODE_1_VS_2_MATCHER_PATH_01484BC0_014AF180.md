@@ -199,6 +199,9 @@ Implementazione clean-room chiusa:
   lista ausiliaria, oppure calcola l'indice ordinato del peer sintetico
   `0x40`; restituisce anche gli indici originali dei peer successivi da
   pulire con il predicato `flags & 0x70`
+- l'overload con `first_search_index` modella il cursore `uVar51` osservato
+  nel fallback sintetico: la scan ordinata puo' ripartire dall'indice
+  precedente invece che da zero
 
 Restano fuori retain/release e mutazione fisica dei nodi `GNList`; il planner
 usa solo `std::span` e indici.

@@ -289,7 +289,18 @@ namespace mikecore::rawnotes
         std::span<const RawNoteSeparation> auxiliary_peers,
         const RawNoteSeparation& current) noexcept
     {
-        std::size_t index = 0;
+        return class1_synthetic_peer_insertion_index(
+            auxiliary_peers,
+            current,
+            0);
+    }
+
+    std::size_t class1_synthetic_peer_insertion_index(
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        const RawNoteSeparation& current,
+        std::size_t first_search_index) noexcept
+    {
+        std::size_t index = std::min(first_search_index, auxiliary_peers.size());
         while (index < auxiliary_peers.size() &&
                auxiliary_peers[index].interval_start <= current.interval_start) {
             ++index;
@@ -324,12 +335,21 @@ namespace mikecore::rawnotes
         const RawNoteSeparation& current,
         std::span<const RawNoteSeparation> auxiliary_peers)
     {
+        return plan_class1_peer_postprocess(current, auxiliary_peers, 0);
+    }
+
+    Class1PeerPostprocessPlan plan_class1_peer_postprocess(
+        const RawNoteSeparation& current,
+        std::span<const RawNoteSeparation> auxiliary_peers,
+        std::size_t first_search_index)
+    {
         Class1PeerPostprocessPlan plan{};
         if (!current.matches_class_code(raw_note_base_class_1)) {
             return plan;
         }
 
         plan.processed = true;
+        plan.search_start_index = std::min(first_search_index, auxiliary_peers.size());
 
         if (current.selected_match != nullptr) {
             plan.existing_peer = true;
@@ -350,7 +370,8 @@ namespace mikecore::rawnotes
         plan.synthetic_peer = true;
         plan.peer_index = class1_synthetic_peer_insertion_index(
             auxiliary_peers,
-            current);
+            current,
+            plan.search_start_index);
         plan.peer_index_resolved = true;
         plan.synthetic_peer_value = make_synthetic_class1_peer(current);
         plan.cleanup_original_indices = collect_class1_peer_cleanup_indices(
