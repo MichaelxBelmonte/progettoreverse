@@ -189,6 +189,9 @@ Implementazione clean-room chiusa:
 - `apply_class2_selected_peer_postprocess(current)` replica il ramo class `2`
   chiuso: copia `selected_match->start` in `current.start` e marca il peer con
   `0x20`
+- `apply_class2_selected_peer_postprocess_sequence(items)` replica il loop
+  post-match del ramo class `2` su `std::span`: processa solo item con
+  `flags == 2` e peer linkato
 - `apply_class1_existing_peer_postprocess(current)` replica solo il ramo class
   `1` con peer gia' esistente: copia `selected_match->start` in `current.start`
   e marca il peer con `0x40`

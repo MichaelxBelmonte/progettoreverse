@@ -250,6 +250,18 @@ namespace mikecore::rawnotes
         return true;
     }
 
+    PeerPostprocessSequenceResult apply_class2_selected_peer_postprocess_sequence(
+        std::span<RawNoteSeparation> current_items) noexcept
+    {
+        PeerPostprocessSequenceResult result{};
+        for (RawNoteSeparation& current : current_items) {
+            if (apply_class2_selected_peer_postprocess(current)) {
+                ++result.processed_count;
+            }
+        }
+        return result;
+    }
+
     bool apply_class1_existing_peer_postprocess(
         RawNoteSeparation& current) noexcept
     {

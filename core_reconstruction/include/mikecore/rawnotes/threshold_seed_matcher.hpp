@@ -86,6 +86,11 @@ namespace mikecore::rawnotes
         bool stopped_on_unresolved_peer = false;
     };
 
+    struct PeerPostprocessSequenceResult final
+    {
+        std::size_t processed_count = 0;
+    };
+
     [[nodiscard]] float derive_direct_threshold_seed(
         float cached_spectral_reference) noexcept;
 
@@ -162,6 +167,9 @@ namespace mikecore::rawnotes
 
     bool apply_class2_selected_peer_postprocess(
         RawNoteSeparation& current) noexcept;
+
+    PeerPostprocessSequenceResult apply_class2_selected_peer_postprocess_sequence(
+        std::span<RawNoteSeparation> current_items) noexcept;
 
     bool apply_class1_existing_peer_postprocess(
         RawNoteSeparation& current) noexcept;
