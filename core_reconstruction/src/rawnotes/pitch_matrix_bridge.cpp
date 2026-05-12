@@ -27,6 +27,20 @@ namespace mikecore::rawnotes
                pitch_matrix_bridge_base_frequency_hz;
     }
 
+    int pitch_matrix_bridge_pitch_bin_from_frequency(float frequency_hz) noexcept
+    {
+        if (!(frequency_hz > 0.0f) || !std::isfinite(frequency_hz)) {
+            return 0;
+        }
+
+        const float log_ratio =
+            std::log(frequency_hz / pitch_matrix_bridge_base_frequency_hz);
+        return static_cast<int>(
+            log_ratio * pitch_matrix_bridge_log2e *
+            pitch_matrix_bridge_bins_per_octave +
+            pitch_matrix_bridge_rounding_bias);
+    }
+
     namespace
     {
         [[nodiscard]] std::size_t bounded_row_count(

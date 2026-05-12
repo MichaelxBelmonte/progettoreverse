@@ -22,6 +22,8 @@ namespace mikecore::rawnotes
     inline constexpr float pitch_matrix_bridge_quality_floor = 0.4000000059604645f;
     inline constexpr float pitch_matrix_bridge_bins_per_octave = 60.0f;
     inline constexpr float pitch_matrix_bridge_base_frequency_hz = 21.533203125f;
+    inline constexpr float pitch_matrix_bridge_log2e = 1.4426950216293335f;
+    inline constexpr float pitch_matrix_bridge_rounding_bias = 0.5f;
     inline constexpr double pitch_matrix_bridge_chain_keep_ratio = 0.7;
     inline constexpr float pitch_matrix_bridge_failed_frequency = -1.0f;
     inline constexpr double pitch_matrix_bridge_failed_anchor_time = -1.0;
@@ -75,6 +77,9 @@ namespace mikecore::rawnotes
 
     [[nodiscard]] float pitch_matrix_bridge_frequency_from_pitch_bin(
         float pitch_bin) noexcept;
+
+    [[nodiscard]] int pitch_matrix_bridge_pitch_bin_from_frequency(
+        float frequency_hz) noexcept;
 
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,

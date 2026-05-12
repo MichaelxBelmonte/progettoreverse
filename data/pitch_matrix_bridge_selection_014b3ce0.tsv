@@ -9,6 +9,8 @@ field	MUPitchMatrixPeak+0x30	previous_row_link	high	014b3460 writes selected nex
 constant	0x02394214	quality_floor_0_4f	very_high	__TEXT.__const bytes decode as float 0.4000000059604645 and initialize the max scan floor
 constant	0x023941f0	pitch_bins_per_octave_60f	very_high	__TEXT.__const bytes decode as float 60.0 and divide pitch bin before exp2f
 constant	0x0240e330	bridge_base_frequency_21_533203125f	very_high	__TEXT.__const bytes decode as float 21.533203125 and multiply exp2f output
+constant	0x0240e334	log2e_1_4426950216293335f	very_high	__TEXT.__const bytes decode as float 1.4426950216293335 and convert logf(freq/base) to log2
+constant	0x0239011c	rounding_bias_0_5f	very_high	__TEXT.__const bytes decode as float 0.5 and bias the cast to integer pitch bin
 constant	0x023942b8	chain_keep_ratio_0_7	very_high	__TEXT.__const bytes decode as double 0.7 for int(maxChainLength*0.7) pruning
 constant	0x023b19a0	failure_anchor_minus_1_double	very_high	__TEXT.__const bytes decode as double -1.0 for failed item +0x30
 constant	0x02390d00	failure_frequency_minus_1_float	very_high	__TEXT.__const bytes decode as float -1.0 for failed item +0x38
@@ -16,6 +18,7 @@ behavior	param_4_false	selected_peak_pitch_bin	high	when param_4 is zero frequen
 behavior	param_4_true	average_chain_pitch_bin	high	when param_4 is nonzero frequency uses sum of chain +0x10 divided by chain count
 behavior	item+0x38	frequency_hz_output	high	014b3ce0 writes exp2(pitchBin/60)*21.533203125 to item +0x38 on success and -1.0f on failure
 behavior	item+0x30	anchor_time_output	high	014b3ce0 writes selectedPeak.rowIndex*param_1 to item +0x30 on success and -1.0 on failure
+behavior	014aa770_0149ebe0	frequency_to_pitch_bin	high	both paths use int(logf(freq/21.533203125)*1.4426950216293335*60.0+0.5) before pitch-bin comparisons
 behavior	014b3460_reset	local_rank_and_link_reset	high	014b3460 assigns local rank +0x14 and clears +0x20 +0x28 +0x30 for each bounded peak in each processed row
 behavior	014b3460_link	nearest_unclaimed_next_row_peak	high	014b3460 links to the nearest next-row peak by abs pitch-bin difference if distance is strictly less than 20 and target +0x20 is still zero
 implementation	014b3ce0_scalar_bridge_tail	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes final scalar selection and frequency conversion without GNList traversal or smoothing

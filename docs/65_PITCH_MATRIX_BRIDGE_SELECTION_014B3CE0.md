@@ -64,6 +64,8 @@ Costanti lette da `binaries/MikeCore`:
 | `0x02394214` | `0.4000000059604645f` | floor per `peak + 0x1c` |
 | `0x023941f0` | `60.0f` | pitch bins per octave |
 | `0x0240e330` | `21.533203125f` | base Hz moltiplicata dopo `exp2` |
+| `0x0240e334` | `1.4426950216293335f` | `log2(e)` per conversione Hz -> pitch-bin |
+| `0x0239011c` | `0.5f` | bias prima del cast a intero |
 | `0x023942b8` | `0.7` double | keep ratio per pruning chain |
 | `0x023b19a0` | `-1.0` double | failure anchor |
 | `0x02390d00` | `-1.0f` | failure frequency |
@@ -95,6 +97,10 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - espone il pruning scalar `int(maxLen * 0.7)`, con special-case `maxLen == 2`
 - `pitch_matrix_bridge_frequency_from_pitch_bin(...)`
   - `exp2(pitchBin / 60.0f) * 21.533203125f`
+- `pitch_matrix_bridge_pitch_bin_from_frequency(...)`
+  - `int(log(freq / 21.533203125f) * 1.4426950216293335f * 60.0f + 0.5f)`
+  - e' la forma vista in `014aa770` e `0149ebe0`; il codice clean-room
+    aggiunge solo guardie su frequenze non positive/non finite
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
