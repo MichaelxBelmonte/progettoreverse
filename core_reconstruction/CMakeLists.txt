@@ -14,6 +14,7 @@ add_library(mikecore_runtime_fft
     src/rawnotes/interval_boundary_refinement.cpp
     src/rawnotes/interval_gate.cpp
     src/rawnotes/paired_peak_gate.cpp
+    src/rawnotes/pitch_matrix_bridge.cpp
     src/rawnotes/raw_note_class12_builder.cpp
     src/rawnotes/raw_note_class8_builder.cpp
     src/rawnotes/threshold_seed_matcher.cpp

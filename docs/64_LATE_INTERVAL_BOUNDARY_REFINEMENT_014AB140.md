@@ -48,9 +48,10 @@ Dopo la scelta del boundary:
 - forza `end <= nextBoundary`
 - se l'anchor a `+0x30` resta fuori dal range finale, chiama `014b3ce0`
 
-Il bridge `014b3ce0` resta fuori dal codice attivo: dipende dalla working list
-annidata `GNList<GNList<MUPitchMatrixPeak>>` e dal payload target non ancora
-canonizzato.
+Il bridge `014b3ce0` e' entrato solo per la coda scalare documentata in
+[65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md](65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md).
+Restano fuori la costruzione delle chain dalla working list annidata
+`GNList<GNList<MUPitchMatrixPeak>>` e il payload target non ancora canonizzato.
 
 ## Implementazione Clean-Room
 
@@ -69,7 +70,7 @@ Non implementato:
 - traversal/refcount `GNList`
 - chiamata a `014af180` interna
 - mutazione del carrier originale
-- bridge `014b3ce0`
+- bridge `014b3ce0` completo, esclusa la coda scalare gia' implementata
 - nome canonico del target scritto da `014ab140`
 
 ## Impatto Sul Replication Effort

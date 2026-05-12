@@ -497,11 +497,13 @@ Note:
 - per il corridoio principale e' una topologia annidata `GNList<GNList<MUPitchMatrixPeak>>`
 - `014b3460` resetta/linka i campi alti del peak
 - `014b3ce0` usa il peak-lattice come stage intermedio e poi scrive il risultato nell'item downstream, non nel peak stesso
+- la coda scalare di `014b3ce0` sceglie il massimo `+0x1c > 0.4f` e converte `+0x10` in Hz con `exp2(pitchBin / 60.0f) * 21.533203125f`
 
 Vedi:
 
 - [52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md](52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md)
 - [53_WORKING_GNLIST_PAYLOAD_FAMILY_0149C330_014B3CE0.md](53_WORKING_GNLIST_PAYLOAD_FAMILY_0149C330_014B3CE0.md)
+- [65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md](65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md)
 
 ## MUPosValue (utility value-object)
 

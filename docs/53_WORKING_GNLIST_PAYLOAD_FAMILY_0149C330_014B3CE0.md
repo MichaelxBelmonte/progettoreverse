@@ -110,6 +110,14 @@ Poi il risultato viene riversato nell'item sorgente a `item + 0x38`, cioe' non n
 
 Quindi il peak-lattice e' uno stage intermedio di selezione, non il prodotto finale.
 
+La coda scalare del bridge e' ora stretta in
+[65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md](65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md):
+
+- floor reale su `peak + 0x1c`: `0.4f`
+- conversione reale pitch-bin -> Hz: `exp2(pitchBin / 60.0f) * 21.533203125f`
+- output semantici: `item + 0x38` frequenza, `item + 0x30` anchor time
+- fallimento: `-1.0f` / `-1.0`
+
 ---
 
 ## 2. Modello Canonico Corrente

@@ -15,4 +15,6 @@ field	014b3460	peak+0x20_stage_or_adjacency_flag	medium	014b3460 clears +0x20 be
 field	014b3460	peak+0x28_back_link_like	medium	014b3460 clears +0x28 before inter-row linkage pass
 field	014b3460	peak+0x30_forward_link_like	medium	014b3460 clears +0x30 before inter-row linkage pass
 helper	014b3ce0	consumes_peak_lattice_for_item_selection	high	014b3ce0 walks outer and inner lists using peak +0x10 +0x1c +0x28/+0x30 and writes result back to source item +0x38
+helper	014b3ce0_scalar_tail	converts_peak_bin_to_frequency	high	final selected chain scan uses max peak +0x1c above 0.4f and writes exp2(pitchBin/60)*21.533203125 to item +0x38
+field	014b3ce0_item_plus_0x30	selected_peak_anchor_time	high	selected peak +0x0c multiplied by param_1 is written to source item +0x30
 correction	014328b0	not_peak_builder_but_MUPosValue_helper	very_high	assembly and adjacent registration resolve 014328b0 as MUPosValue builder rather than MUPitchMatrixPeak
