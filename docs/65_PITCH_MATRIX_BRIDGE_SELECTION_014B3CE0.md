@@ -66,6 +66,10 @@ Costanti lette da `binaries/MikeCore`:
 | `0x0240e330` | `21.533203125f` | base Hz moltiplicata dopo `exp2` |
 | `0x0240e334` | `1.4426950216293335f` | `log2(e)` per conversione Hz -> pitch-bin |
 | `0x0239011c` | `0.5f` | bias prima del cast a intero |
+| `0x02390108` | `0.05` double | durata corta sotto cui il fallback deviazione viene respinto |
+| `0x0241f368` | `0.6499999761581421f` | floor qualita' del consumer `014aa770` |
+| `0x0240e350` | `-60.0f` | normalizzatore deviazione pitch-bin in `014aa770` |
+| `0x02391090` | `0.10000000149011612f` | scala deviazione pitch-bin in `014aa770` |
 | `0x023942b8` | `0.7` double | keep ratio per pruning chain |
 | `0x023b19a0` | `-1.0` double | failure anchor |
 | `0x02390d00` | `-1.0f` | failure frequency |
@@ -101,6 +105,13 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - `int(log(freq / 21.533203125f) * 1.4426950216293335f * 60.0f + 0.5f)`
   - e' la forma vista in `014aa770` e `0149ebe0`; il codice clean-room
     aggiunge solo guardie su frequenze non positive/non finite
+- `pitch_matrix_bridge_deviation_quality_accepts(...)`
+  - consumer `014aa770`: `0.65f <= (deviation / -60.0f) * 0.1f + quality`
+- `pitch_matrix_bridge_duration_is_short(...)`
+  - consumer `014aa770`: durata `< 0.05`
+- `select_best_peak_in_open_pitch_bin_range(...)`
+  - fallback `014aa770`: sceglie il peak con quality massima e
+    `lowerExclusive < pitchBin < upperExclusive`
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -147,6 +158,32 @@ Nel modello clean-room questi tre campi diventano:
 - `next_row_link_index`
 - `previous_row_link_index`
 - `adjacency_claimed`
+
+## Consumer `014aa770`
+
+Dopo `014b3ce0`, `014aa770` valuta il peak scelto contro finestre pitch-bin
+derivate con la conversione Hz -> bin. Il frammento chiuso e' questo:
+
+```c
+if (0 < pitchDeviation) {
+  if (duration < 0.05) reject;
+  if (0.65f <= ((float)pitchDeviation / -60.0f) * 0.1f + peakQuality) accept;
+  ...
+}
+```
+
+Se il gate non passa, la funzione cerca nella row del peak selezionato il
+miglior candidato in range aperto:
+
+```c
+if ((peak->+0x10 < upperBin) && (lowerBin < peak->+0x10) &&
+    (bestQuality < peak->+0x1c)) {
+  best = peak;
+}
+```
+
+La mutazione dell'item/lista resta fuori; nel codice attivo entrano solo i
+predicati numerici e la selezione fallback su span.
 
 ## Guardrail
 

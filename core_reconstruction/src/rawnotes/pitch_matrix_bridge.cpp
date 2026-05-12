@@ -41,6 +41,46 @@ namespace mikecore::rawnotes
             pitch_matrix_bridge_rounding_bias);
     }
 
+    bool pitch_matrix_bridge_deviation_quality_accepts(
+        int pitch_bin_deviation,
+        float working_peak_quality) noexcept
+    {
+        const float adjusted_quality =
+            (static_cast<float>(pitch_bin_deviation) /
+             pitch_matrix_bridge_deviation_normalizer) *
+            pitch_matrix_bridge_deviation_quality_scale +
+            working_peak_quality;
+        return pitch_matrix_bridge_quality_accept_floor <= adjusted_quality;
+    }
+
+    bool pitch_matrix_bridge_duration_is_short(
+        double duration_seconds,
+        double short_duration) noexcept
+    {
+        return duration_seconds < short_duration;
+    }
+
+    std::size_t select_best_peak_in_open_pitch_bin_range(
+        std::span<const PitchMatrixPeak> row,
+        int lower_exclusive_pitch_bin,
+        int upper_exclusive_pitch_bin) noexcept
+    {
+        float best_quality = 0.0f;
+        std::size_t best_index = pitch_matrix_bridge_no_index;
+
+        for (std::size_t index = 0; index < row.size(); ++index) {
+            const PitchMatrixPeak& peak = row[index];
+            if (lower_exclusive_pitch_bin < peak.pitch_bin_index &&
+                peak.pitch_bin_index < upper_exclusive_pitch_bin &&
+                best_quality < peak.working_peak_quality) {
+                best_quality = peak.working_peak_quality;
+                best_index = index;
+            }
+        }
+
+        return best_index;
+    }
+
     namespace
     {
         [[nodiscard]] std::size_t bounded_row_count(
