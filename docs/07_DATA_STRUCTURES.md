@@ -486,16 +486,16 @@ Field map prudente corrente:
 +0x14   localRankInRow
 +0x18   primaryPeakValue-like
 +0x1c   workingPeakQuality / selectionScore
-+0x20   stage/adjacency flag
-+0x28   adjacency/back-link-like
-+0x30   adjacency/forward-link-like
++0x20   adjacencyClaimed flag
++0x28   nextRowLink
++0x30   previousRowLink
 ```
 
 Note:
 
 - `MUElementAnalyzer + 0x158` non e' una lista flat di questi nodi
 - per il corridoio principale e' una topologia annidata `GNList<GNList<MUPitchMatrixPeak>>`
-- `014b3460` resetta/linka i campi alti del peak
+- `014b3460` resetta/linka i campi alti del peak con nearest unclaimed target nella row successiva e soglia stretta `20` pitch-bin
 - `014b3ce0` usa il peak-lattice come stage intermedio e poi scrive il risultato nell'item downstream, non nel peak stesso
 - la coda scalare di `014b3ce0` sceglie il massimo `+0x1c > 0.4f` e converte `+0x10` in Hz con `exp2(pitchBin / 60.0f) * 21.533203125f`
 

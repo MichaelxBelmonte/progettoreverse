@@ -3,6 +3,9 @@ identity	014b3ce0	final_peak_bridge_tail	high	014b3ce0 consumes a selected inner
 field	MUPitchMatrixPeak+0x0c	row_index_for_anchor_time	high	selected peak +0x0c multiplied by param_1 is written to item +0x30
 field	MUPitchMatrixPeak+0x10	pitch_bin_index	high	selected peak +0x10 or average of chain +0x10 values feeds exp2 frequency conversion
 field	MUPitchMatrixPeak+0x1c	working_peak_quality	high	final chain scan chooses the peak with max +0x1c above 0.4f
+field	MUPitchMatrixPeak+0x20	adjacency_claimed_flag	high	014b3460 clears +0x20 before linking and sets target +0x20 to 1 when claimed by a previous-row peak
+field	MUPitchMatrixPeak+0x28	next_row_link	high	014b3460 writes current peak +0x28 to the selected next-row peak
+field	MUPitchMatrixPeak+0x30	previous_row_link	high	014b3460 writes selected next-row peak +0x30 back to the current peak
 constant	0x02394214	quality_floor_0_4f	very_high	__TEXT.__const bytes decode as float 0.4000000059604645 and initialize the max scan floor
 constant	0x023941f0	pitch_bins_per_octave_60f	very_high	__TEXT.__const bytes decode as float 60.0 and divide pitch bin before exp2f
 constant	0x0240e330	bridge_base_frequency_21_533203125f	very_high	__TEXT.__const bytes decode as float 21.533203125 and multiply exp2f output
@@ -13,5 +16,8 @@ behavior	param_4_false	selected_peak_pitch_bin	high	when param_4 is zero frequen
 behavior	param_4_true	average_chain_pitch_bin	high	when param_4 is nonzero frequency uses sum of chain +0x10 divided by chain count
 behavior	item+0x38	frequency_hz_output	high	014b3ce0 writes exp2(pitchBin/60)*21.533203125 to item +0x38 on success and -1.0f on failure
 behavior	item+0x30	anchor_time_output	high	014b3ce0 writes selectedPeak.rowIndex*param_1 to item +0x30 on success and -1.0 on failure
+behavior	014b3460_reset	local_rank_and_link_reset	high	014b3460 assigns local rank +0x14 and clears +0x20 +0x28 +0x30 for each bounded peak in each processed row
+behavior	014b3460_link	nearest_unclaimed_next_row_peak	high	014b3460 links to the nearest next-row peak by abs pitch-bin difference if distance is strictly less than 20 and target +0x20 is still zero
 implementation	014b3ce0_scalar_bridge_tail	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes final scalar selection and frequency conversion without GNList traversal or smoothing
+implementation	014b3460_link_planner	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes reset/link logic over span-backed rows without GNList ownership semantics
 guardrail	014b3ce0_full_chain_builder	not_implemented	high	initial candidate-chain construction walks nested GNList and adjacency fields +0x28/+0x30; excluded until exact enough

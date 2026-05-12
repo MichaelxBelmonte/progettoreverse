@@ -1,4 +1,4 @@
-# 65 — Pitch Matrix Bridge Selection `0x014b3ce0`
+# 65 — Pitch Matrix Bridge Selection `0x014b3460 / 0x014b3ce0`
 
 ## Scope
 
@@ -95,10 +95,52 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - espone il pruning scalar `int(maxLen * 0.7)`, con special-case `maxLen == 2`
 - `pitch_matrix_bridge_frequency_from_pitch_bin(...)`
   - `exp2(pitchBin / 60.0f) * 21.533203125f`
+- `reset_pitch_matrix_peak_linkage(...)`
+  - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
+- `link_adjacent_pitch_matrix_peak_rows(...)`
+  - subset `014b3460`: per ogni peak della row corrente sceglie un peak nella
+    row successiva non ancora reclamato con distanza pitch-bin minima e
+    strettamente minore di `20`
 - `select_pitch_matrix_bridge_peak(...)`
   - sceglie il peak con quality maggiore di `0.4f`
   - supporta la modalita' pitch bin diretto o medio
   - espone `frequency_hz` e `anchor_time`
+
+## Linker `014b3460`
+
+Prima del bridge finale, `014b3460` resetta e collega le righe adiacenti:
+
+```c
+*(int *)(peak + 0x14) = index;
+*(void*)(peak + 0x20) = 0;
+*(void*)(peak + 0x28) = 0;
+*(void*)(peak + 0x30) = 0;
+```
+
+Poi, per ogni coppia di righe adiacenti, cerca il target migliore nella row
+successiva:
+
+```c
+iVar12 = 0x14;
+distance = abs(current->+0x10 - next->+0x10);
+if ((distance < iVar12) && (*(char *)(next + 0x20) == '\0')) {
+  best = next;
+}
+```
+
+Se trova un target:
+
+```c
+current->+0x28 = best;
+best->+0x30 = current;
+best->+0x20 = 1;
+```
+
+Nel modello clean-room questi tre campi diventano:
+
+- `next_row_link_index`
+- `previous_row_link_index`
+- `adjacency_claimed`
 
 ## Guardrail
 

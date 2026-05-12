@@ -11,9 +11,10 @@ field	0149c330	peak+0x1c_working_peak_quality	high	0149c330 seeds +0x1c with the
 consumer	0149ebe0	prunes_inner_peaks_by_peak_plus_0x10	very_high	0149ebe0 iterates each inner list and removes entries based on threshold comparison against peak +0x10
 helper	014b3460	resets_peak_linkage_and_assigns_local_rank	high	014b3460 writes +0x14 and clears +0x20 +0x28 +0x30 for each inner peak
 field	014b3460	peak+0x14_local_rank_in_row	high	014b3460 writes the current inner index to +0x14
-field	014b3460	peak+0x20_stage_or_adjacency_flag	medium	014b3460 clears +0x20 before inter-row linkage pass
-field	014b3460	peak+0x28_back_link_like	medium	014b3460 clears +0x28 before inter-row linkage pass
-field	014b3460	peak+0x30_forward_link_like	medium	014b3460 clears +0x30 before inter-row linkage pass
+field	014b3460	peak+0x20_adjacency_claimed_flag	high	014b3460 clears +0x20 before inter-row linkage pass and sets selected next-row target +0x20 to 1
+field	014b3460	peak+0x28_next_row_link	high	014b3460 clears +0x28 then writes current peak +0x28 to the selected next-row peak
+field	014b3460	peak+0x30_previous_row_link	high	014b3460 clears +0x30 then writes selected next-row peak +0x30 back to the current peak
+helper	014b3460	nearest_unclaimed_next_row_linker	high	014b3460 links adjacent rows by nearest pitch-bin distance under strict 20-bin threshold while excluding targets already marked by +0x20
 helper	014b3ce0	consumes_peak_lattice_for_item_selection	high	014b3ce0 walks outer and inner lists using peak +0x10 +0x1c +0x28/+0x30 and writes result back to source item +0x38
 helper	014b3ce0_scalar_tail	converts_peak_bin_to_frequency	high	final selected chain scan uses max peak +0x1c above 0.4f and writes exp2(pitchBin/60)*21.533203125 to item +0x38
 field	014b3ce0_item_plus_0x30	selected_peak_anchor_time	high	selected peak +0x0c multiplied by param_1 is written to source item +0x30

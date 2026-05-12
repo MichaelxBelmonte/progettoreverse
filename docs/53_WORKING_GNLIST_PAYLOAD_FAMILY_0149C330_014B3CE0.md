@@ -93,6 +93,12 @@ In [014b3460.c](../reconstructed/clean/MUElementAnalyzer/014b3460.c):
   - `+0x20 = 0`
   - `+0x28 = 0`
   - `+0x30 = 0`
+- sulle righe adiacenti sceglie il target non reclamato (`+0x20 == 0`) con
+  distanza minima tra `+0x10` e `next +0x10`, sotto soglia stretta `0x14`
+- quando linka:
+  - `current +0x28 = selectedNext`
+  - `selectedNext +0x30 = current`
+  - `selectedNext +0x20 = 1`
 
 Questa funzione non tratta il payload come raw-note o property-point; lo tratta come una lattice di peak con bookkeeping intra/inter-row.
 

@@ -1,6 +1,8 @@
 #include "mikecore/rawnotes/pitch_matrix_bridge.hpp"
 
+#include <algorithm>
 #include <cmath>
+#include <cstdlib>
 
 namespace mikecore::rawnotes
 {
@@ -23,6 +25,109 @@ namespace mikecore::rawnotes
     {
         return std::exp2(pitch_bin / pitch_matrix_bridge_bins_per_octave) *
                pitch_matrix_bridge_base_frequency_hz;
+    }
+
+    namespace
+    {
+        [[nodiscard]] std::size_t bounded_row_count(
+            std::span<const PitchMatrixPeakRow> rows,
+            std::size_t row_count) noexcept
+        {
+            return std::min(row_count, rows.size());
+        }
+
+        [[nodiscard]] std::size_t bounded_peak_count(
+            const PitchMatrixPeakRow& row,
+            std::size_t max_peaks_per_row) noexcept
+        {
+            return std::min(max_peaks_per_row, row.peaks.size());
+        }
+    }
+
+    void reset_pitch_matrix_peak_linkage(
+        std::span<PitchMatrixPeakRow> rows,
+        std::size_t row_count,
+        std::size_t max_peaks_per_row) noexcept
+    {
+        const std::size_t rows_to_process = bounded_row_count(rows, row_count);
+        for (std::size_t row_index = 0; row_index < rows_to_process; ++row_index) {
+            PitchMatrixPeakRow& row = rows[row_index];
+            const std::size_t peaks_to_process =
+                bounded_peak_count(row, max_peaks_per_row);
+
+            for (std::size_t peak_index = 0; peak_index < peaks_to_process; ++peak_index) {
+                PitchMatrixPeak& peak = row.peaks[peak_index];
+                peak.local_rank = static_cast<int>(peak_index);
+                peak.adjacency_claimed = false;
+                peak.next_row_link_index = pitch_matrix_bridge_no_index;
+                peak.previous_row_link_index = pitch_matrix_bridge_no_index;
+            }
+        }
+    }
+
+    PitchMatrixPeakLinkPlan link_adjacent_pitch_matrix_peak_rows(
+        std::span<PitchMatrixPeakRow> rows,
+        std::size_t row_count,
+        std::size_t max_peaks_per_row)
+    {
+        PitchMatrixPeakLinkPlan plan{};
+        reset_pitch_matrix_peak_linkage(rows, row_count, max_peaks_per_row);
+
+        const std::size_t rows_to_process = bounded_row_count(rows, row_count);
+        if (rows_to_process < 2) {
+            return plan;
+        }
+
+        for (std::size_t source_row_index = 0;
+             source_row_index + 1 < rows_to_process;
+             ++source_row_index) {
+            PitchMatrixPeakRow& source_row = rows[source_row_index];
+            PitchMatrixPeakRow& target_row = rows[source_row_index + 1];
+
+            const std::size_t source_count =
+                bounded_peak_count(source_row, max_peaks_per_row);
+            const std::size_t target_count =
+                bounded_peak_count(target_row, max_peaks_per_row);
+            if (source_count == 0 || target_count == 0) {
+                continue;
+            }
+
+            for (std::size_t source_index = 0; source_index < source_count; ++source_index) {
+                PitchMatrixPeak& source_peak = source_row.peaks[source_index];
+
+                int best_distance = pitch_matrix_link_initial_max_distance_bins;
+                std::size_t best_target_index = pitch_matrix_bridge_no_index;
+
+                for (std::size_t target_index = 0; target_index < target_count; ++target_index) {
+                    const PitchMatrixPeak& target_peak = target_row.peaks[target_index];
+                    const int distance = std::abs(
+                        source_peak.pitch_bin_index - target_peak.pitch_bin_index);
+
+                    if (distance < best_distance && !target_peak.adjacency_claimed) {
+                        best_distance = distance;
+                        best_target_index = target_index;
+                    }
+                }
+
+                if (best_target_index == pitch_matrix_bridge_no_index) {
+                    continue;
+                }
+
+                PitchMatrixPeak& target_peak = target_row.peaks[best_target_index];
+                source_peak.next_row_link_index = best_target_index;
+                target_peak.previous_row_link_index = source_index;
+                target_peak.adjacency_claimed = true;
+
+                plan.links.push_back(PitchMatrixPeakLink{
+                    source_row_index,
+                    source_index,
+                    source_row_index + 1,
+                    best_target_index,
+                    best_distance});
+            }
+        }
+
+        return plan;
     }
 
     PitchMatrixBridgeSelection select_pitch_matrix_bridge_peak(
