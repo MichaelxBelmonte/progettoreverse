@@ -195,6 +195,9 @@ Implementazione clean-room chiusa:
 - `run_class2_threshold_seeded_pipeline(...)` replica l'ordine chiuso del
   ramo class `2`: matcher `014af180(classCode=2)` seguito dal loop
   post-match di propagazione
+- `apply_observed_flag_0x10_peer_mark(current)` espone il mark osservato nel
+  ramo mono: se `current + 0x40` e' non nullo, fa OR di `0x10` su
+  `current->+0x40->+0x3c`
 - `apply_class1_existing_peer_postprocess(current)` replica solo il ramo class
   `1` con peer gia' esistente: copia `selected_match->start` in `current.start`
   e marca il peer con `0x40`
@@ -258,10 +261,11 @@ E per i bit osservati:
 |-----|------------------------------------|------------|
 | `0x1` | base class 1 | Very High |
 | `0x2` | base class 2 | Very High |
+| `0x10` | peer osservato/protetto dal ramo mono; preservato dal cleanup `flags & 0x70` | High |
 | `0x20` | peer selezionato dal ramo class2 | High |
 | `0x40` | peer selezionato/materializzato dal ramo class1 | High |
 
-Nota di chiusura successiva: `0x40` e' anche builder-assigned nel fallback sintetico di `01484bc0`, con `+0x20 = 1.0f`. Il bit/valore `0x10` resta invece aperto: e' osservato come builder-assigned nello stesso corridoio mono, ma il suo ruolo musicale non e' ancora canonico.
+Nota di chiusura successiva: `0x40` e' anche builder-assigned nel fallback sintetico di `01484bc0`, con `+0x20 = 1.0f`. Il bit/valore `0x10` e' ora chiuso operativamente nel ramo mono: puo' essere scritto con OR su un peer gia' linkato e puo' essere assegnato dal builder `014ba9e0(start, 1.0f, 0x10)`. Il nome musicale finale resta non canonico.
 
 ---
 
@@ -282,6 +286,5 @@ Nota di chiusura successiva: `0x40` e' anche builder-assigned nel fallback sinte
 
 ## Next Step
 
-1. Chiudere il ruolo operativo di `0x10` nel ramo mono.
-2. Trovare consumer successivi dei peer sintetici `0x40` oltre il cleanup locale di `01484bc0`.
-3. Non fondere `0x20/0x40` con le classi base `1/2`: restano state bits post-match o peer materialization bits.
+1. Trovare consumer successivi dei peer sintetici `0x40` e dei peer osservati `0x10` oltre il cleanup locale di `01484bc0`.
+2. Non fondere `0x10/0x20/0x40` con le classi base `1/2`: restano state bits post-match o peer materialization bits.

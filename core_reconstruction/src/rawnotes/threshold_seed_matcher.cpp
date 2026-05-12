@@ -294,6 +294,17 @@ namespace mikecore::rawnotes
         return true;
     }
 
+    bool apply_observed_flag_0x10_peer_mark(
+        RawNoteSeparation& current) noexcept
+    {
+        if (current.selected_match == nullptr) {
+            return false;
+        }
+
+        current.selected_match->class_state_flags |= raw_note_observed_flag_0x10;
+        return true;
+    }
+
     PeerPostprocessSequenceResult apply_class2_selected_peer_postprocess_sequence(
         std::span<RawNoteSeparation> current_items) noexcept
     {

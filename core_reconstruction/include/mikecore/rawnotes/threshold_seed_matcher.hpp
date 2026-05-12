@@ -198,6 +198,9 @@ namespace mikecore::rawnotes
     bool apply_class2_selected_peer_postprocess(
         RawNoteSeparation& current) noexcept;
 
+    bool apply_observed_flag_0x10_peer_mark(
+        RawNoteSeparation& current) noexcept;
+
     PeerPostprocessSequenceResult apply_class2_selected_peer_postprocess_sequence(
         std::span<RawNoteSeparation> current_items) noexcept;
 

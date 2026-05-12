@@ -196,10 +196,17 @@ Quindi:
 Correzione importante dal confronto `01484bc0 -> 014af180`:
 
 - `0x1` e `0x2` sono ormai fortemente vincolati come classi base del matcher
+- `0x10` puo' essere scritto come mark su un peer gia' linkato (`current + 0x40`)
+  e puo' anche nascere dal builder `014ba9e0(start, 1.0f, 0x10)` nel ramo mono
 - `0x20` viene scritto post-match sul peer selezionato dal ramo `class 2`
 - `0x40` viene sia builder-assigned sia scritto post-match sul peer selezionato/materializzato dal ramo `class 1`
 
 Il dettaglio operativo di questa distinzione e' ora fissato in [50_CLASSCODE_1_VS_2_MATCHER_PATH_01484BC0_014AF180.md](50_CLASSCODE_1_VS_2_MATCHER_PATH_01484BC0_014AF180.md).
+
+Il subset clean-room espone questa parte senza simulare la `GNList` originale:
+
+- `make_observed_flag_0x10_peer(start)` per il costruttore `014ba9e0(start, 1.0f, 0x10)`
+- `apply_observed_flag_0x10_peer_mark(current)` per il branch `current->+0x40->+0x3c |= 0x10`
 
 ---
 
@@ -408,5 +415,5 @@ Correzione strutturale:
 ## Next Step
 
 1. Nominare le due lane input di `014a3550` che alimentano i peak gates `+0x34/+0x38`.
-2. Stringere il ruolo esatto del valore `0x10` nel ramo mono di `01484bc0`.
+2. Chiudere il nome musicale canonico del valore `0x10`; il ruolo operativo nel ramo mono e' gia' fissato.
 3. Chiudere il nome canonico della famiglia owner che alimenta `Class8LinkedItemSpan`.

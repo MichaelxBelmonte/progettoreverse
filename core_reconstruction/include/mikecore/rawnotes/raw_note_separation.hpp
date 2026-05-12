@@ -80,4 +80,13 @@ namespace mikecore::rawnotes
             raw_note_synthetic_peer_base_strength,
             raw_note_selected_or_materialized_by_class1);
     }
+
+    [[nodiscard]] inline RawNoteSeparation make_observed_flag_0x10_peer(
+        double start) noexcept
+    {
+        return make_raw_note_separation(
+            start,
+            raw_note_synthetic_peer_base_strength,
+            raw_note_observed_flag_0x10);
+    }
 }

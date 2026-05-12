@@ -20,6 +20,8 @@ writer	014a3550	raw_note_metric_writer	high	writes +0x28 center score +0x2c non-
 implementation	014a3550_numeric_subset	raw_note_metric_writer_clean_room	high	core_reconstruction implements numeric formulas for +0x28 +0x2c +0x30 +0x34 +0x38 over caller-supplied item spans and two input lanes; GNList traversal/refcounting and final musical lane names remain outside
 builder	01484bc0	synthetic_class1_peer_builder	high	class1 fallback calls 014ba9e0 with start=current.start xmm1=1.0f and esi=0x40 then inserts peer into auxiliary list
 implementation	01484bc0_synthetic_peer	synthetic_class1_peer_helper_clean_room	high	core_reconstruction exposes make_synthetic_class1_peer(current) for the constructor subset only; list insertion and cleanup remain outside
+builder	01484bc0	observed_flag_0x10_peer_builder	high	mono fallback path calls 014ba9e0 with xmm1=1.0f and esi=0x10 while start is caller-derived
+implementation	01484bc0_observed_flag_0x10_peer	observed_flag_0x10_peer_helper_clean_room	high	core_reconstruction exposes make_observed_flag_0x10_peer(start) and apply_observed_flag_0x10_peer_mark(current) without deriving the still-open local start expression
 constant	g_0239424c	class1_class2_local_max_gate_0_0f	very_high	__TEXT.__const bytes at 0x0239424c decode as float 0.0 used by 014a2170 ucomiss gate
 constant	g_02391090	class8_contrast_gate_0_1f	very_high	__TEXT.__const bytes at 0x02391090 decode as float 0.100000001 used by 014afb20 contrast gate
 constant	g_02390108	class8_mask_run_window_0_05_double	very_high	__TEXT.__const bytes at 0x02390108 decode as double 0.05 multiplied by sampleRate-like parameter
