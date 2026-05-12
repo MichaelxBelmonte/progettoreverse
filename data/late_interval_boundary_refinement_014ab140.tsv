@@ -1,0 +1,15 @@
+scope	target	role	confidence	evidence
+caller	01484bc0->014ab140	late_boundary_refinement_stage	high	01484bc0 passes the auxiliary peer registry and working-list context into 014ab140 after 014aa770
+consumer	next+0x40	linked_peer_boundary_source	high	014ab140 reads next item +0x40 and when non-null uses linked object +0x18 as the next boundary
+field	linked_peer+0x18	next_boundary_time	high	014ab140 reads double at linked peer +0x18 into dVar21
+fallback	next+0x10	next_start_boundary_seed	high	when next+0x40 is null 014ab140 starts from next item +0x10
+constant	0x02391030	min_signal_gap_0_01_double	very_high	__TEXT.__const bytes decode as double 0.01 and gate the signal-minimum search
+constant	0x02393944	signal_min_high_sentinel_1000f	very_high	__TEXT.__const bytes decode as float 1000.0 and initialize the minimum scan
+behavior	signal_gap_minimum_boundary	minimum_sample_index_over_gap	high	if next.start-current.end >= 0.01, 014ab140 scans original signal samples between the two sample indices and uses bestIndex/sampleRate
+field	target+0x20	previous_boundary_double	high	014ab140 writes the carried previous dVar16 into target +0x20
+field	target+0x28	next_boundary_double	high	014ab140 writes selected dVar21 into target +0x28
+field	target+0x10	interval_start_clamped_to_previous_boundary	high	014ab140 raises target +0x10 to previous boundary when start is earlier
+field	target+0x18	interval_end_clamped_to_next_boundary	high	014ab140 lowers target +0x18 to selected next boundary when end is later
+field	target+0x30	anchor_time_for_bridge_guard	medium_high	014ab140 compares target +0x30 against clamped start/end and calls 014b3ce0 when outside
+implementation	014ab140_scalar_subset	interval_boundary_refinement_clean_room	high	core_reconstruction exposes choose_next_interval_boundary and refine_interval_range without GNList traversal or target-object mutation
+guardrail	target_identity	not_murawnoteseparation_yet	high	target writes double +0x20/+0x28/+0x30 differ from the current MURawNoteSeparation carrier field map, so the owner remains uncanonized

@@ -113,6 +113,7 @@ Progetto_Reverse_Mike/
 | [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md) | Tree operativo della codebase: directory, file curati, output generati, ruoli e policy di modifica | Attivo |
 | [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md) | Subset preprocessing classi `1/2`: wrapper `015c2d90`, branch output-only di `015c2da0`, high-shelf bidirezionale e baseline condiviso `014a2170` | Attivo |
 | [63_RAW_NOTE_METRIC_WRITER_014A3550.md](63_RAW_NOTE_METRIC_WRITER_014A3550.md) | Subset numerico del writer raw-note `014a3550`: formule per `+0x28/+0x2c/+0x30` e warmup/range dei peak gates `+0x34/+0x38` | Attivo |
+| [64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md](64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md) | Boundary refinement tardo `014ab140`: peer linkato `+0x40->+0x18` o minimo segnale nel gap, target scritto ancora non canonizzato | Attivo |
 
 ## Tools
 
@@ -161,6 +162,7 @@ python3 tools/pipeline.py verify
 
 ## Ultime Aggiunte Doc
 
+- [64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md](64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md)
 - [63_RAW_NOTE_METRIC_WRITER_014A3550.md](63_RAW_NOTE_METRIC_WRITER_014A3550.md)
 - [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md)
 - [61_CODEBASE_TREE_AND_FILE_ROLES.md](61_CODEBASE_TREE_AND_FILE_ROLES.md)

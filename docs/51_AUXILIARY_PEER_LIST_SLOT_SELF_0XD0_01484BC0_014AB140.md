@@ -208,4 +208,4 @@ con confidence `High`.
 ## Next Step
 
 1. Stringere il payload reale della sibling `GNList` a `+0x158`, ora fissata in [52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md](52_WORKING_GNLIST_SLOT_SELF_0X158_01484BC0.md).
-2. Verificare se i peer `0x40` sintetici vengano consumati anche fuori dal corridoio `01484bc0 -> 014ab140`.
+2. Il consumer `014ab140` e' ora ristretto in [64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md](64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md): usa `+0x40->+0x18` come boundary, ma il target scritto resta da canonizzare.

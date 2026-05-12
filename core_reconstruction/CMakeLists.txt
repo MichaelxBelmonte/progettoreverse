@@ -11,6 +11,7 @@ add_library(mikecore_runtime_fft
     src/fft/packed_spectrum.cpp
     src/rawnotes/analyzer_gate_cluster_support.cpp
     src/rawnotes/exponential_smoother.cpp
+    src/rawnotes/interval_boundary_refinement.cpp
     src/rawnotes/interval_gate.cpp
     src/rawnotes/paired_peak_gate.cpp
     src/rawnotes/raw_note_class12_builder.cpp

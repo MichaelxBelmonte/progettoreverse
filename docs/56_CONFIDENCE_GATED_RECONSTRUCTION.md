@@ -266,6 +266,7 @@ Questo e' l'unico modo per arrivare a una ricostruzione fedele con confidence > 
   - builder classe `8` clean-room operativo, incluso il mapping item linked-successor a range protetti; resta prudente il nome canonico dell'owner
   - scalar pieces clean-room di `015c1480 / 015c0b60`: width->alpha, alpha->radius, recurrence one-pole, scratch sizing e loop mode `0`
   - subset numerico del writer `014a3550`, esclusi traversal `GNList` e refcount
+  - subset scalare `014ab140`: scelta boundary da peer linkato `+0x40->+0x18`, fallback su minimo segnale nel gap `>= 0.01`, clamp start/end e guard anchor fuori range
   - interval-gate subset di `014a3900 / 014a42b0`, limitato a class-gap, third-neighbour guard, cost/predicate/field merge verificati, metadata class `2` a `+0x24`, primary candidate gate/collector, helper scalari gap-ranking, planner one-pass e planner iterativo vector-backed
 - `Analyzer Gate Cluster Support`
   solo per:
