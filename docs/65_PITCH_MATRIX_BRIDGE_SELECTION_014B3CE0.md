@@ -112,6 +112,9 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
 - `select_best_peak_in_open_pitch_bin_range(...)`
   - fallback `014aa770`: sceglie il peak con quality massima e
     `lowerExclusive < pitchBin < upperExclusive`
+- `replace_failed_bridge_frequencies_with_previous(...)`
+  - consumer `0149ebe0`: se `item +0x38 <= 0`, sostituisce con l'ultima
+    frequenza valida, inizializzata dal parametro in ingresso
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -184,6 +187,23 @@ if ((peak->+0x10 < upperBin) && (lowerBin < peak->+0x10) &&
 
 La mutazione dell'item/lista resta fuori; nel codice attivo entrano solo i
 predicati numerici e la selezione fallback su span.
+
+## Consumer `0149ebe0`
+
+Nel path `param_4 != 0` di `014b3ce0`, `0149ebe0` normalizza le frequenze
+fallite:
+
+```c
+local_44 = param_2;
+...
+if (*(float *)(item + 0x38) <= 0.0) {
+  *(float *)(item + 0x38) = local_44;
+}
+local_44 = *(float *)(item + 0x38);
+```
+
+Il modulo clean-room espone questa regola come pass su `std::span<float>`:
+nessuna mutazione dell'item originale, solo la sequenza di frequenze.
 
 ## Guardrail
 

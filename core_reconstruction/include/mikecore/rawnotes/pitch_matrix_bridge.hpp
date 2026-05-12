@@ -75,6 +75,12 @@ namespace mikecore::rawnotes
         double anchor_time = pitch_matrix_bridge_failed_anchor_time;
     };
 
+    struct PitchMatrixFrequencyFallbackResult final
+    {
+        std::size_t replaced_count = 0;
+        float final_frequency_hz = 0.0f;
+    };
+
     [[nodiscard]] int pitch_matrix_bridge_minimum_chain_length(
         int max_chain_length,
         double keep_ratio = pitch_matrix_bridge_chain_keep_ratio) noexcept;
@@ -97,6 +103,11 @@ namespace mikecore::rawnotes
         std::span<const PitchMatrixPeak> row,
         int lower_exclusive_pitch_bin,
         int upper_exclusive_pitch_bin) noexcept;
+
+    [[nodiscard]] PitchMatrixFrequencyFallbackResult
+    replace_failed_bridge_frequencies_with_previous(
+        std::span<float> frequencies_hz,
+        float initial_frequency_hz) noexcept;
 
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,

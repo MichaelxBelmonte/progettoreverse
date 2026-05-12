@@ -26,6 +26,7 @@ behavior	014aa770_0149ebe0	frequency_to_pitch_bin	high	both paths use int(logf(f
 behavior	014aa770	deviation_quality_gate	high	selected peak is accepted when 0.65f <= (pitchDeviation/-60.0f)*0.1f + peak +0x1c
 behavior	014aa770	short_duration_reject	high	when pitchDeviation is positive and item duration is below 0.05, 014aa770 rejects before fallback selection
 behavior	014aa770	open_range_fallback_peak	high	when gate fails, 014aa770 scans the selected row and chooses max +0x1c with lowerBin < peak +0x10 < upperBin
+behavior	0149ebe0	failed_frequency_previous_value_fallback	high	after 014b3ce0 param_4 true, if item +0x38 <= 0 then 0149ebe0 writes the previous valid frequency initialized from param_2
 behavior	014b3460_reset	local_rank_and_link_reset	high	014b3460 assigns local rank +0x14 and clears +0x20 +0x28 +0x30 for each bounded peak in each processed row
 behavior	014b3460_link	nearest_unclaimed_next_row_peak	high	014b3460 links to the nearest next-row peak by abs pitch-bin difference if distance is strictly less than 20 and target +0x20 is still zero
 implementation	014b3ce0_scalar_bridge_tail	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes final scalar selection and frequency conversion without GNList traversal or smoothing

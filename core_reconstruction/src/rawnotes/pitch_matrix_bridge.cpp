@@ -81,6 +81,27 @@ namespace mikecore::rawnotes
         return best_index;
     }
 
+    PitchMatrixFrequencyFallbackResult replace_failed_bridge_frequencies_with_previous(
+        std::span<float> frequencies_hz,
+        float initial_frequency_hz) noexcept
+    {
+        PitchMatrixFrequencyFallbackResult result{};
+        float last_frequency = initial_frequency_hz;
+
+        for (float& frequency : frequencies_hz) {
+            if (frequency <= 0.0f) {
+                frequency = last_frequency;
+                ++result.replaced_count;
+            }
+            else {
+                last_frequency = frequency;
+            }
+        }
+
+        result.final_frequency_hz = last_frequency;
+        return result;
+    }
+
     namespace
     {
         [[nodiscard]] std::size_t bounded_row_count(
