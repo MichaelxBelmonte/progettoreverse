@@ -124,6 +124,33 @@ namespace mikecore::rawnotes
         return std::pow(weight_base, exponent) * working_peak_quality;
     }
 
+    PitchMatrixWeightBaseResult pitch_matrix_weight_base_from_frequency_span(
+        float lower_frequency_hz,
+        float upper_frequency_hz,
+        float base_offset,
+        float span_scale) noexcept
+    {
+        PitchMatrixWeightBaseResult result{};
+        if (!(lower_frequency_hz > 0.0f) ||
+            !(upper_frequency_hz >= lower_frequency_hz) ||
+            !std::isfinite(lower_frequency_hz) ||
+            !std::isfinite(upper_frequency_hz)) {
+            return result;
+        }
+
+        const float log2_span =
+            std::log(upper_frequency_hz / lower_frequency_hz) *
+            pitch_matrix_bridge_log2e;
+        if (!std::isfinite(log2_span)) {
+            return result;
+        }
+
+        result.valid = true;
+        result.log2_span = log2_span;
+        result.weight_base = log2_span * span_scale + base_offset;
+        return result;
+    }
+
     void apply_pitch_matrix_primary_peak_values(
         std::span<PitchMatrixPeak> peaks,
         float center_log2,

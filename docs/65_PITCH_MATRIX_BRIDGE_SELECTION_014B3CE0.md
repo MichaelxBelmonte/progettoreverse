@@ -126,6 +126,9 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - subset `0149ded0`: `pitchBin / 60.0f`, specchiato sopra `centerLog2`
 - `pitch_matrix_primary_peak_value(...)`
   - subset `0149ded0`: `pow(weightBase, mirroredExponent) * peak +0x1c`
+- `pitch_matrix_weight_base_from_frequency_span(...)`
+  - subset `0149ded0`: se `upperHz >= lowerHz`, calcola
+    `log(upperHz / lowerHz) * 1.4426950216293335f * spanScale + baseOffset`
 - `apply_pitch_matrix_primary_peak_values(...)`
   - scrive il risultato nel campo clean-room `primary_peak_value`, equivalente
     semantico di `peak +0x18`
@@ -309,9 +312,9 @@ fVar14 = powf(weightBase,
 Dove:
 
 - `centerLog2` deriva da `logf(centerHz / 21.533203125f) * 1.4426950216293335f`
-- `weightBase` deriva dal contesto chiamante come combinazione di ratio e
-  parametri locali; il codice clean-room lo riceve gia' calcolato per non
-  inventare semantica sui parametri non ancora canonizzati
+- `weightBase` deriva da
+  `logf(upperHz / lowerHz) * 1.4426950216293335f * spanScale + baseOffset`
+  dopo il guard `upperHz >= lowerHz`
 
 Questo chiude solo la formula di weighting. Il pruning interno di `0149ded0`
 resta fuori perche' usa indici/iterazione `GNList` non ancora abbastanza

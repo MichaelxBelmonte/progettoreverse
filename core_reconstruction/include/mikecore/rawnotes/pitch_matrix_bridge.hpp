@@ -97,6 +97,13 @@ namespace mikecore::rawnotes
         float final_frequency_hz = 0.0f;
     };
 
+    struct PitchMatrixWeightBaseResult final
+    {
+        bool valid = false;
+        float log2_span = 0.0f;
+        float weight_base = 0.0f;
+    };
+
     struct PitchMatrixHistogramPeak final
     {
         bool found = false;
@@ -169,6 +176,13 @@ namespace mikecore::rawnotes
         float pitch_bin,
         float center_log2,
         float weight_base) noexcept;
+
+    [[nodiscard]] PitchMatrixWeightBaseResult
+    pitch_matrix_weight_base_from_frequency_span(
+        float lower_frequency_hz,
+        float upper_frequency_hz,
+        float base_offset,
+        float span_scale) noexcept;
 
     void apply_pitch_matrix_primary_peak_values(
         std::span<PitchMatrixPeak> peaks,

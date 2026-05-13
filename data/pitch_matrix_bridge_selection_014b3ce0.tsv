@@ -38,6 +38,7 @@ behavior	0149ebe0	row_envelope_absolute_mean	high	0149ebe0 computes per-row mean
 behavior	0149ebe0	output_linear_interpolation	high	0149ebe0 fills output with row[index]+(row[index+1]-row[index])*(position-index), clamping to the last segment
 behavior	0149ebe0	upper_pitch_bin_prune	high	0149ebe0 removes copied inner-list peaks when upperPitchBin <= peak +0x10, equivalent to keeping peak +0x10 < upperPitchBin
 behavior	0149ded0	mirrored_log2_pitch_exponent	high	0149ded0 uses peak +0x10 / 60.0 and mirrors values above centerLog2 as centerLog2+centerLog2-pitchLog2 before powf
+behavior	0149ded0	weight_base_from_frequency_span	high	0149ded0 returns early when upperHz < lowerHz and otherwise computes logf(upperHz/lowerHz)*1.4426950216293335*spanScale+baseOffset
 behavior	0149ded0	primary_peak_value_writer	high	0149ded0 writes peak +0x18 = powf(weightBase, mirroredExponent) * peak +0x1c
 behavior	0149e4a0	center_distance_primary_value_attenuation	high	0149e4a0 multiplies peak +0x18 by max(0, abs(peak +0x10 - centerBin) * -0.0083333338f + 1.0f)
 behavior	0149d5b0	quality_histogram_accumulate	high	0149d5b0 accumulates peak +0x1c - 0.5 into histogram bin peak +0x10 / 5 only when the adjusted contribution is positive
@@ -50,7 +51,7 @@ behavior	014b3460_reset	local_rank_and_link_reset	high	014b3460 assigns local ra
 behavior	014b3460_link	nearest_unclaimed_next_row_peak	high	014b3460 links to the nearest next-row peak by abs pitch-bin difference if distance is strictly less than 20 and target +0x20 is still zero
 implementation	014b3ce0_scalar_bridge_tail	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes final scalar selection and frequency conversion without GNList traversal or smoothing
 implementation	014b3460_link_planner	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes reset/link logic over span-backed rows without GNList ownership semantics
-implementation	0149ded0_primary_value_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes mirrored exponent and primary peak value writer while leaving GNList pruning outside
+implementation	0149ded0_primary_value_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes weight-base derivation mirrored exponent and primary peak value writer while leaving GNList pruning outside
 implementation	0149ebe0_envelope_interpolation_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes row envelope absolute-mean and row-value interpolation while leaving smoothing calls outside
 implementation	0149ebe0_upper_prune_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes vector-backed copy_peaks_below_upper_bin instead of GNList mutation
 implementation	0149e4a0_center_distance_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes open-range predicate and center-distance attenuation without temporary GNList mutation
