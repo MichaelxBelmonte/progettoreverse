@@ -153,6 +153,8 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - alternativa clean-room al pruning `GNList`: copia solo i peak sotto soglia
 - `pitch_matrix_peak_is_inside_open_bin_range(...)`
   - predicato condiviso per i range aperti `lower < peakBin < upper`
+- `pitch_matrix_peak_is_inside_closed_bin_range(...)`
+  - predicato `0149c330`: range chiuso `lower <= peakBin <= upper`
 - `pitch_matrix_center_distance_attenuation(...)`
   - subset `0149e4a0`: `max(0, abs(peakBin - centerBin) * -0.0083333338 + 1)`
 - `apply_pitch_matrix_center_distance_attenuation(...)`
@@ -358,9 +360,20 @@ threshold = rowMax * keepRatio;
 if (peak->+0x18 < threshold) remove peak;
 ```
 
+Nel path con range pitch esplicito, i due limiti Hz sono convertiti con la
+stessa formula Hz -> pitch-bin gia' chiusa, poi vengono rimossi i peak fuori
+dal range chiuso:
+
+```c
+upperBin = int(logf(upperHz / 21.533203125f) * 1.4426950216293335f * 60.0f + 0.5f);
+lowerBin = int(logf(lowerHz / 21.533203125f) * 1.4426950216293335f * 60.0f + 0.5f);
+if (upperBin < peak->+0x10) remove peak;
+if (peak->+0x10 < lowerBin) remove peak;
+```
+
 Il codice clean-room espone questi due pass su `std::span`/`std::vector`.
-Restano fuori la preparazione dei buffer a `480` bin, la pesatura pre-scan, il
-range-pruning alternativo e le mutazioni/ordinamenti `GNList`.
+Restano fuori la preparazione dei buffer a `480` bin, la pesatura pre-scan e le
+mutazioni/ordinamenti `GNList`.
 
 ## Center Attenuation `0149e4a0`
 

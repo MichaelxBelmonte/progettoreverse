@@ -36,6 +36,7 @@ behavior	014aa770	short_duration_reject	high	when pitchDeviation is positive and
 behavior	014aa770	open_range_fallback_peak	high	when gate fails, 014aa770 scans the selected row and chooses max +0x1c with lowerBin < peak +0x10 < upperBin
 behavior	0149c330	row_positive_run_peak_builder	high	0149c330 scans a row of pitch values, starts runs on previous <= 0 and current > 0, keeps the first maximum index, and writes rowIndex peakIndex peakValue peakValue to +0x0c +0x10 +0x18 +0x1c
 behavior	0149c330	relative_row_max_peak_filter	high	0149c330 computes the row maximum peak value and removes peaks whose value is strictly below rowMax*keepRatio in the non-range path
+behavior	0149c330	closed_pitch_bin_range_filter	high	0149c330 range path converts lower/upper frequencies to pitch bins and removes peaks outside lowerBin <= peak +0x10 <= upperBin
 behavior	0149ebe0	failed_frequency_previous_value_fallback	high	after 014b3ce0 param_4 true, if item +0x38 <= 0 then 0149ebe0 writes the previous valid frequency initialized from param_2
 behavior	0149ebe0	row_envelope_absolute_mean	high	0149ebe0 computes per-row mean abs(signal) over center=rowIndex*param_1*sampleRateLike and halfWindow=int(sampleRateLike/frequencyHz*2.1)/2
 behavior	0149ebe0	output_linear_interpolation	high	0149ebe0 fills output with row[index]+(row[index+1]-row[index])*(position-index), clamping to the last segment
@@ -54,7 +55,7 @@ behavior	014b3460_reset	local_rank_and_link_reset	high	014b3460 assigns local ra
 behavior	014b3460_link	nearest_unclaimed_next_row_peak	high	014b3460 links to the nearest next-row peak by abs pitch-bin difference if distance is strictly less than 20 and target +0x20 is still zero
 implementation	014b3ce0_scalar_bridge_tail	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes final scalar selection and frequency conversion without GNList traversal or smoothing
 implementation	014b3460_link_planner	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes reset/link logic over span-backed rows without GNList ownership semantics
-implementation	0149c330_row_peak_builder_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes vector-backed positive-run peak materialization and relative row-max filtering without GNList mutation
+implementation	0149c330_row_peak_builder_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes vector-backed positive-run peak materialization relative row-max filtering and closed pitch-bin range filtering without GNList mutation
 implementation	0149ded0_primary_value_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes weight-base derivation mirrored exponent and primary peak value writer while leaving GNList pruning outside
 implementation	0149ebe0_envelope_interpolation_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes row envelope absolute-mean and row-value interpolation while leaving smoothing calls outside
 implementation	0149ebe0_upper_prune_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes vector-backed copy_peaks_below_upper_bin instead of GNList mutation

@@ -335,6 +335,15 @@ namespace mikecore::rawnotes
                peak.pitch_bin_index < upper_exclusive_pitch_bin;
     }
 
+    bool pitch_matrix_peak_is_inside_closed_bin_range(
+        const PitchMatrixPeak& peak,
+        int lower_inclusive_pitch_bin,
+        int upper_inclusive_pitch_bin) noexcept
+    {
+        return lower_inclusive_pitch_bin <= peak.pitch_bin_index &&
+               peak.pitch_bin_index <= upper_inclusive_pitch_bin;
+    }
+
     std::vector<PitchMatrixPeak> copy_peaks_below_upper_bin(
         std::span<const PitchMatrixPeak> peaks,
         int upper_pitch_bin_exclusive)
@@ -343,6 +352,24 @@ namespace mikecore::rawnotes
         kept.reserve(peaks.size());
         for (const PitchMatrixPeak& peak : peaks) {
             if (pitch_matrix_peak_is_below_upper_bin(peak, upper_pitch_bin_exclusive)) {
+                kept.push_back(peak);
+            }
+        }
+        return kept;
+    }
+
+    std::vector<PitchMatrixPeak> copy_peaks_inside_closed_bin_range(
+        std::span<const PitchMatrixPeak> peaks,
+        int lower_inclusive_pitch_bin,
+        int upper_inclusive_pitch_bin)
+    {
+        std::vector<PitchMatrixPeak> kept;
+        kept.reserve(peaks.size());
+        for (const PitchMatrixPeak& peak : peaks) {
+            if (pitch_matrix_peak_is_inside_closed_bin_range(
+                    peak,
+                    lower_inclusive_pitch_bin,
+                    upper_inclusive_pitch_bin)) {
                 kept.push_back(peak);
             }
         }

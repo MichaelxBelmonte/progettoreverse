@@ -234,9 +234,19 @@ namespace mikecore::rawnotes
         int lower_exclusive_pitch_bin,
         int upper_exclusive_pitch_bin) noexcept;
 
+    [[nodiscard]] bool pitch_matrix_peak_is_inside_closed_bin_range(
+        const PitchMatrixPeak& peak,
+        int lower_inclusive_pitch_bin,
+        int upper_inclusive_pitch_bin) noexcept;
+
     [[nodiscard]] std::vector<PitchMatrixPeak> copy_peaks_below_upper_bin(
         std::span<const PitchMatrixPeak> peaks,
         int upper_pitch_bin_exclusive);
+
+    [[nodiscard]] std::vector<PitchMatrixPeak> copy_peaks_inside_closed_bin_range(
+        std::span<const PitchMatrixPeak> peaks,
+        int lower_inclusive_pitch_bin,
+        int upper_inclusive_pitch_bin);
 
     [[nodiscard]] float pitch_matrix_center_distance_attenuation(
         int peak_pitch_bin,
