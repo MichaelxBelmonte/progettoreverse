@@ -20,6 +20,8 @@ constant	0x0240e338	center_distance_scale_minus_0_0083333338f	very_high	__TEXT._
 constant	0x02390118	quality_histogram_offset_minus_0_5f	very_high	__TEXT.__const bytes decode as float -0.5 and are added to peak +0x1c before the 0149d5b0 histogram positive gate
 constant	0x0239424c	quality_histogram_positive_floor_0f	very_high	__TEXT.__const bytes decode as float 0.0 and gate the 0149d5b0 histogram contribution after quality offset
 constant	0x02390d28	quality_histogram_bins_per_octave_12f	very_high	__TEXT.__const bytes decode as float 12.0 and are used for smoothing width plus histogram index to frequency conversion in 0149d5b0
+constant	0x0239109c	quality_histogram_focus_start_threshold_0_9f	very_high	__TEXT.__const bytes decode as float 0.8999999761581421 and initialize the 0149d5b0 focus-range threshold
+constant	0x0241b638	quality_histogram_focus_threshold_step_minus_0_1f	very_high	__TEXT.__const bytes decode as float -0.10000000149011612 and decrement the 0149d5b0 focus-range threshold loop
 constant	0x023942b8	chain_keep_ratio_0_7	very_high	__TEXT.__const bytes decode as double 0.7 for int(maxChainLength*0.7) pruning
 constant	0x023b19a0	failure_anchor_minus_1_double	very_high	__TEXT.__const bytes decode as double -1.0 for failed item +0x30
 constant	0x02390d00	failure_frequency_minus_1_float	very_high	__TEXT.__const bytes decode as float -1.0 for failed item +0x38
@@ -41,6 +43,9 @@ behavior	0149e4a0	center_distance_primary_value_attenuation	high	0149e4a0 multip
 behavior	0149d5b0	quality_histogram_accumulate	high	0149d5b0 accumulates peak +0x1c - 0.5 into histogram bin peak +0x10 / 5 only when the adjusted contribution is positive
 behavior	0149d5b0	quality_histogram_normalize	high	0149d5b0 scans 96 histogram bins for the maximum positive value and divides all bins by that maximum
 behavior	0149d5b0	quality_histogram_index_to_frequency	high	0149d5b0 converts histogram indices with exp2(index/12.0)*21.533203125 after the histogram/range pass
+behavior	0149d5b0	quality_histogram_local_peak_range	high	0149d5b0 finds first and last local peaks above threshold using rising-to-falling slope checks over the normalized 96-bin histogram
+behavior	0149d5b0	quality_histogram_floor_range	high	0149d5b0 expands left and right from local peaks until histogram value falls below min(threshold, peakValue*0.5)
+behavior	0149d5b0	quality_histogram_focus_range	high	0149d5b0 uses thresholds 0.9 then -0.1 steps to find a focus range, falling back to center +/- 6 when the range exceeds 13 bins
 behavior	014b3460_reset	local_rank_and_link_reset	high	014b3460 assigns local rank +0x14 and clears +0x20 +0x28 +0x30 for each bounded peak in each processed row
 behavior	014b3460_link	nearest_unclaimed_next_row_peak	high	014b3460 links to the nearest next-row peak by abs pitch-bin difference if distance is strictly less than 20 and target +0x20 is still zero
 implementation	014b3ce0_scalar_bridge_tail	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes final scalar selection and frequency conversion without GNList traversal or smoothing
@@ -50,4 +55,5 @@ implementation	0149ebe0_envelope_interpolation_subset	pitch_matrix_bridge_clean_
 implementation	0149ebe0_upper_prune_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes vector-backed copy_peaks_below_upper_bin instead of GNList mutation
 implementation	0149e4a0_center_distance_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes open-range predicate and center-distance attenuation without temporary GNList mutation
 implementation	0149d5b0_quality_histogram_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes first-peak quality histogram accumulation normalization and index-to-Hz conversion while leaving smoothing external
+implementation	0149d5b0_quality_histogram_range_subset	pitch_matrix_bridge_clean_room	high	core_reconstruction exposes normalized histogram local-peak floor-range focus-range and output frequency conversion without smoothing
 guardrail	014b3ce0_full_chain_builder	not_implemented	high	initial candidate-chain construction walks nested GNList and adjacency fields +0x28/+0x30; excluded until exact enough

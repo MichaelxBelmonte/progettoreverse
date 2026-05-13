@@ -75,6 +75,8 @@ Costanti lette da `binaries/MikeCore`:
 | `0x02390118` | `-0.5f` | offset quality per histogram in `0149d5b0` |
 | `0x0239424c` | `0.0f` | soglia positiva dopo offset quality in `0149d5b0` |
 | `0x02390d28` | `12.0f` | smoothing width e bins-per-octave histogram in `0149d5b0` |
+| `0x0239109c` | `0.8999999761581421f` | soglia iniziale per focus range histogram in `0149d5b0` |
+| `0x0241b638` | `-0.10000000149011612f` | decremento soglia per focus range histogram in `0149d5b0` |
 | `0x023942b8` | `0.7` double | keep ratio per pruning chain |
 | `0x023b19a0` | `-1.0` double | failure anchor |
 | `0x02390d00` | `-1.0f` | failure frequency |
@@ -155,6 +157,12 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
     ogni bin per quel massimo; se il massimo non e' positivo non muta il buffer
 - `pitch_matrix_histogram_frequency_from_index(...)`
   - subset `0149d5b0`: `exp2(index / 12.0f) * 21.533203125f`
+- `find_pitch_matrix_quality_histogram_range(...)`
+  - subset `0149d5b0`: estrae indici center/first/last peak, floor range
+    e focus range dal buffer histogram gia' smoothato/normalizzato
+- `pitch_matrix_histogram_range_to_frequencies(...)`
+  - replica la coda output di `0149d5b0` convertendo tutti gli indici range
+    tramite la stessa formula `exp2(index / 12.0f) * 21.533203125f`
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -334,12 +342,19 @@ Il frammento chiuso e' stabile:
 - accumula su un buffer da `96` float
 - chiama una smoothing esterna `015c1480(12.0f, 96)`, non implementata qui
 - trova il massimo dei `96` bin e normalizza dividendo tutti i bin per il massimo
+- cerca il primo e l'ultimo local peak sopra la soglia passata a funzione
+- calcola floor sinistro/destro usando `min(threshold, peakValue * 0.5f)`
+- se il center e' dentro il floor range, cerca un focus range partendo da
+  soglia `0.9f` e scendendo a passi di `-0.1f`; se il range supera `13` bin,
+  usa fallback `center +/- 6`
+- se il center cade fuori dal floor range, ricentra su `(lower + upper) / 2`
+  e usa ancora il fallback `center +/- 6` clampato ai bordi
 - converte un indice histogram in Hz con `exp2(index / 12.0f) * 21.533203125f`
 
-Il codice clean-room implementa accumulo, normalizzazione e conversione indice
--> Hz. La smoothing resta fuori per lo stesso motivo degli altri slice:
-`015c1480` non e' ancora chiusa abbastanza da duplicarne il comportamento senza
-inventare dettagli.
+Il codice clean-room implementa accumulo, normalizzazione, range selector e
+conversione indice -> Hz. La smoothing resta fuori da questo slice perche' il
+callsite non espone ancora il mode/contesto in modo sufficiente per garantire
+equivalenza con il wrapper generale.
 
 ## Guardrail
 

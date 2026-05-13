@@ -36,6 +36,14 @@ namespace mikecore::rawnotes
     inline constexpr float pitch_matrix_quality_histogram_offset = -0.5f;
     inline constexpr float pitch_matrix_quality_histogram_smoothing_width = 12.0f;
     inline constexpr float pitch_matrix_quality_histogram_bins_per_octave = 12.0f;
+    inline constexpr float pitch_matrix_quality_histogram_half_height = 0.5f;
+    inline constexpr float pitch_matrix_quality_histogram_focus_start_threshold =
+        0.8999999761581421f;
+    inline constexpr float pitch_matrix_quality_histogram_focus_threshold_step =
+        -0.10000000149011612f;
+    inline constexpr int pitch_matrix_quality_histogram_focus_min_width = 12;
+    inline constexpr int pitch_matrix_quality_histogram_focus_max_width = 13;
+    inline constexpr int pitch_matrix_quality_histogram_focus_fallback_radius = 6;
     inline constexpr double pitch_matrix_bridge_chain_keep_ratio = 0.7;
     inline constexpr float pitch_matrix_bridge_failed_frequency = -1.0f;
     inline constexpr double pitch_matrix_bridge_failed_anchor_time = -1.0;
@@ -98,6 +106,31 @@ namespace mikecore::rawnotes
 
     using PitchMatrixQualityHistogram =
         std::array<float, pitch_matrix_quality_histogram_bin_count>;
+
+    struct PitchMatrixHistogramRange final
+    {
+        bool found = false;
+        int center_index = 0;
+        int first_peak_index = 0;
+        int last_peak_index = 0;
+        int lower_floor_index = 0;
+        int upper_floor_index = 0;
+        int lower_half_height_index = 0;
+        int lower_focus_index = 0;
+        int upper_focus_index = 0;
+    };
+
+    struct PitchMatrixHistogramFrequencyRange final
+    {
+        bool found = false;
+        float center_frequency_hz = 0.0f;
+        float last_peak_frequency_hz = 0.0f;
+        float lower_half_height_frequency_hz = 0.0f;
+        float upper_floor_frequency_hz = 0.0f;
+        float lower_floor_frequency_hz = 0.0f;
+        float upper_focus_frequency_hz = 0.0f;
+        float lower_focus_frequency_hz = 0.0f;
+    };
 
     [[nodiscard]] int pitch_matrix_bridge_minimum_chain_length(
         int max_chain_length,
@@ -193,6 +226,14 @@ namespace mikecore::rawnotes
 
     [[nodiscard]] float pitch_matrix_histogram_frequency_from_index(
         int histogram_index) noexcept;
+
+    [[nodiscard]] PitchMatrixHistogramRange find_pitch_matrix_quality_histogram_range(
+        std::span<const float> histogram,
+        float peak_threshold) noexcept;
+
+    [[nodiscard]] PitchMatrixHistogramFrequencyRange
+    pitch_matrix_histogram_range_to_frequencies(
+        const PitchMatrixHistogramRange& range) noexcept;
 
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,

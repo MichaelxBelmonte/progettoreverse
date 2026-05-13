@@ -274,6 +274,266 @@ namespace mikecore::rawnotes
         }
     }
 
+    namespace
+    {
+        [[nodiscard]] std::size_t bounded_histogram_bin_count(
+            std::span<const float> histogram) noexcept
+        {
+            return std::min(
+                histogram.size(),
+                pitch_matrix_quality_histogram_bin_count);
+        }
+
+        [[nodiscard]] float histogram_value(
+            std::span<const float> histogram,
+            int index) noexcept
+        {
+            if (index < 0 ||
+                static_cast<std::size_t>(index) >= bounded_histogram_bin_count(histogram)) {
+                return 0.0f;
+            }
+
+            return histogram[static_cast<std::size_t>(index)];
+        }
+
+        [[nodiscard]] int find_histogram_max_index(
+            std::span<const float> histogram) noexcept
+        {
+            const std::size_t bin_count = bounded_histogram_bin_count(histogram);
+            float best_value = 0.0f;
+            int best_index = 0;
+
+            for (std::size_t index = 0; index < bin_count; ++index) {
+                if (best_value < histogram[index]) {
+                    best_value = histogram[index];
+                    best_index = static_cast<int>(index);
+                }
+            }
+
+            return best_index;
+        }
+
+        [[nodiscard]] bool histogram_has_positive_peak(
+            std::span<const float> histogram) noexcept
+        {
+            const std::size_t bin_count = bounded_histogram_bin_count(histogram);
+            for (std::size_t index = 0; index < bin_count; ++index) {
+                if (histogram[index] > 0.0f) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        [[nodiscard]] int find_first_histogram_local_peak_above(
+            std::span<const float> histogram,
+            float peak_threshold) noexcept
+        {
+            const std::size_t bin_count = bounded_histogram_bin_count(histogram);
+            if (bin_count < 3) {
+                return 0;
+            }
+
+            const int last_inner_index = static_cast<int>(bin_count) - 2;
+            for (int index = 1; index <= last_inner_index; ++index) {
+                const float previous_slope =
+                    histogram_value(histogram, index) -
+                    histogram_value(histogram, index - 1);
+                const float next_slope =
+                    histogram_value(histogram, index + 1) -
+                    histogram_value(histogram, index);
+                if (previous_slope >= 0.0f &&
+                    next_slope < 0.0f &&
+                    peak_threshold < histogram_value(histogram, index)) {
+                    return index;
+                }
+            }
+
+            return 0;
+        }
+
+        [[nodiscard]] int find_last_histogram_local_peak_above(
+            std::span<const float> histogram,
+            float peak_threshold,
+            int first_peak_index,
+            int center_index) noexcept
+        {
+            const std::size_t bin_count = bounded_histogram_bin_count(histogram);
+            if (bin_count < 3) {
+                return first_peak_index;
+            }
+
+            const int last_index = static_cast<int>(bin_count) - 1;
+            if (center_index > last_index - 1) {
+                return last_index;
+            }
+
+            for (int index = last_index - 1; index >= 1; --index) {
+                const float previous_slope =
+                    histogram_value(histogram, index) -
+                    histogram_value(histogram, index - 1);
+                const float next_slope =
+                    histogram_value(histogram, index + 1) -
+                    histogram_value(histogram, index);
+                if (previous_slope > 0.0f &&
+                    next_slope <= 0.0f &&
+                    peak_threshold < histogram_value(histogram, index)) {
+                    return index;
+                }
+            }
+
+            return first_peak_index;
+        }
+
+        [[nodiscard]] float histogram_floor_for_peak(
+            std::span<const float> histogram,
+            int peak_index,
+            float peak_threshold) noexcept
+        {
+            return std::min(
+                peak_threshold,
+                histogram_value(histogram, peak_index) *
+                    pitch_matrix_quality_histogram_half_height);
+        }
+
+        [[nodiscard]] int find_upper_histogram_floor_index(
+            std::span<const float> histogram,
+            int start_index,
+            float floor) noexcept
+        {
+            const std::size_t bin_count = bounded_histogram_bin_count(histogram);
+            if (bin_count == 0) {
+                return 0;
+            }
+
+            const int last_index = static_cast<int>(bin_count) - 1;
+            const int first_index = std::clamp(start_index, 0, last_index);
+            for (int index = first_index; index <= last_index; ++index) {
+                if (histogram_value(histogram, index) < floor) {
+                    return index;
+                }
+            }
+
+            return last_index;
+        }
+
+        [[nodiscard]] int find_lower_histogram_floor_index(
+            std::span<const float> histogram,
+            int start_index,
+            float floor) noexcept
+        {
+            const std::size_t bin_count = bounded_histogram_bin_count(histogram);
+            if (bin_count == 0) {
+                return 0;
+            }
+
+            const int last_index = static_cast<int>(bin_count) - 1;
+            const int first_index = std::clamp(start_index, 0, last_index);
+            for (int index = first_index; index >= 0; --index) {
+                if (histogram_value(histogram, index) < floor) {
+                    return index;
+                }
+            }
+
+            return 0;
+        }
+
+        [[nodiscard]] int find_lower_histogram_half_height_index(
+            std::span<const float> histogram,
+            int first_peak_index) noexcept
+        {
+            if (histogram_value(histogram, first_peak_index) <
+                pitch_matrix_quality_histogram_half_height) {
+                return 0;
+            }
+
+            return find_lower_histogram_floor_index(
+                histogram,
+                first_peak_index,
+                pitch_matrix_quality_histogram_half_height);
+        }
+
+        void apply_histogram_focus_range(
+            std::span<const float> histogram,
+            PitchMatrixHistogramRange& range) noexcept
+        {
+            const std::size_t bin_count = bounded_histogram_bin_count(histogram);
+            if (bin_count == 0) {
+                return;
+            }
+
+            const int last_index = static_cast<int>(bin_count) - 1;
+
+            if (range.lower_floor_index < range.center_index &&
+                range.center_index < range.upper_floor_index) {
+                float threshold =
+                    pitch_matrix_quality_histogram_focus_start_threshold;
+
+                while (true) {
+                    int upper = last_index;
+                    for (int index = range.center_index; index <= last_index; ++index) {
+                        if (histogram_value(histogram, index) <= threshold) {
+                            upper = index;
+                            break;
+                        }
+                    }
+
+                    int lower = 0;
+                    for (int index = range.center_index; index >= 0; --index) {
+                        if (histogram_value(histogram, index) <= threshold) {
+                            lower = index;
+                            break;
+                        }
+                    }
+
+                    const int width = upper - lower;
+                    if (width >= pitch_matrix_quality_histogram_focus_min_width) {
+                        if (width > pitch_matrix_quality_histogram_focus_max_width) {
+                            upper = std::min(
+                                last_index,
+                                range.center_index +
+                                    pitch_matrix_quality_histogram_focus_fallback_radius);
+                            lower = std::max(
+                                0,
+                                range.center_index -
+                                    pitch_matrix_quality_histogram_focus_fallback_radius);
+                        }
+
+                        range.upper_focus_index = upper;
+                        range.lower_focus_index = lower;
+                        return;
+                    }
+
+                    if (upper >= last_index && lower <= 0) {
+                        range.upper_focus_index = upper;
+                        range.lower_focus_index = lower;
+                        return;
+                    }
+
+                    threshold += pitch_matrix_quality_histogram_focus_threshold_step;
+                }
+            }
+
+            const int center_sum =
+                range.lower_floor_index + range.upper_floor_index;
+            range.center_index = center_sum / 2;
+            range.upper_focus_index = last_index;
+            if (center_sum <
+                (last_index - pitch_matrix_quality_histogram_focus_fallback_radius) * 2) {
+                range.upper_focus_index =
+                    range.center_index +
+                    pitch_matrix_quality_histogram_focus_fallback_radius;
+            }
+            range.lower_focus_index = 0;
+            if (pitch_matrix_quality_histogram_focus_fallback_radius * 2 - 1 <
+                center_sum) {
+                range.lower_focus_index =
+                    range.center_index -
+                    pitch_matrix_quality_histogram_focus_fallback_radius;
+            }
+        }
+    }
+
     PitchMatrixQualityHistogram make_empty_pitch_matrix_quality_histogram() noexcept
     {
         return {};
@@ -336,6 +596,65 @@ namespace mikecore::rawnotes
                    static_cast<float>(histogram_index) /
                    pitch_matrix_quality_histogram_bins_per_octave) *
                pitch_matrix_bridge_base_frequency_hz;
+    }
+
+    PitchMatrixHistogramRange find_pitch_matrix_quality_histogram_range(
+        std::span<const float> histogram,
+        float peak_threshold) noexcept
+    {
+        PitchMatrixHistogramRange range{};
+        if (bounded_histogram_bin_count(histogram) == 0) {
+            return range;
+        }
+
+        range.found = histogram_has_positive_peak(histogram);
+        range.center_index = find_histogram_max_index(histogram);
+        range.first_peak_index =
+            range.center_index < 1
+                ? 0
+                : find_first_histogram_local_peak_above(histogram, peak_threshold);
+        range.last_peak_index = find_last_histogram_local_peak_above(
+            histogram,
+            peak_threshold,
+            range.first_peak_index,
+            range.center_index);
+
+        range.upper_floor_index = find_upper_histogram_floor_index(
+            histogram,
+            range.last_peak_index,
+            histogram_floor_for_peak(histogram, range.last_peak_index, peak_threshold));
+        range.lower_floor_index = find_lower_histogram_floor_index(
+            histogram,
+            range.first_peak_index,
+            histogram_floor_for_peak(histogram, range.first_peak_index, peak_threshold));
+        range.lower_half_height_index =
+            find_lower_histogram_half_height_index(histogram, range.first_peak_index);
+
+        apply_histogram_focus_range(histogram, range);
+        return range;
+    }
+
+    PitchMatrixHistogramFrequencyRange pitch_matrix_histogram_range_to_frequencies(
+        const PitchMatrixHistogramRange& range) noexcept
+    {
+        return PitchMatrixHistogramFrequencyRange{
+            .found = range.found,
+            .center_frequency_hz =
+                pitch_matrix_histogram_frequency_from_index(range.center_index),
+            .last_peak_frequency_hz =
+                pitch_matrix_histogram_frequency_from_index(range.last_peak_index),
+            .lower_half_height_frequency_hz =
+                pitch_matrix_histogram_frequency_from_index(
+                    range.lower_half_height_index),
+            .upper_floor_frequency_hz =
+                pitch_matrix_histogram_frequency_from_index(range.upper_floor_index),
+            .lower_floor_frequency_hz =
+                pitch_matrix_histogram_frequency_from_index(range.lower_floor_index),
+            .upper_focus_frequency_hz =
+                pitch_matrix_histogram_frequency_from_index(range.upper_focus_index),
+            .lower_focus_frequency_hz =
+                pitch_matrix_histogram_frequency_from_index(range.lower_focus_index),
+        };
     }
 
     namespace
