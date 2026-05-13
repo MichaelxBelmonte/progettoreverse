@@ -103,6 +103,7 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
 - `PitchMatrixPeak`
   - `row_index` rappresenta il campo `+0x0c`
   - `pitch_bin_index` rappresenta il campo `+0x10`
+  - `primary_peak_value` rappresenta il campo `+0x18`
   - `working_peak_quality` rappresenta il campo `+0x1c`
 - `pitch_matrix_bridge_minimum_chain_length(...)`
   - espone il pruning scalar `int(maxLen * 0.7)`, con special-case `maxLen == 2`
@@ -132,6 +133,12 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
 - `apply_pitch_matrix_primary_peak_values(...)`
   - scrive il risultato nel campo clean-room `primary_peak_value`, equivalente
     semantico di `peak +0x18`
+- `collect_pitch_matrix_row_positive_run_peaks(...)`
+  - subset `0149c330`: materializza un peak per ogni run positiva della row,
+    scegliendo il massimo locale come `pitch_bin_index` e scrivendo lo stesso
+    valore iniziale in `primary_peak_value` e `working_peak_quality`
+- `filter_pitch_matrix_peaks_by_relative_row_max(...)`
+  - subset `0149c330`: conserva i peak con `peak +0x1c >= rowMax * keepRatio`
 - `pitch_matrix_row_envelope_half_window_samples(...)`
   - subset `0149ebe0`: `int((sampleRate / frequencyHz) * 2.1) / 2`
 - `pitch_matrix_absolute_mean_around_center(...)`
@@ -319,6 +326,41 @@ Dove:
 Questo chiude solo la formula di weighting. Il pruning interno di `0149ded0`
 resta fuori perche' usa indici/iterazione `GNList` non ancora abbastanza
 stabili da replicare senza simulazione.
+
+## Row Peak Builder `0149c330`
+
+Nel builder della pitch matrix, il frammento chiuso scansiona una row di valori
+float e crea un `MUPitchMatrixPeak` per ogni run positiva:
+
+```c
+if (previous <= 0.0 && current > 0.0) {
+  active = true;
+  peakIndex = index;
+  peakValue = current;
+}
+...
+if (active && peakValue < current) {
+  peakIndex = index;
+  peakValue = current;
+}
+...
+peak->+0x0c = rowIndex;
+peak->+0x10 = peakIndex;
+peak->+0x18 = peakValue;
+peak->+0x1c = peakValue;
+```
+
+Subito dopo, nel path senza range pitch esplicito, la funzione calcola il
+massimo della row e rimuove i peak sotto soglia relativa:
+
+```c
+threshold = rowMax * keepRatio;
+if (peak->+0x18 < threshold) remove peak;
+```
+
+Il codice clean-room espone questi due pass su `std::span`/`std::vector`.
+Restano fuori la preparazione dei buffer a `480` bin, la pesatura pre-scan, il
+range-pruning alternativo e le mutazioni/ordinamenti `GNList`.
 
 ## Center Attenuation `0149e4a0`
 

@@ -165,6 +165,76 @@ namespace mikecore::rawnotes
         }
     }
 
+    PitchMatrixPeakRunCollection collect_pitch_matrix_row_positive_run_peaks(
+        std::span<const float> row_values,
+        int row_index)
+    {
+        PitchMatrixPeakRunCollection result{};
+        result.peaks.reserve(row_values.size() / 2);
+
+        bool inside_positive_run = false;
+        int run_peak_index = 0;
+        float run_peak_value = 0.0f;
+        float previous_value = 0.0f;
+
+        const auto emit_peak = [&] {
+            PitchMatrixPeak peak{};
+            peak.row_index = row_index;
+            peak.pitch_bin_index = run_peak_index;
+            peak.primary_peak_value = run_peak_value;
+            peak.working_peak_quality = run_peak_value;
+            result.peaks.push_back(peak);
+
+            if (result.row_max_value < run_peak_value) {
+                result.row_max_value = run_peak_value;
+            }
+        };
+
+        for (std::size_t index = 0; index < row_values.size(); ++index) {
+            const float value = row_values[index];
+
+            if (previous_value <= 0.0f && value > 0.0f) {
+                inside_positive_run = true;
+                run_peak_index = static_cast<int>(index);
+                run_peak_value = value;
+            }
+
+            if (inside_positive_run && previous_value > 0.0f && value <= 0.0f) {
+                emit_peak();
+                inside_positive_run = false;
+            }
+            else if (inside_positive_run && run_peak_value < value) {
+                run_peak_index = static_cast<int>(index);
+                run_peak_value = value;
+            }
+
+            previous_value = value;
+        }
+
+        if (inside_positive_run) {
+            emit_peak();
+        }
+
+        return result;
+    }
+
+    std::vector<PitchMatrixPeak> filter_pitch_matrix_peaks_by_relative_row_max(
+        std::span<const PitchMatrixPeak> peaks,
+        float row_max_value,
+        float keep_ratio)
+    {
+        const float threshold = row_max_value * keep_ratio;
+
+        std::vector<PitchMatrixPeak> kept;
+        kept.reserve(peaks.size());
+        for (const PitchMatrixPeak& peak : peaks) {
+            if (!(peak.working_peak_quality < threshold)) {
+                kept.push_back(peak);
+            }
+        }
+        return kept;
+    }
+
     std::size_t pitch_matrix_row_envelope_half_window_samples(
         double sample_rate,
         float frequency_hz,

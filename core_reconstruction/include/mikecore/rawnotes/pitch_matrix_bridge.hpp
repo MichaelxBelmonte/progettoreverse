@@ -104,6 +104,12 @@ namespace mikecore::rawnotes
         float weight_base = 0.0f;
     };
 
+    struct PitchMatrixPeakRunCollection final
+    {
+        std::vector<PitchMatrixPeak> peaks;
+        float row_max_value = 0.0f;
+    };
+
     struct PitchMatrixHistogramPeak final
     {
         bool found = false;
@@ -188,6 +194,17 @@ namespace mikecore::rawnotes
         std::span<PitchMatrixPeak> peaks,
         float center_log2,
         float weight_base) noexcept;
+
+    [[nodiscard]] PitchMatrixPeakRunCollection
+    collect_pitch_matrix_row_positive_run_peaks(
+        std::span<const float> row_values,
+        int row_index);
+
+    [[nodiscard]] std::vector<PitchMatrixPeak>
+    filter_pitch_matrix_peaks_by_relative_row_max(
+        std::span<const PitchMatrixPeak> peaks,
+        float row_max_value,
+        float keep_ratio);
 
     [[nodiscard]] std::size_t pitch_matrix_row_envelope_half_window_samples(
         double sample_rate,
