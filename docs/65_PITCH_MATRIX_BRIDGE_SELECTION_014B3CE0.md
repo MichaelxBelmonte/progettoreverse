@@ -72,6 +72,9 @@ Costanti lette da `binaries/MikeCore`:
 | `0x02391090` | `0.10000000149011612f` | scala deviazione pitch-bin in `014aa770` |
 | `0x0240e3b0` | `2.1` double | ampiezza finestra envelope in periodi nel consumer `0149ebe0` |
 | `0x0240e338` | `-0.008333333767950535f` | scala attenuazione distanza pitch-bin in `0149e4a0` |
+| `0x02390118` | `-0.5f` | offset quality per histogram in `0149d5b0` |
+| `0x0239424c` | `0.0f` | soglia positiva dopo offset quality in `0149d5b0` |
+| `0x02390d28` | `12.0f` | smoothing width e bins-per-octave histogram in `0149d5b0` |
 | `0x023942b8` | `0.7` double | keep ratio per pruning chain |
 | `0x023b19a0` | `-1.0` double | failure anchor |
 | `0x02390d00` | `-1.0f` | failure frequency |
@@ -142,6 +145,16 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - subset `0149e4a0`: `max(0, abs(peakBin - centerBin) * -0.0083333338 + 1)`
 - `apply_pitch_matrix_center_distance_attenuation(...)`
   - moltiplica `primary_peak_value` con il fattore di distanza dal centro
+- `make_empty_pitch_matrix_quality_histogram(...)`
+  - crea il buffer histogram a `96` bin visto in `0149d5b0`
+- `accumulate_pitch_matrix_quality_histogram(...)`
+  - subset `0149d5b0`: per ogni primo peak di row accumula
+    `peak +0x1c - 0.5f` nel bin `pitchBin / 5` solo se positivo
+- `normalize_pitch_matrix_quality_histogram(...)`
+  - subset `0149d5b0`: trova il massimo sui `96` bin e normalizza dividendo
+    ogni bin per quel massimo; se il massimo non e' positivo non muta il buffer
+- `pitch_matrix_histogram_frequency_from_index(...)`
+  - subset `0149d5b0`: `exp2(index / 12.0f) * 21.533203125f`
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -310,6 +323,23 @@ peak->+0x18 = factor * peak->+0x18;
 
 Il codice clean-room espone solo questo pass numerico. Restano fuori la
 raccolta/rimozione nella lista temporanea e la chiamata `014b32a0`.
+
+## Quality Histogram `0149d5b0`
+
+`0149d5b0` contiene un pass histogram sui primi peak disponibili per row.
+Il frammento chiuso e' stabile:
+
+- legge `peak +0x1c`, sottrae `0.5f` e scarta valori non positivi
+- calcola il bin histogram come `peak +0x10 / 5`
+- accumula su un buffer da `96` float
+- chiama una smoothing esterna `015c1480(12.0f, 96)`, non implementata qui
+- trova il massimo dei `96` bin e normalizza dividendo tutti i bin per il massimo
+- converte un indice histogram in Hz con `exp2(index / 12.0f) * 21.533203125f`
+
+Il codice clean-room implementa accumulo, normalizzazione e conversione indice
+-> Hz. La smoothing resta fuori per lo stesso motivo degli altri slice:
+`015c1480` non e' ancora chiusa abbastanza da duplicarne il comportamento senza
+inventare dettagli.
 
 ## Guardrail
 

@@ -274,6 +274,70 @@ namespace mikecore::rawnotes
         }
     }
 
+    PitchMatrixQualityHistogram make_empty_pitch_matrix_quality_histogram() noexcept
+    {
+        return {};
+    }
+
+    void accumulate_pitch_matrix_quality_histogram(
+        std::span<const PitchMatrixPeak> first_peaks_per_row,
+        std::span<float> histogram) noexcept
+    {
+        const std::size_t bin_count =
+            std::min(histogram.size(), pitch_matrix_quality_histogram_bin_count);
+
+        for (const PitchMatrixPeak& peak : first_peaks_per_row) {
+            const float contribution =
+                peak.working_peak_quality + pitch_matrix_quality_histogram_offset;
+            if (!(contribution > 0.0f)) {
+                continue;
+            }
+
+            const int histogram_bin =
+                peak.pitch_bin_index / pitch_matrix_quality_histogram_pitch_bins_per_slot;
+            if (histogram_bin < 0 ||
+                static_cast<std::size_t>(histogram_bin) >= bin_count) {
+                continue;
+            }
+
+            histogram[static_cast<std::size_t>(histogram_bin)] += contribution;
+        }
+    }
+
+    PitchMatrixHistogramPeak normalize_pitch_matrix_quality_histogram(
+        std::span<float> histogram) noexcept
+    {
+        const std::size_t bin_count =
+            std::min(histogram.size(), pitch_matrix_quality_histogram_bin_count);
+
+        PitchMatrixHistogramPeak peak{};
+        for (std::size_t index = 0; index < bin_count; ++index) {
+            if (peak.value < histogram[index]) {
+                peak.found = true;
+                peak.index = index;
+                peak.value = histogram[index];
+            }
+        }
+
+        if (!(peak.value > 0.0f)) {
+            return {};
+        }
+
+        for (std::size_t index = 0; index < bin_count; ++index) {
+            histogram[index] /= peak.value;
+        }
+
+        return peak;
+    }
+
+    float pitch_matrix_histogram_frequency_from_index(int histogram_index) noexcept
+    {
+        return std::exp2(
+                   static_cast<float>(histogram_index) /
+                   pitch_matrix_quality_histogram_bins_per_octave) *
+               pitch_matrix_bridge_base_frequency_hz;
+    }
+
     namespace
     {
         [[nodiscard]] std::size_t bounded_row_count(

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <cstddef>
 #include <span>
 #include <vector>
@@ -30,6 +31,11 @@ namespace mikecore::rawnotes
     inline constexpr float pitch_matrix_bridge_deviation_quality_scale = 0.10000000149011612f;
     inline constexpr double pitch_matrix_row_envelope_window_periods = 2.1;
     inline constexpr float pitch_matrix_center_distance_scale = -0.008333333767950535f;
+    inline constexpr std::size_t pitch_matrix_quality_histogram_bin_count = 96;
+    inline constexpr int pitch_matrix_quality_histogram_pitch_bins_per_slot = 5;
+    inline constexpr float pitch_matrix_quality_histogram_offset = -0.5f;
+    inline constexpr float pitch_matrix_quality_histogram_smoothing_width = 12.0f;
+    inline constexpr float pitch_matrix_quality_histogram_bins_per_octave = 12.0f;
     inline constexpr double pitch_matrix_bridge_chain_keep_ratio = 0.7;
     inline constexpr float pitch_matrix_bridge_failed_frequency = -1.0f;
     inline constexpr double pitch_matrix_bridge_failed_anchor_time = -1.0;
@@ -82,6 +88,16 @@ namespace mikecore::rawnotes
         std::size_t replaced_count = 0;
         float final_frequency_hz = 0.0f;
     };
+
+    struct PitchMatrixHistogramPeak final
+    {
+        bool found = false;
+        std::size_t index = 0;
+        float value = 0.0f;
+    };
+
+    using PitchMatrixQualityHistogram =
+        std::array<float, pitch_matrix_quality_histogram_bin_count>;
 
     [[nodiscard]] int pitch_matrix_bridge_minimum_chain_length(
         int max_chain_length,
@@ -165,6 +181,18 @@ namespace mikecore::rawnotes
     void apply_pitch_matrix_center_distance_attenuation(
         std::span<PitchMatrixPeak> peaks,
         int center_pitch_bin) noexcept;
+
+    [[nodiscard]] PitchMatrixQualityHistogram make_empty_pitch_matrix_quality_histogram() noexcept;
+
+    void accumulate_pitch_matrix_quality_histogram(
+        std::span<const PitchMatrixPeak> first_peaks_per_row,
+        std::span<float> histogram) noexcept;
+
+    [[nodiscard]] PitchMatrixHistogramPeak normalize_pitch_matrix_quality_histogram(
+        std::span<float> histogram) noexcept;
+
+    [[nodiscard]] float pitch_matrix_histogram_frequency_from_index(
+        int histogram_index) noexcept;
 
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,
