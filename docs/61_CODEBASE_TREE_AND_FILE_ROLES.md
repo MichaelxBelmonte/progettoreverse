@@ -58,7 +58,7 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 31 | 160K+ | codice clean-room compilabile |
+| `core_reconstruction/` | 36 | 160K+ | codice clean-room compilabile |
 | `docs/` | 67 | 676K+ | ledger, decisioni, mappe e stato reverse |
 | `data/` | 54 | 376K+ | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
@@ -144,13 +144,16 @@ core_reconstruction/
 ├── CMakeLists.txt
 ├── README.md
 ├── include/mikecore/features/spectral_metrics.hpp
+├── include/mikecore/features/windowed_overlap.hpp
 ├── include/mikecore/fft/packed_spectrum.hpp
 ├── include/mikecore/fft/stft_frontend.hpp
 ├── include/mikecore/fft/window_resampler.hpp
 ├── include/mikecore/rawnotes/analyzer_gate_cluster_support.hpp
 ├── include/mikecore/rawnotes/exponential_smoother.hpp
+├── include/mikecore/rawnotes/interval_boundary_refinement.hpp
 ├── include/mikecore/rawnotes/interval_gate.hpp
 ├── include/mikecore/rawnotes/paired_peak_gate.hpp
+├── include/mikecore/rawnotes/pitch_matrix_bridge.hpp
 ├── include/mikecore/rawnotes/raw_note_class12_builder.hpp
 ├── include/mikecore/rawnotes/raw_note_class8_builder.hpp
 ├── include/mikecore/rawnotes/raw_note_separation.hpp
@@ -159,13 +162,16 @@ core_reconstruction/
 ├── include/mikecore/runtime/shared_descriptor_cache.hpp
 ├── include/mikecore/runtime/spectral_time_slice.hpp
 ├── src/features/spectral_metrics.cpp
+├── src/features/windowed_overlap.cpp
 ├── src/fft/packed_spectrum.cpp
 ├── src/fft/stft_frontend.cpp
 ├── src/fft/window_resampler.cpp
 ├── src/rawnotes/analyzer_gate_cluster_support.cpp
 ├── src/rawnotes/exponential_smoother.cpp
+├── src/rawnotes/interval_boundary_refinement.cpp
 ├── src/rawnotes/interval_gate.cpp
 ├── src/rawnotes/paired_peak_gate.cpp
+├── src/rawnotes/pitch_matrix_bridge.cpp
 ├── src/rawnotes/raw_note_class12_builder.cpp
 ├── src/rawnotes/raw_note_class8_builder.cpp
 ├── src/rawnotes/threshold_seed_matcher.cpp
@@ -180,6 +186,7 @@ core_reconstruction/
 | `CMakeLists.txt` | Definisce la libreria statica `mikecore_runtime_fft`. |
 | `README.md` | Regole clean-room e stato dei moduli implementabili. |
 | `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50% e subset `014b25b0` per somma row escludendo il primo bin + floor `1e-5`. |
+| `features/windowed_overlap.*` | Subset locale kernel `014b71e0`: piano closed-window, contributo LUT, evidenza mask opzionale, consumo energia opzionale e fallback center-bin; LUT globale esterna al modulo. |
 | `fft/packed_spectrum.*` | Decodifica layout packed real-FFT `DC/Nyquist + re/im`. |
 | `fft/stft_frontend.*` | Materializza `SpectralTimeSlice` da buffer FFT packed. |
 | `fft/window_resampler.*` | Subset `014b2ee0`: 7 stage, piano step/start e resampling finestra 256 campioni in mode nearest/interp/average; esclusi FFT e tabelle globali. |

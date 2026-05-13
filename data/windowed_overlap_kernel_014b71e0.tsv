@@ -10,3 +10,16 @@ rcx	out_local_overlap_evidence	high	written with weighted local evidence	and lat
 r8d	bin_count	high	upper bound clamped to binCount/2	local half-spectrum span
 xmm4	consume_factor	medium	when above threshold, subtracts contrib*xmm4 from energy_buffer	enables residual/depletion mode
 lut	precomputed_window	high	00e84250 returns static LUT indexed by normalized distance	also reused open-coded in spectrum shaper
+constant	0x02390118	lower_bin_offset_minus_0_5f	very_high	__TEXT.__const bytes decode as float -0.5 and build lower bin from centerHz/binStepHz
+constant	0x02390124	one_float	very_high	__TEXT.__const bytes decode as float 1.0 and initialize lower clamp and inverse window
+constant	0x0240e314	lut_index_scale_64f	very_high	__TEXT.__const bytes decode as float 64.0 and scale normalized distance to LUT index in 014b71e0
+constant	0x02411280	consume_floor_1e_minus_5f	very_high	__TEXT.__const bytes decode as float 9.999999747378752e-06 and gate energy depletion
+constant	0x02394274	raw_sum_floor_float_min	very_high	__TEXT.__const bytes decode as float 1.1754943508222875e-38 and gate fallback when raw contribution is too small
+constant	0x02391030	fallback_first_scale_0_01_double	very_high	__TEXT.__const bytes decode as double 0.01 and scale fallback center-bin energy
+constant	0x023934c8	fallback_second_scale_0_1_double	very_high	__TEXT.__const bytes decode as double 0.1 and scale fallback center-bin energy
+behavior	014b71e0	window_plan	high	lower=max(1,int(windowSpan*-0.5 + centerHz/binStepHz)) and upper=min(int(windowSpan)+rawLower+1,binCount/2)
+behavior	014b71e0	lut_weighted_raw_contribution	high	when abs(centerHz-frequencyAxis[i]) < windowHz contribution is lut[int(((windowHz-diff)/windowHz)*64)]*energy[i]
+behavior	014b71e0	mask_weighted_evidence	high	when tonality/mask buffer is present weighted evidence accumulates min(1.0,mask[i])*contribution alongside raw contribution
+behavior	014b71e0	optional_energy_depletion	high	when consume factor is above 1e-5 the energy buffer subtracts contribution*consumeFactor
+behavior	014b71e0	center_bin_fallback	high	when raw contribution is below FLT_MIN output evidence falls back to energy[(lower+upper)/2]*0.01*0.1
+implementation	014b71e0_windowed_overlap_subset	windowed_overlap_clean_room	high	core_reconstruction exposes window plan contribution accumulation optional mask weighting optional depletion and fallback while leaving LUT ownership external

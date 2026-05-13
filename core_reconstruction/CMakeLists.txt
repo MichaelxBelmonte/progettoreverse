@@ -8,6 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_library(mikecore_runtime_fft
     src/features/spectral_metrics.cpp
+    src/features/windowed_overlap.cpp
     src/fft/packed_spectrum.cpp
     src/rawnotes/analyzer_gate_cluster_support.cpp
     src/rawnotes/exponential_smoother.cpp

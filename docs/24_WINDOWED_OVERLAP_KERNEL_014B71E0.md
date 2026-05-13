@@ -64,7 +64,7 @@ Nel loop:
 ```c
 diff = abs(centerHz - freqAxis[i]);
 if (diff < windowHz) {
-    kernel = LUT[(windowHz - diff) / windowHz * 89128.96];
+    kernel = LUT[(windowHz - diff) / windowHz * 64.0];
     contrib = kernel * energy[i];
 }
 ```
@@ -189,10 +189,36 @@ Nel path analyzer, il relay completo e':
 - `g_02390118 = -0.5`
 - `g_02390124 = 1.0`
 - `g_02390140 = 0x7fffffff` per `abs(float)`
-- `g_0240e314 = 89128.9609375` scala indice LUT
+- `g_0240e314 = 64.0f` scala indice LUT
+- `g_02394274 = 1.1754943508222875e-38f` floor raw-sum
+- `g_02411280 = 9.999999747378752e-06f` floor per abilitare depletion
 - `0.01` e `0.1` nel fallback
 
-Il valore `89128.96` va ancora collegato alla densita' reale della LUT, ma il suo uso e' chiaro: mappare una distanza normalizzata in indice di tabella.
+Il valore `64.0f` mappa la distanza normalizzata in indice di tabella. La LUT
+reale resta fornita dall'helper runtime `00e84250` e non viene duplicata nel
+codice clean-room.
+
+## Implementazione Clean-Room
+
+Implementato in `features/windowed_overlap.*`:
+
+- `make_windowed_overlap_plan(...)`
+  - costruisce `lower`, `upper` e fallback index da
+    `centerHz / binStepHz`, `-0.5f`, `windowSpanBins` e `binCount / 2`
+- `compute_windowed_overlap(...)`
+  - scansiona `frequencyAxis[lower:upper]`
+  - usa `abs(centerHz - frequencyAxis[i]) < windowHz`
+  - legge `lut[int(((windowHz - diff) / windowHz) * 64.0f)]`
+  - accumula `rawContribution`
+  - se `extraMask` e' presente, accumula `min(1.0f, mask[i]) * contribution`
+  - se `consumeFactor > 1e-5`, sottrae `contribution * consumeFactor` dal
+    buffer energia
+  - se il raw sum resta sotto `FLT_MIN`, usa fallback
+    `energy[fallbackIndex] * 0.01 * 0.1`
+
+Guardrail: la LUT non viene sintetizzata. Il caller deve passarla come
+`std::span<const float>` per mantenere separato il dato proprietario globale dal
+kernel numerico ricostruito.
 
 ---
 
@@ -201,11 +227,13 @@ Il valore `89128.96` va ancora collegato alla densita' reale della LUT, ma il su
 1. `item + 0x24` puo' essere modellato come `local_overlap_evidence`.
 2. Il path helper non e' piu' una black box: e' una misura locale su `trueFreq/magnitude`, pesata da `tonalityData`, con modalita' opzionale di depletion.
 3. Analyzer e spectrum shaper condividono gia' un primitive matematico comune, utile per una replica coerente.
+4. Il kernel e' ora disponibile nel core clean-room, lasciando fuori solo la
+   LUT globale e il wiring owner-specific.
 
 ---
 
 ## Next Step
 
-1. Stringere il ruolo numerico preciso di `tonalityData` come mask/weight.
+1. Recuperare o modellare separatamente la LUT prodotta da `00e84250`.
 2. Verificare se il floor su `item + 0x24` serve a evitare divisioni per zero o a mantenere un minimo di activation evidence.
-3. Cercare riusi ulteriori del kernel con `xmm4 != 0` per chiudere il path depletion.
+3. Cercare riusi ulteriori del kernel con `xmm4 != 0` per validare il path depletion in contesti diversi.
