@@ -144,6 +144,14 @@ namespace mikecore::rawnotes
         std::span<float> output,
         double row_position_per_output_sample) noexcept;
 
+    [[nodiscard]] bool pitch_matrix_peak_is_below_upper_bin(
+        const PitchMatrixPeak& peak,
+        int upper_pitch_bin_exclusive) noexcept;
+
+    [[nodiscard]] std::vector<PitchMatrixPeak> copy_peaks_below_upper_bin(
+        std::span<const PitchMatrixPeak> peaks,
+        int upper_pitch_bin_exclusive);
+
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,
         std::size_t row_count,

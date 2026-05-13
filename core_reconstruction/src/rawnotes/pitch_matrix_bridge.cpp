@@ -222,6 +222,27 @@ namespace mikecore::rawnotes
         }
     }
 
+    bool pitch_matrix_peak_is_below_upper_bin(
+        const PitchMatrixPeak& peak,
+        int upper_pitch_bin_exclusive) noexcept
+    {
+        return peak.pitch_bin_index < upper_pitch_bin_exclusive;
+    }
+
+    std::vector<PitchMatrixPeak> copy_peaks_below_upper_bin(
+        std::span<const PitchMatrixPeak> peaks,
+        int upper_pitch_bin_exclusive)
+    {
+        std::vector<PitchMatrixPeak> kept;
+        kept.reserve(peaks.size());
+        for (const PitchMatrixPeak& peak : peaks) {
+            if (pitch_matrix_peak_is_below_upper_bin(peak, upper_pitch_bin_exclusive)) {
+                kept.push_back(peak);
+            }
+        }
+        return kept;
+    }
+
     namespace
     {
         [[nodiscard]] std::size_t bounded_row_count(

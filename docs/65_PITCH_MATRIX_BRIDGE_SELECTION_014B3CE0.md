@@ -131,6 +131,10 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - subset `0149ebe0`: interpolazione lineare tra due valori row adiacenti
 - `fill_interpolated_pitch_matrix_row_values(...)`
   - pass clean-room per riempire un buffer output da row values gia' calcolati
+- `pitch_matrix_peak_is_below_upper_bin(...)`
+  - subset `0149ebe0`: predicato `peak +0x10 < upperPitchBin`
+- `copy_peaks_below_upper_bin(...)`
+  - alternativa clean-room al pruning `GNList`: copia solo i peak sotto soglia
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -247,6 +251,19 @@ out[i] = (row[index + 1] - row[index]) * (position - index) + row[index];
 
 Il codice clean-room implementa envelope e interpolazione. La smoothing call
 intermedia resta fuori da questo slice.
+
+Il primo blocco di `0149ebe0` costruisce inoltre una proiezione filtrata degli
+inner peaks e rimuove quelli sopra soglia:
+
+```c
+upperPitchBin = int(logf(freq / 21.533203125f) * 1.4426950216293335f * 60.0f + 0.5f);
+if (upperPitchBin <= peak->+0x10) {
+  remove peak;
+}
+```
+
+Nel modulo clean-room questa mutazione diventa `copy_peaks_below_upper_bin(...)`,
+quindi la semantica di filtro e' preservata senza simulare `GNList`.
 
 ## Weighting `0149ded0`
 
