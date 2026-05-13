@@ -59,7 +59,7 @@ Progetto_Reverse_Mike/
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
 | `core_reconstruction/` | 29 | 160K | codice clean-room compilabile |
-| `docs/` | 65 | 676K | ledger, decisioni, mappe e stato reverse |
+| `docs/` | 66 | 676K+ | ledger, decisioni, mappe e stato reverse |
 | `data/` | 52 | 376K | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
 | `binaries/` | 8 | 163M | target binari analizzati |
@@ -177,7 +177,7 @@ core_reconstruction/
 |------|-------|
 | `CMakeLists.txt` | Definisce la libreria statica `mikecore_runtime_fft`. |
 | `README.md` | Regole clean-room e stato dei moduli implementabili. |
-| `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50%. |
+| `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50% e subset `014b25b0` per somma row escludendo il primo bin + floor `1e-5`. |
 | `fft/packed_spectrum.*` | Decodifica layout packed real-FFT `DC/Nyquist + re/im`. |
 | `fft/stft_frontend.*` | Materializza `SpectralTimeSlice` da buffer FFT packed. |
 | `runtime/spectral_time_slice.*` | Struttura dati clean-room dei payload spettrali. |

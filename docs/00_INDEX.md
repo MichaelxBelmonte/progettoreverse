@@ -115,6 +115,7 @@ Progetto_Reverse_Mike/
 | [63_RAW_NOTE_METRIC_WRITER_014A3550.md](63_RAW_NOTE_METRIC_WRITER_014A3550.md) | Subset numerico del writer raw-note `014a3550`: formule per `+0x28/+0x2c/+0x30` e warmup/range dei peak gates `+0x34/+0x38` | Attivo |
 | [64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md](64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md) | Boundary refinement tardo `014ab140`: peer linkato `+0x40->+0x18` o minimo segnale nel gap, target scritto ancora non canonizzato | Attivo |
 | [65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md](65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md) | Subset `014b3460 / 014b3ce0`: link righe `MUPitchMatrixPeak`, scelta peak da chain, conversione pitch-bin -> Hz e output anchor/frequenza | Attivo |
+| [66_SPECTRAL_ROW_FLOOR_014B25B0.md](66_SPECTRAL_ROW_FLOOR_014B25B0.md) | Kernel `014b25b0`: somma per-row dei bin escluso il primo e floor `1e-5` prima dello smoothing | Attivo |
 
 ## Tools
 
@@ -163,6 +164,7 @@ python3 tools/pipeline.py verify
 
 ## Ultime Aggiunte Doc
 
+- [66_SPECTRAL_ROW_FLOOR_014B25B0.md](66_SPECTRAL_ROW_FLOOR_014B25B0.md)
 - [64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md](64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md)
 - [63_RAW_NOTE_METRIC_WRITER_014A3550.md](63_RAW_NOTE_METRIC_WRITER_014A3550.md)
 - [62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md](62_CLASS12_PREPROCESSOR_014A2170_015C2D90.md)

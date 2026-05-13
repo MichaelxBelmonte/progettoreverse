@@ -47,4 +47,57 @@ namespace mikecore::features
         const double bin_hz = effective_sample_rate_like / static_cast<double>(fft_size);
         return static_cast<double>(median_bin) * bin_hz;
     }
+
+    float sum_spectral_bins_excluding_first(
+        std::span<const float> magnitude_bins) noexcept
+    {
+        if (magnitude_bins.size() < 2) {
+            return 0.0f;
+        }
+
+        return std::accumulate(
+            magnitude_bins.begin() + 1,
+            magnitude_bins.end(),
+            0.0f);
+    }
+
+    std::vector<float> sum_spectral_rows_excluding_first(
+        std::span<const float> row_major_magnitude_bins,
+        std::size_t row_count,
+        std::size_t row_stride)
+    {
+        std::vector<float> row_sums;
+        row_sums.reserve(row_count);
+
+        for (std::size_t row_index = 0; row_index < row_count; ++row_index) {
+            const std::size_t start = row_index * row_stride;
+            if (row_stride == 0 || start >= row_major_magnitude_bins.size()) {
+                row_sums.push_back(0.0f);
+                continue;
+            }
+
+            const std::size_t available =
+                std::min(row_stride, row_major_magnitude_bins.size() - start);
+            const std::span<const float> row{
+                row_major_magnitude_bins.data() + start,
+                available};
+            row_sums.push_back(sum_spectral_bins_excluding_first(row));
+        }
+
+        return row_sums;
+    }
+
+    std::size_t apply_spectral_row_floor_in_place(
+        std::span<float> row_sums,
+        float floor_value) noexcept
+    {
+        std::size_t replaced_count = 0;
+        for (float& row_sum : row_sums) {
+            if (row_sum < floor_value) {
+                row_sum = floor_value;
+                ++replaced_count;
+            }
+        }
+        return replaced_count;
+    }
 }

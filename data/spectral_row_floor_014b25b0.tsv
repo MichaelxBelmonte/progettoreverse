@@ -1,0 +1,12 @@
+scope	target	role	confidence	evidence
+function	014b25b0	spectral_row_floor_kernel	high	reduces each spectral row to a sum over bins 1..param_3-1 then floors low values before smoothing
+constant	0x02411280	row_floor_lane0_tail_1e_minus_5f	very_high	__TEXT.__const bytes decode as float 9.999999747378752e-06 and are used for lane 0/4 plus tail comparisons
+constant	0x0240e274	row_floor_lane1_1e_minus_5f	very_high	__TEXT.__const bytes decode as float 9.999999747378752e-06 and are used for lane 1 comparisons
+constant	0x0240e278	row_floor_lane2_1e_minus_5f	very_high	__TEXT.__const bytes decode as float 9.999999747378752e-06 and are used for lane 2 comparisons
+constant	0x0240e27c	row_floor_lane3_1e_minus_5f	very_high	__TEXT.__const bytes decode as float 9.999999747378752e-06 and are used for lane 3 comparisons
+literal	0x3727c5ac	row_floor_replacement_1e_minus_5f	very_high	literal bytes decode as float 9.999999747378752e-06 and are written when a row sum is below floor
+constant	0x0238fee8	one_double_for_smoothing_width	very_high	__TEXT.__const bytes decode as double 1.0 and feed the final 1.0/param_1 smoothing width
+behavior	014b25b0	sum_bins_excluding_first	high	when param_3 >= 2, 014b25b0 sums row bins from index 1 through param_3-1 and writes one scalar per row
+behavior	014b25b0	zero_when_less_than_two_bins	high	when param_3 < 2, 014b25b0 writes zero for each row before the floor pass
+behavior	014b25b0	apply_floor_before_smoothing	high	values strictly below 9.999999747378752e-06 are replaced with that same value before 015c1480
+implementation	014b25b0_spectral_row_floor_subset	spectral_metrics_clean_room	high	core_reconstruction exposes row sum excluding first bin and in-place floor pass without owner/container or smoothing wrapper
