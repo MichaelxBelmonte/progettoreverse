@@ -1,6 +1,6 @@
 # 27 — Final Scoring Model `0x013924d0`
 
-**Ultimo aggiornamento:** 2026-04-08
+**Ultimo aggiornamento:** 2026-05-13
 
 ## Obiettivo
 
@@ -34,6 +34,9 @@ score_i = sum_{k = 1 .. H-1} magnitudeData[k] * rowTemplate[i][k] * min(1.0f, to
 ```
 
 La colonna `k = 0` e' esclusa dal path finale osservato.
+
+Se `harmonicColumns <= 1`, il path non entra nella normalizzazione/dot product
+utile e gli score operativi sono zero.
 
 ---
 
@@ -80,6 +83,14 @@ Per ogni colonna `k`:
 ```c
 rowTemplate[i][k] *= 1.0f / columnSum[k]
 ```
+
+La soglia osservata e' il valore float a `0x02394274`:
+
+```c
+1.1754943508222875e-38f
+```
+
+Il branch salta la normalizzazione quando la somma non soddisfa `sum >= floor`.
 
 Questa e' una vera normalizzazione inter-item della colonna, non una normalizzazione locale per singola riga.
 
@@ -214,6 +225,31 @@ for (int k = 1; k < harmonicColumns; ++k) {
 ```
 
 con la precondizione che `rowTemplate` sia gia' stato normalizzato per colonna.
+
+---
+
+## 9. Implementazione Clean-Room
+
+Il subset numerico implementabile e' ora in:
+
+- `core_reconstruction/include/mikecore/features/claim_scoring.hpp`
+- `core_reconstruction/src/features/claim_scoring.cpp`
+
+Funzioni esposte:
+
+- `normalize_claim_template_columns(...)`
+- `compute_claim_scores(...)`
+
+Scelte intenzionali:
+
+- nessun modello di `GNList` o lifetime originale
+- nessuna scrittura diretta su `item + 0x28`
+- nessuna soglia inventata
+- `tonalityData` e' usato solo se fornito come span completo
+- `harmonicColumns <= 1` produce score zero, come nel path osservato
+
+La replica produce gli score in uno span caller-owned; il layer superiore puo'
+poi decidere dove materializzarli nel proprio modello dati.
 
 ---
 

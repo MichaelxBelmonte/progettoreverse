@@ -1,6 +1,6 @@
 # 61 - Codebase Tree And File Roles
 
-**Ultimo aggiornamento:** 2026-05-08
+**Ultimo aggiornamento:** 2026-05-13
 
 ## Obiettivo
 
@@ -58,7 +58,7 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 38 | 160K+ | codice clean-room compilabile |
+| `core_reconstruction/` | 40 | 160K+ | codice clean-room compilabile |
 | `docs/` | 67 | 676K+ | ledger, decisioni, mappe e stato reverse |
 | `data/` | 55 | 376K+ | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
@@ -143,6 +143,7 @@ mikecore_runtime_fft
 core_reconstruction/
 ├── CMakeLists.txt
 ├── README.md
+├── include/mikecore/features/claim_scoring.hpp
 ├── include/mikecore/features/harmonic_stencil.hpp
 ├── include/mikecore/features/spectral_metrics.hpp
 ├── include/mikecore/features/windowed_overlap.hpp
@@ -162,6 +163,7 @@ core_reconstruction/
 ├── include/mikecore/runtime/analyzer_gate_cluster.hpp
 ├── include/mikecore/runtime/shared_descriptor_cache.hpp
 ├── include/mikecore/runtime/spectral_time_slice.hpp
+├── src/features/claim_scoring.cpp
 ├── src/features/harmonic_stencil.cpp
 ├── src/features/spectral_metrics.cpp
 ├── src/features/windowed_overlap.cpp
@@ -187,6 +189,7 @@ core_reconstruction/
 |------|-------|
 | `CMakeLists.txt` | Definisce la libreria statica `mikecore_runtime_fft`. |
 | `README.md` | Regole clean-room e stato dei moduli implementabili. |
+| `features/claim_scoring.*` | Coda finale `013924d0`: normalizzazione colonne `k=1..H-1` con floor `FLT_MIN`, dot product finale su `magnitudeData` e weighting opzionale `min(1.0f, tonalityData[k])`; esclusi oggetti originali e scrittura diretta `item+0x28`. |
 | `features/harmonic_stencil.*` | Subset locale `014b74f0`: piano bin da centro/finestra/span e stamping additivo `lut[index] * harmonicWeight` nel row-buffer; wrapper LUT originale esterno al modulo. |
 | `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50% e subset `014b25b0` per somma row escludendo il primo bin + floor `1e-5`. |
 | `features/windowed_overlap.*` | Subset locale kernel `014b71e0 / 00e84250`: piano closed-window, riga LUT Hann periodica, contributo LUT, evidenza mask opzionale, consumo energia opzionale e fallback center-bin; lifecycle globale esterno al modulo. |
@@ -250,6 +253,7 @@ contiene una decisione, una correzione, una mappa ABI o un ledger di confidence.
 | `09_STATUS.md` | Stato operativo corrente del reverse. |
 | `15_REPLICATION_BLUEPRINT.md` | Ordine strategico di replica. |
 | `16_CANONICAL_LEDGER.md` | Ledger P0/P1 e policy di confidence. |
+| `27_FINAL_SCORING_MODEL_013924D0.md` | Normalizzazione colonne e dot product finale implementati come helper clean-room. |
 | `43_SPECTRAL_MEDIAN_FREQUENCY_0149F6A0.md` | Formula chiusa della spectral median. |
 | `47_SPECTRAL_MEDIAN_CONSUMER_MAP_0149F6A0_01484BC0.md` | Consumer della spectral reference. |
 | `49_THRESHOLD_SEEDED_RAW_NOTE_MATCHER_014AF180.md` | Matcher raw-note implementato nel core. |

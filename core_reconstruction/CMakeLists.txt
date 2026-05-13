@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_library(mikecore_runtime_fft
+    src/features/claim_scoring.cpp
     src/features/harmonic_stencil.cpp
     src/features/spectral_metrics.cpp
     src/features/windowed_overlap.cpp
