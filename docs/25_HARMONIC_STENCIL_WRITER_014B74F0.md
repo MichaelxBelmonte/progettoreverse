@@ -35,7 +35,12 @@ Nel callsite assembly di `013924d0`:
 - `xmm2` riceve `binStepHz`
 - `xmm3` riceve `windowSpanBins`
 - `xmm4` riceve `item[+0x24] / harmonicIndex`
-- `xmm5` riceve il literal `89128.9609375`
+- `xmm5` riceve il literal `64.0f`
+- `rdi` riceve `trueFreqData`
+- `rsi` riceve il row-buffer corrente
+- `edx` riceve `harmonicColumns`
+- `rcx` riceve un wrapper temporaneo derivato da `014b9ce0`, la cui tabella e'
+  letta dal callee via `(*rcx)->+0x10`
 
 Il setup chiave e':
 
@@ -86,16 +91,22 @@ void harmonic_stencil_writer(
     float windowHz,
     float binStepHz,
     float windowSpanBins,
-    float *axis,              // hidden RDI
+    float *trueFreqData,      // hidden RDI
     float *rowBuffer,         // hidden RSI
-    int binCount,             // EDX
-    KernelWrapper *lutWrap,   // RCX, wrapper con tabella a +0x10
+    int harmonicColumns,      // EDX
+    KernelWrapper *lutWrap,   // RCX, tabella letta via (*rcx)->+0x10
     float harmonicWeight,     // XMM4
-    float lutScale            // XMM5 ~= 89128.96
+    float lutScale            // XMM5 = 64.0f nel callsite 013924d0
 );
 ```
 
-Le identita' di `axis` e `lutWrap` sono ancora inferenziali, ma il loro ruolo e' forte.
+L'identita' dell'asse non e' piu' aperta per questo callsite: viene da `rcx`
+di `013924d0`, cioe' `trueFreqData` secondo la ABI gia' chiusa in
+`013903d0 -> 013924d0`.
+
+Il wrapper LUT resta parziale come tipo oggetto, ma il percorso dati locale e'
+chiaro: `013924d0` chiama `014b9ce0`, conserva il risultato e passa un wrapper
+stack al writer; `014b74f0` dereferenzia il payload a `(*rcx)->+0x10`.
 
 ---
 
@@ -175,7 +186,7 @@ letto dal callee tramite `(*rcx)->+0x10`.
 
 ## Next Step
 
-1. Chiudere l'identita' dell'asse hidden `RDI` al callsite di `013924d0`.
-2. Tipizzare `lutWrap` e la tabella letta via `+0x10`.
-3. Collegare il writer al loop armonico clean-room solo quando `lutScale` e
-   owner del row-buffer sono entrambi chiusi.
+1. Tipizzare `lutWrap` e la tabella letta via `+0x10`.
+2. Collegare il writer al loop armonico clean-room solo quando owner del
+   row-buffer e lifecycle di `014b9ce0` sono entrambi chiusi.
+3. Verificare se lo stesso writer viene riusato fuori dal callsite `013924d0`.

@@ -3,13 +3,14 @@ param_1	center_hz	high	xmm0 copied then compared against axis[i]	target harmonic
 param_2	window_hz	high	xmm1 used as distance threshold and inverse denominator	must be positive
 param_3	bin_step_hz	high	xmm2 divides lower/upper frequency bounds	converts hz to row bin
 param_4	window_span_bins	high	xmm3 multiplied by 0.5 and expands lower/upper bounds	symmetric span extension
-hidden_rdi	frequency_axis_hz	high	subss (%rdi,%rax,4) inside loop	axis role direct in callee
+hidden_rdi	trueFreqData_axis	very_high	013924d0 moves r15 to rdi before call; r15 is entry rcx	trueFreqData identity closed for callsite 013924d0
 hidden_rsi	row_buffer	very_high	addss/stored at (%rsi,%rax,4)	writer mutates row in place
-hidden_edx	bin_count	high	upper bound clamped against edx	local row length
-hidden_rcx	lut_wrapper	medium	reads (*rcx)->+0x10 before LUT access	wrapper layout not otherwise modeled
+hidden_edx	harmonic_columns	high	013924d0 moves -0x4c to edx before call; callee clamps upper bound against edx	local row length
+hidden_rcx	lut_wrapper_from_014b9ce0	medium	013924d0 calls 014b9ce0 and passes stack wrapper; callee reads (*rcx)->+0x10 before LUT access	wrapper object type still partial
 xmm4	harmonic_weight	high	multiplies LUT value before row add	callsite says item+0x24/harmonicIndex
-xmm5	lut_index_scale	high	multiplies normalized distance before cvttss2si	value prepared by caller
+xmm5	lut_index_scale_64f	very_high	013924d0 loads constant 0x0240e314 into xmm5 immediately before call	value is 64.0f
 constant	0x0239011c	span_half_scale_0_5f	very_high	__TEXT.__const bytes decode as float 0.5	used only in lower/upper expansion
 behavior	014b74f0	window_plan	high	lower=max(1,trunc((center-window)/binStep - 0.5*span)) and upper=min(binCount,trunc((center+window)/binStep + 0.5*span))	callee uses cvttss2si truncation
 behavior	014b74f0	lut_additive_stamp	high	if abs(center-axis[i]) < window then row[i] += lut[int(((window-diff)/window)*lutScale)]*harmonicWeight	additive harmonic lobe writer
+behavior	013924d0_to_014b74f0	callsite_wiring	very_high	rdi=trueFreqData rsi=currentRow edx=harmonicColumns rcx=014b9ce0 wrapper xmm4=item+0x24/harmonicIndex xmm5=64.0f	hidden ABI closed for analyzer callsite
 implementation	014b74f0_harmonic_stencil_subset	harmonic_stencil_clean_room	high	core_reconstruction exposes plan construction and span-backed additive stamping without modeling wrapper ownership

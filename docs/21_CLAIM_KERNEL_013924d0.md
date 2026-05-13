@@ -122,6 +122,9 @@ Correzione importante:
 - `014b74f0` e' ora leggibile come harmonic stencil writer
 - il writer accumula una lobo nel row-buffer corrente
 - il peso di stamping e' coerente con `item[+0x24] / harmonicIndex`
+- il callsite passa `trueFreqData` in `RDI`, il row-buffer corrente in `RSI`,
+  `harmonicColumns` in `EDX`, wrapper LUT derivato da `014b9ce0` in `RCX` e
+  `64.0f` in `XMM5`
 
 Doc di dettaglio:
 
