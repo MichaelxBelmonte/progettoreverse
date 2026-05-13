@@ -165,6 +165,26 @@ namespace mikecore::rawnotes
         }
     }
 
+    float pitch_matrix_per_bin_ratio_from_octave_ratio(float octave_ratio) noexcept
+    {
+        if (!(octave_ratio > 0.0f) || !std::isfinite(octave_ratio)) {
+            return 1.0f;
+        }
+
+        return std::exp(std::log(octave_ratio) / pitch_matrix_bridge_bins_per_octave);
+    }
+
+    void apply_pitch_matrix_descending_bin_weight(
+        std::span<float> row_values,
+        float per_bin_ratio) noexcept
+    {
+        float weight = 1.0f;
+        for (auto it = row_values.rbegin(); it != row_values.rend(); ++it) {
+            *it *= weight;
+            weight *= per_bin_ratio;
+        }
+    }
+
     PitchMatrixPeakRunCollection collect_pitch_matrix_row_positive_run_peaks(
         std::span<const float> row_values,
         int row_index)

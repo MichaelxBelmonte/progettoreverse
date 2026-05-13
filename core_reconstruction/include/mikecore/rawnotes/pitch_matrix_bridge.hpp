@@ -195,6 +195,13 @@ namespace mikecore::rawnotes
         float center_log2,
         float weight_base) noexcept;
 
+    [[nodiscard]] float pitch_matrix_per_bin_ratio_from_octave_ratio(
+        float octave_ratio) noexcept;
+
+    void apply_pitch_matrix_descending_bin_weight(
+        std::span<float> row_values,
+        float per_bin_ratio) noexcept;
+
     [[nodiscard]] PitchMatrixPeakRunCollection
     collect_pitch_matrix_row_positive_run_peaks(
         std::span<const float> row_values,

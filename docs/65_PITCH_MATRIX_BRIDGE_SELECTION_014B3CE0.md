@@ -133,6 +133,11 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
 - `apply_pitch_matrix_primary_peak_values(...)`
   - scrive il risultato nel campo clean-room `primary_peak_value`, equivalente
     semantico di `peak +0x18`
+- `pitch_matrix_per_bin_ratio_from_octave_ratio(...)`
+  - subset `0149c330`: `exp(log(octaveRatio) / 60.0f)`
+- `apply_pitch_matrix_descending_bin_weight(...)`
+  - subset `0149c330`: moltiplica i bin dal piu' alto al piu' basso con
+    pesi `1, ratio, ratio^2, ...`
 - `collect_pitch_matrix_row_positive_run_peaks(...)`
   - subset `0149c330`: materializza un peak per ogni run positiva della row,
     scegliendo il massimo locale come `pitch_bin_index` e scrivendo lo stesso
@@ -331,8 +336,19 @@ stabili da replicare senza simulazione.
 
 ## Row Peak Builder `0149c330`
 
-Nel builder della pitch matrix, il frammento chiuso scansiona una row di valori
-float e crea un `MUPitchMatrixPeak` per ogni run positiva:
+Nel builder della pitch matrix, prima della ricerca dei peak, un blocco
+osservato calcola:
+
+```c
+perBin = expf(logf(octaveRatio) / 60.0f);
+```
+
+Poi applica una pesatura dal bin alto verso il basso. Per una row da `480`
+elementi il bin `479` riceve peso `1`, il bin `478` riceve `perBin`, il bin
+`477` riceve `perBin^2` e cosi' via.
+
+Dopo questa pesatura, il frammento chiuso scansiona una row di valori float e
+crea un `MUPitchMatrixPeak` per ogni run positiva:
 
 ```c
 if (previous <= 0.0 && current > 0.0) {
