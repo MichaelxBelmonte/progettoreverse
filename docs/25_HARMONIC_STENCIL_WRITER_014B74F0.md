@@ -56,17 +56,18 @@ Questo e' incompatibile con una routine di dispatch. E' scrittura numerica diret
 Dal disassembly di `014b74f0`:
 
 ```c
-lower = max(1, floor((centerHz - windowHz) / binStepHz - 0.5 * spanBins));
-upper = min(binCount, floor((centerHz + windowHz) / binStepHz + 0.5 * spanBins));
+lower = max(1, trunc((centerHz - windowHz) / binStepHz - 0.5 * spanBins));
+upper = min(binCount, trunc((centerHz + windowHz) / binStepHz + 0.5 * spanBins));
 
 for i in [lower, upper):
     diff = abs(centerHz - axis[i]);
     if diff < windowHz:
-        lutIndex = int((windowHz - diff) / windowHz * 89128.96 * 0.5);
+        lutIndex = int((windowHz - diff) / windowHz * lutScale);
         rowBuffer[i] += lut[lutIndex] * harmonicWeight;
 ```
 
-La forma esatta dell'indice LUT va ancora rifinita, ma il pattern strutturale e' ormai chiaro:
+La forma dell'indice LUT e' chiusa nel callee: `lutScale` arriva gia'
+preparato dal caller in `xmm5`.
 
 - bounds in bin
 - test di distanza in Hz
@@ -143,11 +144,32 @@ In particolare:
 
 ---
 
+## Implementazione Clean-Room
+
+Implementato in `features/harmonic_stencil.*`:
+
+- `make_harmonic_stencil_plan(...)`
+  - replica i bounds con `0.5f * windowSpanBins`, clamp lower a `1` e upper a
+    `binCount`
+- `stamp_harmonic_stencil(...)`
+  - scansiona `frequencyAxis[lower:upper]`
+  - usa `abs(centerHz - frequencyAxis[i]) < windowHz`
+  - calcola `lutIndex = int(((windowHz - diff) / windowHz) * lutIndexScale)`
+  - somma `lut[lutIndex] * harmonicWeight` nel `rowBuffer`
+
+Guardrail: il wrapper originale in `RCX` non viene modellato come oggetto. Il
+modulo riceve direttamente `std::span<const float> lut`, equivalente al payload
+letto dal callee tramite `(*rcx)->+0x10`.
+
+---
+
 ## Impatto Sul Replication Effort
 
 1. Il cuore di `013924d0` non e' piu' solo "powf e poi qualcosa": ora c'e' un writer armonico esplicito.
 2. Il template armonico puo' essere replicato come fase separata e testabile.
 3. `item + 0x24` entra direttamente nel peso di stamping, quindi non e' un dettaglio secondario.
+4. Il writer locale e' ora disponibile nel core clean-room; resta fuori il
+   wiring del loop armonico completo di `013924d0`.
 
 ---
 
@@ -155,4 +177,5 @@ In particolare:
 
 1. Chiudere l'identita' dell'asse hidden `RDI` al callsite di `013924d0`.
 2. Tipizzare `lutWrap` e la tabella letta via `+0x10`.
-3. Verificare se lo stesso writer viene riusato altrove oltre `013924d0`.
+3. Collegare il writer al loop armonico clean-room solo quando `lutScale` e
+   owner del row-buffer sono entrambi chiusi.

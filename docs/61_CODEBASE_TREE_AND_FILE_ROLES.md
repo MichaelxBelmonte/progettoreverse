@@ -58,9 +58,9 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 36 | 160K+ | codice clean-room compilabile |
+| `core_reconstruction/` | 38 | 160K+ | codice clean-room compilabile |
 | `docs/` | 67 | 676K+ | ledger, decisioni, mappe e stato reverse |
-| `data/` | 54 | 376K+ | dati strutturati TSV/JSON/LOG per ledger |
+| `data/` | 55 | 376K+ | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
 | `binaries/` | 8 | 163M | target binari analizzati |
 | `ghidra/output/` | 7.940 circa | 78M | output testuale/decompilato esportato da Ghidra |
@@ -143,6 +143,7 @@ mikecore_runtime_fft
 core_reconstruction/
 ├── CMakeLists.txt
 ├── README.md
+├── include/mikecore/features/harmonic_stencil.hpp
 ├── include/mikecore/features/spectral_metrics.hpp
 ├── include/mikecore/features/windowed_overlap.hpp
 ├── include/mikecore/fft/packed_spectrum.hpp
@@ -161,6 +162,7 @@ core_reconstruction/
 ├── include/mikecore/runtime/analyzer_gate_cluster.hpp
 ├── include/mikecore/runtime/shared_descriptor_cache.hpp
 ├── include/mikecore/runtime/spectral_time_slice.hpp
+├── src/features/harmonic_stencil.cpp
 ├── src/features/spectral_metrics.cpp
 ├── src/features/windowed_overlap.cpp
 ├── src/fft/packed_spectrum.cpp
@@ -185,6 +187,7 @@ core_reconstruction/
 |------|-------|
 | `CMakeLists.txt` | Definisce la libreria statica `mikecore_runtime_fft`. |
 | `README.md` | Regole clean-room e stato dei moduli implementabili. |
+| `features/harmonic_stencil.*` | Subset locale `014b74f0`: piano bin da centro/finestra/span e stamping additivo `lut[index] * harmonicWeight` nel row-buffer; wrapper LUT originale esterno al modulo. |
 | `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50% e subset `014b25b0` per somma row escludendo il primo bin + floor `1e-5`. |
 | `features/windowed_overlap.*` | Subset locale kernel `014b71e0 / 00e84250`: piano closed-window, riga LUT Hann periodica, contributo LUT, evidenza mask opzionale, consumo energia opzionale e fallback center-bin; lifecycle globale esterno al modulo. |
 | `fft/packed_spectrum.*` | Decodifica layout packed real-FFT `DC/Nyquist + re/im`. |

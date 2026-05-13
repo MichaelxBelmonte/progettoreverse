@@ -1,11 +1,15 @@
 field	role	confidence	evidence	notes
-center_hz	harmonic_center_frequency	high	caller passes harmonicHz in xmm0	baseHz * harmonicIndex
-window_hz	lobe_half_width_hz	high	callee uses centerHz +/- windowHz to bound search	max(binStepHz, decay-derived term)
-bin_step_hz	hz_per_bin	high	callee divides by it to derive bin indices	from descriptor cache +0x50 in 013924d0
-window_span_bins	local_bin_span	high	callee adjusts bounds with 0.5 * spanBins	from descriptor cache +0x2c in 013924d0
-hidden_rdi	axis_per_bin	medium	callee uses abs(centerHz - axis[i])	likely frequency axis
-hidden_rsi	row_buffer	high	callee adds stamped values into rowBuffer[i]	zeroed per item row before harmonic loop
-edx	bin_count	high	callee clamps upper bound to it	row width / number of columns
-rcx	lut_wrapper	medium	callee dereferences wrapper then +0x10 to get LUT storage	type still unresolved
-xmm4	harmonic_weight	high	caller passes item+0x24 / harmonicIndex	scales stencil amplitude
-xmm5	lut_scale	high	literal 89128.9609375 passed at callsite	normalizes distance to LUT index
+param_1	center_hz	high	xmm0 copied then compared against axis[i]	target harmonic frequency
+param_2	window_hz	high	xmm1 used as distance threshold and inverse denominator	must be positive
+param_3	bin_step_hz	high	xmm2 divides lower/upper frequency bounds	converts hz to row bin
+param_4	window_span_bins	high	xmm3 multiplied by 0.5 and expands lower/upper bounds	symmetric span extension
+hidden_rdi	frequency_axis_hz	high	subss (%rdi,%rax,4) inside loop	axis role direct in callee
+hidden_rsi	row_buffer	very_high	addss/stored at (%rsi,%rax,4)	writer mutates row in place
+hidden_edx	bin_count	high	upper bound clamped against edx	local row length
+hidden_rcx	lut_wrapper	medium	reads (*rcx)->+0x10 before LUT access	wrapper layout not otherwise modeled
+xmm4	harmonic_weight	high	multiplies LUT value before row add	callsite says item+0x24/harmonicIndex
+xmm5	lut_index_scale	high	multiplies normalized distance before cvttss2si	value prepared by caller
+constant	0x0239011c	span_half_scale_0_5f	very_high	__TEXT.__const bytes decode as float 0.5	used only in lower/upper expansion
+behavior	014b74f0	window_plan	high	lower=max(1,trunc((center-window)/binStep - 0.5*span)) and upper=min(binCount,trunc((center+window)/binStep + 0.5*span))	callee uses cvttss2si truncation
+behavior	014b74f0	lut_additive_stamp	high	if abs(center-axis[i]) < window then row[i] += lut[int(((window-diff)/window)*lutScale)]*harmonicWeight	additive harmonic lobe writer
+implementation	014b74f0_harmonic_stencil_subset	harmonic_stencil_clean_room	high	core_reconstruction exposes plan construction and span-backed additive stamping without modeling wrapper ownership
