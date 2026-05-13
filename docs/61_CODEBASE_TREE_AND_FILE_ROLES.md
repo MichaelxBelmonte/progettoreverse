@@ -58,9 +58,9 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 29 | 160K | codice clean-room compilabile |
-| `docs/` | 66 | 676K+ | ledger, decisioni, mappe e stato reverse |
-| `data/` | 52 | 376K | dati strutturati TSV/JSON/LOG per ledger |
+| `core_reconstruction/` | 31 | 160K+ | codice clean-room compilabile |
+| `docs/` | 67 | 676K+ | ledger, decisioni, mappe e stato reverse |
+| `data/` | 54 | 376K+ | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
 | `binaries/` | 8 | 163M | target binari analizzati |
 | `ghidra/output/` | 7.940 circa | 78M | output testuale/decompilato esportato da Ghidra |
@@ -146,6 +146,7 @@ core_reconstruction/
 ├── include/mikecore/features/spectral_metrics.hpp
 ├── include/mikecore/fft/packed_spectrum.hpp
 ├── include/mikecore/fft/stft_frontend.hpp
+├── include/mikecore/fft/window_resampler.hpp
 ├── include/mikecore/rawnotes/analyzer_gate_cluster_support.hpp
 ├── include/mikecore/rawnotes/exponential_smoother.hpp
 ├── include/mikecore/rawnotes/interval_gate.hpp
@@ -160,6 +161,7 @@ core_reconstruction/
 ├── src/features/spectral_metrics.cpp
 ├── src/fft/packed_spectrum.cpp
 ├── src/fft/stft_frontend.cpp
+├── src/fft/window_resampler.cpp
 ├── src/rawnotes/analyzer_gate_cluster_support.cpp
 ├── src/rawnotes/exponential_smoother.cpp
 ├── src/rawnotes/interval_gate.cpp
@@ -180,6 +182,7 @@ core_reconstruction/
 | `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50% e subset `014b25b0` per somma row escludendo il primo bin + floor `1e-5`. |
 | `fft/packed_spectrum.*` | Decodifica layout packed real-FFT `DC/Nyquist + re/im`. |
 | `fft/stft_frontend.*` | Materializza `SpectralTimeSlice` da buffer FFT packed. |
+| `fft/window_resampler.*` | Subset `014b2ee0`: 7 stage, piano step/start e resampling finestra 256 campioni in mode nearest/interp/average; esclusi FFT e tabelle globali. |
 | `runtime/spectral_time_slice.*` | Struttura dati clean-room dei payload spettrali. |
 | `runtime/shared_descriptor_cache.*` | Cache descriptor condivisa e conversione sample/index. |
 | `runtime/analyzer_gate_cluster.hpp` | Struct dei sei scalar analyzer `+0xf4..+0x108`. |

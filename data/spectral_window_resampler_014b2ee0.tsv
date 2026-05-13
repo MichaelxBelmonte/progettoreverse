@@ -1,0 +1,14 @@
+scope	target	role	confidence	evidence
+function	014b2ee0	spectral_window_resampler	high	014b2ee0 builds seven 256-sample windows with mode selected by int(step+0.4) before FFT and weighted accumulation
+constant	0x0240e35c	stage_base_step_one_over_256	very_high	__TEXT.__const bytes decode as float 0.00390625 and multiply 1 << (12-stage)
+constant	0x0240e408	start_offset_scale_minus_256_double	very_high	__TEXT.__const bytes decode as double -256.0 and combine with 0.5 to position the window start at center-128*step
+constant	0x023942d0	half_bias_0_5_double	very_high	__TEXT.__const bytes decode as double 0.5 and are used for nearest sampling plus half-window start scale
+constant	0x0240de78	integer_width_bias_0_4_double	very_high	__TEXT.__const bytes decode as double 0.4 and bias the cast int(step+0.4)
+constant	0x0241c3ec	stage_count_normalizer_7f	very_high	__TEXT.__const bytes decode as float 7.0 and normalize accumulated stage metric downstream
+behavior	014b2ee0	stage_step_sequence	high	stage steps are 16 8 4 2 1 0.5 0.25 times the caller scale
+behavior	014b2ee0	start_sample_clamp	high	start sample is max(0, centerSample - 128*step)
+behavior	014b2ee0	nearest_sampling_mode	high	when int(step+0.4)==1, samples are copied from int(position+0.5)
+behavior	014b2ee0	linear_interpolation_mode	high	when int(step+0.4)<1, output is row[base]+(row[base+1]-row[base])*(position-base)
+behavior	014b2ee0	averaging_mode	high	when int(step+0.4)>1, output is the mean of integerWidth samples starting at int(position)
+guardrail	014b2ee0_fft_and_table_accumulation	not_implemented	high	FFT call 00e3daa0 and global table accumulation through g_02802ed0/g_02802ed8/g_02802ee0/g_02802ee8 remain outside the clean-room slice
+implementation	014b2ee0_window_resampler_subset	fft_window_resampler_clean_room	high	core_reconstruction exposes stage-step plan and 256-sample nearest/interpolation/average resampling with clean bounds guards

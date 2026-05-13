@@ -19,6 +19,7 @@ add_library(mikecore_runtime_fft
     src/rawnotes/raw_note_class8_builder.cpp
     src/rawnotes/threshold_seed_matcher.cpp
     src/fft/stft_frontend.cpp
+    src/fft/window_resampler.cpp
     src/runtime/shared_descriptor_cache.cpp
     src/runtime/spectral_time_slice.cpp
 )
