@@ -71,6 +71,7 @@ Costanti lette da `binaries/MikeCore`:
 | `0x0240e350` | `-60.0f` | normalizzatore deviazione pitch-bin in `014aa770` |
 | `0x02391090` | `0.10000000149011612f` | scala deviazione pitch-bin in `014aa770` |
 | `0x0240e3b0` | `2.1` double | ampiezza finestra envelope in periodi nel consumer `0149ebe0` |
+| `0x0240e338` | `-0.008333333767950535f` | scala attenuazione distanza pitch-bin in `0149e4a0` |
 | `0x023942b8` | `0.7` double | keep ratio per pruning chain |
 | `0x023b19a0` | `-1.0` double | failure anchor |
 | `0x02390d00` | `-1.0f` | failure frequency |
@@ -135,6 +136,12 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
   - subset `0149ebe0`: predicato `peak +0x10 < upperPitchBin`
 - `copy_peaks_below_upper_bin(...)`
   - alternativa clean-room al pruning `GNList`: copia solo i peak sotto soglia
+- `pitch_matrix_peak_is_inside_open_bin_range(...)`
+  - predicato condiviso per i range aperti `lower < peakBin < upper`
+- `pitch_matrix_center_distance_attenuation(...)`
+  - subset `0149e4a0`: `max(0, abs(peakBin - centerBin) * -0.0083333338 + 1)`
+- `apply_pitch_matrix_center_distance_attenuation(...)`
+  - moltiplica `primary_peak_value` con il fattore di distanza dal centro
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -288,6 +295,21 @@ Dove:
 Questo chiude solo la formula di weighting. Il pruning interno di `0149ded0`
 resta fuori perche' usa indici/iterazione `GNList` non ancora abbastanza
 stabili da replicare senza simulazione.
+
+## Center Attenuation `0149e4a0`
+
+`0149e4a0` lavora ancora sulla stessa lattice e applica una attenuazione sui
+peak raccolti temporaneamente:
+
+```c
+distance = abs(peak->+0x10 - centerBin);
+factor = distance * -0.0083333338f + 1.0f;
+if (factor < 0.0f) factor = 0.0f;
+peak->+0x18 = factor * peak->+0x18;
+```
+
+Il codice clean-room espone solo questo pass numerico. Restano fuori la
+raccolta/rimozione nella lista temporanea e la chiamata `014b32a0`.
 
 ## Guardrail
 

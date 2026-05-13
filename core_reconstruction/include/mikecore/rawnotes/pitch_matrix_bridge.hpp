@@ -29,6 +29,7 @@ namespace mikecore::rawnotes
     inline constexpr float pitch_matrix_bridge_deviation_normalizer = -60.0f;
     inline constexpr float pitch_matrix_bridge_deviation_quality_scale = 0.10000000149011612f;
     inline constexpr double pitch_matrix_row_envelope_window_periods = 2.1;
+    inline constexpr float pitch_matrix_center_distance_scale = -0.008333333767950535f;
     inline constexpr double pitch_matrix_bridge_chain_keep_ratio = 0.7;
     inline constexpr float pitch_matrix_bridge_failed_frequency = -1.0f;
     inline constexpr double pitch_matrix_bridge_failed_anchor_time = -1.0;
@@ -148,9 +149,22 @@ namespace mikecore::rawnotes
         const PitchMatrixPeak& peak,
         int upper_pitch_bin_exclusive) noexcept;
 
+    [[nodiscard]] bool pitch_matrix_peak_is_inside_open_bin_range(
+        const PitchMatrixPeak& peak,
+        int lower_exclusive_pitch_bin,
+        int upper_exclusive_pitch_bin) noexcept;
+
     [[nodiscard]] std::vector<PitchMatrixPeak> copy_peaks_below_upper_bin(
         std::span<const PitchMatrixPeak> peaks,
         int upper_pitch_bin_exclusive);
+
+    [[nodiscard]] float pitch_matrix_center_distance_attenuation(
+        int peak_pitch_bin,
+        int center_pitch_bin) noexcept;
+
+    void apply_pitch_matrix_center_distance_attenuation(
+        std::span<PitchMatrixPeak> peaks,
+        int center_pitch_bin) noexcept;
 
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,

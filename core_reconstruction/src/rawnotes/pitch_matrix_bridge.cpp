@@ -229,6 +229,15 @@ namespace mikecore::rawnotes
         return peak.pitch_bin_index < upper_pitch_bin_exclusive;
     }
 
+    bool pitch_matrix_peak_is_inside_open_bin_range(
+        const PitchMatrixPeak& peak,
+        int lower_exclusive_pitch_bin,
+        int upper_exclusive_pitch_bin) noexcept
+    {
+        return lower_exclusive_pitch_bin < peak.pitch_bin_index &&
+               peak.pitch_bin_index < upper_exclusive_pitch_bin;
+    }
+
     std::vector<PitchMatrixPeak> copy_peaks_below_upper_bin(
         std::span<const PitchMatrixPeak> peaks,
         int upper_pitch_bin_exclusive)
@@ -241,6 +250,28 @@ namespace mikecore::rawnotes
             }
         }
         return kept;
+    }
+
+    float pitch_matrix_center_distance_attenuation(
+        int peak_pitch_bin,
+        int center_pitch_bin) noexcept
+    {
+        const int distance = std::abs(peak_pitch_bin - center_pitch_bin);
+        const float factor =
+            static_cast<float>(distance) * pitch_matrix_center_distance_scale +
+            1.0f;
+        return std::max(0.0f, factor);
+    }
+
+    void apply_pitch_matrix_center_distance_attenuation(
+        std::span<PitchMatrixPeak> peaks,
+        int center_pitch_bin) noexcept
+    {
+        for (PitchMatrixPeak& peak : peaks) {
+            peak.primary_peak_value *= pitch_matrix_center_distance_attenuation(
+                peak.pitch_bin_index,
+                center_pitch_bin);
+        }
     }
 
     namespace
