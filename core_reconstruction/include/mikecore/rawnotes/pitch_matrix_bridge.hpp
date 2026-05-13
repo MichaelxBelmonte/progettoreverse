@@ -28,6 +28,7 @@ namespace mikecore::rawnotes
     inline constexpr float pitch_matrix_bridge_quality_accept_floor = 0.6499999761581421f;
     inline constexpr float pitch_matrix_bridge_deviation_normalizer = -60.0f;
     inline constexpr float pitch_matrix_bridge_deviation_quality_scale = 0.10000000149011612f;
+    inline constexpr double pitch_matrix_row_envelope_window_periods = 2.1;
     inline constexpr double pitch_matrix_bridge_chain_keep_ratio = 0.7;
     inline constexpr float pitch_matrix_bridge_failed_frequency = -1.0f;
     inline constexpr double pitch_matrix_bridge_failed_anchor_time = -1.0;
@@ -123,6 +124,25 @@ namespace mikecore::rawnotes
         std::span<PitchMatrixPeak> peaks,
         float center_log2,
         float weight_base) noexcept;
+
+    [[nodiscard]] std::size_t pitch_matrix_row_envelope_half_window_samples(
+        double sample_rate,
+        float frequency_hz,
+        double window_periods = pitch_matrix_row_envelope_window_periods) noexcept;
+
+    [[nodiscard]] float pitch_matrix_absolute_mean_around_center(
+        std::span<const float> signal,
+        std::size_t center_sample,
+        std::size_t half_window_samples) noexcept;
+
+    [[nodiscard]] float interpolate_pitch_matrix_row_value(
+        std::span<const float> row_values,
+        double row_position) noexcept;
+
+    void fill_interpolated_pitch_matrix_row_values(
+        std::span<const float> row_values,
+        std::span<float> output,
+        double row_position_per_output_sample) noexcept;
 
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,

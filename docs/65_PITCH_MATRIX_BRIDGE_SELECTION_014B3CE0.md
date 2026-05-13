@@ -70,6 +70,7 @@ Costanti lette da `binaries/MikeCore`:
 | `0x0241f368` | `0.6499999761581421f` | floor qualita' del consumer `014aa770` |
 | `0x0240e350` | `-60.0f` | normalizzatore deviazione pitch-bin in `014aa770` |
 | `0x02391090` | `0.10000000149011612f` | scala deviazione pitch-bin in `014aa770` |
+| `0x0240e3b0` | `2.1` double | ampiezza finestra envelope in periodi nel consumer `0149ebe0` |
 | `0x023942b8` | `0.7` double | keep ratio per pruning chain |
 | `0x023b19a0` | `-1.0` double | failure anchor |
 | `0x02390d00` | `-1.0f` | failure frequency |
@@ -122,6 +123,14 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
 - `apply_pitch_matrix_primary_peak_values(...)`
   - scrive il risultato nel campo clean-room `primary_peak_value`, equivalente
     semantico di `peak +0x18`
+- `pitch_matrix_row_envelope_half_window_samples(...)`
+  - subset `0149ebe0`: `int((sampleRate / frequencyHz) * 2.1) / 2`
+- `pitch_matrix_absolute_mean_around_center(...)`
+  - subset `0149ebe0`: media di `abs(signal[i])` nella finestra clampata
+- `interpolate_pitch_matrix_row_value(...)`
+  - subset `0149ebe0`: interpolazione lineare tra due valori row adiacenti
+- `fill_interpolated_pitch_matrix_row_values(...)`
+  - pass clean-room per riempire un buffer output da row values gia' calcolati
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -211,6 +220,33 @@ local_44 = *(float *)(item + 0x38);
 
 Il modulo clean-room espone questa regola come pass su `std::span<float>`:
 nessuna mutazione dell'item originale, solo la sequenza di frequenze.
+
+Sempre in `0149ebe0`, la funzione costruisce un envelope per row stimando la
+media dell'assoluto del segnale intorno al centro temporale della row:
+
+```c
+centerSample = rowIndex * param_1 * sampleRateLike;
+halfWindow = (int)((sampleRateLike / frequencyHz) * 2.1) / 2;
+start = max(0, centerSample - halfWindow);
+end = min(sampleCount, centerSample + halfWindow);
+rowEnvelope[rowIndex] = sum(abs(signal[start:end])) / (end - start);
+```
+
+Dopo smoothing esterno, l'ultimo tratto osservato interpola linearmente i valori
+row verso il buffer output:
+
+```c
+position = (outputIndex / outputRateLike) / param_1;
+index = (int)position;
+if (rowCount - 2 < index) {
+  index = rowCount - 2;
+  position = rowCount - 1;
+}
+out[i] = (row[index + 1] - row[index]) * (position - index) + row[index];
+```
+
+Il codice clean-room implementa envelope e interpolazione. La smoothing call
+intermedia resta fuori da questo slice.
 
 ## Weighting `0149ded0`
 

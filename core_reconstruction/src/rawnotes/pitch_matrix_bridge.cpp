@@ -138,6 +138,90 @@ namespace mikecore::rawnotes
         }
     }
 
+    std::size_t pitch_matrix_row_envelope_half_window_samples(
+        double sample_rate,
+        float frequency_hz,
+        double window_periods) noexcept
+    {
+        if (!(sample_rate > 0.0) || !(frequency_hz > 0.0f) ||
+            !std::isfinite(sample_rate) || !std::isfinite(frequency_hz)) {
+            return 0;
+        }
+
+        const double window_samples =
+            (sample_rate / static_cast<double>(frequency_hz)) * window_periods;
+        if (!(window_samples > 0.0) || !std::isfinite(window_samples)) {
+            return 0;
+        }
+
+        return static_cast<std::size_t>(static_cast<int>(window_samples) / 2);
+    }
+
+    float pitch_matrix_absolute_mean_around_center(
+        std::span<const float> signal,
+        std::size_t center_sample,
+        std::size_t half_window_samples) noexcept
+    {
+        if (signal.empty()) {
+            return 0.0f;
+        }
+
+        const std::size_t start =
+            center_sample > half_window_samples ? center_sample - half_window_samples : 0;
+        const std::size_t unclamped_end = center_sample + half_window_samples;
+        const std::size_t end = std::min(unclamped_end, signal.size());
+        if (start >= end) {
+            return 0.0f;
+        }
+
+        float sum = 0.0f;
+        for (std::size_t index = start; index < end; ++index) {
+            sum += std::abs(signal[index]);
+        }
+        return sum / static_cast<float>(end - start);
+    }
+
+    float interpolate_pitch_matrix_row_value(
+        std::span<const float> row_values,
+        double row_position) noexcept
+    {
+        if (row_values.empty()) {
+            return 0.0f;
+        }
+        if (row_values.size() == 1) {
+            return row_values.front();
+        }
+
+        if (!(row_position > 0.0) || !std::isfinite(row_position)) {
+            row_position = 0.0;
+        }
+
+        std::size_t index = static_cast<std::size_t>(row_position);
+        double fractional_position = row_position;
+        const std::size_t max_index = row_values.size() - 2;
+        if (max_index < index) {
+            index = max_index;
+            fractional_position = static_cast<double>(row_values.size() - 1);
+        }
+
+        const float current = row_values[index];
+        return (row_values[index + 1] - current) *
+                   static_cast<float>(fractional_position - static_cast<double>(index)) +
+               current;
+    }
+
+    void fill_interpolated_pitch_matrix_row_values(
+        std::span<const float> row_values,
+        std::span<float> output,
+        double row_position_per_output_sample) noexcept
+    {
+        for (std::size_t index = 0; index < output.size(); ++index) {
+            output[index] = interpolate_pitch_matrix_row_value(
+                row_values,
+                static_cast<double>(index) * row_position_per_output_sample);
+        }
+    }
+
     namespace
     {
         [[nodiscard]] std::size_t bounded_row_count(
