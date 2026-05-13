@@ -1,0 +1,10 @@
+phase	component	confidence	evidence	notes
+instant_score	full_formula	very_high	014eccd0 reads +0x20,+0x58,+0x10 then sqrt(product)*square	used when hidden mode value equals 1
+instant_score	reduced_formula	very_high	014eccd0 reads +0x58,+0x10 then weight*square	used by sibling branch
+instant_score	descriptor_nan_guard	very_high	branch checks NAN(item+0x10) before both formulas	NaN descriptor yields 0.0 instant score
+instant_score	spacing_nan_guard	high	full branch checks NAN(item+0x20) before sqrt	NaN spacing/base yields 0.0 instant score
+instant_score	secondary_weight_no_clamp	high	no observed clamp around item+0x58	weight naming remains open
+envelope	current_weight	very_high	g_02394288	0.30000001192092896f
+envelope	previous_weight	high	g_02390128	0.7f
+envelope	running_max	very_high	if smoothed <= envelope then use previous envelope	monotonic envelope over visited range
+clean_room_module	source_item_score	very_high	core_reconstruction/features/source_item_score.*	span-based numeric helper only; list traversal/range translation excluded

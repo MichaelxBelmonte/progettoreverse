@@ -9,6 +9,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_library(mikecore_runtime_fft
     src/features/claim_scoring.cpp
     src/features/harmonic_stencil.cpp
+    src/features/source_item_score.cpp
     src/features/spectral_metrics.cpp
     src/features/windowed_overlap.cpp
     src/fft/packed_spectrum.cpp

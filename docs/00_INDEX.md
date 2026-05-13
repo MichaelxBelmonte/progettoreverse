@@ -117,6 +117,7 @@ Progetto_Reverse_Mike/
 | [65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md](65_PITCH_MATRIX_BRIDGE_SELECTION_014B3CE0.md) | Subset `014b3460 / 014b3ce0`: link righe `MUPitchMatrixPeak`, scelta peak da chain, conversione pitch-bin -> Hz e output anchor/frequenza | Attivo |
 | [66_SPECTRAL_ROW_FLOOR_014B25B0.md](66_SPECTRAL_ROW_FLOOR_014B25B0.md) | Kernel `014b25b0`: somma per-row dei bin escluso il primo e floor `1e-5` prima dello smoothing | Attivo |
 | [67_SPECTRAL_WINDOW_RESAMPLER_014B2EE0.md](67_SPECTRAL_WINDOW_RESAMPLER_014B2EE0.md) | Resampler `014b2ee0`: 7 stage, finestre da 256 campioni, mode nearest/interp/average | Attivo |
+| [68_SOURCE_ITEM_SCORE_ENVELOPE_014ECCD0.md](68_SOURCE_ITEM_SCORE_ENVELOPE_014ECCD0.md) | Consumer `014eccd0`: formule `+0x10/+0x20/+0x58` e envelope smoothing `0.3/0.7` | Attivo |
 
 ## Tools
 
@@ -166,6 +167,7 @@ python3 tools/pipeline.py verify
 ## Ultime Aggiunte Doc
 
 - [67_SPECTRAL_WINDOW_RESAMPLER_014B2EE0.md](67_SPECTRAL_WINDOW_RESAMPLER_014B2EE0.md)
+- [68_SOURCE_ITEM_SCORE_ENVELOPE_014ECCD0.md](68_SOURCE_ITEM_SCORE_ENVELOPE_014ECCD0.md)
 - [66_SPECTRAL_ROW_FLOOR_014B25B0.md](66_SPECTRAL_ROW_FLOOR_014B25B0.md)
 - [64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md](64_LATE_INTERVAL_BOUNDARY_REFINEMENT_014AB140.md)
 - [63_RAW_NOTE_METRIC_WRITER_014A3550.md](63_RAW_NOTE_METRIC_WRITER_014A3550.md)

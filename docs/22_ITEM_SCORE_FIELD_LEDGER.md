@@ -1,6 +1,6 @@
 # 22 — Item Score Field Ledger
 
-**Ultimo aggiornamento:** 2026-04-09
+**Ultimo aggiornamento:** 2026-05-13
 
 ## Obiettivo
 
@@ -102,6 +102,7 @@ In [014eccd0.c](../reconstructed/clean/MUAudioSourceItem/014eccd0.c):
 
 - nel ramo completo usa `sqrt((item + 0x20) * (item + 0x58)) * (item + 0x10)^2`
 - nel ramo ridotto usa anche `item + 0x58 * (item + 0x10)^2`
+- poi applica uno smoother `0.3/0.7` con running maximum sul range
 
 In [014902f0.c](../reconstructed/clean/MUSpectrumShaper/014902f0.c):
 
@@ -109,6 +110,10 @@ In [014902f0.c](../reconstructed/clean/MUSpectrumShaper/014902f0.c):
 - durante merge/propagazione prende il massimo dei `+0x58` figli
 
 Quindi `+0x58` non e' un semplice metadata passivo. E' un weight secondario usato davvero nel path numerico.
+
+Doc di dettaglio:
+
+- [68_SOURCE_ITEM_SCORE_ENVELOPE_014ECCD0.md](68_SOURCE_ITEM_SCORE_ENVELOPE_014ECCD0.md)
 
 ### 8. `item + 0x28` vive in un dominio score-like coerente con `1.0`
 

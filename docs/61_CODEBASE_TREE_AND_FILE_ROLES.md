@@ -58,9 +58,9 @@ Progetto_Reverse_Mike/
 
 | Area | File locali | Size | Ruolo |
 |------|-------------|------|-------|
-| `core_reconstruction/` | 40 | 160K+ | codice clean-room compilabile |
-| `docs/` | 67 | 676K+ | ledger, decisioni, mappe e stato reverse |
-| `data/` | 55 | 376K+ | dati strutturati TSV/JSON/LOG per ledger |
+| `core_reconstruction/` | 42 | 160K+ | codice clean-room compilabile |
+| `docs/` | 70 | 676K+ | ledger, decisioni, mappe e stato reverse |
+| `data/` | 57 | 376K+ | dati strutturati TSV/JSON/LOG per ledger |
 | `tools/` | 11 | 176K | automazione di estrazione, pulizia e verifica |
 | `binaries/` | 8 | 163M | target binari analizzati |
 | `ghidra/output/` | 7.940 circa | 78M | output testuale/decompilato esportato da Ghidra |
@@ -145,6 +145,7 @@ core_reconstruction/
 ├── README.md
 ├── include/mikecore/features/claim_scoring.hpp
 ├── include/mikecore/features/harmonic_stencil.hpp
+├── include/mikecore/features/source_item_score.hpp
 ├── include/mikecore/features/spectral_metrics.hpp
 ├── include/mikecore/features/windowed_overlap.hpp
 ├── include/mikecore/fft/packed_spectrum.hpp
@@ -165,6 +166,7 @@ core_reconstruction/
 ├── include/mikecore/runtime/spectral_time_slice.hpp
 ├── src/features/claim_scoring.cpp
 ├── src/features/harmonic_stencil.cpp
+├── src/features/source_item_score.cpp
 ├── src/features/spectral_metrics.cpp
 ├── src/features/windowed_overlap.cpp
 ├── src/fft/packed_spectrum.cpp
@@ -191,6 +193,7 @@ core_reconstruction/
 | `README.md` | Regole clean-room e stato dei moduli implementabili. |
 | `features/claim_scoring.*` | Coda finale `013924d0`: normalizzazione colonne `k=1..H-1` con floor `FLT_MIN`, dot product finale su `magnitudeData` e weighting opzionale `min(1.0f, tonalityData[k])`; esclusi oggetti originali e scrittura diretta `item+0x28`. |
 | `features/harmonic_stencil.*` | Subset locale `014b74f0`: piano bin da centro/finestra/span e stamping additivo `lut[index] * harmonicWeight` nel row-buffer; wrapper LUT originale esterno al modulo. |
+| `features/source_item_score.*` | Consumer `014eccd0`: formule `+0x10/+0x20/+0x58` e envelope smoothing `0.3/0.7` su span caller-owned; esclusi traversal lista, retain/release e traduzione range originale. |
 | `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50% e subset `014b25b0` per somma row escludendo il primo bin + floor `1e-5`. |
 | `features/windowed_overlap.*` | Subset locale kernel `014b71e0 / 00e84250`: piano closed-window, riga LUT Hann periodica, contributo LUT, evidenza mask opzionale, consumo energia opzionale e fallback center-bin; lifecycle globale esterno al modulo. |
 | `fft/packed_spectrum.*` | Decodifica layout packed real-FFT `DC/Nyquist + re/im`. |
@@ -217,6 +220,7 @@ IMPLEMENTABLE:
 runtime_object_model
 fft_stft_frontend
 spectral_slice_local_features
+source_item_score_consumers
 raw_note_families_matcher
 
 PARTIAL/BLOCKED:
@@ -244,6 +248,7 @@ contiene una decisione, una correzione, una mappa ABI o un ledger di confidence.
 | `42..50` | front-end spettrale, FFT wrapper, median consumer, raw-note matcher. |
 | `51..60` | peer list, working GNList, LSS, generator, smoother. |
 | `61` | questo file: tree e ruoli della codebase. |
+| `62..68` | moduli clean-room aggiunti: preprocessori raw-note, matrix bridge, spectral row/window e score envelope. |
 
 ### Documenti Chiave
 
@@ -255,6 +260,7 @@ contiene una decisione, una correzione, una mappa ABI o un ledger di confidence.
 | `16_CANONICAL_LEDGER.md` | Ledger P0/P1 e policy di confidence. |
 | `27_FINAL_SCORING_MODEL_013924D0.md` | Normalizzazione colonne e dot product finale implementati come helper clean-room. |
 | `43_SPECTRAL_MEDIAN_FREQUENCY_0149F6A0.md` | Formula chiusa della spectral median. |
+| `68_SOURCE_ITEM_SCORE_ENVELOPE_014ECCD0.md` | Formule `+0x10/+0x20/+0x58` e envelope smoothing del consumer `014eccd0`. |
 | `47_SPECTRAL_MEDIAN_CONSUMER_MAP_0149F6A0_01484BC0.md` | Consumer della spectral reference. |
 | `49_THRESHOLD_SEEDED_RAW_NOTE_MATCHER_014AF180.md` | Matcher raw-note implementato nel core. |
 | `56_CONFIDENCE_GATED_RECONSTRUCTION.md` | Gate ufficiale per cosa puo' entrare nel codice. |
