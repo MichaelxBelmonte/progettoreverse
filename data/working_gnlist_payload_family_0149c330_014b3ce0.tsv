@@ -6,7 +6,7 @@ builder	0149c330	allocates_inner_GNList_per_row	very_high	0149c330 allocates a g
 builder	0149c330	allocates_MUPitchMatrixPeak_nodes	very_high	0149c330 allocates g_025e4538 for each detected local peak
 field	0149c330	peak+0x0c_row_or_slice_index	high	0149c330 writes iVar14 to +0x0c on the allocated peak node
 field	0149c330	peak+0x10_pitch_bin_index	high	0149c330 writes uVar17 to +0x10 on the allocated peak node
-field	0149c330	peak+0x18_primary_peak_value_like	medium	0149c330 seeds +0x18 with fVar21 when materializing the peak
+field	0149c330_0149ded0	peak+0x18_primary_peak_value	high	0149c330 seeds +0x18 and 0149ded0 rewrites it as pow(weightBase, mirroredExponent) * peak +0x1c
 field	0149c330	peak+0x1c_working_peak_quality	high	0149c330 seeds +0x1c with the same fVar21 and downstream consumers prefer +0x1c
 consumer	0149ebe0	prunes_inner_peaks_by_peak_plus_0x10	very_high	0149ebe0 iterates each inner list and removes entries based on threshold comparison against peak +0x10
 helper	014b3460	resets_peak_linkage_and_assigns_local_rank	high	014b3460 writes +0x14 and clears +0x20 +0x28 +0x30 for each inner peak

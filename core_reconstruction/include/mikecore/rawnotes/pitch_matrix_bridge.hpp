@@ -109,6 +109,21 @@ namespace mikecore::rawnotes
         std::span<float> frequencies_hz,
         float initial_frequency_hz) noexcept;
 
+    [[nodiscard]] float pitch_matrix_mirrored_log2_exponent(
+        float pitch_bin,
+        float center_log2) noexcept;
+
+    [[nodiscard]] float pitch_matrix_primary_peak_value(
+        float working_peak_quality,
+        float pitch_bin,
+        float center_log2,
+        float weight_base) noexcept;
+
+    void apply_pitch_matrix_primary_peak_values(
+        std::span<PitchMatrixPeak> peaks,
+        float center_log2,
+        float weight_base) noexcept;
+
     void reset_pitch_matrix_peak_linkage(
         std::span<PitchMatrixPeakRow> rows,
         std::size_t row_count,

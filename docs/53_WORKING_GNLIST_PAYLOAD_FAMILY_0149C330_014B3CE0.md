@@ -145,7 +145,7 @@ Questa field map e' sufficiente per il reverse corrente, ma non ancora definitiv
 +0x0c  rowIndex / sliceIndex-like
 +0x10  pitchBinIndex / pitchIndex-like
 +0x14  localRankInRow
-+0x18  primaryPeakValue-like
++0x18  primaryPeakValue
 +0x1c  workingPeakQuality / selectionScore
 +0x20  stage/adjacency flag
 +0x28  adjacency/back-link-like
@@ -157,9 +157,9 @@ Confidence:
 - `+0x10`: alta
 - `+0x14`: alta
 - `+0x1c`: alta
-- `+0x28/+0x30`: media-alta
+- `+0x28/+0x30`: alta
 - `+0x0c`: media-alta
-- `+0x18`: media
+- `+0x18`: alta
 
 ---
 
@@ -211,8 +211,9 @@ Il ledger corretto e' ora:
 La lettura prudente corretta oggi e':
 
 - `+0x1c` e' il vero score/quality downstream
-- `+0x18` e' un valore peak primario inizializzato insieme a `+0x1c`
-- il typing esatto float-vs-double non va ancora promosso oltre questa granularita'
+- `+0x18` e' un valore peak primario inizializzato insieme a `+0x1c` e poi
+  riscritto da `0149ded0` come `pow(weightBase, mirroredExponent) * +0x1c`
+- il typing e' float-like nel corridoio `0149c330 / 0149ded0`
 
 ---
 
@@ -237,6 +238,6 @@ Questa topologia e' il pezzo che serviva per separare:
 
 ## 6. Next Step
 
-1. Stringere meglio il significato numerico di `+0x18` contro `+0x1c`.
-2. Stringere il terzo campo dell'helper esteso `01432b10`.
-3. Verificare se i consumer tardivi di `self + 0x158` lavorano ancora sulla stessa topologia annidata o su una proiezione gia' ridotta.
+1. Stringere il terzo campo dell'helper esteso `01432b10`.
+2. Verificare se i consumer tardivi di `self + 0x158` lavorano ancora sulla stessa topologia annidata o su una proiezione gia' ridotta.
+3. Chiudere la chain construction completa di `014b3ce0` solo se il traversal `GNList` diventa sufficientemente stabile.

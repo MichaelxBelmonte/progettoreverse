@@ -115,6 +115,13 @@ Implementato in `rawnotes/pitch_matrix_bridge.*`:
 - `replace_failed_bridge_frequencies_with_previous(...)`
   - consumer `0149ebe0`: se `item +0x38 <= 0`, sostituisce con l'ultima
     frequenza valida, inizializzata dal parametro in ingresso
+- `pitch_matrix_mirrored_log2_exponent(...)`
+  - subset `0149ded0`: `pitchBin / 60.0f`, specchiato sopra `centerLog2`
+- `pitch_matrix_primary_peak_value(...)`
+  - subset `0149ded0`: `pow(weightBase, mirroredExponent) * peak +0x1c`
+- `apply_pitch_matrix_primary_peak_values(...)`
+  - scrive il risultato nel campo clean-room `primary_peak_value`, equivalente
+    semantico di `peak +0x18`
 - `reset_pitch_matrix_peak_linkage(...)`
   - subset `014b3460`: assegna `local_rank` e azzera flag/link alti
 - `link_adjacent_pitch_matrix_peak_rows(...)`
@@ -204,6 +211,30 @@ local_44 = *(float *)(item + 0x38);
 
 Il modulo clean-room espone questa regola come pass su `std::span<float>`:
 nessuna mutazione dell'item originale, solo la sequenza di frequenze.
+
+## Weighting `0149ded0`
+
+`0149ded0` aggiorna `MUPitchMatrixPeak +0x18` partendo da `+0x1c`.
+Il frammento chiuso:
+
+```c
+fVar14 = (float)*(int *)(peak + 0x10) / 60.0f;
+fVar14 = powf(weightBase,
+              centerLog2 < fVar14 ? (centerLog2 + centerLog2) - fVar14
+                                   : fVar14);
+*(float *)(peak + 0x18) = fVar14 * *(float *)(peak + 0x1c);
+```
+
+Dove:
+
+- `centerLog2` deriva da `logf(centerHz / 21.533203125f) * 1.4426950216293335f`
+- `weightBase` deriva dal contesto chiamante come combinazione di ratio e
+  parametri locali; il codice clean-room lo riceve gia' calcolato per non
+  inventare semantica sui parametri non ancora canonizzati
+
+Questo chiude solo la formula di weighting. Il pruning interno di `0149ded0`
+resta fuori perche' usa indici/iterazione `GNList` non ancora abbastanza
+stabili da replicare senza simulazione.
 
 ## Guardrail
 

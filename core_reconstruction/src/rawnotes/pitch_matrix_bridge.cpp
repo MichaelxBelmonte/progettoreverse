@@ -102,6 +102,42 @@ namespace mikecore::rawnotes
         return result;
     }
 
+    float pitch_matrix_mirrored_log2_exponent(
+        float pitch_bin,
+        float center_log2) noexcept
+    {
+        const float pitch_log2 = pitch_bin / pitch_matrix_bridge_bins_per_octave;
+        if (center_log2 < pitch_log2) {
+            return center_log2 + center_log2 - pitch_log2;
+        }
+        return pitch_log2;
+    }
+
+    float pitch_matrix_primary_peak_value(
+        float working_peak_quality,
+        float pitch_bin,
+        float center_log2,
+        float weight_base) noexcept
+    {
+        const float exponent =
+            pitch_matrix_mirrored_log2_exponent(pitch_bin, center_log2);
+        return std::pow(weight_base, exponent) * working_peak_quality;
+    }
+
+    void apply_pitch_matrix_primary_peak_values(
+        std::span<PitchMatrixPeak> peaks,
+        float center_log2,
+        float weight_base) noexcept
+    {
+        for (PitchMatrixPeak& peak : peaks) {
+            peak.primary_peak_value = pitch_matrix_primary_peak_value(
+                peak.working_peak_quality,
+                static_cast<float>(peak.pitch_bin_index),
+                center_log2,
+                weight_base);
+        }
+    }
+
     namespace
     {
         [[nodiscard]] std::size_t bounded_row_count(
