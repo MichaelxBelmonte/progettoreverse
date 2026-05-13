@@ -193,10 +193,43 @@ Nel path analyzer, il relay completo e':
 - `g_02394274 = 1.1754943508222875e-38f` floor raw-sum
 - `g_02411280 = 9.999999747378752e-06f` floor per abilitare depletion
 - `0.01` e `0.1` nel fallback
+- `g_2411080 = 6.283185307179586` (`2*pi`) per costruzione LUT
+- `g_23e1728 = -3.141592653589793` (`-pi`) fase iniziale LUT
+- `g_23942d0 = 0.5` scala della finestra Hann periodica
 
-Il valore `64.0f` mappa la distanza normalizzata in indice di tabella. La LUT
-reale resta fornita dall'helper runtime `00e84250` e non viene duplicata nel
-codice clean-room.
+Il valore `64.0f` mappa la distanza normalizzata in indice di tabella.
+
+## LUT `00e84250`
+
+Il disassembly diretto di `014b71e0` mostra:
+
+```asm
+14b7219: bf 80 00 00 00   movl $0x80, %edi
+14b721e: callq 0xe84250
+```
+
+Quindi il kernel usa la riga LUT di dimensione `128`.
+
+`00e84250(dimension)`:
+
+- calcola `row = max((dimension / 2) - 1, 0)`
+- calcola `offset = row * row + row`
+- ritorna `global_028025d0 + offset`
+
+`00e84290` inizializza `global_028025d0` come tabella triangolare di righe pari
+`2..256`, allocata a `0x10204` byte (`16513` float, incluso sentinel). La riga
+usata da `014b71e0` e' quindi:
+
+```c
+phase = -pi;
+step = 2*pi / dimension;
+lut[i] = (cos(phase) + 1.0) * 0.5;
+phase += step;
+```
+
+Nota: esiste anche un buffer sibling normalizzato (`global_028025c8`) costruito
+nello stesso initializer, ma `00e84250` ritorna il buffer non normalizzato
+`global_028025d0`.
 
 ## Implementazione Clean-Room
 
@@ -205,6 +238,13 @@ Implementato in `features/windowed_overlap.*`:
 - `make_windowed_overlap_plan(...)`
   - costruisce `lower`, `upper` e fallback index da
     `centerHz / binStepHz`, `-0.5f`, `windowSpanBins` e `binCount / 2`
+- `windowed_overlap_lut_row_offset(...)`
+  - replica l'offset row `row * row + row` osservato in `00e84250`
+- `select_windowed_overlap_lut_row(...)`
+  - seleziona una riga da tabella triangolare esterna `2..256`
+- `fill_windowed_overlap_lut_row(...)`
+  - materializza la riga Hann periodica osservata per `dimension=128` o altra
+    dimensione pari valida
 - `compute_windowed_overlap(...)`
   - scansiona `frequencyAxis[lower:upper]`
   - usa `abs(centerHz - frequencyAxis[i]) < windowHz`
@@ -216,9 +256,9 @@ Implementato in `features/windowed_overlap.*`:
   - se il raw sum resta sotto `FLT_MIN`, usa fallback
     `energy[fallbackIndex] * 0.01 * 0.1`
 
-Guardrail: la LUT non viene sintetizzata. Il caller deve passarla come
-`std::span<const float>` per mantenere separato il dato proprietario globale dal
-kernel numerico ricostruito.
+Guardrail: `compute_windowed_overlap(...)` continua a ricevere la LUT come
+`std::span<const float>`. Il modulo ricostruisce la formula numerica della riga
+LUT, non il lifecycle globale originale (`00e84290`, ownership e teardown).
 
 ---
 
@@ -227,13 +267,13 @@ kernel numerico ricostruito.
 1. `item + 0x24` puo' essere modellato come `local_overlap_evidence`.
 2. Il path helper non e' piu' una black box: e' una misura locale su `trueFreq/magnitude`, pesata da `tonalityData`, con modalita' opzionale di depletion.
 3. Analyzer e spectrum shaper condividono gia' un primitive matematico comune, utile per una replica coerente.
-4. Il kernel e' ora disponibile nel core clean-room, lasciando fuori solo la
-   LUT globale e il wiring owner-specific.
+4. Il kernel e la riga LUT `128` sono ora disponibili nel core clean-room,
+   lasciando fuori lifecycle globale e wiring owner-specific.
 
 ---
 
 ## Next Step
 
-1. Recuperare o modellare separatamente la LUT prodotta da `00e84250`.
-2. Verificare se il floor su `item + 0x24` serve a evitare divisioni per zero o a mantenere un minimo di activation evidence.
-3. Cercare riusi ulteriori del kernel con `xmm4 != 0` per validare il path depletion in contesti diversi.
+1. Verificare se il floor su `item + 0x24` serve a evitare divisioni per zero o a mantenere un minimo di activation evidence.
+2. Cercare riusi ulteriori del kernel con `xmm4 != 0` per validare il path depletion in contesti diversi.
+3. Collegare il generatore LUT al caller clean-room solo quando il wiring owner-specific sara' chiuso.

@@ -40,6 +40,60 @@ namespace mikecore::features
         return plan;
     }
 
+    std::size_t windowed_overlap_lut_row_offset(int dimension) noexcept
+    {
+        int row = 0;
+        if (dimension >= 2) {
+            row = (dimension / 2) - 1;
+        }
+
+        return static_cast<std::size_t>(row * row + row);
+    }
+
+    std::span<const float> select_windowed_overlap_lut_row(
+        std::span<const float> triangular_lut,
+        int dimension) noexcept
+    {
+        if (dimension < 2 ||
+            dimension > windowed_overlap_max_lut_dimension ||
+            (dimension % 2) != 0) {
+            return {};
+        }
+
+        const std::size_t offset = windowed_overlap_lut_row_offset(dimension);
+        const auto length = static_cast<std::size_t>(dimension);
+        if (offset > triangular_lut.size() ||
+            length > triangular_lut.size() - offset) {
+            return {};
+        }
+
+        return triangular_lut.subspan(offset, length);
+    }
+
+    bool fill_windowed_overlap_lut_row(
+        std::span<float> output,
+        int dimension) noexcept
+    {
+        if (dimension < 2 ||
+            dimension > windowed_overlap_max_lut_dimension ||
+            (dimension % 2) != 0 ||
+            output.size() < static_cast<std::size_t>(dimension)) {
+            return false;
+        }
+
+        const double step =
+            windowed_overlap_lut_period / static_cast<double>(dimension);
+        double phase = windowed_overlap_lut_start_phase;
+        for (int index = 0; index < dimension; ++index) {
+            output[static_cast<std::size_t>(index)] = static_cast<float>(
+                (std::cos(phase) + windowed_overlap_lut_bias) *
+                windowed_overlap_lut_scale);
+            phase += step;
+        }
+
+        return true;
+    }
+
     namespace
     {
         [[nodiscard]] float lookup_overlap_weight(

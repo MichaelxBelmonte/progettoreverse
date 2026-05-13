@@ -17,9 +17,16 @@ constant	0x02411280	consume_floor_1e_minus_5f	very_high	__TEXT.__const bytes dec
 constant	0x02394274	raw_sum_floor_float_min	very_high	__TEXT.__const bytes decode as float 1.1754943508222875e-38 and gate fallback when raw contribution is too small
 constant	0x02391030	fallback_first_scale_0_01_double	very_high	__TEXT.__const bytes decode as double 0.01 and scale fallback center-bin energy
 constant	0x023934c8	fallback_second_scale_0_1_double	very_high	__TEXT.__const bytes decode as double 0.1 and scale fallback center-bin energy
+constant	0x02411080	lut_period_two_pi_double	very_high	__TEXT.__const bytes decode as double 6.283185307179586 and drive 00e84290 LUT step
+constant	0x023e1728	lut_start_minus_pi_double	very_high	__TEXT.__const bytes decode as double -3.141592653589793 and initialize LUT phase
+constant	0x023942d0	lut_hann_scale_0_5_double	very_high	__TEXT.__const bytes decode as double 0.5 and scale cos window to [0,1]
 behavior	014b71e0	window_plan	high	lower=max(1,int(windowSpan*-0.5 + centerHz/binStepHz)) and upper=min(int(windowSpan)+rawLower+1,binCount/2)
 behavior	014b71e0	lut_weighted_raw_contribution	high	when abs(centerHz-frequencyAxis[i]) < windowHz contribution is lut[int(((windowHz-diff)/windowHz)*64)]*energy[i]
 behavior	014b71e0	mask_weighted_evidence	high	when tonality/mask buffer is present weighted evidence accumulates min(1.0,mask[i])*contribution alongside raw contribution
 behavior	014b71e0	optional_energy_depletion	high	when consume factor is above 1e-5 the energy buffer subtracts contribution*consumeFactor
 behavior	014b71e0	center_bin_fallback	high	when raw contribution is below FLT_MIN output evidence falls back to energy[(lower+upper)/2]*0.01*0.1
+behavior	014b71e0_to_00e84250	default_lut_dimension_128	very_high	disassembly at 014b7219 moves 0x80 to edi before calling 00e84250	kernel uses row dimension 128
+behavior	00e84250	triangular_lut_row_offset	very_high	row=max((dimension/2)-1,0) then offset=row*row+row	returns global_028025d0+offset floats
+behavior	00e84290	triangular_hann_lut_init	high	allocates 0x10204 bytes and fills even rows 2..256 with (cos(phase)+1.0)*0.5	phase starts -pi and step is 2*pi/dimension
 implementation	014b71e0_windowed_overlap_subset	windowed_overlap_clean_room	high	core_reconstruction exposes window plan contribution accumulation optional mask weighting optional depletion and fallback while leaving LUT ownership external
+implementation	00e84250_lut_row_subset	windowed_overlap_clean_room	high	core_reconstruction exposes row offset selection and periodic Hann row materialization for valid even dimensions

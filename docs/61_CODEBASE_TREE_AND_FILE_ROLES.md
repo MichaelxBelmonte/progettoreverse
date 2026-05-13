@@ -186,7 +186,7 @@ core_reconstruction/
 | `CMakeLists.txt` | Definisce la libreria statica `mikecore_runtime_fft`. |
 | `README.md` | Regole clean-room e stato dei moduli implementabili. |
 | `features/spectral_metrics.*` | Implementa `spectralMedianFrequencyHz` / rolloff 50% e subset `014b25b0` per somma row escludendo il primo bin + floor `1e-5`. |
-| `features/windowed_overlap.*` | Subset locale kernel `014b71e0`: piano closed-window, contributo LUT, evidenza mask opzionale, consumo energia opzionale e fallback center-bin; LUT globale esterna al modulo. |
+| `features/windowed_overlap.*` | Subset locale kernel `014b71e0 / 00e84250`: piano closed-window, riga LUT Hann periodica, contributo LUT, evidenza mask opzionale, consumo energia opzionale e fallback center-bin; lifecycle globale esterno al modulo. |
 | `fft/packed_spectrum.*` | Decodifica layout packed real-FFT `DC/Nyquist + re/im`. |
 | `fft/stft_frontend.*` | Materializza `SpectralTimeSlice` da buffer FFT packed. |
 | `fft/window_resampler.*` | Subset `014b2ee0`: 7 stage, piano step/start e resampling finestra 256 campioni in mode nearest/interp/average; esclusi FFT e tabelle globali. |

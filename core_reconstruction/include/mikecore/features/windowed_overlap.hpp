@@ -21,6 +21,13 @@ namespace mikecore::features
     inline constexpr float windowed_overlap_raw_sum_floor = 1.1754943508222875e-38f;
     inline constexpr double windowed_overlap_fallback_first_scale = 0.01;
     inline constexpr double windowed_overlap_fallback_second_scale = 0.1;
+    inline constexpr int windowed_overlap_default_lut_dimension = 128;
+    inline constexpr int windowed_overlap_max_lut_dimension = 256;
+    inline constexpr std::size_t windowed_overlap_triangular_lut_storage_size = 16513;
+    inline constexpr double windowed_overlap_lut_start_phase = -3.141592653589793;
+    inline constexpr double windowed_overlap_lut_period = 6.283185307179586;
+    inline constexpr double windowed_overlap_lut_bias = 1.0;
+    inline constexpr double windowed_overlap_lut_scale = 0.5;
 
     struct WindowedOverlapPlan final
     {
@@ -43,6 +50,17 @@ namespace mikecore::features
         float bin_step_hz,
         float window_span_bins,
         int bin_count) noexcept;
+
+    [[nodiscard]] std::size_t windowed_overlap_lut_row_offset(
+        int dimension) noexcept;
+
+    [[nodiscard]] std::span<const float> select_windowed_overlap_lut_row(
+        std::span<const float> triangular_lut,
+        int dimension) noexcept;
+
+    bool fill_windowed_overlap_lut_row(
+        std::span<float> output,
+        int dimension = windowed_overlap_default_lut_dimension) noexcept;
 
     [[nodiscard]] WindowedOverlapResult compute_windowed_overlap(
         float center_hz,
