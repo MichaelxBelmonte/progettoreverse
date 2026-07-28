@@ -1,182 +1,184 @@
 # Progetto Reverse
 
-Reverse engineering sistematico di **MikeCore**, il motore DSP di Melodyne (Celemony), con l'obiettivo di ricostruire in **clean-room** la pipeline di analisi spettrale e di rilevamento note.
+Systematic reverse engineering of **MikeCore**, the DSP engine behind Melodyne (Celemony), aimed at rebuilding its spectral analysis and note detection pipeline in a **clean room**.
 
-Non è un crack, non è un patcher e non è un redistributore del prodotto: è un archivio di *evidenza* — ledger di reverse, dati strutturati, pseudocodice decompilato — e un piccolo core C++20 che implementa **solo** ciò che è stato dimostrato dal binario.
+This is not a crack, not a patcher, and not a redistribution of the product. It is an archive of *evidence* — reverse engineering ledgers, structured data, decompiled pseudocode — plus a small C++20 core that implements **only** what has been proven from the binary.
 
----
-
-## ⚠️ Nota legale
-
-Questo repository è materiale di **ricerca e interoperabilità**. Melodyne, MikeCore e tutti i binari analizzati sono proprietà di **Celemony Software GmbH**; questo progetto non è affiliato né approvato da Celemony.
-
-- La directory `binaries/` contiene binari proprietari **non redistribuibili**. Se stai leggendo questo README su un repository pubblico, quei file vanno rimossi: procurali autonomamente da un'installazione legittima di Melodyne (gli hash MD5 di riferimento sono in [`data/inventory.json`](data/inventory.json)).
-- Il codice in `core_reconstruction/` è scritto ex novo a partire dai ledger, non è codice Celemony copiato.
-- Il reverse engineering per interoperabilità è tutelato in UE dalla Direttiva 2009/24/CE art. 6; la ridistribuzione dei binari **non** lo è.
+> **Note on language:** this README is in English, but the 70 ledgers under `docs/` are written in Italian. Function addresses, field offsets, type names and formulas are language-independent, so the documents remain readable even without Italian.
 
 ---
 
-## Cosa c'è dentro
+## ⚠️ Legal notice
 
-| Area | Contenuto |
-|------|-----------|
-| **70 documenti** in `docs/` | Ledger tematici: architettura, FFT, DNA2, quality scoring, formant synthesis, più ~50 ledger per singolo cluster di funzioni |
-| **7.860 funzioni** decompilate | Pseudocodice C esportato da Ghidra headless, poi ripulito e annotato |
-| **~670 header/struct** ricostruiti | Class map derivata da vtable, RTTI e property registration |
-| **77 claim verificati** | Ogni affermazione nei doc è validata contro il binario con confidence score |
-| **42 file C++20** clean-room | Moduli che hanno superato il gate `confidence >= 0.90`, compilabili con CMake |
+This repository is **research and interoperability** material. Melodyne, MikeCore and every analyzed binary are the property of **Celemony Software GmbH**. This project is neither affiliated with nor endorsed by Celemony.
 
-### Il target
-
-| Binario | Size | Arch | Ruolo |
-|---------|------|------|-------|
-| `MikeCore` | 43 MB | x86_64 | Engine DSP double precision — **target P0** |
-| `MikeCoreF` | 91 MB | Universal | Engine DSP float — cross-check costanti/formule |
-| `mike` | 214 KB | Universal | Wrapper VST3 (3 soli simboli esportati) |
-| `MikeAU` / `MikeAAX` / `MikeStandalone` | ~200–400 KB | Universal | Wrapper AudioUnit / AAX / standalone |
-| `Resources.rrr` | 28 MB | — | Archivio GNFA: 997 entry (192 `.gnui`, 518 `.png`) |
-| `default.metallib` | 5.6 KB | Metal | Solo blit shader per la UI — **zero DSP sulla GPU** |
+- The `binaries/` directory contains proprietary, **non-redistributable** binaries. If you are reading this README on a public repository, those files should be removed: obtain them yourself from a legitimate Melodyne installation (reference MD5 hashes are in [`data/inventory.json`](data/inventory.json)).
+- The code under `core_reconstruction/` is written from scratch based on the ledgers. It is not copied Celemony code.
+- In the EU, reverse engineering for interoperability is protected by Directive 2009/24/EC art. 6. Redistributing the binaries is **not**.
 
 ---
 
-## Metodo
+## What's inside
 
-Il progetto non avanza per "completamento percepito", ma per **evidenza**. Il flusso è:
+| Area | Content |
+|------|---------|
+| **70 documents** in `docs/` | Topic ledgers: architecture, FFT, DNA2, quality scoring, formant synthesis, plus ~50 ledgers covering individual function clusters |
+| **7,860 decompiled functions** | C pseudocode exported from Ghidra headless, then cleaned and annotated |
+| **~670 reconstructed headers/structs** | Class map derived from vtables, RTTI and property registration |
+| **77 verified claims** | Every statement in the docs is validated against the binary with a confidence score |
+| **42 clean-room C++20 files** | Modules that passed the `confidence >= 0.90` gate, buildable with CMake |
+
+### The target
+
+| Binary | Size | Arch | Role |
+|--------|------|------|------|
+| `MikeCore` | 43 MB | x86_64 | Double-precision DSP engine — **primary target** |
+| `MikeCoreF` | 91 MB | Universal | Float DSP engine — cross-check for constants and formulas |
+| `mike` | 214 KB | Universal | VST3 wrapper (only 3 exported symbols) |
+| `MikeAU` / `MikeAAX` / `MikeStandalone` | ~200–400 KB | Universal | AudioUnit / AAX / standalone wrappers |
+| `Resources.rrr` | 28 MB | — | GNFA archive: 997 entries (192 `.gnui`, 518 `.png`) |
+| `default.metallib` | 5.6 KB | Metal | UI blit shader only — **no DSP on the GPU** |
+
+---
+
+## Method
+
+The project does not advance by *perceived* completion, but by **evidence**. The flow is:
 
 ```
-binari  →  Ghidra headless  →  estrazione  →  ledger + confidence  →  clean-room C++
-           (5 script Java)     (8 tool Py)     (docs/ + data/)        (gate ≥ 0.90)
+binaries  →  Ghidra headless  →  extraction  →  ledgers + confidence  →  clean-room C++
+             (5 Java scripts)    (8 Py tools)    (docs/ + data/)         (gate ≥ 0.90)
 ```
 
-### 1. Estrazione
+### 1. Extraction
 
-Cinque script Java per Ghidra headless (`ghidra/scripts/`) producono decompilato, mappa offset→property, vtable, xref e parametri DSP. Otto tool Python (`tools/`) puliscono l'output, classificano le funzioni `Unknown` per prossimità di indirizzo / call graph / pattern di accesso ai campi, e ricostruiscono gli header.
+Five Ghidra headless Java scripts (`ghidra/scripts/`) produce decompiled output, an offset→property map, vtables, xrefs and DSP parameters. Eight Python tools (`tools/`) clean that output, classify `Unknown` functions by address proximity / call graph / field access patterns, and rebuild the headers.
 
-### 2. Ledger
+### 2. Ledgers
 
-Ogni scoperta finisce in un doc numerato con l'indirizzo nel nome del file — es. [`43_SPECTRAL_MEDIAN_FREQUENCY_0149F6A0.md`](docs/43_SPECTRAL_MEDIAN_FREQUENCY_0149F6A0.md). Ogni ledger dichiara: cosa è **chiuso**, cosa è **guardrail**, cosa è **blocker**. Le correzioni sono esplicite e tracciate (vedi doc [`34`](docs/34_RANKING_PAYLOAD_FAMILY_DAT_025F1488.md) e [`41`](docs/41_MUELEMENTANALYZER_COPY_INIT_01103EE0.md), che ribaltano conclusioni precedenti).
+Every finding lands in a numbered document with the address in its filename — e.g. [`43_SPECTRAL_MEDIAN_FREQUENCY_0149F6A0.md`](docs/43_SPECTRAL_MEDIAN_FREQUENCY_0149F6A0.md). Each ledger states what is **closed**, what is a **guardrail**, and what is a **blocker**. Corrections are explicit and tracked — see docs [`34`](docs/34_RANKING_PAYLOAD_FAMILY_DAT_025F1488.md) and [`41`](docs/41_MUELEMENTANALYZER_COPY_INIT_01103EE0.md), which overturn earlier conclusions.
 
-### 3. Verifica automatica
+### 3. Automated verification
 
-`tools/orchestrator.py` riesegue ogni claim contro i binari reali (`nm`, `otool`, `strings`, `objdump`) e riscrive [`docs/10_VERIFICATION.md`](docs/10_VERIFICATION.md) + [`data/confidence.json`](data/confidence.json). Ultimo run: **77/77 VERIFIED**, confidence media ~100%.
+`tools/orchestrator.py` re-runs every claim against the real binaries (`nm`, `otool`, `strings`, `objdump`) and rewrites [`docs/10_VERIFICATION.md`](docs/10_VERIFICATION.md) and [`data/confidence.json`](data/confidence.json). Latest run: **77/77 VERIFIED**, average confidence ~100%.
 
 ### 4. Confidence gate
 
-Regola centrale del progetto ([doc 56](docs/56_CONFIDENCE_GATED_RECONSTRUCTION.md)):
+The rule the whole project rests on ([doc 56](docs/56_CONFIDENCE_GATED_RECONSTRUCTION.md)):
 
-> Nessun modulo entra in implementazione se il suo perimetro non è chiuso con `confidence >= 0.90`.
+> No module enters implementation unless its perimeter is closed with `confidence >= 0.90`.
 
-In concreto, in `core_reconstruction/` sono **vietati**: threshold "ragionevoli" non tracciati a una fonte, pesi arbitrari, normalizzazioni non supportate da callsite o disassembly, naming promosso a canonico quando l'evidenza è ancora `medium`. Se un valore è solo inferito, resta nel ledger — non nel codice.
+Concretely, the following are **banned** from `core_reconstruction/`: "reasonable" thresholds not traced to a source, arbitrary weights, normalizations unsupported by call sites or disassembly, and naming promoted to canonical while the evidence is still `medium`. If a value is merely inferred, it stays in the ledger — not in the code.
 
 ---
 
-## Struttura
+## Layout
 
 ```
-├── binaries/               ← target originali (non redistribuibili)
+├── binaries/               ← original targets (non-redistributable)
 ├── ghidra/
-│   ├── scripts/            ← 5 script Java per headless extraction
-│   └── output/             ← decompilato + dump per binario (~7.900 file)
+│   ├── scripts/            ← 5 Java scripts for headless extraction
+│   └── output/             ← decompiled output + dumps per binary (~7,900 files)
 ├── reconstructed/
-│   ├── clean/              ← pseudocodice ripulito, per classe
-│   ├── annotated/          ← funzioni piccole annotate con nomi property reali
-│   └── structs/            ← header/class map ricostruiti
-├── docs/                   ← 70 ledger — source of truth semantica
-├── data/                   ← evidenza strutturata TSV/JSON/LOG
-├── core_reconstruction/    ← codice clean-room C++20 compilabile
+│   ├── clean/              ← cleaned pseudocode, grouped by class
+│   ├── annotated/          ← small functions annotated with real property names
+│   └── structs/            ← reconstructed headers / class map
+├── docs/                   ← 70 ledgers — semantic source of truth
+├── data/                   ← structured evidence in TSV/JSON/LOG
+├── core_reconstruction/    ← buildable clean-room C++20 code
 │   ├── include/mikecore/{runtime,fft,features,rawnotes}/
 │   └── src/
-└── tools/                  ← orchestrator, pipeline, estrattori Python
+└── tools/                  ← orchestrator, pipeline, Python extractors
 ```
 
-### Convenzioni di naming (interne a MikeCore)
+### Naming conventions (internal to MikeCore)
 
-| Prefisso | Significato | Scope |
-|----------|-------------|-------|
-| `MU*` | Music/Math Unit | Core DSP, algoritmi, strutture musicali |
-| `MD*` | Melodyne Document/Display | UI, controller, workspace |
-| `GN*` | General/Generic | Framework base (audio I/O, file, toolkit) |
-| `CM*` | Crypto/DRM | Licensing (CMS/PKCS7, wrapper OpenSSL) |
-
----
-
-## Stato
-
-| Modulo | Stato | Note |
-|--------|-------|------|
-| Runtime / object model | ✅ `IMPLEMENTABLE` | Aperto e compilato |
-| FFT / STFT front-end | ✅ `IMPLEMENTABLE` | Incluso window resampler a 7 stage |
-| Spectral slice / local features | ✅ `IMPLEMENTABLE` | Median frequency, row floor, windowed overlap, harmonic stencil, coda di scoring |
-| Raw note families / matcher | ✅ `IMPLEMENTABLE` | Carrier `MURawNoteSeparation`, builder classi `1/2/8`, threshold-seeded matcher, smoother esponenziale |
-| Analyzer gate cluster | ✅ `IMPLEMENTABLE` | Field map `+0xf4..+0x108` chiusa |
-| LSS / nested graph topology | 🟡 `PARTIAL` | Layout chiuso, semantica musicale dei link aperta |
-| Relevance / path ranking | 🟡 `PARTIAL` | Policy di ranking non tutte canonizzate |
-| Quality scoring globale | 🟡 `PARTIAL` | 40+ metriche nominate, poche chiuse formula-per-formula |
-| DNA2 high-level | 🔴 `BLOCKED` | Blocker: `0x01447a70`, `0x01433f60` |
-| Resynthesis / formants / shaper | 🔴 `BLOCKED` | Pipeline matematica non ancora fedele |
-
-### Alcuni risultati chiusi
-
-- **FFT**: `GNFastFourierTransformer` è un wrapper su **Apple vDSP** (Accelerate), 11 dimensioni da 16 a 16384, dual FFT per frequency reassignment, finestra **sqrt-Hann**, layout packed `DC/Nyquist + coppie re/im`, buffer `src/dst` aliasabili.
-- **Spectral median** (`0149f6a0`): rolloff 50% in Hz, unico caller `01484bc0`, cache a `MUElementAnalyzer + 0x110`.
-- **Smoother esponenziale** (`015c1480 / 015c0b60`): `alpha = expf(-2.5f / width)`, `radius = trunc(-2.5 / logf(alpha))`, forward/reverse, usato dalla pipeline raw-note classe `8`.
-- **Score di selezione candidato**: `(1.0 - abs(deltaStart) / 0.07) * classWeight * field20`, con seed dinamico `max(0.7f, reference * 0.3f)`.
-- **GPU**: `default.metallib` contiene solo `vertexShader` (passthrough) + `samplingShader` (texture blit). Nessun DSP su GPU.
-- **Wrapper VST3**: API offuscata a 5 funzioni, verifica di code signing, 45 classi `MUAra*` per l'interfaccia ARA.
+| Prefix | Meaning | Scope |
+|--------|---------|-------|
+| `MU*` | Music/Math Unit | Core DSP, algorithms, musical structures |
+| `MD*` | Melodyne Document/Display | UI, controllers, workspace |
+| `GN*` | General/Generic | Base framework (audio I/O, files, toolkit) |
+| `CM*` | Crypto/DRM | Licensing (CMS/PKCS7, OpenSSL wrappers) |
 
 ---
 
-## Uso
+## Status
 
-### Prerequisiti
+| Module | Status | Notes |
+|--------|--------|-------|
+| Runtime / object model | ✅ `IMPLEMENTABLE` | Open and building |
+| FFT / STFT front-end | ✅ `IMPLEMENTABLE` | Includes the 7-stage window resampler |
+| Spectral slice / local features | ✅ `IMPLEMENTABLE` | Median frequency, row floor, windowed overlap, harmonic stencil, scoring tail |
+| Raw note families / matcher | ✅ `IMPLEMENTABLE` | `MURawNoteSeparation` carrier, class `1/2/8` builders, threshold-seeded matcher, exponential smoother |
+| Analyzer gate cluster | ✅ `IMPLEMENTABLE` | Field map `+0xf4..+0x108` closed |
+| LSS / nested graph topology | 🟡 `PARTIAL` | Layout closed, musical semantics of the links still open |
+| Relevance / path ranking | 🟡 `PARTIAL` | Ranking policies not fully canonicalized |
+| Global quality scoring | 🟡 `PARTIAL` | 40+ metrics named, few closed formula by formula |
+| DNA2 high-level | 🔴 `BLOCKED` | Blockers: `0x01447a70`, `0x01433f60` |
+| Resynthesis / formants / shaper | 🔴 `BLOCKED` | Math pipeline not yet faithful |
 
-- macOS (i tool usano `nm`, `otool`, `lipo`, `codesign`)
-- [Ghidra 12.0.4](https://ghidra-sre.org/) in `/Applications/ghidra_12.0.4_PUBLIC/`
-- Python 3.9+ (nessuna dipendenza esterna)
-- CMake 3.22+ e un compilatore C++20 per `core_reconstruction/`
+### A few closed results
+
+- **FFT**: `GNFastFourierTransformer` wraps **Apple vDSP** (Accelerate); 11 sizes from 16 to 16384, dual FFT for frequency reassignment, **sqrt-Hann** window, packed `DC/Nyquist + re/im pairs` layout, aliasable `src/dst` buffers.
+- **Spectral median** (`0149f6a0`): 50% rolloff in Hz, single caller `01484bc0`, cached at `MUElementAnalyzer + 0x110`.
+- **Exponential smoother** (`015c1480 / 015c0b60`): `alpha = expf(-2.5f / width)`, `radius = trunc(-2.5 / logf(alpha))`, forward/reverse, used by the class `8` raw-note pipeline.
+- **Candidate selection score**: `(1.0 - abs(deltaStart) / 0.07) * classWeight * field20`, with dynamic seed `max(0.7f, reference * 0.3f)`.
+- **GPU**: `default.metallib` contains only `vertexShader` (passthrough) and `samplingShader` (texture blit). No DSP on the GPU.
+- **VST3 wrapper**: 5-function obfuscated API, code signing verification, 45 `MUAra*` classes for the ARA interface.
+
+---
+
+## Usage
+
+### Requirements
+
+- macOS (the tools rely on `nm`, `otool`, `lipo`, `codesign`)
+- [Ghidra 12.0.4](https://ghidra-sre.org/) installed at `/Applications/ghidra_12.0.4_PUBLIC/`
+- Python 3.9+ (no external dependencies)
+- CMake 3.22+ and a C++20 compiler for `core_reconstruction/`
 
 ### Pipeline
 
 ```bash
-python3 tools/pipeline.py              # tutto: inventory → ghidra → extract → analyze → report → verify
-python3 tools/pipeline.py inventory    # solo catalogazione binari (size, arch, MD5, simboli)
-python3 tools/pipeline.py ghidra       # solo import + analisi headless
-python3 tools/pipeline.py extract      # solo estrazione dati strutturati
-python3 tools/pipeline.py analyze      # solo confronto e ricerca differenze
-python3 tools/pipeline.py verify       # solo riverifica dei claim
+python3 tools/pipeline.py              # everything: inventory → ghidra → extract → analyze → report → verify
+python3 tools/pipeline.py inventory    # catalog binaries only (size, arch, MD5, symbols)
+python3 tools/pipeline.py ghidra       # headless import + analysis only
+python3 tools/pipeline.py extract      # structured data extraction only
+python3 tools/pipeline.py analyze      # comparison and diffing only
+python3 tools/pipeline.py verify       # claim re-verification only
 ```
 
-### Verifica dei doc contro i binari
+### Verifying the docs against the binaries
 
 ```bash
-python3 tools/orchestrator.py          # riscrive docs/10_VERIFICATION.md e data/confidence.json
+python3 tools/orchestrator.py          # rewrites docs/10_VERIFICATION.md and data/confidence.json
 ```
 
-### Build del core clean-room
+### Building the clean-room core
 
 ```bash
 cmake -S core_reconstruction -B build
 cmake --build build -j4                # target: mikecore_runtime_fft
 ```
 
-> **Limitazione nota**: gli script Python in `tools/` e quelli Java in `ghidra/scripts/` hanno il path del workspace **hardcoded** (`/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike`). Vanno adattati prima di eseguirli altrove. `core_reconstruction/` invece è completamente portabile.
+> **Known limitation**: the Python tools in `tools/` and the Java scripts in `ghidra/scripts/` **hardcode** the workspace path (`/Users/michaelbelmonte/Desktop/Progetto_Reverse_Mike`). Adjust them before running elsewhere. `core_reconstruction/`, by contrast, is fully portable.
 
 ---
 
-## Come leggere i ledger
+## Reading the ledgers
 
-Parti da [`docs/00_INDEX.md`](docs/00_INDEX.md), che elenca tutti i documenti con area e stato. In sintesi:
+Start from [`docs/00_INDEX.md`](docs/00_INDEX.md), which lists every document with its area and status. In short:
 
-- **`01`–`09`** — panoramiche tematiche (architettura, wrapper, FFT, DNA, quality, formant, strutture dati, sicurezza, stato)
-- **`10`–`16`** — verifica, mappa funzioni, blueprint di replicazione, ledger canonico
-- **`17`+** — ledger per cluster di funzioni; il nome del file contiene gli indirizzi coinvolti
-- **`56`** — le regole del confidence gate, da leggere prima di toccare `core_reconstruction/`
-- **`61`** — mappa dei file e loro ruolo (cosa è sorgente, cosa è output generato)
+- **`01`–`09`** — topic overviews (architecture, wrapper, FFT, DNA, quality, formants, data structures, security, status)
+- **`10`–`16`** — verification, function map, replication blueprint, canonical ledger
+- **`17`+** — per-cluster ledgers; the filename carries the addresses involved
+- **`56`** — the confidence gate rules, required reading before touching `core_reconstruction/`
+- **`61`** — file map and roles (what is a source, what is generated output)
 
-Ogni doc distingue esplicitamente ciò che è **chiuso** da ciò che è **osservato ma non canonizzato**. Le sezioni "Blocker" sono la to-do list reale del progetto.
+Every document explicitly separates what is **closed** from what is **observed but not yet canonical**. The "Blocker" sections are the project's real to-do list.
 
 ---
 
-## Licenza
+## License
 
-Nessuna licenza esplicita è ancora applicata al repository. Il materiale derivato (ledger, dati estratti, pseudocodice decompilato) descrive software proprietario di terze parti; il codice in `core_reconstruction/` è opera originale. Finché non viene scelta una licenza, valgono i termini di default del copyright.
+No explicit license has been applied to this repository yet. The derived material (ledgers, extracted data, decompiled pseudocode) describes third-party proprietary software; the code under `core_reconstruction/` is original work. Until a license is chosen, default copyright terms apply.
