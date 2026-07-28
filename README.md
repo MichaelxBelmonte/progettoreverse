@@ -1,4 +1,4 @@
-# Progetto Reverse Mike
+# Progetto Reverse
 
 Reverse engineering sistematico di **MikeCore**, il motore DSP di Melodyne (Celemony), con l'obiettivo di ricostruire in **clean-room** la pipeline di analisi spettrale e di rilevamento note.
 
