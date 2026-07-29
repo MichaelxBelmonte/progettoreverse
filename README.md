@@ -1,4 +1,6 @@
-spectral-cleanroom
+##spectral-cleanroom
+
+
 Systematic reverse engineering of **MikeCore**, the DSP engine behind Melodyne (Celemony), aimed at rebuilding its spectral analysis and note detection pipeline in a **clean room**.
 
 This is not a crack, not a patcher, and not a redistribution of the product. It is an archive of *evidence* — reverse engineering ledgers, structured data, decompiled pseudocode — plus a small C++20 core that implements **only** what has been proven from the binary.
